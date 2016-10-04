@@ -3,7 +3,7 @@
 # Instructor Contact Information
 - Daniel Worthy 
   - Email -[daniel.worthy@rockfishinteractive.com](daniel.worthy@rockfishinteractive.com)  
-  - Slack - [@WorthyD](https://ua-itreadiness.slack.com/team/worthyd) - 
+  - Slack - [@WorthyD](https://ua-itreadiness.slack.com/team/worthyd)  
 
 I'll do my best to get back with you within 24 hours.  I'd recommend posting questions to the Slack Front End room.
 
@@ -28,4 +28,4 @@ This course will walk you through front-end web application development. The cou
 Upon completion of this course, you will be able to create an interactive website and deploy it to a cloud-based hosting provider. You will be able to apply your front-end skills to a variety of off-the-shelf or SAAS (Software as a Service) solutions such as WordPress, Shopify, SquareSpace, etc. You will also understand the role that developers play on an overall product team to prepare you for a transition into a work environment.
 
 # Academic Integrity
-- We expect students to abide by the [University of Arkansas's Academic Integrity Policy](http://honesty.uark.edu/policy/)00
+- We expect students to abide by the [University of Arkansas's Academic Integrity Policy](http://honesty.uark.edu/policy/)
