@@ -29,3 +29,6 @@ Upon completion of this course, you will be able to create an interactive websit
 
 # Academic Integrity
 - We expect students to abide by the [University of Arkansas's Academic Integrity Policy](http://honesty.uark.edu/policy/)
+
+# Additional Resources
+- [Tools](tools.md)
