@@ -85,6 +85,14 @@ body {
     font-size: 1em;
 }
 
+.reveal h5 {
+    font-size: .8em;
+}
+
+.reveal h6 {
+    font-size: .6em;
+}
+
 .reveal h1 {}
 
 .reveal p {
@@ -263,8 +271,9 @@ body {
 }
 
 .two-col>div {
-    width: 48%;
+    width: 45%;
     float: left;
+    margin-right:5%;
 }
 
 a[target="_blank"]:after {
@@ -295,4 +304,13 @@ a[target="_blank"]:after {
 .reveal iframe {
     max-width: 95%;
     max-height: 95%;
+}
+.reveal .small-text{
+    font-size:20px;
+}
+.reveal .align-left{
+    text-align:left;
+}
+.reveal .hljs {
+    font-size:.8em;
 }
