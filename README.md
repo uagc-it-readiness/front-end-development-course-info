@@ -1,5 +1,7 @@
 # U of A Front End Development Course Information
 
+## [Session Decks](uagc-it-readiness.github.io/front-end-development-course-info/presentations/index.html)
+
 # Instructor Contact Information
 - Daniel Worthy 
   - Email -[daniel.worthy@rockfishinteractive.com](daniel.worthy@rockfishinteractive.com)  
