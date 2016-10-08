@@ -8,6 +8,7 @@ Here is some extra information on some of the topics we have covered in the cour
 - [Writing Your Best Code](http://learn.shayhowe.com/html-css/writing-your-best-code/)
 - [20 HTML Best Practices You Should Follow](http://sixrevisions.com/web-standards/20-html-best-practices-you-should-follow/)
 - [Google's HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.xml)
+
 ## CSS
 - [CSS Reference Sheet](http://www.w3schools.com/cssref/)
 - [CSS Quick Reference](http://www.lesliefranke.com/files/reference/csscheatsheet.html)
