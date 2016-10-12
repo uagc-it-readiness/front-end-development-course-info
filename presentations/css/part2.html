@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <title>Basics</title>
+
+    
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<!--<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+<link href="../content/reveal.css" rel="stylesheet" />
+<!--<link href="../Content/theme/simple.css" rel="stylesheet" />-->
+<link href="../content/default.css" rel="stylesheet" />
+
+
+<!--<link href="../Scripts/plugin/highlight/default.min.css" rel="stylesheet" />-->
+<link href="../scripts/plugin/highlight/vs.css" rel="stylesheet" />
+<link href="../content/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../content/css/print/pdf.css' : '../content/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script src="//localhost:35729/livereload.js"></script>
+
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>More CSS</h1>
+                <h2>Backgrounds, Borders, Margins, Padding, Height and Width.</h2>
+            </section>
+            <section>
+                <section>
+                    <h1>Review</h1>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Backgrounds</h1>
+                    <p>
+                        Changes the background appearance of the element.
+                    </p>
+                    <ul>
+                        <li class="fraggment"><strong>background-color</strong></li>
+                        <li class="fraggment"><strong>background-image</strong></li>
+                        <li class="fraggment">
+                            <strong>background-repeat</strong> repeats the background image.
+                            <ul>
+                                <li class="fragment"><code>repeat-x</code> repeats the image across the x axis</li>
+                                <li class="fragment"><code>repeat-y</code> repeats the image across the y axis</li>
+                                <li class="fragment"><code>no-repeat</code> makes the image only appear once</li>
+                            </ul>
+                        </li>
+                        <li class="fraggment">
+                            <strong>background-position</strong> Accepts two values. First the x and then the y. You specify these by using these values.
+                            <ul>
+                                <li class="fragment">left|right|center&nbsp;&nbsp;top|center|bottom</li>
+                                <li class="fragment">1px 1px; - This would be 1px off the top and 1px off the left</li>
+                                <li class="fragment">x% y%</li>
+                            </ul>
+                        </li>
+                        <li class="fraggment"></li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section><h1>Borders</h1></section>
+            </section>
+            <section>
+                <section><h1>Margins</h1></section>
+            </section>
+            <section>
+                <section><h1>Padding</h1></section>
+            </section>
+            <section>
+                <section><h1>Height & Width</h1></section>
+            </section>
+
+
+
+
+        </div>
+
+    </div>
+
+
+    <script src="../scripts/reveal.js"></script>
+<script src="../scripts/head.min.js"></script>
+<script>
+
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [
+            { src: '../scripts/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+            { src: '../scripts/plugin/notes/notes.js', async: false }
+        ]
+    });
+
+</script>>
+
+</body>
+</html>

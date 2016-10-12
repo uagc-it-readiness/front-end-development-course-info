@@ -34,3 +34,4 @@ Upon completion of this course, you will be able to create an interactive websit
 
 # Additional Resources
 - [Tools](tools.md)
+- [Extra Reading on Topics](topics.md)
