@@ -65,22 +65,411 @@
                                 <li class="fragment">x% y%</li>
                             </ul>
                         </li>
-                        <li class="fraggment"></li>
                     </ul>
                 </section>
             </section>
             <section>
-                <section><h1>Borders</h1></section>
+                <section>
+                    <h1>Borders</h1>
+                    <p>
+                        This CSS property defines the borders around an element.
+                    </p>
+                    <ul>
+                        <li class="fragment"><strong>border-width</strong> accepts pixel value </li>
+                        <li class="fragment">
+                            <strong>border-style</strong>
+                            <ul>
+                                <li class="fragment"><code>solid</code> the most common</li>
+                                <li class="fragment"><code>dashed</code></li>
+                                <li class="fragment"><code>dotted</code></li>
+                                <li class="fragment"><a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_blank">Many others</a></li>
+                            </ul>
+                        </li>
+                        <li class="fragment">
+                            <strong>color</strong> accepts any valid color
+                        </li>
+                    </ul>
+                    <aside class="notes">
+                        border width also accepts thin medium and thick, but px is the most desired
+                    </aside>
+                </section>
+                <section>
+                    <h2>Examples</h2>
+                    <div class="two-col">
+                        <div>
+                            <pre>
+<code class="css">
+    .fig1{
+        border-color: red;
+        border-style: solid;
+        border-width:5px;
+    }
+    .fig2{
+        border-color: navy;
+        border-style: dotted;
+        border-width:10px;
+    }
+</code>
+</pre>
+                        </div>
+                        <style>
+                            .reveal .fig1 {
+                                border-color: red;
+                                border-style: solid;
+                                border-width: 5px;
+                                margin: 20px 0;
+                            }
+
+                            .reveal .fig2 {
+                                border-color: navy;
+                                border-style: dotted;
+                                border-width: 10px;
+                                margin: 20px 0;
+                            }
+                        </style>
+                        <div>
+
+                            <div class="fig1">
+                                Red border that is 5px thick.
+                            </div>
+                            <div class="fig2">
+                                Fig2. Dotted border
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>That's a lot of code. Can we shorten it?</h2>
+                    <div class="two-col">
+                        <div>
+                            <pre>
+<code class="css">
+    .fig3 {
+        border: 5px solid red;
+    }
+    .fig4 {
+        border:10px dotted navy;
+    }
+</code>
+</pre>
+                        </div>
+                        <style>
+                            .reveal .fig3 {
+                                border: 5px solid red;
+                                margin: 20px 0;
+                            }
+
+                            .reveal .fig4 {
+                                border: 10px dotted navy;
+                                margin: 20px 0;
+                            }
+                        </style>
+                        <div>
+
+                            <div class="fig3">
+                                Red border that is 5px thick.
+                            </div>
+                            <div class="fig4">
+                                Fig4. Dotted border
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h1>Modify a specific border</h1>
+                    <div class="two-col">
+                        <div>
+                            <pre>
+<code class="css">
+    .fig6 {
+        border-left: 5px solid red;
+    }
+    .fig7 {
+        border: 10px dotted navy;
+        border-right-style:solid;
+        border-right-width:5px;
+    }
+</code>
+</pre>
+                        </div>
+                        <style>
+                            .reveal .fig6 {
+                                border-left: 5px solid red;
+                                margin: 20px 0;
+                            }
+
+                            .reveal .fig7 {
+                                border: 10px dotted navy;
+                                border-right-style: solid;
+                                border-right-width: 5px;
+                                margin: 20px 0;
+                            }
+                        </style>
+                        <div>
+
+                            <div class="fig6">
+                                Fig 6 -   I only have a left border.
+                            </div>
+                            <div class="fig7">
+                                Fig 7 - My right is different
+                            </div>
+
+                        </div>
+                    </div>
+
+                </section>
+                <section>
+                    <h1>More specificity</h1>
+                    <div class="two-col">
+                        <div>
+                            <pre>
+<code class="css">
+    .fig8 {
+        border: 5px solid red;
+        border-bottom:none;
+    }
+    .fig9 {
+        border-bottom:none;
+        border: 10px dotted navy;
+    }
+</code>
+</pre>
+                        </div>
+                        <style>
+                            .reveal .fig8 {
+                                border: 5px solid red;
+                                border-bottom: none;
+                                margin: 20px 0;
+                            }
+
+                            .reveal .fig9 {
+                                border-bottom: none;
+                                border: 10px dotted navy;
+                                margin: 20px 0;
+                            }
+                        </style>
+                        <div>
+
+                            <div class="fig8">
+                                Fig 8 -  I have no bottom border
+                            </div>
+                            <div class="fig9">
+                                Fig 9 - Order Matters
+                            </div>
+
+                        </div>
+                    </div>
+
+                </section>
             </section>
             <section>
-                <section><h1>Margins</h1></section>
+                <section>
+                    <h1>Margins</h1>
+                    <p>
+                        CSS Margins add spacing <em>around</em> an element.
+                    </p>
+                    <ul>
+                        <li class="fraggment"><strong>margin-left</strong></li>
+                        <li class="fraggment"><strong>margin-top</strong></li>
+                        <li class="fraggment"><strong>margin-right</strong></li>
+                        <li class="fraggment"><strong>margin-bottom</strong></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Margin Shorthand</h1>
+                    <div class="two-col">
+                        <div>
+                            <pre>
+<code class="css">
+.fig10 {
+    /* Applies 5px to all 4 sides */
+    margin: 5px;
+}
+.fig11 {
+    /* Applies 5px to all 4 sides */
+    margin: 5px 5px 5px 5px;
+}
+.fig12{
+    /*Applies 10px to top and bottom
+      and 30px left and right*/
+    margin:10px 30px;
+}
+</code>
+</pre>
+                        </div>
+                        <div>
+                            <div style="background-color:lightcoral; overflow:hidden">
+
+                                <style>
+                                    .reveal .fig11 {
+                                        border: 1px solid black;
+                                        margin: 5px;
+                                        background-color: #fff;
+                                    }
+                                </style>
+                                <div class="fig11">
+                                    Figure 10 / Figure 11
+                                </div>
+                            </div>
+                            <div style="background-color:lightcoral; overflow:hidden; margin-top:30px;">
+
+                                <style>
+                                    .reveal .fig12 {
+                                        border: 1px solid black;
+                                        margin: 10px 30px;
+                                        background-color: #fff;
+                                    }
+                                </style>
+                                <div class="fig12">
+                                    Figure 12
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
             </section>
             <section>
-                <section><h1>Padding</h1></section>
+                <section>
+                    <h1>Padding</h1>
+                    <p>
+                        CSS Padding add spacing <em>inside</em> an element.
+                    </p>
+                    <ul>
+                        <li class="fraggment"><strong>padding-left</strong></li>
+                        <li class="fraggment"><strong>padding-top</strong></li>
+                        <li class="fraggment"><strong>padding-right</strong></li>
+                        <li class="fraggment"><strong>padding-bottom</strong></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Padding Shorthand</h1>
+                    <div class="two-col">
+                        <div>
+                            <pre>
+<code class="css">
+.fig13 {
+    margin: 5px;
+    padding:15px;
+}
+.fig14 {
+   margin:10px 30px;
+   padding:30px 10px;
+}
+</code>
+</pre>
+                        </div>
+                        <div>
+                            <div style="background-color:brown; overflow:hidden">
+
+                                <style>
+                                    .reveal .fig13 {
+                                        border: 1px solid black;
+                                        margin: 5px;
+                                        padding: 15px;
+                                        background-color: #fff;
+                                    }
+                                </style>
+                                <div class="fig13">
+                                    Figure 13
+                                </div>
+                            </div>
+                            <div style="background-color:brown; overflow:hidden; margin-top:30px;">
+
+                                <style>
+                                    .reveal .fig14 {
+                                        border: 1px solid black;
+                                        margin: 10px 30px;
+                                        padding: 30px 10px;
+                                        background-color: #fff;
+                                    }
+                                </style>
+                                <div class="fig14">
+                                    Figure 14
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </section>
             <section>
-                <section><h1>Height & Width</h1></section>
+                <section>
+                    <h1>Height & Width</h1>
+                    <p>Sets the specific height and width of a <em>block</em> element</p>
+                    <ul>
+                        <li class="fragment">
+                            <strong>height</strong>
+                            <ul>
+                                <li class="fragment"><strong>min-height</strong></li>
+                                <li class="fragment"><strong>max-height</strong></li>
+                            </ul>
+                        </li>
+                        <li class="fragment">
+                            <strong>width</strong>
+                            <ul>
+                                <li class="fragment"><strong>min-width</strong></li>
+                                <li class="fragment"><strong>max-width</strong></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Examples</h1>
+                    <div class="two-col">
+                        <div>
+                            <pre>
+<code class="css">
+.fig15{
+    height:100px;
+    width:250px;
+}
+/*Applying this to a span tag*/
+.fig16{
+    height:100px;
+    width:100px;
+}
+.fig17{
+    max-width:100px;
+}
+</code>
+</pre>
+                        </div>
+                        <div style="background-color:grey">
+                            <style>
+                                .reveal .fig15 {
+                                    background-color: blue;
+                                    color: #fff;
+                                    height: 100px;
+                                    width: 250px;
+                                }
+
+                                .reveal .fig16 {
+                                    background-color: red;
+                                    color: #fff;
+                                    height: 100px;
+                                    width: 100px;
+                                }
+
+                                .reveal .fig17 {
+                                    background-color: green;
+                                    color: #fff;
+                                    max-width:100px;
+                                }
+
+                            </style>
+
+                            <div class="fig15">Figure 15</div>
+                            <span class="fig16">Figure 16</span>
+
+                            <div class="fig17">Figure 17 with a maximum width value</div>
+                        </div>
+                    </div>
+
+                </section>
             </section>
+
 
 
 
@@ -88,8 +477,6 @@
         </div>
 
     </div>
-
-
     <script src="../scripts/reveal.js"></script>
 <script src="../scripts/head.min.js"></script>
 <script>

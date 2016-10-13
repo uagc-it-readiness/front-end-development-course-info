@@ -102,11 +102,14 @@ body {
 
 .highlight {
     color: #aa0000;
-    ;
 }
 
 .home-screen {
     top: 75% !important;
+}
+
+.reveal code {
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 }
 
 
@@ -282,9 +285,10 @@ body {
             width: 50%;
             margin-right: 0;
         }
+
 .reveal .half-width {
-    width:50%;
-    text-align:left;
+    width: 50%;
+    text-align: left;
     margin: 0 auto;
 }
 
@@ -330,13 +334,14 @@ a[target="_blank"]:after {
 }
 
 .reveal .hljs {
-    font-size: .7em;
+    font-size: .6em;
 }
 
 .reveal sub {
     vertical-align: sub;
     font-size: smaller;
 }
+
 .reveal sup {
     vertical-align: super;
     font-size: smaller;
