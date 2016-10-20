@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Basics</title>
+    <title>CSS Part 4</title>
 
     
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -37,6 +37,7 @@
                     <li class="fragment">Dev Tools Review</li>
                     <li class="fragment">Cascading Styles</li>
                     <li class="fragment">Grouping Selectors</li>
+                    <li class="fragment">Descendant Selectors</li>
                     <li class="fragment">CSS3</li>
                     <li class="fragment">Rounded Corners</li>
                     <li class="fragment">Colors and Opacity</li>
@@ -100,6 +101,28 @@
                     <script async src="//jsfiddle.net/WorthyD/j0camn56/embed/html,css,result/"></script>
                 </section>
             </section>
+            <section>
+                <section>
+                    <h1>Descendant Selectors</h1>
+                    <p>Descendant selectors create a more specific groups of styled content. </p>
+                    <pre class="fragment">
+<code class="css">
+    div p{
+        color:#ff0000;
+    }
+</code>
+</pre>
+                    <p class="fragment">Any paragraph inside of a div will have red text.</p>
+                </section>
+                <section>
+                    <h1>Example 1</h1>
+                    <script async src="//jsfiddle.net/WorthyD/7u8a69zf/embed/html,css,result/"></script>
+                </section>
+                <section>
+                    <h1>Example 2</h1>
+                    <script async src="//jsfiddle.net/WorthyD/13t4gjrb/embed/html,css,result/"></script>
+                </section>
+            </section>
 
             <section>
                 <section>
@@ -124,7 +147,6 @@
         -webkit-border-radius: 12px;
         /* Firefox 1-3.6 */
         -moz-border-radius: 12px;
-
         /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
         border-radius: 12px;
     }
@@ -211,14 +233,31 @@
             <section>
                 <section>
                     <h1>Gradients</h1>
+                    <p>
+                        CSS gradients allow you to display a transition from one color to another.  Gradients are one of the most vendor prefix heavy CSS properties we will use.
+                    </p>
+                    <pre>
+<code class="css">
+    .button{
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+        background: #1e5799; /* Old browsers */
+        background: -moz-linear-gradient(top,  #1e5799 0%, #7db9e8 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #1e5799 0%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #1e5799 0%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+    }
+</code>
+</pre>
+                    <div>
+                        <a href="http://www.colorzilla.com/gradient-editor/" target="_blank">Ultimate CSS Gradient Generator</a>
+                    </div>
+                </section>
+                <section>
+                    <h1>Gradients</h1>
+                    <script async src="//jsfiddle.net/WorthyD/5kb4za8q/embed/html,css,result/"></script>
+
                 </section>
             </section>
-
-
-
-
-
-
         </div>
 
     </div>
