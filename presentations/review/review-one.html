@@ -32,15 +32,443 @@
     <div class="reveal">
         <div class="slides">
             <section>
-                <h1>More CSS</h1>
-                <h2>Backgrounds, Borders, Margins, Padding, Height and Width.</h2>
+                <h1>Review</h1>
             </section>
             <section>
                 <section>
-                    <h1>Review</h1>
+                    <h1>HTML</h1>
+                </section>
+                <section>
+                    <h1>Paragraph Tags</h1>
+                    <p>Paragraph tags are used for general blocks of text.</p>
+                    <div class="two-col">
+                        <div>
+                            <pre class="fragment"><code class="xml">
+&lt;p&gt;This is my first paragraph&lt;/p&gt;
+&lt;p&gt;This is my second paragraph&lt;/p&gt;
+    </code></pre>
+                            <pre class="fragment"><code class="xml">
+&lt;p&gt;This is my first paragraph&lt;/p&gt;&lt;p&gt;This is my second paragraph&lt;/p&gt;
+    </code></pre>
+
+                        </div>
+                        <div class="fragment">
+                            <p>This is my first paragraph</p>
+                            <p>This is my second paragraph</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h1>Heading Tags</h1>
+                    <p>The heading tag is used to label important blocks of content. </p>
+                    <div class="two-col">
+                        <div class="fragment">
+                            <pre><code class="xml">
+&lt;h1&gt;This is heading 1&lt;/h1&gt;
+&lt;h2&gt;This is heading 2&lt;/h2&gt;
+&lt;h3&gt;This is heading 3&lt;/h3&gt;
+&lt;h4&gt;This is heading 4&lt;/h4&gt;
+&lt;h5&gt;This is heading 5&lt;/h5&gt;
+&lt;h6&gt;This is heading 6&lt;/h6&gt;
+                                </code></pre>
+                        </div>
+                        <div class="fragment">
+                            <h1>This is heading 1</h1>
+                            <h2>This is heading 2</h2>
+                            <h3>This is heading 3</h3>
+                            <h4>This is heading 4</h4>
+                            <h5>This is heading 5</h5>
+                            <h6>This is heading 6</h6>
+
+                        </div>
+                    </div>
+                    <aside class="notes">
+                        These help the user as they skim over your document <br> search engines use them to index the structure
+                        of your content
+                    </aside>
+                </section>
+                <section>
+                    <h1>Formatting</h1>
+                    <p>There are tags available for adding <em>emphasis</em> and <strong>important</strong></p>
+                    <pre><code class="xml">    &lt;p&gt;
+        There are tags available
+        for adding &lt;em&gt;emphasis&lt;/em&gt;
+        and &lt;strong&gt;important&lt;/strong&gt;
+    &lt;/p&gt;
+                    </code></pre>
+                </section>
+
+
+
+                <section>
+                    <h1>Attributes</h1>
+                    <p>Come after the initial tag declaration.</p>
+                    <p>Typically a name value pair.</p>
+                    <p>Changes how elements look or act.</p>
+                    <p>Some tags have unique attributes.</p>
+                </section>
+                <section>
+                    <h1>Hyperlink</h1>
+                    <p>Hyperlinks are primarily used to link to different webpages.</p>
+                    <p>The tag wraps text or images and allows them to be clicked</p>
+                    <ul>
+                        <li class="fragment">Base Tag: <span class="highlight">&lt;a&gt;&lt;/a&gt;</span> </li>
+                        <li class="fragment">
+                            Primary Attributes
+                            <ul>
+                                <li class="fragment">
+                                    <span class="highlight">Href</span> : The page address you wish to link to
+                                </li>
+                                <li class="fragment">
+                                    <span class="highlight">Title</span>: Used to describe what you are linking to.
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="fragment">
+                            Additional Attributes
+                            <ul>
+                                <li class="fragment"><span class="highlight">Target</span>: Tells the browser where to open the link</li>
+                                <li class="fragment"><span class="highlight">Rel</span>: Describes the relationship between to the link. </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <aside class="notes">
+                        rel values = nofollow, external, bookmark, author etc. Mainly for SEO purposes.
+                    </aside>
+                </section>
+                <section>
+                    <h1>Image</h1>
+                    <p>Used to inject an image into the page</p>
+                    <ul>
+                        <li class="fragment">Base Tag:<span class="highlight">&lt;img /&gt;</span> </li>
+                        <li class="fragment">
+                            Primary Attributes
+                            <ul>
+                                <li class="fragment">
+                                    <span class="highlight">src</span>: The specific URL of an image
+                                </li>
+                                <li class="fragment">
+                                    <span class="highlight">alt</span>: The alternate text of the image
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="fragment">
+                            Image Best Practices
+                            <ul>
+                                <li class="fragment">Use CSS to resize you image if you need to. </li>
+                                <li class="fragment">
+                                    Don't reference images from other websites without permission
+                                    <pre><code class="xml">
+    &lt;!-- MyPersonalWebsite.com --&gt;
+    &lt;img src="http://www.uark.edu/_resources/images/future-students.jpg"/&gt;
+                                        </code></pre>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <aside class="notes"></aside>
+                </section>
+                <section>
+                    <h1>Lists</h1>
+                    <p>
+                        There are two types of list. <strong>Ordered List</strong> and <strong>Unordered lists</strong>.
+                        They both contain <strong>list item</strong> tags.
+                    </p>
+                </section>
+                <section>
+                    <h1>Unordered List</h1>
+                    <p>
+                        Commonly just a bulleted list.
+                    </p>
+                    <div class="two-col">
+                        <div>
+                            <pre><code class="xml">
+    &lt;ul&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3
+            &lt;ul&gt;
+                &lt;li&gt;Nested 1&lt;/li&gt;
+                &lt;li&gt;Nested 1&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;Item 4&lt;/li&gt;
+    &lt;/ul&gt;
+                           </code></pre>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>
+                                    Item 3
+                                    <ul>
+                                        <li>Nested 1</li>
+                                        <li>Nested 1</li>
+                                    </ul>
+                                </li>
+                                <li>Item 4</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h1>Ordered List</h1>
+                    <p>
+                        Similar to the unordered list, but uses numbers instead of bullets
+                    </p>
+                    <div class="two-col">
+                        <div>
+                            <pre><code class="xml">
+    &lt;ol&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3
+            &lt;ol&gt;
+                &lt;li&gt;Nested 1&lt;/li&gt;
+                &lt;li&gt;Nested 1&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+        &lt;li&gt;Item 4&lt;/li&gt;
+    &lt;/ol&gt;
+                           </code></pre>
+                        </div>
+                        <div>
+                            <ol>
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>
+                                    Item 3
+                                    <ol>
+                                        <li>Nested 1</li>
+                                        <li>Nested 1</li>
+                                    </ol>
+                                </li>
+                                <li>Item 4</li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+
+
+
+            </section>
+
+            <section>
+
+                <section>
+                    <h1>Dev Tools Review</h1>
+                </section>
+                <section>
+                    <h1>Opening the Dev Tools</h1>
+                    <ul>
+                        <li class="fragment">Chrome Menu > More Tools > Developer Tools</li>
+                        <li class="fragment">Right click on a page element and select `inspect` element</li>
+                        <li class="fragment"><code>Ctrl+Shift+I</code> (Windows) or <code>Cmd+Opt+I</code> (Mac)</li>
+                    </ul>
                 </section>
             </section>
             <section>
+                <section>
+                    <h1>CSS Selectors</h1>
+                    <p>
+                        CSS selectors vary in size length and complexity, but they are primarily based off of 3 core selector methods.
+                    </p>
+                </section>
+                <section>
+                    <h1>Tag selector</h1>
+                    <p>
+                        The tag selector simply uses the tag name to target an element. This is the most global way to set default styles
+                    </p>
+                    <pre>
+<code class="css">
+    h1 {
+        color: red; /*All h1s will be red*/
+    }
+    span {text-decoration: underline;} /*All spans will be underlines*/
+</code>
+</pre>
+                </section>
+                <section>
+                    <h1>Class Selector</h1>
+                    <p>
+                        This is the most common method of targeting elements.
+                    </p>
+                    <div class="half-width">
+                        <span class="fragment">.</span>
+                        <span class="fragment">class-name</span>
+                        <span class="fragment">
+                            { <br />
+                            /* Rules */ <br />
+                            }
+                        </span>
+                    </div>
+                    <div class="fragment half-width">
+<pre>
+                        <code class="xml">
+                        <h1 class="class-name"></h1>
+    </code>
+</pre>
+                    </div>
+                </section>
+
+
+                <section>
+                    <h1>
+                        Specificity
+                    </h1>
+                    <ul>
+                        <li class="fragment"><strong>tag</strong> rules overwrite the default browser styles. </li>
+                        <li class="fragment"><strong>class</strong> rules overwrite the tag browser styles </li>
+                        <li class="fragment"><strong>id</strong> rule overwrite everything except....</li>
+                        <li class="fragment"><strong>rules</strong> rules marked with !important. More on that later</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Example of specificity.</h1>
+                    <pre><code class="xml">
+                    <h1 class="site-header" id="my-header">Text goes here</h1>
+                    </code></pre>
+                    <pre><code class="xml">
+                        h1 {color: blue;}
+                        .site-header {color: red;}
+                        #my-header {color: green;}
+                    </code></pre>
+                    <h3>What color will the h1 be?</h3>
+                    <h3 class="fragment" style="color:green;">Green</h3>
+                </section>
+
+
+
+                <section>
+                    <h1>Grouping Selectors</h1>
+                    <p>
+                        You can leverage grouping selectors to share styles between multiple selectors.  This can be done by adding a comma between each selector.
+                    </p>
+                    <pre>
+<code class="css">
+    h1, h2, .header, #site-header{
+        color:#ff0000;
+    }
+</code>
+</pre>
+                </section>
+                <section>
+                    <h1>Grouping Example</h1>
+                    <script async src="//jsfiddle.net/WorthyD/j0camn56/embed/html,css,result/"></script>
+                </section>
+                <section>
+                    <h1>Descendant Selectors</h1>
+                    <p>Descendant selectors create a more specific groups of styled content. </p>
+                    <pre class="fragment">
+<code class="css">
+    div p{
+        color:#ff0000;
+    }
+</code>
+</pre>
+                    <p class="fragment">Any paragraph inside of a div will have red text.</p>
+                </section>
+                <section>
+                    <h1>Example 1</h1>
+                    <script async src="//jsfiddle.net/WorthyD/7u8a69zf/embed/html,css,result/"></script>
+                </section>
+                <section>
+                    <h1>Example 2</h1>
+                    <script async src="//jsfiddle.net/WorthyD/13t4gjrb/embed/html,css,result/"></script>
+                </section>
+
+                <section>
+                    <h1>Basic CSS for Text</h1>
+                    <p>
+                        These are several properties that can be used to modify the look of our text we have created.
+                    </p>
+
+                    <ul>
+                        <li class="fragment">
+                            <strong>color</strong> sets the fore ground color of the elements targeted. It accepts only valid color values.
+                        </li>
+                        <li class="fragment">
+                            <strong>text-align</strong> sets the text alignment.
+                            <p>
+                                Primary valid values: <code class="fragment">left,</code> <code class="fragment">right,</code> <code class="fragment">center,</code>  <code class="fragment">and justify</code>
+                            </p>
+                        </li>
+                        <li class="fragment">
+                            <strong>text-decoration</strong> decorates text content.
+                            <p>
+                                Primary valid values: <code class="fragment">none,</code> <code class="fragment">underline,</code> <code class="fragment">line-through,</code>  <code class="fragment">and overline</code>
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Basic CSS specific to text characters</h1>
+                    <p>
+                        These CSS properties actually change the appearance of the characters in the font.
+                    </p>
+                    <ul>
+                        <li class="fragment">
+                            <strong>font-family</strong> defines the specific font family for the text. It accepts a comma separated list of front names.
+                        </li>
+                        <li class="fragment">
+                            <strong>font-size</strong> defines the size of your font.  It accepts any numeric value (px, em, or %). The default value depends on the element.
+                        </li>
+                    </ul>
+                    <pre class="fragment">
+<code class="css">
+    h1{
+        font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+        font-size: 18px;
+    }
+</code>
+</pre>
+
+
+                    <aside class="notes">
+                        Mention short hand, but don't demo it today.
+                    </aside>
+                </section>
+                <section>
+                    <h1>Text CSS continued</h1>
+                    <ul>
+                        <li class="fragment">
+                            <strong>font-style</strong>  Values: <code>normal</code>, <code>italic</code>,  and<code>oblique</code>
+                        </li>
+                        <li class="fragment">
+                            <strong>font-weight</strong> sets  how thick or thin characters appear. Common values: <code>normal</code> and <code>bold</code>
+
+                        </li>
+                    </ul>
+                    <pre class="fragment">
+<code class="css">
+    h1{
+        font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+        font-size: 18px;
+        font-style: italic;
+        font-weight:bold;
+    }
+</code>
+</pre>
+
+
+                    <aside class="notes">
+                        font-weight has more values but they don't work with all fonts.
+                    </aside>
+                </section>
+                <section>
+                    <h2><a href="http://www.lesliefranke.com/files/reference/csscheatsheet.html" target="_blank">Use a CSS cheat sheet to reference what values are available to specific properties.</a></h2>
+                </section>
+
+
+
+
+
+
+
+
+
+
                 <section>
                     <h1>Backgrounds</h1>
                     <p>
@@ -68,8 +496,6 @@
                     </ul>
                     <div><a href="https://css-tricks.com/almanac/properties/b/background/" target="_blank">Background Guide</a></div>
                 </section>
-            </section>
-            <section>
                 <section>
                     <h1>Borders</h1>
                     <p>
@@ -270,8 +696,6 @@
                         <a href="https://css-tricks.com/almanac/properties/b/border/" target="_blank">Border Guide</a>
                     </div>
                 </section>
-            </section>
-            <section>
                 <section>
                     <h1>Margins</h1>
                     <p>
@@ -337,8 +761,12 @@
                         </div>
                     </div>
                 </section>
-            </section>
-            <section>
+
+
+
+
+
+
                 <section>
                     <h1>Padding</h1>
                     <p>
@@ -400,80 +828,6 @@
                         </div>
                     </div>
                 </section>
-            </section>
-            <section>
-                <section>
-                    <h1>Height & Width</h1>
-                    <p>Sets the specific height and width of a <em>block</em> element</p>
-                    <ul>
-                        <li class="fragment">
-                            <strong>height</strong>
-                            <ul>
-                                <li class="fragment"><strong>min-height</strong></li>
-                                <li class="fragment"><strong>max-height</strong></li>
-                            </ul>
-                        </li>
-                        <li class="fragment">
-                            <strong>width</strong>
-                            <ul>
-                                <li class="fragment"><strong>min-width</strong></li>
-                                <li class="fragment"><strong>max-width</strong></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <h1>Examples</h1>
-                    <div class="two-col">
-                        <div>
-                            <pre>
-<code class="css">
-.fig15{
-    height:100px;
-    width:250px;
-}
-/*Applying this to a span tag*/
-.fig16{
-    height:100px;
-    width:100px;
-}
-.fig17{
-    max-width:100px;
-}
-</code>
-</pre>
-                        </div>
-                        <div style="background-color:grey">
-                            <style>
-                                .reveal .fig15 {
-                                    background-color: blue;
-                                    color: #fff;
-                                    height: 100px;
-                                    width: 250px;
-                                }
-
-                                .reveal .fig16 {
-                                    background-color: red;
-                                    color: #fff;
-                                    height: 100px;
-                                    width: 100px;
-                                }
-
-                                .reveal .fig17 {
-                                    background-color: green;
-                                    color: #fff;
-                                    max-width: 100px;
-                                }
-                            </style>
-
-                            <div class="fig15">Figure 15</div>
-                            <span class="fig16">Figure 16</span>
-
-                            <div class="fig17">Figure 17 with a maximum width value</div>
-                        </div>
-                    </div>
-
-                </section>
                 <section>
                     <h1>Display</h1>
                     <p>
@@ -502,6 +856,8 @@
 
                 </section>
 
+
+
                 <section>
                     <h1>Float</h1>
                     <p>
@@ -520,6 +876,9 @@
                         <a href="https://css-tricks.com/almanac/properties/f/float/" target="_blank">Basic Float Guide</a>
                     </div>
                 </section>
+
+
+
                 <section>
                     <h1>Clear</h1>
                     <p>
@@ -535,16 +894,17 @@
                 </section>
 
 
-
             </section>
-
-
-
+            <section>
+                <h1>Go to deck 4</h1>
+            </section>
 
 
         </div>
 
     </div>
+
+
     <script src="../scripts/reveal.js"></script>
 <script src="../scripts/head.min.js"></script>
 <script>
