@@ -1,0 +1,259 @@
+<html>
+
+<head>
+    <title>Basics</title>
+    
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<!--<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+<link href="../content/reveal.css" rel="stylesheet" />
+<!--<link href="../Content/theme/simple.css" rel="stylesheet" />-->
+<link href="../content/default.css" rel="stylesheet" />
+
+
+<!--<link href="../Scripts/plugin/highlight/default.min.css" rel="stylesheet" />-->
+<link href="../scripts/plugin/highlight/vs.css" rel="stylesheet" />
+<link href="../content/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../content/css/print/pdf.css' : '../content/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script src="//localhost:35729/livereload.js"></script>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1></h1>
+            </section>
+            <section>
+                <section>
+                    <h1>New Selectors</h1>
+                </section>
+                <section>
+                    <h1>Current Selectors</h1>
+                    <ul>
+                        <li class="fragment"><strong>Tag</strong> selector <code>div { } </code></li>
+                        <li class="fragment"><strong>Class</strong> selector <code>.my-div { } </code></li>
+                        <li class="fragment"><strong>ID</strong> selector <code>#my-div { } </code></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Combined Selectors</h1>
+                    <p>
+                        You can make your selectors more specific by using multiple selectors joined together
+                    </p>
+                    <h2 class="fragment"><code>div.class {}</code></h2>
+                    <h2 class="fragment"><code>.class1.class2 {}</code></h2>
+                </section>
+                <section>
+                    <h1>Example</h1>
+                    <script async src="//jsfiddle.net/WorthyD/s6pqmrow/embed/html,css,result/"></script>
+                    https://jsfiddle.net/WorthyD/s6pqmrow/
+                </section>
+                <section>
+                    <h1>Example</h1>
+                    <script async src="//jsfiddle.net/WorthyD/eLuk46f7/embed/html,css,result/"></script>
+                    <a href="https://jsfiddle.net/WorthyD/eLuk46f7/" target="_blank">Link</a>
+                </section>
+                <section>
+                    <h1>Pseudo Class <code>:hover</code></h1>
+                    <p>
+                        The <code>:hover</code> class allows you to apply add custom class when an element is being hovered over.
+                    </p>
+                    <h2 class="fragment"><code>a:hover{ }</code></h2>
+                    <h2 class="fragment"><code>.class:hover{ }</code></h2>
+                </section>
+                <section>
+                    <h1>Example</h1>
+
+                    <script async src="//jsfiddle.net/WorthyD/ssg1vzdy/embed/html,css,result/"></script>
+
+                    <a href="https://jsfiddle.net/WorthyD/ssg1vzdy/" target="_blank">Link</a>
+                </section>
+
+                <section>
+                    <h1>Example</h1>
+                    <script async src="//jsfiddle.net/WorthyD/6x51Lr55/embed/html,css,result/"></script>
+
+
+                    <a href="https://jsfiddle.net/WorthyD/6x51Lr55/" target="_blank">Link</a>
+                </section>
+
+            </section>
+            <section>
+                <section>
+                    <h1>
+                        <code>overflow</code>
+                    </h1>
+                    <p><code>overflow</code> controls what happens when your content is forced outside of its declared size.</p>
+                    <p>You've set the height of a div to 150px in <code>height </code> and have several paragraphs inside of it</p>
+                    <h2>Values</h2>
+                    <ul>
+                        <li class="fragment"><code>visible</code> - <strong>default value</strong> content continues outside of its box</li>
+                        <li class="fragment"><code>hidden</code> - hides content that overflows</li>
+                        <li class="fragment">
+                            <code>scroll</code> - Adds scroll bars to content even if it doesn't overflow.
+                        </li>
+                        <li class="fragment"><code>auto</code> - Adds scroll bars, but only if the content overflows the box.</li>
+                    </ul>
+                    <a href="https://css-tricks.com/almanac/properties/o/overflow/" target="_blank">Overflow's overflowing overview</a>
+                </section>
+                <section>
+                    <h1>Examples</h1>
+                    <script async src="//jsfiddle.net/WorthyD/7g3coqfL/embed/html,css,result/"></script>
+
+                    <a href="https://jsfiddle.net/WorthyD/7g3coqfL/" target="_blank">Link</a>
+                </section>
+                <section>
+                    <h1>Examples</h1>
+                    <script async src="//jsfiddle.net/WorthyD/y0k8jjhL/embed/html,css,result/"></script>
+
+                    <a href="https://jsfiddle.net/WorthyD/y0k8jjhL/" target="_blank">Link</a>
+                </section>
+
+                <section>
+                    <h1>Two variations</h1>
+                    <h1 class="fragment"><code>overflow-x</code></h1>
+                    <h1 class="fragment"><code>overflow-y</code></h1>
+                </section>
+            </section>
+
+            <section>
+                <h1>More Text Properties</h1>
+            </section>
+            <section>
+                <section>
+                    <h1><code>white-space</code></h1>
+                    <p>
+                        <code>white-space</code> controls how text operates in a an element with a defined width.
+                    </p>
+                    <h2>Values</h2>
+                    <ul>
+                        <li class="fragment"><code>normal</code> - Default value</li>
+                        <li class="fragment"><code>nowrap</code> - prevents text from wrapping</li>
+                    </ul>
+
+                    <a href="https://css-tricks.com/almanac/properties/w/whitespace/" target="_blank">White Space Overview</a>
+                </section>
+                <!--Usage-->
+                <!--<section>
+                    <h1></h1>
+                </section>-->
+                <section>
+                    <h1>Example</h1>
+                    <script async src="//jsfiddle.net/WorthyD/hgnvdp1g/embed/html,css,result/"></script>
+                    <a href="https://jsfiddle.net/WorthyD/hgnvdp1g/" target="_blank">Link</a>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1><code>text-overflow</code></h1>
+                    <p>
+                        <code>text-overflow</code> is used with <code>white-space</code> and <code>overflow</code> to add cut offs to text
+                    </p>
+                    <h2>Values</h2>
+                    <ul>
+                        <li class="fragment">clip</li>
+                        <li class="fragment">ellipsis</li>
+
+                    </ul>
+                    <a href="https://css-tricks.com/almanac/properties/t/text-overflow/" target="_blank">Text Overflow Overview</a>
+                </section>
+                <section>
+                    <h1>Example</h1>
+                    <script async src="//jsfiddle.net/WorthyD/kqon94ts/embed/html,css,result/"></script>
+                    <a href="https://jsfiddle.net/WorthyD/kqon94ts/" target="_blank">Link</a>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1><code>text-shadow</code></h1>
+                    <p>The <code>text-shadow</code> is made up of 4 values </p>
+                    <ul>
+                        <li class="fragment">
+                            x-coordinate - pixel value
+                        </li>
+                        <li class="fragment">
+                            y-coordinate - pixel value
+                        </li>
+                        <li class="fragment">
+                            blur radius - pixel value
+                        </li>
+                        <li class="fragment">
+                            color of the shadow - color
+                        </li>
+                    </ul>
+                    <p class="fragment">You can add multiple shadows by separating them with a comma. </p>
+                    <div>
+                        <a href="http://codepen.io/chriscoyier/pen/urkCd" target="_blank" class="fragment">Awesome Examples</a>
+                    </div>
+                    <a href="https://css-tricks.com/almanac/properties/t/text-shadow/" target="_blank">Overview</a>
+                </section>
+                <section>
+                    <h1>Examples</h1>
+                    <script async src="//jsfiddle.net/WorthyD/wrutgs69/embed/html,css,result/"></script>
+                    <a href="https://jsfiddle.net/WorthyD/wrutgs69/" target="_blank">Link</a>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1><code>box-shadow</code></h1>
+                    <p>The <code>box-shadow</code> property adds a drop shadow to your element. </p>
+                    <ul>
+                        <li class="fragment">
+                            x-coordinate - pixel value
+                        </li>
+                        <li class="fragment">
+                            y-coordinate - pixel value
+                        </li>
+                        <li class="fragment">
+                            blur radius - pixel value
+                        </li>
+                        <li class="fragment">
+                            spread radius - pixel value
+                        </li>
+
+                        <li class="fragment">
+                            color of the shadow - color
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Example</h1>
+                    <script async src="//jsfiddle.net/WorthyD/0zrr98dy/embed/html,css,result/"></script>
+                    <a href="https://jsfiddle.net/WorthyD/0zrr98dy/" target="_blank">Link</a>
+                </section>
+            </section>
+            <!--psudo classes https://fonts.google.com  Positioning-->
+        </div>
+    </div>
+    <script src="../scripts/reveal.js"></script>
+<script src="../scripts/head.min.js"></script>
+<script>
+
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [
+            { src: '../scripts/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+            { src: '../scripts/plugin/notes/notes.js', async: false }
+        ]
+    });
+
+</script>>
+
+</body>
+
+</html>
