@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Basics</title>
+
+    
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<!--<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+<link href="../content/reveal.css" rel="stylesheet" />
+<!--<link href="../Content/theme/simple.css" rel="stylesheet" />-->
+<link href="../content/default.css" rel="stylesheet" />
+
+
+<!--<link href="../Scripts/plugin/highlight/default.min.css" rel="stylesheet" />-->
+<link href="../scripts/plugin/highlight/vs.css" rel="stylesheet" />
+<link href="../content/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../content/css/print/pdf.css' : '../content/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script src="//localhost:35729/livereload.js"></script>
+
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <section>
+                    <h1>Psuedo Class <code>:active</code></h1>
+                    <p>Applies a CSS when an element is clicked on.</p>
+                </section>
+                <section>
+                    <h1>Example</h1>
+                </section>
+            </section>
+            <!--
+                more sudo classes
+                fonts
+                positioning
+                flexbox
+
+
+
+            -->
+
+
+        </div>
+
+    </div>
+
+
+    <script src="../scripts/reveal.js"></script>
+<script src="../scripts/head.min.js"></script>
+<script>
+
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [
+            { src: '../scripts/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+            { src: '../scripts/plugin/notes/notes.js', async: false }
+        ]
+    });
+
+</script>>
+
+</body>
+</html>
