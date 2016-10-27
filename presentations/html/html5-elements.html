@@ -1,0 +1,223 @@
+<html>
+
+<head>
+    <title>Basics</title>
+
+    
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<!--<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+<link href="../content/reveal.css" rel="stylesheet" />
+<!--<link href="../Content/theme/simple.css" rel="stylesheet" />-->
+<link href="../content/default.css" rel="stylesheet" />
+
+
+<!--<link href="../Scripts/plugin/highlight/default.min.css" rel="stylesheet" />-->
+<link href="../scripts/plugin/highlight/vs.css" rel="stylesheet" />
+<link href="../content/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../content/css/print/pdf.css' : '../content/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script src="//localhost:35729/livereload.js"></script>
+
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>HTML5 Semantic Tags</h1>
+                <p>
+                    Semantic HTML adds readability to your HTML tags.  There aren't strict rules around
+                </p>
+                <a href="http://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">Basic Overview</a>
+            </section>
+            <section>
+                <h1>What do semantic tags look like?</h1>
+                <div class="two-col">
+                    <div class="fragment">
+                        <pre>
+<code class="xml">
+    <div class="heading">
+        <h1>Page Title</h1>
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </div>
+    <div class="blog-article">
+        <!--Content-->
+    </div>
+</code>
+</pre>
+
+                    </div>
+                    <div class="fragment">
+                        <pre>
+<code class="xml">
+    <header>
+        <h1>Page Title</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Contact</a>
+            <a href="#">FAQ</a>
+        </nav>
+    </header>
+    <article>
+        <!--Content-->
+    </article>
+</code>
+</pre>
+
+
+
+
+
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h1><code>section</code></h1>
+                <p>
+                    A <code>section</code> declares a basic grouping of similar content.
+                </p>
+                <ul>
+                    <li class="fragment">Base Tag <strong>&lt;section&gt;&lt;/section&gt;</strong></li>
+                    <li class="fragment">Display type <strong>block</strong></li>
+                    <li class="fragment">
+                        Examples:
+                        <ul>
+                            <li class="fragment">Grouping of images</li>
+                            <li class="fragment">About an author</li>
+                            <li class="fragment">Group of blog categories</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h1><code>article</code></h1>
+                <p>
+                    Use of the <code>article</code> tag represents a block of content that can be read independently from the rest of the site.
+                </p>
+                <ul>
+                    <li class="fragment">Base Tag <strong>&lt;article&gt;&lt;/article&gt;</strong></li>
+                    <li class="fragment">Display type <strong>block</strong></li>
+                    <li class="fragment">
+                        Examples:
+                        <ul>
+                            <li class="fragment">News Article</li>
+                            <li class="fragment">User submitted comment</li>
+                            <li class="fragment">Twitter Post</li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </section>
+            <section>
+                <h1><code>aside</code></h1>
+                <p>
+                    <code>Aside</code> contains content related to the surrounding content.
+                </p>
+                <ul>
+                    <li class="fragment">Base Tag <strong>&lt;aside&gt;&lt;/aside&gt;</strong></li>
+                    <li class="fragment">Display type <strong>block</strong></li>
+                    <li class="fragment">
+                        Examples:
+                        <ul>
+                            <li class="fragment">Sidebar</li>
+                            <li class="fragment">Notes</li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </section>
+            <section>
+                <h1><code>header</code></h1>
+                <p>
+                    The <code>header</code> element identifies basic information about the following content.
+                </p>
+                <ul>
+                    <li class="fragment">Base Tag <strong>&lt;header&gt;&lt;/header&gt;</strong></li>
+                    <li class="fragment">Display type <strong>block</strong></li>
+                    <li class="fragment">Cannot be placed within a <code>footer</code> or another <code>header</code></li>
+                    <li class="fragment">
+                        Examples:
+                        <ul>
+                            <li class="fragment">Site header</li>
+                            <li class="fragment">Header of an article</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h1><code>header</code></h1>
+                <p>
+                    The <code>header</code> element identifies basic information about the following content.
+                </p>
+                <ul>
+                    <li class="fragment">Base Tag <strong>&lt;footer&gt;&lt;/footer&gt;</strong></li>
+                    <li class="fragment">Display type <strong>block</strong></li>
+                    <li class="fragment">
+                        Examples:
+                        <ul>
+                            <li class="fragment"><code>article</code> author information</li>
+                            <li class="fragment"><code>article</code> related documents</li>
+                            <li class="fragment">Website footer links.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+
+            <section>
+                <h1><code>nav</code></h1>
+                <p>
+                      The <code>nav</code> element is used to define a list of major navigation links.
+                </p>
+                <ul>
+                    <li class="fragment">Base Tag <strong>&lt;nav&gt;&lt;/nav&gt;</strong></li>
+                    <li class="fragment">Display type <strong>block</strong></li>
+                    <li class="fragment">
+                        Examples:
+                        <ul>
+                            <li class="fragment">Main site navigation</li>
+                            <li class="fragment">List of reference articles in an <code>article</code></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+
+        </div>
+
+    </div>
+
+
+    <script src="../scripts/reveal.js"></script>
+<script src="../scripts/head.min.js"></script>
+<script>
+
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [
+            { src: '../scripts/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+            { src: '../scripts/plugin/notes/notes.js', async: false }
+        ]
+    });
+
+</script>>
+
+</body>
+</html>
