@@ -1,0 +1,366 @@
+<html>
+
+    <head>
+        <title>Basics</title>
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<!--<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+<link href="../content/reveal.css" rel="stylesheet" />
+<!--<link href="../Content/theme/simple.css" rel="stylesheet" />-->
+<link href="../content/default.css" rel="stylesheet" />
+
+
+<!--<link href="../Scripts/plugin/highlight/default.min.css" rel="stylesheet" />-->
+<link href="../scripts/plugin/highlight/vs.css" rel="stylesheet" />
+<link href="../content/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../content/css/print/pdf.css' : '../content/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script src="//localhost:35729/livereload.js"></script>
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>JavaScript Part 2</h1>
+                    <ul>
+                        <li class="fragment">Operators</li>
+                        <li class="fragment">Comparison</li>
+                        <li class="fragment">Condition Statements</li>
+                        <li class="fragment">Functions</li>
+                        <li class="fragment">Output Methods</li>
+                    </ul>
+                </section>
+                <section>
+                    <section>
+                        <h1>Review</h1>
+                    </section>
+                    <section>
+                        <!--Script include-->
+                        <h1>Including a reference to a external <code>script</code> file</h1>
+                        <pre>
+                            <code class="xml">
+                    <p id="myBlock">
+    </p>
+    &lt;script src="script/main.js"&gt;&lt;/script&gt;
+</code>
+                        </pre>
+                    </section>
+                    <section>
+                        <h1>Declaring a Variable</h1>
+                        <div class="fragment">
+                            <p>
+                                You declared a variable by using the <code>var</code> keyword.
+                            </p>
+                            <pre>
+                                <code class="js">
+    var foo;
+    var bar;
+</code>
+                            </pre>
+                        </div>
+                        <div class="fragment">
+                            <p>
+                                You can assign a value to a variable when it has been declared
+                            </p>
+                            <pre>
+                                <code class="js">
+    var foo  = "Hello World";
+</code>
+                            </pre>
+                        </div>
+                        <p class="fragment">
+                            Variables can be used before they are declared. It makes the code harder to follow.
+                        </p>
+                    </section>
+                    <section>
+                        <h1>Boolean</h1>
+                        <p>
+                            A boolean variable represents a <code>true</code> or <code>false</code> value
+                        </p>
+                        <div class="fragment">
+                            <pre>
+                                <code class="js">
+    var isBlack = true;
+    var isBlue = false;
+</code>
+                            </pre>
+                        </div>
+                        <p class="fragment">
+                            Booleans are incredibly simple, but we use them all over the place in code.
+                        </p>
+                    </section>
+                    <section>
+                        <!--  Numbers  -->
+                        <h1>Numeric Values</h1>
+                        <p>
+                            Numeric values in JavaScript can be represented in integer or float values.
+                        </p>
+                        <div class="fragment">
+                            <pre>
+                                <code class="js">
+    var ten = 10;
+    var pi = 3.14159265359;
+</code>
+                            </pre>
+                        </div>
+                        <aside class="notes">
+                            In ECMA JavaScript your number literals can go from 0 to -+1.79769e+308. And because 5e-324 is the smallest infinitesimal
+                            you can get, anything smaller is rounded to 0.
+                        </aside>
+                    </section>
+                    <section>
+                        <h1>String Variables</h1>
+                        <p>String variables are composed of text inside single or double quotes</p>
+                        <!--  Strings  -->
+                        <div class="fragment">
+                            <pre>
+                                <code class="js">
+
+    var myName = "Daniel Worthy" //Using Double Quotes;
+    var yourName = 'John Doe';  //Using single quotes
+
+    var foo = 'You'll be there tomorrow'; //Invalid
+    var bar = 'You cannot do this";  //Invalid
+</code>
+                            </pre>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Operators</h1>
+                        <p>
+                            Operators allow you to take action with your variables.
+                        </p>
+                    </section>
+                    <section>
+                        <h1>Assignment Operators</h1>
+                        <ul>
+                            <li class="fragment">Equals <code>=</code></li>
+                        </ul>
+                        <div class="fragment">
+                            <pre><code class="js">
+    var y;
+    y = 1; 
+    console.log(y); //outputs 1                           
+                           </code></pre>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Arithmetic Operators</h1>
+                        <ul>
+                            <li class="fragment">Addition <code>+</code></li>
+                            <li class="fragment">Subtraction <code>-</code></li>
+                            <li class="fragment">Multiplication <code>*</code></li>
+                            <li class="fragment">Division <code>/</code></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h1>Arithmetic Examples</h1>
+                        <div class="two-col">
+                            <div class="">
+                                <pre class="fragment"><code class="js">
+ var x = 1;
+ var y = 2;
+ var z = x + y;
+ console.log(z); //Outputs 3
+                           </code></pre>
+                                <pre class="fragment"><code class="js">
+
+ var a = 10 - 9; 
+ console.log(a); //Outputs 1
+
+
+                           </code></pre>
+                            </div>
+                            <div>
+                                <pre class="fragment"><code class="js">
+ var b = 8;
+ var c = 2;
+ var d = b * c                           
+ console.log(d); //Outputs 16
+                           </code></pre>
+                                <pre class="fragment"><code class="js">
+
+ var e = 18 / 2;
+ console.log(e);  //Outputs 9
+
+                           </code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>String Math</h1>
+
+                        <!--
+                                TODO:!@!!!
+
+                         -->
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Comparison</h1>
+                        <p>
+                            JavaScript operators are used to test if a condition is true or false.
+                        </p>
+                    </section>
+                    <section>
+                        <h1>Comparision Operators</h1>
+                        <ul>
+                            <li class="fragment"><code>==</code> and <code>===</code> equals</li>
+                            <li class="fragment"><code>!=</code> and <code>!==</code> not equals</li>
+                            <li class="fragment"><code>&gt;</code> and <code>&gt;=</code> greater than and greater than or equal to</li>
+                            <li class="fragment"><code>&lt;</code> and <code>&lt;=</code> less than and less than or equal to</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h1>Greater and Less than usage</h1>
+                        <div class="two-col">
+                            <div class="">
+                                <pre class="fragment"><code class="js">
+ var x = 10;
+ var y = x > 9; //true
+ var z = x > 100 //false;
+ var a = x >= 10 //true
+ 
+
+                           </code></pre>
+                            </div>
+                            <div>
+                                <pre class="fragment"><code class="js">
+ var x = 10;
+ var y = x < 9; //false
+ var z = x < 100 //true;
+ var a = x <= 10 //true
+                            </code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Equality vs. Strict&nbsp;Equality</h1>
+                        <div class="fragment">
+                            <h2><code>==</code> vs. <code>===</code></h2>
+                            <h2><code>!=</code> vs. <code>!==</code></h2>
+                        </div>
+                        <div class="fragment">
+                            <h2><code>==</code> and <code>!=</code> check value </h2>
+                            <h2><code>===</code> and <code>!==</code> check value <em>and </em> type </h2>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Examples</h1>
+                        <div class="two-col">
+                            <div class="">
+                                <pre class="fragment"><code class="js">
+    1 == '1';            //true
+    1 === '1';           //false
+    1 === 1;             //true
+                           </code></pre>
+                                <pre class="fragment"><code class="js">
+    1 != '1';            //false
+    1 !== '1';           //true
+    1 !== 1;             //false
+ 
+
+                           </code></pre>
+                            </div>
+                            <div>
+                                <pre class="fragment"><code class="js">
+    true == 'true';      //true
+    true === 'true';     //false
+                           </code></pre>
+                                <pre class="fragment"><code class="js">
+    false == 0;          //true
+    false === 0;         //false
+    false == ' ';        //true
+    false === ' ' ;      //false
+ 
+                           </code></pre>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Condition Statements</h1>
+                        <p>
+                            Conditional statements allow us to write code that is capable of performing different actions
+                        </p>
+                    </section>
+                    <section>
+                        <h1>The <code>if</code> statement</h1>
+                        <div class="fragment">
+                            <pre><code class="js">
+    var x = true;
+    if (x === true){
+        //This code will be executed
+    }     
+         </code></pre>
+                        </div>
+                        <div class="fragment">
+                            <pre><code class="js">
+    var x = true;
+    if (x === false){
+        //This code will NOT be executed
+    }     
+         </code></pre>
+                        </div>
+
+                    </section>
+                    <section>
+                        <h1>The <code>else</code> statement</h1>
+                        <div class="fragment">
+                            <pre><code class="js">
+    var  = true;
+    if (x === ){
+        //This code will NOT be executed
+    }     
+         </code></pre>
+                        </div>
+
+
+                    </section>
+                </section>
+                <section>
+                    <section> Functions
+                    </section>
+                </section>
+                <section>
+                    <section> Output Methods
+                    </section>
+                </section>
+            </div>
+        </div>
+        <script src="../scripts/reveal.js"></script>
+<script src="../scripts/head.min.js"></script>
+<script>
+
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [
+            { src: '../scripts/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+            { src: '../scripts/plugin/notes/notes.js', async: false }
+        ]
+    });
+
+</script>>
+
+    </body>
+
+</html>
