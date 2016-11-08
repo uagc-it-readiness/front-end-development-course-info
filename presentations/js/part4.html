@@ -1,0 +1,275 @@
+<html>
+
+<head>
+    <title>Basics</title>
+
+    
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<!--<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+<link href="../content/reveal.css" rel="stylesheet" />
+<!--<link href="../Content/theme/simple.css" rel="stylesheet" />-->
+<link href="../content/default.css" rel="stylesheet" />
+
+
+<!--<link href="../Scripts/plugin/highlight/default.min.css" rel="stylesheet" />-->
+<link href="../scripts/plugin/highlight/vs.css" rel="stylesheet" />
+<link href="../content/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../content/css/print/pdf.css' : '../content/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script src="//localhost:35729/livereload.js"></script>
+
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Today's Topics</h1>
+                <ul>
+                    <li class="fragment">Incrementing</li>
+                    <li class="fragment">Loops</li>
+                    <li class="fragment">Scope</li>
+                </ul>
+            </section>
+            <section>
+                <h1>Incrementing and Decrementing</h1>
+                <p>
+                    There is a very easy way to increment or decrementing a variable. You can use the <code>++</code> or <code>--</code> to increment or decrement your variable by 1.
+                </p>
+
+
+
+                <pre class="fragment">
+<code class="js">
+    var x = 0;
+    x++  // equivalent to x = x + 1;
+    console.log(x); //outputs 1
+    x++
+    console.log(x); //outputs 2
+    x--
+    console.log(x); //outputs 1
+</code>
+</pre>
+            </section>
+            <section>
+                <h1>JavaScript Loops</h1>
+                <p>
+                    Loops in JavaScript are used to execute the same statement multiple times.
+                </p>
+                <h2 class="fragment">There are two types of Loops</h2>
+                <ul>
+                    <li class="fragment">For Loops</li>
+                    <li class="fragment">While Loops</li>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <h1>The For Loop</h1>
+                    <p>
+                        The for loop is most often used when dealing with collections.  It is possible to not even execute if the condition evaluates to true.
+                    </p>
+                    <h2>Syntax</h2>
+                    <h3 class="align-left">
+                        <code class="fragment">for (</code>
+                        <code class="fragment">statement 1;</code>
+                        <code class="fragment">statement 2;</code>
+                        <code class="fragment">statement 3;</code>
+                        <code class="fragment">){</code>
+                    </h3>
+                    <h3>
+                        <code class="fragment">//Code Block</code>
+                    </h3>
+                    <h3 class="align-left">
+                        <code class="fragment">}</code>
+                    </h3>
+                </section>
+                <section>
+                    <h1>Code Samples</h1>
+                    <pre class="fragment"><code class="js">
+    var x = [1, 2, 3, 4];
+    for(var i = 0; i < x.length; i++){
+        console.log(x[i]);
+    }
+                    </code></pre>
+                    <pre class="fragment"><code class="js">
+    var x = [1, 2, 3, 4];
+    var i = 0;
+    for(; i < x.length; i++){
+        console.log(x[i]);
+    }
+                    </code></pre>
+                </section>
+                <section>
+                    <h1>More Examples</h1>
+                    <pre><code class="js">
+    var names = ['Daniel', 'Josh', 'Amanda'];
+    var html = "&lt;ul>"
+    for( var i = 0; i < names.length; i++){
+        html = html + '&lt;li>' + names[i] + '&lt;/li>'
+    }
+    html = html + '&lt;/ul>';
+
+                        </code></pre>
+                </section>
+                <section>
+                    <h1>More Examples</h1>
+                    <pre><code class="js">
+var names = [
+    { firstname: 'John', lastname: 'Doe'},
+    { firstname: 'Jane', lastname: 'Doe'}
+    ];
+var html = "&lt;ul>"
+for( var i = 0; i < names.length; i++){
+    html = html + '&lt;li>' + names[i].firstname + ' ' + names[i].lastname  + '&lt;/li>'
+}
+html = html + '&lt;/ul>';
+                        </code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Do and While Loops</h1>
+                    <p>
+                        Do and While loops are easier to read, but require more care to code properly.
+                    </p>
+                </section>
+                <section>
+                    <h2>A While Loop</h2>
+                    <p>
+                        May not execute depending on the condition.
+                    </p>
+                    <pre class="fragment">
+<code class="js">
+    var i = 0;
+    while(i < 25){
+        console.log('i is equal to ' + i);
+        i++
+    }
+</code>
+</pre>
+                    <h2 class="fargment">Do Loop</h2>
+                    <p class="fragment">
+                        Will always execute at least once.
+                    </p>
+                    <pre class="fragment">
+<code class="js">
+    var i = 0;
+    do{
+        console.log('i is equal to ' + i);
+        i++
+    }
+    while (i < 25);
+</code>
+</pre>
+                </section>
+                <section>
+                    <h1>More Examples</h1>
+                    <pre class="fragment">
+<code class="js">
+    var condition = false;
+    var i = 0;
+    while(condition == false){
+        if (i > 10){
+           condition = true;
+        }
+
+        i++
+    }
+</code>
+</pre>
+                </section>
+                <section>
+                    <h1>Dangers of Do and While Loops</h1>
+                    <h1 class="fragment">Infinite Loops</h1>
+                </section>
+
+            </section>
+            <section>
+                <section>
+                    <h1>JavaScript Scope</h1>
+                    <p>
+                        Scope is the collection of variables, objects and functions you have the ability to access.
+                    </p>
+                </section>
+                <section>
+                    <h1>Local Scope</h1>
+                    <p>
+                        Local scope is a group of items that can only be accessed within  the context it is declared.
+                    </p>
+                    <pre>
+<code class="js">
+
+    function testing(){
+        var x = 0;
+
+        console.log(x); //logs 0
+    }
+
+    testing();
+
+    console.log(x);  // Causes an error
+
+
+</code>
+</pre>
+                </section>
+                <section>
+                    <h1>Global Scope</h1>
+                    <p>
+                        Global scope items can be accessed by all JavaScript on the page.
+                    </p>
+                    <pre>
+<code class="js">
+
+    var x = 0;
+    function testing(){
+
+        console.log(x); //logs 0
+    }
+
+    testing();
+
+    console.log(x);  //logs 0;
+
+
+</code>
+</pre>
+                    <aside class="notes">
+                        Multi global vars can cause issues with conflicting names.
+                    </aside>
+                </section>
+
+            </section>
+        </div>
+
+    </div>
+
+
+    <script src="../scripts/reveal.js"></script>
+<script src="../scripts/head.min.js"></script>
+<script>
+
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [
+            { src: '../scripts/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+            { src: '../scripts/plugin/notes/notes.js', async: false }
+        ]
+    });
+
+</script>>
+
+</body>
+</html>
