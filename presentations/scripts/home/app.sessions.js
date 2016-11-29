@@ -1,0 +1,272 @@
+(function () {
+    'use strict';
+
+    angular
+        .module('app')
+        .factory('Sessions', Sessions);
+
+    Sessions.$inject = [];
+
+    function Sessions() {
+        var service = {
+            getSessions: getSessions
+        };
+        var assignmentBase = 'https://github.com/uagc-it-readiness/front-end-development-course-assignments/tree/master/';
+
+        /*#region*/
+        var s1 = {
+            num: 1,
+            date: '10/4/2016',
+            links: [
+                ['Class Intro', 'intro/intro.html'],
+                ['Web Technology Intro', 'intro/web-intro.html'],
+                ['Web Tool Intro', 'intro/tools.html'],
+            ]
+        };
+
+        var s2 = {
+            num: 2,
+            date: '10/6/2016',
+            links: [
+                ['HTML Intro', 'html/basics.html'],
+            ]
+        };
+        var s3 = {
+            num: 3,
+            date: '10/8/2016',
+            links: [
+                ['Source Control Intro', 'sourcecontrol/intro.html'],
+                ['Assignment 1', 'https://github.com/uagc-it-readiness/front-end-development-course-assignments/tree/master/Assignment1'],
+            ]
+        };
+        var s4 = {
+            num: 4,
+            date: '10/11/2016',
+            links: [
+                ['HTML Continued', 'html/basics-continued.html'],
+                ['CSS Introduction', 'css/intro.html'],
+                ['Assignment 2', 'https://github.com/uagc-it-readiness/front-end-development-course-assignments/tree/master/Assignment2'],
+            ]
+        };
+        var s5 = {
+            num: 5,
+            date: '10/13/2016',
+            links: [
+                ['CSS Part 2', 'css/part2.html'],
+                ['Assignment 3', 'https://github.com/uagc-it-readiness/front-end-development-course-assignments/tree/master/Assignment3'],
+
+            ]
+        };
+        var s6 = {
+            num: 6,
+            date: '10/18/2016',
+            links: [
+                ['CSS Part 3', 'css/part3.html'],
+                ['Assignment 4', 'https://github.com/uagc-it-readiness/front-end-development-course-assignments/tree/master/Assignment4'],
+
+            ]
+        };
+        var s7 = {
+            num: 7,
+            date: '10-20-2016',
+            links: [
+                ['CSS Part 4', 'css/part4.html'],
+                ['Assignment 5', 'https://github.com/uagc-it-readiness/front-end-development-course-assignments/tree/master/Assignment5'],
+            ]
+        };
+        var s8 = {
+            num: 8,
+            date: '10/22/2016',
+            links: [
+                ['Review', 'review/review-one.html'],
+            ]
+        };
+        var s9 = {
+            num: 9,
+            date: '10/25/2016',
+            links: [
+                ['CSS Part 5', 'css/part5.html'],
+                ['Assignment 6', 'https://github.com/uagc-it-readiness/front-end-development-course-assignments/tree/master/Assignment6'],
+            ]
+        };
+        var s10 = {
+            num: 10,
+            date: '10/27/2016',
+            links: [
+                ['HTML5 Semantic Elements', 'html/html5-elements.html'],
+                ['CSS Part 6', 'css/part6.html'],
+                ['Assignment 7', 'https://github.com/uagc-it-readiness/front-end-development-course-assignments/tree/master/Assignment7'],
+
+
+            ]
+        };
+
+
+        var october = {
+            name: 'October',
+            isActive: false,
+            sessions: [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10]
+        };
+
+        /*#endregion*/
+
+
+        /*
+                var s11 = {
+                    num: 11,
+                    date: '11/1/2016',
+                    links: [
+                        {text: '',url: ''},
+                    ]
+                };
+                */
+
+
+
+
+        var s11 = {
+            num: 11,
+            date: '11/1/2016',
+            links: [
+                ['JS Intro', 'js/intro.html'],
+                ['Assignment 8', assignmentBase + 'Assignment8']
+            ]
+        };
+
+        var s12 = {
+            num: 12,
+            date: '11/3/2016',
+            links: [
+                ['JS Part 2', 'js/part2.html'],
+                ['Assignment 9', assignmentBase + 'Assignment9']
+            ]
+        };
+
+        var s13 = {
+            num: 13,
+            date: '11/5/2016',
+            links: [
+                ['JS Part 3', 'js/part3.html'],
+                ['Assignment 10', assignmentBase + 'Assignment10']
+            ]
+        };
+
+        var s14 = {
+            num: 14,
+            date: '11/8/2016',
+            links: [
+                ['JS Part 4', 'js/part4.html'],
+                ['Assignment 11', assignmentBase + 'Assignment11']
+            ]
+        };
+        var s15 = {
+            num: 15,
+            date: '11/10/2016',
+            links: [
+                ['JS Part 5', 'js/part5.html'],
+                ['Assignment 12', assignmentBase + 'Assignment12']
+            ]
+        };
+        var s16 = {
+            num: 16,
+            date: '11/15/2016',
+            links: [
+                ['Forms', 'html/forms.html'],
+                ['Assignment 13', assignmentBase + 'Assignment13']
+            ]
+        };
+
+
+        var s17 = {
+            num: 17,
+            date: '11/17/2016',
+            links: [
+                ['Forms Continued', 'html/forms-2.html'],
+                ['Assignment 14', assignmentBase + 'Assignment14']
+            ]
+        };
+
+        var s18 = {
+            num: 18,
+            date: '11/19/2016',
+            links: [
+            ]
+        };
+
+        var s19 = {
+            num: 19,
+            date: '11/22/2016',
+            links: [
+            ]
+        };
+
+        var s20 = {
+            num: 20,
+            date: '11/29/2016',
+            links: [
+                ['Selectors and jQuery', 'sessions/18-selectors-jquery.html']
+            ]
+        };
+
+
+
+
+
+
+
+
+
+
+        var november = {
+            name: 'November',
+            isActive: true,
+            sessions: []
+        };
+        november.sessions.push(s11);
+        november.sessions.push(s12);
+        november.sessions.push(s13);
+        november.sessions.push(s14);
+        november.sessions.push(s15);
+        november.sessions.push(s16);
+        november.sessions.push(s17);
+        november.sessions.push(s18);
+        november.sessions.push(s19);
+        november.sessions.push(s20);
+
+
+        var december = {
+            name: 'December',
+            isActive: true,
+            sessions: []
+        };
+
+        var s21 = {
+            num: 21,
+            date: '12/1/2016',
+            links: [
+                ['Attributes and Displaying', 'sessions/19.html']
+            ]
+        };
+
+
+        december.sessions.push(s21);    
+
+
+        var sessions = [
+            october,
+            november,
+            december
+        ];
+        /* beautify ignore:end */
+
+
+
+        return service;
+
+
+
+        function getSessions() {
+            return sessions;
+        }
+    }
+})();

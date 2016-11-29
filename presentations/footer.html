@@ -1,0 +1,17 @@
+<script src="../scripts/reveal.js"></script>
+<script src="../scripts/head.min.js"></script>
+<script>
+
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [
+            { src: '../scripts/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+            { src: '../scripts/plugin/notes/notes.js', async: false }
+        ]
+    });
+
+</script>>
