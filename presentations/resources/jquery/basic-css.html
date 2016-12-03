@@ -1,0 +1,74 @@
+<section>
+    <section>
+        <h1>jQuery .css()</h1>
+        <p>
+            We can retrieve and modify an element's css value using jQuery's .css() method.
+        </p>
+    </section>
+    <section>
+        <h1>Retrieving values</h1>
+        <p>You can get the current value of a CSS property in jQuery by passing a string into the .css() method.</p>
+        <div class="fragment">
+            <pre><code class="js">
+    var x = $('element').css('height'); // Retrieves the css height of the element
+                </code></pre>
+        </div>
+        <div class="fragment">
+            <pre><code class="js">
+    var x = $('element').css('backgroundColor'); // Retrieves the color value of the element
+                </code></pre>
+        </div>
+         <div class="fragment">
+            <pre><code class="js">
+    var x = $('element').css('background-color'); // Retrieves the color value of the element
+                </code></pre>
+        </div>
+    </section>
+    <section>
+        <h1>Setting Values</h1>
+        <p>
+            There are two ways to set CSS using jQuery.  The first method is to pass in two strings.
+        </p>
+        <div class="fragment">
+<pre><code class="js">
+$('element').css('background-color', '#aa0000');    
+$('element').css('padding', '20px');    
+    </code></pre>
+        </div>
+        <div class="fragment">
+<pre><code class="js">
+$('element').css('background-color', '');    //Resets property
+$('element').css('padding', '');    //Resets property
+    </code></pre>
+        </div>
+ 
+    </section>
+    <section>
+        <h1>Setting Values Continued</h1>
+        <p>
+            You can set multiple CSS values by passing in a javascript object
+        </p>
+        <div class="fragment">
+<pre><code class="js">
+$('element').css({
+    backgroundColor: '#aa0000',
+    padding: '20px'
+});    
+//////// or
+$('element').css({
+    'background-color': '#aa0000',
+    'padding': '20px'
+});    
+
+    </code></pre>
+        </div>
+ 
+    </section>
+    <section>
+        <!-- Example -->
+        <h1>Example Code</h1>
+        <script async src="//jsfiddle.net/WorthyD/dkLyyenj/embed/"></script>
+        <a href="https://jsfiddle.net/WorthyD/dkLyyenj/" target="_blank">link</a>
+    </section>
+
+</section>

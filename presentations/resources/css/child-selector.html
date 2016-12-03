@@ -1,0 +1,37 @@
+<section>
+    <section>
+        <h1>The Child Selector</h1>
+        <p>
+            The child selector targets elements immediately inside of the parent element.
+        </p>
+        <p class="fragment">
+            Think of it as if you control your children, but your grand children totally ignore the rules.
+        </p>
+        <h2 class="fragment">
+            <pre><code class="css">div > a {/* css rules */}</code></pre>
+        </h2>
+    </section>
+    <section>
+        <h1>Child vs Descendant</h1>
+        <div class="fragment">
+            <pre><code class="xml"><div>
+    <a href="">Hyper Link</a>
+    <p>
+        paragraph <a href="">Inside Paragraph</a>
+    </p>
+    </div></code></pre>
+        </div>
+        <h3 class="fragment">
+            <pre><code class="css">div a {/* css rules */}</code></pre>
+        </h3>
+        <h3 class="fragment">Applies to every a</h2>
+        <h3 class="fragment">
+            <pre><code class="css">div > a {/* css rules */}</code></pre>
+        </h3>
+        <h3 class="fragment">Applies only to the a immediately after the div</h3>
+    </section>
+    <section>
+        <script async src="//jsfiddle.net/WorthyD/k18sqn0h/embed/html,css,result/"></script>
+        <a href="https://jsfiddle.net/WorthyD/k18sqn0h/" target="_blank">Link</a>
+    </section>
+</section>

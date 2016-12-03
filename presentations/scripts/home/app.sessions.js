@@ -190,6 +190,8 @@
             num: 18,
             date: '11/19/2016',
             links: [
+                ['JS Review', 'js/review.html'],
+                ['Assessment 2', assignmentBase + 'Assessment 2']
             ]
         };
 
@@ -204,7 +206,8 @@
             num: 20,
             date: '11/29/2016',
             links: [
-                ['Selectors and jQuery', 'sessions/18-selectors-jquery.html']
+                ['Selectors and jQuery', 'sessions/18-selectors-jquery.html'],
+                ['Assignment 15', assignmentBase + 'Assignment15']
             ]
         };
 
@@ -244,12 +247,22 @@
             num: 21,
             date: '12/1/2016',
             links: [
-                ['Attributes and Displaying', 'sessions/19.html']
+                ['Attributes and Displaying', 'sessions/19.html'],
+                ['Assignment 16', assignmentBase + 'Assignment16']
+            ]
+        };
+            
+var s22 = {
+           num: 22,
+            date: '12/3/2016',
+            links: [
+                ['Emails, Children, Classes, and Traversing', 'sessions/20.html']
             ]
         };
 
 
         december.sessions.push(s21);    
+        december.sessions.push(s22);    
 
 
         var sessions = [
