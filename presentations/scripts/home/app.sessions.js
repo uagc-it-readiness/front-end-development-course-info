@@ -260,9 +260,18 @@ var s22 = {
             ]
         };
 
-
+        var s23 = {
+            num: 23,
+            date: '12/6/2016',
+            links: [
+                ['Attributes and Displaying', 'sessions/21.html'],
+                ['Assignment 17', assignmentBase + 'Assignment17']
+            ]
+        };
+ 
         december.sessions.push(s21);    
         december.sessions.push(s22);    
+        december.sessions.push(s23);    
 
 
         var sessions = [

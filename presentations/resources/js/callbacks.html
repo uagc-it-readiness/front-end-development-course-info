@@ -1,0 +1,57 @@
+<section>
+    <section>
+        <h1>JavaScript Callbacks</h1>
+        <p>
+            Callbacks are functions passed into other functions as parameters.  These functions are intended to be used inside of the functions they are passed into.
+        </p>
+    </section>
+    <section>
+        <h1>Examples</h1>
+        <pre><code class="js">
+    function myCallback()
+        console.log('Operation Complete');
+    }            
+
+    function addSomething(x, y, onComplete){
+       var z = x + y;
+       console.log(z);
+       onComplete();
+    }
+
+    addSomething(1, 3, myCallback);
+
+            </code></pre>
+    </section>
+    <section>
+        <h1>We've been doing callbacks already.</h1>
+        <pre class="fragment"><code class="js">
+    document.getElementById('id').addEventListener('click', function(){
+        //Callback
+    });
+            </code></pre>
+         <pre class="fragment"><code class="js">
+    $('button').on('click', function(){
+        //This is a callback
+    });            
+            </code></pre>
+    </section>
+    <section>
+        <h1>Using callbacks for the UI</h1>
+         <pre class="fragment"><code class="js">
+    $('button').on('click', function(){
+         //Click Event
+         $('.container').slideDown('fast', function(){
+             //Slide Down Callback
+             $(this).find('p').fadeIn('fast', function(){
+                 //Fade in Callback
+             });
+         });
+    });            
+            </code></pre>
+    </section>
+    <section>
+        <!-- jsFiddle Example -->
+        <script async src="//jsfiddle.net/WorthyD/kun86m8L/embed/"></script>
+        <a href="https://jsfiddle.net/WorthyD/kun86m8L/" target="_blank"></a>
+    </section>
+</section>
