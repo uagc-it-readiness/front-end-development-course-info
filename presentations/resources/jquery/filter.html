@@ -1,0 +1,35 @@
+<section>
+    <section>
+        <h1>jQuery .filter()</h1>
+        <p>
+            The jQuery .filter() method takes the current jQuery object and reduces the set based on the following.
+        </p>
+        <ul>
+            <li class="fragment">A selector</li>
+            <li class="fragment">A function</li>
+            <li class="fragment">A DOM element</li>
+            <li class="fragment">A jQuery Selection</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Filtering with a selector.</h1>
+        <pre class="fragment"><code class="js">
+    var inputs = $('input');
+    var textInputs = inputs.filter('[type="text"]');
+    var checkBoxes = inputs.filter('[type="checkbox"]');
+            </code></pre>
+    </section>
+    <section>
+        <h1>Filtering with a function</h1>
+        <pre class="fragment"><code class="js">
+    var inputs = $('input');
+    var fifthInput = inputs.filter(function(index){
+        if (index === 4){
+            return true;
+        }
+        return false;
+    });
+            </code></pre>
+ 
+    </section>
+</section>
