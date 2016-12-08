@@ -198,8 +198,7 @@
         var s19 = {
             num: 19,
             date: '11/22/2016',
-            links: [
-            ]
+            links: []
         };
 
         var s20 = {
@@ -222,7 +221,7 @@
 
         var november = {
             name: 'November',
-            isActive: true,
+            isActive: false,
             sessions: []
         };
         november.sessions.push(s11);
@@ -251,9 +250,9 @@
                 ['Assignment 16', assignmentBase + 'Assignment16']
             ]
         };
-            
-var s22 = {
-           num: 22,
+
+        var s22 = {
+            num: 22,
             date: '12/3/2016',
             links: [
                 ['Emails, Children, Classes, and Traversing', 'sessions/20.html']
@@ -264,14 +263,26 @@ var s22 = {
             num: 23,
             date: '12/6/2016',
             links: [
-                ['Attributes and Displaying', 'sessions/21.html'],
+                ['Blur and Callbacks', 'sessions/21.html'],
                 ['Assignment 17', assignmentBase + 'Assignment17']
             ]
         };
- 
-        december.sessions.push(s21);    
-        december.sessions.push(s22);    
-        december.sessions.push(s23);    
+
+        var s24 = {
+            num: 24,
+            date: '12/8/2016',
+            links: [
+                ['Data Attributes', 'sessions/22.html'],
+                ['Assignment 18', assignmentBase + 'Assignment18']
+            ]
+        };
+
+
+
+        december.sessions.push(s21);
+        december.sessions.push(s22);
+        december.sessions.push(s23);
+        december.sessions.push(s24);
 
 
         var sessions = [

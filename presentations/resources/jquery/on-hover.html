@@ -1,0 +1,35 @@
+<section>
+    <h1>Hover</h1>
+    <p>
+        The hover events allow you to add JavaScript to elements as the user uses their mouse to move around them.
+    </p>
+    <!--<h2 class="fragment">The hover event can be useful for</h2>
+    <ul>
+        <li class="fragment">Interactive Menus</li>
+        <li class="fragment"></li>
+        <li class="fragment"></li>
+    </ul>-->
+    <p class="fragment">A full hover event uses two event listeners.</p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <pre class="fragment"><code class="js">
+        var elm = $('.my-element');     
+
+        elm.on('mouseenter', function(){
+            //Code executed when the mouse goes over an element
+            $(this).addClass('hover');
+        });
+
+        elm.on('mouseleave', function(){
+
+            //Code executed when the mouse exits the element. 
+            $(this).removeClass('hover');
+ 
+        });
+        
+    </code></pre>
+</section>
+<section>
+    
+</section>
