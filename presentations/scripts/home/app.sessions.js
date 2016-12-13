@@ -277,12 +277,21 @@
             ]
         };
 
+        var s25 = {
+            num: 25,
+            date: '12/13/2016',
+            links: [
+                ['Ajax', 'sessions/23.html'],
+                ['Assignment 19', assignmentBase + 'Assignment19']
+            ]
+        };
 
 
         december.sessions.push(s21);
         december.sessions.push(s22);
         december.sessions.push(s23);
         december.sessions.push(s24);
+        december.sessions.push(s25);
 
 
         var sessions = [

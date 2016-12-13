@@ -147,10 +147,12 @@
     </section>
     <section>
         <!-- JS Fiddle -->
+        <script async src="//jsfiddle.net/WorthyD/47sLLzd9/embed/"></script>
+        <a href="https://jsfiddle.net/WorthyD/47sLLzd9/" target="_blank"></a>
     </section>
 </section>
                 <section>
-    <h1>Appending and Preppending content</h1>
+    <h1>Appending and Prepending content</h1>
     <p>
         So far, this has been the primary method for adding content to an html element.
     </p>
@@ -178,14 +180,12 @@
     errors.prepend('<li>new error</li>' + currentHtml);
         
         </code></pre>
-
 </section>
-
 <section>
     <!-- Best Practice -->
     <h1>Performance</h1>
     <p>
-        Do your best to not use these methods inside of a loop.  Use them after a loop has completed.
+        Do your best to not use these methods inside of a loop. Use them after a loop has completed.
     </p>
     <h2>Don't</h2>
     <pre class="fragment"><code class="js">
@@ -201,9 +201,12 @@
         }
         $('error').append(errorList);
         </code></pre>
-
 </section>
-
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/599cqq3s/embed/"></script>
+    <a href="https://jsfiddle.net/WorthyD/599cqq3s/" target="_blank">Link</a>
+</section>
                 <section>
     <h1>Filtering jQuery Further</h1>
     <p>
