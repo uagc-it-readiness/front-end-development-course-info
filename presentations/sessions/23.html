@@ -1,0 +1,282 @@
+
+
+<html>
+
+<head>
+    <title>Basics</title>
+
+  
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<!--<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+<link href="../content/reveal.css" rel="stylesheet" />
+<!--<link href="../Content/theme/simple.css" rel="stylesheet" />-->
+<link href="../content/default.css" rel="stylesheet" />
+
+
+<!--<link href="../Scripts/plugin/highlight/default.min.css" rel="stylesheet" />-->
+<link href="../scripts/plugin/highlight/vs.css" rel="stylesheet" />
+<link href="../content/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../content/css/print/pdf.css' : '../content/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script src="//localhost:35729/livereload.js"></script>
+
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Topics</h1>
+                <ul>
+                    <li class="fragment">JSON</li>
+                    <li class="fragment">Basic Ajax</li>
+                    <li class="fragment">Appending Prepending</li>
+                    <li class="fragment">More Filtering</li>
+                </ul>
+            </section>
+
+                <section>
+    <section>
+        <h1>JSON</h1>
+        <p>
+            Stands for <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation. It
+            is object syntax that is standardized by the same organization that standardizes JavaScript.
+        </p>
+        <p class="fragment">
+            JSON is frequently used to communicate data between programming languages. XML (extensible markup language) was primarily
+            used before JSON.
+        </p>
+        <p class="fragment">
+            A JSON file has the extension of .json. It is frequently used for configuration or smaller data sets.
+        </p>
+    </section>
+    <section>
+        <h1>Syntax</h1>
+        <pre><code class="js">
+{
+    "name": "Daniel",
+    "isAwake": true,
+    "count": 3,
+    "languages: ["JavaScript", "C#"],
+    "job":{
+        "field": "Development",
+        "responsibilities": ["training", "coding"],
+        "boss": {
+            "name": "Jarrod",
+            "title": "VP of Tech"
+        }
+    }
+
+}
+            </code></pre>
+        <aside class="notes">
+            Must start and end with { } Must use quotation marks. Ticks don't work Cannot have comments
+        </aside>
+    </section>
+    <section>
+        <h1>JSON in JavaScript</h1>
+        <div class="fragment">
+            <h2>Convert a string to JSON</h2>
+        </div>
+        <pre class="fragment"><code class="js">
+            var jsonString = "{\"name\": \"Daniel\"}";
+            var jsonObj = JSON.parse(jsonString);
+
+            console.log(jsonObj.name);
+            </code></pre>
+        <div class="fragment">
+            <h2>Convert Object to a JSON string</h2>
+        </div>
+        <pre class="fragment"><code class="js">
+             var obj = {name: "Daniel"};
+            var jsonString = JSON.stringify(obj);
+
+            console.log(jsonString); //"{\"name\": \"Daniel\"}";
+            </code></pre>
+    </section>
+</section>
+                <section>
+    <section>
+        <h1>AJAX</h1>
+        <ul>
+            <li class="fragment"><strong>A</strong>syncronous</li>
+            <li class="fragment"><strong>J</strong>avascript</li>
+            <li class="fragment"><strong>A</strong>nd</li>
+            <li class="fragment"><strong>X</strong>ml</li>
+        </ul>
+        <p class="fragment">
+            JavaScript calls a url and the URL returns XML.
+        </p>
+        <p class="fragment">
+            Most web services return JSON now a days.
+        </p>
+    </section>
+    <!--<section>
+    <h1>Web Services</h1>
+    <p>
+        Web Services         
+    </p>
+
+</section>-->
+    <section>
+        <h1>$.ajax()</h1>
+        <p>
+            jQuery provides us a very easy and quick way to perform ajax calls.
+        </p>
+        <pre class="fragment"><code class="js">
+        $.ajax({
+            url:'',
+            method:'',
+            success:'',
+            failure:''
+        })
+        </code></pre>
+    </section>
+    <section>
+        <h1>$.ajax simplified</h1>
+        <pre class="fragment"><code class="js">
+    $.get('blah.json', function(response){
+    });
+
+        </code></pre>
+    </section>
+    <section>
+        <!-- JS Fiddle -->
+        <script async src="//jsfiddle.net/WorthyD/47sLLzd9/embed/"></script>
+        <a href="https://jsfiddle.net/WorthyD/47sLLzd9/" target="_blank"></a>
+    </section>
+</section>
+                <section>
+    <h1>Appending and Prepending content</h1>
+    <p>
+        So far, this has been the primary method for adding content to an html element.
+    </p>
+    <pre class="fragment"><code class="js">
+    var errors = $('.error');
+    var currentHtml = errors.html();
+
+    //Add to the end
+    errors.html(currentHtml + '<li>new error</li>');
+
+    //Adds to the beginning
+    errors.html('<li>new error</li>' + currentHtml);
+        
+        </code></pre>
+</section>
+<section>
+    <h1>The jQuery Way</h1>
+    <pre class="fragment"><code class="js">
+    var errors = $('.error');
+
+    //Add to the end
+    errors.append('<li>new error</li>');
+
+    //Adds to the beginning
+    errors.prepend('<li>new error</li>' + currentHtml);
+        
+        </code></pre>
+</section>
+<section>
+    <!-- Best Practice -->
+    <h1>Performance</h1>
+    <p>
+        Do your best to not use these methods inside of a loop. Use them after a loop has completed.
+    </p>
+    <h2>Don't</h2>
+    <pre class="fragment"><code class="js">
+        for(var i = 0; i < errors.length;){
+            $('error').append('This is an error');
+        }
+        </code></pre>
+    <h2>Do</h2>
+    <pre class="fragment"><code class="js">
+        var errorList = ''
+        for(var i = 0; i < errors.length;){
+            errorList += 'This is my error';
+        }
+        $('error').append(errorList);
+        </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/599cqq3s/embed/"></script>
+    <a href="https://jsfiddle.net/WorthyD/599cqq3s/" target="_blank">Link</a>
+</section>
+                <section>
+    <h1>Filtering jQuery Further</h1>
+    <p>
+        We've leveraged the .filter() method to shrink a collection of jQuery objects. These hard handy, but don't do much if you
+        are only wanting to get a single element.
+    </p>
+</section>
+<section>
+    <section>
+        <h1>.eq()</h1>
+        <p>
+            The .eq() method retrieves the jQuery object at the specific index that is passed in.
+        </p>
+        <pre class="fragment">
+            <code class="js">
+         var lis = $('li');
+        var first = lis.eq(0);
+        /////////
+
+        //Take immediate action on the first one.
+        $('li').eq(0).hide();
+        </code>
+        </pre>
+    </section>
+    <section>
+        <h1>Example</h1>
+        <script async src="//jsfiddle.net/WorthyD/m2bnhoeo/embed/"></script>
+        <a href="http://jsfiddle.net/WorthyD/m2bnhoeo/" target="_blank">Link</a>
+    </section>
+</section>
+<section>
+    <h1>.get()</h1>
+    <p>
+        .get() acts similar to .eq(), BUT it returns a DOM object instead of a jQuery object.
+    </p>
+    <pre class="fragment">
+        <code class="js">
+        var lis = $('input');
+        var first = lis.get(0);
+        console.log(first.value);
+
+        </code>
+    </pre>
+</section>
+
+        </div>
+
+    </div>
+
+
+   <script src="../scripts/reveal.js"></script>
+<script src="../scripts/head.min.js"></script>
+<script>
+
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [
+            { src: '../scripts/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+            { src: '../scripts/plugin/notes/notes.js', async: false }
+        ]
+    });
+
+</script>>
+
+</body>
+</html>

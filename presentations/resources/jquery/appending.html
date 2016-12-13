@@ -1,0 +1,56 @@
+<section>
+    <h1>Appending and Prepending content</h1>
+    <p>
+        So far, this has been the primary method for adding content to an html element.
+    </p>
+    <pre class="fragment"><code class="js">
+    var errors = $('.error');
+    var currentHtml = errors.html();
+
+    //Add to the end
+    errors.html(currentHtml + '<li>new error</li>');
+
+    //Adds to the beginning
+    errors.html('<li>new error</li>' + currentHtml);
+        
+        </code></pre>
+</section>
+<section>
+    <h1>The jQuery Way</h1>
+    <pre class="fragment"><code class="js">
+    var errors = $('.error');
+
+    //Add to the end
+    errors.append('<li>new error</li>');
+
+    //Adds to the beginning
+    errors.prepend('<li>new error</li>' + currentHtml);
+        
+        </code></pre>
+</section>
+<section>
+    <!-- Best Practice -->
+    <h1>Performance</h1>
+    <p>
+        Do your best to not use these methods inside of a loop. Use them after a loop has completed.
+    </p>
+    <h2>Don't</h2>
+    <pre class="fragment"><code class="js">
+        for(var i = 0; i < errors.length;){
+            $('error').append('This is an error');
+        }
+        </code></pre>
+    <h2>Do</h2>
+    <pre class="fragment"><code class="js">
+        var errorList = ''
+        for(var i = 0; i < errors.length;){
+            errorList += 'This is my error';
+        }
+        $('error').append(errorList);
+        </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/599cqq3s/embed/"></script>
+    <a href="https://jsfiddle.net/WorthyD/599cqq3s/" target="_blank">Link</a>
+</section>
