@@ -287,11 +287,22 @@
         };
 
 
+
         december.sessions.push(s21);
         december.sessions.push(s22);
         december.sessions.push(s23);
         december.sessions.push(s24);
         december.sessions.push(s25);
+
+        december.sessions.push({
+            num: 26,
+            date: '12/15/2016',
+            links: [
+                ['Review', 'sessions/24.html'],
+                ['Assignment 20', assignmentBase + 'Assignment20']
+            ]
+        })
+
 
 
         var sessions = [
