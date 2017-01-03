@@ -1,0 +1,255 @@
+<html>
+
+    <head>
+        <title></title>
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<!--<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+<link href="../content/reveal.css" rel="stylesheet" />
+<!--<link href="../Content/theme/simple.css" rel="stylesheet" />-->
+<link href="../content/default.css" rel="stylesheet" />
+
+
+<!--<link href="../Scripts/plugin/highlight/default.min.css" rel="stylesheet" />-->
+<link href="../scripts/plugin/highlight/vs.css" rel="stylesheet" />
+<link href="../content/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../content/css/print/pdf.css' : '../content/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script src="//localhost:35729/livereload.js"></script>
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>Topics</h1>
+                    <ul>
+                        <li class="fragment">Responsive Intro</li>
+                        <li class="fragment">The View Port</li>
+                        <li class="fragment">CSS Media Queries</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>No Class</h1>
+                    <h2>Feb 7th, 9th, and 11th</h2>
+                </section>
+                <!--http://www.w3schools.com/css/css_rwd_intro.asp http://www.w3schools.com/css/css_responsive_intro.asp-->
+<section>
+    <h1>Handling websites on Mobile</h1>
+    <p>
+        The popularity of smart phones created a massive need for websites to be accessible on small screens. It is now almost expected
+        for all sites to be responsive.
+    </p>
+</section>
+<section>
+    <h1>Quick History of Web on Mobile</h1>
+    <div class="fragment">
+        <h3>WAP - Wireless Application Protocol</h3>
+        <p>
+            Introduced in 1999. Very very simplistic websites. Almost completely gone by 2013.
+        </p>
+    </div>
+    <div class="fragment">
+        <h3>m.######.com - Mobile Versions of sites</h3>
+        <p>
+            Completely separate version of the website. They are slimmed down versions of the desktop version with fewer features.
+        </p>
+    </div>
+</section>
+<section>
+    <h3>History Continued</h3>
+    <div class="fragment">
+        <h3>Adaptive</h3>
+        <p>
+            Very similar to responsive, but had hard defined breakpoints. Sites would perform significant UI changes at certain resolutions.
+        </p>
+    </div>
+    <div class="fragment">
+        <h3>Responsive</h3>
+        <p>
+            The website shifts content size and arrangement based on screen size. Elements grow and shrink fluidly with the layout.
+        </p>
+    </div>
+</section>
+<section>
+    <h1>Benefits of responsive.</h1>
+    <ul>
+        <li class="fragment">One experience for everyone</li>
+        <li class="fragment">Update your content once</li>
+        <li class="fragment">Cost effective compared to doing an m. solution.</li>
+        <li class="fragment">Recommended by search engines</li>
+    </ul>
+</section>
+<section>
+    <h1>Challenges with Responsive</h1>
+    <ul>
+        <li class="fragment">Hard to adapt an existing website to responsive</li>
+        <li class="fragment">Requires higher attention to detail on page performance</li>
+        <li class="fragment">Many ways to approach it.</li>
+    </ul>
+</section>
+<section>
+    <h1>Quick Tips</h1>
+    <ul>
+        <li class="fragment">Don't limit to any specific screen size. Assume every resolution is relevant.</li>
+        <li class="fragment">Start with desktop and move down to mobile or vise versa.</li>
+        <li class="fragment">Don't change content based on screen size.
+            <ul>
+                <li class="fragment">Example: Button text from <strong>Submit your answer</strong> to <strong>Submit</strong></li>
+            </ul>
+        </li>
+        <li class="fragment">Focus on your HTML structure and your CSS.</li>
+        <li class="fragment">Minimize JavaScript in page interaction and behavior</li>
+    </ul>
+    <aside class="notes">
+        Don't assume it'll just be Desktop and Mobile. <br>
+    </aside>
+</section>
+<section>
+    <h1>Tools</h1>
+    <div class="fragment">
+        <h2 >Surprise!!!!</h2>
+        <h2>CHROME DEV TOOLS!!!!!</h2>
+    </div>
+</section>
+                <section>
+    <h1>View Port</h1>
+    <p>
+        A webpage's view port declares what size your content on a a device.
+    </p>
+    <p>
+        Mobile devices would scale down desktop web pages to fit their screen.
+    </p>
+</section>
+<section>
+    <h1>Example of No Viewport</h1>
+    <img src="../Images/www.harborfreight.com-(iPhone 6).png" />
+    <aside class="notes">
+        10 pixels for every one on the screen
+    </aside>
+</section>
+<section>
+    <h1>Example</h1>
+    <img src="../Images/viewport2.png" />
+</section>
+<section>
+    <h1>Compared</h1>
+    <div class="two-col">
+        <div>
+            <img src="../Images/www.harborfreight.com-(iPhone 6).png" />
+        </div>
+        <div>
+            <img src="../Images/viewport2.png" />
+        </div>
+    </div>
+</section>
+<section>
+    <h1>How do we get our content to scale?</h1>
+    <h2 class="fragment">We use a meta tag.</h2>
+</section>
+<section>
+    <h1>Viewport Meta Tag</h1>
+    <h2>
+        <pre><code class="html"><meta name="viewport" content="width=device-width, initial-scale=1"></code></pre>
+    </h2>
+    <aside class="notes">
+        This tells the device the window is the width of the device and we do not want to scale.
+    </aside>
+</section>
+                <section>
+    <h1>CSS Media Queries</h1>
+    <p>
+        Media queries allow us to apply different CSS rules based on environment variables.
+    </p>
+    <p>They can be though of as <code>if</code> statements in CSS.</p>
+</section>
+<section>
+    <h1>Types of Media Queries</h1>
+    <ul>
+        <li class="fragment">all - All media types</li>
+        <li class="fragment">print</li>
+        <li class="fragment">screen - for color devices</li>
+    </ul>
+</section>
+<section>
+    <h1>Media Query Tests</h1>
+    <ul>
+        <li class="fragment">width - (min & max)</li>
+        <li class="fragment">height - (min & max)</li>
+        <li class="fragment">orientation - (portrait or landscape)</li>
+        <li class="fragment">aspect-ratio</li>
+        <li class="fragment">resolution - dpi</li>
+    </ul>
+</section>
+<section>
+    <h1>Applying Media Queries</h1>
+    <h2>Including via style sheet</h2>
+    <pre><code class="xml">
+        <link rel="stylesheet" media="all" href="main.css" />        
+        <link rel="stylesheet" media="print" href="print.css" />        
+        <link rel="stylesheet" media="screen and (max-width:600px)" href="mobile.css" />        
+        </code></pre>
+</section>
+<section>
+    <h1>Applying Media Queries</h1>
+    <h2>Include via CSS</h2>
+    <pre><code class="css">
+@media screen{
+    body {
+        color: red;
+    }
+}
+@media print{
+    body {
+        color: black;
+    }
+}
+        </code></pre>
+</section>
+<section>
+    <h1>Applying Media Queries</h1>
+    <h2>Include via CSS</h2>
+    <pre><code class="css">
+@media screen and (min-width:320px) and (max-width:600px){
+    /*rules apply to screen widths 320px to 600px;*/
+}
+@media screen and (max-width:320px){
+    /*rules apply to screen widths below 320px*/
+}
+        </code></pre>
+</section>
+
+<!--@media (min-width: 480px) {-->
+            </div>
+        </div>
+        <script src="../scripts/reveal.js"></script>
+<script src="../scripts/head.min.js"></script>
+<script>
+
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [
+            { src: '../scripts/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+            { src: '../scripts/plugin/notes/notes.js', async: false }
+        ]
+    });
+
+</script>>
+
+    </body>
+
+</html>
