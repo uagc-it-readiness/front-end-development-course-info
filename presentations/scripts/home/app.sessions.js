@@ -314,7 +314,15 @@
                     ['Assignment 21', assignmentBase + 'Assignment21']
                 ]
 
-            }]
+            }, {
+                num: 28,
+                date: '1/5/2017',
+                links: [
+                    ['Responsive Layouts', 'sessions/26.html'],
+                    ['Assignment 22', assignmentBase + 'Assignment22']
+                ]
+
+              }]
 
         }
 
