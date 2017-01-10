@@ -321,8 +321,16 @@
                     ['Responsive Layouts', 'sessions/26.html'],
                     ['Assignment 22', assignmentBase + 'Assignment22']
                 ]
+            }, {
+                num: 29,
+                date: '1/10/2017',
+                links: [
+                    ['Font/Icon Libraries', 'sessions/27.html'],
+                    ['Assignment 23', assignmentBase + 'Assignment23']
+                ]
 
-              }]
+
+            }]
 
         }
 
