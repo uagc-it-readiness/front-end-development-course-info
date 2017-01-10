@@ -1,0 +1,86 @@
+<section>
+    <h1>Font Libraries</h1>
+    <p>
+        You don't have to settle with the default fonts that are on your machine for web pages. Adding a custom font to your website
+        is very easy process to do.
+    </p>
+    <div class="fragment">
+        <h2>First checkout what you can already use.</h2>
+        <h2><a href="http://www.cssfontstack.com/" target="_blank">CssFontStack.com</a></h2>
+    </div>
+</section>
+<section>
+    <h1>Step 1</h1>
+    <p>
+        Find a font you have permission to use your website and include the files in your project.
+    </p>
+    <div class="fragment">
+        <h2>Step 2 - Declare a font-face in your css</h2>
+        <pre><code class="css">
+@font-face {
+    font-family: my-font-name;
+    src: url(path/to/font.eof),
+        url(path/to/font.woff),
+        url(path/to/font.woff2)
+
+}
+    </code></pre>
+    </div>
+    <div class="fragment">
+        <h3>Step 3 - Done</h3>
+    </div>
+    <aside class="notes">
+        Mention mime types
+    </aside>
+</section>
+<section>
+    <h2>You can use your font immediately after declaring the <code>font-family</code> in your CSS</h2>
+    <pre><code class="css">
+        .css{
+            /*Make sure you include a fallback */
+            font-family:my-font-name, Arial, sans-serif;
+        }
+        </code></pre>
+</section>
+<section>
+    <h1>Custom Font Drawbacks</h1>
+    <p>
+       There is always a cost doing something fancy on the web.  Custom fonts are the same way. 
+    </p>
+    <ul>
+        <li class="fragment">Slows down page load</li>
+        <li class="fragment">Flash of default font type or no font at all.</li>
+        <li class="fragment">Inconsistent experiences in different browsers.</li>
+    </ul>
+</section>
+<section>
+    <h1>Self Hosting Alternatives</h1>
+    <p>
+        These are some alternatives to using a self hosted font type.  These are traditionally more optimized for the web world.
+    </p>
+    <ul>
+        <li class="fragment">
+            <a href="https://fonts.google.com/" target="_blank">Google Web Fonts</a>
+        </li>
+        <li class="fragment">
+            <a href="https://typekit.com/" target="_blank">Adobe Type Kit</a>
+        </li>
+        <li class="fragment">
+            <a href="https://edgewebfonts.adobe.com/" target="_blank">Adobe Edge Web Fonts</a>
+        </li>
+
+    </ul>
+</section>
+<section>
+    <h1>Google Font Installation</h1>
+    <pre><code class="xml">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        </code></pre>
+<div class="fragment">
+    <pre><code class="css">    .my-div{
+        font-family: 'Roboto', sans-serif;
+    }
+</code></pre>
+
+</div>
+</section>
