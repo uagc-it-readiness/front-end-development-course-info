@@ -1,0 +1,238 @@
+<html>
+
+    <head>
+        <title></title>
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<!--<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+<link href="../content/reveal.css" rel="stylesheet" />
+<!--<link href="../Content/theme/simple.css" rel="stylesheet" />-->
+<link href="../content/default.css" rel="stylesheet" />
+
+
+<!--<link href="../Scripts/plugin/highlight/default.min.css" rel="stylesheet" />-->
+<link href="../scripts/plugin/highlight/vs.css" rel="stylesheet" />
+<link href="../content/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../content/css/print/pdf.css' : '../content/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script src="//localhost:35729/livereload.js"></script>
+
+    </head>e
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>Topics</h1>
+                    <ul>
+                        <li class="fragment">Review</li>
+                   </ul>
+                </section>
+                <section>
+    <h1>Navigation Menus</h1>
+    <p>
+        All sites need them and they can get really complicated.
+    </p>
+</section>
+<section>
+    <h1>General Notes for Navs</h1>
+    <ul>
+        <li class="fragment">Needs to include links to all major parts of your site.</li>
+        <li class="fragment">Include a logo.</li>
+        <li class="fragment">Always make sure the user knows to to return to the home page.</li>
+        <li class="fragment">Don't overload menu with too many items.</li>
+        <li class="fragment">Put less important items in the footer menu
+            <ul>
+                <li>Social Links</li>
+                <li>Privacy Policy</li>
+                <li>etc.</li>
+            </ul>
+        </li>
+        <li class="fragment">Use drop downs to group together similar pages.</li>
+        <li class="fragment">Have a plan to handle everything on mobile.</li>
+    </ul>
+</section>
+<section>
+    <h1>Basic Structure</h1>
+    <pre>
+        <code class="xml">    <header>
+        <nav>
+            <a href="" class="logo"><img /></a>
+            <ul>
+                <li><a href>Home</a></li>
+                <li><a href>About</a></li>
+                <li><a href>Our Work</a></li>
+            </ul>
+        </nav>
+    </header>
+</code>
+    </pre>
+    <p class="fragment">Use CSS to pull the ul to the right.</p>
+</section>
+<section>
+    <h1>Drop Down Menus</h1>
+    <ul>
+        <li class="fragment">Can be done with pure CSS</li>
+        <li class="fragment">Traditionally use hover events</li>
+        <li class="fragment">Make sure they work properly on a touch device. </li>
+        <li class="fragment">The more tiers you go, the harder it is for users.</li>
+    </ul>
+</section>
+<section>
+    <h1>Example:</h1>
+    <script async src="//jsfiddle.net/WorthyD/0r97yanx/embed/html,css,result/"></script>
+</section>
+<section>
+    <h1>Superfish</h1>
+    <h2>jQuery Plugin for well behaving sub menus</h2>
+    <a href="http://users.tpg.com.au/j_birch/plugins/superfish/">Documentation</a>
+</section>
+<section>
+    <h1>Sticky Header</h1>
+    <script async src="//jsfiddle.net/WorthyD/wnbt974p/embed/html,css,result/"></script>
+    <a href="http://jsfiddle.net/WorthyD/wnbt974p/" target="_blank">Link</a>
+    <!-- Sticky nav -->     
+</section>
+                <section>
+    <h1>Bootstrap Collapse</h1>
+    <p>
+        Bootstrap's auto configured slide toggle feature.
+    </p>
+    <h5 class="fragment">#1 Benefit?</h5>
+    <p class="fragment">
+        You can configure it with just HTML
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <div class="fragment">
+        <h2>Requirements</h2>
+        <ul>
+            <li class="fragment"><code>data-toggle="collapse"</code></li>
+            <li class="fragment">A target.
+                <ul>
+                    <li class="fragment">Hyperlink - <code>href="[selector]"</code></li>
+                    <li class="fragment">Button - <code>data-target="[selector]"</code></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <pre class="fragment"><code class="xml">
+<a class="btn btn-primary"  data-toggle="collapse" href="#collapseExample">
+  Link with href
+</a>        
+<!-- or -->
+<button class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample"> 
+  Button with data-target
+</button>
+        </code></pre>
+</section>
+
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/05pspcj9/embed/html/"></script>
+    <a href="https://jsfiddle.net/WorthyD/05pspcj9/" target="blank">Link</a>
+</section>
+                <section>
+    <h1>Bootstrap Navigation</h1>
+    <p>
+        Bootstrap's Navigation component takes care of most of the typical scenarios for navigation.
+    </p>
+</section>
+<section>
+    <h1>Structure</h1>
+    <pre><code class="xml">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    </div><!-- /.container-fluid -->
+</nav>
+        
+        </code></pre>
+</section>
+<section>
+    <h1>Main Section</h1>
+    <pre><code class="xml">
+     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <!-- Menu Items here -->
+    </div>
+
+        
+        </code></pre>
+</section>
+<section>
+    <h1>Standard Left items</h1>
+    <pre><code class="xml">
+       <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              <!-- Navbar drop down items -->
+         </ul>
+        </li>
+      </ul>
+        </code></pre>
+</section>
+<section>
+    <h1>Right Items</h1>
+    <pre><code class="xml">
+     <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              <!-- Navbar drop down items -->
+         </ul>
+        </li>
+      </ul>
+        
+        </code></pre>
+</section>
+<section>
+    <h1>All Together</h1>
+    <script async src="//jsfiddle.net/WorthyD/rsrLzn82/embed/html,css,result/"></script>
+    <a href="https://jsfiddle.net/WorthyD/rsrLzn82/      " target="_blank"></a>
+</section>
+            </div>
+        </div>
+        <script src="../scripts/reveal.js"></script>
+<script src="../scripts/head.min.js"></script>
+<script>
+
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [
+            { src: '../scripts/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+            { src: '../scripts/plugin/notes/notes.js', async: false }
+        ]
+    });
+
+</script>>
+
+    </body>
+
+</html>
