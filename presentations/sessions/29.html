@@ -1,0 +1,396 @@
+<html>
+
+    <head>
+        <title></title>
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<!--<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+<link href="../content/reveal.css" rel="stylesheet" />
+<!--<link href="../Content/theme/simple.css" rel="stylesheet" />-->
+<link href="../content/default.css" rel="stylesheet" />
+
+
+<!--<link href="../Scripts/plugin/highlight/default.min.css" rel="stylesheet" />-->
+<link href="../scripts/plugin/highlight/vs.css" rel="stylesheet" />
+<link href="../content/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../content/css/print/pdf.css' : '../content/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script src="//localhost:35729/livereload.js"></script>
+
+    </head>e
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>Topics</h1>
+                    <ul>
+                        <li class="fragment">Review</li>
+                   </ul>
+                </section>
+                <section>
+    <h1>View Port</h1>
+    <p>
+        A webpage's view port declares what size your content on a a device.
+    </p>
+    <p>
+        Mobile devices would scale down desktop web pages to fit their screen.
+    </p>
+</section>
+<section>
+    <h1>Example of No Viewport</h1>
+    <img src="../images/www.harborfreight.com-(iPhone 6).png" />
+    <aside class="notes">
+        10 pixels for every one on the screen
+    </aside>
+</section>
+<section>
+    <h1>Example</h1>
+    <img src="../images/viewport2.png" />
+</section>
+<section>
+    <h1>Compared</h1>
+    <div class="two-col">
+        <div>
+            <img src="../images/www.harborfreight.com-(iPhone 6).png" />
+        </div>
+        <div>
+            <img src="../images/viewport2.png" />
+        </div>
+    </div>
+</section>
+<section>
+    <h1>How do we get our content to scale?</h1>
+    <h2 class="fragment">We use a meta tag.</h2>
+</section>
+<section>
+    <h1>Viewport Meta Tag</h1>
+    <h2>
+        <pre><code class="html"><meta name="viewport" content="width=device-width, initial-scale=1"></code></pre>
+    </h2>
+    <aside class="notes">
+        This tells the device the window is the width of the device and we do not want to scale.
+    </aside>
+</section>
+                <section>
+    <h1>CSS Media Queries</h1>
+    <p>
+        Media queries allow us to apply different CSS rules based on environment variables.
+    </p>
+    <p>They can be though of as <code>if</code> statements in CSS.</p>
+</section>
+<section>
+    <h1>Types of Media Queries</h1>
+    <ul>
+        <li class="fragment">all - All media types</li>
+        <li class="fragment">print</li>
+        <li class="fragment">screen - for color devices</li>
+    </ul>
+</section>
+<section>
+    <h1>Media Query Tests</h1>
+    <ul>
+        <li class="fragment">width - (min & max)</li>
+        <li class="fragment">height - (min & max)</li>
+        <li class="fragment">orientation - (portrait or landscape)</li>
+        <li class="fragment">aspect-ratio</li>
+        <li class="fragment">resolution - dpi</li>
+    </ul>
+</section>
+<section>
+    <h1>Applying Media Queries</h1>
+    <h2>Including via style sheet</h2>
+    <pre><code class="xml">
+        <link rel="stylesheet" media="all" href="main.css" />        
+        <link rel="stylesheet" media="print" href="print.css" />        
+        <link rel="stylesheet" media="screen and (max-width:600px)" href="mobile.css" />        
+        </code></pre>
+</section>
+<section>
+    <h1>Applying Media Queries</h1>
+    <h2>Include via CSS</h2>
+    <pre><code class="css">
+@media screen{
+    body {
+        color: red;
+    }
+}
+@media print{
+    body {
+        color: black;
+    }
+}
+        </code></pre>
+</section>
+<section>
+    <h1>Applying Media Queries</h1>
+    <h2>Include via CSS</h2>
+    <pre><code class="css">
+@media screen and (min-width:320px) and (max-width:600px){
+    /*rules apply to screen widths 320px to 600px;*/
+    p{
+        color:red;
+    }
+    div{
+        float:right;
+    }
+}
+@media screen and (max-width:320px){
+    /*rules apply to screen widths below 320px*/
+}
+        </code></pre>
+</section>
+
+<!--@media (min-width: 480px) {-->
+                <section>
+    <h1>Responsive Layout Types</h1>
+    <p>
+        There are two primary ways to handle responsive layouts.
+    </p>
+    <h2 class="fragment">Desktop First</h2>
+    <h2 class="fragment">Mobile First</h2>
+</section>
+<!-- Desktop First -->
+<section>
+    <h1>Desktop First</h1>
+    <p>Initial popular way to handle responsive.</p>
+    <ul>
+        <li class="fragment">Traditional method in the past to implement a responsive website.</li>
+        <li class="fragment">Better for complex websites.</li>
+        <li class="fragment">Must dumb down features for mobile users.</li>
+        <li class="fragment">Challenge to adapt</li>
+        <li class="fragment">Heavy load on mobile users</li>
+    </ul>
+</section>
+<section>
+    <h1>Mobile First</h1>
+    <p>
+        Takes the simplistic approach of targeting the smallest screens first.
+    </p>
+    <ul>
+        <li class="fragment">Focus on content over functionality.</li>
+        <li class="fragment">Can be challenging for clients due to prioritizing content.</li>
+        <li class="fragment">Has become the preferred approach for most websites.</li>
+        <li class="fragment">Expected to drive even more simplistic desktop sites in the future..</li>
+
+    </ul>
+    <aside class="notes">
+        simplicity helps speed up the site.
+    </aside>
+</section>
+<section>
+    <h1>Responsive Showcase</h1>
+    <ul>
+        <li class="fragment"><a href="https://www.etsy.com/">Etsy</a></li>
+        <li class="fragment"><a href="https://www.nationwide.com/">Nationwide</a></li>
+        <li class="fragment"><a href="http://abc.go.com/">Abc Go</a></li>
+        <li class="fragment"><a href="http://www.ebags.com/">Ebags.com</a></li>
+        <li class="fragment"><a href="https://www.salesforce.com/">Sales Force</a></li>
+        <li class="fragment"><a href="http://time.com/">Time</a></li>
+        <li class="fragment"><a href="http://www.disney.com/">Disney</a></li>
+        <li class="fragment"><a href="https://www.smashingmagazine.com">Smashing Magazine</a></li>
+    </ul>
+</section>
+<!-- Mobile First -->
+                <section>
+    <h1>Font Libraries</h1>
+    <p>
+        You don't have to settle with the default fonts that are on your machine for web pages. Adding a custom font to your website
+        is very easy process to do.
+    </p>
+    <div class="fragment">
+        <h2>First checkout what you can already use.</h2>
+        <h2><a href="http://www.cssfontstack.com/" target="_blank">CssFontStack.com</a></h2>
+    </div>
+</section>
+<section>
+    <h1>Step 1</h1>
+    <p>
+        Find a font you have permission to use your website and include the files in your project.
+    </p>
+    <div class="fragment">
+        <h2>Step 2 - Declare a font-face in your css</h2>
+        <pre><code class="css">
+@font-face {
+    font-family: my-font-name;
+    src: url(path/to/font.eof),
+        url(path/to/font.woff),
+        url(path/to/font.woff2)
+
+}
+    </code></pre>
+    </div>
+    <div class="fragment">
+        <h3>Step 3 - Done</h3>
+    </div>
+    <aside class="notes">
+        Mention mime types
+    </aside>
+</section>
+<section>
+    <h2>You can use your font immediately after declaring the <code>font-family</code> in your CSS</h2>
+    <pre><code class="css">
+        .css{
+            /*Make sure you include a fallback */
+            font-family:my-font-name, Arial, sans-serif;
+        }
+        </code></pre>
+</section>
+<section>
+    <h1>Custom Font Drawbacks</h1>
+    <p>
+       There is always a cost doing something fancy on the web.  Custom fonts are the same way. 
+    </p>
+    <ul>
+        <li class="fragment">Slows down page load</li>
+        <li class="fragment">Flash of default font type or no font at all.</li>
+        <li class="fragment">Inconsistent experiences in different browsers.</li>
+    </ul>
+</section>
+<section>
+    <h1>Self Hosting Alternatives</h1>
+    <p>
+        These are some alternatives to using a self hosted font type.  These are traditionally more optimized for the web world.
+    </p>
+    <ul>
+        <li class="fragment">
+            <a href="https://fonts.google.com/" target="_blank">Google Web Fonts</a>
+        </li>
+        <li class="fragment">
+            <a href="https://typekit.com/" target="_blank">Adobe Type Kit</a>
+        </li>
+        <li class="fragment">
+            <a href="https://edgewebfonts.adobe.com/" target="_blank">Adobe Edge Web Fonts</a>
+        </li>
+
+    </ul>
+</section>
+<section>
+    <h1>Google Font Installation</h1>
+    <pre><code class="xml">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        </code></pre>
+<div class="fragment">
+    <pre><code class="css">    .my-div{
+        font-family: 'Roboto', sans-serif;
+    }
+</code></pre>
+
+</div>
+</section>
+                <section>
+    <h1>Icon Font Libraries</h1>
+    <p>
+        Icon Font Libraries are an incredible way to speed up your development time and spend less time cutting out small images.
+    </p>
+</section>
+<section>
+    <h1>What is an Icon Font Library</h1>
+    <p>
+        It takes a set of Scalable Vector Graphic icons and compresses them into a font file for you to use.
+    </p>
+    <ul>
+        <li class="fragment">
+            Chevron <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </li>
+        <li class="fragment">
+            Bars <i class="fa fa-bars" aria-hidden="true"></i>
+        </li>
+        <li class="fragment">Facebook <i class="fa fa-facebook" aria-hidden="true"></i></li>
+        <li class="fragment">Cog <i class="fa fa-cog" aria-hidden="true"></i></li>
+        <li class="fragment">Flag <i class="fa fa-flag" aria-hidden="true"></i></li>
+    </ul>
+</section>
+<section>
+    <div class="two-col">
+        <div>
+            <h2>Advantages</h2>
+            <ul>
+                <li class="fragment">Fewer web requests</li>
+                <li class="fragment">Easy to use</li>
+                <li class="fragment">Scalable</li>
+                <li class="fragment">CSS manipulation</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Disadvantages</h2>
+            <ul>
+                <li class="fragment">1 heavy web request</li>
+                <li class="fragment">Many icons, but may only need 4 or 5</li>
+                <li class="fragment">Icons may not match branding</li>
+            </ul>
+        </div>
+    </div>
+    <aside class="notes">
+        manipulation - color size, shadow
+    </aside>
+</section>
+<section>
+    <h1>Popular Icon Libraries</h1>
+    <ul>
+        <li class="fragment"><a href="http://fontawesome.io/">FontAwesome</a></li>
+        <li class="fragment"><a href="http://getbootstrap.com/components/#glyphicons">Bootstrap - Glyphicons*</a></li>
+        <li class="fragment"><a href="http://ionicons.com/">Ionic Icons</a></li>
+    </ul>
+    <div class="fragment">
+        <h2>Make your own</h2>
+        <h3><a href="https://icomoon.io/">IcoMoon</a></h3>
+    </div>
+</section>
+<section>
+    <h1>Using FontAwesome</h1>
+    <pre class="fragment"><code class="xml">
+       <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    </code></pre>
+    <pre class="fragment"><code class="xml">
+        <i class="fa fa-bullseye" aria-hidden="true"></i>
+        <i class="fa fa-cloud" aria-hidden="true"></i>
+        <i class="fa fa-code-fork" aria-hidden="true"></i>
+        <i class="fa fa-comment" aria-hidden="true"></i>
+        <i class="fa fa-car" aria-hidden="true"></i>
+        <i class="fa fa-pencil-square" aria-hidden="true"></i>
+     <i class="fa fa-flag" aria-hidden="true"></i>
+    </code></pre>
+    <div class="fragment">
+        <i class="fa fa-bullseye" aria-hidden="true"></i>
+        <i class="fa fa-cloud" aria-hidden="true"></i>
+        <i class="fa fa-code-fork" aria-hidden="true"></i>
+        <i class="fa fa-comment" aria-hidden="true"></i>
+        <i class="fa fa-car" aria-hidden="true"></i>
+        <i class="fa fa-pencil-square" aria-hidden="true"></i>
+        <i class="fa fa-flag" aria-hidden="true"></i>
+    </div>
+    <a class="fragment" href="http://fontawesome.io/examples/">More Examples</a>
+</section>
+            </div>
+        </div>
+        <script src="../scripts/reveal.js"></script>
+<script src="../scripts/head.min.js"></script>
+<script>
+
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [
+            { src: '../scripts/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+            { src: '../scripts/plugin/notes/notes.js', async: false }
+        ]
+    });
+
+</script>>
+
+    </body>
+
+</html>

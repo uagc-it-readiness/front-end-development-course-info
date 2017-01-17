@@ -307,30 +307,56 @@
             name: 'January',
             isActive: true,
             sessions: [{
-                num: 27,
-                date: '1/3/2017',
-                links: [
-                    ['Intro to Responsive', 'sessions/25.html'],
-                    ['Assignment 21', assignmentBase + 'Assignment21']
-                ]
+                    num: 27,
+                    date: '1/3/2017',
+                    links: [
+                        ['Intro to Responsive', 'sessions/25.html'],
+                        ['Assignment 21', assignmentBase + 'Assignment21']
+                    ]
 
-            }, {
-                num: 28,
-                date: '1/5/2017',
-                links: [
-                    ['Responsive Layouts', 'sessions/26.html'],
-                    ['Assignment 22', assignmentBase + 'Assignment22']
-                ]
-            }, {
-                num: 29,
-                date: '1/10/2017',
-                links: [
-                    ['Font/Icon Libraries', 'sessions/27.html'],
-                    ['Assignment 23', assignmentBase + 'Assignment23']
-                ]
+                }, {
+                    num: 28,
+                    date: '1/5/2017',
+                    links: [
+                        ['Responsive Layouts', 'sessions/26.html'],
+                        ['Assignment 22', assignmentBase + 'Assignment22']
+                    ]
+                }, {
+                    num: 29,
+                    date: '1/10/2017',
+                    links: [
+                        ['Font/Icon Libraries', 'sessions/27.html'],
+                        ['Assignment 23', assignmentBase + 'Assignment23']
+                    ]
 
 
-            }]
+                },
+                {
+                    num: 30,
+                    date: '1/12/2017',
+                    links: [
+                        ['Bootstrap', 'http://getbootstrap.com']
+                    ]
+                },
+                {
+                    num: 31,
+                    date: '1/14/2017',
+                    links: [
+                        ['Review', 'sessions/29.html'],
+                        ['Assignment 24', assignmentBase + 'Assignment24']
+                    ]
+                },
+                {
+                    num: 32,
+                    date: '1/17/2017',
+                    links: [
+                        ['Navigation', 'sessions/30.html'],
+                        ['Assignment 25', assignmentBase + 'Assignment25']
+                    ]
+                },
+
+
+            ]
 
         }
 

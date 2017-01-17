@@ -1,0 +1,40 @@
+<section>
+    <h1>Bootstrap Collapse</h1>
+    <p>
+        Bootstrap's auto configured slide toggle feature.
+    </p>
+    <h5 class="fragment">#1 Benefit?</h5>
+    <p class="fragment">
+        You can configure it with just HTML
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <div class="fragment">
+        <h2>Requirements</h2>
+        <ul>
+            <li class="fragment"><code>data-toggle="collapse"</code></li>
+            <li class="fragment">A target.
+                <ul>
+                    <li class="fragment">Hyperlink - <code>href="[selector]"</code></li>
+                    <li class="fragment">Button - <code>data-target="[selector]"</code></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <pre class="fragment"><code class="xml">
+<a class="btn btn-primary"  data-toggle="collapse" href="#collapseExample">
+  Link with href
+</a>        
+<!-- or -->
+<button class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample"> 
+  Button with data-target
+</button>
+        </code></pre>
+</section>
+
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/05pspcj9/embed/html/"></script>
+    <a href="https://jsfiddle.net/WorthyD/05pspcj9/" target="blank">Link</a>
+</section>
