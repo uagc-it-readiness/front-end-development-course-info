@@ -1,0 +1,54 @@
+<section>
+    <h1>Bootstrap's Modal</h1>
+    <p>Like many other Bootstrap JavaScript components, can be implemented without needing to code out any JavaScript. You will
+        need to use JavaScript if you need to utilize its more advanced functionality.</p>
+</section>
+<section>
+    <h1>Basic Structure</h1>
+    <p>
+        There are three main components needed for the structure of a Bootstrap Modal.
+    </p>
+    <pre><code class="xml">
+<div class="modal-content">
+    <!-- Header -->
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+    </div>
+    <!-- Body -->
+    <div class="modal-body">
+        ...
+    </div>
+    <!-- Footer -->
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+</div>
+      </code></pre>
+</section>
+<section>
+    <h1>Wrapping content and trigger</h1>
+    <pre><code class="xml">
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+    Show Modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">    
+        <!-- header, body, footer -->
+    </div>
+  </div>
+</div>
+    </code></pre>
+</section>
+<section>
+    <h1>Complete</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="KaqQpd" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-BS-Modal" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/KaqQpd/">UA-BS-Modal</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
