@@ -362,10 +362,25 @@
                     ]
                 },
                 {
-                    num: 33,
+                    num: 34,
                     date: '1/24/2017',
                     links: [
                         ['Modals', 'sessions/32.html'],
+                    ]
+                },
+                {
+                    num: 35,
+                    date: '1/26/2017',
+                    links: [
+                        ['Flexbox', 'sessions/33.html'],
+                    ]
+                },
+
+                {
+                    num: 36,
+                    date: '1/28/2017',
+                    links: [
+                        ['Portfolios', 'sessions/34.html'],
                     ]
                 },
 
