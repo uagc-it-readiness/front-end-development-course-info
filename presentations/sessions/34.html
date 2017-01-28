@@ -35,173 +35,9 @@
                     <h1>Topics</h1>
                     <ul>
                         <li class="fragment">Review</li>
-                        <li class="fragment">FlexBox</li>
+                        <li class="fragment">Portfolio</li>
                    </ul>
                 </section>
-                <section>
-    <h1>Positioning</h1>
-    <p>
-        CSS Positioning allows you to apply specific positioning to HTML elements.
-    </p>
-</section>
-<section>
-    <h1>CSS Position Values</h1>
-    <ul>
-        <li class="fragment"><code>static</code></li>
-        <li class="fragment"><code>relative</code></li>
-        <li class="fragment"><code>absolute</code></li>
-        <li class="fragment"><code>fixed</code></li>
-    </ul>
-</section>
-<section>
-    <h1><code>Static</code> Position</h1>
-    <p>
-        Static CSS positioning is the default value of the <code>position</code> property.
-    </p>
-    <pre><code class="css">
-
-    .class{
-        position:static;
-        top: 100px; /*ignored*/
-        right:100px; /*ignored*/
-    }
-        </code></pre>
-</section>
-<section>
-    <h1><code>Relative</code> Position</h1>
-    <p>
-        Positions element relative to the content around it. It respects top, left, right and bottom. Content will not shift to take
-        up the space.
-    </p>
-    <pre><code class="css">
-
-    .class{
-        position:relative;
-        top: 100px; 
-        right:100px; 
-    }
-        </code></pre>
-</section>
-<section>
-    <h1>Example</h1>
-    <script async src="//jsfiddle.net/WorthyD/vro59xu0/embed/html,css,result/"></script>
-    <a href="https://jsfiddle.net/WorthyD/vro59xu0/" target="_blank">Link</a>
-</section>
-<section>
-    <h1><code>Fixed</code> Position</h1>
-    <p>
-        Fixed position elements are positioned based on the screen. Content will shift to take up the space the element would take
-        up.
-    </p>
-    <pre><code class="css">
-
-    .class{
-        position:fixed;
-        top: 100px; 
-        right:100px; 
-    }
-        </code></pre>
-</section>
-<section>
-    <h1>Example</h1>
-    <script async src="//jsfiddle.net/WorthyD/x8cty48u/embed/html,css,result/"></script>
-    <a href="https://jsfiddle.net/WorthyD/x8cty48u/">Example</a>
-</section>
-<section>
-    <h1><code>Absolute</code> Position</h1>
-    <p>
-        Absolute positioned elements are positioned based of the closest parent element that has a position that is not static. If
-        no parent is found, it is positioned off the the document.
-    </p>
-    <pre><code class="css">
-
-    .class{
-        position:absolute;
-        top: 100px; 
-        right:100px; 
-    }
-        </code></pre>
-</section>
-<section>
-    <h1>Example</h1>
-    <script async src="//jsfiddle.net/WorthyD/uxx7w99q/embed/html,css,result/"></script>
-    <a href="http://jsfiddle.net/WorthyD/uxx7w99q/">Link</a>
-</section>
-<section>
-    <h1> Positioning tricks</h1>
-    <div class="fragment">
-        <h2>Horizontally Align Absolute positioned element</h2>
-        <pre><code class="css">
-.horizantal{
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%)
-}
-            </code></pre>
-    </div>
-    <div class="fragment">
-        <h2>Vertially Align Absolute positioned element</h2>
-        <pre><code class="css">
-.vertical{
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%)
-}
-            </code></pre>
-    </div>
-</section>
-<section>
-    <h1>Example</h1>
-    <script async src="//jsfiddle.net/WorthyD/5977run7/embed/html,css,result/"></script>
-    <a href="http://jsfiddle.net/WorthyD/5977run7/">Link</a>
-</section>
-                <section>
-    <h1>Modals/Dialogs</h1>
-    <p>
-        Modals allow you to present a small amount of content to the user without navigating away from the screen.
-    </p>
-</section>
-<section>
-    <h1>Common Common Uses</h1>
-    <ul>
-        <li class="fragment">Terms of Service</li>
-        <li class="fragment">Contact Forms</li>
-        <li class="fragment">Help Screens</li>
-        <li class="fragment">Small Signups/Forms</li>
-    </ul>
-</section>
-<section>
-    <h1>Best Practices</h1>
-    <ul>
-        <li class="fragment">
-            Visible Title
-        </li>
-        <li class="fragment">Easy to close
-            <ul>
-                <li class="fragment">Visible close button</li>
-                <li class="fragment">Pressing ESC</li>
-                <li class="fragment">Clicking outside of the dialog</li>
-            </ul> </li>
-        <li class="fragment">No auto open
-            <ul>
-                <li class="fragment">Make the user perform an action</li>
-            </ul>
-        </li>
-        <li class="fragment">Don't put too much information in it.</li>
-    </ul>
-</section>
-
-<section>
-    <h1>Plugins / Demos</h1>
-    <ul>
-        <li class="fragment"><a href="http://jqueryui.com/dialog/" target="_blank">jQuery UI</a></li>
-        <li class="fragment"><a href="https://github.com/VodkaBears/Remodal#remodal" target="_blank">Remodal</a></li>
-        <li class="fragment"><a href="https://github.com/kylefox/jquery-modal" target="_blank">A Simple jQuery Modal</a></li>
-        <li class="fragment"><a href="http://getbootstrap.com/javascript/#modalsl" target="_blank">Bootstrap's Modal</a></li>
-   </ul>
-</section>
                 <section>
     <h1>CSS Flexbox</h1>
     <p>
@@ -402,6 +238,148 @@
         data-pen-title="UA-Flex-Item-Flex-Basis" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/VPzRRL/">UA-Flex-Item-Flex-Basis</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
         on <a href="http://codepen.io">CodePen</a>.</p>
         <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section>
+    <h1>Your Personal Site</h1>
+</section>
+<section>
+    <h1>Primary Purpose </h1>
+    <ul>
+        <li class="fragment">Market Yourself</li>
+        <li class="fragment">Portfolio</li>
+        <li class="fragment">Practice</li>
+        <li class="fragment">Fun</li>
+    </ul>
+</section>
+<section>
+    <h1>Include</h1>
+    <p>
+        Your site is about you. Make sure you
+    </p>
+    <ul>
+        <li class="fragment">Your picture.</li>
+        <li class="fragment">About yourself.</li>
+        <li class="fragment">What is your ideal job.</li>
+        <li class="fragment">Your relevant education.</li>
+        <li class="fragment">Where to find you.
+            <ul>
+                <li class="fragment">LinkedIn</li>
+                <li class="fragment">GitHub</li>
+                <li class="fragment">Twitter - Optional</li>
+                <li class="fragment">Facebook - Optional</li>
+            </ul>
+        </li>
+    </ul>
+    <aside class="notes"><pre>    what do you need on a portfolio site
+    - personal profile pick
+    -foto
+    -about yourself
+    - why you like technology
+    - relevant education.  College is always relevant, highschool usually isn't
+    - links to appropriate social suf. Linked in and github. twitter if you have it. Facebook optional
+    </pre>
+    </aside>
+</section>
+<section>
+    <h1>Prune anything on your socials you don't want an employer to see.</h1>
+</section>
+<section>
+    <h1>LinkedIn recommendations</h1>
+    <p>
+        Most recruiters do their head hunter through LinkedIn. It's a super helpful tool for finding specific talent that fits their
+        needs.
+    </p>
+    <ul>
+        <li class="fragment">100% your profile</li>
+        <li class="fragment">Hide the "People also Viewed"</li>
+        <li class="fragment">Emphasis what you <em>want</em> to do. If it's not what you have already been doing.</li>
+    </ul>
+    <aside class="notes">
+        <pre>    linked in
+    set no - 100T your profile
+    0hide people also viewed
+     put relevant work xp.  Don't put your 10 years of php if you don't  want to do php.    don't put emphasis on it if you don't want to d o  it.  
+</pre>
+    </aside>
+</section>
+<section>
+    <h1>GitHub recommendations</h1>
+    <p>
+        The technical people that are wanting to recruit you should be
+    </p>
+    <ul>
+        <li class="fragment">Put any and all of your small projects here.</li>
+        <li class="fragment">Document your projects</li>
+        <li class="fragment">Star interesting projects</li>
+        <li class="fragment">Fork projects you think you can help on.</li>
+    </ul>
+    <aside class="notes"> <pre>
+        Technical people should be checking this.
+        
+    create pet projects
+    fill out your profile.
+    follow important frameworks
+
+    help out other open source projects
+    </pre>
+    </aside>
+</section>
+<section>
+    <h1>A.B.L.E.</h1>
+    <p class="fragment">
+        Always Be LEarning
+    </p>
+    <h3 class="fragment">
+        Waaa waaaa waaaaaaaa
+    </h3>
+    <h3 class="fragment">*Sad trombone*</h3>
+    <aside class="notes"> <pre>
+    do your best to always be learning
+    find blogs to read
+
+    find emergin frameworks and just read about them - maybe create an example app on github
+</pre></aside>
+</section>
+<section>
+    <h1>But seriously, read a lot of blogs</h1>
+    <p>
+        Use an RSS agregator and subscribe to a lot of blogs. If you find something new, create a simple GitHub project on it.
+    </p>
+</section>
+<section>
+    <h1>Blogs....</h1>
+    <p>Be careful when blogging, junky blogs can hurt you more than they can help you.</p>
+    <ul>
+        <li class="fragment">Stay on topic. A technical blog is not about <em>you</em> it's about tech.</li>
+        <li class="fragment">Focus on long term content.</li>
+        <li class="fragment">Stay committed.</li>
+        <li class="fragment"><a href="http://www.hanselman.com/blog/BlogInteresting32WaysToKeepYourBlogFromSucking.aspx">Scott Hanselman's post on how to make your blog suck less.</a></li>
+    </ul>
+    <aside class="notes">
+        Don't spend 1 hour on a post that will only be relevant for a couple of months. IE jQuery UI 1.1.1.1 <br> Focus more
+        effort on something that will still be relevant a year from now.
+        <br> A blog that hasn't had a post in 2 months looks bad. Mine looks awful.
+    </aside>
+</section>
+<section>
+    <h1>Network</h1>
+    <ul>
+        <li class="fragment">Go to usergroup meetings.
+            <ul>
+                <li class="fragment"><a href="https://www.meetup.com/Northwest-Arkansas-Developers-Group/">NWA Developers group nwadnug.org</a></li>
+                <li class="fragment"><a href="https://www.meetup.com/fayettevillejs/">Fayetteville.js</a></li>
+            </ul>
+        </li>
+        <li class="fragment">Participate in hackathons and givecamps</li>
+        <li class="fragment">Participate in conventions
+            <ul>
+                <li class="fragment"><a href="http://www.techfests.com/Tulsa/default.aspx">Tulsa Tech Fest</a></li>
+                <li class="fragment"><a href="http://www.nwatechfest.com/">NWA Tech Fest</a></li>
+                <li class="fragment"><a href="http://www.nwatechsummit.com/">NWA Tech Summit</a></li>
+                <li class="fragment"><a href="http://www.lrtechfest.com/">Little Rock Tech Fest</a></li>
+            </ul>
+        </li>
+    </ul>
 </section>
 
             </div>
