@@ -278,7 +278,7 @@
     <p>Justify Content defines how flex items are aligned across the main axis. </p>
     <ul>
         <li>Row - horizontal axis</li>
-        <li>Column - horizontal axis</li>
+        <li>Column - vertical axis</li>
     </ul>
     <ul>
         <li class="fragment"><code>flex-start</code> default - align to the start of the container</li>
@@ -417,7 +417,7 @@
         transition: 'slide',
         backgroundTransition: 'zoom',
         dependencies: [
-            { src: '../scripts/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+            { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
             { src: '../scripts/plugin/notes/notes.js', async: false }
         ]
     });
