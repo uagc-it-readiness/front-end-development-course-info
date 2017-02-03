@@ -383,6 +383,14 @@
                         ['Portfolios', 'sessions/34.html'],
                     ]
                 },
+                {
+                    num: 37,
+                    date: '1/31/2017',
+                    links: [
+                        ['Image Optimization', 'sessions/35.html'],
+                    ]
+                },
+
 
 
 
@@ -391,13 +399,27 @@
 
         }
 
+        var feb = {
+            name: 'February',
+            isActive: true,
+            sessions: [{
+                num: 28,
+                date: '2/2/2017',
+                links: [
+                    ['Intro to task runners', 'sessions/36.html']
+                ]
+
+            }, ]
+        }
 
 
         var sessions = [
             october,
             november,
             december,
-            jan
+            jan,
+            feb
+
         ];
         /* beautify ignore:end */
 
