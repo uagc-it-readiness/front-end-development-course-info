@@ -409,7 +409,19 @@
                     ['Intro to task runners', 'sessions/36.html']
                 ]
 
-            }, ]
+            }, 
+            {
+                num: 29,
+                date: '2/14/2017',
+                links: [
+                    ['SCSS', 'sessions/37.html']
+                ]
+
+            }, 
+
+            
+            
+            ]
         }
 
 
