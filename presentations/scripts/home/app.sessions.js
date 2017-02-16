@@ -418,7 +418,16 @@
                 ]
 
             }, 
+            {
+                num: 30,
+                date: '2/16/2017',
+                links: [
+                    ['More SCSS', 'sessions/38.html']
+                ]
 
+            }, 
+
+ 
             
             
             ]
