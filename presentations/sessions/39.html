@@ -1,0 +1,259 @@
+<html>
+
+    <head>
+        <title></title>
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<!--<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+<link href="../content/reveal.css" rel="stylesheet" />
+<!--<link href="../Content/theme/simple.css" rel="stylesheet" />-->
+<link href="../content/default.css" rel="stylesheet" />
+
+
+<!--<link href="../Scripts/plugin/highlight/default.min.css" rel="stylesheet" />-->
+<link href="../scripts/plugin/highlight/vs.css" rel="stylesheet" />
+<link href="../content/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../content/css/print/pdf.css' : '../content/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script src="//localhost:35729/livereload.js"></script>
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>Topics</h1>
+                    <ul>
+                        <li>Review more SASS</li>
+                        <li>More More SASS</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Tentative Schedule</h1>
+                    <ul>
+                        <li class="fragment"><strong>Feb 28 - March 11</strong> jQuery Adv & plugins</li>
+                        <li class="fragment"><strong>March 14 - March 25</strong> Wordpress</li>
+                        <li class="fragment"><strong>March 28 & March 30</strong> Shopify</li>
+                        <li class="fragment"><strong>April 4 & April 6</strong> SquareSpace</li>
+                        <li class="fragment"><strong>April 11 -  April 22</strong> ReactJS</li>
+                        <li class="fragment"><strong>April 25 & April 27</strong> Material Design</li>
+                        <li class="fragment"><strong>May 2 - May 30</strong> Angular</li>
+                    </ul>
+
+                </section>
+                <section>
+    <h1>More SASS</h1>
+</section>
+<section>
+    <h1>Mixins</h1>
+    <p>
+        Mixins allow you to write functions inside you SCSS and minimize your code footprint.
+    </p>
+</section>
+<section>
+    <h1>Example: </h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="jyRNxz" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-SCSS--MIXIN1" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/jyRNxz/">UA-SCSS--MIXIN1</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Example 2:</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="dNLpJq" data-default-tab="css" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-SCSS--MIXIN2" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/dNLpJq/">UA-SCSS--MIXIN2</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Extend</h1>
+    <p>Extend allows you to share common CSS accross multiple classes.</p>
+</section>
+<section>
+    <h1>Extend Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="WRWGLx" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-SCSS--MIXIN3" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/WRWGLx/">UA-SCSS--MIXIN3</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Operators</h1>
+    <p>
+        We can do math calculations inside of SASS. You can use the +, -, *, /, and % operators like you would in JavaScript. SASS will automatically work with px and % values.
+    </p>
+</section>
+<section>
+    <h1>Operators Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="jyRVbw" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-SCSS--Operators" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/jyRVbw/">UA-SCSS--Operators</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section>
+    <h1>Sass continued</h1>
+</section>
+<section>
+    <h1>Referencing a parent selector</h1>
+    <p>
+        You can reference a nested selectors parent by using the <code>&</code> symbol.
+    </p>
+</section>
+<section>
+    <h1>Simple Parent Reference</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="JWPxLy" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/JWPxLy/">UAIT-SCSS-Nesting</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Variable Expansion in Selectors</h1>
+<p>You can use Sass variables for more than just values. You can use them in conjunction with selectors.</p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="vxYNRq" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="UAIT-SCSS-Expanding Class" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/vxYNRq/">UAIT-SCSS-Expanding Class</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Using Parent for repetitive names.</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="qrWgJp" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-Deep" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/qrWgJp/">UAIT-SCSS-Nesting-Deep</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Using Parent to Reference the Root</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="evOXNR" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-Parent" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/evOXNR/">UAIT-SCSS-Nesting-Parent</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+</section>
+<section>
+    <h1> <code>@at-root</code></h1>
+    <p><code>@at-root</code> you to nest inside css for structure, but places the rules inside it in the root of the css. </p>
+    <p>
+        You can use it as an inline rule or as a wrapping rule.
+    </p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="ryBbNq" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-Root" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/ryBbNq/">UAIT-SCSS-Nesting-Root</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+</section>
+<section>
+    <h1><code>@if</code></h1>
+    <p>
+        SCSS has the ability to use if, else if, and else statements. These can be used to theme a your styles or setup conditional
+        formatting.
+    </p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="RpwWrd" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-Root" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/RpwWrd/">UAIT-SCSS-Nesting-Root</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1><code>@for</code></h1>
+    <p>
+        You can use SCSS to execute a for loop based on indexes. This is useful for generating grids and removing duplicate code.
+    </p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="qrBONK" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-For" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/qrBONK/">UAIT-SCSS-Nesting-For</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+<section>
+    <h1><code>
+        @each
+        </code></h1>
+    <p>
+        @each is used for looping through a defined collection of items.
+    </p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="mWdeWZ" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-Each" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/mWdeWZ/">UAIT-SCSS-Nesting-Each</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Additional Methods</h1>
+    <ul>
+        <li class="fragment">darken/lighten</li>
+        <li class="fragment">quote/unquote</li>
+        <li class="fragment">percentage</li>
+        <li class="fragment">to-upper-case/to-lower-case</li>
+    </ul>
+</section>
+<!-- http://thesassway.com/-->
+<!-- %extend -->
+                <section>
+                    <h1>Next Project: Interactive Gallery</h1>
+                    <p>
+                        I want you to build an interactive listing page. This can be a list of movie, articles, products, etc.
+                    </p>
+                    <p>
+                        We will progressively enhance it over the following weeks.
+                    </p>
+                </section>
+                <section>
+                    <h3>Requirements:</h3>
+                    <ul>
+                        <li class="fragment">Must be in a new repository</li>
+                        <li class="fragment">Cannot be a direct copy from any previous projects</li>
+                        <li class="fragment">Must contain a filter category field.</li>
+                        <li class="fragment">Must contain a search field</li>
+                        <li class="fragment">Must load in content via ajax (in final form)</li>
+                        <li class="fragment">Each item must have an expanded view when clicked on.
+                            <ul>
+                                <li class="fragment">Expanding div</li>
+                                <li class="fragment">Modal/Lightbox</li>
+                            </ul>
+                        </li>
+                        <li class="fragment">Encouraged: Paging</li>
+                        <li class="fragment">Encouraged: SCSS</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Inspiration and examples.</h1>
+                    <ul>
+                        <li class="fragment"><a href="https://www.netflix.com/browse?jbv=70177057&jbp=2&jbr=2" target="_blank">Netflix Listing</a></li>
+                        <li class="fragment"><a href="http://us.battle.net/heroes/en/heroes/#/">HOTS - Hero Listing</a></li>
+                        <li class="fragment"><a href="https://www.humblebundle.com/books/make-arduino-and-raspberry-pi">Humble Bundle</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <script src="../scripts/reveal.js"></script>
+<script src="../scripts/head.min.js"></script>
+<script>
+
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [
+            { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+            { src: '../scripts/plugin/notes/notes.js', async: false }
+        ]
+    });
+
+</script>>
+
+    </body>
+
+</html>
