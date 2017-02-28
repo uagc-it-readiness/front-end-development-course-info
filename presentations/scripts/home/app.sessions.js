@@ -436,6 +436,16 @@
 
             }, 
 
+             {
+                num: 42,
+                date: '2/28/2017',
+                links: [
+                    ['AJAX Review and JS Templates', 'sessions/40.html']
+                ]
+
+            }, 
+
+
  
             
             
