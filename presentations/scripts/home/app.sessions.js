@@ -451,14 +451,28 @@
             
             ]
         }
+        var march = {
+            name: 'March',
+            isActive: true,
+            sessions: [{
+                num: 43,
+                date: '3/9/2017',
+                links: [
+                    ['jQuery plugins', 'sessions/41.html']
+                ]
 
+            }, 
+ 
+            ]
+        }
 
         var sessions = [
             october,
             november,
             december,
             jan,
-            feb
+            feb,
+            march
 
         ];
         /* beautify ignore:end */

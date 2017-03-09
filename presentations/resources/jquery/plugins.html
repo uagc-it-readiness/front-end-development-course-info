@@ -1,0 +1,69 @@
+<section>
+    <h1>jQuery Plugins</h1>
+    <p>
+        jQuery plugins provide developers an easy way to create reusable code. There are hundreds of existing plugins, but you can
+        improve you JavaScript skills by writing your own.
+    </p>
+
+</section>
+<section>
+    <h1>Basic Structure</h1>
+    <pre><code class="js">
+    $.fn.PluginName = function () {
+        elms = this;
+    }
+    $('span').PluginName();
+        </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="peRdyE" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="peRdyE" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/peRdyE/">peRdyE</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Customization</h1>
+    <p>
+        Plugins become more helpful when you are able to leverage their customization. We can customize options by using the jQuery
+        extend function.
+    </p>
+</section>
+<section>
+    <h1>How to add customization</h1>
+    <pre><code class="js">
+    $.fn.PluginName = function (options) {
+        elms = this;
+        //Outputs black
+        console.log(options.color);
+    }
+    $('span').PluginName({color: '#000'});
+        </code></pre>
+</section>
+<section>
+    <h1>What about optional options?</h1>
+    <p>
+        We can leverage jQuery's $.extend method to merge your options.
+    </p>
+</section>
+<section>
+    <h1>Extend</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="bqgmwm" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="bqgmwm" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/bqgmwm/">bqgmwm</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>In a Plugin</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="bqgmrO" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="Basic jQuery Plugin" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/bqgmrO/">Basic jQuery Plugin</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Unique events</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="xqgypg" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="Basic jQuery Plugin Basic Events Each" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/xqgypg/">Basic jQuery Plugin Basic Events Each</a> by Daniel Worthy
+        (<a href="http://codepen.io/WorthyD">@WorthyD</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
