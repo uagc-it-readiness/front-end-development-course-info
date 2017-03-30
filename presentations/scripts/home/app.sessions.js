@@ -502,6 +502,14 @@
                 ]
 
             }, 
+   {
+                num: 49,
+                date: '3/30/2017',
+                links: [
+                    ['More ES6', 'sessions/47.html']
+                ]
+
+            }, 
  
             ]
         }
