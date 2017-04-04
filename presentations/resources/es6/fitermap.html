@@ -15,7 +15,10 @@
 <section>
     <h1>Syntax</h1>
     <h2>
-        <pre><code class="js">[1,2,3].forEach(function(element, index, array){});</code></pre>
+        <pre><code class="js">
+    [1,2,3].forEach(function(element, index, array){
+        //Code
+    });</code></pre>
     </h2>
     <ul>
         <li class="fragment"><code>element</code> - the current iterated element.</li>
@@ -48,7 +51,10 @@
 <section>
     <h1>Syntax</h1>
     <h2>
-        <pre><code class="js">[1,2,3].map(function(element, index, array){ return '';});</code></pre>
+        <pre><code class="js">
+[1,2,3].map(function(element, index, array){ 
+    return '';
+});</code></pre>
     </h2>
     <ul>
         <li class="fragment"><code>element</code> - the current iterated element.</li>
@@ -76,7 +82,7 @@
 <section>
     <h1>Syntax</h1>
     <h2>
-        <pre><code class="js">[1,2,3].map(function(element, index, array){
+        <pre><code class="js">[1,2,3].filter(function(element, index, array){
                 return true | false;
             });</code></pre>
     </h2>

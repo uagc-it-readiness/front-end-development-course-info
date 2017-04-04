@@ -1,0 +1,117 @@
+<section>
+    <h1>JavaScript Classes</h1>
+    <p>
+        Classes provide JavaScript a better opportunity to behave like an Object Oriented Programming Language.
+    </p>
+    <p>
+        You could make it behave like OOP by enforcing strict patterns.
+    </p>
+</section>
+<section>
+    <h1>Class Declaration</h1>
+    <p>
+        You must declare a class before you use it.
+    </p>
+    <pre><code class="js">
+class Square{
+}
+    </code></pre>
+    <h2 class="fragment">Usage</h2>
+
+    <pre class="fragment"><code class="js">
+var sq = new Square();
+    </code></pre>
+    <aside class="notes">
+        New up a Square.
+    </aside>
+</section>
+<section>
+    <h1>Class Structure</h1>
+    <ul>
+        <li class="fragment">Constructor</li>
+        <li class="fragment"> Methods</li>
+    </ul>
+</section>
+<section>
+    <h1>Constructors</h1>
+    <p>
+        A constructor is a specific method used in the initialization of a class.
+    </p>
+    <p class="fragment">There can only be one constructor per class.</p>
+    <pre class="fragment"><code class="js">
+ class Square{
+    constructor(height, width){
+        this.height = height;
+        this.width = width;
+    }
+ }
+   </code></pre>
+</section>
+<section>
+    <h1> Methods</h1>
+    <p>No code is allowed outside of method.</p>
+    <pre class="fragment"><code class="js">
+ class Square{
+    constructor(height, width){
+    }
+
+    calcArea(){
+        return this.height * this.width;
+    }
+ }
+</code></pre>
+    <pre class="fragment"><code class="js">
+        var sq = new Square(10, 10);
+        console.log(sq.calcArea());
+        </code></pre>
+</section>
+<section>
+    <h1>Get Methods</h1>
+    <p>
+       Get methods allow you to create dynamic properties without requiring the user to call a method.  
+    </p>
+    <pre class="fragment"><code class="js">
+ class Square{
+    constructor(height, width){
+    }
+
+    get area(){
+        return this.calcArea();
+    }
+    calcArea(){ 
+        return this.height * this.width;
+    }
+ }
+ </code></pre>
+    <pre class="fragment"><code class="js">
+    var sq = new Square(10, 10);
+    console.log(sq.area);
+        </code></pre>
+</section>
+<section>
+    <h1>Set Methods </h1>
+    <p>
+       Get methods allow you to create dynamic properties without requiring the user to call a method.  
+    </p>
+    <pre class="fragment"><code class="js">
+ class Log{
+    constructor(){
+    this.log = [];
+    }
+    get logHistory(){
+        return this.log; 
+    }
+    set currentLog(value){
+        this.log.push(value);
+    }
+ }
+ </code></pre>
+    <pre class="fragment"><code class="js">
+    var lg = new Log();
+    lg.currentLog = 'new message';
+    console.log(lg.logHistory);
+        </code></pre>
+</section>
+<!--
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/class
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class https://googlechrome.github.io/samples/classes-es6/index.html-->
