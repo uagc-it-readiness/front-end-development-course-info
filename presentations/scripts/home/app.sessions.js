@@ -496,7 +496,7 @@
             }, 
   {
                 num: 48,
-                date: '3/28/2017',
+                date: '3/28/2017', 
                 links: [
                     ['ES6', 'sessions/46.html']
                 ]
@@ -507,6 +507,14 @@
                 date: '3/30/2017',
                 links: [
                     ['More ES6', 'sessions/47.html']
+                ]
+
+            }, 
+    {
+                num: 50,
+                date: '3/4/2017',
+                links: [
+                    ['Import and Export and Classes', 'sessions/48.html']
                 ]
 
             }, 

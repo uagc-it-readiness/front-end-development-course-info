@@ -192,6 +192,9 @@ html:-moz-full-screen-ancestor {
   max-height: 100%;
   box-sizing: border-box; }
 
+.reveal code{
+      padding: 0.5em;
+}
 /*********************************************
  * CONTROLS
  *********************************************/
