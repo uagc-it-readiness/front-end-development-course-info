@@ -1,0 +1,128 @@
+<section>
+    <h1>JavaScript Dates</h1>
+    <p>
+        Dates are variable types that represent a date and time inside of JavaScript.
+    </p>
+    <aside class="notes">
+        <pre>    [Creates a JavaScript Date instance that represents a single moment in time. Date objects are based on a time value that
+    is the number of milliseconds since 1 January, 1970 UTC.]
+
+    http://stackoverflow.com/questions/1090869/why-is-1-1-1970-the-epoch-time
+</pre>
+    </aside>
+</section>
+<section>
+    <h1>Epoch Time</h1>
+    <p>
+        Dates are stored as the number of milliseconds since January 1, 1970.
+
+    </p>
+    <p class="fragment">
+        Example: 4/5/2017 is roughly - 1491415025702
+    </p>
+</section>
+<section>
+    <h1>Date Declaration</h1>
+    <pre class="fragment"><code class="js">//Creates a date variable that is set to now;
+const now = new Date();         </code></pre>
+    <pre class="fragment"><code class="js">// Wed Apr 05 2017 12:57:05 GMT-0500 (Central Daylight Time);
+const newDate = new Date(1491415025702); </code></pre>
+    <pre class="fragment"><code class="js">//Tue Aug 17 2010 12:09:36 GMT-0500 (Central Daylight Time)
+const newDate = new Date("2010/08/17 12:09:36"); 
+//Fri Jan 01 2010 00:00:00 GMT-0600 (Central Standard Time)
+const newDate2 = new Date("1/1/2010");</code></pre>
+</section>
+<section>
+    <h1>More Specific Examples</h1>
+    <pre class="fragment"><code class="js">
+new Date(year, month[, date[, hours[, minutes[, seconds[, milliseconds]]]]]);
+    </code></pre>
+    <p class="fragment">
+        Note: Month is zero based.
+    </p>
+    <pre class="fragment"><code class="js">
+//Tue Feb 01 2010 00:00:00 GMT-0600 (Central Standard Time)
+const d = new Date(2010, 1) 
+    </code></pre>
+    <pre class="fragment"><code class="js">
+//Thu Apr 15 2010 12:04:14 GMT-0500 (Central Daylight Time)
+const d = new Date(2010, 3, 15, 12, 4, 14) 
+    </code></pre>
+</section>
+<!--
+<section>
+    <aside class="notes">
+        <pre>
+    examples
+    var today = new Date();
+var birthday = new Date('December 17, 1995 03:24:00');
+var birthday = new Date('1995-12-17T03:24:00');
+var birthday = new Date(1995, 11, 17);
+var birthday = new Date(1995, 11, 17, 3, 24, 0);
+</pre>
+    </aside>
+</section>-->
+<section>
+    <h1>Getting Values</h1>
+    <p>
+        Dates have very long outputs by default, but there are methods to retrieve parts of a date.
+    </p>
+
+    <pre class="fragment"><code class="js">
+const d = new Date(2010, 0, 1);
+console.log(d.getFullYear()); //2010;
+
+console.log(d.getDate()); // 1
+</code></pre>
+    <ul>
+        <li class="fragment">.getMonth()</li>
+        <li class="fragment">.getHours()</li>
+        <li class="fragment">.getMinutes()</li>
+        <li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype" target="_blank">etc.</a></li>
+    </ul>
+</section>
+<section>
+    <h1>Converting Dates to Strings</h1>
+    <pre><code class="js">
+const d = new Date(1993,6, 28);
+console.log(d.toString());     // logs Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
+console.log(d.toDateString()); // logs Wed Jul 28 1993
+console.log(d.toTimeString()); // logs 14:39:07 GMT-0600 (PDT)
+</code></pre>
+</section>
+<section>
+    <h1>Changing Date Values</h1>
+    <p>
+        We use set methods change these values.
+    </p>
+    <pre><code class="js">
+const d = new Date(2010, 0, 1);
+d.setDate(7)  // 1-7-2010;
+d.setMonth(1) // 2-7-2010;
+d.setHours(40); // 2-8-2010 16:00
+console.log(d);
+        </code></pre>
+    <aside class="notes">
+        <pre>
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setDate
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setMonth
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setMinutes
+    </pre>
+    </aside>
+</section>
+<section>
+    <h1>Comparison</h1>
+    <pre><code class="js">
+const d1 = new Date(1990, 1, 1);
+const d2 = new Date(2000, 1, 1);
+const isNewer = d2 > d1;  //True       
+         </code></pre>
+</section>
+<section>
+    <h1>Adding values</h1>
+<pre><code class="js">
+var d1 = new Date(1990, 0, 1);
+d1.setDate(d1.getDate() + 10);
+console.log(d1); // 1/11/1990
+    </code></pre>
+</section>

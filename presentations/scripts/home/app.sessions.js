@@ -403,124 +403,141 @@
             name: 'February',
             isActive: true,
             sessions: [{
-                num: 38,
-                date: '2/2/2017',
-                links: [
-                    ['Intro to task runners', 'sessions/36.html']
-                ]
+                    num: 38,
+                    date: '2/2/2017',
+                    links: [
+                        ['Intro to task runners', 'sessions/36.html']
+                    ]
 
-            }, 
-            {
-                num: 39,
-                date: '2/14/2017',
-                links: [
-                    ['SCSS', 'sessions/37.html']
-                ]
+                },
+                {
+                    num: 39,
+                    date: '2/14/2017',
+                    links: [
+                        ['SCSS', 'sessions/37.html']
+                    ]
 
-            }, 
-            {
-                num: 40,
-                date: '2/16/2017',
-                links: [
-                    ['More SCSS', 'sessions/38.html']
-                ]
+                },
+                {
+                    num: 40,
+                    date: '2/16/2017',
+                    links: [
+                        ['More SCSS', 'sessions/38.html']
+                    ]
 
-            }, 
+                },
 
-             {
-                num: 41,
-                date: '2/22/2017',
-                links: [
-                    ['Advanced SCSS', 'sessions/39.html']
-                ]
+                {
+                    num: 41,
+                    date: '2/22/2017',
+                    links: [
+                        ['Advanced SCSS', 'sessions/39.html']
+                    ]
 
-            }, 
+                },
 
-             {
-                num: 42,
-                date: '2/28/2017',
-                links: [
-                    ['AJAX Review and JS Templates', 'sessions/40.html']
-                ]
+                {
+                    num: 42,
+                    date: '2/28/2017',
+                    links: [
+                        ['AJAX Review and JS Templates', 'sessions/40.html']
+                    ]
 
-            }, 
+                },
 
 
- 
-            
-            
+
+
+
             ]
         }
         var march = {
             name: 'March',
             isActive: true,
             sessions: [{
-                num: 43,
-                date: '3/9/2017',
-                links: [
-                    ['jQuery plugins', 'sessions/41.html']
-                ]
+                    num: 43,
+                    date: '3/9/2017',
+                    links: [
+                        ['jQuery plugins', 'sessions/41.html']
+                    ]
 
-            }, 
- {
-                num: 44,
-                date: '3/14/2017',
-                links: [
-                    ['Slides', 'sessions/42.html']
-                ]
+                },
+                {
+                    num: 44,
+                    date: '3/14/2017',
+                    links: [
+                        ['Slides', 'sessions/42.html']
+                    ]
 
-            }, 
-  {
-                num: 45,
-                date: '3/15/2017',
-                links: [
-                    ['Slides', 'sessions/43.html']
-                ]
+                },
+                {
+                    num: 45,
+                    date: '3/15/2017',
+                    links: [
+                        ['Slides', 'sessions/43.html']
+                    ]
 
-            }, 
-  {
-                num: 46,
-                date: '3/21/2017',
-                links: [
-                    ['Slides', 'sessions/44.html']
-                ]
+                },
+                {
+                    num: 46,
+                    date: '3/21/2017',
+                    links: [
+                        ['Slides', 'sessions/44.html']
+                    ]
 
-            }, 
- {
-                num: 47,
-                date: '3/23/2017',
-                links: [
-                    ['Slides', 'sessions/45.html']
-                ]
+                },
+                {
+                    num: 47,
+                    date: '3/23/2017',
+                    links: [
+                        ['Slides', 'sessions/45.html']
+                    ]
 
-            }, 
-  {
-                num: 48,
-                date: '3/28/2017', 
-                links: [
-                    ['ES6', 'sessions/46.html']
-                ]
+                },
+                {
+                    num: 48,
+                    date: '3/28/2017',
+                    links: [
+                        ['ES6', 'sessions/46.html']
+                    ]
 
-            }, 
-   {
-                num: 49,
-                date: '3/30/2017',
-                links: [
-                    ['More ES6', 'sessions/47.html']
-                ]
+                },
+                {
+                    num: 49,
+                    date: '3/30/2017',
+                    links: [
+                        ['More ES6', 'sessions/47.html']
+                    ]
 
-            }, 
-    {
-                num: 50,
-                date: '3/4/2017',
-                links: [
-                    ['Import and Export and Classes', 'sessions/48.html']
-                ]
+                },
 
-            }, 
- 
             ]
         }
+        var may = {
+            name: 'May',
+            isActive: true,
+            sessions: [{
+
+                    num: 50,
+                    date: '4/4/2017',
+                    links: [
+                        ['Import and Export and Classes', 'sessions/48.html']
+                    ]
+
+                },
+
+                {
+
+                    num: 51,
+                    date: '4/4/2017',
+                    links: [
+                        [' Classes and dates', 'sessions/49.html']
+                    ]
+
+                },
+            ]
+        }
+
 
         var sessions = [
             october,
@@ -528,7 +545,8 @@
             december,
             jan,
             feb,
-            march
+            march,
+            may
 
         ];
         /* beautify ignore:end */
