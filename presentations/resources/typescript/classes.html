@@ -1,0 +1,48 @@
+<section>
+    <h1>Classes</h1>
+    <p>
+        TypeScript allows you to enforce rules upon a class as well.
+    </p>
+</section>
+<section>
+    <h1>Classes and Interfaces</h1>
+    <p>
+        Classes and Interfaces play well with each other.
+    </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <pre><code class="ts">
+class Student  implements Person{
+    fullName: string;
+    firstName: string;
+    lastName: string;
+    constructor( firstName,  middleInitial,  lastName) {
+        this.fullName = `${firstName} ${middleInitial}  ${lastName}`;
+        this.firstName = firstName;
+        this.lastName = lastName
+    }
+}
+
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+//Accepts either a person or student
+function greeter(person : Person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+
+       </code></pre>
+</section>
+<section>
+    <h1>Class constructor changes</h1>
+    <pre><code class="ts">
+class Student  implements Person{
+    fullName: string;
+    constructor(public firstName, public middleInitial, public lastName) {
+        this.fullName = `${firstName} ${middleInitial}  ${lastName}`;
+    }
+}
+       </code></pre>
+</section>

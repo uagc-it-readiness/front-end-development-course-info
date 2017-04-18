@@ -1,0 +1,240 @@
+<html>
+
+    <head>
+        <title></title>
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<!--<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+<link href="../content/reveal.css" rel="stylesheet" />
+<!--<link href="../Content/theme/simple.css" rel="stylesheet" />-->
+<link href="../content/default.css" rel="stylesheet" />
+
+
+<!--<link href="../Scripts/plugin/highlight/default.min.css" rel="stylesheet" />-->
+<link href="../scripts/plugin/highlight/vs.css" rel="stylesheet" />
+<link href="../content/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../content/css/print/pdf.css' : '../content/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script src="//localhost:35729/livereload.js"></script>
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>Topics</h1>
+                    <ul>
+                    </ul>
+                </section>
+               <section>
+                    <h1>Demo Day</h1>
+                    <h2>May 12th</h2>
+                    <h2>Noon-ish to 4-ish</h2>
+                </section>
+               <section>
+    <h1>TypeScript</h1>
+    <p>TypeScript is a superset of JavaScript that compiles down to vanilla JavaScript that can be consumed by any browser or NodeJS application.</p>
+</section>
+<section>
+    <h1>TypeScript</h1>
+    <ul>
+        <li class="fragment">
+            First appeared in Oct 2012
+        </li>
+        <li class="fragment">
+            The lead architect of  C# and creater of Delphi worked on the development of TS
+        </li>
+
+        <li class="fragment">
+            It finds and outputs errors when it compiles. It lets you know you've messed up before you run your code in browser.
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>Compilation</h1>
+    <div class="two-col">
+        <div>
+            <h2 class="fragment">main.scss</h2>
+            <h2 class="fragment"><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
+            <h2 class="fragment">main.css</h2>
+        </div>
+        <div>
+            <h2 class="fragment">main.ts</h2>
+            <h2 class="fragment"><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
+            <h2 class="fragment">main.js</h2>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>TypeScript Syntax</h1>
+    <div class="two-col">
+        <div>
+            <pre><code class="js">
+function logger(message){
+    console.log(`Log: ${message}`)
+} 
+
+logger('Hello World');
+                </code></pre>
+        </div>
+        <div>
+            <pre><code class="ts">
+function logger(message:string){
+    console.log(`Log: ${message}`)
+} 
+
+logger('Hello World');
+logger(1); //Outputs an error in the compiler.
+                </code></pre>
+        </div>
+    </div>
+</section>
+                <section>
+    <h1>TypeScript - Types</h1>
+    <p>
+        You use types to declare what type of variable you are declaring.  The TypeScript compiler will notify you if you missuse a type.
+    </p>
+</section>
+<section>
+    <h1>Boolean Type</h1>
+    <pre><code class="ts">
+let isValid: boolean = false;
+    
+function test(apply: boolean){
+    if (apply === true){
+    }
+}
+
+test(isValid);
+test('true'); // Error.
+        </code></pre>
+</section>
+<section>
+    <h1>Number</h1>
+    <pre><code class="ts">
+const pi: number = 3.14;
+
+function area(radius: number) : number{
+    return pi * (Math.pow(radius, 2));
+}
+
+let a: number = area(2); 
+let b: string = area(2); //Error
+        </code></pre>
+</section>
+<section>
+    <h1>String</h1>
+
+    <pre><code class="ts">
+const firstName: string = 'Daniel';
+const lastName: string = 'Worthy';
+
+function fullName(fName, lName) : string{
+    return `${fName} ${lName}`;
+}
+        </code></pre>
+</section>
+<section>
+    <h1>Array</h1>
+    <pre><code class="ts">
+    let list: number[] = [1, 2, 3];
+    let list: Array&lt;number&gt; = [1, 2, 3];
+        </code></pre>
+</section>
+
+<section>
+    <h1>Any</h1>
+    <p>
+        Best used when interacting with other libraries and frameworks.
+    </p>
+    <pre><code class="ts">
+let e: any = 30;
+e = true;
+e = "Hello World";
+        </code></pre>
+</section>
+
+
+               <section>
+                    <h2>Before you leave - http://codepen.io/</h2>
+                    <ul>
+                        <li class="fragment">Declare an empty array using <code>let dates = [];</code></li>
+                        <li class="fragment">Write a loop that will loop 10 times and performs the following items.
+                            <ul>
+                                <li class="fragment"><code>let month</code> => a random number between 0 and 11.</li>
+                                <li class="fragment"><code>let day</code> => a random number between 0 and 25.</li>
+                                <li class="fragment"><code>let date</code> => a new Date variable using <code>month</code>, <code>day</code>,
+                                    and 2000 for the year.</li>
+                                <li class="fragment">Add <code>date</code> to your <code>dates</code> array</li>
+                            </ul>
+                        </li>
+                        <li class="fragment">
+                            <code>.filter</code> your <code>dates</code> array. Any months that are divisble by 3 should
+                            return true. <em>Remember that months are 0 based.</em>
+                        </li>
+                        <li class="fragment">
+                            March, June, September, December
+                        </li>
+                        <li class="fragment">
+                            Console log your arrays to verify.
+                        </li>
+                        <li class="fragment">
+                            Challenge - Sort both of your arrays.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Example Output</h1>
+                    <pre><code class="js">
+let formattedDates = dates.map(x => x.toLocaleString());                            
+["8/8/2010, 12:00:00 AM", "7/15/2010, 12:00:00 AM", "4/14/2010, 12:00:00 AM", 
+"8/7/2010, 12:00:00 AM", "5/25/2010, 12:00:00 AM", "9/16/2010, 12:00:00 AM", 
+"9/8/2010, 12:00:00 AM", "3/17/2010, 12:00:00 AM", "7/5/2010, 12:00:00 AM", 
+"9/22/2010, 12:00:00 AM"]                        
+                        </code></pre>
+
+                    <pre><code class="js">
+let formattedDates = dates.map(x => x.toLocaleString());
+["9/16/2010, 12:00:00 AM", "9/8/2010, 12:00:00 AM", 
+"3/17/2010, 12:00:00 AM", "9/22/2010, 12:00:00 AM"]
+                        </code></pre>
+                </section>
+                <!--<section>
+                    <p data-height="265" data-theme-id="0" data-slug-hash="JWmPRw" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+                        data-pen-title="JWmPRw" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/JWmPRw/">JWmPRw</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+                        on <a href="http://codepen.io">CodePen</a>.</p>
+                    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+                </section>-->
+            </div>
+        </div>
+        <script src="../scripts/reveal.js"></script>
+<script src="../scripts/head.min.js"></script>
+<script>
+
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [
+            { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+            { src: '../scripts/plugin/notes/notes.js', async: false }
+        ]
+    });
+
+</script>>
+
+    </body>
+
+</html>>

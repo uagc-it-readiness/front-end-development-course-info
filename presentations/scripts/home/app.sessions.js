@@ -535,6 +535,16 @@
                     ]
 
                 },
+                {
+
+                    num: 52,
+                    date: '4/18/2017',
+                    links: [
+                        ['TypeScript', 'sessions/50.html']
+                    ]
+
+                },
+
             ]
         }
 

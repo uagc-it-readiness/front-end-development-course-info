@@ -39,20 +39,26 @@ var sq = new Square();
     </p>
     <p class="fragment">There can only be one constructor per class.</p>
     <pre class="fragment"><code class="js">
- class Square{
+ class Rectangle{
     constructor(height, width){
         this.height = height;
         this.width = width;
     }
  }
    </code></pre>
+       <pre class="fragment"><code class="js">
+var rc = new Rectangle(10, 15);
+  </code></pre>
+
 </section>
 <section>
     <h1> Methods</h1>
     <p>No code is allowed outside of method.</p>
     <pre class="fragment"><code class="js">
- class Square{
+ class Rectangle{
     constructor(height, width){
+        this.height = height;
+        this.width = width;
     }
 
     calcArea(){
@@ -61,8 +67,8 @@ var sq = new Square();
  }
 </code></pre>
     <pre class="fragment"><code class="js">
-        var sq = new Square(10, 10);
-        console.log(sq.calcArea());
+        var rc = new Rectangle(10, 10);
+        console.log(rc.calcArea());
         </code></pre>
 </section>
 <section>
@@ -71,8 +77,10 @@ var sq = new Square();
        Get methods allow you to create dynamic properties without requiring the user to call a method.  
     </p>
     <pre class="fragment"><code class="js">
- class Square{
+ class Rectangle{
     constructor(height, width){
+        this.height = height;
+        this.width = width;
     }
 
     get area(){
@@ -84,8 +92,8 @@ var sq = new Square();
  }
  </code></pre>
     <pre class="fragment"><code class="js">
-    var sq = new Square(10, 10);
-    console.log(sq.area);
+    var rc = new Rectangle(10, 10);
+    console.log(rc.area);
         </code></pre>
 </section>
 <section>
