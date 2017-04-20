@@ -17,7 +17,7 @@ class Student  implements Person{
     fullName: string;
     firstName: string;
     lastName: string;
-    constructor( firstName,  middleInitial,  lastName) {
+    constructor( firstName: string,  middleInitial: string,  lastName: string) {
         this.fullName = `${firstName} ${middleInitial}  ${lastName}`;
         this.firstName = firstName;
         this.lastName = lastName
@@ -32,7 +32,6 @@ interface Person {
 function greeter(person : Person) {
     return "Hello, " + person.firstName + " " + person.lastName;
 }
-
        </code></pre>
 </section>
 <section>
@@ -40,9 +39,19 @@ function greeter(person : Person) {
     <pre><code class="ts">
 class Student  implements Person{
     fullName: string;
-    constructor(public firstName, public middleInitial, public lastName) {
+    constructor(public firstName: string, public middleInitial: string, public lastName:string) {
         this.fullName = `${firstName} ${middleInitial}  ${lastName}`;
     }
 }
        </code></pre>
+</section>
+<section>
+    <h1>Interface Example</h1>
+    <pre><code class="ts">
+
+class Rectangle implements Shape{
+  constructor(public Name: string, public Sides: number, public Height: number, public Width: number){
+  }
+}
+        </code></pre>
 </section>
