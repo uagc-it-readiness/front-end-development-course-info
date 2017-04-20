@@ -513,8 +513,8 @@
 
             ]
         }
-        var may = {
-            name: 'May',
+        var april = {
+            name: 'April',
             isActive: true,
             sessions: [{
 
@@ -544,6 +544,16 @@
                     ]
 
                 },
+                {
+
+                    num: 53,
+                    date: '4/20/2017',
+                    links: [
+                        ['Angular Intro', 'sessions/51.html']
+                    ]
+
+                },
+
 
             ]
         }
@@ -556,7 +566,7 @@
             jan,
             feb,
             march,
-            may
+           april 
 
         ];
         /* beautify ignore:end */

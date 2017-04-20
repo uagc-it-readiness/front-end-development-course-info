@@ -34,18 +34,22 @@
                 <section>
                     <h1>Topics</h1>
                     <ul>
-                        <li>TypeScript</li>
+                        <li>TypeScript Review </li>
+                        <li>Angular Intro </li>
                     </ul>
                 </section>
                 <section>
                     <h1>Demo Day</h1>
                     <h2>May 12th</h2>
-                    <h2>Noon-ish to 4-ish</h2>
+                    <h2>11-ish to 2-ish</h2>
+                </section>
+                <section>
+
                 </section>
                 <section>
                     <h1>NWA Tech Fest</h1>
                     <h2>http://nwatechfest.com</h2>
-                    <h2>May</h2>
+                    <h2>May 18th</h2>
                 </section>
                 <section>
     <h1>TypeScript</h1>
@@ -276,29 +280,170 @@ class Rectangle implements Shape{
         </code></pre>
 </section>
                 <section>
+    <h1>Casing matters on your types</h1>
+    <div class="two-col">
+        <div>
+            <h2>Wrong</h2>
+            <pre><code class="ts">
+               function logic(foo: String): String; 
+                </code></pre>
+        </div>
+        <div>
+            <h2>Right</h2>
+            <pre><code class="ts">
+               function logic(foo: String): String; 
+                </code></pre>
+        </div>
+    </div>
+    <h3 class="fragment"><code>Number</code>, <code>String</code>, <code>Boolean</code>, and <code>Object</code> refer to reserved words in JavaScript.</h3>
+</section>
+                <section>
+    <h1>Angular</h1>
+    <p>
+        Angular is a front end application framework that is designed to write testable single page applications.
+    </p>
+    <a href="https://angular.io/" target="_blank">Angular Website</a>
+</section>
+<section>
+    <h1>History</h1>
+    <ul>
+        <li class="fragment"><strong>AngularJS</strong>
+            <ul>
+                <li class="fragment">Debuted in 2010</li>
+                <li class="fragment">Built and Maintained by Google</li>
+                <li class="fragment">MVC Architecture</li>
+            </ul>
+        </li>
+        <li class="fragment">V2 released Sep 2016 </li>
+        <li class="fragment">V4 released March 2017</li>
+        <li class="fragment">AngularJS == 1.X</li>
+        <li class="fragment">Angular == 2 and above</li>
+        <li class="fragment">Leverages TypeScript</li>
+    </ul>
+</section>
+<section>
+    <h1>MVC Concept</h1>
+    <h2 class="fragment">Goals</h2>
+    <ul>
+        <li class="fragment">Separation of Concerns</li>
+        <li class="fragment">Reusable Code</li>
+        <li class="fragment">Testability</li>
+    </ul>
+</section>
+<section>
+    <h1>Model</h1>
+    <p>
+        The Model plays the role of managing application data. A model could represent a user, product information, list of movies,
+        etc.
+    </p>
+</section>
+<section>
+    <h1>View</h1>
+    <p>
+        The View is the visual representation of the model. The view should not contain any logic. It accepts user input and passes
+        it to the controller.
+    </p>
+</section>
+<section>
+    <h1>Controller</h1>
+    <p>
+        The controller responds to the user's interaction with the View. It performs validation and other business logic. It is considered
+        'best practice' to keep controllers slim.
+    </p>
+</section>
+<section>
+    <h1>Problems with MVC</h1>
+    <ul>
+        <li class="fragment">Dependant on developer discipline</li>
+        <li class="fragment">Concepts are open to interpretation</li>
+        <li class="fragment">Requires additional items for full functionality.</li>
+    </ul>
+</section>
+<section>
+    <h1>Angular's architecture has changed from MVController to something like MVComponent</h1>
+</section>
+<section>
+    <h1>App Overview</h1>
+    <h2><a href="https://angular.io/resources/live-examples/toh-6/ts/eplnkr.html" target="_blank">Tour of Heroes</a></h2>
+</section>
+                <section>
+    <h1>The Angular Component</h1>
+    <p>Angular applications are made up of multiple <code>components</code>. An Angular component is composed of HTML (the View)
+        and a Component class that manipulates parts of the screen. </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <div class="two-col">
+        <div>
+            <pre><code class="ts">
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  template: `&lt;h1&gt;Hello {{name}}&lt;/h1&gt;`
+})
+export class AppComponent { 
+    name = 'Angular'; 
+}
+</code></pre>
+        </div>
+        <div>
+            <p class="fragment">imports</p>
+            <p class="fragment">@Component</p>
+            <p class="fragment">selector</p>
+            <p class="fragment">template</p>
+            <p class="fragment">class</p>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Example</h1>
+    <div class="two-col">
+        <div>
+            <pre><code class="ts">
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  template: `&lt;h1&gt;Hello {{name}}&lt;/h1&gt;`
+})
+export class AppComponent { 
+    name = 'Angular'; 
+}
+</code></pre>
+        </div>
+        <div>
+            <h2>Input</h2>
+            <pre><code class="xml">
+&lt;my-app>&lt;/my-app>
+    </code></pre>
+            <div class="fragment">
+                <h2>Output</h2>
+                <pre><code class="xml">
+&lt;h1>Hello Angular&lt;/h1>
+               </code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+                <section>
                     <h2>Before you leave - http://codepen.io/</h2>
+                    <p>
+                        <a href="https://worthyd.github.io/dummy-sites/challenge/" target="_blank">Recreate this website.</a>                        by forking <a href="https://codepen.io/WorthyD/pen/mmPVzE?editors=1100" target="_blank">this code pen</a>
+
+                    </p>
                     <ul>
-                        <li>Convert these declarations into TypeScript Declarations
-                            <ul>
-                                <li><code>let foo = 'bar';</code></li>
-                                <li><code>const pi = 3.14;</code></li>
-                                <li><code>const today = new Date();</code></li>
-                                <li><code>let items = [1, 2, 3, 5]</code></li>
-                                <li><code>let items = ["Test", 2, today, 5]</code></li>
-                            </ul>
+                        <li>
+                            You should only need to add CSS.
                         </li>
                         <li>
-                            Create an interface called <code>Shape</code> and has the following properties.
-                            <ul>
-                                <li>Name -> string</li>
-                                <li>Sides -> number</li>
-                                <li>Height -> number</li>
-                                <li>Width -> number</li>
-                            </ul>
+                            Font awesome is already included.
                         </li>
+                        <li>Break points should be at 720 and 480.  </li>
                         <li>
-                            Create a class called <code>Rectangle</code> and have it implement <code>Shape</code>
+                            Try to use flexbox.
                         </li>
+
                     </ul>
                 </section>
             </div>
@@ -323,4 +468,4 @@ class Rectangle implements Shape{
 
     </body>
 
-</html>>
+</html>

@@ -1,0 +1,60 @@
+<section>
+    <h1>The Angular Component</h1>
+    <p>Angular applications are made up of multiple <code>components</code>. An Angular component is composed of HTML (the View)
+        and a Component class that manipulates parts of the screen. </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <div class="two-col">
+        <div>
+            <pre><code class="ts">
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  template: `&lt;h1&gt;Hello {{name}}&lt;/h1&gt;`
+})
+export class AppComponent { 
+    name = 'Angular'; 
+}
+</code></pre>
+        </div>
+        <div>
+            <p class="fragment">imports</p>
+            <p class="fragment">@Component</p>
+            <p class="fragment">selector</p>
+            <p class="fragment">template</p>
+            <p class="fragment">class</p>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Example</h1>
+    <div class="two-col">
+        <div>
+            <pre><code class="ts">
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  template: `&lt;h1&gt;Hello {{name}}&lt;/h1&gt;`
+})
+export class AppComponent { 
+    name = 'Angular'; 
+}
+</code></pre>
+        </div>
+        <div>
+            <h2>Input</h2>
+            <pre><code class="xml">
+&lt;my-app>&lt;/my-app>
+    </code></pre>
+            <div class="fragment">
+                <h2>Output</h2>
+                <pre><code class="xml">
+&lt;h1>Hello Angular&lt;/h1>
+               </code></pre>
+            </div>
+        </div>
+    </div>
+</section>
