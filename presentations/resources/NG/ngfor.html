@@ -1,0 +1,50 @@
+<section>
+    <h1>ngFor</h1>
+    <p>
+        <code>ngFor</code> allows you to loop through and display an array of objects in the view.
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <div class="two-col">
+        <div>
+            <pre><code class="ts">
+export class AppComponent {
+  names = ['Ted', 
+    'Fred', 
+    'Marco', 
+    'Polo'];
+}</code></pre>
+            <pre><code class="xml">
+<ul>
+    <li *ngFor="let name of names">
+        {{name}}
+    </li>
+</ul>
+</code></pre>
+        </div>
+        <div class="fragment">
+            <h2>Output</h2>
+
+            <pre><code class="html">
+<ul>
+    <li> 
+        Ted
+    </li>
+    <li> 
+        Fred
+    </li>
+    <li> 
+       Marco 
+    </li>
+    <li> 
+        Polo
+    </li>
+</ul>
+</code></pre>
+
+        </div>
+
+    </div>
+
+</section>
