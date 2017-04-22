@@ -1,0 +1,22 @@
+<section>
+    <h1>Interpolation</h1>
+    <p>
+        Interpolation is the method to display a component property in a template.
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <pre><code class="ts">
+@Component({
+  selector: 'my-app',
+  template: `
+    &lt;h1><mark>{{title}}</mark>&lt;/h1>
+    &lt;h2>My favorite hero is: <mark>{{myHero}}</mark>&lt;/h2>
+    `
+})
+export class AppComponent {
+  <mark>title</mark> = 'Tour of Heroes';
+  <mark>myHero</mark> = 'Windstorm';
+}
+        </code></pre>
+</section>

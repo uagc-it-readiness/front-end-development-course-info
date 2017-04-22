@@ -553,6 +553,16 @@
                     ]
 
                 },
+                {
+
+                    num: 54,
+                    date: '4/22/2017',
+                    links: [
+                        ['Angular ', 'sessions/52.html']
+                    ]
+
+                },
+
 
 
             ]
