@@ -34,266 +34,10 @@
                 <section>
                     <h1>Topics</h1>
                     <ul>
-                        <li>TypeScript Review </li>
-                        <li>Angular Intro </li>
+                        <li>Angular Review</li>
+                        <li>Angular CLI Intro</li>
                     </ul>
                 </section>
-                <section>
-                    <h1>Demo Day</h1>
-                    <h2>May 12th</h2>
-                    <h2>11-ish to 2-ish</h2>
-                </section>
-               <section>
-                    <h1>NWA Tech Fest</h1>
-                    <h2>http://nwatechfest.com</h2>
-                    <h2>May 18th</h2>
-                </section>
-                <section>
-    <h1>TypeScript</h1>
-    <p>TypeScript is a superset of JavaScript that compiles down to vanilla JavaScript that can be consumed by any browser or NodeJS application.</p>
-</section>
-<section>
-    <h1>TypeScript</h1>
-    <ul>
-        <li class="fragment">
-            First appeared in Oct 2012
-        </li>
-        <li class="fragment">
-            The lead architect of  C# and creater of Delphi worked on the development of TS
-        </li>
-
-        <li class="fragment">
-            It finds and outputs errors when it compiles. It lets you know you've messed up before you run your code in browser.
-        </li>
-    </ul>
-</section>
-<section>
-    <h1>Compilation</h1>
-    <div class="two-col">
-        <div>
-            <h2 class="fragment">main.scss</h2>
-            <h2 class="fragment"><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
-            <h2 class="fragment">main.css</h2>
-        </div>
-        <div>
-            <h2 class="fragment">main.ts</h2>
-            <h2 class="fragment"><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
-            <h2 class="fragment">main.js</h2>
-        </div>
-    </div>
-</section>
-<section>
-    <h1>TypeScript Syntax</h1>
-    <div class="two-col">
-        <div>
-            <pre><code class="js">
-function logger(message){
-    console.log(`Log: ${message}`)
-} 
-
-logger('Hello World');
-                </code></pre>
-        </div>
-        <div>
-            <pre><code class="ts">
-function logger(message:string){
-    console.log(`Log: ${message}`)
-} 
-
-logger('Hello World');
-logger(1); //Outputs an error in the compiler.
-                </code></pre>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h1>Getting TypeScript</h1>
-    <h3><a href="https://www.typescriptlang.org/index.html#download-links" target="_blank">Editor Plugins</a></h3>
-    <h4 class="fragment">Node.js</h4>
-    <h4 class="fragment"><code>npm install -g typescript</code></h4>
-    <h4 class="fragment"><code>tsc helloworld.ts</code></h4>
-</section>
-                <section>
-    <h1>TypeScript - Types</h1>
-    <p>
-        You use types to declare what type of variable you are declaring.  The TypeScript compiler will notify you if you missuse a type.
-    </p>
-</section>
-<section>
-    <h1>Boolean Type</h1>
-    <pre><code class="ts">
-let isValid: boolean = false;
-    
-function test(apply: boolean){
-    if (apply === true){
-    }
-}
-
-test(isValid);
-test('true'); // Error.
-        </code></pre>
-</section>
-<section>
-    <h1>Number</h1>
-    <pre><code class="ts">
-const pi: number = 3.14;
-
-function area(radius: number) : number{
-    return pi * (Math.pow(radius, 2));
-}
-
-let a: number = area(2); 
-let b: string = area(2); //Error
-        </code></pre>
-</section>
-<section>
-    <h1>String</h1>
-
-    <pre><code class="ts">
-const firstName: string = 'Daniel';
-const lastName: string = 'Worthy';
-
-function fullName(fName, lName) : string{
-    return `${fName} ${lName}`;
-}
-        </code></pre>
-</section>
-<section>
-    <h1>Array</h1>
-    <pre><code class="ts">
-    let list: number[] = [1, 2, 3];
-    let list: Array&lt;number&gt; = [1, 2, 3];
-        </code></pre>
-</section>
-
-<section>
-    <h1>Any</h1>
-    <p>
-        Best used when interacting with other libraries and frameworks.
-    </p>
-    <pre><code class="ts">
-let e: any = 30;
-e = true;
-e = "Hello World";
-        </code></pre>
-</section>
-
-
-                <section>
-    <h1>Interfaces</h1>
-    <p>
-        An interface provides a blueprint for JavaScript objects and classes.
-    </p>
-</section>
-<section>
-    <h1>Interface Example</h1>
-    <pre><code class="ts">
-
-interface Person {
-    firstName: string;
-    lastName: string;
-}        
-
-function getName(person: Person){
-}
-        </code></pre>
-</section>
-<section>
-    <h1>Interface Example</h1>
-    <pre><code class="ts">
-
-interface Shape {
-    Name: string;
-    Sides: number;
-    Height: number;
-    Width: number;
-}        
-
-let rectangle: Shape =  {
-   Name: 'Rectangle',
-   Sides: 4,
-   Height: 20,
-   Width: 20 
-}
-        </code></pre>
-</section>
-
-                <section>
-    <h1>Classes</h1>
-    <p>
-        TypeScript allows you to enforce rules upon a class as well.
-    </p>
-</section>
-<section>
-    <h1>Classes and Interfaces</h1>
-    <p>
-        Classes and Interfaces play well with each other.
-    </p>
-</section>
-<section>
-    <h1>Example</h1>
-    <pre><code class="ts">
-class Student  implements Person{
-    fullName: string;
-    firstName: string;
-    lastName: string;
-    constructor( firstName: string,  middleInitial: string,  lastName: string) {
-        this.fullName = `${firstName} ${middleInitial}  ${lastName}`;
-        this.firstName = firstName;
-        this.lastName = lastName
-    }
-}
-
-interface Person {
-    firstName: string;
-    lastName: string;
-}
-//Accepts either a person or student
-function greeter(person : Person) {
-    return "Hello, " + person.firstName + " " + person.lastName;
-}
-       </code></pre>
-</section>
-<section>
-    <h1>Class constructor changes</h1>
-    <pre><code class="ts">
-class Student  implements Person{
-    fullName: string;
-    constructor(public firstName: string, public middleInitial: string, public lastName:string) {
-        this.fullName = `${firstName} ${middleInitial}  ${lastName}`;
-    }
-}
-       </code></pre>
-</section>
-<section>
-    <h1>Interface Example</h1>
-    <pre><code class="ts">
-
-class Rectangle implements Shape{
-  constructor(public Name: string, public Sides: number, public Height: number, public Width: number){
-  }
-}
-        </code></pre>
-</section>
-                <section>
-    <h1>Casing matters on your types</h1>
-    <div class="two-col">
-        <div>
-            <h2>Wrong</h2>
-            <pre><code class="ts">
-               function logic(foo: String): String; 
-                </code></pre>
-        </div>
-        <div>
-            <h2>Right</h2>
-            <pre><code class="ts">
-               function logic(foo: String): String; 
-                </code></pre>
-        </div>
-    </div>
-    <h3 class="fragment"><code>Number</code>, <code>String</code>, <code>Boolean</code>, and <code>Object</code> refer to reserved words in JavaScript.</h3>
-</section>
                 <section>
     <h1>Angular</h1>
     <p>
@@ -424,6 +168,37 @@ export class AppComponent {
     </div>
 </section>
                 <section>
+    <h1>Component Templates</h1>
+    <p>
+        Templates for components can be applied in one of two ways.
+    </p>
+</section>
+<section>
+    <h1>Inline Template</h1>
+    <pre><code class="ts">
+@Component({
+  selector: 'app-comp',
+  template: `
+    <h1>Hello Angular</h1>
+  `
+})
+export class AppComponent {
+/* . . . */
+}</code></pre>
+</section>
+<section>
+    <h1>External Syntax</h1>
+    <pre><code class="ts">
+@Component({
+  selector: 'app-comp',
+  templateUrl: './app-component.html'
+ })
+export class HeroAppComponent {
+/* . . . */
+}</code></pre>
+
+</section>
+                <section>
     <h1>Interpolation</h1>
     <p>
         Interpolation is the method to display a component property in a template.
@@ -472,17 +247,6 @@ export class AppComponent {
     }
 }
         </code></pre> 
-</section>
-<section>
-    <h1>Else</h1>
-    <pre><code class="xml">
-<ng-template #hidden>
-    <p>Hidden else content</p>
-</ng-template>
-<p *ngIf="shown; else hidden">
-    Visible shown content
-</p>
-        </code></pre>
 </section>
                 <section>
     <h1>ngFor</h1>
@@ -535,34 +299,184 @@ export class AppComponent {
 
 </section>
                 <section>
-                    <h1><a href="https://github.com/angular/quickstart">Quickstart</a></h1>
-                </section>
-                <!--
-                    {{interpolation}}
-                    ngIf  
-                    ngFor
--->
+    <h1>Component Styles</h1>
+    <p>
+        Styling components in Angular is different than traditional styling.
+    </p>
+</section>
+<section>
+    <h1>Inline Syntax</h1>
+    <pre><code class="ts">
+@Component({
+  selector: 'app-comp',
+  template: `
+    <h1>Hello Angular</h1>
+  `,
+  styles: [`
+    h1 { font-weight: normal; }
+    h2 { font-weight: bold; }
+   `]
+})
+export class HeroAppComponent {
+/* . . . */
+}</code></pre>
+</section>
+<section>
+    <h1>External Syntax</h1>
+    <pre><code class="ts">
+@Component({
+  selector: 'app-comp',
+  template: `
+    <h1>Hello Angular</h1>
+  `,
+    styleUrls: ['app.component.css']
+})
+export class HeroAppComponent {
+/* . . . */
+}</code></pre>
 
-                    <!--                <section>
-                    <h2>Before you leave - http://codepen.io/</h2>
-                    <p>
-                        <a href="https://worthyd.github.io/dummy-sites/challenge/" target="_blank">Recreate this website.</a>                        by forking <a href="https://codepen.io/WorthyD/pen/mmPVzE?editors=1100" target="_blank">this code pen</a>
+</section>
+<section>
+    <h1>CSS Encapsulation</h1>
+    <div>
+        <pre><code class="ts">
+@Component({
+  selector: 'app-comp',
+  template: `
+    <h1>Hello Angular</h1>
+  `,
+  styles: [`
+    h1 { font-weight: normal; }
+    h2 { font-weight: bold; }
+   `]
+})
+export class HeroAppComponent {
+/* . . . */
+}</code></pre>
+    </div>
+    <div class="fragment">
 
-                    </p>
-                    <ul>
-                        <li>
-                            You should only need to add CSS.
-                        </li>
-                        <li>
-                            Font awesome is already included.
-                        </li>
-                        <li>Break points should be at 720 and 480.  </li>
-                        <li>
-                            Try to use flexbox.
-                        </li>
+        <pre><code class=" xml">
+&lt;h1 _ngcontent-pmm-1>Hello Angular&lt;/h1>
+</code></pre>
+    </div>
+    <div class="fragment">
 
-                    </ul>
-                </section>-->
+        <pre><code class=" css">
+h1[_ngcontent-pmm-1] { font-weight: normal; }
+</code></pre>
+
+
+    </div>
+</section>
+                <section>
+    <h1>Angular CLI</h1>
+    <p>
+        The Angular CLI makes it very easy to create a new application, create new components, and test locally.
+    </p>
+</section>
+<section>
+    <h1>Angular CLI Benefits</h1>
+    <ul>
+        <li class="fragment">Generates Project Structure</li>
+        <li class="fragment">Creates Most Files</li>
+        <li class="fragment">Runs your development server</li>
+        <li class="fragment">Follows best practices</li>
+    </ul>
+</section>
+<section>
+    <h1>Installing Angular CLI</h1>
+    <pre><code class="bash">
+    npm install -g @angular/cli
+    </code></pre>
+    <p>
+        This installs all the dependencies needed to run the Angular CLI from the command line.
+    </p>
+</section>
+<section>
+    <h1>Creating a New Project</h1>
+    <pre><code class="bash">
+    ng new MY_PROJECT_NAME 
+    cd MY_PROJECT_NAME
+    ng serve
+        </code></pre>
+</section>
+<section>
+    <h1>Files Created</h1>
+    <ul>
+        <li class="fragment"><code>e2e</code> - End to End tests</li>
+        <li class="fragment"><code>.angular-cli.json</code> - CLI settings</li>
+        <li class="fragment">.gitignore</li>
+        <li class="fragment">package.json</li>
+        <li class="fragment">ReadME.MD</li>
+
+    </ul>
+</section>
+<section>
+    <h1>SRC Files and Folders</h1>
+    <div class="two-col">
+        <div>
+            <ul>
+                <li class="fragment"><code>index.html</code></li>
+                <li class="fragment"><code>main.ts</code> - Main bootstraper</li>
+                <li class="fragment"><code>styles.css</code> - Global Styles</li>
+                <li class="fragment">assets folder</li>
+                <li class="fragment">environments</li>
+            </ul>
+
+        </div>
+        <div>
+            <h2 class="fragment">app folder</h2>
+            <ul>
+                <li class="fragment"><code>app.module.ts</code></li>
+                <li class="fragment"><code>app.component.ts</code></li>
+                <li class="fragment"><code>app.component.spec.ts</code></li>
+                <li class="fragment"><code>app.component.html</code></li>
+                <li class="fragment"><code>app.component.css</code></li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <h1>Creating a New Component</h1>
+    <pre><code class="bash">
+ng generate component  my-new-component-name
+#which is equal to
+ng g component  my-new-component-name
+
+#You can also assign folder paths
+ng g component shared/components/my-small-component
+        </code></pre>
+</section>
+
+<section>
+    <h1>Items you can Generate</h1>
+    <div class="two-col">
+        <div>
+            <ul>
+                <li class="fragment">component</li>
+                <li class="fragment">directive</li>
+                <li class="fragment">pipe</li>
+                <li class="fragment">service</li>
+                <li class="fragment">class</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li class="fragment">guard</li>
+                <li class="fragment">interface</li>
+                <li class="fragment">enum</li>
+                <li class="fragment">module</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--<section>
+    <h1>Testing</h1>
+</section>-->
+                ngModel, ngstyle/ngclass
             </div>
         </div>
         <script src="../scripts/reveal.js"></script>

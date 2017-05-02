@@ -1,0 +1,44 @@
+<section>
+    <h1>Interfaces In the CLI</h1>
+    <p>
+        Interfaces provide the easiest way to provide consistency across your application.
+    </p>
+</section>
+<section>
+    <h1>Interface Generation</h1>
+    <pre><code class="bash">
+ng generate interface my-interface-name
+
+#or
+
+ng g i my-interface-name
+        </code></pre>
+    <h3 class="fragment">Only generates .ts file.</h3>
+</section>
+<section>
+    <h1>Interface Structure</h1>
+
+    <pre><code class="ts">
+export interface MyInterfaceName {
+    id:string;
+    name: string;
+    description:string;
+}    </code></pre>
+</section>
+<section>
+    <h1>Interface Usage</h1>
+    <pre><code class="ts">
+import { Component } from '@angular/core';
+
+import { MyInterfaceName } from './my-interface-name';
+
+@Component({
+  selector: 'my-app',
+  template: `<div></div>`
+})
+export class AppComponent { 
+    MyItem: MyInterfaceName;
+}
+</code></pre>
+
+</section>

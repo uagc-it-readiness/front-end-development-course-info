@@ -1,0 +1,79 @@
+<section>
+    <h1>Component in depth</h1>
+</section>
+<section>
+    <h1>Creating a New Component</h1>
+    <pre><code class="bash">
+ng g component  my-new-component-name
+       </code></pre>
+       <h2 class="fragment">Creates</h2>
+<ul>
+    <li class="fragment"><code>my-new-component-name.component.ts</code></li>
+    <li class="fragment"><code>my-new-component-name.component.spec.ts</code></li>
+    <li class="fragment"><code>my-new-component-name.component.html</code></li>
+    <li class="fragment"><code>my-new-component-name.component.css</code></li>
+</ul>
+</section>
+<section>
+    <h1>Flags</h1>
+    <ul>
+        <li class="fragment"><code>--flat</code></li>
+        <li class="fragment"><code>--inline-style</code></li>
+        <li class="fragment"><code>--inline-template</code></li>
+    </ul>
+</section>
+<section>
+    <h1>Using your component</h1>
+    <h2>app.component.html</h2>
+    <pre><code class="xml">
+<h1>
+  {{title}}
+</h1>
+<app-my-new-comp></app-my-new-comp>
+        </code></pre>
+</section>
+<section>
+    <h1>Leverage components to shrink large blocks of code.</h1>
+    <pre><code class="xml">
+<div class="container">
+    <div *ngFor="let p of people">
+        <app-my-new-comp></app-my-new-comp>
+    </div>
+</div>
+</code></pre>
+</section>
+<section>
+    <h1>Passing info into a component.</h1>
+<p>We use the <code>[]</code> on our attributes to tell Angular these are bindable properties.</p>
+<pre><code class="ts">
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  template: `<my-new-component [title]="name" [body]="desc"></my-new-component>`
+})
+export class AppComponent { 
+    name = 'Angular'; 
+    desc = "Lorem ipsum dolor sit amet.";
+}
+</code></pre>
+</section>
+<section>
+    <h1>Accepting info into a component.</h1>
+<pre><code class="ts">
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-my-new-comp',
+  templateUrl: './my-new-comp.component.html',
+  styleUrls: ['./my-new-comp.component.css']
+})
+export class MyNewCompComponent implements OnInit {
+  @Input() title: string;
+  @Input() body: string;
+  constructor() { }
+
+}
+</code></pre>
+</section>
+
