@@ -26,3 +26,14 @@ export class AppComponent {
 }
         </code></pre> 
 </section>
+<section>
+    <h1>Else</h1>
+    <pre><code class="xml">
+<ng-template #hidden>
+    <p>Hidden else content</p>
+</ng-template>
+<p *ngIf="shown; else hidden">
+    Visible shown content
+</p>
+        </code></pre>
+</section>

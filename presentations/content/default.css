@@ -346,7 +346,7 @@ a[target="_blank"]:after {
     vertical-align: super;
     font-size: smaller;
 }
-.reveal .current-fragment{
+.reveal li.current-fragment{
     font-size:1.15em;
 }
 .reveal li{
