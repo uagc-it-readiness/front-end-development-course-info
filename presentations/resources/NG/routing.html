@@ -1,0 +1,65 @@
+<section>
+    <h1>Routing</h1>
+    <p>
+        Routing pertains to the configuration of URLs inside your Angular application.
+    </p>
+</section>
+<section>
+    <h1>App-routing.module.ts</h1>
+    <p>
+        It is considered best practice to include all of your routes in one file.
+    </p>
+    <pre class="fragment"><code class="ts">
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+        </code></pre>
+</section>
+<section>
+    <h1>Route Defining </h1>
+
+    <pre class="fragment"><code class="ts">
+const routes: Routes = [
+  {
+    path: '', component: ProductListComponent,
+    path: 'product/search', component: SearchComponent,
+    path: 'product/details/:id', component: ProductDetailsComponent
+  }
+];
+
+</code></pre>
+</section>
+<section>
+    <h1>The Router Outlet</h1>
+    <p>
+        The output of your route needs to go somewhere. The <code>router-outlet</code> tag is what you need to use.
+    </p>
+    <pre class="fragment"><code class="xml">
+<!--app.component.html-->
+<h1>
+    {{title}}
+</h1>
+<router-outlet></router-outlet>
+        </code></pre>
+</section>
+<section>
+    <h1>Linking to a route</h1>
+    <p>
+        We use a custom HTML attribute to link to other views.
+    </p>
+    <pre class="fragment"><code class="xml">
+    <a routerLink="product/search">Search Page</a>
+        </code></pre>
+    <pre class="fragment"><code class="xml">
+    <a [routerLink]="product/details, id">Search Page</a>
+        </code></pre>
+
+</section>
