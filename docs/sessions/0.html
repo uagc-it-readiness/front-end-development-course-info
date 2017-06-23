@@ -1,0 +1,635 @@
+<html>
+
+    <head>
+        <title>Basics</title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+
+
+                <section>
+    <h1>IT Readiness</h1>
+    <h2>Front End Development</h2>
+</section>
+<section>
+    <h1>Instructor</h1>
+    <h2>Daniel Worthy</h2>
+    <!--<h3>Email: <a href="mailto:danieljworthy@gmail.com">danieljworthy@gmail.com</a></h3>-->
+    <h4>Email: <a href="mailto:dworthy@uark.edu" target="_blank">dworthy@uark.edu</a></h4>
+    <h4>Slack: @WorthyD</h4>
+    <aside class="notes">
+        Add email when possible <br> Leverage slack group too
+    </aside>
+</section>
+<section>
+    <h1>Meeting Times</h1>
+    <ul>
+        <li>Every Tuesday and Thursday from 5:30 - 9:00</li>
+        <li>Every other Saturday from 9:00 - 1:00</li>
+        <li>
+            We'll have breaks during class for meals
+        </li>
+        <!--<li>1 to 1.5 hour lecture</li>-->
+        <!--<li><a href="https://calendar.google.com/calendar/embed?src=NGVydWE2MnN0bDcwbTg5c2lyNm41OTEyOWdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+                target="_blank">Schedule</a></li>-->
+    </ul>
+</section>
+
+<section>
+    <h1>Class Room Policies</h1>
+    <ul>
+        <li>Drinks in closed containers</li>
+        <li>Attendance is required. Notify the instructor as soon as you know you will be missing.</li>
+        <li>Silence your cellphones before class. </li>
+    </ul>
+    <aside class="notes">
+        Life happens. <br>
+    </aside>
+</section>
+<section>
+    <h1>Course Guidelines</h1>
+    <ul>
+        <li class="fragment">I'm here for you</li>
+        <li class="fragment">Ask questions</li>
+        <li class="fragment">Help each other. </li>
+        <li class="fragment">Don't get bored. </li>
+        <li class="fragment">I'm not perfect. </li>
+    </ul>
+    <aside class="notes">
+        <ul>
+            <li> Not asking questions can lead to a lot of lost money for a customer</li>
+            <li>Helping others can reinforce what you already know. Don't do the work for the person needing help
+            </li>
+            <li>Nobody figures this out over night. No such thing as an actual 'master'</li>
+            <li>There is a lot of stuff I may not know, but I will do my best to help</li>
+        </ul>
+    </aside>
+</section>
+<section>
+    <h1>Course Description</h1>
+    <p>
+        This course will walk you through front-end web application development. The course will teach a number of technologies including
+        HTML, CSS, and JavaScript frameworks. It will also provide context on how front-end applications interact with APIs
+        and other back-end technologies.
+    </p>
+</section>
+<section>
+    <h1>Goal</h1>
+    <p>
+        Upon completion of this course, you will be able to create an interactive website and deploy it to a cloud-based hosting
+        provider. You will be able to apply your front-end skills to a variety of off-the-shelf or SAAS (Software as a Service)
+        solutions such as WordPress, Shopify, SquareSpace, etc. You will also understand the role that developers play on
+        an overall product team to prepare you for a transition into a work environment.
+    </p>
+</section>
+<section>
+    <h1>TLDR;</h1>
+    <ul>
+        <li>How to write WebPages</li>
+        <li>How to make it look pretty</li>
+        <li>How to make it interactive</li>
+    </ul>
+</section>
+<section>
+    <h1>End Goal</h1>
+    <ul>
+        <li class="fragment">Capable build interactive websites using the latest tools.</li>
+        <li class="fragment">Equip you with the tools to expand your skillset</li>
+        <li class="fragment">Understand the lifecycle invovled with building a website</li>
+        <li class="fragment">Knowlegable and skill enough to be hired in a entry level position.</li>
+    </ul>
+    <aside class="notes">
+        Mention why FE is a good option and inform about the weather guy and rock guy at work.
+    </aside>
+</section>
+<section>
+    <h1>Front End Focus</h1>
+    <div class="two-col">
+        <div class="fragment">
+            <h2>Design/CSS</h2>
+            <ul>
+                <li>LESS/SCSS</li>
+                <li>Responsive Web</li>
+                <li>Usability</li>
+                <li>Animations</li>
+            </ul>
+        </div>
+        <div class="fragment">
+            <h2>Development/JavaScript</h2>
+            <ul>
+                <li>Single Page Web Apps</li>
+                <li>MVVM Frameworks</li>
+                <li>Unit Testing</li>
+                <li>Node Tasks</li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="fragment">
+        <a href="https://camo.githubusercontent.com/93280354d6367052b6dbb71bbcd76c2ea81294c8/68747470733a2f2f692e696d6775722e636f6d2f3576465457634f2e706e67"
+            target="_blank">Example Tree</a>
+    </div>
+
+</section>
+<section>
+    <h1>We will only hit the tip of the iceberg of FE development</h1>
+</section>
+<!--<section>
+    <h1>Tell us about yourself</h1>
+    <ul>
+        <li>Who are you?</li>
+        <li>What do you hope to get out of this?</li>
+    </ul>
+</section>-->
+<section>
+    <h1>Tuesday & Thursday Format</h1>
+    <ul>
+        <li class="fragment">5:30 - 6:00 - Setup and Review</li>
+        <li class="fragment">6:00 - 7:00 - Topic Overview</li>
+        <li class="fragment">7:00 - 7:30 - Open Discussion/Breaks</li>
+        <li class="fragment">7:30 - 9:00 - Exercises</li>
+    </ul>
+</section>
+<section>
+    <h1>Saturday</h1>
+    <ul>
+        <li class="fragment">9:00 - 10:00 - Setup and Review</li>
+        <li class="fragment">10:00 - 1:00 - Assignment Work</li>
+    </ul>
+</section>
+<section>
+    <h1>Grading Structure</h1>
+    <h2>Pass / Fail</h2>
+</section>
+<section>
+    <h1>Class Exercises</h1>
+    <aside class="notes">
+        requirements may be vague
+    </aside>
+</section>
+<section>
+    <h1>Assignments</h1>
+</section>
+<section>
+    <h1>Formal Assessments</h1>
+  
+</section>
+
+<!--<section>
+    <h1>Schedule</h1>
+    <div class="l-col">
+        <ul>
+            <li>October
+                <ul>
+                    <li>Basic HTML </li>
+                    <li>Basic CSS</li>
+                </ul>
+            </li>
+            <li>November
+                <ul>
+                    <li>More CSS</li>
+                    <li>PSD to HTML</li>
+                </ul>
+            </li>
+
+            <li>December
+                <ul>
+                    <li>HTML Forms</li>
+                    <li>Basic JavaScript</li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+    <div class="r-col">
+        <ul>
+            <li>January
+                <ul>
+                    <li>jQuery</li>
+                </ul>
+            </li>
+
+            <li>February
+                <ul>
+                    <li>jQuery</li>
+                </ul>
+            </li>
+            <li>March
+                <ul>
+                    <li>Responsive CSS</li>
+                    <li>SASS</li>
+                </ul>
+            </li>
+            <li>
+                April
+                <ul>
+                    <li>Automation</li>
+                    <li>Performance</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>-->
+<!--<section>
+    <h1>Additional Topics</h1>
+    <ul>
+        <li class="fragment">Working with other Developers</li>
+        <li class="fragment">QA - Quality Assurance</li>
+        <li class="fragment">Project Process - Agile vs Waterfall</li>
+        <li class="fragment">Hosting</li>
+        <li class="fragment">DevOps</li>
+    </ul>
+</section>-->
+<section>
+    <h1>Technology Books</h1>
+    <h4>Buy with caution</h4>
+    <p>
+        Many books are out of date by the time they are published.
+    </p>
+    <p>
+        There are tons of good resources available if you search for them
+    </p>
+</section>
+
+<section>
+    <h1>My Top Books</h1>
+    <ul>
+        <li><strong>Coding Skills</strong>
+            <ul>
+                <li><a href="https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670" target="_blank">Code Complete: A Practical Handbook of Software Construction, Second Edition</a></li>
+                <li><a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882" target="_blank">Clean Code: A Handbook of Agile Software Craftsmanship</a></li>
+                <li><a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X" target="_blank">The Pragmatic Programmer: From Journeyman to Master</a></li>
+            </ul>
+        </li>
+
+
+        <li><strong>Dev Life</strong>
+            <ul>
+                <li><a href="https://www.amazon.com/Team-Geek-Software-Developers-Working/dp/1449302440" target="_blank">Team Geek: A Software Developer's Guide to Working Well with Others</a></li>
+                <li><a href="https://www.amazon.com/Soft-Skills-software-developers-manual/dp/1617292397/" target="_blank">Soft Skills: The software developer's life manual</a></li>
+            </ul>
+        </li>
+
+    </ul>
+    <aside class="notes">Code Complete was written in 2004 <br>Clean Code 2008</aside>
+</section>
+<section>
+    <h1>Good Blogs for Beginners</h1>
+    <ul>
+        <li>
+            <a href="https://tutsplus.com/" target="_blank">Tuts Network</a>
+        </li>
+        <li>
+            <a href="http://javascriptweekly.com/" target="_blank">JavaScript Weekly</a>
+        </li>
+        <li>
+            <a href="http://html5weekly.com/" target="_blank">FrontEnd Focus</a>
+        </li>
+        <li>
+            <a href="https://www.sitepoint.com/" target="_blank">SitePoint</a>
+        </li>
+        <li>
+            <a href="http://www.hongkiat.com/blog/" target="_blank">Hongkiat</a>
+        </li>
+        <li>
+            <a href="https://davidwalsh.name/" target="_blank">David Walsh</a>
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>What you should do when you get stuck</h1>
+
+    <aside class="notes">
+        This applies in class or professionally. <br> You aren't challening yourself enough if you don't ever get stuck
+    </aside>
+
+</section>
+<section>
+    <h1>Steps to take</h1>
+    <ul>
+        <li class="fragment">Google it</li>
+        <li class="fragment">Look at it from a different angle</li>
+        <li class="fragment">Walk away</li>
+
+        <li class="fragment">Google it again</li>
+        <li class="fragment">Play around in a different environment</li>
+        <li class="fragment">Exception: Tribal Knowledge</li>
+
+    </ul>
+    <p class="fragment">
+        Don't spend more than 30 minutes trying to figure something out on your own before asking for help.
+    </p>
+
+    <aside class="notes">
+        Few things you do have never been done before. Look to the community<br> Use JSFiddle or equivalent to isolate<br>        Tribal Knowledge -> Server location, client specification <br>
+        <br>You'd be surprised how frequently you'll find something out the second someone walks up.
+
+    </aside>
+</section>
+<section>
+    <h1><a href="http://stackoverflow.com/">Stack Overflow</a></h1>
+    <p>This will become your absolute best friend ever.</p>
+</section>
+<section>
+    <h1>Other Good Sources</h1>
+    <ul>
+        <li class="fragment"><a href="https://developer.mozilla.org/en-US/" target="_blank">Mozilla Developer Network</a></li>
+        <li class="fragment"><a href="http://www.w3schools.com/" target="_blank">W3Schools</a></li>
+        <li class="fragment"><a href="https://css-tricks.com" target="_blank">CSS-Tricks</a></li>
+    </ul>
+</section>
+<section>
+    <h1>Online Training</h1>
+    <ul>
+
+        <li class="fragment"><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a> - Free </li>
+        <li class="fragment"><a href="https://www.codecademy.com/" target="_blank">Codecademy</a> - Free </li>
+        <li class="fragment"><a href="https://mva.microsoft.com/" target="_blank">Microsoft Virtual Academy</a> - Free </li>
+        <li class="fragment"><a href="https://www.codeschool.com/" target="_blank">CodeSchool.com</a> - $20 - $30 a month </li>
+        <li class="fragment"><a href="https://www.lynda.com/" target="_blank">Lynda.com</a> $20 - $30 a month</li>
+        <li class="fragment"><a href="https://www.pluralsight.com/" target="_blank">PluralSight.com</a> $30 a month / $300 a year</li>
+    </ul>
+</section>
+    <!--<section>
+        <h1>Dictionary</h1>
+        <dl>
+            <dt class="fragment">Library</dt>
+            <dd class="fragment">A collection of reusable code blocks that are easily shared.</dd>
+            <dt class="fragment">Framework</dt>
+            <dd class="fragment">Abstract collection of code designed to help build an application. </dd>
+            <dt class="fragment">AJAX</dt>
+            <dd class="fragment">Asyncronous JavaScript And XML.</dd>
+        </dl>
+        <aside class="notes">
+            lib - logic for alphatizing a list, generating random passwords, <br><br> frm - not designed to be modified,
+            but extended
+        </aside>
+    </section>
+    <section>
+        <h1>Dictionary</h1>
+        <dl>
+            <dt class="fragment">CMS</dt>
+            <dd class="fragment">Content Management System</dd>
+            <dd class="fragment">Applicaiton framework that allows the user to control what is on their website.</dd>
+            <dt class="fragment">API</dt>
+            <dd class="fragment">Application Program Interface</dd>
+            <dd class="fragment">Protocols and tools to interact with an external applications</dd>
+            <dt class="fragment">IDE</dt>
+            <dd class="fragment">Integrated development environment</dd>
+            <dd class="fragment">Advanced text editor with tools for compiling and analyzing code.</dd>
+        </dl>
+    </section>-->
+                <section>
+    <h1>Tools we'll be using</h1>
+</section>
+<section>
+    <h1>Slack</h1>
+    <h2><a href="https://ua-itreadiness.slack.com" target="_blank">ua-itreadiness.slack.com</a></h2>
+    <h2><a href="https://slack.com/downloads/" target="_blank">Download</a>
+</section>
+<section>
+    <h1>Slack's purpose in class</h1>
+    <ul>
+        <li class="fragment">Announcements</li>
+        <li class="fragment">General Communication</li>
+        <li class="fragment">Collaboration</li>
+    </ul>
+</section>
+<section>
+    <h1>Text Editors</h1>
+    <h3>More than just Notepad</h3>
+    <img src="../images/misc/text editor.PNG" />
+</section>
+<section>
+    <h1>Syntax Highlighting</h1>
+    <img src="../images/misc/syntax highlighting.PNG" />
+</section>
+<section>
+    <h1>Code Validation</h1>
+    <img src="../images/misc/Code Validation.PNG" />
+</section>
+<section>
+    <h1>Intellisense</h1>
+    <h4>Commonly called Code Completion</h4>
+    <img src="../images/misc/code-completion.gif" />
+</section>
+<section>
+    <h1>Code Snippets</h1>
+    <img src="../images/misc/snippets.gif" />
+</section>
+<section>
+    <h1>Multitasking</h1>
+    <img src="../images/misc/preojct tree.gif" />
+</section>
+<section>
+    <h1>IDEs</h1>
+    <h3>Integrated Development Environment</h3>
+    <ul>
+        <li class="fragment">Provide project templates</li>
+        <li class="fragment">Compiles Code Easier</li>
+        <li class="fragment">GUI For everything</li>
+        <li class="fragment">Performance tools</li>
+        <li class="fragment">Bloated</li>
+    </ul>
+</section>
+<section>
+    <h1>Editor Overview</h1>
+    <p>
+        These are some of the more popular text editors available.
+    </p>
+</section>
+<section>
+    <h1>VSCode</h1>
+    <h3><a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a></h3>
+    <aside class="notes">
+        very young but showing a lot of promise <br /> great git interface
+    </aside>
+</section>
+
+<section>
+    <h1>Atom</h1>
+    <h3><a href="https://atom.io" target="_blank">https://atom.io</a></h3>
+    <aside class="notes">
+        open source <br /> highly customizable
+    </aside>
+</section>
+<section>
+    <h1>Other Options</h1>
+    <ul>
+        <li><strong class="highlight">Multi-Platform</strong>
+            <ul>
+                <li>Brackets</li>
+                <li>Vim</li>
+            </ul>
+        </li>
+
+        <li><strong class="highlight">Mac</strong>
+            <ul>
+                <li>Textmate</li>
+                <li>BBEdit</li>
+            </ul>
+        </li>
+
+        <li><strong class="highlight">Windows</strong>
+            <ul>
+                <li>Notepad 2</li>
+                <li>Notepad++</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>Further Reading</h1>
+    <ul>
+        <li><a href="http://blog.teamtreehouse.com/which-text-editor-should-i-use" target="_blank">What text editor should I use?</a></li>
+        <li><a href="https://simpleprogrammer.com/2016/08/24/text-editor-wars/" target="_blank">The Text Editor Wars</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Editor_war" target="_blank">Editor Wars on Wikipedia</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Comparison_of_text_editors" target="_blank">Text Editor Comparison</a></li>
+    </ul>
+</section>
+
+<section>
+    <h1>Web Browsers</h1>
+    <p>
+        The primary app that will serve your content
+    </p>
+    <ul>
+
+        <li class="fragment">Chrome - 58%</li>
+        <li class="fragment">Safari - 12%</li>
+        <li class="fragment">Firefox - 12%</li>
+        <li class="fragment">IE/Edge - 9%</li>
+        <li class="fragment"><a href="http://gs.statcounter.com/" target="_blank">Global Stat Counter</a></li>
+    </ul>
+    <p class="fragment">
+        What you will support will vary depending your customer's requirements.
+    </p>
+    <aside class="notes">
+        Other ways your html will be rendered Mobile/Hybrid apps
+    </aside>
+</section>
+<section>
+    <h1>We will primarily use Chrome</h1>
+</section>
+<section>
+    <h1>Browser - Dev Tools</h1>
+    <ul>
+        <li class="fragment">Inspect the active document</li>
+        <li class="fragment">See network traffic</li>
+        <li class="fragment">Debug/Step through active code</li>
+        <li class="fragment">Run performance tests</li>
+
+        <li class="fragment">Press F12 to activate</li>
+    </ul>
+    <aside class="notes">
+        Demonstrate
+    </aside>
+</section>
+<section>
+    <h1>Version Control</h1>
+    <p>
+        Version control is a system that monitors and tracks changes to files over time.
+    </p>
+</section>
+<section>
+    <h1>Git</h1>
+    <p>
+        Git is a distributed version control system aimed at speed and non-linear workflows.
+    </p>
+    <a href="https://git-scm.com/">Install</a>
+</section>
+<section>
+    <h1>GitHub.com</h1>
+    <p>
+        Online project hosting using Git. GitHub is the largest repository of open source code projects.
+    </p>
+</section>
+<section>
+    <h1>Codepen.io</h1>
+    <p>
+        Online code editor we use for examples and exercises. 
+    </p>
+</section>
+
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        //hljs.initHighlightingOnLoad(); 
+                }
+            },
+            {
+                src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                async: false,
+                callback: function () {}
+            },
+            {
+                src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+                async: true,
+                callback: function () {
+                    RevealCodeFocus();
+                }
+            }, {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+
+    (function () {
+        //hljs.initHighlightingOnLoad(); 
+    })();
+</script>>
+    </body>
+
+</html>
