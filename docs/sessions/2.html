@@ -1,0 +1,842 @@
+<html>
+
+    <head>
+        <title>Basics</title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>7/20/2017</h1>
+                    <ul>
+                        <li>Review Web Intro</li>
+                        <li>Intro HTML</li>
+                    </ul>
+                </section>
+                <section>
+    <h1> How do websites work?</h1>
+    <h3>What happens when you type uark.edu and press enter?</h3>
+</section>
+<section>
+    <h1>A DNS lookup occurs</h1>
+    <p>
+        Every website has a unique IP Address.
+    </p>
+    <p>
+        Domain Name Servers act as a directory for website's and their IP Address
+    </p>
+    <p>
+        uark.edu --> 130.184.3.113
+    </p>
+</section>
+<section>
+    <h1>The Server Responds with Content</h1>
+    <p>
+        The server looks up and finds the files you are looking for.
+    </p>
+    <p>
+        Pages are sometimes dynamically built with information from other sources.
+    </p>
+</section>
+<section>
+    <h1>Your Browser Renders the page</h1>
+    <p>
+        Every browser does this differently.
+    </p>
+</section>
+<section>
+    <h1>Client Side <br />& <br /> Server Side</h1>
+</section>
+<section>
+    <h1>Client Side <br />or<br /> The Front End</h1>
+    <p>
+        Functionality that occurs on the browser side of a website.
+    </p>
+</section>
+<section>
+    <h1>Front End Tech Stack</h1>
+    <ul>
+        <li class="fragment"><strong>HTML</strong> - The content and structure</li>
+        <li class="fragment"><strong>CSS</strong> - Describes what the content looks like</li>
+        <li class="fragment"><strong>JavaScript</strong> - Adds interactivity to the content</li>
+        <li class="fragment"><strong>Flash & Silverlight (with plugins)</strong></li>
+    </ul>
+</section>
+<section>
+    <h1>Server Side <br />or<br /> The Back End</h1>
+    <p>
+        Code that is executed on a remote server.
+    </p>
+</section>
+<section>
+    <h1>Back End Tech Stack</h1>
+    <div>
+        <ul>
+            <li class="fragment">PHP</li>
+            <li class="fragment">Python</li>
+            <li class="fragment">Javascript</li>
+            <li class="fragment">C#</li>
+            <li class="fragment">Java</li>
+            <li class="fragment">Databases</li>
+        </ul>
+    </div>
+    <aside class="notes">
+        Backend stack is far more broader in tech than the front end, but much more specialized.
+    </aside>
+</section>
+<section>
+    <h1>Static vs Dynamic <br> web content</h1>
+    <ul>
+        <li class="fragment">.html files are served up 'as is'</li>
+        <li class="fragment">BE tech allows for dynamically built HTML</li>
+        <li class="fragment">Smaller Code footprint</li>
+        <li class="fragment">Databases provide the means for:
+            <ul>
+                <li class="fragment">Stored content</li>
+                <li class="fragment">User generated content</li>
+            </ul>
+        </li>
+    </ul>
+    <aside class="notes">
+        Allows for content to be updated without developers needing to publish it
+    </aside>
+</section>
+<section>
+    <h1>Common Misconceptions</h1>
+    <h3>These aren't programming languages</h3>
+    <ul>
+        <li><strong>Libraries</strong> - jQuery, MooTools</li>
+        <li><strong>Frameworks</strong> - AngularJS, React</li>
+        <li><strong>Content Management Systems</strong> - Wodpress, Kentico, Ecktron</li>
+        <li><strong>AJAX</strong></li>
+    </ul>
+    <aside class="notes">
+        <ul>
+            <li>libs - provide programming shortcuts</li>
+            <li>framework - larger scale environment</li>
+            <li>Ajax - Demo and auto complete - how to code html</li>
+        </ul>
+    </aside>
+</section>
+<section>
+    <h1>Web Standards & Best Practices</h1>
+    <p>
+        The web is very open and loose, but there are "official" rules.
+    </p>
+    <ul>
+        <li class="fragment">HTML, CSS, and JavaScript need to be valid</li>
+        <li class="fragment">Accessibility standards need to be met for people with disabilities</li>
+        <li class="fragment">Valid Metadata for search engines and other tools.</li>
+    </ul>
+</section>
+<section>
+    <h1>Validation Tools</h1>
+    <ul>
+        <li><a href="https://validator.w3.org/" target="_blank">HTML Validator</a></li>
+        <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Validator</a></li>
+        <li><a href="http://csslint.net/" target="_blank">CSS Linter</a></li>
+        <li><a href="http://codebeautify.org/jsvalidate" target="_blank">JS Validator</a></li>
+        <li><a href="http://www.jslint.com/" target="_blank">JS Linter</a></li>
+    </ul>
+    <aside class="notes">
+        Mention automation of these things
+        <br> explain lint vs validator
+    </aside>
+</section>
+                <section>
+    <!-- INtro SLide-->
+    <h1>Intro into HTML</h1>
+</section>
+<section>
+    <h2>HTML</h2>
+    <ul>
+        <li class="fragment"><strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
+        <li class="fragment">Last major "revision" HTML5 in 2014</li>
+        <li class="fragment">Standardized by the World Wide Web Consortium (W3C) - <a href="https://www.w3.org/">https://www.w3.org/</a></li>
+    </ul>
+</section>
+<section>
+    <h2>What does HTML look like?</h2>
+    <p data-height="265" data-theme-id="0" data-slug-hash="KqjqgB" data-default-tab="html" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="KqjqgB" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/KqjqgB/">KqjqgB</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h2>How does this look in the browser?</h2>
+    <div>
+        <p data-height="265" data-theme-id="0" data-slug-hash="KqjqgB" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+            data-pen-title="KqjqgB" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/KqjqgB/">KqjqgB</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+            on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    </div>
+</section>
+<section>
+    <h2>Terminology</h2>
+    <ul>
+        <li class="fragment">
+            <strong>Element</strong>
+            <ul>
+                <li>A component of HTML</li>
+                <li>Paragraph, list, table, div, img</li>
+            </ul>
+        </li>
+
+        <li class="fragment">
+            <strong>Tag</strong>
+            <ul>
+                <li>Shows the beginning and end of a tag</li>
+                <li>Contains information about the tag's purpose</li>
+            </ul>
+        </li>
+    </ul>
+    <aside class="notes">
+        An element is composed of tags and it's contents
+    </aside>
+</section>
+<section>
+    <h2>Containing Element</h2>
+    <div style="font-size:1.3em">
+        <span class="fragment"><</span><span class="fragment">p</span><span class="fragment">></span>
+        <span class="fragment">Content</span><span class="fragment"><</span><span class="fragment">/p</span>
+        <span class="fragment">></span>
+    </div>
+    <h2>Self Contained Element</h2>
+    <div style="font-size:1.3em">
+        <span class="fragment"><</span><span class="fragment">br</span><span class="fragment">/</span>
+        <span class="fragment">></span>
+    </div>
+    <aside class="notes">
+        casing does matter
+    </aside>
+</section>
+                <section>
+    <h1>Core HTML Tags</h1>
+</section>
+<section>
+    <h1>Doctype</h1>
+    <p>
+        The Doctype tag tells the web browser what version of HTML is contained in your page.
+    </p>
+    <pre>
+                    <code class="xml">
+&lt;!doctype html&gt;
+                        </code>
+                    </pre>
+</section>
+<section>
+    <h1>HTML Tag</h1>
+    <p>
+        Your HTML tag immediately follows the Doctype tag. Every page must have one and all content goes in between the tags.
+    </p>
+    <pre>
+                    <code class="xml">
+&lt;!doctype html&gt;
+
+&lt;html&gt;
+
+&lt;/html&gt;
+                        </code>
+                    </pre>
+</section>
+<section>
+    <h1>Head and Body Tags</h1>
+    <p>
+        The <strong>Head</strong> tag contains information used by the browser or search information
+    </p>
+    <p>
+        The <strong>Body</strong> tag contains everything visible to the user
+    </p>
+</section>
+<section>
+    <pre><code class="xml">
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head
+    &lt;body&gt;
+        Page Content
+    &lt;/body&gt;
+&lt;/html&gt;
+                            </code></pre>
+</section>
+
+                <section>
+    <h1>Content Tags</h1>
+    <p>
+        Elements inside the body tag are nested. The newest element must be closed before it's parent. Similar to nesting dolls.
+    </p>
+    <img src="../images/misc/nesting.jpg" />
+</section>
+<section>
+    <h1>Paragraph Tags</h1>
+    <p>Paragraph tags are used for general blocks of text.</p>
+    <div class="two-col">
+        <div>
+            <pre class="fragment"><code class="xml">
+&lt;p&gt;This is my first paragraph&lt;/p&gt;
+&lt;p&gt;This is my second paragraph&lt;/p&gt;
+    </code></pre>
+            <pre class="fragment"><code class="xml">
+&lt;p&gt;This is my first paragraph&lt;/p&gt;&lt;p&gt;This is my second paragraph&lt;/p&gt;
+    </code></pre>
+
+        </div>
+        <div class="fragment">
+            <p>This is my first paragraph</p>
+            <p>This is my second paragraph</p>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Paragraph Tag comparison</h1>
+
+    <div class="two-col small-text align-left">
+        <div class="fragment">
+            <h3>Paragraph Tags</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo velit erat, quis sodales ligula commodo a. Praesent
+                id massa maximus, rhoncus tellus varius, posuere lectus.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo velit erat, quis sodales ligula commodo a. Praesent
+                id massa maximus, rhoncus tellus varius, posuere lectus.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo velit erat, quis sodales ligula commodo a. Praesent
+                id massa maximus, rhoncus tellus varius, posuere lectus.
+            </p>
+        </div>
+        <div class="fragment">
+            <h3>Div tags</h3>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo velit erat, quis sodales ligula commodo a. Praesent
+                id massa maximus, rhoncus tellus varius, posuere lectus.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo velit erat, quis sodales ligula commodo a. Praesent
+                id massa maximus, rhoncus tellus varius, posuere lectus.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo velit erat, quis sodales ligula commodo a. Praesent
+                id massa maximus, rhoncus tellus varius, posuere lectus.
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Heading Tags</h1>
+    <p>The heading tag is used to label important blocks of content. </p>
+    <div class="two-col">
+        <div class="fragment">
+            <pre><code class="xml">
+&lt;h1&gt;This is heading 1&lt;/h1&gt;
+&lt;h2&gt;This is heading 2&lt;/h2&gt;
+&lt;h3&gt;This is heading 3&lt;/h3&gt;
+&lt;h4&gt;This is heading 4&lt;/h4&gt;
+&lt;h5&gt;This is heading 5&lt;/h5&gt;
+&lt;h6&gt;This is heading 6&lt;/h6&gt;
+                                </code></pre>
+        </div>
+        <div class="fragment">
+            <h1>This is heading 1</h1>
+            <h2>This is heading 2</h2>
+            <h3>This is heading 3</h3>
+            <h4>This is heading 4</h4>
+            <h5>This is heading 5</h5>
+            <h6>This is heading 6</h6>
+
+        </div>
+    </div>
+    <aside class="notes">
+        These help the user as they skim over your document <br> search engines use them to index the structure of your content
+    </aside>
+</section>
+<section>
+    <h1>Formatting</h1>
+    <p>There are tags available for adding <em>emphasis</em> and <strong>important</strong></p>
+    <pre><code class="xml">    &lt;p&gt;
+        There are tags available
+        for adding &lt;em&gt;emphasis&lt;/em&gt;
+        and &lt;strong&gt;important&lt;/strong&gt;
+    &lt;/p&gt;
+                    </code></pre>
+</section>
+<section>
+    <h1>The Old Way</h1>
+    <p>
+        There were tags dedicated to <i>italics</i>, <b>bold</b> and
+        <u>underline</u>
+    </p>
+    <pre><code class="xml">&lt;p&gt;
+     There were tags dedicated to
+     &lt;i&gt;italics&lt;/i&gt;,
+     &lt;b&gt;bold&lt;/b&gt;
+     and &lt;u&gt;underline&lt;/u&gt;
+&lt;/p&gt;
+</code></pre>
+    <p>These tags are deprecated and you should use CSS to replace these</p>
+</section>
+<section>
+    <h1>Special Characters</h1>
+    <p>
+        Special characters such as &nbsp; &copy;, &gt;, &#182;, and &#8212;
+    </p>
+    <ul>
+        <li class="fragment">& nbsp;</li>
+        <li class="fragment">& copy;</li>
+        <li class="fragment">& gt;</li>
+        <li class="fragment">& #8212;</li>
+        <li class="fragment"><a href="http://www.ascii.cl/htmlcodes.htm">HTML Special Character Codes</a></li>
+    </ul>
+
+</section>
+                <section>
+    <h1>Attributes</h1>
+    <p>Come after the initial tag declaration.</p>
+    <p>Typically a name value pair.</p>
+    <p>Changes how elements look or act.</p>
+    <p>Some tags have unique attributes.</p>
+</section>
+<section>
+    <h1>Hyperlink</h1>
+    <p>Hyperlinks are primarily used to link to different webpages.</p>
+    <p>The tag wraps text or images and allows them to be clicked</p>
+    <ul>
+        <li class="fragment">Base Tag: <span class="highlight">&lt;a&gt;&lt;/a&gt;</span> </li>
+        <li class="fragment">
+            Primary Attributes
+            <ul>
+                <li class="fragment">
+                    <span class="highlight">Href</span> : The page address you wish to link to
+                </li>
+                <li class="fragment">
+                    <span class="highlight">Title</span>: Used to describe what you are linking to.
+                </li>
+            </ul>
+        </li>
+        <li class="fragment">
+            Additional Attributes
+            <ul>
+                <li class="fragment"><span class="highlight">Target</span>: Tells the browser where to open the link</li>
+                <li class="fragment"><span class="highlight">Rel</span>: Describes the relationship between to the link. </li>
+            </ul>
+        </li>
+    </ul>
+    <aside class="notes">
+        rel values = nofollow, external, bookmark, author etc. Mainly for SEO purposes.
+    </aside>
+</section>
+<section>
+    <h1>Hyperlink Continued</h1>
+    <p>
+        We can use the hyperlink tag for a couple more things.
+    </p>
+    <ul>
+        <li class="fragment">
+            Open applications via protocols.
+            <ul>
+                <li class="fragment">
+                    <a href="mailto:daniel@rockfishinteractive.com">Email me!</a>
+                    <pre><code class="xml">&lt;a href="mailto:daniel@rockfishinteractive.com"&gt;Email me!&lt;/a&gt;
+                                </code></pre>
+                </li>
+                <li class="fragment">
+                    <a href="steam://run/400">Play Portal!</a>
+                    <pre><code class="xml">&lt;a href="steam://run/400"&gt;Play Portal!&lt;/a&gt;</code></pre>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</section>
+<section>
+    <h1>Image</h1>
+    <p>Used to inject an image into the page</p>
+    <ul>
+        <li class="fragment">Base Tag:<span class="highlight">&lt;img /&gt;</span> </li>
+        <li class="fragment">
+            Primary Attributes
+            <ul>
+                <li class="fragment">
+                    <span class="highlight">src</span>: The specific URL of an image
+                </li>
+                <li class="fragment">
+                    <span class="highlight">alt</span>: The alternate text of the image
+                </li>
+            </ul>
+        </li>
+        <li class="fragment">
+            Image Best Practices
+            <ul>
+                <li class="fragment">Use CSS to resize you image if you need to. </li>
+                <li class="fragment">
+                    Don't reference images from other websites without permission
+                    <pre><code class="xml">
+<!-- MyPersonalWebsite.com -->
+<img src="http://www.uark.edu/_resources/images/future-students.jpg"/>
+                                        </code></pre>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <aside class="notes"></aside>
+</section>
+<section>
+    <h1>File Paths</h1>
+    <h2 class="fragment">Relative Paths</h2>
+    <ul>
+        <li class="fragment"><strong>"index.html"</strong> Looks for index.html in the current folder</li>
+        <li class="fragment">
+            <strong>"pages/index.html"</strong> Starts in the current folder and looks inside the 'pages' folder
+        </li>
+        <li class="fragment">
+            <strong>"../pages/index.html"</strong> The '..' signifies is going to go back a director before looking for the
+            pages folder
+        </li>
+        <li class="fragment">
+            <strong>"/pages/index.html"</strong> The '/' signifies that is going to start at the root of your URL.
+        </li>
+    </ul>
+    <h2 class="fragment">Absolute Paths</h2>
+    <ul>
+        <li class="fragment"><strong>http://mysite.com/pages/index.html</strong></li>
+    </ul>
+</section>
+                <section>
+    <h1>Lists</h1>
+    <p>
+        There are two types of list. <strong>Ordered List</strong> and <strong>Unordered lists</strong>. They both contain
+        <strong>list item</strong> tags.
+    </p>
+</section>
+<section>
+    <h1>Unordered List</h1>
+    <p>
+        Commonly just a bulleted list.
+    </p>
+    <div class="two-col">
+        <div>
+            <pre><code class="xml">
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3
+        <ul>
+            <li>Nested 1</li>
+            <li>Nested 1</li>
+        </ul>
+    </li>
+    <li>Item 4</li>
+</ul>
+                           </code></pre>
+        </div>
+        <div>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>
+                    Item 3
+                    <ul>
+                        <li>Nested 1</li>
+                        <li>Nested 1</li>
+                    </ul>
+                </li>
+                <li>Item 4</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Ordered List</h1>
+    <p>
+        Similar to the unordered list, but uses numbers instead of bullets
+    </p>
+    <div class="two-col">
+        <div>
+            <pre><code class="xml">
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3
+            <ol>
+                <li>Nested 1</li>
+                <li>Nested 1</li>
+            </ol>
+        </li>
+        <li>Item 4</li>
+    </ol>
+                           </code></pre>
+        </div>
+        <div>
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>
+                    Item 3
+                    <ol>
+                        <li>Nested 1</li>
+                        <li>Nested 1</li>
+                    </ol>
+                </li>
+                <li>Item 4</li>
+            </ol>
+        </div>
+    </div>
+</section>
+                <section>
+    <h1>Tables</h1>
+    <p>
+        Tables are use to display tabular data in a grid formation. Tables are frequently misused.
+    </p>
+
+    <ul>
+        <li class="fragment">Base Tag:<span class="highlight">&lt;table/&gt;</span> </li>
+        <li class="fragment">Row Tag:<span class="highlight">&lt;tr&gt;</span> </li>
+        <li class="fragment">Column Tag:<span class="highlight">&lt;td&gt;</span> </li>
+    </ul>
+</section>
+<section>
+    <h1>What the HTML looks like</h1>
+    <div>
+<p data-height="265" data-theme-id="0" data-slug-hash="QgXMWP" data-default-tab="html" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-HTML-Tables" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/QgXMWP/">UA-HTML-Tables</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>    </div>
+</section>
+                <section>
+    <h1>Comments</h1>
+    <p>
+        Html Comments are used to add information to code. Comments are important when other people are looking at your code.
+    </p>
+    <pre>
+<code class="xml">
+        &lt;!-- Start Header --&gt;
+&lt;div class="header"&gt;
+&lt;/div&gt;
+&lt;!-- End Header --&gt;
+</code>
+</pre>
+
+</section>
+                <section>
+    <h1>Div Tag</h1>
+    <p>
+        The div tag is used to represent a division or a section of HTML code. A div is primarily used with CSS to adjust the layout
+        of your web page.
+    </p>
+    <ul>
+        <li class="fragment">Base Tag <strong>&lt;div&gt;&lt;/div&gt;</strong></li>
+        <li class="fragment">Tag display type <strong>Block</strong></li>
+        <li class="fragment"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">More Info</a></li>
+    </ul>
+</section>
+<section>
+    <h1>Block Element</h1>
+    <p>
+        Block level elements always start a new line and span the full width of available space
+    </p>
+    <div class="two-col align-left">
+        <div>
+            <pre>
+<code class="xml">
+    &lt;div&gt;
+        &lt;div&gt;This is my first div&lt;/div&gt;
+            &lt;div&gt;
+                This is my second div
+            &lt;p&gt;
+                Paragraphs are block elements too.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code>
+</pre>
+
+        </div>
+        <div>
+            <div style="background-color:lightgray">
+                <div>This is my first div</div>
+                <div>
+                    This is my second div
+                    <p>
+                        Paragraphs are block elements too.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Span</h1>
+    <p>
+        The span tag has no visual change when used. The span tag can be used to apply styles to a specific block of text.
+    </p>
+    <ul>
+        <li class="fragment">Base Tag <strong>&lt;span&gt;&lt;/span&gt;</strong></li>
+        <li class="fragment">Display type <strong>inline</strong></li>
+        <li class="fragment"><a target="_blank" href="http://www.w3schools.com/tags/tag_span.asp">More Info</a></li>
+    </ul>
+</section>
+<section>
+    <h1>Inline Elements</h1>
+    <p>
+        Inline elements do not start a new line.
+    </p>
+    <div class="two-col">
+        <div>
+            <pre>
+<code class="xml">
+    &lt;p&gt;
+        &lt;span&gt;These&lt;/span&gt;
+        &lt;strong&gt;are &lt;/strong&gt;
+        &lt;span&gt;all&lt;/span&gt;
+        &lt;em&gt;in different inline&lt;/em&gt;
+        &lt;span&gt;elements&lt;/span&gt;
+    &lt;/p&gt;
+</code>
+</pre>
+        </div>
+        <div>
+            <p>
+                <span>These</span> <strong>are </strong>
+                <span>all</span> <em>in different inline</em>
+                <span>elements</span>
+            </p>
+        </div>
+    </div>
+    <div style="clear:both;">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements" target="_blank">More Info on Block Vs Inline</a>
+    </div>
+</section>
+                <section>
+    <h1>The <strong>Class</strong> attribute</h1>
+    <p>
+        The <strong>Class</strong> attribute is used to reference a class in a Style Sheet. You can also target an element
+        by in JavaScript by its class.
+    </p>
+    <div class="two-col">
+        <div class="fragment">
+            <ul>
+                <li><strong>Rules</strong></li>
+                <li>Must start with a letter</li>
+                <li>Can be followed by other letters, numbers, hyphens and underscores</li>
+                <li>Elements can contain multiple classes</li>
+            </ul>
+
+        </div>
+        <div class="fragment">
+            <pre>
+<code class="xml">
+<div class="row">
+    <div class="column title">Title 1</div>
+    <div class="column description">Desc 1</div>
+</div>
+<div class="row">
+    <div class="column title">Title 2</div>
+    <div class="column description">Desc 2</div>
+</div>
+</code>
+</pre>
+        </div>
+
+    </div>
+
+</section>
+
+                <section>
+                    <h1>Create a Pen on codepen.io</h1>
+                    <h2>Use the html we have learned and write the following</h2>
+                    <ul>
+                        <li class="fragment">h1 -> Your Name</li>
+                        <li class="fragment">p -> About yourself</li>
+                        <li class="fragment">ul & li -> your career goals</li>
+                        <li class="fragment">a -> 2 or 3 links to websites you frequently go to.</li>
+                        <li class="fragment">Challenge: Change the font family, font size, color, hyperlink text color, and change the background color. </li>
+                    </ul>
+                </section>
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>
