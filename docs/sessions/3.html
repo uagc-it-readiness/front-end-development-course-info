@@ -1,0 +1,196 @@
+<html>
+
+    <head>
+        <title>Basics</title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>7/22/2017</h1>
+                    <ul>
+                        <li>Tool install day</li>
+                    </ul>
+                </section>
+                <section>
+                   <h1>The Short List</h1> 
+                   <ul>
+                       <li><a href="http://github.com">GitHub - Signup For an Account</a></li>
+                       <li><a href="https://git-scm.com/downloads">GIT Download and Install</a></li>
+                       <li><a href="https://nodejs.org/en/download/">NodeJS</a></li>
+                       <li><a href="http://gulpjs.com/">Gulp</a></li>
+                  </ul>
+                </section>
+                <section>
+                    <h1>GitHub</h1>
+                    <p>
+                        We're going to use GitHub for hosting our source code.
+                    </p>
+                    <p>
+                        Go to GitHub.com and sign up for an account.
+                    </p>
+                </section>
+                <section>
+                    <h1>Git</h1>
+                    <p>
+                        Git is the software we use to send information back and forth to GitHub
+                    </p>
+                    <p>
+                        This installation may be different from Mac to PC
+                    </p>
+                </section>
+                <section>
+                    <h1>Configure Git</h1>
+                       <pre><code  class ="command-line">
+$ git config --global user.name "Your Name Here"
+# Sets the default name for git to use when you commit
+            </code></pre>
+            <pre><code  class ="command-line">
+$ git config --global user.email "your_email@example.com"
+# Sets the default email for git to use when you commit
+            </code></pre>
+            <pre><code  class ="command-line">
+$ git config --list
+            </code></pre>
+                </section>
+        <section>
+            <h1>Using Git Guides</h1>
+            <ul>
+                <li><a href="http://rogerdudler.github.io/git-guide/">Git Guide</a></li>
+                <li><a href="https://try.github.io/">Try Git Guide</a></li>
+            </ul>
+
+        </section>
+                <section>
+                    <h1>NodeJS</h1>
+                    <p>
+                        We're going to use Node js to run a mini web server
+                    </p>
+                    <p></p>
+                </section>
+                <section>
+                    <h1>Gulp</h1>
+                    <p>
+                        Gulp is a Node Tool that executes tasks for us.
+                    </p>
+                        <h1>Getting setup</h1>
+<h2>    <pre><code class="bash">
+    npm install gulp-cli -g
+    npm install gulp --save-dev
+        </code></pre>
+</h2>
+
+                </section>
+                <section>
+                    <h1>"Assignment"</h1>
+<ul>
+    <li>Create your own GitHub Repository</li>
+    <li>Clone your repository</li>
+    <li>Clone this into a separate folder https://github.com/uagc-it-readiness/front-end-development-course-assignments</li>
+    <li>Copy the contents of 'website-template' into your repository.</li>
+    <li>Update the index.html the exercise from Thursday</li>
+    <li>Commit and Push your code to GitHub</li>
+    <li>Send me a link to your repository.</li>
+</ul>
+                </section>
+
+
+                <!-- <section>
+                    <h1>Create a Pen on codepen.io</h1>
+                    <h2>Use the html we have learned and write the following</h2>
+                    <ul>
+                        <li class="fragment">h1 -> Your Name</li>
+                        <li class="fragment">p -> About yourself</li>
+                        <li class="fragment">ul & li -> your career goals</li>
+                        <li class="fragment">a -> 2 or 3 links to websites you frequently go to.</li>
+                        <li class="fragment">Challenge: Change the font family, font size, color, hyperlink text color, and change the background
+                            color. </li>
+                    </ul>
+                </section> -->
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>
