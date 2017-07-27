@@ -36,7 +36,7 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>7/27/2017</h1>
+                    <h1>8/1/2017</h1>
                     <ul>
                         <li>Intro CSS</li>
                     </ul>
@@ -45,7 +45,6 @@
                     <h1>What's wrong with this?</h1>
                     <code>
                         <pre>
-    <h1 class="-title">Page Title</h1>
                         </pre>
                     </code>
                 </section>
@@ -53,76 +52,10 @@
                     <h1>What's wrong with this?</h1>
                     <code>
                         <pre>
-    <h3 id="title-1"></h3>
-    <p>Lorem ipsum dolor sit amet.</p>
-    <h2 id="title-1"></h2>
-                       </pre>
+                      </pre>
                     </code>
                 </section>
 
-
-                <section>
-    <h1>The <strong>Class</strong> attribute</h1>
-    <p>
-        The <strong>Class</strong> attribute is used to reference a class in a Style Sheet. You can also target an element
-        by in JavaScript by its class.
-    </p>
-    <div class="two-col">
-        <div class="fragment">
-            <ul>
-                <li><strong>Rules</strong></li>
-                <li>Must start with a letter</li>
-                <li>Can be followed by other letters, numbers, hyphens and underscores</li>
-                <li>Elements can contain multiple classes</li>
-            </ul>
-
-        </div>
-        <div class="fragment">
-            <pre>
-<code class="xml">
-<div class="row">
-    <div class="column title">Title 1</div>
-    <div class="column description">Desc 1</div>
-</div>
-<div class="row">
-    <div class="column title">Title 2</div>
-    <div class="column description">Desc 2</div>
-</div>
-</code>
-</pre>
-        </div>
-
-    </div>
-
-</section>
-<section>
-    <h1>The <strong>ID</strong> attribute</h1>
-    <p>
-        Use the <strong>ID</strong> attribute to be able to specifically target an element. <strong>IDs</strong> must be
-        unique. You will get inconsistent results if there are multiple elements with the same <strong>ID</strong>.
-    </p>
-    <div class="two-col">
-        <div class="fragment">
-            <ul>
-                <li><strong>Rules</strong></li>
-                <li>Must be unique</li>
-                <li>Cannot contain spaces</li>
-                <li>Casing matters when being target by CSS or JS</li>
-            </ul>
-
-        </div>
-        <div class="fragment">
-            <pre>
-<code class="xml">
-    &lt;div id="site-header"&gt;
-        &lt;h1 id="myTitle"&gt;My Title&lt;/h1&gt;
-    &lt;/div&gt;
-</code>
-</pre>
-        </div>
-
-    </div>
-</section>
                 ﻿<section>
     <h1>What is CSS?</h1>
     <p>
@@ -436,6 +369,263 @@
     <h2><a href="http://www.lesliefranke.com/files/reference/csscheatsheet.html" target="_blank">Use a CSS cheat sheet to reference what values are available to specific properties.</a></h2>
 
 
+</section>
+                <section>
+    <h1>Backgrounds</h1>
+    <p>
+        Changes the background appearance of the element.
+    </p>
+    <ul>
+        <li class="fragment"><strong>background-color</strong></li>
+        <li class="fragment"><strong>background-image</strong></li>
+        <li class="fragment">
+            <strong>background-repeat</strong> repeats the background image.
+            <ul>
+                <li class="fragment"><code>repeat-x</code> repeats the image across the x axis</li>
+                <li class="fragment"><code>repeat-y</code> repeats the image across the y axis</li>
+                <li class="fragment"><code>no-repeat</code> makes the image only appear once</li>
+            </ul>
+        </li>
+</section>
+<section>
+    <h1>Backgrounds Continued</h1>
+    <ul>
+        <li class="fragment">
+            <strong>background-position</strong> Accepts two values. First the x and then the y. You specify these by using
+            these values.
+            <ul>
+                <li class="fragment">left|right|center&nbsp;&nbsp;top|center|bottom</li>
+                <li class="fragment">1px 1px; - This would be 1px off the top and 1px off the left</li>
+                <li class="fragment">x% y%</li>
+            </ul>
+        </li>
+    </ul>
+    <div class="fragment"><a href="https://css-tricks.com/almanac/properties/b/background/" target="_blank">Background Guide</a></div>
+</section>
+<section>
+    <h1>Examples</h1>
+            <pre><code class="css" data-noescape>
+.item{
+    background-color: #ff0000;
+    background-color: blue;
+    <span class="fragment">
+    background-image: url(http://via.placeholder.com/350x150);
+    background-image: url(../images/me.jpg);</span>
+    <span class="fragment">
+    background-repeat: repeat-x;
+    background-repeat: no-repeat;    </span>
+    <span class="fragment">
+    background-position: center center;
+    background-position: 10px 10px;
+    </span>
+}
+        </code></pre>
+</section>
+    <section>
+        <h1>Todo: Code pen</h1>
+    </section>
+<section>
+    <h1>Borders</h1>
+    <p>
+        This CSS property defines the borders around an element.
+    </p>
+    <ul>
+        <li class="fragment"><strong>border-width</strong> accepts pixel value </li>
+        <li class="fragment">
+            <strong>border-style</strong>
+            <ul>
+                <li class="fragment"><code>solid</code> the most common</li>
+                <li class="fragment"><code>dashed</code></li>
+                <li class="fragment"><code>dotted</code></li>
+                <li class="fragment"><a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_blank">Many others</a></li>
+            </ul>
+        </li>
+        <li class="fragment">
+            <strong>color</strong> accepts any valid color
+        </li>
+    </ul>
+    <aside class="notes">
+        border width also accepts thin medium and thick, but px is the most desired
+    </aside>
+</section>
+<section>
+    <h2>Examples</h2>
+    <div class="two-col">
+        <div>
+            <pre>
+<code class="css">
+    .fig1{
+        border-color: red;
+        border-style: solid;
+        border-width:5px;
+    }
+    .fig2{
+        border-color: navy;
+        border-style: dotted;
+        border-width:10px;
+    }
+</code>
+</pre>
+        </div>
+        <style>
+            .reveal .fig1 {
+                border-color: red;
+                border-style: solid;
+                border-width: 5px;
+                margin: 20px 0;
+            }
+
+            .reveal .fig2 {
+                border-color: navy;
+                border-style: dotted;
+                border-width: 10px;
+                margin: 20px 0;
+            }
+        </style>
+        <div>
+
+            <div class="fig1">
+                Red border that is 5px thick.
+            </div>
+            <div class="fig2">
+                Fig2. Dotted border
+            </div>
+
+        </div>
+    </div>
+</section>
+<section>
+    <h2>That's a lot of code. Can we shorten it?</h2>
+    <div class="two-col">
+        <div>
+            <pre>
+<code class="css">
+    .fig3 {
+        border: 5px solid red;
+    }
+    .fig4 {
+        border:10px dotted navy;
+    }
+</code>
+</pre>
+        </div>
+        <style>
+            .reveal .fig3 {
+                border: 5px solid red;
+                margin: 20px 0;
+            }
+
+            .reveal .fig4 {
+                border: 10px dotted navy;
+                margin: 20px 0;
+            }
+        </style>
+        <div>
+
+            <div class="fig3">
+                Red border that is 5px thick.
+            </div>
+            <div class="fig4">
+                Fig4. Dotted border
+            </div>
+
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Modify a specific border</h1>
+    <div class="two-col">
+        <div>
+            <pre>
+<code class="css">
+    .fig6 {
+        border-left: 5px solid red;
+    }
+    .fig7 {
+        border: 10px dotted navy;
+        border-right-style:solid;
+        border-right-width:5px;
+    }
+</code>
+</pre>
+        </div>
+        <style>
+            .reveal .fig6 {
+                border-left: 5px solid red;
+                margin: 20px 0;
+            }
+
+            .reveal .fig7 {
+                border: 10px dotted navy;
+                border-right-style: solid;
+                border-right-width: 5px;
+                margin: 20px 0;
+            }
+        </style>
+        <div>
+
+            <div class="fig6">
+                Fig 6 - I only have a left border.
+            </div>
+            <div class="fig7">
+                Fig 7 - My right is different
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<section>
+    <h1>More specificity</h1>
+    <div class="two-col">
+        <div>
+            <pre>
+<code class="css">
+    .fig8 {
+        border: 5px solid red;
+        border-bottom:none;
+    }
+    .fig9 {
+        border-bottom:none;
+        border: 10px dotted navy;
+    }
+</code>
+</pre>
+        </div>
+        <style>
+            .reveal .fig8 {
+                border: 5px solid red;
+                border-bottom: none;
+                margin: 20px 0;
+            }
+
+            .reveal .fig9 {
+                border-bottom: none;
+                border: 10px dotted navy;
+                margin: 20px 0;
+            }
+        </style>
+        <div>
+
+            <div class="fig8">
+                Fig 8 - I have no bottom border
+            </div>
+            <div class="fig9">
+                Fig 9 - Order Matters
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<section>
+    <h1>TODO: Code pen</h1>
+</section>
+<section>
+    <h1>More Info</h1>
+    <div>
+        <a href="https://css-tricks.com/almanac/properties/b/border/" target="_blank">Border Guide</a>
+    </div>
 </section>
 
                 <section class="center-text">
