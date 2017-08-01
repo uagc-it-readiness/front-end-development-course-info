@@ -41,7 +41,7 @@
                         <li>Intro CSS</li>
                     </ul>
                 </section>
-                <section>
+                 <section>
                     <h1>What's wrong with this?</h1>
                         <pre class="xml">
                     <code>
@@ -58,12 +58,6 @@
     <h2 id="title-1"></h2>
                     </code>
                        </pre>
-                </section>
-                <section>
-                    <h1>Flash dead</h1>
-                    <h3 class="fragment">Again...</h3>
-                    <h3 class="fragment">Kinda...</h3>
-                    <a class="fragment" href="https://blogs.adobe.com/conversations/2017/07/adobe-flash-update.html">Article</a>
                 </section>
 
 
@@ -154,6 +148,19 @@
         The third method is the most desired approach.
     </p>
 
+</section>
+<section>
+    <h1>Adding CSS</h1>
+    <pre><code class="xml">
+    <div style="color:red"></div>
+
+    <style>
+        /* CSS rules*/
+    </style>
+
+    <link href="../styles/main.min.css" rel="stylesheet" />
+        
+    </code></pre>
 </section>
 <section>
     <h1>Syntax</h1>
@@ -261,7 +268,7 @@
     </div>
 </section>
 <section>
-    <h1>Class Selector</h1>
+    <h1>ID Selector</h1>
     <p>
         This is one of the most specific selectors.
     </p>
@@ -308,6 +315,22 @@
     <h3 class="fragment" style="color:green;">Green</h3>
 </section>
 <section>
+    <h1>Example of specificity.</h1>
+    <pre><code class="xml">
+<h1 class="site-header" id="my-header">Text goes here</h1>
+
+</code></pre>
+    <pre><code class="css">
+    h1 {color: blue;}
+    h1 {color: red !important}
+    .site-header {color: red;}
+    #my-header {color: green;}
+
+</code></pre>
+    <h3>What color will the h1 be?</h3>
+</section>
+
+<section>
     <h1>We'll cover CSS specificity in greater detail later.</h1>
 </section>
 
@@ -319,7 +342,7 @@
     <p>
         There are a number of different types of values for CSS. These are some of the more common ones.
     </p>
-    <ul class="fragment">
+    <ul>
         <li class="fragment">
             <strong>Colors</strong> can be applied in several different ways
             <ul>
@@ -379,6 +402,11 @@
             </p>
         </li>
     </ul>
+</section>
+<section>
+    <h1></h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="dzMWpB" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="ITR - CSS - Text" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/dzMWpB/">ITR - CSS - Text</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1>Basic CSS specific to text characters</h1>
@@ -443,6 +471,16 @@
 
 
 </section>
+<section>
+    <h1>CSS Comments</h1>
+    <pre><code class="css">
+/*
+Everything in here is a comment
+*/
+    
+    
+    </code></pre>
+</section>
 
                 <section class="center-text">
                     <h1><a href="https://codepen.io/WorthyD/pen/zdxgJQ?editors=1000">Fork this Code Pen</a></h1>
@@ -494,7 +532,8 @@
                         <li> All text in `span` tags should be underlined.</li>
                         <li> All text inside of the element with the class 'main-point' should have the following font applied
                             to it. `"Courier New", Courier, monospace`</li>
-                        <li> All text inside of an `h2` tag should be bold. Use CSS and not a `strong` tag to do this.</li>
+                        <li> <del>All text inside of an `h2` tag should be bold. Use CSS and not a `strong` tag to do this.</del>
+                        Make the text in the h2 normal font weight</li>
                     </ul>
                 </section>
                 <section>

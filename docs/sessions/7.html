@@ -36,374 +36,17 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>8/1/2017</h1>
+                    <h1>8/2/2017</h1>
                     <ul>
-                        <li>CSS intro review</li>
                         <li><a href="#/background-borders">Background & Borders</a></li>
                         <li><a href="#/margin-padding">Margins & Padding</a></li>
                         <li><a href="#/height-width">Height & Width</a></li>
                         <li><a href="#/display">Display</a></li>
                         <li><a href="#/float">Floats</a></li>
+                        <li><a href="#/list-style">List Style</a></li>
+                        <li><a href="#/selectors-grouping">New Selectors</a></li>
                     </ul>
                 </section>
-                ﻿<section>
-    <h1>What is CSS?</h1>
-    <p>
-        CSS stands for <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heet. CSS allows you to modify
-        how your HTML is displayed without changing any HTML.
-    </p>
-    <p class="fragment">
-        These two sites have the exact same HTML, but very different CSS. <a href="http://www.csszengarden.com/217/" target="_blank">Site 1</a>        and <a href="http://www.csszengarden.com/221/" target="_blank">Site 2</a>
-    </p>
-
-</section>
-<section>
-    <h1>How do we add CSS to HTML?</h1>
-    <p>
-        There are 3 primary ways.
-    </p>
-    <ul>
-        <li class="fragment">Putting CSS in an element's <strong>style</strong> attribute.</li>
-        <li class="fragment">Putting CSS in a <strong>style</strong> tag in our HTML</li>
-        <li class="fragment">Putting CSS in a <strong>.css</strong> file and referencing it in HTML.</li>
-    </ul>
-    <p class="fragment">
-        The third method is the most desired approach.
-    </p>
-
-</section>
-<section>
-    <h1>Adding CSS</h1>
-    <pre><code class="xml">
-    <div style="color:red"></div>
-
-    <style>
-        /* CSS rules*/
-    </style>
-
-    <link href="../styles/main.min.css" rel="stylesheet" />
-        
-    </code></pre>
-</section>
-<section>
-    <h1>Syntax</h1>
-    <h2><span class="fragment">property</span><span class="fragment">:</span><span class="fragment">value</span><span class="fragment">;</span></h2>
-    <h2><span class="fragment">color</span><span class="fragment">:</span><span class="fragment">#000000</span><span class="fragment">;</span></h2>
-    <h2><span class="fragment">text-align</span><span class="fragment">:</span><span class="fragment">left</span></h2>
-    <h3 class="fragment">The last rule in a group of rules does not have end with a semi-colon.</h3>
-</section>
-<section>
-    <h1>What does it look like in use?</h1>
-    <pre class="fragment half-width"><code class="css">
-        a {
-            color: #aa0000;
-            font-size: 20px;
-            height: 25px;
-            margin: 20px;
-            padding: 20px;
-        }
-                        </code></pre>
-</section>
-<section>
-    <h1>How doe we target elements with css?</h1>
-</section>
-<section>
-    <h1>Inline Styles</h1>
-    <p>
-        This is done with the <strong>style</strong> attribute.
-    </p>
-    <pre class="fragment;"><code class="xml">
-    <h1 style="color:red;">Header</h1>
-
-</code></pre>
-    <h4 class="fragment">Don't do this.</h4>
-    <pre class="fragment"><code class="xml">
-    <h1 style="color:red;text-align:center;margin-bottom:20px;padding:10px;">Header</h1>
-
-</code></pre>
-
-    <h4 class="fragment">Your work only applies to one element and can't be reused.</h4>
-    <aside class="notes">
-        Re-usability is the sole reason for CSS
-        <br /> dry principle
-    </aside>
-</section>
-<section>
-    <h2>How do we target an HTML element without using the <strong>style</strong> attribute?</h2>
-    <h3 class="fragment">Use a <strong>selector</strong></h3>
-    <p class="fragment">
-        A <strong>selector</strong> is a pattern used to target specific HTML elements
-    </p>
-    <div class="fragment">
-        <span>Example</span>
-        <pre class="half-width"><code class="css">
-    h1 {
-        color:red;
-        text-align: center;
-    }
-
-</code></pre>
-        <aside class="notes">
-            CSS rules can be on one line.
-        </aside>
-    </div>
-</section>
-<section>
-    <h1>CSS Selectors</h1>
-    <p>
-        CSS selectors vary in size length and complexity, but they are primarily based off of 3 core selector methods.
-    </p>
-</section>
-<section>
-    <h1>Tag selector</h1>
-    <p>
-        The tag selector simply uses the tag name to target an element. This is the most global way to set default styles
-    </p>
-    <pre>
-<code class="css">
-    h1 {
-        color: red; /*All h1s will be red*/
-    }
-    span {text-decoration: underline;} /*All spans will be underlines*/
-</code>
-</pre>
-</section>
-<section>
-    <h1>Class Selector</h1>
-    <p>
-        This is the most common method of targeting elements.
-    </p>
-    <div class="half-width">
-        <span class="fragment">.</span>
-        <span class="fragment">class-name</span>
-        <span class="fragment">
-{ <br />
-   /* Rules */ <br />
-}
-                        </span>
-    </div>
-    <div class="fragment half-width">
-        <pre>
-<code class="xml">
-<h1 class="class-name"></h1>
-
-</code></pre>
-    </div>
-</section>
-<section>
-    <h1>ID Selector</h1>
-    <p>
-        This is one of the most specific selectors.
-    </p>
-    <div class="half-width">
-        <span class="fragment">#</span>
-        <span class="fragment">elm-id</span>
-        <span class="fragment">
-                            { <br />
-                            /* Rules */ <br />
-                            }
-                        </span>
-    </div>
-    <div class="fragment half-width">
-        <pre>
-<code class="xml">
-<h1 id="elm-id"></h1>
-    </code></pre>
-    </div>
-</section>
-<section>
-    <h1>
-        Specificity
-    </h1>
-    <ul>
-        <li class="fragment"><strong>tag</strong> rules overwrite the default browser styles. </li>
-        <li class="fragment"><strong>class</strong> rules overwrite the tag browser styles </li>
-        <li class="fragment"><strong>id</strong> rule overwrite everything except....</li>
-        <li class="fragment"><strong>rules</strong> rules marked with !important. More on that later</li>
-    </ul>
-</section>
-<section>
-    <h1>Example of specificity.</h1>
-    <pre><code class="xml">
-<h1 class="site-header" id="my-header">Text goes here</h1>
-
-</code></pre>
-    <pre><code class="css">
-    h1 {color: blue;}
-    .site-header {color: red;}
-    #my-header {color: green;}
-
-</code></pre>
-    <h3>What color will the h1 be?</h3>
-    <h3 class="fragment" style="color:green;">Green</h3>
-</section>
-<section>
-    <h1>Example of specificity.</h1>
-    <pre><code class="xml">
-<h1 class="site-header" id="my-header">Text goes here</h1>
-
-</code></pre>
-    <pre><code class="css">
-    h1 {color: blue;}
-    h1 {color: red !important}
-    .site-header {color: red;}
-    #my-header {color: green;}
-
-</code></pre>
-    <h3>What color will the h1 be?</h3>
-</section>
-
-<section>
-    <h1>We'll cover CSS specificity in greater detail later.</h1>
-</section>
-
-<section>
-    <h1>Basic CSS Properties</h1>
-</section>
-<section>
-    <h1>CSS "data types"</h1>
-    <p>
-        There are a number of different types of values for CSS. These are some of the more common ones.
-    </p>
-    <ul>
-        <li class="fragment">
-            <strong>Colors</strong> can be applied in several different ways
-            <ul>
-                <li class="fragment">a valid color name <strong>"black"</strong></li>
-                <li class="fragment">an RGB value <strong>"rgb(0,0,0)"</strong></li>
-                <li class="fragment">a HEX value <strong>"#000000"</strong></li>
-            </ul>
-        </li>
-        <li class="fragment">
-            Number values frequently need a <strong>unit</strong> with it.
-            <ul>
-                <li class="fragment"><strong>px</strong> - Pixel. The most common</li>
-                <li class="fragment"><strong>%</strong> - Percentage - based off the available space</li>
-                <li class="fragment"><strong>em</strong> - EM is a value relative to the font-size of the element</li>
-            </ul>
-        </li>
-</section>
-<section>
-    <pre class="half-width">
-<code class="fragment css">
-    .class {
-        font-size: 1.1em;
-        margins: 20px;
-        width: 75%;
-    }
-</code>
-</pre>
-    </li>
-    </ul>
-    <aside class="notes">
-        There are 140 standard color names available.
-    </aside>
-</section>
-
-<section>
-    <h1>Basic CSS for Text</h1>
-    <p>
-        These are several properties that can be used to modify the look of our text we have created.
-    </p>
-
-    <ul>
-        <li class="fragment">
-            <strong>color</strong> sets the fore ground color of the elements targeted. It accepts only valid color values.
-        </li>
-        <li class="fragment">
-            <strong>text-align</strong> sets the text alignment.
-            <p>
-                Primary valid values: <code class="fragment">left,</code> <code class="fragment">right,</code>
-                <code class="fragment">center,</code> <code class="fragment">and justify</code>
-            </p>
-        </li>
-        <li class="fragment">
-            <strong>text-decoration</strong> decorates text content.
-            <p>
-                Primary valid values: <code class="fragment">none,</code> <code class="fragment">underline,</code>
-                <code class="fragment">line-through,</code> <code class="fragment">and overline</code>
-            </p>
-        </li>
-    </ul>
-</section>
-<section>
-    <h1></h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="dzMWpB" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="ITR - CSS - Text" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/dzMWpB/">ITR - CSS - Text</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Basic CSS specific to text characters</h1>
-    <p>
-        These CSS properties actually change the appearance of the characters in the font.
-    </p>
-    <ul>
-        <li class="fragment">
-            <strong>font-family</strong> defines the specific font family for the text. It accepts a comma separated list
-            of front names.
-        </li>
-        <li class="fragment">
-            <strong>font-size</strong> defines the size of your font. It accepts any numeric value (px, em, or %). The default
-            value depends on the element.
-        </li>
-    </ul>
-    <pre class="fragment">
-<code class="css">
-    h1{
-        font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
-        font-size: 18px;
-    }
-</code>
-</pre>
-
-
-    <aside class="notes">
-        Mention short hand, but don't demo it today.
-    </aside>
-</section>
-<section>
-    <h1>Text CSS continued</h1>
-    <ul>
-        <li class="fragment">
-            <strong>font-style</strong> Values: <code>normal</code>, <code>italic</code>, and<code>oblique</code>
-        </li>
-        <li class="fragment">
-            <strong>font-weight</strong> sets how thick or thin characters appear. Common values: <code>normal</code> and
-            <code>bold</code>
-
-        </li>
-    </ul>
-    <pre class="fragment">
-<code class="css">
-    h1{
-        font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
-        font-size: 18px;
-        font-style: italic;
-        font-weight:bold;
-    }
-</code>
-</pre>
-
-
-    <aside class="notes">
-        font-weight has more values but they don't work with all fonts.
-    </aside>
-</section>
-<section>
-    <h1>That's a lot to remember</h1>
-    <h2><a href="http://www.lesliefranke.com/files/reference/csscheatsheet.html" target="_blank">Use a CSS cheat sheet to reference what values are available to specific properties.</a></h2>
-
-
-</section>
-<section>
-    <h1>CSS Comments</h1>
-    <pre><code class="css">
-/*
-Everything in here is a comment
-*/
-    
-    
-    </code></pre>
-</section>
                 <section id="background-borders">
     <h1>Backgrounds</h1>
     <p>
@@ -929,97 +572,47 @@ Everything in here is a comment
     <h1><a href="https://css-tricks.com/all-about-floats/" target="_blank">All About Floats</a></h1>
 
 </section>
-
-                <section>
-                    <h1>Exercise</h1>
-                    <h3><a href="https://codepen.io/WorthyD/pen/yoONjq" target="_blank">Fork this Pen</a> and make it look like
-                        this.</h3>
-                    <h4>You should not need to modify any html.</h4>
-                    <img src="../images/exercises/exercise4.png" />
-                </section>
-                <section>
-                    <h1>Part 1</h1>
-                    <img src="../images/exercises/exercise4.1.png" />
-                </section>
-                <section>
-                    <h1>Part 2</h1>
-                    <h6><span style="color:#0045ad">Blue:#0045ad</span>&nbsp;&nbsp;&nbsp;<span style="color:#a00">Red: #a00 </span>
-                        <span
-                            style="color:#00821e;">Green: #00821e </span>
-                    </h6>
-                    <img src="../images/exercises/exercise4.2.png" />
-                </section>
-                <section>
-                    <h1>Part 3</h1>
-                    <img src="../images/exercises/exercise4.3.png" />
-                </section>
-
-
-
-
-
-
-                <!--
-                <section class="center-text">
-                    <h1><a href="https://codepen.io/WorthyD/pen/zdxgJQ?editors=1000">Fork this Code Pen</a></h1>
-                    <a href="https://codepen.io/WorthyD/pen/zdxgJQ?editors=1000">Link</a>
-
-                </section>
-                <section>
-                    <p>
-                        Practice your HTML by performing the following updates to the Pen.
-                    </p>
-                    <ul>
-                        <li>Wrap The text "Header Information" in an `h1` tag.</li>
-                        <li>Wrap the two "Sub Header" headings in an `h2` tag.</li>
-                        <li>Put each paragraph in its own paragraph tag.</li>
-                    </ul>
-
-                </section>
-                <section>
-                    <h2>
-                        Part 2 - New HTML</h2>
-                    <p>
-                        Add new html tags into our Pen.
-                    </p>
-                    <ul>
-                        <li> Wrap the "Sub" in the "Sub Header" with a `span` tag.</li>
-                        <li> Wrap "Sub Heading 1", "Paragraph 1", and "Paragraph 2" in a `div` tag.</li>
-                        <li> Wrap "Sub Heading 2", "Paragraph 3", and "Paragraph 4" in a `div` tag.</li>
-                    </ul>
-                </section>
-                <section>
-                    <h2> Part 3 - Attributes</h2>
-                    <p>
-                        Modify your html to include some IDs and Classes
-                    </p>
-                    <ul>
-                        <li> Add the ID of "header" to the `h1` tag.</li>
-                        <li> Add the class "main-point" to the first `div` tag.</li>
-
-                        <li> Add the class "follow-up" to the second `div` tag.</li>
-
-                    </ul>
-                </section>
-                <section>
-                    <h2> Part 4 - CSS</h2>
-                    <p>Add CSS in the CSS panel to apply the following rules.</p>
-
-                    <ul>
-                        <li> An element with the ID of "header" should have its text color be `#DC143C`</li>
-                        <li> All text in `span` tags should be underlined.</li>
-                        <li> All text inside of the element with the class 'main-point' should have the following font applied
-                            to it. `"Courier New", Courier, monospace`</li>
-                        <li> All text inside of an `h2` tag should be bold. Use CSS and not a `strong` tag to do this.</li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Expected Result</h2>
-                    <img src="../images/exercises/exercise3.png" alt="">
-
-                </section>
--->
-            </div>
+                <section id="list-style">
+    <h1>List Style</h1>
+    <p>
+        Changes the default styling of <code>UL</code> and <code>OL</code> lists
+    </p>
+    <ul>
+        <li class="fragment"><code>list-style-type</code> - changes the icon/value used in the list</li>
+        <li class="fragment"><code>list-style-position</code> - changes the position of the list. Accepts <strong>inside</strong> and <strong>outside</strong></li>
+        <li class="fragment"><code>list-style-img</code> - changes bullets to image. Accepts <strong>none</strong> or a valid URL</li>
+        <li class="fragment"> Short hand<code>list-style: type position img</code></li>
+    </ul>
+</section>
+<section>
+    <h1>Example</h1>
+<p data-height="265" data-theme-id="0" data-slug-hash="ayNXoK" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA - ITR-list styles" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/ayNXoK/">UA - ITR-list styles</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>    <div>
+        <a href="https://css-tricks.com/almanac/properties/l/list-style/" target="_blank">CSS List Type Overview</a>
+    </div>
+</section>
+                <section id="selectors-grouping">
+    <h1>Grouping Selectors</h1>
+    <p>
+        You can leverage grouping selectors to share styles between multiple selectors. This can be done by adding a comma between
+        each selector.
+    </p>
+    <pre>
+<code class="css">
+    h1, h2, .header, #site-header{
+        color:#ff0000;
+    }
+</code>
+</pre>
+</section>
+<section>
+    <h1>Grouping Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="BdKMKK" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-Group Selectors" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/BdKMKK/">UA-ITR-Group Selectors</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+           </div>
 
         </div>
 
