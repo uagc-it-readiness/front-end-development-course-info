@@ -45,6 +45,7 @@
                         <li><a href="#/list-style">List Style</a></li>
                         <li><a href="#/selectors-grouping">New Selectors</a></li>
                         <li><a href="#/dev-tools">Dev Tools</a></li>
+                        <li><a href="">Command Line </a></li>
                     </ul>
                 </section>
                     <section id="margin-padding">
@@ -393,6 +394,12 @@
     <h2>Win: GitBash</h2>
 </section>
 <section>
+    <h1>Pro Tip</h1>
+    <p>
+        Use tab to auto complete commands and paths. It will save you a lot of time.
+    </p>
+</section>
+<section>
     <h1>Listing a directory</h1>
     <h2><code>ls</code></h2>
     <pre><code class="bash">
@@ -421,20 +428,72 @@ project1/ project2/
     <h1>Directory Shortcuts</h1>
     <ul>
         <li class="fragment"><code>.</code> - Current Directory</li>
-        <li class="fragment"><coe>..</coe> - Parent Directory</li>
-        <li class="fragment"><code>~</code> - User Home</li>
+        <li class="fragment"><code>..</code> - Parent Directory</li>
+        <li class="fragment"><code>~</code> - User Home - C:\users\daniel.worthy</li>
         <li class="fragment"><code>/</code>  - Root</li>
     </ul>
 </section>
+<section>
+    <h1>Displaying your current path.</h1>
+    <p>Got lost in your console? Use the print working directory command to get a full path of your current location</p>
+    <h2><code>pwd</code></h2>
 
-<!--
-    pwd
-    mkdir
-    touch readme.txt
-    -->
+    <pre><code class="bash">
+$ cd ~
+$ pwd
+/home/daniel.worthy
+        </code></pre>
+</section>
+<section>
+    <h1>Creating a directory/folder</h1>
+    <p>
+        You can create a new folder by using the make directory command.
+    </p>
+    <h2>mkdir</h2>
+     <pre><code class="bash">
+#list directory
+$ ls
+
+MyForks/   presentations/  'year 1 slides'/
+
+$ mkdir my-work 
+$ ls
+
+my-work/  MyForks/   presentations/  'year 1 slides'/
+
+</code></pre>
+
+</section>
+<section>
+    <h1>Make a file via command line</h1>
+    <h2><code>touch</code></h2>
+     <pre><code class="bash">
+#list directory
+$ ls
+
+my-work/ MyForks/   presentations/  'year 1 slides'/
+
+$ cd my-work 
+$ ls
+
+
+$ touch index.html
+$ ls
+
+index.html
+</code></pre>
+
+
+</section>
+<section>
+    <h1>The Clear Command</h1>
+    <p>
+        You can clear the console by simply typing <code>clear</code> and hitting enter.
+    </p>
+</section>
 
                 <section>
-                    <h1>Assignment 1</h1>
+                    <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/blob/master/Assignments/Assignment%201.md">Assignment 1</a></h1>
                 </section>
             </div>
 
