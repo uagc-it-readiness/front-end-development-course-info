@@ -1,7 +1,7 @@
 # Assignment 1
 We are going to be working heavily in CSS. You will only need to add classes to your html. 
 
-Create a Git new repository for this assignment. Clone your empty repository to your machine and copy the contents of {Assignment1.zip](Assignment1.zip) into your repository.  Commit and push your project when you are done.
+Create a Git new repository for this assignment. Clone your empty repository to your machine and copy the contents of [Assignment1.zip](Assignment1.zip) into your repository.  Commit and push your project when you are done.
 
 
 ## Part 1: Global Styles
