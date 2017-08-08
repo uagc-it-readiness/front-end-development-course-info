@@ -1,6 +1,8 @@
-# Assignment 5
+# Exercise 6
 In this assignment we are going to work on descendant selectors and some of the newer CSS properties we have learned.
-You'll do all of your work inside of the /styles/main.css file 
+You'll do all of your work inside of the /styles/main.css file. 
+
+Create a new repository for this and follow the same steps we did for assignment 1.  The starting source code can be found [here in this zip file](Exercise6.zip)
 
 ## Part 1 - Main Layout
 
