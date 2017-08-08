@@ -4,14 +4,13 @@
 
 # Instructor Contact Information
 - Daniel Worthy 
-  - Email -[dworthy@uark.edu](dworthy@uark.edu)  
   - Slack - [@WorthyD](https://ua-itreadiness.slack.com/team/worthyd)  
 
 I'll do my best to get back with you within 24 hours.  I'd recommend posting questions to the Slack Front End room.
 
-# Meeting Times - October 4 - April 29, 2016
+# Meeting Times - 
 - Tuesday and Thursday - 5:30 to 9:00
-- Every Other Saturday   - 8:00 to 1:00
+- Every Other Saturday   - 9:00 to 1:00
 - We'll have breaks during class for meals, snack, etc. There is a fridge and microwave available.
 - **Inclement Weather Policy** - We wont have class if the U of A is closed.
 - An email will be sent 
