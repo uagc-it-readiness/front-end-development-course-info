@@ -1,0 +1,73 @@
+body {
+    background: #e9e9e9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-content {
+    background: #fff;
+    margin: 20px auto;
+    width: 960px;
+}
+
+.page-heading {
+    padding: 20px;
+}
+
+.page-heading .user-link {
+    float: right;
+    margin-top: 20px;
+    color:#7db9e8;
+    font-weight:bold;
+}
+
+.navigation {
+    background: #1e5799;
+    background: -moz-linear-gradient(top, #1e5799 0%, #7db9e8 100%);
+    background: -webkit-linear-gradient(top, #1e5799 0%, #7db9e8 100%);
+    background: linear-gradient(to bottom, #1e5799 0%, #7db9e8 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8', GradientType=0);
+    padding: 10px;
+}
+
+.navigation a {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.hero {
+    background:url(../images/hero.jpg);
+    height:300px;
+    width:100%;
+}
+
+
+.services{
+    margin-top:20px;
+}
+.service{
+    float:left;
+    width:280px;
+    padding:20px;
+}
+.service .service-image{
+    background-color:#7db9e8;
+    border-radius: 50%;
+    height:200px;
+    width:200px;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.service .service-image img{
+    margin-top:30px;
+}
+.service h2{
+    text-align:center;
+}
+
+.clear{
+    clear:both;
+}
