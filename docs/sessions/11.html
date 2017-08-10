@@ -36,11 +36,176 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>8/10/2017</h1>
+                    <h1>8/15/2017</h1>
                     <ul>
                     </ul>
                 </section>
-              <section>
+              ﻿<section>
+    <h1>What is version control?</h1>
+    <!--Allows you to track collaborate and track and revert changes-->
+</section>
+<section>
+    <h1>Collaboration</h1>
+    <p>
+        Allows you and your team to work together on the same project.
+    </p>
+    <p>
+        The project doesn't have to be a program. You can use a version control system to write a book with other people.
+    </p>
+</section>
+<section>
+    <h1>Change Tracking</h1>
+    <p>
+        Version control create a history of all the changes you want to be saved.
+    </p>
+    <p>
+        It allows you to revert or go back in time if you happen and undo any mistakes that may have been made.
+    </p>
+</section>
+<section>
+    <h1>Types of Version Control Systems</h1>
+    <h2 class="fragment">Centralized</h2>
+    <p class="fragment">
+        Centralized version control has one main server that saves the content.
+    </p>
+    <ul>
+        <li class="fragment"> <span class="highlight">Advantages:</span> Easy to learn & tracks history well.</li>
+        <li class="fragment"> <span class="highlight">Disadvantages:</span> Slow &amp; doesn't work well with larger teams.</li>
+    </ul>
+</section>
+<section>
+    <h1>Distributed Version Control</h1>
+    <p class="framgent">
+        Each user has a fully copy of the history of the project locally and they selectively push updates to the main repository
+        location
+    </p>
+    <ul>
+        <li class="fragment"><span class="highlight">Advantages:</span> Fast and popular</li>
+        <li class="fragment"><span class="highlight">Disadvantages:</span> Challenging to learn</li>
+    </ul>
+</section>
+<section>
+    <h1>Terms</h1>
+</section>
+<section>
+    <h1>Git Repository</h1>
+    <p>
+        A location of files and information about all the previous versions of those files.
+    </p>
+</section>
+<section>
+    <h1>Clone</h1>
+    <p>
+        <em>git clone</em> copies an existing repository to a local folder.
+    </p>
+    <pre><code class="bash">
+git clone https://github.com/jquery/jquery.git
+
+</code></pre>
+</section>
+<section>
+    <h1>Pull</h1>
+    <p>
+        <em>git pull</em> pulls down any changes from the source repository into your local repository.
+    </p>
+
+    <pre><code class="bash">
+cd jquery
+git pull
+
+</code></pre>
+</section>
+<section>
+    <h1>Add</h1>
+    <p>
+        You use the <em>git add</em> to tell git to track specific files.
+    </p>
+    <pre><code class="bash">
+#Add a specific file
+git add Readme.md
+
+#Add a whole everything
+git add .
+
+</code></pre>
+</section>
+<section>
+    <h1>Stage</h1>
+    <p>
+        Staging changes informs git about what is about to be changed
+    </p>
+</section>
+<section>
+    <h1>Commit</h1>
+    <p>
+        <em>git commit</em> takes all of the staged changes and creates a historical bookmark of what changes were made,
+        who made them, and a message that is a brief description of the changes.
+    </p>
+    <pre><code class="bash">
+git commit -m "Adding a new page"
+
+#Auto stage modified files
+git commit -a -m "Adding another new page"
+
+</code></pre>
+</section>
+<section>
+    <h1>Push</h1>
+    <p>
+        <em>git push</em> sends the most recent commits to the remote source repository. You must have the latest version
+        of the remote repository for a push to be accepted.
+    </p>
+    <pre>
+    <code  class="bash">
+#first time push only
+git push -u origin master
+
+git push
+    </code>
+        </pre>
+</section>
+<section>
+    <h1>Merge</h1>
+    <p>
+        A merge occurs whenever there are new commits in the source repository and you have commits that have not yet been pushed
+        to the source repository.
+    </p>
+    <p>
+        Merges happen behind the scenes and are frequently not noticed unless changes conflict with each other.
+    </p>
+</section>
+<section>
+    <h1>Merge Conflict</h1>
+    <p>
+        Merge conflicts occur when changes are made to the same file and git cannot determine which changes should be used.
+    </p>
+    <aside class="notes">
+        Demo merge conflict
+    </aside>
+</section>
+<section>
+    <h1>Fork</h1>
+    <p>
+        A fork of a repository is a user's personal copy of another user's repository. The user can make changes as they want and
+        continue to pull updates from the source repository.
+    </p>
+</section>
+<section>
+    <h1>Pull Request</h1>
+    <p>
+        A request to take the changes from your repository to be merged into the source repository.
+    </p>
+    <p>
+        This is how you would contribute to open source software on GitHub
+    </p>
+    <aside class="notes">Demo this</aside>
+</section>
+<section>
+    <h1>GUI Options</h1>
+    <h2><a href="https://www.sourcetreeapp.com/" target="_blank">SourceTree</a> - Mac and Windows</h2>
+    <h2><a href="https://tortoisegit.org/" target="_blank">Tortoise Git</a> - Windows Only</h2>
+</section>
+              <section id="combined">
     <h1>Combined Selectors</h1>
     <p>
         You can make your selectors more specific by using multiple selectors joined together
@@ -50,15 +215,15 @@
 </section>
 <section>
     <h1>Example</h1>
-    <script async src="//jsfiddle.net/WorthyD/s6pqmrow/embed/html,css,result/"></script>
-    https://jsfiddle.net/WorthyD/s6pqmrow/
+ <p data-height="265" data-theme-id="0" data-slug-hash="yobgmo" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-Combined Selectors" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/yobgmo/">UA-ITR-Combined Selectors</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1>Example</h1>
-    <script async src="//jsfiddle.net/WorthyD/eLuk46f7/embed/html,css,result/"></script>
-    <a href="https://jsfiddle.net/WorthyD/eLuk46f7/" target="_blank">Link</a>
+   <p data-height="265" data-theme-id="0" data-slug-hash="Mvmpwr" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-CombinedSelectors2" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/Mvmpwr/">UA-ITR-CombinedSelectors2</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-               <section>
+               <section class="pseudo">
     <h1>Pseudo Class <code>:hover</code></h1>
     <p>
         The <code>:hover</code> class allows you to apply add custom class when an element is being hovered over.
@@ -69,24 +234,23 @@
 <section>
     <h1>Example</h1>
 
-    <script async src="//jsfiddle.net/WorthyD/ssg1vzdy/embed/html,css,result/"></script>
-
-    <a href="https://jsfiddle.net/WorthyD/ssg1vzdy/" target="_blank">Link</a>
+  <p data-height="265" data-theme-id="0" data-slug-hash="BdZZyG" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-CSS Psuedo Selector" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/BdZZyG/">UA-ITR-CSS Psuedo Selector</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 
 <section>
     <h1>Example</h1>
-    <script async src="//jsfiddle.net/WorthyD/6x51Lr55/embed/html,css,result/"></script>
-
-
-    <a href="https://jsfiddle.net/WorthyD/6x51Lr55/" target="_blank">Link</a>
+    <p data-height="265" data-theme-id="0" data-slug-hash="eERRNp" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-CSS Psuedo Selector-Advanced" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/eERRNp/">UA-ITR-CSS Psuedo Selector-Advanced</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-               <section>
+               <section class="overflow">
     <h1>
         <code>overflow</code>
     </h1>
     <p><code>overflow</code> controls what happens when your content is forced outside of its declared size.</p>
     <p>You've set the height of a div to 150px in <code>height </code> and have several paragraphs inside of it</p>
+</section>
+<section>
     <h2>Values</h2>
     <ul>
         <li class="fragment"><code>visible</code> - <strong>default value</strong> content continues outside of its box</li>
@@ -100,15 +264,17 @@
 </section>
 <section>
     <h1>Examples</h1>
-    <script async src="//jsfiddle.net/WorthyD/7g3coqfL/embed/html,css,result/"></script>
-
-    <a href="https://jsfiddle.net/WorthyD/7g3coqfL/" target="_blank">Link</a>
+    <p data-height="265" data-theme-id="0" data-slug-hash="LjyWZv" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-CSS-Overflow" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/LjyWZv/">UA-ITR-CSS-Overflow</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1>Examples</h1>
-    <script async src="//jsfiddle.net/WorthyD/y0k8jjhL/embed/html,css,result/"></script>
-
-    <a href="https://jsfiddle.net/WorthyD/y0k8jjhL/" target="_blank">Link</a>
+    <p data-height="265" data-theme-id="0" data-slug-hash="dzWvOx" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-CSS-Overflow" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/dzWvOx/">UA-ITR-CSS-Overflow</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 
 <section>
@@ -127,7 +293,9 @@
         <li class="fragment"><code>nowrap</code> - prevents text from wrapping</li>
     </ul>
 
-    <a href="https://css-tricks.com/almanac/properties/w/whitespace/" target="_blank">White Space Overview</a>
+    <div> <a href="https://css-tricks.com/almanac/properties/w/whitespace/" target="_blank">White Space Overview</a>
+    </div>
+
 </section>
 <!--Usage-->
 <!--<section>
@@ -135,8 +303,10 @@
                 </section>-->
 <section>
     <h1>Example</h1>
-    <script async src="//jsfiddle.net/WorthyD/hgnvdp1g/embed/html,css,result/"></script>
-    <a href="https://jsfiddle.net/WorthyD/hgnvdp1g/" target="_blank">Link</a>
+    <p data-height="265" data-theme-id="0" data-slug-hash="oeWZZK" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-CSS-TextWrap" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/oeWZZK/">UA-ITR-CSS-TextWrap</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1><code>text-overflow</code></h1>
@@ -149,12 +319,16 @@
         <li class="fragment">ellipsis</li>
 
     </ul>
-    <a href="https://css-tricks.com/almanac/properties/t/text-overflow/" target="_blank">Text Overflow Overview</a>
+    <div> <a href="https://css-tricks.com/almanac/properties/t/text-overflow/" target="_blank">Text Overflow Overview</a>
+    </div>
+
 </section>
 <section>
     <h1>Example</h1>
-    <script async src="//jsfiddle.net/WorthyD/kqon94ts/embed/html,css,result/"></script>
-    <a href="https://jsfiddle.net/WorthyD/kqon94ts/" target="_blank">Link</a>
+    <p data-height="265" data-theme-id="0" data-slug-hash="oeWZZK" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-CSS-TextWrap" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/oeWZZK/">UA-ITR-CSS-TextWrap</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1><code>text-shadow</code></h1>
@@ -181,8 +355,10 @@
 </section>
 <section>
     <h1>Examples</h1>
-    <script async src="//jsfiddle.net/WorthyD/wrutgs69/embed/html,css,result/"></script>
-    <a href="https://jsfiddle.net/WorthyD/wrutgs69/" target="_blank">Link</a>
+    <p data-height="265" data-theme-id="0" data-slug-hash="qXmrjG" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-CSS-TextShadow" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/qXmrjG/">UA-ITR-CSS-TextShadow</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
                ﻿<section>
     <h1>HTML5 Semantic Tags</h1>
@@ -312,9 +488,9 @@
 </section>
 
 <section>
-    <h1><code>header</code></h1>
+    <h1><code>footer</code></h1>
     <p>
-        The <code>header</code> element identifies basic information about the following content.
+        The <code>footer</code> element identifies basic information about the following content.
     </p>
     <ul>
         <li class="fragment">Base Tag <strong>&lt;footer&gt;&lt;/footer&gt;</strong></li>
@@ -348,6 +524,24 @@
         </li>
     </ul>
 </section>
+               <section id="exercise8">
+    <h1><a href="https://codepen.io/WorthyD/pen/VzbRgq?editors=1000">Fork This Pen</a></h1>
+    <h2>
+        Replace HTML tags with appropriate HTML5 tags.
+    </h2>
+    <h3>Example</h3>
+    <pre><code class="xml">
+    <div class="main-navigation"></div>        
+
+    <nav class="main-navigation"></nav>
+
+    </code></pre>
+    <!-- https://codepen.io/WorthyD/pen/VzbRgq?editors=1000-->
+    <h3>Tidy up the CSS by replacing classes with tag names</h3>
+
+
+</section>
+
 
            </div>
 
