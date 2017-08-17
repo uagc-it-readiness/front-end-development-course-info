@@ -37,10 +37,36 @@
             <div class="slides">
                 <section class="review">
                     <h1>8/22/2017</h1>
-                    <ul>
-                    </ul>
+                    <div class="two-col">
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                <li><a href="#javascript">Javascript</a></li>
+                                <li><a href="#comments">Comments</a></li>
+                                <li><a href="#outputs">Outputs</a></li>
+                                <li><a href="#variables">Variables</a></li>
+                                <li><a href="#booleans">Booleans</a></li>
+                                <li><a href="#numeric">Numeric types</a></li>
+                                <li><a href="#string">String</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>New</h2>
+                            <ul>
+                                <li><a href="#operators">Operators</a></li>
+                                <li><a href="#comparison">Comparison</a></li>
+                                <li><a href="#equality">Equality</a></li>
+                                <li><a href="#conditional">Conditional</a></li>
+                                <li><a href="#functions">Functions</a></li>
+                                <li><a href="#output2">Output 2</a></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
                 </section>
-               ﻿<section>
+                ﻿<section id="javascript">
     <h1>JavaScript</h1>
 </section>
 <section>
@@ -78,10 +104,10 @@
 <code class="xml">
 <p id="myBlock">
 </p>
-                    <script>
+<script>
     var message = 'Hello World';
     document.getElementById('myBlock').innerHTML = message;
-    </script>
+</script>
 </code>
 </pre>
 </section>
@@ -126,7 +152,7 @@
 
     <!-- Semi colon required for the -->
 </section>
-<section>
+<section id="comments">
     <h1>Comments in JavaScript</h1>
     <!--javascript comments-->
     <!--//Single line-->
@@ -148,7 +174,7 @@
 
 
 </section>
-<section>
+<section id="outputs">
     <h1>Easy Outputs</h1>
     <p>
         You can use the following methods to easily output information onto the screen.
@@ -175,7 +201,7 @@
 
 </section>
 
-<section>
+<section id="variables">
     <h1>Variables</h1>
     <p>JavaScript variables are used to store information for later use.</p>
 </section>
@@ -251,7 +277,7 @@
     </div>
 </section>
 <section>
-        <pre>
+    <pre>
 <code class="js">
     var $foo  = "Hello World"; //Valid
 
@@ -289,7 +315,7 @@
     <h3 class="fragment">Numeric</h3>
     <h3 class="fragment">String</h3>
 </section>
-<section>
+<section id="booleans">
     <h1>Boolean</h1>
     <p>
         A boolean variable represents a <code>true</code> or <code>false</code> value
@@ -306,7 +332,7 @@
         Booleans are incredibly simple, but we use them all over the place in code.
     </p>
 </section>
-<section>
+<section id="numeric">
     <!--  Numbers  -->
     <h1>Numeric Values</h1>
     <p>
@@ -326,7 +352,7 @@
         you can get, anything smaller is rounded to 0.
     </aside>
 </section>
-<section>
+<section id="string">
     <h1>String Variables</h1>
     <p>String variables are composed of text inside single or double quotes</p>
     <!--  Strings  -->
@@ -360,7 +386,7 @@
     </div>
 
 </section>
-               <section>
+                <section id="operators">
 	<h1>Operators</h1>
 	<p>
 		Operators allow you to take action with your variables.
@@ -497,7 +523,7 @@
 	console.log(x)
                            </code></pre>
 	<pre class="fragment"><code class="js">
-	var x = 3 + 6 x (5 + 4) ÷ 3 - 7;
+	var x = 3 + 6 x (5 + 4) / 3 - 7;
 	console.log(x)
                            </code></pre>
 
@@ -554,7 +580,7 @@
  console.log(twoFirstName);  //Outputs NaN which stands for Not A Number
                            </code></pre>
 </section>
-<section>
+<section id="comparison">
 	<h1>Comparison</h1>
 	<p>
 		JavaScript operators are used to test if a condition is true or false.
@@ -592,7 +618,7 @@
 		</div>
 	</div>
 </section>
-<section>
+<section id="equality">
 	<h1>Equality vs. Strict&nbsp;Equality</h1>
 	<div class="fragment">
 		<h2><code>==</code> vs. <code>===</code></h2>
@@ -660,7 +686,7 @@
 	<h1>Questions?</h1>
 </section>
 
-<section>
+<section id="conditional">
 	<h1>Condition Statements</h1>
 	<p>
 		Conditional statements allow us to write code that is capable of performing different actions
@@ -721,7 +747,7 @@
 	<h1>Questions?</h1>
 </section>
 
-<section>
+<section id="functions">
 	<h1>Functions</h1>
 	<p>
 		Functions are blocks of code designed to execute a particular task. They help prevent code duplication.
@@ -799,7 +825,7 @@
 	<h1>Questions?</h1>
 </section>
 
-<section>
+<section id="output2" >
 	<h1>New Output Method</h1>
 	<p>
 		We are going to select an element out of our HTML and update what is inside its tags.
@@ -854,7 +880,7 @@
 
 </code></pre>
 </section>
-           </div>
+            </div>
 
         </div>
 

@@ -38,10 +38,33 @@
                 <section class="review">
                     <h1>8/24/2017</h1>
                     <!--Arrays and Methods-->
-                    <ul>
-                    </ul>
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                <li><a href="#operators">Operators</a></li>
+                                <li><a href="#comparison">Comparison</a></li>
+                                <li><a href="#equality">Equality</a></li>
+                                <li><a href="#conditional">Conditional</a></li>
+                                <li><a href="#functions">Functions</a></li>
+                                <li><a href="#output2">Output 2</a></li>
+                            </ul>
+
+                        </div>
+                        <div>
+                            <h2>New</h2>
+                            <ul>
+                                <li><a href="#terms">Terms</a></li>
+                                <li><a href="#string-props">String Properties</a></li>
+                                <li><a href="#num-meth">Number Methods</a></li>
+                                <li><a href="#arrays">Arrays</a></li>
+                                <li><a href="#js-obj">Objects</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
-               <section>
+                <section id="operators">
 	<h1>Operators</h1>
 	<p>
 		Operators allow you to take action with your variables.
@@ -178,7 +201,7 @@
 	console.log(x)
                            </code></pre>
 	<pre class="fragment"><code class="js">
-	var x = 3 + 6 x (5 + 4) ÷ 3 - 7;
+	var x = 3 + 6 x (5 + 4) / 3 - 7;
 	console.log(x)
                            </code></pre>
 
@@ -235,7 +258,7 @@
  console.log(twoFirstName);  //Outputs NaN which stands for Not A Number
                            </code></pre>
 </section>
-<section>
+<section id="comparison">
 	<h1>Comparison</h1>
 	<p>
 		JavaScript operators are used to test if a condition is true or false.
@@ -273,7 +296,7 @@
 		</div>
 	</div>
 </section>
-<section>
+<section id="equality">
 	<h1>Equality vs. Strict&nbsp;Equality</h1>
 	<div class="fragment">
 		<h2><code>==</code> vs. <code>===</code></h2>
@@ -341,7 +364,7 @@
 	<h1>Questions?</h1>
 </section>
 
-<section>
+<section id="conditional">
 	<h1>Condition Statements</h1>
 	<p>
 		Conditional statements allow us to write code that is capable of performing different actions
@@ -402,7 +425,7 @@
 	<h1>Questions?</h1>
 </section>
 
-<section>
+<section id="functions">
 	<h1>Functions</h1>
 	<p>
 		Functions are blocks of code designed to execute a particular task. They help prevent code duplication.
@@ -480,7 +503,7 @@
 	<h1>Questions?</h1>
 </section>
 
-<section>
+<section id="output2" >
 	<h1>New Output Method</h1>
 	<p>
 		We are going to select an element out of our HTML and update what is inside its tags.
@@ -535,40 +558,28 @@
 
 </code></pre>
 </section>
-               <html>
-
-<head>
-    <title>Basics</title>
-</head>
-
-<body>
-    <div class="reveal">
-        <div class="slides">
-            <section>
-                <section>
-                    <h1>Methods</h1>
-                    <p>
-                        Methods are actions that can be taken on objects.
-                    </p>
-                    <div class="fragment">
-                        <h1>Properties</h1>
-                        <p>
-                            Properties are values associated with an object.
-                        </p>
-                    </div>
-                </section>
-            </section>
-            <section>
-                <section>
-                    <h1>String Properties and  Methods</h1>
-                    <ul>
-                        <li class="fragment"><code>length</code> property - returns a numeric value of the length of the string.</li>
-                        <li class="fragment"><code>indexOf</code> method - returns the position (index) of  the first occurrence of text in a string.</li>
-                    </ul>
-                </section>
-                <section>
-                    <h1><code>length</code></h1>
-                    <pre>
+                <section id="terms">
+    <h1>Methods</h1>
+    <p>
+        Methods are actions that can be taken on objects.
+    </p>
+    <div class="fragment">
+        <h1>Properties</h1>
+        <p>
+            Properties are values associated with an object.
+        </p>
+    </div>
+</section>
+<section id="string-props">
+    <h1>String Properties and Methods</h1>
+    <ul>
+        <li class="fragment"><code>length</code> property - returns a numeric value of the length of the string.</li>
+        <li class="fragment"><code>indexOf</code> method - returns the position (index) of the first occurrence of text in a string.</li>
+    </ul>
+</section>
+<section>
+    <h1><code>length</code></h1>
+    <pre>
 <code class="js">
     var x = "name".length;
     console.log(x);  // x equals 4
@@ -576,111 +587,108 @@
     console.log(y.length);  //
 </code>
 </pre>
-<pre class="fragment">
+    <pre class="fragment">
 <code class="js">
     var username = "danielworthy";
     var userNameLength = username.length; //12
     var isValid = (userNameLength > 20 || userNameLength < 10);  //Returns true
 </code>
 </pre>
-                </section>
+</section>
 
-                <section>
-                    <h1><code>indexOf</code></h1>
-                    <pre>
+<section>
+    <h1><code>indexOf</code></h1>
+    <pre>
 <code class="js">
     var x = "name".indexOf("n");  ///// x = 0;
     var y = "name name name".indexOf("n");  //y = 0;
     var z = "name".indexOf("z"); // z = -1;
 </code>
 </pre>
-<pre class="fragment">
+    <pre class="fragment">
 <code class="js">
     var email = "dan@outlook.com";
     var isValidEmail = (email.indexOf('@') > -1);
 </code>
 </pre>
-                </section>
+</section>
 
-            </section>
-            <section>
-                <section>
-                    <h1>Number Methods</h1>
-                    <p>
-                        These methods are considered global methods.
-                    </p>
-                    <ul>
-                        <li class="fragment"><code>parseInt</code> - Attempts to convert a string to an integer</li>
-                        <li class="fragment"><code>parseFloat</code> - Attempts to convert a string to a float</li>
-                    </ul>
-                </section>
-                <section>
-                    <h1><code>parseInt</code></h1>
-                    <pre>
+<section id="num-meth">
+    <h1>Number Methods</h1>
+    <p>
+        These methods are considered global methods.
+    </p>
+    <ul>
+        <li class="fragment"><code>parseInt</code> - Attempts to convert a string to an integer</li>
+        <li class="fragment"><code>parseFloat</code> - Attempts to convert a string to a float</li>
+    </ul>
+</section>
+<section>
+    <h1><code>parseInt</code></h1>
+    <pre>
 <code class="js">
     parseInt("10");         // returns 10
     parseInt("10.33");      // returns 10
     parseInt("ten");        // returns NaN
 </code>
 </pre>
-<pre class="fragment">
+    <pre class="fragment">
 <code class="js">
     parseInt("10 11 12");   // returns 10
     parseInt("10 tacos");   // returns 10
     parseInt("tacos 10");   // returns NaN
 </code>
 </pre>
-                </section>
-                <section>
-                    <h1><code>parseFloat</code></h1>
-                    <pre>
+</section>
+<section>
+    <h1><code>parseFloat</code></h1>
+    <pre>
 <code class="js">
     parseFloat("10");         // returns 10
     parseFloat("10.33");      // returns 10.33
     parseFloat("ten");        // returns NaN
 </code>
 </pre>
-<pre class="fragment">
+    <pre class="fragment">
 <code class="js">
    parseFloat("10 11 12");   // returns 10
    parseFloat("10 tacos");   // returns 10
    parseFloat("tacos 10");   // returns NaN
 </code>
 </pre>
-                </section>
-            </section>
-            <section>
-                <!--Complex Variables -->
-                <h1>Complex Variables</h1>
-                <ul>
-                    <li class="fragment">Arrays</li>
-                    <li class="fragment">Objects</li>
-                </ul>
-            </section>
-            <section>
-                <section>
-                    <h1>Arrays</h1>
-                    <p>
-                        Arrays are used to store a collection of variables.
-                    </p>
-                    <pre class="fragment">
+</section>
+<section>
+    <!--Complex Variables -->
+    <h1>Complex Variables</h1>
+    <ul>
+        <li class="fragment">Arrays</li>
+        <li class="fragment">Objects</li>
+    </ul>
+</section>
+<section id="arrays">
+    <h1>Arrays</h1>
+    <p>
+        Arrays are used to store a collection of variables.
+    </p>
+    <pre class="fragment">
 <code class="js">
     var list = ["A", "B", "C", "D"];
     var list2 = [1, 10, 0, 3];
     var list3 = [1, 'ten', '0', 3];
 </code>
 </pre>
-                </section>
-                <section>
-                    <h1>Accessing Values in Array</h1>
-                    <p>
-                        You can access individual items in an array by referencing its index or position. Accessing an invalid index will return <code>undefined</code>.
-                    </p>
-                    <p class="fragment">
-                        Arrays operate off of a "zero" based index. The first position has an index of 0.
-                    </p>
+</section>
+<section>
+    <h1>Accessing Values in Array</h1>
+    <p>
+        You can access individual items in an array by referencing its index or position. Accessing an invalid index will return
+        <code>undefined</code>.
+    </p>
+    <p class="fragment">
+        Arrays operate off of a "zero" based index. The first position has an index of 0.
+    </p>
 
-                    <pre class="fragment">
+    <pre class="fragment">
 <code class="js">
     var list = ["A", "B", "C", "D"];
     console.log(list[1]); // Outputs "B"
@@ -690,27 +698,27 @@
 </pre>
 
 
-                </section>
+</section>
 
-                <section>
-                    <h1>Array Methods</h1>
-                    <p>
-                        There are several different methods to modify an array.  We're going to focus primarily on one.
-                    </p>
-                    <ul>
-                        <li class="fragment"><code>push</code> - Adds item to the end of an array</li>
-                    </ul>
-                    <h1>Array Properties</h1>
-                    <ul>
-                        <li class="fragment"><code>length</code> - gives the count of items in the array</li>
-                    </ul>
+<section>
+    <h1>Array Methods</h1>
+    <p>
+        There are several different methods to modify an array. We're going to focus primarily on one.
+    </p>
+    <ul>
+        <li class="fragment"><code>push</code> - Adds item to the end of an array</li>
+    </ul>
+    <h1>Array Properties</h1>
+    <ul>
+        <li class="fragment"><code>length</code> - gives the count of items in the array</li>
+    </ul>
 
 
-                </section>
+</section>
 
-                <section>
-                    <h1>Array Pushing</h1>
-                    <pre>
+<section>
+    <h1>Array Pushing</h1>
+    <pre>
 <code class="js">
     var x = ["a", "b", "c"];
     x.push('d');
@@ -718,20 +726,18 @@
     console.log(x);     //["a", "b", "c", "d", "e"];
 </code>
 </pre>
-                </section>
+</section>
 
 
-            </section>
-            <section>
-                <section>
-                    <h1>JavaScript Objects</h1>
-                    <p>
-                        Just about everything in JavaScript is an object.  Primitive variables are the only things that are not actual objects.
-                    </p>
-                    <p class="fragment">
-                        Objects are variables that contain many variables.
-                    </p>
-                    <pre>
+<section id="js-obj">
+    <h1>JavaScript Objects</h1>
+    <p>
+        Just about everything in JavaScript is an object. Primitive variables are the only things that are not actual objects.
+    </p>
+    <p class="fragment">
+        Objects are variables that contain many variables.
+    </p>
+    <pre>
 <code class="js">
     var me = {
         firstName: "Daniel",
@@ -749,14 +755,25 @@
 </code>
 </pre>
 
-                </section>
-            </section>
-        </div>
-    </div>
-</body>
-
-</html>>
-           </div>
+</section>
+<section>
+    <h1><code>this</code></h1>
+    <h2>The most confusing thing in JavaScript</h2>
+   <pre>
+<code class="js" data-noescape>
+    var <mark>me</mark> = {
+        <mark class="orange">firstName</mark>: "Daniel",
+        <mark class="blue">lastName</mark> "Worthy",
+        age: 60,
+        city: 'Cave Springs',
+        fullName: function(){
+            return <mark>this</mark>.<mark class="orange">firstName</mark> + " " + <mark>this</mark>.<mark class="blue">lastName</mark>;
+        };
+    };
+</code>
+</pre> 
+</section>
+            </div>
 
         </div>
 
