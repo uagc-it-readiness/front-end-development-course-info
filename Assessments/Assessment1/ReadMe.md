@@ -85,7 +85,7 @@ Replace elements with HTML5 elements if you see fit.
     - Float the element to the right
     - add 20 pixels of padding to the top
     - set the width to 30%
-- Lists in the side bar
+- Sidebar item in the side bar
     - Add a border that is 1 pixel thick solid and `#3a3a3a`
     - Add 10 pixels pixels of spacing inside of it
     - Add a 20 pixel margin to all sides
