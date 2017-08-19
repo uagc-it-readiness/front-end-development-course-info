@@ -7,8 +7,8 @@ Create a Github Repository to submit your completed work.
 
 
 ## Grading Criteria (in order of priority and rough percentange)
-- Completeness -  40%
-- Valid HTML and CSS - 40%
+- Completeness -  30%
+- Valid HTML and CSS - 30%
 - Accuracy to image - 20%
 - Cleanliness of Code - 10%
 - Accuracy of HTML5 usage - 5%
