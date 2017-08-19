@@ -5,8 +5,6 @@ You may ask the instructor for clarification on any questions or parts. Skip ove
 
 Create a Github Repository to submit your completed work. 
 
-[Download the assessment here](AugustAssessmentTest.zip)
-
 
 ## Grading Criteria (in order of priority and rough percentange)
 - Completeness -  40%
