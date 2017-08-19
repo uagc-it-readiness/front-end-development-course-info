@@ -60,7 +60,7 @@ Replace elements with HTML5 elements if you see fit.
     - Add 20 pixels of spacing inside of it
     - Remove the underline 
     - Show an underline when hovered over
-    - set their display property to inline-block.
+    - Make them display in a single line.
 
 ## Part 4 - Article
 Replace elements with HTML5 elements if you see fit.
