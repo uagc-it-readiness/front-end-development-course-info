@@ -8,13 +8,13 @@ Create a Github Repository to submit your completed work.
 [Download the assessment here](AugustAssessmentTest.zip)
 
 
-## Grading Criteria (in order of priority)
-- Completeness
-- Valid HTML and CSS
-- Accuracy to image
-- Cleanliness of Code
-- Accuracy of HTML5 usage
-- Usefulness of comments
+## Grading Criteria (in order of priority and rough percentange)
+- Completeness -  40%
+- Valid HTML and CSS - 40%
+- Accuracy to image - 20%
+- Cleanliness of Code - 10%
+- Accuracy of HTML5 usage - 5%
+- Usefulness of comments - 5%
 
 ## Part 1
 Apply the following styles to the following element types.
