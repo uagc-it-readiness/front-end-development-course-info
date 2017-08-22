@@ -308,6 +308,12 @@
 	</div>
 </section>
 <section>
+	<h1>Equals confusion</h1>
+	<p>
+		= is not the same as == or ===
+	</p>
+</section>
+<section>
 	<h1>Examples</h1>
 	<div class="two-col">
 		<div class="">
@@ -419,6 +425,18 @@
 	</div>
 	<p class="fragment">
 		You can have an infinite number of <code>else if</code> blocks.
+	</p>
+</section>
+<section>
+	<h1>More Equals Problems</h1>
+<pre><code class="js">
+	if (x = 1){
+		alert(true);   //This will always execute
+	}
+
+	</code></pre>
+	<p>
+		<code>x = 1</code> doesn't fail so JS treats it like a <code>true</code> value
 	</p>
 </section>
 <section>
@@ -746,12 +764,12 @@
         city: 'Cave Springs',
         fullName: function(){
             return this.firstName + " " + this.lastName;
-        };
+        }
     };
     console.log(me.age) //Outputs 60;
-    console.log(me.height) //Outputs undefined;
+    console.log(me.height); //Outputs undefined
     me.height = '5\' 9"';
-    console.log(me.height) //Outputs undefined;
+    console.log(me.height); //Outputs 5' 9"
 </code>
 </pre>
 

@@ -6,10 +6,21 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
             crossorigin="anonymous">
+        <style>
+            .hide-old tr:nth-child(-n+5) {
+                display: none;
+            }
+
+        </style>
+        <script>
+            var activeRow = 15;
+        </script>
     </head>
 
     <body>
         <div class="container">
+            <h1>FE Class Slides <button id="btnShowAll" class="btn pull-right">Show All</button></h1>
+
             <table class="table table-bordered table-hover table-striped">
                 <thead>
                     <tr>
@@ -20,7 +31,7 @@
                         <th>Assignment</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tablebody" class="hide-old">
                     <tr>
                         <td>
                             <a href="sessions/0.html">Intro Session</a>
@@ -182,21 +193,91 @@
                             <a href="sessions/17.html"></a>
                         </td>
                         <td>8/31</td>
-                        <td>DOM Interaction</td>
+                        <td>DOM Interaction, Adv Selectors</td>
                         <td></td>
                         <td></td>
                     </tr>
 
 
-    <tr>
+                    <tr>
                         <td>
                             <a href="sessions/18.html"></a>
                         </td>
-                        <td>9/2</td>
+                        <td>9/2*</td>
                         <td>JS Review</td>
                         <td></td>
                         <td></td>
                     </tr>
+
+
+                    <tr>
+                        <td>
+                            <a href=""></a>
+                        </td>
+                        <td>9/5</td>
+                        <td>HTML Forms</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href=""></a>
+                        </td>
+                        <td>9/7</td>
+                        <td>HTML Forms/Styling Forms</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href=""></a>
+                        </td>
+                        <td>9/12</td>
+                        <td>jQuery Introduction</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href=""></a>
+                        </td>
+                        <td>9/14</td>
+                        <td>jQuery Effects</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href=""></a>
+                        </td>
+                        <td>9/16*</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href=""></a>
+                        </td>
+                        <td>9/19</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href=""></a>
+                        </td>
+                        <td>9/21</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+
+
 
 
 
@@ -214,6 +295,12 @@
                 </tbody>
             </table>
         </div>
+        <script>
+            document.getElementById('btnShowAll').addEventListener('click', function(){
+                document.getElementById('tablebody').classList.toggle('hide-old');
+            });
+            document.querySelectorAll('tr')[activeRow].classList.add('info');
+        </script>
     </body>
 
 </html>
