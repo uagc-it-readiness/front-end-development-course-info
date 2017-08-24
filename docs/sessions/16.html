@@ -62,7 +62,8 @@
                         </div>
                     </div>
                 </section>
-                <section id="terms">
+                
+<section id="terms">
     <h1>Methods</h1>
     <p>
         Methods are actions that can be taken on objects.
@@ -77,7 +78,7 @@
 <section id="string-props">
     <h1>String Properties and Methods</h1>
     <ul>
-        <li class="fragment"><code>length</code> property - returns a numeric value of the length of the string.</li>
+        <li class="fragment"><code>length</code> property - returns the number of characters in the string.</li>
         <li class="fragment"><code>indexOf</code> method - returns the position (index) of the first occurrence of text in a string.</li>
     </ul>
 </section>
@@ -105,18 +106,19 @@
     <pre>
 <code class="js">
     var x = "name".indexOf("n");  ///// x = 0;
-    var y = "name name name".indexOf("n");  //y = 0;
+    var y = "name name name".indexOf("a");  //y = 1;
     var z = "name".indexOf("z"); // z = -1;
+    var z = "name".indexOf("ame"); // z = 1;
 </code>
 </pre>
     <pre class="fragment">
 <code class="js">
     var email = "dan@outlook.com";
     var isValidEmail = (email.indexOf('@') > -1);
+    console.log(isValidEmail); //true
 </code>
 </pre>
 </section>
-
 <section id="num-meth">
     <h1>Number Methods</h1>
     <p>
@@ -161,6 +163,34 @@
 </code>
 </pre>
 </section>
+<section>
+    <h1>Is it a number?</h1>
+    <p>
+        There is a build in method for determining if a variable is a number.
+    </p>
+     <pre class="fragment">
+<code class="js">
+    var x = "t"
+    //This doesn't work
+    var isNumber = (parseInt(x) === NaN);
+</code>
+</pre>
+
+   
+    <pre class="fragment">
+<code class="js">
+    var x = "t"
+    if (isNaN(x)){
+        //it is NOT a number
+    }else{
+        //It is a number
+    }
+</code>
+</pre>
+
+</section>
+
+
 <section>
     <!--Complex Variables -->
     <h1>Complex Variables</h1>

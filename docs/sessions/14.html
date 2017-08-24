@@ -520,15 +520,15 @@
 <section>
 	<pre class="fragment"><code class="js">
 	var x = 3 * 4 + 15;
-	console.log(x)
+	console.log(x); // 27
                            </code></pre>
 	<pre class="fragment"><code class="js">
 	var x = (3*4) + 15;
-	console.log(x)
+	console.log(x); //27
                            </code></pre>
 	<pre class="fragment"><code class="js">
-	var x = 3 + 6 x (5 + 4) / 3 - 7;
-	console.log(x)
+	var x = 3 + 6 * (5 + 4) / 3 - 7;
+	console.log(x); //14
                            </code></pre>
 
 
@@ -704,25 +704,50 @@
 </section>
 <section>
 	<h1>The <code>if</code> statement</h1>
-	<div class="fragment">
-		<pre><code class="js">
-    var x = true;
-    if (x === true){
-        //This code will be executed
-    }
+	<div class="two-col">
+		<div>
+			<div class="fragment">
+				<pre><code class="js">
+var x = true;
+if (x === true){
+//This code will be executed
+}
+		</code></pre>
+			</div>
+			<div class="fragment">
+				<pre><code class="js">
+var x = true;
+if (x === false){ 
+//This code will NOT be executed
+}
+		</code></pre>
+			</div>
+		</div>
+		<div>
+			<div class="fragment">
+				<pre><code class="js">
+if (x > 10 && x < 25){
+//Executes if greater than 10 AND 
+//less than 25
+}
          </code></pre>
+			</div>
+			<div class="fragment">
+				<pre><code class="js">
+if (x === true || y > 10){
+//This code will execute if x is true
+//OR  y is greater than 10 
+}
+		</code></pre>
+			</div>
+
+		</div>
 	</div>
-	<div class="fragment">
-		<pre><code class="js">
-    var x = true;
-    if (x === false){
-        //This code will NOT be executed
-    }
-         </code></pre>
-	</div>
+
 </section>
 <section>
 	<h1>The <code>else</code> statement</h1>
+	<p>The else statement acts as a catch all.</p>
 	<div class="fragment">
 		<pre><code class="js">
     var x  = true;
@@ -754,8 +779,24 @@
 	</p>
 </section>
 <section>
+	<h1>The <code>else if</code> statement</h1>
+	<div class="fragment">
+		<pre><code class="js">
+    var colour  = getColor();
+    if (colour === "yellow"){
+
+    }else if (colour === "red"){
+
+    } else {
+		
+    }
+         </code></pre>
+	</div>
+</section>
+
+<section>
 	<h1>More Equals Problems</h1>
-<pre><code class="js">
+	<pre><code class="js">
 	if (x = 1){
 		alert(true);   //This will always execute
 	}
@@ -847,7 +888,7 @@
 	<h1>Questions?</h1>
 </section>
 
-<section id="output2" >
+<section id="output2">
 	<h1>New Output Method</h1>
 	<p>
 		We are going to select an element out of our HTML and update what is inside its tags.
