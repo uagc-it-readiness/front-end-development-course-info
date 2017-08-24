@@ -1,3 +1,5 @@
+var arrayItems = [];
+
 function update() {
     //////////////////////Your Code Starts here
 

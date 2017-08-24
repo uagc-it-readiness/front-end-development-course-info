@@ -43,6 +43,7 @@
                         <div>
                             <h2>Review</h2>
                             <ul>
+                                <li>Exercise Review</li>
                                 <li><a href="#operators">Operators</a></li>
                                 <li><a href="#comparison">Comparison</a></li>
                                 <li><a href="#equality">Equality</a></li>
@@ -60,10 +61,17 @@
                                 <li><a href="#num-meth">Number Methods</a></li>
                                 <li><a href="#arrays">Arrays</a></li>
                                 <li><a href="#js-obj">Objects</a></li>
+                                <li><a href="#undefined">Undefined & null</a></li>
+                                <li><a href="#getbyclassname">getByClassName</a></li>
                             </ul>
                         </div>
                     </div>
                 </section>
+                <section id="exercise10">
+
+    <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise10" target="_blank">Exercise 10</a></h1>
+   
+</section>
                 <section id="operators">
 	<h1>Operators</h1>
 	<p>
@@ -194,15 +202,15 @@
 <section>
 	<pre class="fragment"><code class="js">
 	var x = 3 * 4 + 15;
-	console.log(x)
+	console.log(x); // 27
                            </code></pre>
 	<pre class="fragment"><code class="js">
 	var x = (3*4) + 15;
-	console.log(x)
+	console.log(x); //27
                            </code></pre>
 	<pre class="fragment"><code class="js">
-	var x = 3 + 6 x (5 + 4) / 3 - 7;
-	console.log(x)
+	var x = 3 + 6 * (5 + 4) / 3 - 7;
+	console.log(x); //14
                            </code></pre>
 
 
@@ -378,25 +386,50 @@
 </section>
 <section>
 	<h1>The <code>if</code> statement</h1>
-	<div class="fragment">
-		<pre><code class="js">
-    var x = true;
-    if (x === true){
-        //This code will be executed
-    }
+	<div class="two-col">
+		<div>
+			<div class="fragment">
+				<pre><code class="js">
+var x = true;
+if (x === true){
+//This code will be executed
+}
+		</code></pre>
+			</div>
+			<div class="fragment">
+				<pre><code class="js">
+var x = true;
+if (x === false){ 
+//This code will NOT be executed
+}
+		</code></pre>
+			</div>
+		</div>
+		<div>
+			<div class="fragment">
+				<pre><code class="js">
+if (x > 10 && x < 25){
+//Executes if greater than 10 AND 
+//less than 25
+}
          </code></pre>
+			</div>
+			<div class="fragment">
+				<pre><code class="js">
+if (x === true || y > 10){
+//This code will execute if x is true
+//OR  y is greater than 10 
+}
+		</code></pre>
+			</div>
+
+		</div>
 	</div>
-	<div class="fragment">
-		<pre><code class="js">
-    var x = true;
-    if (x === false){
-        //This code will NOT be executed
-    }
-         </code></pre>
-	</div>
+
 </section>
 <section>
 	<h1>The <code>else</code> statement</h1>
+	<p>The else statement acts as a catch all.</p>
 	<div class="fragment">
 		<pre><code class="js">
     var x  = true;
@@ -428,8 +461,24 @@
 	</p>
 </section>
 <section>
+	<h1>The <code>else if</code> statement</h1>
+	<div class="fragment">
+		<pre><code class="js">
+    var colour  = getColor();
+    if (colour === "yellow"){
+
+    }else if (colour === "red"){
+
+    } else {
+		
+    }
+         </code></pre>
+	</div>
+</section>
+
+<section>
 	<h1>More Equals Problems</h1>
-<pre><code class="js">
+	<pre><code class="js">
 	if (x = 1){
 		alert(true);   //This will always execute
 	}
@@ -521,7 +570,7 @@
 	<h1>Questions?</h1>
 </section>
 
-<section id="output2" >
+<section id="output2">
 	<h1>New Output Method</h1>
 	<p>
 		We are going to select an element out of our HTML and update what is inside its tags.
@@ -576,7 +625,8 @@
 
 </code></pre>
 </section>
-                <section id="terms">
+                
+<section id="terms">
     <h1>Methods</h1>
     <p>
         Methods are actions that can be taken on objects.
@@ -591,7 +641,7 @@
 <section id="string-props">
     <h1>String Properties and Methods</h1>
     <ul>
-        <li class="fragment"><code>length</code> property - returns a numeric value of the length of the string.</li>
+        <li class="fragment"><code>length</code> property - returns the number of characters in the string.</li>
         <li class="fragment"><code>indexOf</code> method - returns the position (index) of the first occurrence of text in a string.</li>
     </ul>
 </section>
@@ -619,18 +669,19 @@
     <pre>
 <code class="js">
     var x = "name".indexOf("n");  ///// x = 0;
-    var y = "name name name".indexOf("n");  //y = 0;
+    var y = "name name name".indexOf("a");  //y = 1;
     var z = "name".indexOf("z"); // z = -1;
+    var z = "name".indexOf("ame"); // z = 1;
 </code>
 </pre>
     <pre class="fragment">
 <code class="js">
     var email = "dan@outlook.com";
     var isValidEmail = (email.indexOf('@') > -1);
+    console.log(isValidEmail); //true
 </code>
 </pre>
 </section>
-
 <section id="num-meth">
     <h1>Number Methods</h1>
     <p>
@@ -675,6 +726,34 @@
 </code>
 </pre>
 </section>
+<section>
+    <h1>Is it a number?</h1>
+    <p>
+        There is a build in method for determining if a variable is a number.
+    </p>
+     <pre class="fragment">
+<code class="js">
+    var x = "t"
+    //This doesn't work
+    var isNumber = (parseInt(x) === NaN);
+</code>
+</pre>
+
+   
+    <pre class="fragment">
+<code class="js">
+    var x = "t"
+    if (isNaN(x)){
+        //it is NOT a number
+    }else{
+        //It is a number
+    }
+</code>
+</pre>
+
+</section>
+
+
 <section>
     <!--Complex Variables -->
     <h1>Complex Variables</h1>
@@ -791,6 +870,111 @@
 </code>
 </pre> 
 </section>
+                <section id="undefined">
+    <h1>Undefined</h1>
+    <p><code>Undefined</code> is the value that is given to a variable <strong>before</strong> it has a value. </p>
+    <pre><code class="js">
+    var x;
+    console.log(x); //undefined     
+    x = 10;
+    console.log(x); //10
+    </code></pre>
+</section>
+<section>
+    <h1>Variable hoisting.</h1>
+    <pre><code class="js">
+    console.log(x); //undefined     
+    var x = 10;
+    console.log(x); //10
+    </code></pre>
+    <div class="fragment">
+        <h4>Is actually</h4>
+        <pre><code class="js">
+    var x;
+    console.log(x); //undefined     
+    x = 10;
+    console.log(x); //10
+    </code></pre>
+    </div>
+
+</section>
+<section>
+    <h1>null</h1>
+    <p><code>null</code> is a value given to objects that are not defined.</p>
+    <pre><code class="js">
+var x = null;
+if (x !== null){
+    //perform logic
+}    
+var d = document.getElementById('fdfdfdfdf');
+console.log(d); //null;
+</code></pre>
+</section>
+<section>
+    <h1>Which one do I need to use?</h1>
+    <p>It can get confusing which to use, but there is an easy solution for if statements.</p>
+    <pre><code class="js">
+var d = document.getElementById('yarg');
+if (d){
+    //executes if not null (not found)
+}
+var x;
+if (x){
+    //executes if not undefined
+}
+        </code></pre>
+</section>
+                <section id="getbyclassname">
+    <h1>getElementsByClassName</h1>
+    <p>
+        Allows you to retrieve DOM elements by their class names.
+    </p>
+    <p>
+        There is one major difference between this and getElementById.  This one returns an HTMLCollection which is like an array.
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <pre><code class="js">
+document.getElementsByClassName('side-bar-item')
+        </code></pre>
+        <div class="fragment">
+    <pre><code class="js">
+//targets elements with both user-input and invalid classes
+document.getElementsByClassName('user-input invalid')
+        </code></pre>
+        </div>
+</section>
+<section>
+    <h1>Accessing the object.</h1>
+    <p>
+        To modify the object's properties, we need to loop through them or reference a specific index.
+    </p>
+    <p class="fragment">
+        We haven't covered loops yet so you can just reference by the index.
+    </p>
+        <div class="fragment">
+    <pre><code class="js">
+var elms = document.getElementsByClassName('user-input');
+var elm = elms[0];
+if (elm){
+    elm.innerHTML = "Yay!";
+}
+        </code></pre>
+        </div>
+
+</section>
+                <section>
+                    <h1>Exercise 11</h1>
+                    <ul>
+                        <li><a href="https://github.com/uagc-it-readiness/front-end-development-course-info" target="_blank">Clone this repo</a></li>
+                        <li>Create a repo on GitHub called Exercises.</li>
+                        <li>Clone it and get it all setup.</li>
+                        <li>Copy the folder from Exercise11 from the course info into your new repo. </li>
+                        <li>Perform the exercise in your new repo and push to GitHub when finished.</li>
+                        <li>Send me a link when done.</li>
+                    </ul>
+                </section>
             </div>
 
         </div>
