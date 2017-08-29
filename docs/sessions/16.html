@@ -48,6 +48,7 @@
                                 <li><a href="#num-meth">Number Methods</a></li>
                                 <li><a href="#arrays">Arrays</a></li>
                                 <li><a href="#js-obj">Objects</a></li>
+                                <li><a href="#undefined">Undefined & null</a></li>
                             </ul>
                         </div>
                         <div>
@@ -57,10 +58,12 @@
                                 <li><a href="#for-loop">For Loops</a></li>
                                 <li><a href="#while-loop">While Loops</a></li>
                                 <li><a href="#scope">Scope</a></li>
+                                <li><a href="#dates">Dates</a></li>
                             </ul>
 
                         </div>
                     </div>
+                    <h4 style="clear:both;"><a href="#exercise12">Exercise 12</a></h4>
                 </section>
                 
 <section id="terms">
@@ -343,19 +346,24 @@
         to true.
     </p>
     <h2>Syntax</h2>
-    <h3 class="align-left">
+    <style>
+        .align-left code{
+            padding:0;
+        }
+    </style>
+    <h4 class="align-left">
         <code class="fragment">for (</code>
         <code class="fragment">statement 1;</code>
         <code class="fragment">statement 2;</code>
         <code class="fragment">statement 3;</code>
         <code class="fragment">){</code>
-    </h3>
-    <h3>
+    </h4>
+    <h4>
         <code class="fragment">//Code Block</code>
-    </h3>
-    <h3 class="align-left">
+    </h4>
+    <h4 class="align-left">
         <code class="fragment">}</code>
-    </h3>
+    </h4>
 </section>
 <section>
     <h1>Code Samples</h1>
@@ -517,7 +525,7 @@ html = html + '&lt;/ul>';
         Multi global vars can cause issues with conflicting names.
     </aside>
 </section>
-                <section>
+                <section id="dates">
     <h1>JavaScript Dates</h1>
     <p>
         Dates are variable types that represent a date and time inside of JavaScript.
@@ -539,6 +547,12 @@ html = html + '&lt;/ul>';
     <p class="fragment">
         Example: 4/5/2017 is roughly - 1491415025702
     </p>
+    <p class="fragment">
+        Example : 1/1/1777 is roughly - -6090400800000
+    </p>
+    <aside class="notes">
+        Founded in 1972. Year 2038 problem.
+    </aside>
 </section>
 <section>
     <h1>Date Declaration</h1>
@@ -567,6 +581,18 @@ var d = new Date(2010, 1)
 //Thu Apr 15 2010 12:04:14 GMT-0500 (Central Daylight Time)
 var d = new Date(2010, 3, 15, 12, 4, 14) 
     </code></pre>
+</section>
+<section>
+    <h1>How do we set a specific date that we already know?</h1>
+    <h2>Like September 9th, 2017</h2>
+    <pre class="fragment"><code class="js">
+var d = new Date('9/9/2017')
+    </code></pre>
+    <h2 class="fragment">or</h2>
+    <pre class="fragment"><code class="js">
+var d = new Date(2017, 8, 9) 
+    </code></pre>
+
 </section>
 <!--
 <section>
@@ -610,6 +636,10 @@ console.log(d.toTimeString()); // logs 14:39:07 GMT-0600 (PDT)
 </code></pre>
 </section>
 <section>
+    <h1>It is pretty limited</h1>
+    <h2>We'll resolve that by writing a library.</h2>
+</section>
+<section>
     <h1>Changing Date Values</h1>
     <p>
         We use set methods change these values.
@@ -639,11 +669,53 @@ var isNewer = d2 > d1;  //True
 </section>
 <section>
     <h1>Adding values</h1>
-<pre><code class="js">
-var d1 = new Date(1990, 0, 1);
-d1.setDate(d1.getDate() + 10);
-console.log(d1); // 1/11/1990
-    </code></pre>
+    <p>Let's get the current date and add a week to it.</p>
+    <pre class="fragment"><code class="js">
+var d1 = new Date();
+var curDate = d1.getDate(); //Get the number for the current Date
+var newDate = curDate + 7; //Add value to it
+d1.setDate(newDate);    // Set the new date
+console.log(d1); 
+</code></pre>
+
+    <pre class="fragment"><code class="js">
+//Shorter
+var d1 = new Date();
+var newDate = d1.getDate() + 7; 
+d1.setDate(newDate);    
+console.log(d1); 
+</code></pre>
+    <pre class="fragment"><code class="js">
+//Even Shorter
+var d1 = new Date();
+d1.setDate(d1.getDate() + 7);    
+console.log(d1); 
+</code></pre>
+
+</section>
+<section>
+    <h1>More adding</h1>
+    <p>
+        You don't have to stick to the traditional restrictions when adding values.
+    </p>
+    <p class="fragment">
+        You have 90 days from today for a warranty.
+    </p>
+    <p class="fragment">
+        You don't have to calculate the number of months.  JS will automatically handle the overflow.
+    </p>
+    <pre class="fragment"><code class="js">
+var d1 = new Date();
+
+d1.setDate(d1.getDate() + 90);    
+
+console.log(d1); 
+</code></pre>
+</section>
+                <section id="exercise12">
+
+    <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise12" target="_blank">Exercise 12</a></h1>
+   
 </section>
             </div>
 
