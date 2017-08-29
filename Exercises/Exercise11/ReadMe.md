@@ -23,7 +23,7 @@ Set the following element's innerHTML with the following values
 Set the following element's innerHTML with the following values
 
 - `p3_number` - put `randomNumber`'s value here
-- `p3_valid` - is `randomNumber` a number? Hint: try to parse the number. If it's a number it will be greater than 0.
+- `p3_valid` - is `randomNumber` a number? Set the value to true if it is a number. Set it to false if it is a string.
 
 ### Arrays 
 
