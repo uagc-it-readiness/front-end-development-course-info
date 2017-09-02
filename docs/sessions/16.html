@@ -1,0 +1,777 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>8/29/2017</h1>
+                    <!--Arrays and Methods-->
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                <li><a href="#terms">Terms</a></li>
+                                <li><a href="#string-props">String Properties</a></li>
+                                <li><a href="#num-meth">Number Methods</a></li>
+                                <li><a href="#arrays">Arrays</a></li>
+                                <li><a href="#js-obj">Objects</a></li>
+                                <li><a href="#undefined">Undefined & null</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>New</h2>
+                            <ul>
+                                <li><a href="#incrementing">Incrementing</a></li>
+                                <li><a href="#for-loop">For Loops</a></li>
+                                <li><a href="#while-loop">While Loops</a></li>
+                                <li><a href="#scope">Scope</a></li>
+                                <li><a href="#dates">Dates</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <h4 style="clear:both;"><a href="#exercise12">Exercise 12</a></h4>
+                </section>
+                
+<section id="terms">
+    <h1>Methods</h1>
+    <p>
+        Methods are actions that can be taken on objects.
+    </p>
+    <div class="fragment">
+        <h1>Properties</h1>
+        <p>
+            Properties are values associated with an object.
+        </p>
+    </div>
+</section>
+<section id="string-props">
+    <h1>String Properties and Methods</h1>
+    <ul>
+        <li class="fragment"><code>length</code> property - returns the number of characters in the string.</li>
+        <li class="fragment"><code>indexOf</code> method - returns the position (index) of the first occurrence of text in a string.</li>
+    </ul>
+</section>
+<section>
+    <h1><code>length</code></h1>
+    <pre>
+<code class="js">
+    var x = "name".length;
+    console.log(x);  // x equals 4
+    var y = "name"
+    console.log(y.length);  //
+</code>
+</pre>
+    <pre class="fragment">
+<code class="js">
+    var username = "danielworthy";
+    var userNameLength = username.length; //12
+    var isValid = (userNameLength > 20 || userNameLength < 10);  //Returns true
+</code>
+</pre>
+</section>
+
+<section>
+    <h1><code>indexOf</code></h1>
+    <pre>
+<code class="js">
+    var x = "name".indexOf("n");  ///// x = 0;
+    var y = "name name name".indexOf("a");  //y = 1;
+    var z = "name".indexOf("z"); // z = -1;
+    var z = "name".indexOf("ame"); // z = 1;
+</code>
+</pre>
+    <pre class="fragment">
+<code class="js">
+    var email = "dan@outlook.com";
+    var isValidEmail = (email.indexOf('@') > -1);
+    console.log(isValidEmail); //true
+</code>
+</pre>
+</section>
+<section id="num-meth">
+    <h1>Number Methods</h1>
+    <p>
+        These methods are considered global methods.
+    </p>
+    <ul>
+        <li class="fragment"><code>parseInt</code> - Attempts to convert a string to an integer</li>
+        <li class="fragment"><code>parseFloat</code> - Attempts to convert a string to a float</li>
+    </ul>
+</section>
+<section>
+    <h1><code>parseInt</code></h1>
+    <pre>
+<code class="js">
+    parseInt("10");         // returns 10
+    parseInt("10.33");      // returns 10
+    parseInt("ten");        // returns NaN
+</code>
+</pre>
+    <pre class="fragment">
+<code class="js">
+    parseInt("10 11 12");   // returns 10
+    parseInt("10 tacos");   // returns 10
+    parseInt("tacos 10");   // returns NaN
+</code>
+</pre>
+</section>
+<section>
+    <h1><code>parseFloat</code></h1>
+    <pre>
+<code class="js">
+    parseFloat("10");         // returns 10
+    parseFloat("10.33");      // returns 10.33
+    parseFloat("ten");        // returns NaN
+</code>
+</pre>
+    <pre class="fragment">
+<code class="js">
+   parseFloat("10 11 12");   // returns 10
+   parseFloat("10 tacos");   // returns 10
+   parseFloat("tacos 10");   // returns NaN
+</code>
+</pre>
+</section>
+<section>
+    <h1>Is it a number?</h1>
+    <p>
+        There is a build in method for determining if a variable is a number.
+    </p>
+     <pre class="fragment">
+<code class="js">
+    var x = "t"
+    //This doesn't work
+    var isNumber = (parseInt(x) === NaN);
+</code>
+</pre>
+
+   
+    <pre class="fragment">
+<code class="js">
+    var x = "t"
+    if (isNaN(x)){
+        //it is NOT a number
+    }else{
+        //It is a number
+    }
+</code>
+</pre>
+
+</section>
+
+
+<section>
+    <!--Complex Variables -->
+    <h1>Complex Variables</h1>
+    <ul>
+        <li class="fragment">Arrays</li>
+        <li class="fragment">Objects</li>
+    </ul>
+</section>
+<section id="arrays">
+    <h1>Arrays</h1>
+    <p>
+        Arrays are used to store a collection of variables.
+    </p>
+    <pre class="fragment">
+<code class="js">
+    var list = ["A", "B", "C", "D"];
+    var list2 = [1, 10, 0, 3];
+    var list3 = [1, 'ten', '0', 3];
+</code>
+</pre>
+</section>
+<section>
+    <h1>Accessing Values in Array</h1>
+    <p>
+        You can access individual items in an array by referencing its index or position. Accessing an invalid index will return
+        <code>undefined</code>.
+    </p>
+    <p class="fragment">
+        Arrays operate off of a "zero" based index. The first position has an index of 0.
+    </p>
+
+    <pre class="fragment">
+<code class="js">
+    var list = ["A", "B", "C", "D"];
+    console.log(list[1]); // Outputs "B"
+    console.log(list[0]); // Outputs "A"
+    console.log(list[20]); // Outputs undefined
+</code>
+</pre>
+
+
+</section>
+
+<section>
+    <h1>Array Methods</h1>
+    <p>
+        There are several different methods to modify an array. We're going to focus primarily on one.
+    </p>
+    <ul>
+        <li class="fragment"><code>push</code> - Adds item to the end of an array</li>
+    </ul>
+    <h1>Array Properties</h1>
+    <ul>
+        <li class="fragment"><code>length</code> - gives the count of items in the array</li>
+    </ul>
+
+
+</section>
+
+<section>
+    <h1>Array Pushing</h1>
+    <pre>
+<code class="js">
+    var x = ["a", "b", "c"];
+    x.push('d');
+    x.push('e');
+    console.log(x);     //["a", "b", "c", "d", "e"];
+</code>
+</pre>
+</section>
+
+
+<section id="js-obj">
+    <h1>JavaScript Objects</h1>
+    <p>
+        Just about everything in JavaScript is an object. Primitive variables are the only things that are not actual objects.
+    </p>
+    <p class="fragment">
+        Objects are variables that contain many variables.
+    </p>
+    <pre>
+<code class="js">
+    var me = {
+        firstName: "Daniel",
+        lastName: "Worthy",
+        age: 60,
+        city: 'Cave Springs',
+        fullName: function(){
+            return this.firstName + " " + this.lastName;
+        }
+    };
+    console.log(me.age) //Outputs 60;
+    console.log(me.height); //Outputs undefined
+    me.height = '5\' 9"';
+    console.log(me.height); //Outputs 5' 9"
+</code>
+</pre>
+
+</section>
+<section>
+    <h1><code>this</code></h1>
+    <h2>The most confusing thing in JavaScript</h2>
+   <pre>
+<code class="js" data-noescape>
+    var <mark>me</mark> = {
+        <mark class="orange">firstName</mark>: "Daniel",
+        <mark class="blue">lastName</mark> "Worthy",
+        age: 60,
+        city: 'Cave Springs',
+        fullName: function(){
+            return <mark>this</mark>.<mark class="orange">firstName</mark> + " " + <mark>this</mark>.<mark class="blue">lastName</mark>;
+        };
+    };
+</code>
+</pre> 
+</section>
+                ﻿<section id="incrementing">
+    <h1>Incrementing and Decrementing</h1>
+    <p>
+        There is a very easy way to increment or decrementing a variable. You can use the <code>++</code> or <code>--</code>        to increment or decrement your variable by 1.
+    </p>
+    <pre class="fragment">
+<code class="js">
+    var x = 0;
+    x++  // equivalent to x = x + 1;
+    console.log(x); //outputs 1
+    x++
+    console.log(x); //outputs 2
+    x--
+    console.log(x); //outputs 1
+</code>
+</pre>
+<h2><a href="//i.imgur.com/UqRewKA.jpg">Example</a></h2>
+</section>
+<section>
+    <h1>JavaScript Loops</h1>
+    <p>
+        Loops in JavaScript are used to execute the same statement multiple times.
+    </p>
+    <h2 class="fragment">There are two types of Loops</h2>
+    <ul>
+        <li class="fragment">For Loops</li>
+        <li class="fragment">While Loops</li>
+    </ul>
+</section>
+<section id="for-loop">
+    <h1>The For Loop</h1>
+    <p>
+        The for loop is most often used when dealing with collections. It is possible to not even execute if the condition evaluates
+        to true.
+    </p>
+    <h2>Syntax</h2>
+    <style>
+        .align-left code{
+            padding:0;
+        }
+    </style>
+    <h4 class="align-left">
+        <code class="fragment">for (</code>
+        <code class="fragment">statement 1;</code>
+        <code class="fragment">statement 2;</code>
+        <code class="fragment">statement 3;</code>
+        <code class="fragment">){</code>
+    </h4>
+    <h4>
+        <code class="fragment">//Code Block</code>
+    </h4>
+    <h4 class="align-left">
+        <code class="fragment">}</code>
+    </h4>
+</section>
+<section>
+    <h1>Code Samples</h1>
+    <pre class="fragment"><code class="js">
+    var x = [1, 2, 3, 4];
+    for(var i = 0; i < x.length; i++){
+        console.log(x[i]);
+    }
+                    </code></pre>
+    <pre class="fragment"><code class="js">
+    var x = [1, 2, 3, 4];
+    var i = 0;
+    for(; i < x.length; i++){
+        console.log(x[i]);
+    }
+                    </code></pre>
+</section>
+<section>
+    <h1>More Examples</h1>
+    <pre><code class="js">
+    var names = ['Daniel', 'Josh', 'Amanda'];
+    var html = "&lt;ul>"
+    for( var i = 0; i < names.length; i++){
+        html = html + '&lt;li>' + names[i] + '&lt;/li>'
+    }
+    html = html + '&lt;/ul>';
+
+                        </code></pre>
+</section>
+<section>
+    <h1>More Examples</h1>
+    <pre><code class="js">
+var names = [
+    { firstname: 'John', lastname: 'Doe'},
+    { firstname: 'Jane', lastname: 'Doe'}
+    ];
+var html = "&lt;ul>"
+for( var i = 0; i < names.length; i++){
+    html = html + '&lt;li>' + names[i].firstname + ' ' + names[i].lastname  + '&lt;/li>'
+}
+html = html + '&lt;/ul>';
+                        </code></pre>
+</section>
+<section>
+<h1>Reverse Loops</h1>
+<pre><code class="js">
+    var array = [1,2,3,4,5]
+    for(var i = array.length; i--;){
+
+    }
+    </code></pre>
+</section>
+<section id="while-loop">
+    <h1>Do and While Loops</h1>
+    <p>
+        Do and While loops are easier to read, but require more care to code properly.
+    </p>
+</section>
+<section>
+    <h2>A While Loop</h2>
+    <p>
+        May not execute depending on the condition.
+    </p>
+    <pre class="fragment">
+<code class="js">
+    var i = 0;
+    while(i < 25){
+        console.log('i is equal to ' + i);
+        i++
+    }
+</code>
+</pre>
+    <h2 class="fargment">Do Loop</h2>
+    <p class="fragment">
+        Will always execute at least once.
+    </p>
+    <pre class="fragment">
+<code class="js">
+    var i = 0;
+    do{
+        console.log('i is equal to ' + i);
+        i++
+    }
+    while (i < 25);
+</code>
+</pre>
+</section>
+<section>
+    <h1>More Examples</h1>
+    <pre class="fragment">
+<code class="js">
+    var condition = false;
+    var i = 0;
+    while(condition == false){
+        if (i > 10){
+           condition = true;
+        }
+
+        i++
+    }
+</code>
+</pre>
+</section>
+<section>
+    <h1>Dangers of Do and While Loops</h1>
+    <h1 class="fragment">Infinite Loops</h1>
+</section>
+
+<section>
+    <h1>JavaScript Scope</h1>
+    <p>
+        Scope is the collection of variables, objects and functions you have the ability to access.
+    </p>
+</section>
+<section>
+    <h1>Local Scope</h1>
+    <p>
+        Local scope is a group of items that can only be accessed within the context it is declared.
+    </p>
+    <pre>
+<code class="js">
+
+    function testing(){
+        var x = 0;
+
+        console.log(x); //logs 0
+    }
+
+    testing();
+
+    console.log(x);  // Causes an error
+
+
+</code>
+</pre>
+</section>
+<section>
+    <h1>Global Scope</h1>
+    <p>
+        Global scope items can be accessed by all JavaScript on the page.
+    </p>
+    <pre>
+<code class="js">
+
+    var x = 0;
+    function testing(){
+
+        console.log(x); //logs 0
+    }
+
+    testing();
+
+    console.log(x);  //logs 0;
+
+
+</code>
+</pre>
+    <aside class="notes">
+        Multi global vars can cause issues with conflicting names.
+    </aside>
+</section>
+                <section id="dates">
+    <h1>JavaScript Dates</h1>
+    <p>
+        Dates are variable types that represent a date and time inside of JavaScript.
+    </p>
+    <aside class="notes">
+        <pre>    [Creates a JavaScript Date instance that represents a single moment in time. Date objects are based on a time value that
+    is the number of milliseconds since 1 January, 1970 UTC.]
+
+    http://stackoverflow.com/questions/1090869/why-is-1-1-1970-the-epoch-time
+</pre>
+    </aside>
+</section>
+<section>
+    <h1>Epoch Time</h1>
+    <p>
+        Dates are stored as the number of milliseconds since January 1, 1970.
+
+    </p>
+    <p class="fragment">
+        Example: 4/5/2017 is roughly - 1491415025702
+    </p>
+    <p class="fragment">
+        Example : 1/1/1777 is roughly - -6090400800000
+    </p>
+    <aside class="notes">
+        Founded in 1972. Year 2038 problem.
+    </aside>
+</section>
+<section>
+    <h1>Date Declaration</h1>
+    <pre class="fragment"><code class="js">//Creates a date variable that is set to now;
+var now = new Date();         </code></pre>
+    <pre class="fragment"><code class="js">// Wed Apr 05 2017 12:57:05 GMT-0500 (Central Daylight Time);
+var newDate = new Date(1491415025702); </code></pre>
+    <pre class="fragment"><code class="js">//Tue Aug 17 2010 12:09:36 GMT-0500 (Central Daylight Time)
+var newDate = new Date("2010/08/17 12:09:36"); 
+//Fri Jan 01 2010 00:00:00 GMT-0600 (Central Standard Time)
+var newDate2 = new Date("1/1/2010");</code></pre>
+</section>
+<section>
+    <h1>More Specific Examples</h1>
+    <pre class="fragment"><code class="js">
+new Date(year, month[, date[, hours[, minutes[, seconds[, milliseconds]]]]]);
+    </code></pre>
+    <p class="fragment">
+        Note: Month is zero based.
+    </p>
+    <pre class="fragment"><code class="js">
+//Tue Feb 01 2010 00:00:00 GMT-0600 (Central Standard Time)
+var d = new Date(2010, 1) 
+    </code></pre>
+    <pre class="fragment"><code class="js">
+//Thu Apr 15 2010 12:04:14 GMT-0500 (Central Daylight Time)
+var d = new Date(2010, 3, 15, 12, 4, 14) 
+    </code></pre>
+</section>
+<section>
+    <h1>How do we set a specific date that we already know?</h1>
+    <h2>Like September 9th, 2017</h2>
+    <pre class="fragment"><code class="js">
+var d = new Date('9/9/2017')
+    </code></pre>
+    <h2 class="fragment">or</h2>
+    <pre class="fragment"><code class="js">
+var d = new Date(2017, 8, 9) 
+    </code></pre>
+
+</section>
+<!--
+<section>
+    <aside class="notes">
+        <pre>
+    examples
+    var today = new Date();
+var birthday = new Date('December 17, 1995 03:24:00');
+var birthday = new Date('1995-12-17T03:24:00');
+var birthday = new Date(1995, 11, 17);
+var birthday = new Date(1995, 11, 17, 3, 24, 0);
+</pre>
+    </aside>
+</section>-->
+<section>
+    <h1>Getting Values</h1>
+    <p>
+        Dates have very long outputs by default, but there are methods to retrieve parts of a date.
+    </p>
+
+    <pre class="fragment"><code class="js">
+var d = new Date(2010, 0, 1);
+console.log(d.getFullYear()); //2010;
+
+console.log(d.getDate()); // 1
+</code></pre>
+    <ul>
+        <li class="fragment">.getMonth()</li>
+        <li class="fragment">.getHours()</li>
+        <li class="fragment">.getMinutes()</li>
+        <li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype" target="_blank">etc.</a></li>
+    </ul>
+</section>
+<section>
+    <h1>Converting Dates to Strings</h1>
+    <pre><code class="js">
+var d = new Date(1993,6, 28);
+console.log(d.toString());     // logs Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
+console.log(d.toDateString()); // logs Wed Jul 28 1993
+console.log(d.toTimeString()); // logs 14:39:07 GMT-0600 (PDT)
+</code></pre>
+</section>
+<section>
+    <h1>It is pretty limited</h1>
+    <h2>We'll resolve that by writing a library.</h2>
+</section>
+<section>
+    <h1>Changing Date Values</h1>
+    <p>
+        We use set methods change these values.
+    </p>
+    <pre><code class="js">
+var d = new Date(2010, 0, 1);
+d.setDate(7)  // 1-7-2010;
+d.setMonth(1) // 2-7-2010;
+d.setHours(40); // 2-8-2010 16:00
+console.log(d);
+        </code></pre>
+    <aside class="notes">
+        <pre>
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setDate
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setMonth
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setMinutes
+    </pre>
+    </aside>
+</section>
+<section>
+    <h1>Comparison</h1>
+    <pre><code class="js">
+var d1 = new Date(1990, 1, 1);
+var d2 = new Date(2000, 1, 1);
+var isNewer = d2 > d1;  //True       
+         </code></pre>
+</section>
+<section>
+    <h1>Adding values</h1>
+    <p>Let's get the current date and add a week to it.</p>
+    <pre class="fragment"><code class="js">
+var d1 = new Date();
+var curDate = d1.getDate(); //Get the number for the current Date
+var newDate = curDate + 7; //Add value to it
+d1.setDate(newDate);    // Set the new date
+console.log(d1); 
+</code></pre>
+
+    <pre class="fragment"><code class="js">
+//Shorter
+var d1 = new Date();
+var newDate = d1.getDate() + 7; 
+d1.setDate(newDate);    
+console.log(d1); 
+</code></pre>
+    <pre class="fragment"><code class="js">
+//Even Shorter
+var d1 = new Date();
+d1.setDate(d1.getDate() + 7);    
+console.log(d1); 
+</code></pre>
+
+</section>
+<section>
+    <h1>More adding</h1>
+    <p>
+        You don't have to stick to the traditional restrictions when adding values.
+    </p>
+    <p class="fragment">
+        You have 90 days from today for a warranty.
+    </p>
+    <p class="fragment">
+        You don't have to calculate the number of months.  JS will automatically handle the overflow.
+    </p>
+    <pre class="fragment"><code class="js">
+var d1 = new Date();
+
+d1.setDate(d1.getDate() + 90);    
+
+console.log(d1); 
+</code></pre>
+</section>
+                <section id="exercise12">
+
+    <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise12" target="_blank">Exercise 12</a></h1>
+   
+</section>
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>

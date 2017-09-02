@@ -36,175 +36,184 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>8/10/2017</h1>
+                    <h1>8/15/2017</h1>
                     <ul>
-                        <li><a href="#css3">CSS3 Intro</a></li>
-                        <li><a href="#rounded">Rounded Corners</a></li>
-                        <li><a href="#opacity">Colors and Opacity</a></li>
-                        <li><a href="#gradients">Color Gradients</a></li>
-                        <li><a href="#descendants">Descendant Selectors</a></li>
- 
+                        <li><a href="#source">Source Control</a></li>
                         <li><a href="#combined">Combined Selectors</a></li>
                         <li><a href="#pseudo">Pseudo Selectors</a></li>
                         <li><a href="#overflow">Overflow</a></li>
                         <li><a href="#adv-text">Text Advanced</a></li>
-                        <li><a href="#exercise7">Exercise 7</a></li>
+                        <li><a href="#html5">HTML 5 Elements</a></li>
+                        <li><a href="#exercise8">Exercise 8</a></li>
+ 
                     </ul>
                 </section>
-               <section id="css3">
-    <h1>CSS 3</h1>
-    <p>CSS3 is the largest batch of changes to CSS. </p>
+              ﻿<section id="source">
+    <h1>What is version control?</h1>
+    <!--Allows you to track collaborate and track and revert changes-->
+</section>
+<section>
+    <h1>Collaboration</h1>
+    <p>
+        Allows you and your team to work together on the same project.
+    </p>
+    <p>
+        The project doesn't have to be a program. You can use a version control system to write a book with other people.
+    </p>
+</section>
+<section>
+    <h1>Change Tracking</h1>
+    <p>
+        Version control create a history of all the changes you want to be saved.
+    </p>
+    <p>
+        It allows you to revert or go back in time if you happen and undo any mistakes that may have been made.
+    </p>
+</section>
+<section>
+    <h1>Types of Version Control Systems</h1>
+    <h2 class="fragment">Centralized</h2>
+    <p class="fragment">
+        Centralized version control has one main server that saves the content.
+    </p>
     <ul>
-        <li class="fragment">Rounded Corners</li>
-        <li class="fragment">Gradients</li>
-        <li class="fragment">Animations</li>
-        <li class="fragment">Advanced Selectors</li>
+        <li class="fragment"> <span class="highlight">Advantages:</span> Easy to learn & tracks history well.</li>
+        <li class="fragment"> <span class="highlight">Disadvantages:</span> Slow &amp; doesn't work well with larger teams.</li>
     </ul>
 </section>
 <section>
-    <h1>Vendor Prefixes</h1>
-    <p>
-        Vendor prefixes are considered 'experimental' properties and should be used with caution.
+    <h1>Distributed Version Control</h1>
+    <p class="framgent">
+        Each user has a fully copy of the history of the project locally and they selectively push updates to the main repository
+        location
     </p>
-    <pre>
-<code class="css">
-   div{
-        /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-        -webkit-border-radius: 12px;
-        /* Firefox 1-3.6 */
-        -moz-border-radius: 12px;
-        /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-        border-radius: 12px;
-    }
-</code>
-</pre>
+    <ul>
+        <li class="fragment"><span class="highlight">Advantages:</span> Fast and popular</li>
+        <li class="fragment"><span class="highlight">Disadvantages:</span> Challenging to learn</li>
+    </ul>
+</section>
+<section>
+    <h1>Terms</h1>
+</section>
+<section>
+    <h1>Git Repository</h1>
+    <p>
+        A location of files and information about all the previous versions of those files.
+    </p>
+</section>
+<section>
+    <h1>Clone</h1>
+    <p>
+        <em>git clone</em> copies an existing repository to a local folder.
+    </p>
+    <pre><code class="bash">
+git clone https://github.com/jquery/jquery.git
 
+</code></pre>
 </section>
-               <section id="rounded">
-    <h1>Rounded Corners</h1>
+<section>
+    <h1>Pull</h1>
     <p>
-        Rounded Corners will probably the most commonly used CSS3 property.
+        <em>git pull</em> pulls down any changes from the source repository into your local repository.
     </p>
-    <pre><code class="css">
-    .round {
-        border-radius: 5px 10px 15px 20px; /* top left, top right, bottom right, bottom left */
-    }
-    .round {
-        border-radius: 50%; /*Creates a circle if length equals height*/
-    }
-</code>
-</pre>
+
+    <pre><code class="bash">
+cd jquery
+git pull
+
+</code></pre>
 </section>
 <section>
-    <h1>Rounded Corners for Buttons</h1>
-   <p data-height="265" data-theme-id="0" data-slug-hash="BdWYjV" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-Rounded Corners" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/BdWYjV/">UA-ITR-Rounded Corners</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Rounded Images</h1>
-  <p data-height="265" data-theme-id="0" data-slug-hash="zdZRBv" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="zdZRBv" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/zdZRBv/">zdZRBv</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-               <section id="opacity">
-    <h1>Colors and Opacity</h1>
+    <h1>Add</h1>
     <p>
-        CSS3 opened up more possibilities for colors and opacity in our CSS
+        You use the <em>git add</em> to tell git to track specific files.
+    </p>
+    <pre><code class="bash">
+#Add a specific file
+git add Readme.md
+
+#Add a whole everything
+git add .
+
+</code></pre>
+</section>
+<section>
+    <h1>Stage</h1>
+    <p>
+        Staging changes informs git about what is about to be changed
     </p>
 </section>
 <section>
-    <h1>RGBA Colors</h1>
+    <h1>Commit</h1>
     <p>
-        <strong>Red</strong>,
-        <strong>Green</strong>,
-        <strong>Blue</strong>, and
-        <strong>Alpha</strong>
+        <em>git commit</em> takes all of the staged changes and creates a historical bookmark of what changes were made,
+        who made them, and a message that is a brief description of the changes.
+    </p>
+    <pre><code class="bash">
+git commit -m "Adding a new page"
+
+#Auto stage modified files
+git commit -a -m "Adding another new page"
+
+</code></pre>
+</section>
+<section>
+    <h1>Push</h1>
+    <p>
+        <em>git push</em> sends the most recent commits to the remote source repository. You must have the latest version
+        of the remote repository for a push to be accepted.
     </p>
     <pre>
-<code class="css">
-    p{
-        background-color:rgba(255, 0, 0, 0.5); /*Red with 50% opacity*/
-    }
-    a{
-        color:rgba(255, 0, 0, 0.5); /*Text will be red with 50% opacity */
-    }
-</code>
-</pre>
+    <code  class="bash">
+#first time push only
+git push -u origin master
+
+git push
+    </code>
+        </pre>
+</section>
+<section>
+    <h1>Merge</h1>
+    <p>
+        A merge occurs whenever there are new commits in the source repository and you have commits that have not yet been pushed
+        to the source repository.
+    </p>
+    <p>
+        Merges happen behind the scenes and are frequently not noticed unless changes conflict with each other.
+    </p>
+</section>
+<section>
+    <h1>Merge Conflict</h1>
+    <p>
+        Merge conflicts occur when changes are made to the same file and git cannot determine which changes should be used.
+    </p>
     <aside class="notes">
-        only changes the background color.
-
+        Demo merge conflict
     </aside>
 </section>
 <section>
-    <h1>Element Opacity</h1>
+    <h1>Fork</h1>
     <p>
-        You can change the full element opacity by using the <code>opacity</code> property.
+        A fork of a repository is a user's personal copy of another user's repository. The user can make changes as they want and
+        continue to pull updates from the source repository.
     </p>
-    <pre>
-<code class="css">
-    p{
-        /*Red with 50% opacity*/
-        background-color:#ff0000;
-        opacity:0.5;
-    }
-</code>
-</pre>
 </section>
 <section>
-    <h1>In Action</h1>
-  <p data-height="319" data-theme-id="0" data-slug-hash="GvWQjQ" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="GvWQjQ" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/GvWQjQ/">GvWQjQ</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-               <section id="gradients">
-    <h1>Gradients</h1>
+    <h1>Pull Request</h1>
     <p>
-        CSS gradients allow you to display a transition from one color to another. Gradients are one of the most vendor prefix heavy
-        CSS properties we will use.
+        A request to take the changes from your repository to be merged into the source repository.
     </p>
-    <pre>
-<code class="css">
-    .button{
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
-        background: #1e5799; /* Old browsers */
-        background: -moz-linear-gradient(top,  #1e5799 0%, #7db9e8 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top,  #1e5799 0%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom,  #1e5799 0%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-    }
-</code>
-</pre>
-    <div>
-        <a href="http://www.colorzilla.com/gradient-editor/" target="_blank">Ultimate CSS Gradient Generator</a>
-    </div>
+    <p>
+        This is how you would contribute to open source software on GitHub
+    </p>
+    <aside class="notes">Demo this</aside>
 </section>
 <section>
-    <h1>Gradients</h1>
-  <p data-height="265" data-theme-id="0" data-slug-hash="ayJqJZ" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-Gradients" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/ayJqJZ/">UA-ITR-Gradients</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
+    <h1>GUI Options</h1>
+    <h2><a href="https://www.sourcetreeapp.com/" target="_blank">SourceTree</a> - Mac and Windows</h2>
+    <h2><a href="https://tortoisegit.org/" target="_blank">Tortoise Git</a> - Windows Only</h2>
 </section>
-               <section id="descendant">
-    <h1>Descendant Selectors</h1>
-    <p>Descendant selectors create a more specific groups of styled content. </p>
-    <pre class="fragment">
-<code class="css">
-    div p{
-        color:#ff0000;
-    }
-</code>
-</pre>
-    <p class="fragment">Any paragraph inside of a div will have red text.</p>
-</section>
-<section>
-    <h1>Example 1</h1>
-   <p data-height="265" data-theme-id="0" data-slug-hash="MvpQmW" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-Descendant Selectors" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/MvpQmW/">UA-ITR-Descendant Selectors</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Example 2</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="rzyJwO" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-Descendant" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/rzyJwO/">UA-ITR-Descendant</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-               <section id="combined">
+              <section id="combined">
     <h1>Combined Selectors</h1>
     <p>
         You can make your selectors more specific by using multiple selectors joined together
@@ -359,45 +368,188 @@
         on <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-               <section id="exercise7">
-    <h3><a href="https://codepen.io/WorthyD/pen/ZJKeVV" target="_blank">Fork This Pen</a></h3>
+               ﻿<section id="html5">
+    <h1>HTML5 Semantic Tags</h1>
     <p>
-        Exercise 7 is going to open up the opportunity to develop your own CSS style.  
-        Do your best to create the image on the next page.  Add classes to the HTML as you see fit.
+        Semantic HTML adds readability to your HTML tags. There aren't strict rules around
     </p>
+    <a href="http://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">Basic Overview</a>
+</section>
+<section>
+    <h1>What do semantic tags look like?</h1>
     <div class="two-col">
-        <div>
-            <h4>Colors</h4>
-            <ul>
-                <li>Red = <code>#aa0000</code></li>
-                <li>Green = <code>#55aa00</code></li>
-                <li>Turquoise - <code>#00aaaa</code></li>
-                <li>Drop and Text Shadows - <code>#000000</code></li>
-            </ul>
+        <div class="fragment">
+            <pre>
+<code class="xml">
+<div class="heading">
+    <h1>Page Title</h1>
+    <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">FAQ</a></li>
+    </ul>
+</div>
+<div class="blog-article">
+    <!--Content-->
+</div>
+</code>
+</pre>
+
         </div>
-        <div>
-            <h4>Rough Dimensions</h4>
-            <ul>
-                <li>Body - 960px wide</li>
-                <li>Header - 128px tall</li>
-                <li>Side Bar - 25%</li>
-                <li>Content Body - 75%</li>
-                <li>Footer - 100%</li>
-            </ul>
+        <div class="fragment">
+            <pre>
+<code class="xml">
+<header>
+    <h1>Page Title</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Contact</a>
+        <a href="#">FAQ</a>
+    </nav>
+</header>
+<article>
+    <!--Content-->
+</article>
+</code>
+</pre>
+
+
+
+
+
         </div>
     </div>
-    <h5>All hyperlinks should be underlined when you hover over them.</h5>
 </section>
 <section>
-    <a href="../images/exercises/exercise7.png" target="_blank">
-    <img src="../images/exercises/exercise7.png"/>
-    </a>
+    <h1><code>section</code></h1>
+    <p>
+        A <code>section</code> declares a basic grouping of similar content.
+    </p>
+    <ul>
+        <li class="fragment">Base Tag <strong>&lt;section&gt;&lt;/section&gt;</strong></li>
+        <li class="fragment">Display type <strong>block</strong></li>
+        <li class="fragment">
+            Examples:
+            <ul>
+                <li class="fragment">Grouping of images</li>
+                <li class="fragment">About an author</li>
+                <li class="fragment">Group of blog categories</li>
+            </ul>
+        </li>
+    </ul>
 </section>
 <section>
-    <h1>Also</h1>
-    <h2>The JS panel has some commented out questions.   Answer them using your dev tools.</h2>
+    <h1><code>article</code></h1>
+    <p>
+        Use of the <code>article</code> tag represents a block of content that can be read independently from the rest of
+        the site.
+    </p>
+    <ul>
+        <li class="fragment">Base Tag <strong>&lt;article&gt;&lt;/article&gt;</strong></li>
+        <li class="fragment">Display type <strong>block</strong></li>
+        <li class="fragment">
+            Examples:
+            <ul>
+                <li class="fragment">News Article</li>
+                <li class="fragment">User submitted comment</li>
+                <li class="fragment">Twitter Post</li>
+            </ul>
+        </li>
+
+    </ul>
+</section>
+<section>
+    <h1><code>aside</code></h1>
+    <p>
+        <code>Aside</code> contains content related to the surrounding content.
+    </p>
+    <ul>
+        <li class="fragment">Base Tag <strong>&lt;aside&gt;&lt;/aside&gt;</strong></li>
+        <li class="fragment">Display type <strong>block</strong></li>
+        <li class="fragment">
+            Examples:
+            <ul>
+                <li class="fragment">Sidebar</li>
+                <li class="fragment">Notes</li>
+            </ul>
+        </li>
+
+    </ul>
+</section>
+<section>
+    <h1><code>header</code></h1>
+    <p>
+        The <code>header</code> element identifies basic information about the following content.
+    </p>
+    <ul>
+        <li class="fragment">Base Tag <strong>&lt;header&gt;&lt;/header&gt;</strong></li>
+        <li class="fragment">Display type <strong>block</strong></li>
+        <li class="fragment">Cannot be placed within a <code>footer</code> or another <code>header</code></li>
+        <li class="fragment">
+            Examples:
+            <ul>
+                <li class="fragment">Site header</li>
+                <li class="fragment">Header of an article</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1><code>footer</code></h1>
+    <p>
+        The <code>footer</code> element identifies basic information about the following content.
+    </p>
+    <ul>
+        <li class="fragment">Base Tag <strong>&lt;footer&gt;&lt;/footer&gt;</strong></li>
+        <li class="fragment">Display type <strong>block</strong></li>
+        <li class="fragment">
+            Examples:
+            <ul>
+                <li class="fragment"><code>article</code> author information</li>
+                <li class="fragment"><code>article</code> related documents</li>
+                <li class="fragment">Website footer links.</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+
+<section>
+    <h1><code>nav</code></h1>
+    <p>
+        The <code>nav</code> element is used to define a list of major navigation links.
+    </p>
+    <ul>
+        <li class="fragment">Base Tag <strong>&lt;nav&gt;&lt;/nav&gt;</strong></li>
+        <li class="fragment">Display type <strong>block</strong></li>
+        <li class="fragment">
+            Examples:
+            <ul>
+                <li class="fragment">Main site navigation</li>
+                <li class="fragment">List of reference articles in an <code>article</code></li>
+            </ul>
+        </li>
+    </ul>
+</section>
+               <section id="exercise8">
+    <h1><a href="https://codepen.io/WorthyD/pen/VzbRgq?editors=1000">Fork This Pen</a></h1>
+    <h2>
+        Replace HTML tags with appropriate HTML5 tags.
+    </h2>
+    <h3>Example</h3>
+    <pre><code class="xml">
+    <div class="main-navigation"></div>        
+
+    <nav class="main-navigation"></nav>
+
+    </code></pre>
+    <!-- https://codepen.io/WorthyD/pen/VzbRgq?editors=1000-->
+    <h3>Tidy up the CSS by replacing classes with tag names</h3>
+
 
 </section>
+
 
            </div>
 

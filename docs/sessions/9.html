@@ -38,31 +38,149 @@
                 <section class="review">
                     <h1>8/8/2017</h1>
                     <ul>
-                       <li><a href="#/selectors-grouping">New Selectors</a></li>
+                        <li><a href="#cmd">Command Line</a></li>
+                        <li><a href="#css3">CSS3 Intro</a></li>
+                        <li><a href="#rounded">Rounded Corners</a></li>
+                        <li><a href="#opacity">Colors and Opacity</a></li>
+                        <li><a href="#gradients">Color Gradients</a></li>
+                        <li><a href="#descendants">Descendant Selectors</a></li>
                     </ul>
                 </section>
-               <section id="selectors-grouping">
-    <h1>Grouping Selectors</h1>
+                <section>
+                    <h1>Your Brand Color</h1>
+                    <p>
+                        Start thinking about a primary color you like and want to use in your future websites.
+                    </p>
+                    <p>
+                        You can use a tool like this to generate a color scheme. <a href="https://www.sessions.edu/color-calculator/" target="_blank">Color Calculator</a>
+                    </p>
+                </section>
+                <section>
+                    <h1>Floating Vs Inline-Block</h1>
+                    <ul>
+                        <li class="fragment">More control inside of floating.</li>
+                        <li class="fragment">Less control with spacing with inline-block</li>
+                            <li class="fragment">100 space</li>
+                            <li class="fragment">4 items at 100px</li>
+                            <li class="fragment">Inline Block - Wraps</li>
+                            <li class="fragment">Float - doesn't</li>
+                            <li class="fragment"><a href="https://codepen.io/WorthyD/pen/KvaEMN?editors=0100" target="_blank">Result</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Beautifying Code</h1>
+
+                </section>
+                <section id="cmd">
+    <h1>Command Line</h1>
     <p>
-        You can leverage grouping selectors to share styles between multiple selectors. This can be done by adding a comma between
-        each selector.
+        The Super Basics
     </p>
-    <pre>
-<code class="css">
-    h1, h2, .header, #site-header{
-        color:#ff0000;
-    }
-</code>
-</pre>
 </section>
 <section>
-    <h1>Grouping Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="BdKMKK" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
-        data-pen-title="UA-ITR-Group Selectors" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/BdKMKK/">UA-ITR-Group Selectors</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
-        on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    <h1>Per Platform</h1>
+    <h2>Mac: Terminal</h2>
+    <h2>Win: GitBash</h2>
 </section>
-               <section>
+<section>
+    <h1>Pro Tip</h1>
+    <p>
+        Use tab to auto complete commands and paths. It will save you a lot of time.
+    </p>
+</section>
+<section>
+    <h1>Listing a directory</h1>
+    <h2><code>ls</code></h2>
+    <pre><code class="bash">
+$ ls
+
+MyForks/   presentations/  'year 1 slides'/
+</code></pre>
+</section>
+<section>
+    <h1>Changing a Directory</h1>
+    <h2><code>cd</code></h2>
+    <pre><code class="bash">
+#list directory
+$ ls
+
+MyForks/   presentations/  'year 1 slides'/
+#change directory into MyForks
+$ cd MyForks/
+$ ls
+
+project1/ project2/
+
+</code></pre>
+</section>
+<section>
+    <h1>Directory Shortcuts</h1>
+    <ul>
+        <li class="fragment"><code>.</code> - Current Directory</li>
+        <li class="fragment"><code>..</code> - Parent Directory</li>
+        <li class="fragment"><code>~</code> - User Home - C:\users\daniel.worthy</li>
+        <li class="fragment"><code>/</code>  - Root</li>
+    </ul>
+</section>
+<section>
+    <h1>Displaying your current path.</h1>
+    <p>Got lost in your console? Use the print working directory command to get a full path of your current location</p>
+    <h2><code>pwd</code></h2>
+
+    <pre><code class="bash">
+$ cd ~
+$ pwd
+/home/daniel.worthy
+        </code></pre>
+</section>
+<section>
+    <h1>Creating a directory/folder</h1>
+    <p>
+        You can create a new folder by using the make directory command.
+    </p>
+    <h2>mkdir</h2>
+     <pre><code class="bash">
+#list directory
+$ ls
+
+MyForks/   presentations/  'year 1 slides'/
+
+$ mkdir my-work 
+$ ls
+
+my-work/  MyForks/   presentations/  'year 1 slides'/
+
+</code></pre>
+
+</section>
+<section>
+    <h1>Make a file via command line</h1>
+    <h2><code>touch</code></h2>
+     <pre><code class="bash">
+#list directory
+$ ls
+
+my-work/ MyForks/   presentations/  'year 1 slides'/
+
+$ cd my-work 
+$ ls
+
+
+$ touch index.html
+$ ls
+
+index.html
+</code></pre>
+
+
+</section>
+<section>
+    <h1>The Clear Command</h1>
+    <p>
+        You can clear the console by simply typing <code>clear</code> and hitting enter.
+    </p>
+</section>
+                <section id="css3">
     <h1>CSS 3</h1>
     <p>CSS3 is the largest batch of changes to CSS. </p>
     <ul>
@@ -91,7 +209,7 @@
 </pre>
 
 </section>
-               <section>
+                <section id="rounded">
     <h1>Rounded Corners</h1>
     <p>
         Rounded Corners will probably the most commonly used CSS3 property.
@@ -101,20 +219,22 @@
         border-radius: 5px 10px 15px 20px; /* top left, top right, bottom right, bottom left */
     }
     .round {
-        border-radius: 50%; /*Creates a circle*/
+        border-radius: 50%; /*Creates a circle if length equals height*/
     }
 </code>
 </pre>
 </section>
 <section>
     <h1>Rounded Corners for Buttons</h1>
-    <script async src="//jsfiddle.net/WorthyD/nc4hxfmu/embed/html,css,result/"></script>
+   <p data-height="265" data-theme-id="0" data-slug-hash="BdWYjV" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-Rounded Corners" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/BdWYjV/">UA-ITR-Rounded Corners</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1>Rounded Images</h1>
-    <script async src="//jsfiddle.net/WorthyD/d6nb8o3z/embed/html,css,result/"></script>
+  <p data-height="265" data-theme-id="0" data-slug-hash="zdZRBv" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="zdZRBv" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/zdZRBv/">zdZRBv</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-               <section>
+                <section id="opacity">
     <h1>Colors and Opacity</h1>
     <p>
         CSS3 opened up more possibilities for colors and opacity in our CSS
@@ -132,6 +252,9 @@
 <code class="css">
     p{
         background-color:rgba(255, 0, 0, 0.5); /*Red with 50% opacity*/
+    }
+    a{
+        color:rgba(255, 0, 0, 0.5); /*Text will be red with 50% opacity */
     }
 </code>
 </pre>
@@ -157,9 +280,10 @@
 </section>
 <section>
     <h1>In Action</h1>
-    <script async src="//jsfiddle.net/WorthyD/wp51k12L/embed/html,css,result/"></script>
+  <p data-height="319" data-theme-id="0" data-slug-hash="GvWQjQ" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="GvWQjQ" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/GvWQjQ/">GvWQjQ</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-               <section>
+                <section id="gradients">
     <h1>Gradients</h1>
     <p>
         CSS gradients allow you to display a transition from one color to another. Gradients are one of the most vendor prefix heavy
@@ -183,10 +307,40 @@
 </section>
 <section>
     <h1>Gradients</h1>
-    <script async src="//jsfiddle.net/WorthyD/5kb4za8q/embed/html,css,result/"></script>
+  <p data-height="265" data-theme-id="0" data-slug-hash="ayJqJZ" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-Gradients" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/ayJqJZ/">UA-ITR-Gradients</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 </section>
-           </div>
+                <section id="descendant">
+    <h1>Descendant Selectors</h1>
+    <p>Descendant selectors create a more specific groups of styled content. </p>
+    <pre class="fragment">
+<code class="css">
+    div p{
+        color:#ff0000;
+    }
+</code>
+</pre>
+    <p class="fragment">Any paragraph inside of a div will have red text.</p>
+</section>
+<section>
+    <h1>Example 1</h1>
+   <p data-height="265" data-theme-id="0" data-slug-hash="MvpQmW" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-Descendant Selectors" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/MvpQmW/">UA-ITR-Descendant Selectors</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Example 2</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="rzyJwO" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-Descendant" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/rzyJwO/">UA-ITR-Descendant</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section>
+                    <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise%206">Exercise</a></h1>
+                    <h2>Due by Thursday</h2>
+                    
+
+                </section>
+
+            </div>
 
         </div>
 

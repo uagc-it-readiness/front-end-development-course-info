@@ -6,10 +6,21 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
             crossorigin="anonymous">
+        <style>
+            .hide-old tr:nth-child(-n+5) {
+                display: none;
+            }
+
+        </style>
+        <script>
+            var activeRow = 18;
+        </script>
     </head>
 
     <body>
         <div class="container">
+            <h1>FE Class Slides <button id="btnShowAll" class="btn pull-right">Show All</button></h1>
+
             <table class="table table-bordered table-hover table-striped">
                 <thead>
                     <tr>
@@ -20,7 +31,7 @@
                         <th>Assignment</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tablebody" class="hide-old">
                     <tr>
                         <td>
                             <a href="sessions/0.html">Intro Session</a>
@@ -66,8 +77,6 @@
                         <td>HTML Exercise</td>
                         <td></td>
                     </tr>
-
-
                     <tr>
                         <td>
                             <a href="sessions/5.html">Intro to CSS</a>
@@ -104,13 +113,13 @@
                         <td></td>
                         <td><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/blob/master/Assignments/Assignment%201.md">Assignment 1</a></td>
                     </tr>
-                   <tr>
+                    <tr>
                         <td>
                             <a href="sessions/9.html">Slides</a>
                         </td>
                         <td>8/8</td>
                         <td>Descendant Selectors, CSS3, Rounded Corners, Opacity, Gradients</td>
-                        <td>CSS Exercise</td>
+                        <td><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise%206">Exercise</a></td>
                         <td></td>
                     </tr>
                     <tr>
@@ -119,21 +128,21 @@
                         </td>
                         <td>8/10</td>
                         <td>Combined Selectors, Pseudo Selectors, Overflow, Text Effects</td>
-                        <td>CSS Exercise</td>
+                        <td><a href="sessions/10.html#exercise7">Exercise</a></td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="sessions/11.html"></a>
+                            <a href="sessions/11.html">Slides</a>
                         </td>
                         <td>8/15</td>
-                        <td>HTML 5 Semantic Tags </td>
-                        <td>HTML/CSS Exercise</td>
+                        <td>Git, HTML 5 Semantic Tags </td>
+                        <td><a href="sessions/11.html#/exercise8">HTML/CSS Exercise</a></td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="sessions/12.html"></a>
+                            <a href="sessions/12.html">Slides</a>
                         </td>
                         <td>8/17</td>
                         <td>JavaScript Introduction</td>
@@ -143,13 +152,131 @@
 
                     <tr>
                         <td>
-                            <a href="sessions/13.html"></a>
+                            <a href="sessions/13.html">Slides</a>
                         </td>
                         <td>8/19</td>
                         <td>Review & Assessment</td>
                         <td></td>
                         <td>Assessment 1</td>
                     </tr>
+
+
+                    <tr>
+                        <td>
+                            <a href="sessions/14.html">Slides</a>
+                        </td>
+                        <td>8/22</td>
+                        <td>Operators, Comparison, Conditional Statements, Functions, and Output</td>
+                        <td><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise10" target="_blank">Exercise 10</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="sessions/15.html">Slides</a>
+                        </td>
+                        <td>8/24</td>
+                        <td>Methods, Properties, and Arrays</td>
+                        <td><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise11" target="_blank">Exercise 11</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="sessions/16.html">Slides</a>
+                        </td>
+                        <td>8/29</td>
+                        <td>Loops and Dates</td>
+                        <td><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise12">Exercise 12</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="sessions/17.html">Slides</a>
+                        </td>
+                        <td>8/31</td>
+                        <td>DOM Interaction, Adv Selectors</td>
+                        <td><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise13" target="_blank">Exercise 13</a></td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <a href="sessions/18.html">Slides</a>
+                        </td>
+                        <td>9/2*</td>
+                        <td>JS Review</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <a href="sessions/19.html"></a>
+                        </td>
+                        <td>9/5</td>
+                        <td>HTML Forms</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="sessions/20.html"></a>
+                        </td>
+                        <td>9/7</td>
+                        <td>HTML Forms/Styling Forms</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="sessions/21.html"></a>
+                        </td>
+                        <td>9/12</td>
+                        <td>jQuery Introduction</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="sessions/22.html"></a>
+                        </td>
+                        <td>9/14</td>
+                        <td>jQuery Effects</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="sessions/23.html"></a>
+                        </td>
+                        <td>9/16*</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href=""></a>
+                        </td>
+                        <td>9/19</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href=""></a>
+                        </td>
+                        <td>9/21</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+
 
 
 
@@ -168,6 +295,12 @@
                 </tbody>
             </table>
         </div>
+        <script>
+            document.getElementById('btnShowAll').addEventListener('click', function(){
+                document.getElementById('tablebody').classList.toggle('hide-old');
+            });
+            document.querySelectorAll('tr')[activeRow].classList.add('info');
+        </script>
     </body>
 
 </html>

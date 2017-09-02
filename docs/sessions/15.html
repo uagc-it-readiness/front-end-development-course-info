@@ -1,0 +1,1035 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>8/24/2017</h1>
+                    <!--Arrays and Methods-->
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                <li>Exercise Review</li>
+                                <li><a href="#operators">Operators</a></li>
+                                <li><a href="#comparison">Comparison</a></li>
+                                <li><a href="#equality">Equality</a></li>
+                                <li><a href="#conditional">Conditional</a></li>
+                                <li><a href="#functions">Functions</a></li>
+                                <li><a href="#output2">Output 2</a></li>
+                            </ul>
+
+                        </div>
+                        <div>
+                            <h2>New</h2>
+                            <ul>
+                                <li><a href="#terms">Terms</a></li>
+                                <li><a href="#string-props">String Properties</a></li>
+                                <li><a href="#num-meth">Number Methods</a></li>
+                                <li><a href="#arrays">Arrays</a></li>
+                                <li><a href="#js-obj">Objects</a></li>
+                                <li><a href="#undefined">Undefined & null</a></li>
+                                <li><a href="#getbyclassname">getByClassName</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id="exercise10">
+
+    <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise10" target="_blank">Exercise 10</a></h1>
+   
+</section>
+                <section id="operators">
+	<h1>Operators</h1>
+	<p>
+		Operators allow you to take action with your variables.
+	</p>
+</section>
+<section>
+	<h1>Assignment Operators</h1>
+	<ul>
+		<li class="fragment">Equals <code>=</code></li>
+	</ul>
+	<div class="fragment">
+		<pre><code class="js">
+    var y;
+    y = 1;
+    console.log(y); //outputs 1
+                           </code></pre>
+	</div>
+	<h2 class="fragment">More to come</h2>
+</section>
+<section>
+	<h1>Arithmetic Operators</h1>
+	<ul>
+		<li class="fragment">Addition <code>+</code></li>
+		<li class="fragment">Subtraction <code>-</code></li>
+		<li class="fragment">Multiplication <code>*</code></li>
+		<li class="fragment">Division <code>/</code></li>
+	</ul>
+</section>
+<section>
+	<h1>Arithmetic Examples</h1>
+	<div class="two-col">
+		<div class="">
+			<pre class="fragment"><code class="js">
+ var x = 1;
+ var y = 2;
+ var z = x + y;
+ console.log(z); //Outputs 3
+                           </code></pre>
+			<pre class="fragment"><code class="js">
+
+ var a = 10 - 9;
+ console.log(a); //Outputs 1
+
+
+                           </code></pre>
+		</div>
+		<div>
+			<pre class="fragment"><code class="js">
+ var b = 8;
+ var c = 2;
+ var d = b * c
+ console.log(d); //Outputs 16
+                           </code></pre>
+			<pre class="fragment"><code class="js">
+
+ var e = 18 / 2;
+ console.log(e);  //Outputs 9
+
+                           </code></pre>
+		</div>
+	</div>
+</section>
+<section>
+	<h1>Additional Assignment Operators</h1>
+	<ul>
+		<li class="fragment"><code>+=</code></li>
+		<li class="fragment"><code>-=</code></li>
+		<li class="fragment"><code>*=</code></li>
+		<li class="fragment"><code>/=</code></li>
+	</ul>
+</section>
+<section>
+	<h1>Examples</h1>
+	<div class="two-col">
+		<div class="">
+			<pre class="fragment"><code class="js">
+ var x = 1;
+ x += 2; //Equivalent of x = x + 2;
+ console.log(x); //Outputs 3
+
+ var y = 1;
+ y += 2;
+ y += 4;
+ console.log(y); //Outputs j
+
+                           </code></pre>
+			<pre class="fragment"><code class="js">
+
+ var a = 10;
+ a -= 9
+ console.log(a); //Outputs 1
+
+
+                           </code></pre>
+		</div>
+		<div>
+			<pre class="fragment"><code class="js">
+ var x = 2;
+ x *= 2;
+ console.log(x); //Outputs 4
+
+                           </code></pre>
+			<pre class="fragment"><code class="js">
+
+ var e = 18 ;
+ e /= 2
+ console.log(e);  //Outputs 9
+
+                           </code></pre>
+		</div>
+	</div>
+
+</section>
+
+
+<section>
+	<h1>Math Operators follow the <a href="https://en.wikipedia.org/wiki/Order_of_operations" target="_blank">Order of Operations</a></h1>
+	<ul>
+		<li class="fragment">Parentheses</li>
+		<li class="fragment">Exponents</li>
+		<li class="fragment">Multiplication</li>
+		<li class="fragment">Division</li>
+		<li class="fragment">Addition</li>
+		<li class="fragment">Subtraction</li>
+	</ul>
+</section>
+<section>
+	<pre class="fragment"><code class="js">
+	var x = 3 * 4 + 15;
+	console.log(x); // 27
+                           </code></pre>
+	<pre class="fragment"><code class="js">
+	var x = (3*4) + 15;
+	console.log(x); //27
+                           </code></pre>
+	<pre class="fragment"><code class="js">
+	var x = 3 + 6 * (5 + 4) / 3 - 7;
+	console.log(x); //14
+                           </code></pre>
+
+
+</section>
+<section>
+	<h1>Arithmetic Operators with Strings</h1>
+	<p>You can use the <code>+</code> to join variables together into strings</p>
+	<pre class="fragment"><code class="js">
+ var firstName = "Daniel";
+ var lastName = "Worthy";
+ var fullName = firstName + lastName;
+ console.log(fullName); //Outputs DanielWorthy
+                           </code></pre>
+	<pre class="fragment"><code class="js">
+ var firstName = "Daniel";
+ var lastName = "Worthy";
+ var fullName = firstName + " " + lastName + " " + 3;
+ console.log(fullName); //Outputs Daniel Worthy 3
+                           </code></pre>
+</section>
+<section>
+
+	<h1>More Examples</h1>
+	<pre class="fragment"><code class="js">
+ var story = '';
+ story += 'Greetings!';
+ story += 'This is my story.';
+ story += 'It is too long to put on one line.';
+ console.log(story);
+                           </code></pre>
+
+</section>
+<section>
+	<h1>More Examples</h1>
+	<pre class="fragment"><code class="js">
+ var story = '';
+ story += '<h1>Greetings!</h1>';
+ story += '<h2>This is my story.</h2>';
+ story += '<p>It is too long to put on one line.</p>';
+ document.write(story);
+                           </code></pre>
+
+</section>
+
+<section>
+	<h1>Performing Arithmetic on Strings</h1>
+	<p>
+		You can try to run additional arithmetic on string, but it will not yield useful results.
+	</p>
+	<pre class="fragment"><code class="js">
+ var firstName = "Daniel";
+ var twoFirstName = firstName * 2;
+ console.log(twoFirstName);  //Outputs NaN which stands for Not A Number
+                           </code></pre>
+</section>
+<section id="comparison">
+	<h1>Comparison</h1>
+	<p>
+		JavaScript operators are used to test if a condition is true or false.
+	</p>
+</section>
+<section>
+	<h1>Comparison Operators</h1>
+	<ul>
+		<li class="fragment"><code>==</code> and <code>===</code> equals</li>
+		<li class="fragment"><code>!=</code> and <code>!==</code> not equals</li>
+		<li class="fragment"><code>&gt;</code> and <code>&gt;=</code> greater than and greater than or equal to</li>
+		<li class="fragment"><code>&lt;</code> and <code>&lt;=</code> less than and less than or equal to</li>
+	</ul>
+</section>
+<section>
+	<h1>Greater and Less than usage</h1>
+	<div class="two-col">
+		<div class="">
+			<pre class="fragment"><code class="js">
+ var x = 10;
+ var y = x > 9; //true
+ var z = x > 100 //false;
+ var a = x >= 10 //true
+
+
+                           </code></pre>
+		</div>
+		<div>
+			<pre class="fragment"><code class="js">
+ var x = 10;
+ var y = x < 9; //false
+ var z = x < 100 //true;
+ var a = x <= 10 //true
+                            </code></pre>
+		</div>
+	</div>
+</section>
+<section id="equality">
+	<h1>Equality vs. Strict&nbsp;Equality</h1>
+	<div class="fragment">
+		<h2><code>==</code> vs. <code>===</code></h2>
+		<h2><code>!=</code> vs. <code>!==</code></h2>
+	</div>
+	<div class="fragment">
+		<h2><code>==</code> and <code>!=</code> check value </h2>
+		<h2><code>===</code> and <code>!==</code> check value <em>and </em> type </h2>
+	</div>
+</section>
+<section>
+	<h1>Equals confusion</h1>
+	<p>
+		= is not the same as == or ===
+	</p>
+</section>
+<section>
+	<h1>Examples</h1>
+	<div class="two-col">
+		<div class="">
+			<pre class="fragment"><code class="js">
+    1 == '1';            //true
+    1 === '1';           //false
+    1 === 1;             //true
+                           </code></pre>
+			<pre class="fragment"><code class="js">
+    1 != '1';            //false
+    1 !== '1';           //true
+    1 !== 1;             //false
+
+
+                           </code></pre>
+		</div>
+		<div>
+			<pre class="fragment"><code class="js">
+    true == 'true';      //true
+    true === 'true';     //false
+                           </code></pre>
+			<pre class="fragment"><code class="js">
+    false == 0;          //true
+    false === 0;         //false
+    false == ' ';        //true
+    false === ' ' ;      //false
+
+                           </code></pre>
+		</div>
+	</div>
+</section>
+<section>
+	<h1>Logical Operators</h1>
+	<p>
+		We can joining together multiple conditional statements by using logical operators
+	</p>
+	<ul>
+		<li class="fragment"><code>&&</code> - Stands for And </li>
+		<li class="fragment"><code>||</code> - Stands for Or </li>
+	</ul>
+</section>
+<section>
+	<h1>Example</h1>
+	<pre><code class="js">
+    var x = 10;
+    var y = 20;
+    var z = (x > 9 && y < 10);  //Evaluates to false
+                                // x IS greater than 9, BUT y is not less than 10
+    var a = (x === 10 && y===20)  //true
+    var b = (x > 20 || y > 10) // True because y IS greater than 20
+                            </code>      </pre>
+</section>
+<section>
+	<h1>Questions?</h1>
+</section>
+
+<section id="conditional">
+	<h1>Condition Statements</h1>
+	<p>
+		Conditional statements allow us to write code that is capable of performing different actions
+	</p>
+</section>
+<section>
+	<h1>The <code>if</code> statement</h1>
+	<div class="two-col">
+		<div>
+			<div class="fragment">
+				<pre><code class="js">
+var x = true;
+if (x === true){
+//This code will be executed
+}
+		</code></pre>
+			</div>
+			<div class="fragment">
+				<pre><code class="js">
+var x = true;
+if (x === false){ 
+//This code will NOT be executed
+}
+		</code></pre>
+			</div>
+		</div>
+		<div>
+			<div class="fragment">
+				<pre><code class="js">
+if (x > 10 && x < 25){
+//Executes if greater than 10 AND 
+//less than 25
+}
+         </code></pre>
+			</div>
+			<div class="fragment">
+				<pre><code class="js">
+if (x === true || y > 10){
+//This code will execute if x is true
+//OR  y is greater than 10 
+}
+		</code></pre>
+			</div>
+
+		</div>
+	</div>
+
+</section>
+<section>
+	<h1>The <code>else</code> statement</h1>
+	<p>The else statement acts as a catch all.</p>
+	<div class="fragment">
+		<pre><code class="js">
+    var x  = true;
+    if (x === false){
+        //This code will NOT be executed
+    } else {
+        //This code will be executed
+    }
+         </code></pre>
+	</div>
+</section>
+<section>
+	<h1>The <code>else if</code> statement</h1>
+	<p><code>else if</code>s are used after the <code>if</code> block and before the <code>else</code> </p>
+	<div class="fragment">
+		<pre><code class="js">
+    var x  = 2;
+    if (x === 1){
+        //This code will NOT be executed
+    }else if (x === 2){
+        //This code will be executed
+    } else {
+        //This code  will not be reached
+    }
+         </code></pre>
+	</div>
+	<p class="fragment">
+		You can have an infinite number of <code>else if</code> blocks.
+	</p>
+</section>
+<section>
+	<h1>The <code>else if</code> statement</h1>
+	<div class="fragment">
+		<pre><code class="js">
+    var colour  = getColor();
+    if (colour === "yellow"){
+
+    }else if (colour === "red"){
+
+    } else {
+		
+    }
+         </code></pre>
+	</div>
+</section>
+
+<section>
+	<h1>More Equals Problems</h1>
+	<pre><code class="js">
+	if (x = 1){
+		alert(true);   //This will always execute
+	}
+
+	</code></pre>
+	<p>
+		<code>x = 1</code> doesn't fail so JS treats it like a <code>true</code> value
+	</p>
+</section>
+<section>
+	<h1>Questions?</h1>
+</section>
+
+<section id="functions">
+	<h1>Functions</h1>
+	<p>
+		Functions are blocks of code designed to execute a particular task. They help prevent code duplication.
+	</p>
+</section>
+<section>
+	<h1>Simple Function</h1>
+	<pre><code class="js">
+    //Declaring a function
+    function sayHello(){
+        console.log('hello');
+    }
+
+    //Executing function
+    sayHello();
+        </code></pre>
+</section>
+<section>
+	<h1>Functions with Parameters</h1>
+	<div class="fragment">
+		<pre><code class="js">
+    //Declaring a function
+    function sayHello(message){
+        console.log(message);
+    }
+
+    //Executing function
+    sayHello('hello');
+        </code></pre>
+	</div>
+	<div class="fragment">
+		<pre><code class="js">
+    //Declaring a function
+    function sayHello(message1, message2){
+        console.log(message1);
+        console.log(message2);
+    }
+
+    //Executing function
+    sayHello('hello', 'world');
+        </code></pre>
+	</div>
+</section>
+<section>
+	<h1>Functions with Return Values</h1>
+	<div class="fragment">
+		<pre><code class="js">
+    function getArea(height, width){
+        return height * width;
+    }
+    var x = getArea(10, 10);
+    console.log(x); // outputs 100;
+        </code></pre>
+	</div>
+</section>
+<section>
+	<h1>Another way to Declare</h1>
+	<div class="fragment">
+		<pre><code class="js">
+    //Declaring a function
+    function sayHello(message){
+        console.log(message);
+    }
+    var sayHi = function(message){
+        console.log(message);
+    }
+
+    //Executing function
+    sayHello('hello');
+    sayHi('Hi');
+        </code></pre>
+	</div>
+</section>
+<section>
+	<h1>Questions?</h1>
+</section>
+
+<section id="output2">
+	<h1>New Output Method</h1>
+	<p>
+		We are going to select an element out of our HTML and update what is inside its tags.
+	</p>
+</section>
+<section>
+	<h1>Select the element</h1>
+	<h2>
+		<span class="fragment">document</span>
+		<span class="fragment">.</span>
+		<span class="fragment">getElementById</span>
+		<span class="fragment">('myID')</span>
+	</h2>
+	<p class="fragment">
+		This searches our document object model (D.O.M.) and finds the first element that matches the id.
+	</p>
+</section>
+<section>
+	<pre><code class="xml">
+<div id="myID"></div>
+
+&lt;script>
+
+	var elm = document.getElementById('myID'); //Retrieves the proper element
+
+	var elm2 = document.getElementById('myElement'); //return null
+
+&lt;/script>
+
+</code></pre>
+</section>
+<section>
+	<h1>We now have accessed an element. How do we modify it?</h1>
+	<h2 class="fragment">We are going to use a property inside of the object called innerHTML</h2>
+</section>
+<section>
+	<pre class="fragment"><code class="xml">
+
+     <div id="myID">My Text</div>
+
+     &lt;script>
+
+        var elm = document.getElementById('myID');
+
+        console.log(elm.innerHTML); //Outputs 'My Text'
+
+        elm.innerHTML = "Hello World"; //Update's the element
+
+        console.log(elm.innerHTML); //Outputs 'Hello World'
+
+     &lt;/script>
+
+</code></pre>
+</section>
+                
+<section id="terms">
+    <h1>Methods</h1>
+    <p>
+        Methods are actions that can be taken on objects.
+    </p>
+    <div class="fragment">
+        <h1>Properties</h1>
+        <p>
+            Properties are values associated with an object.
+        </p>
+    </div>
+</section>
+<section id="string-props">
+    <h1>String Properties and Methods</h1>
+    <ul>
+        <li class="fragment"><code>length</code> property - returns the number of characters in the string.</li>
+        <li class="fragment"><code>indexOf</code> method - returns the position (index) of the first occurrence of text in a string.</li>
+    </ul>
+</section>
+<section>
+    <h1><code>length</code></h1>
+    <pre>
+<code class="js">
+    var x = "name".length;
+    console.log(x);  // x equals 4
+    var y = "name"
+    console.log(y.length);  //
+</code>
+</pre>
+    <pre class="fragment">
+<code class="js">
+    var username = "danielworthy";
+    var userNameLength = username.length; //12
+    var isValid = (userNameLength > 20 || userNameLength < 10);  //Returns true
+</code>
+</pre>
+</section>
+
+<section>
+    <h1><code>indexOf</code></h1>
+    <pre>
+<code class="js">
+    var x = "name".indexOf("n");  ///// x = 0;
+    var y = "name name name".indexOf("a");  //y = 1;
+    var z = "name".indexOf("z"); // z = -1;
+    var z = "name".indexOf("ame"); // z = 1;
+</code>
+</pre>
+    <pre class="fragment">
+<code class="js">
+    var email = "dan@outlook.com";
+    var isValidEmail = (email.indexOf('@') > -1);
+    console.log(isValidEmail); //true
+</code>
+</pre>
+</section>
+<section id="num-meth">
+    <h1>Number Methods</h1>
+    <p>
+        These methods are considered global methods.
+    </p>
+    <ul>
+        <li class="fragment"><code>parseInt</code> - Attempts to convert a string to an integer</li>
+        <li class="fragment"><code>parseFloat</code> - Attempts to convert a string to a float</li>
+    </ul>
+</section>
+<section>
+    <h1><code>parseInt</code></h1>
+    <pre>
+<code class="js">
+    parseInt("10");         // returns 10
+    parseInt("10.33");      // returns 10
+    parseInt("ten");        // returns NaN
+</code>
+</pre>
+    <pre class="fragment">
+<code class="js">
+    parseInt("10 11 12");   // returns 10
+    parseInt("10 tacos");   // returns 10
+    parseInt("tacos 10");   // returns NaN
+</code>
+</pre>
+</section>
+<section>
+    <h1><code>parseFloat</code></h1>
+    <pre>
+<code class="js">
+    parseFloat("10");         // returns 10
+    parseFloat("10.33");      // returns 10.33
+    parseFloat("ten");        // returns NaN
+</code>
+</pre>
+    <pre class="fragment">
+<code class="js">
+   parseFloat("10 11 12");   // returns 10
+   parseFloat("10 tacos");   // returns 10
+   parseFloat("tacos 10");   // returns NaN
+</code>
+</pre>
+</section>
+<section>
+    <h1>Is it a number?</h1>
+    <p>
+        There is a build in method for determining if a variable is a number.
+    </p>
+     <pre class="fragment">
+<code class="js">
+    var x = "t"
+    //This doesn't work
+    var isNumber = (parseInt(x) === NaN);
+</code>
+</pre>
+
+   
+    <pre class="fragment">
+<code class="js">
+    var x = "t"
+    if (isNaN(x)){
+        //it is NOT a number
+    }else{
+        //It is a number
+    }
+</code>
+</pre>
+
+</section>
+
+
+<section>
+    <!--Complex Variables -->
+    <h1>Complex Variables</h1>
+    <ul>
+        <li class="fragment">Arrays</li>
+        <li class="fragment">Objects</li>
+    </ul>
+</section>
+<section id="arrays">
+    <h1>Arrays</h1>
+    <p>
+        Arrays are used to store a collection of variables.
+    </p>
+    <pre class="fragment">
+<code class="js">
+    var list = ["A", "B", "C", "D"];
+    var list2 = [1, 10, 0, 3];
+    var list3 = [1, 'ten', '0', 3];
+</code>
+</pre>
+</section>
+<section>
+    <h1>Accessing Values in Array</h1>
+    <p>
+        You can access individual items in an array by referencing its index or position. Accessing an invalid index will return
+        <code>undefined</code>.
+    </p>
+    <p class="fragment">
+        Arrays operate off of a "zero" based index. The first position has an index of 0.
+    </p>
+
+    <pre class="fragment">
+<code class="js">
+    var list = ["A", "B", "C", "D"];
+    console.log(list[1]); // Outputs "B"
+    console.log(list[0]); // Outputs "A"
+    console.log(list[20]); // Outputs undefined
+</code>
+</pre>
+
+
+</section>
+
+<section>
+    <h1>Array Methods</h1>
+    <p>
+        There are several different methods to modify an array. We're going to focus primarily on one.
+    </p>
+    <ul>
+        <li class="fragment"><code>push</code> - Adds item to the end of an array</li>
+    </ul>
+    <h1>Array Properties</h1>
+    <ul>
+        <li class="fragment"><code>length</code> - gives the count of items in the array</li>
+    </ul>
+
+
+</section>
+
+<section>
+    <h1>Array Pushing</h1>
+    <pre>
+<code class="js">
+    var x = ["a", "b", "c"];
+    x.push('d');
+    x.push('e');
+    console.log(x);     //["a", "b", "c", "d", "e"];
+</code>
+</pre>
+</section>
+
+
+<section id="js-obj">
+    <h1>JavaScript Objects</h1>
+    <p>
+        Just about everything in JavaScript is an object. Primitive variables are the only things that are not actual objects.
+    </p>
+    <p class="fragment">
+        Objects are variables that contain many variables.
+    </p>
+    <pre>
+<code class="js">
+    var me = {
+        firstName: "Daniel",
+        lastName: "Worthy",
+        age: 60,
+        city: 'Cave Springs',
+        fullName: function(){
+            return this.firstName + " " + this.lastName;
+        }
+    };
+    console.log(me.age) //Outputs 60;
+    console.log(me.height); //Outputs undefined
+    me.height = '5\' 9"';
+    console.log(me.height); //Outputs 5' 9"
+</code>
+</pre>
+
+</section>
+<section>
+    <h1><code>this</code></h1>
+    <h2>The most confusing thing in JavaScript</h2>
+   <pre>
+<code class="js" data-noescape>
+    var <mark>me</mark> = {
+        <mark class="orange">firstName</mark>: "Daniel",
+        <mark class="blue">lastName</mark> "Worthy",
+        age: 60,
+        city: 'Cave Springs',
+        fullName: function(){
+            return <mark>this</mark>.<mark class="orange">firstName</mark> + " " + <mark>this</mark>.<mark class="blue">lastName</mark>;
+        };
+    };
+</code>
+</pre> 
+</section>
+                <section id="undefined">
+    <h1>Undefined</h1>
+    <p><code>Undefined</code> is the value that is given to a variable <strong>before</strong> it has a value. </p>
+    <pre><code class="js">
+    var x;
+    console.log(x); //undefined     
+    x = 10;
+    console.log(x); //10
+    </code></pre>
+</section>
+<section>
+    <h1>Variable hoisting.</h1>
+    <pre><code class="js">
+    console.log(x); //undefined     
+    var x = 10;
+    console.log(x); //10
+    </code></pre>
+    <div class="fragment">
+        <h4>Is actually</h4>
+        <pre><code class="js">
+    var x;
+    console.log(x); //undefined     
+    x = 10;
+    console.log(x); //10
+    </code></pre>
+    </div>
+
+</section>
+<section>
+    <h1>null</h1>
+    <p><code>null</code> is a value given to objects that are not defined.</p>
+    <pre><code class="js">
+var x = null;
+if (x !== null){
+    //perform logic
+}    
+var d = document.getElementById('fdfdfdfdf');
+console.log(d); //null;
+</code></pre>
+</section>
+<section>
+    <h1>Which one do I need to use?</h1>
+    <p>It can get confusing which to use, but there is an easy solution for if statements.</p>
+    <pre><code class="js">
+var d = document.getElementById('yarg');
+if (d){
+    //executes if not null (not found)
+}
+var x;
+if (x){
+    //executes if not undefined
+}
+        </code></pre>
+</section>
+                <section id="getbyclassname">
+    <h1>getElementsByClassName</h1>
+    <p>
+        Allows you to retrieve DOM elements by their class names.
+    </p>
+    <p>
+        There is one major difference between this and getElementById.  This one returns an HTMLCollection which is like an array.
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <pre><code class="js">
+document.getElementsByClassName('side-bar-item')
+        </code></pre>
+        <div class="fragment">
+    <pre><code class="js">
+//targets elements with both user-input and invalid classes
+document.getElementsByClassName('user-input invalid')
+        </code></pre>
+        </div>
+</section>
+<section>
+    <h1>Accessing the object.</h1>
+    <p>
+        To modify the object's properties, we need to loop through them or reference a specific index.
+    </p>
+    <p class="fragment">
+        We haven't covered loops yet so you can just reference by the index.
+    </p>
+        <div class="fragment">
+    <pre><code class="js">
+var elms = document.getElementsByClassName('user-input');
+var elm = elms[0];
+if (elm){
+    elm.innerHTML = "Yay!";
+}
+        </code></pre>
+        </div>
+
+</section>
+                <section>
+                    <h1>Exercise 11</h1>
+                    <ul>
+                        <li><a href="https://github.com/uagc-it-readiness/front-end-development-course-info" target="_blank">Clone this repo</a></li>
+                        <li>Create a repo on GitHub called Exercises.</li>
+                        <li>Clone it and get it all setup.</li>
+                        <li>Copy the folder from Exercise11 from the course info into your new repo. </li>
+                        <li>Perform the exercise in your new repo and push to GitHub when finished.</li>
+                        <li>Send me a link when done.</li>
+                    </ul>
+                </section>
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>

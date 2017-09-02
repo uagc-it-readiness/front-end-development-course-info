@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Assignment 10</title>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+
+    <body>
+        <section class="control-panel">  
+            <input type="button" value="Update Values" id="btnUpdate" />
+        </section>
+        <section class="part-1">
+            <div class="input-group">
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName" />
+            </div>
+            <div class="input-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" />
+            </div>
+            <div class="output">
+                <div>
+                    <strong>First Name + Last Name: </strong>
+                    <span id="p1_fullName"></span>
+                </div>
+                <div>
+                    <strong>Both Fields Filled Out: </strong>
+                    <span id="p1_valid"></span>
+                </div>
+                <div>
+                    <strong>Full Name Length: </strong>
+                    <span id="p1_fullNameLength"></span>
+                </div>
+            </div>
+        </section>
+        <section class="part-2">
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="text" name="emailAddress" id="emailAddress" />
+            </div>
+            <div class="output">
+                <div>
+                    <strong>Email: </strong>
+                    <span id="p2_email"></span>
+                </div>
+                <div>
+                    <strong>Email Address Contains "@": </strong>
+                    <span id="p2_valid"></span>
+                </div>
+                <div>
+                    <strong>Email Length: </strong>
+                    <span id="p2_emailLength"></span>
+                </div>
+            </div>
+        </section>
+        <section class="part-3">
+            <div class="input-group">
+                <label for="randomNumber">Enter a Number</label>
+                <input type="text" name="randomNumber" id="randomNumber" />
+            </div>
+            <div class="output">
+                <div>
+                    <strong>Value: </strong>
+                    <span id="p3_number"></span>
+                </div>
+                <div>
+                    <strong>Is It A Number? </strong>
+                    <span id="p3_valid"></span>
+                </div>
+            </div>
+        </section >
+        <section >
+        <div class="input-group">
+            <label for="arrayValue">Enter a Value</label>
+            <input type="text" name="arrayValue" id="arrayValue" />
+        </div>
+        <div class="output">
+            <div>
+                <strong>Array Length: </strong>
+                <span id="p4_arraylength"></span>
+            </div>
+            <div>
+                <strong>Array: </strong>
+                <span id="p4_valid"></span>
+            </div>
+        </div>
+        </section>
+        <script src="scripts/main.js"></script>
+    </body>
+
+</html>
