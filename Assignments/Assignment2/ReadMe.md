@@ -19,13 +19,13 @@ Write a lightweight JavaScript library for converting dates into readable string
     - `getShortDate` - returns the date in the following format `month/day/year`
         - Example: "1/20/2017", "10/15/2017"
     - `getLongDate` - returns the date in the following format `Month Day, Year`
-        - Example: "January 20th, 2017", "October 15th, 2017"
+        - Example: "January 20, 2017", "October 15, 2017"
     - `getShortDateTime` - returns the date in the following format `month/day/year hour:minutes AM|PM`
         -Example: '1/20/2017 4:20 PM', '10/15/2017 3:00 AM'
     - `getLongDateTime` - returns the date in the following format- `Month Day, Year hour:minutes AM|PM`
-        - Example: "January 20th, 2017 4:20 PM", "October 15th, 2017 3:00 AM"
+        - Example: "January 20, 2017 4:20 PM", "October 15, 2017 3:00 AM"
     - `getExtendedDateTime` - returns the date in the following format- `Day of the week, Month Day, Year hour:minutes AM|PM`
-        - Example: "Friday, January 20th, 2017 4:20 PM", "Sunday, October 15th, 2017 3:00 AM"
+        - Example: "Friday, January 20, 2017 4:20 PM", "Sunday, October 15, 2017 3:00 AM"
 - At the bottom of the file, add console logs to see the output of your methods.        
 - Example to get you going
 ```
