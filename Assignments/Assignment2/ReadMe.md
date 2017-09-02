@@ -1,5 +1,5 @@
 # Assignment 2
-
+Complete the following tasks inside of your UA-Work repository.
 
 ## CSS HTML Component
 Recreate the website in the picture [assignment2.png](assignment2.png).  You'll find two images in this folder to use for the site.  You'll get all the text, font sizes and colors in [text.md](text.md)
