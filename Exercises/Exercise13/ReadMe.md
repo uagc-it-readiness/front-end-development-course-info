@@ -1,5 +1,5 @@
 # Exercise 13
-You are going to be working on attaching event listeners and click events.  All the CSS and HTML is alreay provided to you.
+You are going to be working on attaching event listeners and click events.  All the CSS and HTML is already provided to you.
 
 [Start by forking this CodePen](https://codepen.io/WorthyD/pen/VzVwbP)
 

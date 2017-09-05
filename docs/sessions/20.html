@@ -1,0 +1,658 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>9/7/2017</h1>
+                    <!--Arrays and Methods-->
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                <li><a href="#labels">Labels</a></li>
+                                <li><a href="#buttons">Buttons</a></li>
+                                <li><a href="#input">Inputs</a></li>
+                                <li><a href="#textinput">Text Inputs</a></li>
+                                <li><a href="#radiobutton">Radio Input</a></li>
+                                <li><a href="#checkbox">Check Box</a></li>
+                                <li><a href="#select">Select Box</a></li>
+                                <li><a href="#form">Form Tag</a></li>
+
+
+                            </ul>
+
+                        </div>
+                        <div>
+
+                            <h2>New</h2>
+                            <ul>
+                                <li><a href="#newinputs">New Input Types</a></li>
+                                <li><a href="#attr-selector">Attr Selector</a></li>
+                                <li><a href="#style-forms">Style Forms</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4 style="clear:both;"><a href="#exercise13">Exercise 13</a></h4>
+                </section>
+                ﻿<section id="labels">
+    <h1>Labels</h1>
+    <p>Labels are used to make inputs more accessible. </p>
+    <h3 class="fragment">&lt;label>Content&lt;/label></h3>
+    <h3>Attributes</h3>
+    <ul>
+        <li class="fragment"><code>for</code> - the ID of the corresponding input
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>Usage</h1>
+    <pre><code class="xml">
+            <label for="itemId">Input</label>
+            <input type="text" id="itemId" />
+      </code></pre>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="GvLRdJ" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-Froms1" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/GvLRdJ/">UA-ITR-Froms1</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section id="buttons">
+    <h1>The Button Element</h1>
+    <p>
+        The button element is a clickable element inside of your HTML. The button element can contain content of multiple types inside
+        it.
+    </p>
+    <h3>Attributes</h3>
+    <ul>
+        <li class="fragment"><code>type</code> - defines default behavior of the button.
+            <ul>
+                <li class="fragment"><code>button</code></li>
+                <li class="fragment"><code>reset</code> - Clears inputs when in a form</li>
+                <li class="fragment"><code>submit</code> - Triggers a form submission</li>
+            </ul>
+        </li>
+        <li class="fragment"><code>Name</code></li>
+        <li class="fragment"><code>Value</code></li>
+    </ul>
+    <aside class="notes">
+        Mention the button input. Type is required.
+    </aside>
+
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="oeONyO" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-Froms2" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/oeONyO/">UA-ITR-Froms2</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1><a href="http://www.hongkiat.com/blog/css3-button-tutorials/">Good Examples of CSS3 buttons</a></h1>
+</section>
+                ﻿<section id="inputs">
+    <h1>HTML Inputs</h1>
+    <p>
+        Input elements are the primary way we retrieve information from the user.
+    </p>
+    <h3 class="fragment">&lt;input type="text" value="" /&gt;</h3>
+    <h2 class="fragment">Input Types</h2>
+    <ul>
+        <li class="fragment">text</li>
+        <li class="fragment">password</li>
+        <li class="fragment">radio</li>
+        <li class="fragment">checkbox</li>
+    </ul>
+</section>
+<section>
+    <h1>Input Attributes</h1>
+    <p>
+        There are many different attributes available to us, but we are only going to focus on the basics
+    </p>
+    <ul>
+        <li class="fragment"><code>id</code> and <code>class</code></li>
+        <li class="fragment"><code>type</code> - sets the behavior of the input </li>
+        <li class="fragment"><code>name</code> - represents the input's name inside a form.</li>
+        <li class="fragment"><code>value</code> - represents the current text or value for the input</li>
+        <li class="fragment"><code>placeholder</code> - text displayed before the element is filled out.</li>
+    </ul>
+</section>
+<section id="textinput">
+    <h1>The Text Input</h1>
+    <p>
+        The text input is the most commonly used html input you will use. It represents a single line text.
+    </p>
+    <pre><code class="xml">
+    <input type="text" id="myText" name="myText" value="Hello" />
+                            </code></pre>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="prBoZW" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-Froms3" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/prBoZW/">UA-ITR-Froms3</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>The Password Input</h1>
+    <p>
+        The Password Input is very similar to the text input, but any text put in the textbox will be represented with circles or
+        asterisks.
+    </p>
+    <pre><code class="xml">
+    <input type="password" id="myText" name="myText" value="Hello" />
+                            </code></pre>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="yorLwv" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-Froms4" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/yorLwv/">UA-ITR-Froms4</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section id="radiobutton">
+    <h1>Radio Input</h1>
+    <p>
+        Radio inputs provide the user a list of items where only one can be selected
+    </p>
+    <pre><code class="xml"><input type="radio" name="myradio" value="yes" /></code></pre>
+    <h3>Important Attributes</h3>
+    <ul>
+        <li class="fragment">
+            <code>name</code>
+        </li>
+        <li class="fragment">
+            <code>value</code>
+        </li>
+        <li class="fragment">
+            <code>checked</code>
+        </li>
+    </ul>
+</section>
+<section>
+    <pre>    <code class="xml"><input type="radio" name="myradio" value="yes" checked> Yes<br>
+<input type="radio" name="myradio" value="no"> No<br>
+<input type="radio" name="myradio" value="maybe"> Maybe</code>    </pre>
+
+</section>
+<section>
+    <!--Source example-->
+    <p data-height="265" data-theme-id="0" data-slug-hash="eEoBZm" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-From5" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/eEoBZm/">UA-ITR-From5</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section id="checkbox">
+    <h1>Check box Input</h1>
+    <p>
+        Radio inputs provide the user a list of items where only one can be selected
+    </p>
+    <pre>    <code class="xml"><input type="radio" name="myradio" value="yes" /></code>    </pre>
+    <h3>Important Attributes</h3>
+    <ul>
+        <li class="fragment">
+            <code>name</code>
+        </li>
+        <li class="fragment">
+            <code>value</code>
+        </li>
+        <li class="fragment">
+            <code>checked</code>
+        </li>
+    </ul>
+</section>
+<section>
+    <pre>
+    <code class="xml">
+<input type="checkbox" name="mycheck1" value="yes" checked> Yes<br>
+<input type="checkbox" name="mycheck2" value="no"> No<br>
+    </code>
+    </pre>
+
+</section>
+
+<section>
+    <h1>The <code>select</code> element</h1>
+    <p>
+        Selects, or dropdowns, are used to provide the user the ability to select one of many options. <code>Selects</code>        are composed posed of <code>option</code> tags.
+    </p>
+    <h1 class="fragment">The <code>option</code> element</h1>
+    <p class="fragment">
+        <code>Option</code> are only used inside <code>select</code> elements.
+    </p>
+    <h3 class="fragment">Attributes</h3>
+    <ul>
+        <li class="fragment"><code>selected</code></li>
+        <li class="fragment"><code>value</code></li>
+    </ul>
+</section>
+
+<section>
+    <h1>Select Example</h1>
+    <pre>
+    <code class="xml">
+<select id="myDropDown">
+    <option value="1">Car</option>
+    <option value="2" selected="selected">Van</option>
+    <option value="3">Truck</option>
+    <option value="4">SUV</option>
+</select>
+    </code>
+    </pre>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="brJBeO" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-From6" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/brJBeO/">UA-ITR-From6</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1><code>Textarea</code></h1>
+    <p>
+        The <code>textarea</code> element provides the user with the option for multi line input
+    </p>
+    <p>
+        There are attributes to control its size, but you should use CSS to set its size.
+    </p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="YxMppE" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-From6" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/YxMppE/">UA-ITR-From6</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                ﻿<section id="form">
+    <h1>The Form Tag</h1>
+    <h2 class="fragment">
+        <pre><code class="xml">&lt;form&gt; Content &lt;/form&gt;</code></pre>
+    </h2>
+
+    <h3 class="fragment">Accepted Attributes</h3>
+    <ul>
+        <li class="fragment"><code>action</code> - Represents the url where we are sending the data.</li>
+        <li class="fragment">
+            <code>method</code> - specifies the HTTP method used
+            <ul>
+                <li class="fragment"><code>get</code></li>
+                <li class="fragment"><code>post</code></li>
+            </ul>
+        </li>
+        <li class="fragment"><code>name</code></li>
+   </ul>
+</section>
+
+<section>
+    <h1>The Form Tag</h1>
+<ul>
+        <li class="fragment">
+            <code>autocomplete</code>
+            <ul>
+                <li class="fragment">on</li>
+                <li class="fragment">off</li>
+            </ul>
+        </li>
+        <li class="fragment">
+            <code>novalidate</code>
+        </li>
+ 
+</ul>
+</section>
+<section>
+    <pre>
+<code class="xml">
+<form action="test.html" method="post">
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="firstName" placeholder="First Name" />
+
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="lastName" placeholder="Last Name" />
+
+    <button type="submit">Submit</button>
+</form>
+</code>
+</pre>
+</section>
+
+
+                <section>
+                    <h1>Questions on Review?</h1>
+                </section>
+
+                ﻿<section id="newinputs">
+    <h1>Number Input</h1>
+    <p>
+        The number input allows only numbers. On a mobile device, it will bring up a numeric keyboard.
+    </p>
+    <h2>
+        <pre>
+<code class="xml"><input type="number" name="myNumber" /></code>
+</pre>
+    </h2>
+
+</section>
+<section>
+    <h1>Email Input</h1>
+    <p>
+        The email input provides in browser validation for the user.
+    </p>
+    <h2>
+        <pre>
+<code class="xml"><input type="email" name="myEmail" /></code>
+</pre>
+    </h2>
+
+</section>
+<section>
+    <h1>Hidden Input</h1>
+    <p>
+        Hidden inputs act as they are named. They are hidden on the page, but are submitted by the form
+    </p>
+    <h2>
+        <pre>
+<code class="xml"><input type="hidden" name="myHiddenField" /></code>
+</pre>
+    </h2>
+</section>
+<section>
+    <h1>File Upload</h1>
+    <p>
+        Allows the user to select a file off their computer for upload
+    </p>
+    <h2>
+        <pre>
+<code class="xml"><input type="file" name="myFileUpload" /></code>
+</pre>
+    </h2>
+</section>
+<section>
+    <h1>Search Input</h1>
+    <p>
+        Behaves similar to a text field. Different browsers handle it in different ways.
+    </p>
+    <h2>
+        <pre>
+<code class="xml"><input type="search" name="mySearch" /></code>
+</pre>
+    </h2>
+</section>
+
+<section>
+    <h1>Telephone Input</h1>
+    <p>
+        An input for telephones. Requires a pattern for proper implementation.
+    </p>
+    <h2>
+        <pre>
+<code class="xml"><input type="tel" name="myTelephone" /></code>
+</pre>
+    </h2>
+</section>
+
+<section>
+    <h1>URL Input</h1>
+    <p>
+        Behaves similar to a text field. Phones add a '.com'
+    </p>
+    <h2>
+        <pre>
+<code class="xml"><input type="url" name="myTelephone" /></code>
+</pre>
+    </h2>
+</section>
+
+<section>
+    <h1>New HTML Attributes</h1>
+    <p>Some of these were introduced in HTML5 and help enforce rules without JavaScript</p>
+</section>
+<section>
+    <h1><code>autocomplete</code></h1>
+    <p>Enables or disables autocomplete on an input box. It accepts the value of "on" or "off"</p>
+    <h2>
+        <pre class="fragment">
+<code class="xml"><input type="text" name="myText" autocomplete="off" /></code>
+</pre>
+    </h2>
+</section>
+<section>
+    <h1><code>autofocus</code></h1>
+    <p>Tells the browser what input should have focus when the page is loaded. It does not require a value</p>
+    <h2>
+        <pre class="fragment">
+<code class="xml"><input type="text" name="myText" autofocus /></code>
+</pre>
+    </h2>
+</section>
+
+<section>
+    <h1><code>min</code> and <code>max</code></h1>
+    <p>Sets the min and maximum values a numeric input can have</p>
+    <h2>
+        <pre class="fragment">
+<code class="xml"><input type="number" name="myNumber" min="10" max="100" /></code>
+</pre>
+    </h2>
+</section>
+
+<section>
+    <h1><code>maxlength</code></h1>
+    <p>Sets the maximum number of characters for an input</p>
+    <h2>
+        <pre class="fragment">
+<code class="xml"><input type="text" name="myText" maxlength="10" /></code>
+</pre>
+    </h2>
+</section>
+
+<section>
+    <h1><code>maxlength</code></h1>
+    <p>Sets the maximum number of characters for an input</p>
+    <h2>
+        <pre class="fragment">
+<code class="xml"><input type="text" name="myText" maxlength="10" /></code>
+</pre>
+    </h2>
+</section>
+
+<section>
+    <h1><code>required</code></h1>
+    <p>Tells the browser that this element must be filled out before we submit the form. It does not require a value.</p>
+    <h2>
+        <pre class="fragment">
+<code class="xml"><input type="text" name="myText" required /></code>
+</pre>
+    </h2>
+</section>
+                <section id="attr-selector">
+    <h1>The Attribute Selector</h1>
+    <p>
+        The attribute selector allows you to select elements by their attributes or attribute values.
+    </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <h2 class="fragment">
+        <pre><code class="css">[attr] { /*css*/ }</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="css">[target] { /*css*/ }</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="css">a[target] { /*css*/ }</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="xml"><a href="#" target="_blank">Link</a></code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="xml"><a href="#" >Link</a></code></pre>
+    </h2>
+</section>
+<section>
+    <h1>Working Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="OjGbOr" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-ATTR-Selector" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/OjGbOr/">UA-ITR-ATTR-Selector</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script> 
+</section>
+<section>
+    <h1>Attribute Value Selector</h1>
+    <h2 class="fragment">
+        <pre><code class="css">[attr="value"] { /*css*/ }</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="css">[type="text"] { /*css*/ }</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="css">input[type="text"] { /*css*/ }</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="xml"><input type="text" value="My Value" /></code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="xml"><input type="text" value="My Value" /></code></pre>
+    </h2>
+
+</section>
+<section>
+    <h1>Working Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="GvLNyX" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="GvLNyX" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/GvLNyX/">GvLNyX</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Additional Attribute Selectors</h1>
+</section>
+<section>
+    <h1>Attribute Starts With</h1>
+    <h2 class="fragment">
+        <pre><code class="css">[href^="https"] { /*css*/ }</code></pre>
+    </h2>
+    <h3 class="fragment">
+        <pre><code class="xml"><a href="https://google.com">Google</a></code></pre>
+    </h3>
+</section>
+<section>
+    <h1>Attribute Ends With</h1>
+    <h2 class="fragment">
+        <pre><code class="css">[href$=".com"] { /*css*/ }</code></pre>
+    </h2>
+    <h3 class="fragment">
+        <pre><code class="xml"><a href="https://google.com">Google</a></code></pre>
+    </h3>
+</section>
+<section>
+    <h1>Attribute Contains</h1>
+    <h2 class="fragment">
+        <pre><code class="css">[href*="google"] { /*css*/ }</code></pre>
+    </h2>
+    <h3 class="fragment">
+        <pre><code class="xml"><a href="https://google.com">Google</a></code></pre>
+    </h3>
+</section>
+                <section id="style-forms">
+    <h1>How do we make forms look less boring?</h1>
+    <p>
+        Most inputs have default styling that we've been looking at for years.
+    </p>
+    <p class="fragment">
+        We override the default values.
+    </p>
+</section>
+<section>
+    <h1>Styling Buttons</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="YxgwvQ" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="YxgwvQ" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/YxgwvQ/">YxgwvQ</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Styling inputs</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="WEmrLP" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="WEmrLP" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/WEmrLP/">WEmrLP</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+
+
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>
