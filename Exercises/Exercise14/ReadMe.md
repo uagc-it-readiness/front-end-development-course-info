@@ -50,7 +50,6 @@ In your function for submitting the information, write code to check the followi
 - Email contains an '@' sign
 - Password is filled out
 - A timezone must be selected
-- The 'About' textarea must be filled out
 - The 'Accept Terms and Conditions' must be checked
 
 Build an array of error messages to display to the user when a rule is violated
