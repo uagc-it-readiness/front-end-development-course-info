@@ -1,20 +1,18 @@
 # Assignment 14
 
-In today's assignment you are going to be recreating the form that can be found here: [https://worthyd.github.io/dummy-sites/simple-forms/](https://worthyd.github.io/dummy-sites/simple-forms/)
+In today's assignment you are going to be recreating the form that can be found here: [https://worthyd.github.io/dummy-sites/simple-forms-3/](https://worthyd.github.io/dummy-sites/simple-forms-3/)
 
 Focus on the HTML first, then the JavaScript and then work on the CSS.
 
 ## HTML
 Use what we have learned today to make this form.  It needs to have the following *text* `inputs`.
 
-- First Name
-- Last Name
+- Name
 - Email
 
-It also needs two *password* `inputs`
+It also needs one *password* `input`
 
 - Password
-- Confirm Password
 
 Each element needs to have the following attributes filled out
 
@@ -34,7 +32,6 @@ Add a `select` input to represent the user's time zone.  It needs to have the fo
 - Mountain
 - Pacific
 
-Add a `textarea` that will represent a user's 'About Me' section.
 
 Add two `buttons` with the `type` set to `button` to the bottom of the document. That will represent the following actions.  **Make sure to use the `type` of `button` even though you may be tempted to use `submit` or `reset`**
 
@@ -48,12 +45,10 @@ Perform the following actions
 
 In your function for submitting the information, write code to check the following conditions.
 
-- First Name is filled out
-- Last Name is filled out
+- Name is filled out
 - Email is Filled out
 - Email contains an '@' sign
 - Password is filled out
-- Confirm Password is filled out
 - A timezone must be selected
 - The 'About' textarea must be filled out
 - The 'Accept Terms and Conditions' must be checked

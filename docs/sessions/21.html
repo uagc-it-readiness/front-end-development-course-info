@@ -37,12 +37,14 @@
             <div class="slides">
                 <section class="review">
                     <h1>9/12/2017</h1>
-                    <!--Arrays and Methods-->
                     <div class="two-col">
 
                         <div>
                             <h2>Review</h2>
                             <ul>
+                                 <li><a href="#newinputs">New Input Types</a></li>
+                                <li><a href="#attr-selector">Attr Selector</a></li>
+                                <li><a href="#style-forms">Style Forms</a></li>
                               
                             </ul>
 
@@ -57,6 +59,528 @@
                     </div>
                     <h4 style="clear:both;"><a href="#exercise13">Exercise 13</a></h4>
                 </section>
+                ﻿<section id="newinputs">
+    <h1>Number Input</h1>
+    <p>
+        The number input allows only numbers. On a mobile device, it will bring up a numeric keyboard.
+    </p>
+    <h2>
+        <pre>
+<code class="xml"><input type="number" name="myNumber" /></code>
+</pre>
+    </h2>
+
+</section>
+<section>
+    <h1>Email Input</h1>
+    <p>
+        The email input provides in browser validation for the user.
+    </p>
+    <h2>
+        <pre>
+<code class="xml"><input type="email" name="myEmail" /></code>
+</pre>
+    </h2>
+
+</section>
+<section>
+    <h1>Hidden Input</h1>
+    <p>
+        Hidden inputs act as they are named. They are hidden on the page, but are submitted by the form
+    </p>
+    <h2>
+        <pre>
+<code class="xml"><input type="hidden" name="myHiddenField" /></code>
+</pre>
+    </h2>
+</section>
+<section>
+    <h1>File Upload</h1>
+    <p>
+        Allows the user to select a file off their computer for upload
+    </p>
+    <h2>
+        <pre>
+<code class="xml"><input type="file" name="myFileUpload" /></code>
+</pre>
+    </h2>
+</section>
+<section>
+    <h1>Search Input</h1>
+    <p>
+        Behaves similar to a text field. Different browsers handle it in different ways.
+    </p>
+    <h2>
+        <pre>
+<code class="xml"><input type="search" name="mySearch" /></code>
+</pre>
+    </h2>
+</section>
+
+<section>
+    <h1>Telephone Input</h1>
+    <p>
+        An input for telephones. Requires a pattern for proper implementation.
+    </p>
+    <h2>
+        <pre>
+<code class="xml"><input type="tel" name="myTelephone" /></code>
+</pre>
+    </h2>
+</section>
+
+<section>
+    <h1>URL Input</h1>
+    <p>
+        Behaves similar to a text field. Phones add a '.com'
+    </p>
+    <h2>
+        <pre>
+<code class="xml"><input type="url" name="myTelephone" /></code>
+</pre>
+    </h2>
+</section>
+
+<section>
+    <h1>New HTML Attributes</h1>
+    <p>Some of these were introduced in HTML5 and help enforce rules without JavaScript</p>
+</section>
+<section>
+    <h1><code>autocomplete</code></h1>
+    <p>Enables or disables autocomplete on an input box. It accepts the value of "on" or "off"</p>
+    <h2>
+        <pre class="fragment">
+<code class="xml"><input type="text" name="myText" autocomplete="off" /></code>
+</pre>
+    </h2>
+</section>
+<section>
+    <h1><code>autofocus</code></h1>
+    <p>Tells the browser what input should have focus when the page is loaded. It does not require a value</p>
+    <h2>
+        <pre class="fragment">
+<code class="xml"><input type="text" name="myText" autofocus /></code>
+</pre>
+    </h2>
+</section>
+
+<section>
+    <h1><code>min</code> and <code>max</code></h1>
+    <p>Sets the min and maximum values a numeric input can have</p>
+    <h2>
+        <pre class="fragment">
+<code class="xml"><input type="number" name="myNumber" min="10" max="100" /></code>
+</pre>
+    </h2>
+</section>
+
+<section>
+    <h1><code>maxlength</code></h1>
+    <p>Sets the maximum number of characters for an input</p>
+    <h2>
+        <pre class="fragment">
+<code class="xml"><input type="text" name="myText" maxlength="10" /></code>
+</pre>
+    </h2>
+</section>
+
+<section>
+    <h1><code>maxlength</code></h1>
+    <p>Sets the maximum number of characters for an input</p>
+    <h2>
+        <pre class="fragment">
+<code class="xml"><input type="text" name="myText" maxlength="10" /></code>
+</pre>
+    </h2>
+</section>
+
+<section>
+    <h1><code>required</code></h1>
+    <p>Tells the browser that this element must be filled out before we submit the form. It does not require a value.</p>
+    <h2>
+        <pre class="fragment">
+<code class="xml"><input type="text" name="myText" required /></code>
+</pre>
+    </h2>
+</section>
+                <section id="attr-selector">
+    <h1>The Attribute Selector</h1>
+    <p>
+        The attribute selector allows you to select elements by their attributes or attribute values.
+    </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <h2 class="fragment">
+        <pre><code class="css">[attr] { /*css*/ }</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="css">[target] { /*css*/ }</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="css">a[target] { /*css*/ }</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="xml"><a href="#" target="_blank">Link</a></code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="xml"><a href="#" >Link</a></code></pre>
+    </h2>
+</section>
+<section>
+    <h1>Working Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="OjGbOr" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-ATTR-Selector" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/OjGbOr/">UA-ITR-ATTR-Selector</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script> 
+</section>
+<section>
+    <h1>Attribute Value Selector</h1>
+    <h2 class="fragment">
+        <pre><code class="css">[attr="value"] { /*css*/ }</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="css">[type="text"] { /*css*/ }</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="css">input[type="text"] { /*css*/ }</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="xml"><input type="text" value="My Value" /></code></pre>
+    </h2>
+</section>
+<section>
+    <h1>Working Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="GvLNyX" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="GvLNyX" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/GvLNyX/">GvLNyX</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Additional Attribute Selectors</h1>
+</section>
+<section>
+    <h1>Attribute Starts With</h1>
+    <h2 class="fragment">
+        <pre><code class="css">[href^="https"] { /*css*/ }</code></pre>
+    </h2>
+    <h3 class="fragment">
+        <pre><code class="xml"><a href="https://google.com">Google</a></code></pre>
+    </h3>
+</section>
+<section>
+    <h1>Attribute Ends With</h1>
+    <h2 class="fragment">
+        <pre><code class="css">[href$=".com"] { /*css*/ }</code></pre>
+    </h2>
+    <h3 class="fragment">
+        <pre><code class="xml"><a href="https://google.com">Google</a></code></pre>
+    </h3>
+</section>
+<section>
+    <h1>Attribute Contains</h1>
+    <h2 class="fragment">
+        <pre><code class="css">[href*="google"] { /*css*/ }</code></pre>
+    </h2>
+    <h3 class="fragment">
+        <pre><code class="xml"><a href="https://google.com">Google</a></code></pre>
+    </h3>
+</section>
+                <section id="style-forms">
+    <h1>How do we make forms look less boring?</h1>
+    <p>
+        Most inputs have default styling that we've been looking at for years.
+    </p>
+    <p class="fragment">
+        We override the default values.
+    </p>
+</section>
+<section>
+    <h1>Styling Buttons</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="YxgwvQ" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="YxgwvQ" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/YxgwvQ/">YxgwvQ</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Styling inputs</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="WEmrLP" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="WEmrLP" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/WEmrLP/">WEmrLP</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section>
+                    <h1>Questions?</h1>
+                </section>
+                <section>
+    <h1>Basic CSS Selectors</h1>
+    <ul>
+        <li class="fragment">universal</li>
+        <li class="fragment">tag</li>
+        <li class="fragment">class</li>
+        <li class="fragment">id</li>
+        <li class="fragment">descendant</li>
+        <li class="fragment">grouped</li>
+        <li class="fragment">chaining</li>
+    </ul>
+</section>
+<section>
+    <h1>The Universal CSS Selector</h1>
+    <h1 class="fragment">
+        <pre><code class="css">* { /*css rules*/ }</code></pre>
+    </h1>
+    <h2 class="fragment">Applies CSS rules to every element on the page</h2>
+</section>
+<section>
+    <h1>Example</h1>
+    <h1 class="fragment">
+        <pre><code class="css">* { color : red}</code></pre>
+    </h1>
+    <div class="fragment">
+        <p data-height="265" data-theme-id="0" data-slug-hash="eEaXoG" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+            data-pen-title="UA-ITR-UniversalSelector" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/eEaXoG/">UA-ITR-UniversalSelector</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+            on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    </div>
+</section>
+<section>
+    <h1>The tag selector</h1>
+    <h1 class="fragment">
+        <pre><code class="css">h1 { /*css rules*/ }</code></pre>
+    </h1>
+    <p class="fragment">
+        Applies rules to all tags that match.
+    </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="VzORNg" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-Tag Selector" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/VzORNg/">UA-ITR-Tag Selector</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>The Descendant Selector</h1>
+    <h1 class="fragment">
+        <pre><code class="css">div p {/*css rules*/ }</code></pre>
+    </h1>
+    <h1 class="fragment">
+        <pre><code class="css">.my-container p {/*css rules*/ }</code></pre>
+    </h1>
+    <h1 class="fragment">
+        <pre><code class="css">.my-container p .highlight {
+    /*css rules*/ 
+}</code></pre>
+    </h1>
+    <h2 class="fragment">Applies rules to any descendants that match the selector. It can be 1 or 10 levels deep.</h2>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="NvVJZr" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-Descendant Selector" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/NvVJZr/">UA-ITR-Descendant Selector</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Grouping Selectors</h1>
+    <h1 class="fragment">
+        <pre><code class="css">div, p {/*css rules*/ }</code></pre>
+    </h1>
+    <h2 class="fragment"> You can leverage grouping selectors to share styles between multiple selectors. This can be done by adding a comma between
+        each selector.
+    </h2>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="mMYoNN" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-GroupingSelector" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/mMYoNN/">UA-ITR-GroupingSelector</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<!-- Chaining
+
+    https://jsfiddle.net/WorthyD/s6pqmrow/
+    -->
+<section>
+    <h1>Combined Selectors</h1>
+    <p>
+        You can make your selectors more specific by using multiple selectors joined together
+    </p>
+    <h2 class="fragment"><code>div.class {}</code></h2>
+    <h2 class="fragment"><code>.class1.class2 {}</code></h2>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="gxJyOb" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-CombinedSelectors" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/gxJyOb/">UA-ITR-CombinedSelectors</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+                <!--
+
+    "Why do you need to understand how it works if the library will take care of it for you? The most compelling reason is performance. Understanding how DOM modification works in libraries can allow you to write better and faster code."
+-->
+<section>
+    <section>
+        <h1>jQuery</h1>
+        <p>
+            jQuery was introduced in late 2006. It is designed to help developers write consistent cross browser compatible JavaScript.
+            It's used by roughly 65% of the top 10 million most popular websites on the internet. This is down due to rise
+            of more complex libraries such as Angular and React.
+        </p>
+    </section>
+    <section>
+        <h1>jQuery Syntax</h1>
+        <p>jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle
+            events, and develop Ajax applications. </p>
+        <p class="fragment">
+            jQuery is designed to be easily extended to create complex plugins that can be implemented quickly.
+        </p>
+    </section>
+    <section>
+        <h1>Example</h1>
+        <script async src="//jsfiddle.net/WorthyD/06040enh/embed/"></script>
+        <a href="https://jsfiddle.net/WorthyD/06040enh/" target="_blank">Link</a>
+    </section>
+    <section>
+        <h1>Useful References</h1>
+        <ul>
+            <li class="fragment"><a href="http://api.jquery.com/" target="_blank">jQuery API</a></li>
+            <li class="fragment"><a href="https://learn.jquery.com/" target="_blank">Learn jQuery</a></li>
+            <li class="fragment"><a href="http://jqfundamentals.com/" target="_blank">jQuery Fundamentals</a></li>
+            <li class="fragment"><a href="http://youmightnotneedjquery.com/" target="_blank">You Might Not Need Jquery</a></li>
+        </ul>
+    </section>
+    <section>
+        <h1>Including jQuery</h1>
+        <p>
+            We need to include a reference to jQuery so that we can use it. We can do this several different ways.
+        </p>
+        <ul>
+            <li class="fragment">Locally Hosting It</li>
+            <li class="fragment"><a href="https://developers.google.com/speed/libraries/#jquery">Using a CDN copy</a></li>
+        </ul>
+        <p class="fragment">
+            Your jQuery reference needs to be the first JavaScript include at the bottom of the page.
+        </p>
+        <aside class="notes">
+            Demo this.
+        </aside>
+    </section>
+</section>
+<section>
+    <h1>The jQuery object</h1>
+    <h1 class="fragment">
+        <pre><code class="js">$(element)</code></pre>
+    </h1>
+    <h1 class="fragment" or></h1>
+    <h1 class="fragment">
+        <pre><code class="js">$('selector')</code></pre>
+    </h1>
+    <h2 class="fragment">We can do just about anything we want after this.</h2>
+</section>
+<section>
+    <section>
+        <h1>document.ready</h1>
+        <p>The document.ready method allows you to setup code to not execute until the page is ready for manipulation.</p>
+        <pre><code class="js">
+            $(document).ready(function(){
+                console.log('We are ready!');
+            });
+            </code></pre>
+    </section>
+</section>
+<section>
+    <section>
+        <h1>Selectors</h1>
+        <p>Selectors provide an easy way to retrieve elements from the DOM</p>
+        <h3 class="fragment">
+            <pre><code class="js">$('a')</code></pre>
+        </h3>
+        <h3 class="fragment">
+            <pre><code class="js">$('input')</code></pre>
+        </h3>
+        <h3 class="fragment">
+            <pre><code class="js">$('form .btn')</code></pre>
+        </h3>
+        <h3 class="fragment">
+            <pre><code class="js">$('.list')</code></pre>
+        </h3>
+        <h3 class="fragment">
+            <pre><code class="js">$('#btnSubmit')</code></pre>
+        </h3>
+    </section>
+</section>
+<section>
+    <h1>jQuery Events</h1>
+    <p>
+        Wiring up events are pretty straight forward and are easier to read than raw JavaScript.
+    </p>
+    <div class="fragment">
+        <h3>Old Way</h3>
+        <pre class="fragment"><code class="js">
+    document.getElementById('button').addEventListener('click', update);
+            </code></pre>
+    </div>
+    <div class="fragment">
+        <h3>jQuery Way</h3>
+        <pre class="fragment"><code class="js">
+    $('#button').on('click', update);
+            </code></pre>
+    </div>
+    <a href="https://api.jquery.com/category/events/" class="fragment">API Reference</a>
+</section>
+<section>
+    <section>
+        <h1>jQuery HTML</h1>
+        <p>jQuery can make modifying HTML a lot easier.</p>
+    </section>
+    <section>
+        <h1>Getting HTML</h1>
+        <div class="fragment">
+            <h3>Old Way</h3>
+            <pre> <code class="js">
+    var html = document.getElementById('button').innerHTML           </code></pre>
+        </div>
+        <div class="fragment">
+            <h3>New Way</h3>
+            <pre> <code class="js">
+    var html = $('button').html()           </code></pre>
+        </div>
+    </section>
+    <section>
+        <h1>Setting HTML</h1>
+        <div class="fragment">
+            <h3>Old Way</h3>
+            <pre> <code class="js">
+    document.getElementById('button').innerHTML = "New HTML";           </code></pre>
+        </div>
+        <div class="fragment">
+            <h3>New Way</h3>
+            <pre> <code class="js">
+     $('button').html('New HTML')           </code></pre>
+        </div>
+    </section>
+</section>
+<section>
+    <section>
+        <h1>jQuery Input Values</h1>
+        <p>You can interact and modify input values a lot like you to html</p>
+    </section>
+    <section>
+        <h1>Getting Values</h1>
+        <div class="fragment">
+            <h3>Old Way</h3>
+            <pre> <code class="js">
+    var value = document.getElementById('button').value           </code></pre>
+        </div>
+        <div class="fragment">
+            <h3>New Way</h3>
+            <pre> <code class="js">
+    var html = $('button').val()           </code></pre>
+        </div>
+    </section>
+    <section>
+        <h1>Setting Val</h1>
+        <div class="fragment">
+            <h3>Old Way</h3>
+            <pre> <code class="js">
+    document.getElementById('button').value = "New Value";           </code></pre>
+        </div>
+        <div class="fragment">
+            <h3>New Way</h3>
+            <pre> <code class="js">
+     $('button').val('New Value')           </code></pre>
+        </div>
+    </section>
+</section>
+ 
       
 
             </div>
