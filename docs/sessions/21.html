@@ -53,11 +53,16 @@
 
                             <h2>New</h2>
                             <ul>
-                            
+                                <li><a href="#reset">CSS Reset</a></li>
+                                <li><a href="#box-sizing">Box Sizing</a></li>
+                                <li><a href="#basic-selectors">Basic Selector Review</a></li>
+                                <li><a href="#jquery">jQuery</a></li>
+                                <li><a href="#selectors">jQuery Selectors</a></li>
+                                <li><a href="#jqhtml">jQuery HTML and Value</a></li>
                            </ul>
                         </div>
                     </div>
-                    <h4 style="clear:both;"><a href="#exercise13">Exercise 13</a></h4>
+                    <h4 style="clear:both;"><a href="#exercise15">Exercise 15</a></h4>
                 </section>
                 ﻿<section id="newinputs">
     <h1>Number Input</h1>
@@ -185,16 +190,6 @@
 </section>
 
 <section>
-    <h1><code>maxlength</code></h1>
-    <p>Sets the maximum number of characters for an input</p>
-    <h2>
-        <pre class="fragment">
-<code class="xml"><input type="text" name="myText" maxlength="10" /></code>
-</pre>
-    </h2>
-</section>
-
-<section>
     <h1><code>required</code></h1>
     <p>Tells the browser that this element must be filled out before we submit the form. It does not require a value.</p>
     <h2>
@@ -202,6 +197,10 @@
 <code class="xml"><input type="text" name="myText" required /></code>
 </pre>
     </h2>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="rzEKZB" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/rzEKZB/">UA-ITR</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
                 <section id="attr-selector">
     <h1>The Attribute Selector</h1>
@@ -304,7 +303,72 @@
                 <section>
                     <h1>Questions?</h1>
                 </section>
-                <section>
+                <section id="reset">
+    <h1>CSS Resets</h1>
+    <p>
+        Browsers (in the past) have been incredibly inconsistent with the default styling of elements. To bring everything to zero
+        and build up from there.
+    </p>
+</section>
+<section>
+    <h1>Reset usage</h1>
+    <p>
+        Resets must be the first thing in your CSS file.  You can either create a separate reset.css file or include these styles at the very beginning of your CSS.
+    </p>
+</section>
+<section>
+    <h1>The Eric Meyer's Reset</h1>
+    <p>
+        Originated in 2007. It is still used today. It's purpose is to bring all default values to zero.
+    </p>
+</section>
+<section>
+    <h1>No Reset</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="RZzBwQ" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-CSS-Reset" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/RZzBwQ/">UA-ITR-CSS-Reset</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>With Reset</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="OjewPo" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-CSS-Reset" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/OjewPo/">UA-ITR-CSS-Reset</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Normalize.css</h1>
+    <p>
+        Normalize is a more modern approach to a CSS reset. It is larger in size, but leaves a lot of the default styling.  
+    </p>
+    <a href="https://github.com/necolas/normalize.css/">Normalize.css Repository</a>
+    <a href="https://github.com/necolas/normalize.css/blob/master/normalize.css">Normalize.css file</a>
+</section>
+
+                <section id="box-sizing">
+    <h1>Box Sizing</h1>
+    <p>
+        Box sizing tells the browser what to include in the overall height and width of an element.
+    </p>
+    <pre><code class="css">.elm{ box-sizing: [value]}</code></pre>
+    <ul>
+        <li class="fragment"><code>content-box</code> - content is the only thing that is included in the height and width</li>
+        <li class="fragment"><code>border-box</code> - content, padding, and border are included. Not margin</li>
+    </ul>
+</section>
+<section>
+    <h1>Example with defaults</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="oerMGE" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-BoxSizing" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/oerMGE/">UA-ITR-BoxSizing</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Changing the box sizing</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="gxNjGZ" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-BoxSizing" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/gxNjGZ/">UA-ITR-BoxSizing</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section id="basic-selectors">
     <h1>Basic CSS Selectors</h1>
     <ul>
         <li class="fragment">universal</li>
@@ -406,53 +470,51 @@
 
     "Why do you need to understand how it works if the library will take care of it for you? The most compelling reason is performance. Understanding how DOM modification works in libraries can allow you to write better and faster code."
 -->
+<section id="jqeury">
+    <h1>jQuery</h1>
+    <p>
+        jQuery was introduced in late 2006. It is designed to help developers write consistent cross browser compatible JavaScript.
+        It's used by roughly 65% of the top 10 million most popular websites on the internet. This is down due to rise of
+        more complex libraries such as Angular and React.
+    </p>
+</section>
 <section>
-    <section>
-        <h1>jQuery</h1>
-        <p>
-            jQuery was introduced in late 2006. It is designed to help developers write consistent cross browser compatible JavaScript.
-            It's used by roughly 65% of the top 10 million most popular websites on the internet. This is down due to rise
-            of more complex libraries such as Angular and React.
-        </p>
-    </section>
-    <section>
-        <h1>jQuery Syntax</h1>
-        <p>jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle
-            events, and develop Ajax applications. </p>
-        <p class="fragment">
-            jQuery is designed to be easily extended to create complex plugins that can be implemented quickly.
-        </p>
-    </section>
-    <section>
-        <h1>Example</h1>
-        <script async src="//jsfiddle.net/WorthyD/06040enh/embed/"></script>
-        <a href="https://jsfiddle.net/WorthyD/06040enh/" target="_blank">Link</a>
-    </section>
-    <section>
-        <h1>Useful References</h1>
-        <ul>
-            <li class="fragment"><a href="http://api.jquery.com/" target="_blank">jQuery API</a></li>
-            <li class="fragment"><a href="https://learn.jquery.com/" target="_blank">Learn jQuery</a></li>
-            <li class="fragment"><a href="http://jqfundamentals.com/" target="_blank">jQuery Fundamentals</a></li>
-            <li class="fragment"><a href="http://youmightnotneedjquery.com/" target="_blank">You Might Not Need Jquery</a></li>
-        </ul>
-    </section>
-    <section>
-        <h1>Including jQuery</h1>
-        <p>
-            We need to include a reference to jQuery so that we can use it. We can do this several different ways.
-        </p>
-        <ul>
-            <li class="fragment">Locally Hosting It</li>
-            <li class="fragment"><a href="https://developers.google.com/speed/libraries/#jquery">Using a CDN copy</a></li>
-        </ul>
-        <p class="fragment">
-            Your jQuery reference needs to be the first JavaScript include at the bottom of the page.
-        </p>
-        <aside class="notes">
-            Demo this.
-        </aside>
-    </section>
+    <h1>jQuery Syntax</h1>
+    <p>jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle
+        events, and develop Ajax applications. </p>
+    <p class="fragment">
+        jQuery is designed to be easily extended to create complex plugins that can be implemented quickly.
+    </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/06040enh/embed/"></script>
+    <a href="https://jsfiddle.net/WorthyD/06040enh/" target="_blank">Link</a>
+</section>
+<section>
+    <h1>Useful References</h1>
+    <ul>
+        <li class="fragment"><a href="http://api.jquery.com/" target="_blank">jQuery API</a></li>
+        <li class="fragment"><a href="https://learn.jquery.com/" target="_blank">Learn jQuery</a></li>
+        <li class="fragment"><a href="http://jqfundamentals.com/" target="_blank">jQuery Fundamentals</a></li>
+        <li class="fragment"><a href="http://youmightnotneedjquery.com/" target="_blank">You Might Not Need Jquery</a></li>
+    </ul>
+</section>
+<section>
+    <h1>Including jQuery</h1>
+    <p>
+        We need to include a reference to jQuery so that we can use it. We can do this several different ways.
+    </p>
+    <ul>
+        <li class="fragment">Locally Hosting It</li>
+        <li class="fragment"><a href="https://developers.google.com/speed/libraries/#jquery">Using a CDN copy</a></li>
+    </ul>
+    <p class="fragment">
+        Your jQuery reference needs to be the first JavaScript include at the bottom of the page.
+    </p>
+    <aside class="notes">
+        Demo this.
+    </aside>
 </section>
 <section>
     <h1>The jQuery object</h1>
@@ -465,37 +527,34 @@
     </h1>
     <h2 class="fragment">We can do just about anything we want after this.</h2>
 </section>
+
 <section>
-    <section>
-        <h1>document.ready</h1>
-        <p>The document.ready method allows you to setup code to not execute until the page is ready for manipulation.</p>
-        <pre><code class="js">
+    <h1>document.ready</h1>
+    <p>The document.ready method allows you to setup code to not execute until the page is ready for manipulation.</p>
+    <pre><code class="js">
             $(document).ready(function(){
                 console.log('We are ready!');
             });
             </code></pre>
-    </section>
 </section>
-<section>
-    <section>
-        <h1>Selectors</h1>
-        <p>Selectors provide an easy way to retrieve elements from the DOM</p>
-        <h3 class="fragment">
-            <pre><code class="js">$('a')</code></pre>
-        </h3>
-        <h3 class="fragment">
-            <pre><code class="js">$('input')</code></pre>
-        </h3>
-        <h3 class="fragment">
-            <pre><code class="js">$('form .btn')</code></pre>
-        </h3>
-        <h3 class="fragment">
-            <pre><code class="js">$('.list')</code></pre>
-        </h3>
-        <h3 class="fragment">
-            <pre><code class="js">$('#btnSubmit')</code></pre>
-        </h3>
-    </section>
+<section id="selectors">
+    <h1>Selectors</h1>
+    <p>Selectors provide an easy way to retrieve elements from the DOM</p>
+    <h3 class="fragment">
+        <pre><code class="js">$('a')</code></pre>
+    </h3>
+    <h3 class="fragment">
+        <pre><code class="js">$('input')</code></pre>
+    </h3>
+    <h3 class="fragment">
+        <pre><code class="js">$('form .btn')</code></pre>
+    </h3>
+    <h3 class="fragment">
+        <pre><code class="js">$('.list')</code></pre>
+    </h3>
+    <h3 class="fragment">
+        <pre><code class="js">$('#btnSubmit')</code></pre>
+    </h3>
 </section>
 <section>
     <h1>jQuery Events</h1>
@@ -516,72 +575,74 @@
     </div>
     <a href="https://api.jquery.com/category/events/" class="fragment">API Reference</a>
 </section>
-<section>
-    <section>
-        <h1>jQuery HTML</h1>
-        <p>jQuery can make modifying HTML a lot easier.</p>
-    </section>
-    <section>
-        <h1>Getting HTML</h1>
-        <div class="fragment">
-            <h3>Old Way</h3>
-            <pre> <code class="js">
-    var html = document.getElementById('button').innerHTML           </code></pre>
-        </div>
-        <div class="fragment">
-            <h3>New Way</h3>
-            <pre> <code class="js">
-    var html = $('button').html()           </code></pre>
-        </div>
-    </section>
-    <section>
-        <h1>Setting HTML</h1>
-        <div class="fragment">
-            <h3>Old Way</h3>
-            <pre> <code class="js">
-    document.getElementById('button').innerHTML = "New HTML";           </code></pre>
-        </div>
-        <div class="fragment">
-            <h3>New Way</h3>
-            <pre> <code class="js">
-     $('button').html('New HTML')           </code></pre>
-        </div>
-    </section>
+
+<section id="jqhtml">
+    <h1>jQuery HTML</h1>
+    <p>jQuery can make modifying HTML a lot easier.</p>
 </section>
 <section>
-    <section>
-        <h1>jQuery Input Values</h1>
-        <p>You can interact and modify input values a lot like you to html</p>
-    </section>
-    <section>
-        <h1>Getting Values</h1>
-        <div class="fragment">
-            <h3>Old Way</h3>
-            <pre> <code class="js">
+    <h1>Getting HTML</h1>
+    <div class="fragment">
+        <h3>Old Way</h3>
+        <pre> <code class="js">
+    var html = document.getElementById('button').innerHTML           </code></pre>
+    </div>
+    <div class="fragment">
+        <h3>New Way</h3>
+        <pre> <code class="js">
+    var html = $('button').html()           </code></pre>
+    </div>
+</section>
+<section>
+    <h1>Setting HTML</h1>
+    <div class="fragment">
+        <h3>Old Way</h3>
+        <pre> <code class="js">
+    document.getElementById('button').innerHTML = "New HTML";           </code></pre>
+    </div>
+    <div class="fragment">
+        <h3>New Way</h3>
+        <pre> <code class="js">
+     $('button').html('New HTML')           </code></pre>
+    </div>
+</section>
+<section>
+    <h1>jQuery Input Values</h1>
+    <p>You can interact and modify input values a lot like you to html</p>
+</section>
+<section>
+    <h1>Getting Values</h1>
+    <div class="fragment">
+        <h3>Old Way</h3>
+        <pre> <code class="js">
     var value = document.getElementById('button').value           </code></pre>
-        </div>
-        <div class="fragment">
-            <h3>New Way</h3>
-            <pre> <code class="js">
+    </div>
+    <div class="fragment">
+        <h3>New Way</h3>
+        <pre> <code class="js">
     var html = $('button').val()           </code></pre>
-        </div>
-    </section>
-    <section>
-        <h1>Setting Val</h1>
-        <div class="fragment">
-            <h3>Old Way</h3>
-            <pre> <code class="js">
+    </div>
+</section>
+<section>
+    <h1>Setting Val</h1>
+    <div class="fragment">
+        <h3>Old Way</h3>
+        <pre> <code class="js">
     document.getElementById('button').value = "New Value";           </code></pre>
-        </div>
-        <div class="fragment">
-            <h3>New Way</h3>
-            <pre> <code class="js">
+    </div>
+    <div class="fragment">
+        <h3>New Way</h3>
+        <pre> <code class="js">
      $('button').val('New Value')           </code></pre>
-        </div>
-    </section>
+    </div>
 </section>
  
       
+                <section id="exercise15">
+
+    <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise15" target="_blank">Exercise 15</a></h1>
+   
+</section>
 
             </div>
 

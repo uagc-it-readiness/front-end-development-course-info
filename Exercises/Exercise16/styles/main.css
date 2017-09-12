@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 900px;
+    margin: 20px auto;
+}
+
+section {
+    border: 1px solid #ddd;
+    margin: 20px;
+    padding-top:20px;
+}
+
+section>h2,
+section>p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+section>ol {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+section>section {
+    border: 1px solid #e1e1e8;
+    background-color: #f7f7f9;
+    overflow: hidden;
+    padding:10px;
+    margin:0;
+}
+
+section>aside {
+    float: right;
+    width: 33%;
+}
+section > section > div{
+    float:left;
+    width:33%;
+}
+.part3{
+    display:none;
+}

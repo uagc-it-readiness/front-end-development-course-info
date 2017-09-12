@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+
+    <body>
+        <h1>Follow the directions outlined below.</h1>
+        <section>
+            <h2>Part 1: Attribute Selectors</h2>
+            <p>
+                There is a style tag in this document. Using attribute selectors, write the following css rules.
+            </p>
+            <ol>
+                <li>Any hyperlink with a <strong>target</strong> should have blue text</li>
+                <li>Any inputs that have a <strong>type</strong> of <strong>text</strong> should have their background-color
+                    set to pink</li>
+                <li>Any inputs that have a <strong>type</strong> of <strong>checkbox</strong> should have their background-color
+                    set to yellow</li>
+                <li>Any hyperlink with a <strong>href</strong> that <strong>starts with <em>https</em></strong></li>
+                <li>Any hyperlink with a <strong>href</strong> that <strong>ends with <em>.edu</em></strong></li>
+                <li>Any hyperlink with a <strong>href</strong> that <strong>contains <em>mart</em></strong></li>
+            </ol>
+            <style>
+                .part-1 a[target] {
+                    color: blue;
+                }
+            </style>
+            <section class="part-1">
+                <a href="" target="_blank">I have a target</a>
+                <input type="text" value="My background should be pink" />
+                <input type="checkbox" />
+                <a href="https://google.com">Google</a>
+                <a href="http://uark.edu">Uark.Edu</a>
+                <a href="https://walmart.com">Walmart</a>
+            </section>
+        </section>
+        <section>
+            <h2>Part 2: <a href="http://api.jquery.com/category/effects/basics/" target="_blank">Basic Effects</a></h2>
+            <p>
+                Use jQuery to perform the following tasks.
+            </p>
+            <ol>
+                <li>Make the button with the id of <strong>btnShow</strong> <a href="http://api.jquery.com/show/" target="_blank">show</a>                    the element that has a class of <strong>display-basic</strong></li>
+                <li>Make the button with the id of <strong>btnHide</strong> <a href="http://api.jquery.com/hide/" target="_blank">hide</a>                    the element that has a class of <strong>display-basic</strong></li>
+                <li>Make the button with the id of <strong>btnToggle</strong> <a href="http://api.jquery.com/toggle/" target="_blank">toggle</a>                    the element that has a class of <strong>display-basic</strong></li>
+            </ol>
+            <section>
+                <button id="btnShow">Show</button>
+                <button id="btnHide">Hide</button>
+                <button id="btnToggle">Toggle</button>
+                <aside class="display-basic">
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+                        tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+                        egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                </aside>
+            </section>
+        </section>
+        <section class="part3">
+            <h2>Part 3: More Basic</h2>
+            <p>
+                Hey look, you found this. It's hidden by default. Make it display on page load using jQuery. Don't cheat and remove the class or something like that.
+            </p>
+
+        </section>
+        <section>
+            <h2>Part 4: <a href="http://api.jquery.com/category/effects/fading/" target="_blank">Fade Effects</a></h2>
+            <p>
+                Use jQuery to perform the following tasks.
+            </p>
+            <ol>
+                <li>Make the button with the id of <strong>btnFadeIn</strong> <a href="http://api.jquery.com/fadein/" target="_blank">quickly fade in </a>                    the element that has a class of <strong>display-fade</strong></li>
+                <li>Make the button with the id of <strong>btnFadeOut</strong> <a href="http://api.jquery.com/fadeout/" target="_blank">slowly fade out</a>                    the element that has a class of <strong>display-fade</strong></li>
+                <li>Make the button with the id of <strong>btnFadeToggle</strong> <a href="http://api.jquery.com/fadeToggle/"
+                        target="_blank">toggle</a> the element that has a class of <strong>display-fade</strong></li>
+            </ol>
+            <section>
+                <button id="btnFadeIn">Fade In</button>
+                <button id="btnFadeOut">Fade Out</button>
+                <button id="btnFadeToggle">Fade Toggle</button>
+                <aside class="display-fade">
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+                        tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+                        egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                </aside>
+            </section>
+        </section>
+        <section>
+            <h2>Part 5: <a href="http://api.jquery.com/category/effects/sliding/" target="_blank">Slide Effects</a></h2>
+            <p>
+                Use jQuery to perform the following tasks.
+            </p>
+            <ol>
+                <li>Make the button with the id of <strong>btnSlideDown</strong> make the element that has a class of <strong>display-slide</strong>                    <a href="http://api.jquery.com/slideDown/" target="_blank">slide down</a> for 1000 milliseconds </li>
+                <li>Make the button with the id of <strong>btnSlideUp</strong> make the element that has a class of <strong>display-slide</strong>
+                    <a
+                        href="http://api.jquery.com/slideUp/" target="_blank">slide up</a> for 500 milliseconds.
+                </li>
+                <li>Make the button with the id of <strong>btnSlideToggle</strong> <a href="http://api.jquery.com/slideToggle"
+                        target="_blank">toggle</a> the element that has a class of <strong>display-slide</strong></li>
+            </ol>
+            <section>
+                <button id="btnSlideDown">Slide Down</button>
+                <button id="btnSlideUp">Slide Up</button>
+                <button id="btnSlideToggle">Slide Toggle</button>
+                <aside class="display-slide">
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+                        tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+                        egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                </aside>
+            </section>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="scripts/main.js"></script>
+    </body>
+
+</html>
