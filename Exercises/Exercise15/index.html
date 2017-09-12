@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+
+    <body>
+        <h1>Follow the directions outlined below.</h1>
+        <section>
+            <h2>Part 1: Selectors and Clicking</h2>
+            <p>
+                Use jQuery to perform the following tasks.
+            </p>
+            <ol>
+                <li>Select the button. It has an ID of 'btnOne'</li>
+                <li>Add a click event.</li>
+                <li>Show a JavaScript alert box when the click event is triggered.</li>
+            </ol>
+            <section>
+                <button id="btnOne">Click Me</button>
+            </section>
+        </section>
+        <section>
+            <h2>Part 2: Selectors, Clicking, and Setting HTML</h2>
+            <p>
+                Use jQuery to perform the following tasks.
+            </p>
+            <ol>
+                <li>Select the button. It has an ID of 'btnTwo'</li>
+                <li>Add a click event.</li>
+                <li>In your click event, select the element with the class of 'update-html' </li>
+                <li>Update the element's html to equal '&lt;h3>Hello Word!&lt;/h3>'</li>
+            </ol>
+            <section>
+                <button id="btnTwo">
+                    Click me
+                </button>
+                <aside class="update-html">
+                    I have a class of 'update-html'. Update me to say 'Hello World'
+                </aside>
+            </section>
+        </section>
+        <section>
+            <h2>Part 3: Selectors, Clicking, and Setting Values</h2>
+            <p>
+                Use jQuery to perform the following tasks.
+            </p>
+            <ol>
+                <li>Select the button. It has an ID of 'btnThree'</li>
+                <li>Add a click event.</li>
+                <li>In your click event, select the element with the id of 'text-update' </li>
+                <li>Update the element's value to equal "Hello World" </li>
+            </ol>
+            <section>
+                <button id="btnThree">
+                    Click me
+                </button>
+                <aside>
+                    <input type="text" id="text-update" />
+                </aside>
+            </section>
+        </section>
+        <section>
+            <h2>Part 4: Selectors, Clicking, Getting HTML and Setting HTML</h2>
+            <p>
+                Use jQuery to perform the following tasks.
+            </p>
+            <ol>
+                <li>Select the button. It has an ID of 'btnCopyHtml'</li>
+                <li>Add a click event.</li>
+                <li>In your click event, select the element with the class of 'copy-html' </li>
+                <li>Retrieve the html of the element and put it in a variable called 'copiedHtml'</li>
+                <li>Select the element with the class of 'paste-html'</li>
+                <li>Set html of 'paste-html' to the variable 'copiedHtml'</li>
+            </ol>
+            <section>
+                <div> <button id="btnCopyHtml">
+                    Click me
+                </button>
+                </div>
+                <div class="copy-html">
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                        <li>Aliquam tincidunt mauris eu risus.</li>
+                        <li>Vestibulum auctor dapibus neque.</li>
+                    </ol>
+                </div>
+                <aside class="paste-html">
+                </aside>
+            </section>
+        </section>
+        <section>
+            <h2>Part 6: Selectors, Clicking, Getting Values and Setting Values</h2>
+            <p>
+                Use jQuery to perform the following tasks.
+            </p>
+            <ol>
+                <li>Select the button. It has an ID of 'btnCopyValues'</li>
+                <li>Add a click event.</li>
+                <li>In your click event, select the element with the class of 'copy-text' </li>
+                <li>Retrieve the value of the element and put it in a variable called 'copiedValue'</li>
+                <li>Select the element with the class of 'paste-text'</li>
+                <li>Set value of 'paste-text' to the variable 'copiedValue'</li>
+            </ol>
+            <section>
+                <div>
+                    <button id="btnCopyValues">
+                    Click me
+                </button>
+                </div>
+                <div>
+                    <input type="text" id="copy-text" value="I will be copied" />
+                </div>
+                <aside>
+                    <input type="text" id="paste-text" />
+                </aside>
+            </section>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="scripts/main.js"></script>
+    </body>
+
+</html>
