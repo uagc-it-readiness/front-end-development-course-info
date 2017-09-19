@@ -36,14 +36,20 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>9/16/2017</h1>
+                    <h1>9/19/2017</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
                         <div>
                             <h2>Review</h2>
                             <ul>
-                              
+                                <li><a href="#cursor">CSS Cursor</a></li>
+                                <li><a href="#effects">jQuery Effects</a></li>
+                                <li><a href="#showhide">Show/Hide</a></li>
+                                <li><a href="#fade">FadeIn/FadeOut</a></li>
+                                <li><a href="#slide">SlideUp/SlideDown</a></li>
+                                <li><a href="#async">Asynchronous Events</a></li>
+
                             </ul>
 
                         </div>
@@ -51,13 +57,583 @@
 
                             <h2>New</h2>
                             <ul>
-                            
-                           </ul>
+
+                                <li><a href="#child">Child Selector</a></li>
+                                <li><a href="#jq-css">jQuery CSS</a></li>
+                                <li><a href="#jq-class">jQuery Class</a></li>
+                                <li><a href="#traverse">Traversing</a></li>
+                                <li><a href="#filter">Filter</a></li>
+                                <li><a href="#EvenOdd">Even & Odd</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <h4 style="clear:both;"><a href="#exercise13">Exercise 13</a></h4>
                 </section>
-      
+                <section id="cursor">
+    <h1>CSS Cursor Property</h1>
+    <p>
+        You can use this CSS property to modify how your mouse cursor appears when moused over an element.
+    </p>
+    <pre class="fragment"><code class="css">
+div {
+    cursor:pointer; // changes the arrow to a pointer 
+}
+    </code></pre>
+    <h4 class="fragment">There are over 20 properties you can use.</h4>
+    <h4 class="fragment">Yes... you can change it to an image.</h4>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="YxmYGd" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="YxmYGd" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/YxmYGd/">YxmYGd</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section id="effects">
+    <h1>Basic Effects with jQuery</h1>
+    <ul>
+        <li class="fragment">Show/Hide</li>
+        <li class="fragment">Fade In/Fade Out</li>
+        <li class="fragment">Slide Up/ Slide Down</li>
+    </ul>
+</section>
+<section id="showhide">
+    <h1>Show and Hide</h1>
+    <p>
+        Shows and hides an element by using CSS
+    </p>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').show()
+$('element').hide()</code></pre>
+    </h2>
+</section>
+<section>
+    <h1>Toggle</h1>
+    <p>
+        Detects if the element is visible or hidden and will apply the opposite style.
+    </p>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').toggle()
+</code></pre>
+    </h2>
+</section>
+<section>
+    <h1>Parameters</h1>
+    <p>
+        We can extend the functionality by passing in parameters.
+    </p>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').show('slow')
+$('element').hide('fast')</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').show(200)
+$('element').hide(500)</code></pre>
+    </h2>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="brXMyg" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-JQ-Effects" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/brXMyg/">UA-ITR-JQ-Effects</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section id="fade">
+    <h1>FadeIn and FadeOut</h1>
+    <p>
+        Fades the selected element in and out of view.
+    </p>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').fadeIn()
+$('element').fadeOut()</code></pre>
+    </h2>
+</section>
+<section>
+    <h1>Toggle</h1>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').fadeToggle()
+</code></pre>
+    </h2>
+</section>
+<section>
+    <h1>Parameters</h1>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').fadeIn('fast')
+$('element').fadeOut('slow')</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').fadeIn(200)
+$('element').fadeOut(500)</code></pre>
+    </h2>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="ayeGrQ" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-JQ-Effects-Fade" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/ayeGrQ/">UA-ITR-JQ-Effects-Fade</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section id="slide">
+    <h1>SlideUp and SlideDown</h1>
+    <p>
+        Expands and collapses an element
+    </p>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').slideDown()
+$('element').slideUp()</code></pre>
+    </h2>
+</section>
+<section>
+    <h1>Toggle</h1>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').slideToggle()
+</code></pre>
+    </h2>
+</section>
+<section>
+    <h1>Parameters</h1>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').slideDown('fast')
+$('element').slideUp('slow')</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').slideDown(200)
+$('element').slideUp(500)</code></pre>
+    </h2>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="qXeYew" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-JQ-Effects-Slide" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/qXeYew/">UA-ITR-JQ-Effects-Slide</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section id="async">
+    <h1>Asynchronous Events</h1>
+    <p>
+        The following block of code will execute at almost the same time
+    </p>
+        <pre><code class="js">$('element').fadeOut(200)
+$('element2').slideUp(500)</code></pre>
+<p>JavaScript doesn't wait for the first line to finish before the second line is executed.</p>
+</section>
+<section>
+    <h1>On Complete Callbacks</h1>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').slideDown(duration, callback)
+</code></pre>
+    </h2>
+</section>
+<section>
+    <h1>Use Case: Slide a box down and then fade in the text.</h1>
+    <pre><code class="js">
+    $('div').slideDown(1000, function(){
+        $('p').fadeIn(1000);
+    });     
+    </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="eGONxo" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-jQuery Callbacks" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/eGONxo/">UA-ITR-jQuery Callbacks</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+                <section id="npm">
+    <h1>NPM</h1>
+    <h2>Node Package Manager</h2>
+    <p>
+        You can search for packages at <a href="http://npmjs.com">npmjs.com</a>
+    </p>
+</section>
+<section>
+    <h1>What can you do with NPM?</h1>
+    <ul>
+        <li class="fragment">
+            Manage project your dependencies
+        </li>
+        <li class="fragment">Download utilities</li>
+        <li class="fragment">Share your libraries with others</li>
+    </ul>
+</section>
+<section>
+    <h1>Getting started with NPM</h1>
+    <ol>
+        <li class="fragment">Download and install node.js from <a href="http://nodejs.org">nodejs.org</a></li>
+        <li class="fragment">Open your command line and type <code>npm -v</code> to verify everything installed properly</li>
+        <li class="fragment">Initialize your project by typing <code>npm init</code> while in your project directory</li>
+        <li class="fragment">Press enter a couple hundred times</li>
+        <li class="fragment">Verify that a <code>package.json</code> was created.</li>
+    </ol>
+</section>
+<section>
+    <h1>We can now get started downloading packages.</h1>
+    <h2>Let's look at a couple of commands.</h2>
+    <ul>
+        <li class="fragment"><code>npm install [package_name]</code> to install a package</li>
+        <li class="fragment"><code>npm install [package_name] --save-dev</code> to install a package <strong>and</strong> save it to your package.json</li>
+        <li class="fragment"><code>npm install [package_name] -g</code> to install a package globally.
+            <ul>
+                <li><code>npm install gulp-cli -g</code> installs gulp-cli globally and I can use <code>gulp</code> in the command
+                    line</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>node_modules folder</h1>
+    <p>
+        NPM creates a node_modules folder whenever you run <code>npm install.</code> Do not include and commit this folder
+        to github.
+    </p>
+    <aside class="notes">
+        There are several ways to handle the ignore.
+    </aside>
+</section>
+<section>
+    <h1>Don't become too dependant on NPM</h1>
+    <ul>
+        <li class="fragment"><a href="http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/">NPM & left-pad: Have We Forgotten How To Program?</a></li>
+        <li class="fragment"><a href="https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c#.ux1bdsnt8">I’ve Just Liberated My Modules</a></li>
+    </ul>
+</section>
+                <section id="gulp">
+    <h1>Gulp Task Runner</h1>
+    <h2>Let's automate all the hard stuff!</h2>
+    <h2><a href="http://gulpjs.com">Gulpjs.com</a></h2>
+</section>
+<section>
+    <h1>What kind of stuff can we automate?</h1>
+    <ul>
+        <li class="fragment">Asset Compression/Optimization</li>
+        <li class="fragment">Code Validation</li>
+        <li class="fragment">Unit Test</li>
+        <li class="fragment">Deployments</li>
+        <li class="fragment">Much more</li>
+    </ul>
+</section>
+<section>
+    <h1>Getting setup</h1>
+<h2>    <pre><code class="bash">
+    npm install gulp-cli -g
+    npm install gulp --save-dev
+        </code></pre>
+</h2>
+
+<h2 class="fragment">
+    Install your required packages
+</h2>
+
+</section>
+<section>
+    <h1>Create your gulpfile.js</h1>
+
+    <pre><code class="js">
+        var gulp = require('gulp');
+
+        //Tasks executes when you type `gulp` in the console
+        gulp.task('default', function(){
+            console.log('task');
+        });
+
+         //Tasks executes when you type `gulp css` in the console
+        gulp.task('css', function(){
+            console.log('task');
+        });
+        
+        </code></pre>
+</section>
+
+                <section>
+                    Questions?
+                </section>
+                <section id="child">
+    <h1>The Child Selector</h1>
+    <p>
+        The child selector targets elements immediately inside of the parent element.
+    </p>
+    <p class="fragment">
+        Think of it as if you control your children, but your grand children totally ignore the rules.
+    </p>
+    <h2 class="fragment">
+        <pre><code class="css">div > a {/* css rules */}</code></pre>
+    </h2>
+</section>
+<section>
+    <h1>Child vs Descendant</h1>
+    <div class="fragment">
+        <pre><code class="xml"><div>
+    <a href="">Hyper Link</a>
+    <p>
+        paragraph <a href="">Inside Paragraph</a>
+    </p>
+    </div></code></pre>
+    </div>
+    <h3 class="fragment">
+        <pre><code class="css">div a {/* css rules */}</code></pre>
+    </h3>
+    <h3 class="fragment">Applies to every a</h2>
+        <h3 class="fragment">
+            <pre><code class="css">div > a {/* css rules */}</code></pre>
+        </h3>
+        <h3 class="fragment">Applies only to the a immediately after the div</h3>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="rGOQVY" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-ChildSelectors" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/rGOQVY/">UA-ITR-ChildSelectors</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section id="jq-css">
+    <h1>jQuery .css()</h1>
+    <p>
+        We can retrieve and modify an element's css value using jQuery's .css() method.
+    </p>
+</section>
+<section>
+    <h1>Retrieving values</h1>
+    <p>You can get the current value of a CSS property in jQuery by passing a string into the .css() method.</p>
+    <div class="fragment">
+        <pre><code class="js">
+    var x = $('element').css('height'); // Retrieves the css height of the element
+                </code></pre>
+    </div>
+    <div class="fragment">
+        <pre><code class="js">
+    var x = $('element').css('backgroundColor'); // Retrieves the color value of the element
+                </code></pre>
+    </div>
+    <div class="fragment">
+        <pre><code class="js">
+    var x = $('element').css('background-color'); // Retrieves the color value of the element
+                </code></pre>
+    </div>
+</section>
+<section>
+    <h1>Setting Values</h1>
+    <p>
+        There are two ways to set CSS using jQuery. The first method is to pass in two strings.
+    </p>
+    <div class="fragment">
+        <pre><code class="js">
+$('element').css('background-color', '#aa0000');    
+$('element').css('padding', '20px');    
+    </code></pre>
+    </div>
+    <div class="fragment">
+        <pre><code class="js">
+$('element').css('background-color', '');    //Resets property
+$('element').css('padding', '');    //Resets property
+    </code></pre>
+    </div>
+
+</section>
+<section>
+    <h1>Setting Values Continued</h1>
+    <p>
+        You can set multiple CSS values by passing in a javascript object
+    </p>
+    <div class="fragment">
+        <pre><code class="js">
+$('element').css({
+    backgroundColor: '#aa0000',
+    padding: '20px'
+});    
+//////// or
+$('element').css({
+    'background-color': '#aa0000',
+    'padding': '20px'
+});    
+
+    </code></pre>
+    </div>
+
+</section>
+<section>
+    <!-- Example -->
+    <h1>Example Code</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="aLvQvG" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-jQUery-CSS" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/aLvQvG/">UA-ITR-jQUery-CSS</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section id="jq-class">
+    <h1>jQuery Class Manipulation</h1>
+    <p>
+        Manipulating an object's class in jQuery is very similar to what you would do in vanilla JavaScript.
+    </p>
+</section>
+<section>
+    <h1>.addClass()</h1>
+    <p>
+        Adds a class to an jQuery object.
+    </p>
+    <pre><code class="js">
+        $('element').addClass('active');
+        </code></pre>
+</section>
+<section>
+    <h1>.removeClass()</h1>
+    <p>
+        Removes the class from the element
+    </p>
+    <pre><code class="js">
+        $('element').removeClass('active');
+        </code></pre>
+</section>
+<section>
+    <h1>.toggleClass()</h1>
+    <p>
+        Add the class if the element doesn't have it and removes the class if it does have it.
+    </p>
+    <pre><code class="js">
+        $('element').toggleClass('active');
+</code></pre>
+</section>
+<section>
+    <h1>.hasClass()</h1>
+    <p>
+        Returns a boolean value of true or false base on if the element has the matching class.
+    </p>
+    <pre><code class="js">
+        var x = $('element').hasClass('active');
+        console.log(x);  //outputs true or false;
+</code></pre>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="veNQLM" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-jQUery-ClassList" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/veNQLM/">UA-ITR-jQUery-ClassList</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section id="traversing">
+    <h1>Traversing with jQuery</h1>
+    <p>
+        Traversing your DOM allows you to write code that wont interfere with other parts of your application. You can write a specific
+        selector for a container and then write less specific selectors for behaviors.
+    </p>
+</section>
+<section>
+    <h1>.find()</h1>
+    <p>
+        The .find() method allows you to run a selector within a specific context. It will search its descendants.
+    </p>
+    <aside class="notes">This helps with performance</aside>
+</section>
+<section>
+    <h1>Example</h1>
+    <pre><code class="js">
+    $('.myForm').find('input[type="text"]').on('blur', validate);            
+    $('.myForm').find('button').on('click', submit);            
+</code></pre>
+    <aside class="notes">
+        Explain the performance issues with this.
+    </aside>
+</section>
+<section>
+    <h1>A little more realistic example</h1>
+    <pre><code class="js">
+    var frm = $('.myForm');
+
+    frm.find('input[type="text"]').on('blur', validate);            
+    frm.find('select').on('change', validate);            
+    frm.find('button').on('click', submit);            
+            </code></pre>
+
+</section>
+<section>
+    <!-- jsfiddle example -->
+    <p data-height="265" data-theme-id="0" data-slug-hash="EwVOKL" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-jQUery-Find" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/EwVOKL/">UA-ITR-jQUery-Find</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>.closest()</h1>
+    <p>
+        The .closest() method searches up the DOM until it finds the <strong>first</strong> element that matches.
+    </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <pre><code class="js">
+        $('.btn').closest('div').hide();    
+        </code></pre>
+    <pre class="fragment"><code class="xml">
+    <div> <!--This div does not get targeted-->
+        <div> <!--This div gets targeted-->
+              <button class="btn">Click Me</button>
+        </div>
+    </div>
+        </code></pre>
+
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="BwoGQo" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-jQUery-Clossets" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/BwoGQo/">UA-ITR-jQUery-Clossets</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section id="filter">
+    <h1>jQuery .filter()</h1>
+    <p>
+        The jQuery .filter() method takes the current jQuery object and reduces the set based on the following.
+    </p>
+    <ul>
+        <li class="fragment">A selector</li>
+        <li class="fragment">A function</li>
+        <li class="fragment">A DOM element</li>
+        <li class="fragment">A jQuery Selection</li>
+    </ul>
+</section>
+<section>
+    <h1>Filtering with a selector.</h1>
+    <pre class="fragment"><code class="js">
+    var inputs = $('input');
+    var textInputs = inputs.filter('[type="text"]');
+    var checkBoxes = inputs.filter('[type="checkbox"]');
+            </code></pre>
+</section>
+<section>
+    <h1>Filtering with a function</h1>
+    <pre class="fragment"><code class="js">
+    var inputs = $('input');
+    var fifthInput = inputs.filter(function(index){
+        if (index === 4){
+            return true;
+        }
+        return false;
+    });
+            </code></pre>
+
+</section>
+                <section id="EvenOdd">
+    <h1>Even and Odd Selectors</h1>
+    <p>
+        These are jQuery specific selectors. They do not take advantage of the browser's built in selector system.
+    </p>
+    <pre class="fragment"><code class="js">
+
+    var evens  = $('li:even'); 
+
+    var odds  = $('li:odd'); 
+
+            </code></pre>
+    <a href="https://api.jquery.com/even-selector/" target="_blank">Even</a>
+    <a href="https://api.jquery.com/odd-selector/" target="_blank">Odd</a>
+</section>
+<section>
+    <h1>Recommended usage</h1>
+    <p>
+        This selector doesn't take advantage of the faster native selector engine inside of JavaScript. The documentation recommends
+        you select your elements and then use <strong>.filter()</strong> to get your desired result set.
+    </p>
+    <pre class="fragment"><code class="js">
+
+    var listItems = $('li');            
+    var evenItems = listItems.filter(':even');
+    var oddItems = listItems.filter(':odd');
+            
+            </code></pre>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="Qqjepr" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-Even-Odd" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/Qqjepr/">UA-ITR-Even-Odd</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
 
             </div>
 
