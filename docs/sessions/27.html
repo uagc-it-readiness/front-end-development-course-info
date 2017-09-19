@@ -1,0 +1,262 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>9/28/2017</h1>
+                    <!--Arrays and Methods-->
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                <li><a href="#json">JSON</a></li>
+                                <li><a href="#ajax1">Ajax</a></li>
+                                <li><a href="#post">Ajax Post</a></li>
+
+                            </ul>
+
+                        </div>
+                        <div>
+
+                            <h2>New</h2>
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4 style="clear:both;"><a href="#exercise13">Exercise 13</a></h4>
+                </section>
+
+                <section id="json">
+    <h1>JSON</h1>
+    <p>
+        Stands for <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation. It is
+        object syntax that is standardized by the same organization that standardizes JavaScript.
+    </p>
+    <p class="fragment">
+        JSON is frequently used to communicate data between programming languages. XML (extensible markup language) was primarily
+        used before JSON.
+    </p>
+    <p class="fragment">
+        A JSON file has the extension of .json. It is frequently used for configuration or smaller data sets.
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <pre><code class="js">
+{
+    "name": "Daniel",
+    "isAwake": true,
+    "count": 3,
+    "languages: ["JavaScript", "C#"],
+    "job":{
+        "field": "Development",
+        "responsibilities": ["training", "coding"],
+        "boss": {
+            "name": "Jarrod",
+            "title": "VP of Tech"
+        }
+    }
+
+}
+            </code></pre>
+    <aside class="notes">
+        Must start and end with { } Must use quotation marks. Ticks don't work Cannot have comments
+    </aside>
+</section>
+<section>
+    <h1>JSON in JavaScript</h1>
+    <div class="fragment">
+        <h2>Convert a string to JSON</h2>
+    </div>
+    <pre class="fragment"><code class="js">
+            var jsonString = "{\"name\": \"Daniel\"}";
+            var jsonObj = JSON.parse(jsonString);
+
+            console.log(jsonObj.name);
+            </code></pre>
+    <div class="fragment">
+        <h2>Convert Object to a JSON string</h2>
+    </div>
+    <pre class="fragment"><code class="js">
+             var obj = {name: "Daniel"};
+            var jsonString = JSON.stringify(obj);
+
+            console.log(jsonString); //"{\"name\": \"Daniel\"}";
+            </code></pre>
+</section>
+                <section id="ajax1">
+    <h1>AJAX</h1>
+    <ul>
+        <li class="fragment"><strong>A</strong>syncronous</li>
+        <li class="fragment"><strong>J</strong>avascript</li>
+        <li class="fragment"><strong>A</strong>nd</li>
+        <li class="fragment"><strong>X</strong>ml</li>
+    </ul>
+    <p class="fragment">
+        JavaScript calls a url and the URL returns XML.
+    </p>
+    <p class="fragment">
+        Most web services return JSON now a days.
+    </p>
+</section>
+<!--<section>
+    <h1>Web Services</h1>
+    <p>
+        Web Services         
+    </p>
+
+</section>-->
+<section>
+    <h1>$.ajax()</h1>
+    <p>
+        jQuery provides us a very easy and quick way to perform ajax calls.
+    </p>
+    <pre class="fragment"><code class="js">
+        $.ajax({
+            url:'',
+            method:'',
+            success:'',
+            failure:''
+        })
+        </code></pre>
+</section>
+<section>
+    <h1>$.ajax simplified</h1>
+    <pre class="fragment"><code class="js">
+    $.get('blah.json', function(response){
+    });
+
+        </code></pre>
+</section>
+<section>
+    <!-- JS Fiddle -->
+    <script async src="//jsfiddle.net/WorthyD/47sLLzd9/embed/"></script>
+    <a href="https://jsfiddle.net/WorthyD/47sLLzd9/" target="_blank"></a>
+</section>
+                <section id="post">
+    <h1>Http POST Method</h1>
+    <p>
+        One of the primary methods for sending data from a website to a web server to be processed.
+    </p>
+    <p class="fragment">
+        You have primarily seen POST requests on HTML forms and they provide a pretty awful experience.
+    </p>
+    <h2 class="fragment">We can create a better experience by using AJAX</h2>
+</section>
+<section>
+    <h1><a href="http://localhost/WebApplication1/">Demo: HTML form post vs Ajax Post</a></h1>
+    <p>
+        This will only work on my machine.
+    </p>
+    <!-- Demo -->
+</section>
+<section>
+    <h1>jQuery $.post() method</h1>
+    <pre class="fragment"><code class="js">
+    $.post('[url]', 'object to send' , function(response){
+        //
+    });
+        </code></pre>
+    <pre class="fragment"><code class="js">
+    $.post('api/user', {userName: 'Daniel'} , function(response){
+        //
+    });
+        </code></pre>
+
+</section>
+                <section>
+                    Questions?
+                </section>
+
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>
