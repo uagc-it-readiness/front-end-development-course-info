@@ -309,7 +309,7 @@
         <h3>
             <pre><code class="js">
                 
-                $('.element').data('color', 'red');
+    $('.element').data('color', 'red');
 
                 </code></pre>
         </h3>
@@ -361,7 +361,7 @@
     "name": "Daniel",
     "isAwake": true,
     "count": 3,
-    "languages: ["JavaScript", "C#"],
+    "languages": ["JavaScript", "C#"],
     "job":{
         "field": "Development",
         "responsibilities": ["training", "coding"],
@@ -447,6 +447,62 @@
     <script async src="//jsfiddle.net/WorthyD/47sLLzd9/embed/"></script>
     <a href="https://jsfiddle.net/WorthyD/47sLLzd9/" target="_blank"></a>
 </section>
+                <section>
+    <h1>Appending and Prepending content</h1>
+    <p>
+        So far, this has been the primary method for adding content to an html element.
+    </p>
+    <pre class="fragment"><code class="js">
+    var errors = $('.error');
+    var currentHtml = errors.html();
+
+    //Add to the end
+    errors.html(currentHtml + '<li>new error</li>');
+
+    //Adds to the beginning
+    errors.html('<li>new error</li>' + currentHtml);
+        
+        </code></pre>
+</section>
+<section>
+    <h1>The jQuery Way</h1>
+    <pre class="fragment"><code class="js">
+    var errors = $('.error');
+
+    //Add to the end
+    errors.append('<li>new error</li>');
+
+    //Adds to the beginning
+    errors.prepend('<li>new error</li>' + currentHtml);
+        
+        </code></pre>
+</section>
+<section>
+    <!-- Best Practice -->
+    <h1>Performance</h1>
+    <p>
+        Do your best to not use these methods inside of a loop. Use them after a loop has completed.
+    </p>
+    <h2>Don't</h2>
+    <pre class="fragment"><code class="js">
+        for(var i = 0; i < errors.length;){
+            $('error').append('This is an error');
+        }
+        </code></pre>
+    <h2>Do</h2>
+    <pre class="fragment"><code class="js">
+        var errorList = ''
+        for(var i = 0; i < errors.length;){
+            errorList += 'This is my error';
+        }
+        $('error').append(errorList);
+        </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="XeKVPx" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-jQuery-Append" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/XeKVPx/">UA-ITR-jQuery-Append</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
                 <section id="post">
     <h1>Http POST Method</h1>
     <p>
@@ -478,6 +534,7 @@
         </code></pre>
 
 </section>
+                
             </div>
 
         </div>

@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width:500px;
+    margin:20px auto;
+    font-size:20px;
+}
+.error{
+    color:#ff0000;
+    display:block;
+}
+
+.input-group{
+    margin:10px auto;
+    padding:10px;
+}
+
+.even{
+    background:#c3c5c9;
+}
+   
+.input-group input{
+    display:block;
+    width:100%;
+    font-size:20px;
+    padding:10px;
+
+}
