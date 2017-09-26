@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width:900px;
+    margin:20px auto;
+    font-size:20px;
+}
+
+.fl{
+    float:left;
+    width:40%;
+}
+.f4{
+    float:right;
+    width:40%;
+}
+
+blue{
+    border:1px solid blue;
+}
+
+red{
+    border: 1px solid red;
+}
