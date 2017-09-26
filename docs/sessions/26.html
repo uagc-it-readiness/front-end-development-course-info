@@ -40,6 +40,7 @@
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
+                        <!-- 	autocrlf = true -->
                         <div>
                             <h2>Review</h2>
                             <ul>
@@ -62,7 +63,7 @@
                             </ul>
                         </div>
                     </div>
-                    <h4 style="clear:both;"><a href="#exercise13">Exercise 13</a></h4>
+                    <h4 style="clear:both;"><a href="#exercise18">Exercise 18</a></h4>
                 </section>
                 <section id="debugging">
     <h1>Tips for debugging code.</h1>
@@ -428,11 +429,20 @@
     <pre class="fragment"><code class="js">
         $.ajax({
             url:'',
-            method:'',
-            success:'',
-            failure:''
+            method:'GET|POST|PATCH|DELETE',
+            success: function(response){},
+            failure:function(response){}
         })
         </code></pre>
+</section>
+<section>
+<h1>Method Types</h1>
+<ul>
+    <li class="fragment"><code>GET</code> - Retrieve </li>
+    <li class="fragment"><code>POST</code> - Create</li>
+    <li class="fragment"><code>PATCH</code> - Modify</li>
+    <li class="fragment"><code>DELETE</code> - Delete</li>
+</ul>
 </section>
 <section>
     <h1>$.ajax simplified</h1>
@@ -473,7 +483,7 @@
     errors.append('<li>new error</li>');
 
     //Adds to the beginning
-    errors.prepend('<li>new error</li>' + currentHtml);
+    errors.prepend('<li>new error</li>');
         
         </code></pre>
 </section>
@@ -535,6 +545,11 @@
 
 </section>
                 
+                <section id="exercise18">
+
+    <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise18" target="_blank">Exercise 18</a></h1>
+   
+</section>
             </div>
 
         </div>
