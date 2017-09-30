@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width:500px;
+    margin:20px auto;
+    font-size:20px;
+}
+.errors{
+    color:#ff0000;
+    display:none;
+}
+.invalid{
+    border:1px solid #ff0000;
+    background:#ff9191; 
+}
+
+.input-group, .check-group{
+    padding:20px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select{
+    display:block;
+    width:100%;
+    font-size:20px;
+    padding:10px;
+}
+.control-panel{
+    text-align:center;
+}
+.control-panel button{
+    font-size:20px;
+}
+
+.successmsg{
+    display:none;
+}
+.invalid::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ff0000;
+}
+.invalid::-moz-placeholder { /* Firefox 19+ */
+  color: #ff0000;
+}
+.invalid:-ms-input-placeholder { /* IE 10+ */
+  color: #ff0000;
+}
+.invalid:-moz-placeholder { /* Firefox 18- */
+  color: #ff0000;
+}
