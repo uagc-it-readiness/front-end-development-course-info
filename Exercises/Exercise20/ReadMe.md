@@ -1,4 +1,4 @@
-# Assignment 21 - Responsive Intro
+# Exercise 20 - Responsive Intro
 
 We're going to do some basic responsive CSS.
 
@@ -19,6 +19,9 @@ Make the font size of the ordered list to 20px if the screen is greater than 960
 Feel free to try to do these if you have time.
 
 Write a media query to do the following if the screen is less than 480px
+
 Make .main-content span the whole screen.
+
 Remove the floats on .fl and .fr 
+
 Make .fl and .fr span all available space
