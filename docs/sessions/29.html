@@ -36,28 +36,221 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>9/26/2017</h1>
+                    <h1>10/10/2017</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
-
-                        <div>
-                            <h2>Review</h2>
-                            <ul>
-                              
-                            </ul>
-
-                        </div>
                         <div>
 
                             <h2>New</h2>
                             <ul>
-                            
-                           </ul>
+                                <li><a href="#mobile-history">Mobile History</a></li>
+                                <li><a href="#view-port">View Port</a></li>
+                                <li><a href="#meta-tag">Meta Tag</a></li>
+                                <li><a href="#media-queries">Media Queries</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <h4 style="clear:both;"><a href="#exercise13">Exercise 13</a></h4>
+                    <h4 style="clear:both;"><a href="#exercise20">Exercise 20</a></h4>
                 </section>
-      
+
+                <!--http://www.w3schools.com/css/css_rwd_intro.asp http://www.w3schools.com/css/css_responsive_intro.asp-->
+<section>
+    <h1>Handling websites on Mobile</h1>
+    <p>
+        The popularity of smart phones created a massive need for websites to be accessible on small screens. It is now almost expected
+        for all sites to be responsive.
+    </p>
+</section>
+<section id="mobile-history">
+     <h1>Quick History of Web on Mobile</h1>
+    <div class="fragment">
+        <h3>WAP - Wireless Application Protocol</h3>
+        <p>
+            Introduced in 1999. Very very simplistic websites. Almost completely gone by 2013.
+        </p>
+    </div>
+    <div class="fragment">
+        <h3>m.######.com - Mobile Versions of sites</h3>
+        <p>
+            Completely separate version of the website. They are slimmed down versions of the desktop version with fewer features.
+        </p>
+    </div>
+</section>
+<section>
+    <h3>History Continued</h3>
+    <div class="fragment">
+        <h3>Adaptive</h3>
+        <p>
+            Very similar to responsive, but had hard defined breakpoints. Sites would perform significant UI changes at certain resolutions.
+        </p>
+    </div>
+    <div class="fragment">
+        <h3>Responsive</h3>
+        <p>
+            The website shifts content size and arrangement based on screen size. Elements grow and shrink fluidly with the layout.
+        </p>
+    </div>
+</section>
+<section>
+    <h1>Benefits of responsive.</h1>
+    <ul>
+        <li class="fragment">One experience for everyone</li>
+        <li class="fragment">Update your content once</li>
+        <li class="fragment">Cost effective compared to doing an m. solution.</li>
+        <li class="fragment">Recommended by search engines</li>
+    </ul>
+</section>
+<section>
+    <h1>Challenges with Responsive</h1>
+    <ul>
+        <li class="fragment">Hard to adapt an existing website to responsive</li>
+        <li class="fragment">Requires higher attention to detail on page performance</li>
+        <li class="fragment">Many ways to approach it.</li>
+    </ul>
+</section>
+<section>
+    <h1>Quick Tips</h1>
+    <ul>
+        <li class="fragment">Don't limit to any specific screen size. Assume every resolution is relevant.</li>
+        <li class="fragment">Start with desktop and move down to mobile or vise versa.</li>
+        <li class="fragment">Don't change content based on screen size.
+            <ul>
+                <li class="fragment">Example: Button text from <strong>Submit your answer</strong> to <strong>Submit</strong></li>
+            </ul>
+        </li>
+        <li class="fragment">Focus on your HTML structure and your CSS.</li>
+        <li class="fragment">Minimize JavaScript in page interaction and behavior</li>
+    </ul>
+    <aside class="notes">
+        Don't assume it'll just be Desktop and Mobile. <br>
+    </aside>
+</section>
+<section>
+    <h1>Tools</h1>
+    <div class="fragment">
+        <h2 >Surprise!!!!</h2>
+        <h2>CHROME DEV TOOLS!!!!!</h2>
+    </div>
+</section>
+                <section id="view-port">
+    <h1>View Port</h1>
+    <p>
+        A webpage's view port declares what size your content on a a device.
+    </p>
+    <p>
+        Mobile devices would scale down desktop web pages to fit their screen.
+    </p>
+</section>
+<section>
+    <h1>Example of No Viewport</h1>
+    <img src="../images/www.harborfreight.com-(iPhone 6).png" />
+    <aside class="notes">
+        10 pixels for every one on the screen
+    </aside>
+</section>
+<section>
+    <h1>Example</h1>
+    <img src="../images/viewport2.png" />
+</section>
+<section>
+    <h1>Compared</h1>
+    <div class="two-col">
+        <div>
+            <img src="../images/www.harborfreight.com-(iPhone 6).png" />
+        </div>
+        <div>
+            <img src="../images/viewport2.png" />
+        </div>
+    </div>
+</section>
+<section>
+    <h1>How do we get our content to scale?</h1>
+    <h2 class="fragment">We use a meta tag.</h2>
+</section>
+<section id="meta-tag">
+    <h1>Viewport Meta Tag</h1>
+    <h2>
+        <pre><code class="html"><meta name="viewport" content="width=device-width, initial-scale=1"></code></pre>
+    </h2>
+    <aside class="notes">
+        This tells the device the window is the width of the device and we do not want to scale.
+    </aside>
+</section>
+                <section id="media-queries">
+    <h1>CSS Media Queries</h1>
+    <p>
+        Media queries allow us to apply different CSS rules based on environment variables.
+    </p>
+    <p>They can be though of as <code>if</code> statements in CSS.</p>
+</section>
+<section>
+    <h1>Types of Media Queries</h1>
+    <ul>
+        <li class="fragment">all - All media types</li>
+        <li class="fragment">print</li>
+        <li class="fragment">screen - for color devices</li>
+    </ul>
+</section>
+<section>
+    <h1>Media Query Tests</h1>
+    <ul>
+        <li class="fragment">width - (min & max)</li>
+        <li class="fragment">height - (min & max)</li>
+        <li class="fragment">orientation - (portrait or landscape)</li>
+        <li class="fragment">aspect-ratio</li>
+        <li class="fragment">resolution - dpi</li>
+    </ul>
+</section>
+<section>
+    <h1>Applying Media Queries</h1>
+    <h2>Including via style sheet</h2>
+    <pre><code class="xml">
+        <link rel="stylesheet" media="all" href="main.css" />        
+        <link rel="stylesheet" media="print" href="print.css" />        
+        <link rel="stylesheet" media="screen and (max-width:600px)" href="mobile.css" />        
+        </code></pre>
+</section>
+<section>
+    <h1>Applying Media Queries</h1>
+    <h2>Include via CSS</h2>
+    <pre><code class="css">
+@media screen{
+    body {
+        color: red;
+    }
+}
+@media print{
+    body {
+        color: black;
+    }
+}
+        </code></pre>
+</section>
+<section>
+    <h1>Applying Media Queries</h1>
+    <h2>Include via CSS</h2>
+    <pre><code class="css">
+@media screen and (min-width:320px) and (max-width:600px){
+    /*rules apply to screen widths 320px to 600px;*/
+    p{
+        color:red;
+    }
+    div{
+        float:right;
+    }
+}
+@media screen and (max-width:320px){
+    /*rules apply to screen widths below 320px*/
+}
+        </code></pre>
+</section>
+
+<!--@media (min-width: 480px) {-->
+                <section id="exercise20">
+
+    <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise20" target="_blank">Exercise 20</a></h1>
+   
+</section>
 
             </div>
 

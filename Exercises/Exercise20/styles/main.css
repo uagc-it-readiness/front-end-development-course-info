@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+.main-content{
+    width:960px;
+    margin:20px auto;
+}
+
+.fl{
+    float:left;
+    width:50%;
+}
+
+.fr{
+    float:right;
+    width:50%;
+}
+
