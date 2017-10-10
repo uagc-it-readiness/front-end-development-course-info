@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 900px;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.fl {
+    float: left;
+    width: 40%;
+}
+
+.f4 {
+    float: right;
+    width: 40%;
+}
+
+.post {
+    clear: both;
+    overflow: hidden;
+    padding: 10px;
+    margin: 10px;
+}
+
+.post>img {
+    float: left;
+    margin-right: 10px;
+}
+
+.post>div {}

@@ -1,77 +1,56 @@
 $(document).ready(function () {
-    var url = 'http://localhost:3004/cart';
+    var url = 'http://localhost:3004/cart'
 
-    $('#btnAddToCart').on('click', addToCart);
-    // $('.remove').on('click', remove);
-    $('#main').on('click', '.remove', remove);
-    $('#main').on('click', '.addMore', addMore);
+    $(document).ready(function () {
+        $('#btnAddToCart').on('click', addToCart);
 
-
-    // console.log($('.me').parents('.parent'));
-    // console.log($('.me').closest('.main'));
-
-    loadCart();
+        $('#main').on('click', '.addMore', addMore);
+        loadCart();
+    });
 
     function addToCart() {
         var product = $('#product');
+
         var item = {
             name: product.find('.name').val(),
-            qty: parseInt(product.find('.qty').val()),
+            qty: product.find('.qty').val(),
             img: product.find('.img').val()
         };
-        console.log(item);
 
-        $.post(url, item, function () {
+        $.post(url, item, function (result) {
             loadCart();
         });
 
     }
 
     function loadCart() {
+
         $.get(url, function (response) {
-            var html = convertResponseToHTML(response);
-            $('#main').html(html);
+
+            //Convert HTML Stuff
+            var convertedHTML = convertResponseToHTML(response);
+
+            //Apply the html stuff
+            $('#main').html(convertedHTML);
+
         });
+
     }
 
     function addMore() {
-        var btn = $(this);
-        var container = btn.closest('.media');
-        var id = container.find('.id').val();
-        var newQty = parseInt(container.find('.qty').val()) + 1;
+        var item = $(this).closest('.media');
+        var id = parseInt(item.find('.id').val())
 
         $.ajax({
             url: url + '/' + id,
-            method: 'PATCH',
-            contentType: 'application/json',
+            method: 'patch',
+           contentType: 'application/json',
             data: JSON.stringify({
-                qty: newQty
+                qty: parseInt(item.find('.qty').val()) + 1
             }),
-            success: function () {
-                loadCart();
-            }
+            success: loadCart
         });
-
-
-
-    }
-
-    function remove() {
-        var btn = $(this);
-        var container = btn.closest('.media');
-        var id = container.find('.id').val();
-
-        $.ajax({
-            url: url + '/' + id,
-            method: 'delete',
-            success: function () {
-                loadCart();
-            }
-
-        });
-
-
-
+        console.log(item);
     }
 
     function convertResponseToHTML(resp) {
@@ -94,7 +73,7 @@ $(document).ready(function () {
 
             </div>
           </div>
-            `;
+            `
 
             html += cartHtml;
         }
