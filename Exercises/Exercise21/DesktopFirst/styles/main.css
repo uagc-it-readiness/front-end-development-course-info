@@ -1,0 +1,70 @@
+body,
+ul {
+    padding: 0
+}
+
+a,
+nav li {
+    display: inline-block
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0
+}
+
+a {
+    color: #fff;
+    text-decoration: none
+}
+
+.image-gallery li:hover h3,
+a:hover {
+    text-decoration: underline
+}
+
+header {
+    background: #a00
+}
+
+footer {
+    background: #333;
+    clear: both
+}
+
+ul {
+    list-style: none
+}
+
+nav ul {
+    margin: 0;
+    padding: 20px 10px;
+    font-size: 20px
+}
+
+nav li a {
+    padding-right: 20px
+}
+
+footer nav,
+header nav,
+section {
+    width: 960px;
+    margin: 0 auto
+}
+
+.image-gallery li {
+    float: left;
+    text-align: center;
+    width: 25%
+}
+
+
+.image-gallery li:hover img {
+    border: 2px solid #333;
+    display: block;
+    margin: 0 auto
+}
