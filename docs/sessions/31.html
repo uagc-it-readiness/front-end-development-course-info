@@ -43,7 +43,17 @@
                         <div>
                             <h2>Review</h2>
                             <ul>
-                              
+                                <li>
+                                    <a href="#res-layout">Responsive Layouts</a>
+                                </li>
+                                <li>
+                                    <a href="#font-libs">Font Libraries</a>
+                                </li>
+                                <li>
+                                    <a href="#icon-libs">Icon Libraries</a>
+                                </li>
+
+
                             </ul>
 
                         </div>
@@ -51,14 +61,489 @@
 
                             <h2>New</h2>
                             <ul>
-                            
-                           </ul>
+                                <li>
+                                    <a href="#flexbox">Flexbox</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <h4 style="clear:both;"><a href="#exercise13">Exercise 13</a></h4>
+                    <h4 style="clear:both;">
+                        <a href="#exercise13">Exercise 13</a>
+                    </h4>
                 </section>
-      
 
+                <section id="res-layout">
+    <h1>Responsive Layout Types</h1>
+    <p>
+        There are two primary ways to handle responsive layouts.
+    </p>
+    <h2 class="fragment">Desktop First</h2>
+    <h2 class="fragment">Mobile First</h2>
+</section>
+<!-- Desktop First -->
+<section>
+    <h1>Desktop First</h1>
+    <p>Initial popular way to handle responsive.</p>
+    <ul>
+        <li class="fragment">Traditional method in the past to implement a responsive website.</li>
+        <li class="fragment">Better for complex websites.</li>
+        <li class="fragment">Must dumb down features for mobile users.</li>
+        <li class="fragment">Challenge to adapt</li>
+        <li class="fragment">Heavy load on mobile users</li>
+    </ul>
+</section>
+<section>
+    <h1>Desktop First CSS Example</h1>
+</section>
+<section>
+    <h1>Mobile First</h1>
+    <p>
+        Takes the simplistic approach of targeting the smallest screens first.
+    </p>
+    <ul>
+        <li class="fragment">Focus on content over functionality.</li>
+        <li class="fragment">Can be challenging for clients due to prioritizing content.</li>
+        <li class="fragment">Has become the preferred approach for most websites.</li>
+        <li class="fragment">Expected to drive even more simplistic desktop sites in the future..</li>
+
+    </ul>
+    <aside class="notes">
+        simplicity helps speed up the site.
+    </aside>
+</section>
+<section>
+    <h1>Responsive Showcase</h1>
+    <ul>
+        <li class="fragment">
+            <a href="https://www.etsy.com/">Etsy</a>
+        </li>
+        <li class="fragment">
+            <a href="https://www.nationwide.com/">Nationwide</a>
+        </li>
+        <li class="fragment">
+            <a href="http://abc.go.com/">Abc Go</a>
+        </li>
+        <li class="fragment">
+            <a href="http://www.ebags.com/">Ebags.com</a>
+        </li>
+        <li class="fragment">
+            <a href="https://www.salesforce.com/">Sales Force</a>
+        </li>
+        <li class="fragment">
+            <a href="http://time.com/">Time</a>
+        </li>
+        <li class="fragment">
+            <a href="http://www.disney.com/">Disney</a>
+        </li>
+        <li class="fragment">
+            <a href="https://www.smashingmagazine.com">Smashing Magazine</a>
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>Mobile First CSS</h1>
+    <pre><code class="css">
+    /* Global Default Style */
+    body{
+        font-size:16px;
+    }
+
+    @media screen and (min-width:480px) {
+        /* Small Screen Style */
+       body{
+            font-size:14px;
+        }
+    }
+            
+    @media screen and (min-width:620px) {
+        /* Medium Screen Style */
+        body{
+            font-size:12px;
+        }
+    }
+            
+    @media screen and (min-width:960px) {
+        /* Large Screen Style */
+        body{
+            font-size:10px;
+        }
+    }        </code></pre>
+</section>
+<!-- Mobile First -->
+                <section id="font-libs">
+    <h1>Font Libraries</h1>
+    <p>
+        You don't have to settle with the default fonts that are on your machine for web pages. Adding a custom font to your website
+        is very easy process to do.
+    </p>
+    <div class="fragment">
+        <h2>First checkout what you can already use.</h2>
+        <h2><a href="http://www.cssfontstack.com/" target="_blank">CssFontStack.com</a></h2>
+    </div>
+</section>
+<section>
+    <h1>Step 1</h1>
+    <p>
+        Find a font you have permission to use your website and include the files in your project.
+    </p>
+    <div class="fragment">
+        <h2>Step 2 - Declare a font-face in your css</h2>
+        <pre><code class="css">
+@font-face {
+    font-family: my-font-name;
+    src: url(path/to/font.eof),
+        url(path/to/font.woff),
+        url(path/to/font.woff2)
+
+}
+    </code></pre>
+    </div>
+    <div class="fragment">
+        <h3>Step 3 - Done</h3>
+    </div>
+    <aside class="notes">
+        Mention mime types
+    </aside>
+</section>
+<section>
+    <h2>You can use your font immediately after declaring the <code>font-family</code> in your CSS</h2>
+    <pre><code class="css">
+        .css{
+            /*Make sure you include a fallback */
+            font-family:my-font-name, Arial, sans-serif;
+        }
+        </code></pre>
+</section>
+<section>
+    <h1>Custom Font Drawbacks</h1>
+    <p>
+       There is always a cost doing something fancy on the web.  Custom fonts are the same way. 
+    </p>
+    <ul>
+        <li class="fragment">Slows down page load</li>
+        <li class="fragment">Flash of default font type or no font at all.</li>
+        <li class="fragment">Inconsistent experiences in different browsers.</li>
+    </ul>
+</section>
+<section>
+    <h1>Self Hosting Alternatives</h1>
+    <p>
+        These are some alternatives to using a self hosted font type.  These are traditionally more optimized for the web world.
+    </p>
+    <ul>
+        <li class="fragment">
+            <a href="https://fonts.google.com/" target="_blank">Google Web Fonts</a>
+        </li>
+        <li class="fragment">
+            <a href="https://typekit.com/" target="_blank">Adobe Type Kit</a>
+        </li>
+        <li class="fragment">
+            <a href="https://edgewebfonts.adobe.com/" target="_blank">Adobe Edge Web Fonts</a>
+        </li>
+
+    </ul>
+</section>
+<section>
+    <h1>Google Font Installation</h1>
+    <pre><code class="xml">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        </code></pre>
+<div class="fragment">
+    <pre><code class="css">    .my-div{
+        font-family: 'Roboto', sans-serif;
+    }
+</code></pre>
+
+</div>
+</section>
+                <section id="icon-libs">
+    <h1>Icon Font Libraries</h1>
+    <p>
+        Icon Font Libraries are an incredible way to speed up your development time and spend less time cutting out small images.
+    </p>
+</section>
+<section>
+    <h1>What is an Icon Font Library</h1>
+    <p>
+        It takes a set of Scalable Vector Graphic icons and compresses them into a font file for you to use.
+    </p>
+    <ul>
+        <li class="fragment">
+            Chevron <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </li>
+        <li class="fragment">
+            Bars <i class="fa fa-bars" aria-hidden="true"></i>
+        </li>
+        <li class="fragment">Facebook <i class="fa fa-facebook" aria-hidden="true"></i></li>
+        <li class="fragment">Cog <i class="fa fa-cog" aria-hidden="true"></i></li>
+        <li class="fragment">Flag <i class="fa fa-flag" aria-hidden="true"></i></li>
+    </ul>
+</section>
+<section>
+    <div class="two-col">
+        <div>
+            <h2>Advantages</h2>
+            <ul>
+                <li class="fragment">Fewer web requests</li>
+                <li class="fragment">Easy to use</li>
+                <li class="fragment">Scalable</li>
+                <li class="fragment">CSS manipulation</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Disadvantages</h2>
+            <ul>
+                <li class="fragment">1 heavy web request</li>
+                <li class="fragment">Many icons, but may only need 4 or 5</li>
+                <li class="fragment">Icons may not match branding</li>
+            </ul>
+        </div>
+    </div>
+    <aside class="notes">
+        manipulation - color size, shadow
+    </aside>
+</section>
+<section>
+    <h1>Popular Icon Libraries</h1>
+    <ul>
+        <li class="fragment"><a href="http://fontawesome.io/">FontAwesome</a></li>
+        <li class="fragment"><a href="http://getbootstrap.com/components/#glyphicons">Bootstrap - Glyphicons*</a></li>
+        <li class="fragment"><a href="http://ionicons.com/">Ionic Icons</a></li>
+    </ul>
+    <div class="fragment">
+        <h2>Make your own</h2>
+        <h3><a href="https://icomoon.io/">IcoMoon</a></h3>
+    </div>
+</section>
+<section>
+    <h1>Using FontAwesome</h1>
+    <pre class="fragment"><code class="xml">
+       <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    </code></pre>
+    <pre class="fragment"><code class="xml">
+        <i class="fa fa-bullseye" aria-hidden="true"></i>
+        <i class="fa fa-cloud" aria-hidden="true"></i>
+        <i class="fa fa-code-fork" aria-hidden="true"></i>
+        <i class="fa fa-comment" aria-hidden="true"></i>
+        <i class="fa fa-car" aria-hidden="true"></i>
+        <i class="fa fa-pencil-square" aria-hidden="true"></i>
+     <i class="fa fa-flag" aria-hidden="true"></i>
+    </code></pre>
+    <div class="fragment">
+        <i class="fa fa-bullseye" aria-hidden="true"></i>
+        <i class="fa fa-cloud" aria-hidden="true"></i>
+        <i class="fa fa-code-fork" aria-hidden="true"></i>
+        <i class="fa fa-comment" aria-hidden="true"></i>
+        <i class="fa fa-car" aria-hidden="true"></i>
+        <i class="fa fa-pencil-square" aria-hidden="true"></i>
+        <i class="fa fa-flag" aria-hidden="true"></i>
+    </div>
+    <a class="fragment" href="http://fontawesome.io/examples/">More Examples</a>
+</section>
+                <section>
+                    <h1>Questions?</h1>
+                </section>
+                <section>
+    <h1>CSS Flexbox</h1>
+    <p>
+        Flexbox provides a more predictive page layout for responsive screens. It doesn't use floats and adjusts to the available
+        space better than traditional floats. Flexbox aims to fill all available space without overflowing its container.
+    </p>
+    <p>
+        It has gained a lot of popularity over the years. It doesn't support older versions of IE.
+    </p>
+</section>
+<section>
+    <h1>Flex Container</h1>
+    <p>
+        The flex container is the element that is wrapping all fo the items you want to align.
+    </p>
+</section>
+<section>
+    <h1>Implementing</h1>
+    <p>
+        To implement Flexbox, we need to apply a property to a container.
+    </p>
+    <pre><code class="css">
+    .container{
+        display:flex;
+    } 
+        </code></pre>
+</section>
+<section>
+    <h1>Code</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="dNzoxr" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Flex" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/dNzoxr/">UA-Flex-Flex</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Flex Direction</h1>
+    <p>
+        Flex Direction is a relatively unique CSS property. It dictates the actual direction and orientation.
+    </p>
+    <ul>
+        <li class="fragment"><code>row</code> default - flows content from left to right</li>
+        <li class="fragment"><code>row-reverse</code> - flows from right to left</li>
+        <li class="fragment"><code>column</code> - vertically orients content from top to bottom</li>
+        <li class="fragment"><code>column-reverse</code> - vertically orients content from bottom to top</li>
+    </ul>
+</section>
+<section>
+    <h1>Flex Direction</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="ggxLyY" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Flex-Direction" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/ggxLyY/">UA-Flex-Flex-Direction</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Flex Wrap</h1>
+    <p>
+        By default, flex will want to fit everything into one row/column. Flex wrap allows the flex items to wrap if needed.
+    </p>
+    <ul>
+        <li class="fragment"><code>nowrap</code> - default - All on one line</li>
+        <li class="fragment"><code>wrap</code></li>
+        <li class="fragment"><code>wrap-reverse</code></li>
+    </ul>
+</section>
+<section>
+    <h1>Flex Wrap</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="ZLJxWv" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Flex-Wrap" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/ZLJxWv/">UA-Flex-Flex-Wrap</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Justify Content</h1>
+    <p>Justify Content defines how flex items are aligned across the main axis. </p>
+    <ul>
+        <li>Row - horizontal axis</li>
+        <li>Column - vertical axis</li>
+    </ul>
+    <ul>
+        <li class="fragment"><code>flex-start</code> default - align to the start of the container</li>
+        <li class="fragment"><code>flex-end</code> - aligns to the end of the container</li>
+        <li class="fragment"><code>center</code> - items are aligned to the center. Similar to margin:auto</li>
+        <li class="fragment"><code>space-between</code> Items become even spaced. First items butts up against start point and last element butts
+            up against the end point.</li>
+        <li class="fragment"><code>space-around</code>Items are evenly spaced through out the available space.</li>
+    </ul>
+</section>
+<section>
+    <h1>Justify Content</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="GrvWRm" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Justify-Content" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/GrvWRm/">UA-Flex-Justify-Content</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Flex Align</h1>
+    <p>
+        Flex align defines how items are positioned over the intersecting axis.
+    </p>
+    <ul>
+        <li class="fragment"><code>stretch</code> - Fill the container</li>
+        <li class="fragment"><code>flex-start</code> - positions items in very start of the flex container</li>
+        <li class="fragment"><code>flex-end</code> - positions elements at the very end of the flex container</li>
+        <li class="fragment"><code>center</code> - centers items based on their overall height</li>
+        <li class="fragment"><code>baseline</code> - aligns based off the content</li>
+    </ul>
+</section>
+<section>
+    <h1>Flex Align</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="xgLgwy" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Flex-Align" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/xgLgwy/">UA-Flex-Flex-Align</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Align Content</h1>
+    <p>
+        Align content defines the alignment of content when there is more than one row/column. This property doesn't do anything
+        if there is only one line of content.
+    </p>
+    <ul>
+        <li class="fragment"><code>stretch</code> - default - takes up all available space</li>
+        <li class="fragment"><code>flex-start</code> - compresses all elements to the start of the container </li>
+        <li class="fragment"><code>flex-end</code> - compresses all elements to the end of the container </li>
+        <li class="fragment"><code>center</code>- compresses all elements to the end of the container </li>
+        <li class="fragment"><code>space-between</code></li>
+        <li class="fragment"><code>space-around</code></li>
+    </ul>
+</section>
+<section>
+    <h1>Align Content</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="ggxebO" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Align-Content" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/ggxebO/">UA-Flex-Align-Content</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Flex Item Properties</h1>
+    <ul>
+        <li class="fragment"><code>order</code></li>
+        <li class="fragment"><code>flex-grow</code></li>
+        <li class="fragment"><code>flex-shrink</code></li>
+        <li class="fragment"><code>flex-basis</code></li>
+    </ul>
+</section>
+<section>
+    <h1>Order</h1>
+    <p>
+        Flex items are ordered as they appear from top to bottom in source code. The order property allows to you position the display order as you need.
+    </p>
+    <p>
+        This can be useful as you can better arrange items going from desktop to mobile or vice versa.
+    </p>
+</section>
+<section>
+    <h1>Order</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="jyLdLE" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Item-Order" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/jyLdLE/">UA-Flex-Item-Order</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Flex-Grow</h1>
+    <p>
+        Sets the proportion of how much space you want an element to take up.  By default, it is set to 0. Setting all items to 1 will evenly distribute space.
+        Setting 2 will  <em>try</em> to take up twice as much space.
+    </p>
+    <p>
+        It accepts positive unitless numbers
+    </p>
+</section>
+<section>
+    <h1>Flex-Grow</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="MJvLqJ" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Item-Flex-Grow" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/MJvLqJ/">UA-Flex-Item-Flex-Grow</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Flex Shrink</h1>
+    <p>
+        Creates the ability for a flex item to shrink.
+    </p>
+    <p class="fragment">
+        I've been getting inconsistent results when trying to figure this one out.
+    </p>
+</section>
+<section>
+    <h1>Flex Basis</h1>
+    <p>
+        Sets the size of an element before the remaining space is calculated and distributed.
+    </p>
+</section>
+
+<section>
+    <h1>Flex-Basis</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="VPzRRL" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Item-Flex-Basis" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/VPzRRL/">UA-Flex-Item-Flex-Basis</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
             </div>
 
         </div>

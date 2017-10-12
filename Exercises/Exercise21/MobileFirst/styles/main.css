@@ -1,0 +1,112 @@
+.class2 nav,
+.class7 li,
+section>aside>section>h3 {
+    text-align: center
+}
+
+.class7,
+.class8 article,
+footer {
+    overflow: hidden
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0
+}
+
+a {
+    color: #a00;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+.main-container {
+    margin: 0 auto;
+}
+
+.main-header {
+    margin: 10px 0
+}
+
+.main-header nav {
+    background: #a00;
+}
+
+.main-header nav a {
+    color: #fff;
+    display: block;
+    font-size: 24px;
+    padding: 5px 15px
+}
+
+.hero img {
+    width: 100%;
+    height: auto
+}
+
+section {
+    clear: both;
+    margin: 10px auto
+}
+
+section .section-header {
+    color: #a00;
+    border: 1px solid #a00;
+    border-left: none;
+    border-right: none;
+    text-align: center
+}
+
+section .article-list {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.article-list article {
+    border-bottom: 1px solid #a00
+}
+
+.article-list article img {
+    display: block;
+    width: 100%;
+    padding: 10px
+}
+
+section>aside {}
+
+.sponsors {
+    margin-top: 10px;
+}
+
+.sponsors>.sponsor-ads>img {
+    width: 50%;
+    float: left;
+    padding: 10px
+}
+
+footer {
+    clear: both;
+    padding: 20px 0
+}
+
+footer>h3 {
+    margin: 0
+}
+
+footer>nav {
+}
+
+footer>nav>a {
+    padding: 0 10px;
+    display:block;
+}
