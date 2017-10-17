@@ -58,6 +58,367 @@
                     <h4 style="clear:both;"><a href="#exercise13">Exercise 13</a></h4>
                 </section>
       
+                <section>
+    <h1>CSS Flexbox</h1>
+    <p>
+        Flexbox provides a more predictive page layout for responsive screens. It doesn't use floats and adjusts to the available
+        space better than traditional floats. Flexbox aims to fill all available space without overflowing its container.
+    </p>
+    <p>
+        It has gained a lot of popularity over the years. It doesn't support older versions of IE.
+    </p>
+</section>
+<section>
+    <h1>Flex Container</h1>
+    <p>
+        The flex container is the element that is wrapping all fo the items you want to align.
+    </p>
+</section>
+<section>
+    <h1>Implementing</h1>
+    <p>
+        To implement Flexbox, we need to apply a property to a container.
+    </p>
+    <pre><code class="css">
+    .container{
+        display:flex;
+    } 
+        </code></pre>
+</section>
+<section>
+    <h1>Code</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="dNzoxr" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Flex" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/dNzoxr/">UA-Flex-Flex</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Flex Direction</h1>
+    <p>
+        Flex Direction is a relatively unique CSS property. It dictates the actual direction and orientation.
+    </p>
+    <ul>
+        <li class="fragment"><code>row</code> default - flows content from left to right</li>
+        <li class="fragment"><code>row-reverse</code> - flows from right to left</li>
+        <li class="fragment"><code>column</code> - vertically orients content from top to bottom</li>
+        <li class="fragment"><code>column-reverse</code> - vertically orients content from bottom to top</li>
+    </ul>
+</section>
+<section>
+    <h1>Flex Direction</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="ggxLyY" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Flex-Direction" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/ggxLyY/">UA-Flex-Flex-Direction</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Flex Wrap</h1>
+    <p>
+        By default, flex will want to fit everything into one row/column. Flex wrap allows the flex items to wrap if needed.
+    </p>
+    <ul>
+        <li class="fragment"><code>nowrap</code> - default - All on one line</li>
+        <li class="fragment"><code>wrap</code></li>
+        <li class="fragment"><code>wrap-reverse</code></li>
+    </ul>
+</section>
+<section>
+    <h1>Flex Wrap</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="ZLJxWv" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Flex-Wrap" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/ZLJxWv/">UA-Flex-Flex-Wrap</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Justify Content</h1>
+    <p>Justify Content defines how flex items are aligned across the main axis. </p>
+    <ul>
+        <li>Row - horizontal axis</li>
+        <li>Column - vertical axis</li>
+    </ul>
+    <ul>
+        <li class="fragment"><code>flex-start</code> default - align to the start of the container</li>
+        <li class="fragment"><code>flex-end</code> - aligns to the end of the container</li>
+        <li class="fragment"><code>center</code> - items are aligned to the center. Similar to margin:auto</li>
+        <li class="fragment"><code>space-between</code> Items become even spaced. First items butts up against start point and last element butts
+            up against the end point.</li>
+        <li class="fragment"><code>space-around</code>Items are evenly spaced through out the available space.</li>
+    </ul>
+</section>
+<section>
+    <h1>Justify Content</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="GrvWRm" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Justify-Content" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/GrvWRm/">UA-Flex-Justify-Content</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Flex Align</h1>
+    <p>
+        Flex align defines how items are positioned over the intersecting axis.
+    </p>
+    <ul>
+        <li class="fragment"><code>stretch</code> - Fill the container</li>
+        <li class="fragment"><code>flex-start</code> - positions items in very start of the flex container</li>
+        <li class="fragment"><code>flex-end</code> - positions elements at the very end of the flex container</li>
+        <li class="fragment"><code>center</code> - centers items based on their overall height</li>
+        <li class="fragment"><code>baseline</code> - aligns based off the content</li>
+    </ul>
+</section>
+<section>
+    <h1>Flex Align</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="xgLgwy" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Flex-Align" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/xgLgwy/">UA-Flex-Flex-Align</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Align Content</h1>
+    <p>
+        Align content defines the alignment of content when there is more than one row/column. This property doesn't do anything
+        if there is only one line of content.
+    </p>
+    <ul>
+        <li class="fragment"><code>stretch</code> - default - takes up all available space</li>
+        <li class="fragment"><code>flex-start</code> - compresses all elements to the start of the container </li>
+        <li class="fragment"><code>flex-end</code> - compresses all elements to the end of the container </li>
+        <li class="fragment"><code>center</code>- compresses all elements to the end of the container </li>
+        <li class="fragment"><code>space-between</code></li>
+        <li class="fragment"><code>space-around</code></li>
+    </ul>
+</section>
+<section>
+    <h1>Align Content</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="ggxebO" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Align-Content" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/ggxebO/">UA-Flex-Align-Content</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Flex Item Properties</h1>
+    <ul>
+        <li class="fragment"><code>order</code></li>
+        <li class="fragment"><code>flex-grow</code></li>
+        <li class="fragment"><code>flex-shrink</code></li>
+        <li class="fragment"><code>flex-basis</code></li>
+    </ul>
+</section>
+<section>
+    <h1>Order</h1>
+    <p>
+        Flex items are ordered as they appear from top to bottom in source code. The order property allows to you position the display order as you need.
+    </p>
+    <p>
+        This can be useful as you can better arrange items going from desktop to mobile or vice versa.
+    </p>
+</section>
+<section>
+    <h1>Order</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="jyLdLE" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Item-Order" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/jyLdLE/">UA-Flex-Item-Order</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Flex-Grow</h1>
+    <p>
+        Sets the proportion of how much space you want an element to take up.  By default, it is set to 0. Setting all items to 1 will evenly distribute space.
+        Setting 2 will  <em>try</em> to take up twice as much space.
+    </p>
+    <p>
+        It accepts positive unitless numbers
+    </p>
+</section>
+<section>
+    <h1>Flex-Grow</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="MJvLqJ" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Item-Flex-Grow" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/MJvLqJ/">UA-Flex-Item-Flex-Grow</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Flex Shrink</h1>
+    <p>
+        Creates the ability for a flex item to shrink.
+    </p>
+    <p class="fragment">
+        I've been getting inconsistent results when trying to figure this one out.
+    </p>
+</section>
+<section>
+    <h1>Flex Basis</h1>
+    <p>
+        Sets the size of an element before the remaining space is calculated and distributed.
+    </p>
+</section>
+
+<section>
+    <h1>Flex-Basis</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="VPzRRL" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-Flex-Item-Flex-Basis" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/VPzRRL/">UA-Flex-Item-Flex-Basis</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+                <section>
+    <h1>Bootstrap</h1>
+    <ul>
+        <li class="fragment">Initial Release - Aug 19, 2011</li>
+        <li class="fragment">Designed to provide consistency for internal projects at Twitter</li>
+        <li class="fragment">Currently on version 4</li>
+    </ul>
+</section>
+<section>
+    <h1>Getting Started</h1>
+    <ul>
+        <li class="fragment">HTML5 Doctype</li>
+        <li class="fragment">Responsive Meta Tag</li>
+        <li class="fragment">Bootstrap's CSS</li>
+        <li class="fragment">Optional: Bootstraps JS</li>
+    </ul>
+</section>
+<section>
+    <h2>Starter Template</h2>
+    <pre><code class="xml">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;!-- Required meta tags --&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+
+        &lt;!-- Bootstrap CSS --&gt;
+        &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+
+        &lt;!-- Optional JavaScript --&gt;
+        &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;
+        &lt;script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"&gt;&lt;/script&gt;
+        &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"&gt;&lt;/script&gt;
+        &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+</section>
+                <section id="bs-containers">
+    <h1>Containers</h1>
+    <p>
+        Containers are your primary component for Bootstrap's Grid system.  The responsive grid will not work without containers.
+    </p>
+    <h2 class="fragment">There are two types of containers </h2>
+    <h3 class="fragment"><code>container</code></h3>
+    <h3 class="fragment"><code>container-fluid</code></h3>
+</section>
+<section>
+    <h1><code>container</code></h1>
+    <p>
+        The standard container is a <em>fixed width</em> container where its <code>max-width</code> changes with each breakpoint.
+    </p>
+    <pre class="fragment"><code class="xml">
+    <div class="container">
+        <!-- Content here -->
+    </div>  
+        </code></pre>
+</section>
+<section>
+    <h1><code>container-fluid</code></h1>
+    <p>
+        Fluid containers span the entire width of the viewport.  Their width will always be 100%.
+
+    </p>
+    <pre class="fragment"><code class="xml">
+    <div class="container-fluid">
+        <!-- Content here -->
+    </div>  
+        </code></pre>
+
+</section>
+<section>
+    <h1>Bootstrap's Breakpoints</h1>
+    <p>
+        Bootstrap is a mobile first framework and it's breakpoints are setup like this.
+    </p>
+    <pre class="fragment"><code class="css">
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query since this is the default in Bootstrap
+    
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) { ... }
+    
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) { ... }
+    
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) { ... }
+    
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) { ... }        
+</code></pre>
+
+
+</section>
+                <section>
+    <h1>Grid System</h1>
+    <p>
+        Bootstrap's Grid system is based of a 12 column grid with 5 breakpoints.
+    </p>
+</section>
+<section>
+    <h1>Grid Rows</h1>
+    <p>
+        All grids require rows to represent any columns.
+    </p>
+    <pre><code class="xml">
+    <div class="container">
+        <div class="row">
+            <!-- Content--> 
+        </div>
+    </div>
+        </code></pre>
+</section>
+<section>
+    <h1>Grid's Grid</h1>
+    <h2>Breakpoints and prefixes</h2>
+    <table style="width:100%">
+        <tr>
+            <th>Name</th>
+            <th>Break Point</th>
+            <th>Prefix</th>
+        </tr>
+        <tr class="fragment">
+            <td>Extra Small</td>
+            <td>0 to 575px</td>
+            <td>.col-</td>
+        </tr>
+        <tr class="fragment">
+            <td>Small</td>
+            <td>576px</td>
+            <td>.col-sm-#</td>
+        </tr>
+        <tr class="fragment">
+            <td>Medium</td>
+            <td>768</td>
+            <td>.col-md-#</td>
+        </tr>
+        <tr class="fragment">
+            <td>Large</td>
+            <td>992px</td>
+            <td>.col-lg-#</td>
+        </tr>
+        <tr class="fragment">
+            <td>Extra Large</td>
+            <td>1200px</td>
+            <td>.col-xl-#</td>
+        </tr>
+
+
+    </table>
+
+</section>
 
             </div>
 
