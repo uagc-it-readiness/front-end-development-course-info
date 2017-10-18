@@ -307,16 +307,24 @@
                 <section id="bs-containers">
     <h1>Containers</h1>
     <p>
-        Containers are your primary component for Bootstrap's Grid system.  The responsive grid will not work without containers.
+        Containers are your primary component for Bootstrap's Grid system. The responsive grid will not work without containers.
     </p>
     <h2 class="fragment">There are two types of containers </h2>
-    <h3 class="fragment"><code>container</code></h3>
-    <h3 class="fragment"><code>container-fluid</code></h3>
+    <h3 class="fragment">
+        <code>container</code>
+    </h3>
+    <h3 class="fragment">
+        <code>container-fluid</code>
+    </h3>
 </section>
 <section>
-    <h1><code>container</code></h1>
+    <h1>
+        <code>container</code>
+    </h1>
     <p>
-        The standard container is a <em>fixed width</em> container where its <code>max-width</code> changes with each breakpoint.
+        The standard container is a
+        <em>fixed width</em> container where its
+        <code>max-width</code> changes with each breakpoint.
     </p>
     <pre class="fragment"><code class="xml">
     <div class="container">
@@ -325,9 +333,11 @@
         </code></pre>
 </section>
 <section>
-    <h1><code>container-fluid</code></h1>
+    <h1>
+        <code>container-fluid</code>
+    </h1>
     <p>
-        Fluid containers span the entire width of the viewport.  Their width will always be 100%.
+        Fluid containers span the entire width of the viewport. Their width will always be 100%.
 
     </p>
     <pre class="fragment"><code class="xml">
@@ -336,6 +346,15 @@
     </div>  
         </code></pre>
 
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="KXbEZP" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="KXbEZP" class="codepen">See the Pen
+        <a href="https://codepen.io/WorthyD/pen/KXbEZP/">KXbEZP</a> by Daniel Worthy (
+        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
+        <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1>Bootstrap's Breakpoints</h1>
@@ -364,7 +383,8 @@
                 <section>
     <h1>Grid System</h1>
     <p>
-        Bootstrap's Grid system is based of a 12 column grid with 5 breakpoints.
+        Bootstrap's Grid system is based of a 12 column grid with 5 breakpoints. Bootstrap 4 provides a much more robust grid than
+        Bootstrap 3. We are going to focus on Bootstrap 4's
     </p>
 </section>
 <section>
@@ -414,10 +434,58 @@
             <td>1200px</td>
             <td>.col-xl-#</td>
         </tr>
-
-
     </table>
-
+</section>
+<section>
+    <h1>Grid Behavior</h1>
+    <p>
+        Instead of dictating widths in your CSS you will now dictate your desired widths with classes. Columns will need to add up
+        to 12
+    </p>
+    <h2>This code will always be two columns</h2>
+    <pre><code class="xml">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">Column 1</div>
+            <div class="col-6">Column 2</div>
+        </div>
+    </div>
+</code></pre>
+</section>
+<section>
+    <h1>Grid Behavior</h1>
+    <h2>This code will be two columns until you reach the MD breakpoint. It will then become 4 colums</h2>
+    <pre><code class="xml">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-3">Column 1</div>
+            <div class="col-6 col-md-3">Column 2</div>
+            <!-- Row Break below md -->
+            <div class="col-6 col-md-3">Column 3</div>
+            <div class="col-6 col-md-3">Column 4</div>
+ 
+        </div>
+    </div>
+</code></pre>
+</section>
+<section>
+    <h1>Grid Behavior</h1>
+    <h2>Not specifying a column with make it 100%. This will be 1 column until the MD break point</h2>
+    <pre><code class="xml">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xl-2">Column 1</div>
+            <div class="col-md-6 col-xl-2">Column 2</div>
+            <!-- Row Break  at md -->
+            <div class="col-md-6 col-xl-2">Column 3</div>
+            <div class="col-md-6 col-xl-2">Column 4</div>
+            <!-- Row Break at md -->
+             <div class="col-md-6 col-xl-2">Column 5</div>
+            <div class="col-md-6 col-xl-2">Column 6</div>
+ 
+        </div>
+    </div>
+</code></pre>
 </section>
 
             </div>
