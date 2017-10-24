@@ -36,7 +36,7 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>10/24/2017</h1>
+                    <h1>10/26/2017</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
@@ -44,26 +44,8 @@
                             <h2>Review</h2>
                             <ul>
                                 <li>
-                                    <a href="#bs-intro">Bootstrap Intro</a>
-                                </li>
-                                <li>
-                                    <a href="#bs-containers">Layout</a>
-                                </li>
-                                <li>
-                                    <a href="#bs-grid">Grid</a>
-                                </li>
-                            </ul>
-
-                        </div>
-                        <div>
-
-                            <h2>New</h2>
-                            <ul>
-                                <li>
                                     <a href="#bs-cards">Cards</a>
-
                                 </li>
- 
                                 <li>
                                     <a href="#bs-buttons">Buttons</a>
                                 </li>
@@ -79,273 +61,20 @@
                                 <li>
                                     <a href="#bs-utilities">Utilities</a>
                                 </li>
+                            </ul>
 
+                        </div>
+                        <div>
 
+                            <h2>New</h2>
+                            <ul>
 
                             </ul>
                         </div>
                     </div>
                     <h4 style="clear:both;">
-                        <a href="#exercise24">Exercise 24</a>
+                        <a href="#exercise25">Exercise 25</a>
                     </h4>
-                </section>
-                <section>
-                    <h1>Reminder:</h1>
-                    <ul>
-                        <li>Resumes</li>
-                        <li>Business Cards - vistaprint.com - 500 cards for $15</li>
-                        <li>Lynda.com</li>
-                    </ul>
-                </section>
-                <section>
-                    <h1>Nov 14th</h1>
-                </section>
-                <section id="bs-intro">
-    <h1>Bootstrap</h1>
-    <ul>
-        <li class="fragment">Initial Release - Aug 19, 2011</li>
-        <li class="fragment">Designed to provide consistency for internal projects at Twitter</li>
-        <li class="fragment">Currently on version 4</li>
-    </ul>
-</section>
-<section>
-    <h1>Getting Started</h1>
-    <ul>
-        <li class="fragment">HTML5 Doctype</li>
-        <li class="fragment">Responsive Meta Tag</li>
-        <li class="fragment">Bootstrap's CSS</li>
-        <li class="fragment">Optional: Bootstraps JS</li>
-    </ul>
-</section>
-<section>
-    <h2>Starter Template</h2>
-    <pre><code class="xml">
-&lt;!doctype html&gt;
-&lt;html lang="en"&gt;
-    &lt;head&gt;
-    &lt;title&gt;Hello, world!&lt;/title&gt;
-    &lt;!-- Required meta tags --&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
-
-    &lt;!-- Bootstrap CSS --&gt;
-    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-    &lt;h1&gt;Hello, world!&lt;/h1&gt;
-
-    &lt;!-- Optional JavaScript --&gt;
-    &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;
-    &lt;script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"&gt;&lt;/script&gt;
-    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"&gt;&lt;/script&gt;
-    &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"&gt;&lt;/script&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-        </code></pre>
-</section>
-                <section id="bs-containers">
-    <h1>Containers</h1>
-    <p>
-        Containers are your primary component for Bootstrap's Grid system. The responsive grid will not work without containers.
-    </p>
-    <h2 class="fragment">There are two types of containers </h2>
-    <h3 class="fragment">
-        <code>container</code>
-    </h3>
-    <h3 class="fragment">
-        <code>container-fluid</code>
-    </h3>
-</section>
-<section>
-    <h1>
-        <code>container</code>
-    </h1>
-    <p>
-        The standard container is a
-        <em>fixed width</em> container where its
-        <code>max-width</code> changes with each breakpoint.
-    </p>
-    <pre class="fragment"><code class="xml">
-    <div class="container">
-        <!-- Content here -->
-    </div>  
-        </code></pre>
-</section>
-<section>
-    <h1>
-        <code>container-fluid</code>
-    </h1>
-    <p>
-        Fluid containers span the entire width of the viewport. Their width will always be 100%.
-
-    </p>
-    <pre class="fragment"><code class="xml">
-    <div class="container-fluid">
-        <!-- Content here -->
-    </div>  
-        </code></pre>
-
-</section>
-<section>
-    <h1>Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="KXbEZP" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
-        data-pen-title="KXbEZP" class="codepen">See the Pen
-        <a href="https://codepen.io/WorthyD/pen/KXbEZP/">KXbEZP</a> by Daniel Worthy (
-        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
-        <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Bootstrap's Breakpoints</h1>
-    <p>
-        Bootstrap is a mobile first framework and it's breakpoints are setup like this.
-    </p>
-    <pre class="fragment"><code class="css">
-    // Extra small devices (portrait phones, less than 576px)
-    // No media query since this is the default in Bootstrap
-    
-    // Small devices (landscape phones, 576px and up)
-    @media (min-width: 576px) { ... }
-    
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) { ... }
-    
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) { ... }
-    
-    // Extra large devices (large desktops, 1200px and up)
-    @media (min-width: 1200px) { ... }        
-</code></pre>
-
-
-</section>
-                <section id="bs-grid">
-    <h1>Grid System</h1>
-    <p>
-        Bootstrap's Grid system is based of a 12 column grid with 5 breakpoints. Bootstrap 4 provides a much more robust grid than
-        Bootstrap 3. We are going to focus on Bootstrap 4's
-    </p>
-</section>
-<section>
-    <h1>Grid Rows</h1>
-    <p>
-        All grids require rows to represent any columns.
-    </p>
-    <pre><code class="xml">
-    <div class="container">
-        <div class="row">
-            <!-- Content--> 
-        </div>
-    </div>
-        </code></pre>
-</section>
-<section>
-    <h1>Equal Width Columns</h1>
-    <p>
-        You can create equal width columns with ease in Bootstrap by using the
-        <code>.col</code> class
-    </p>
-    <pre><code class="xml">
-<div class="row">
-    <div class="col">col</div>
-    <div class="col">col</div>
-    <div class="col">col</div>
-    <div class="col">col</div>
-</div>        
-</code></pre>
-
-</section>
-<section>
-
-    <h1>Grid's Grid</h1>
-    <h2>Breakpoints and prefixes</h2>
-    <table style="width:100%">
-        <tr>
-            <th>Name</th>
-            <th>Break Point</th>
-            <th>Prefix</th>
-        </tr>
-        <tr class="fragment">
-            <td>Extra Small</td>
-            <td>0 to 575px</td>
-            <td>.col-</td>
-        </tr>
-        <tr class="fragment">
-            <td>Small</td>
-            <td>576px</td>
-            <td>.col-sm-#</td>
-        </tr>
-        <tr class="fragment">
-            <td>Medium</td>
-            <td>768</td>
-            <td>.col-md-#</td>
-        </tr>
-        <tr class="fragment">
-            <td>Large</td>
-            <td>992px</td>
-            <td>.col-lg-#</td>
-        </tr>
-        <tr class="fragment">
-            <td>Extra Large</td>
-            <td>1200px</td>
-            <td>.col-xl-#</td>
-        </tr>
-    </table>
-</section>
-<section>
-    <h1>Grid Behavior</h1>
-    <p>
-        Instead of dictating widths in your CSS you will now dictate your desired widths with classes. Columns will need to add up
-        to 12
-    </p>
-    <h2>This code will always be two columns</h2>
-    <pre><code class="xml">
-    <div class="container">
-        <div class="row">
-            <div class="col-6">Column 1</div>
-            <div class="col-6">Column 2</div>
-        </div>
-    </div>
-</code></pre>
-</section>
-<section>
-    <h1>Grid Behavior</h1>
-    <h2>This code will be two columns until you reach the MD breakpoint. It will then become 4 colums</h2>
-    <pre><code class="xml">
-    <div class="container">
-        <div class="row">
-            <div class="col-6 col-md-3">Column 1</div>
-            <div class="col-6 col-md-3">Column 2</div>
-            <!-- Row Break below md -->
-            <div class="col-6 col-md-3">Column 3</div>
-            <div class="col-6 col-md-3">Column 4</div>
- 
-        </div>
-    </div>
-</code></pre>
-</section>
-<section>
-    <h1>Grid Behavior</h1>
-    <h2>Not specifying a column with make it 100%. This will be 1 column until the MD break point</h2>
-    <pre><code class="xml">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-xl-2">Column 1</div>
-            <div class="col-md-6 col-xl-2">Column 2</div>
-            <!-- Row Break  at md -->
-            <div class="col-md-6 col-xl-2">Column 3</div>
-            <div class="col-md-6 col-xl-2">Column 4</div>
-            <!-- Row Break at md -->
-             <div class="col-md-6 col-xl-2">Column 5</div>
-            <div class="col-md-6 col-xl-2">Column 6</div>
- 
-        </div>
-    </div>
-</code></pre>
-</section>
-
-                <section>
-                    <h2>Questions?</h2>
                 </section>
                 <section id="bs-cards">
     <h1>Cards</h1>
@@ -788,12 +517,245 @@
 
 </section>
 
-                <section id="exercise24">
-
-    <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise24" target="_blank">Exercise 24</a></h1>
-   
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+                <section id="bs-collapse">
+    <h1>Bootstrap Collapse</h1>
+    <p>
+        Bootstrap's auto configured slide toggle feature.
+    </p>
+    <h5 class="fragment">#1 Benefit?</h5>
+    <p class="fragment">
+        You can configure it with just HTML
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <div class="fragment">
+        <h2>Requirements</h2>
+        <ul>
+            <li class="fragment"><code>data-toggle="collapse"</code></li>
+            <li class="fragment">A target.
+                <ul>
+                    <li class="fragment">Hyperlink - <code>href="[selector]"</code></li>
+                    <li class="fragment">Button - <code>data-target="[selector]"</code></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <pre class="fragment"><code class="xml">
+<a class="btn btn-primary"  data-toggle="collapse" href="#collapseExample">
+  Link with href
+</a>        
+<!-- or -->
+<button class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample"> 
+  Button with data-target
+</button>
+        </code></pre>
 </section>
 
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="QqXLEW" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="BS-Collapse" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/QqXLEW/">BS-Collapse</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section id="bs-nav">
+    <h1>Bootstrap Navigation</h1>
+    <p>
+        Bootstrap's Navigation component takes care of most of the typical scenarios for navigation.
+    </p>
+    <h2>
+        <a href="https://getbootstrap.com/docs/4.0/components/navbar/" target="_blank">Docs</a>
+    </h2>
+</section>
+<section>
+    <h1>Structure</h1>
+    <pre><code class="xml">
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <!-- Menu-->
+</nav>
+        </code></pre>
+</section>
+<section>
+    <h1>Main Section</h1>
+    <pre><code class="xml">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+               <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </code></pre>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="KXjPmV" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="BS-Basic Nav" class="codepen">See the Pen
+        <a href="https://codepen.io/WorthyD/pen/KXjPmV/">BS-Basic Nav</a> by Daniel Worthy (
+        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
+        <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Adding a drop down link</h1>
+    <pre><code class="xml">
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" >
+        Dropdown link
+    </a>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+</li>
+</code></pre>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="LzKPOr" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="BS-Basic Nav - drop down" class="codepen">See the Pen
+        <a href="https://codepen.io/WorthyD/pen/LzKPOr/">BS-Basic Nav - drop down</a> by Daniel Worthy (
+        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
+        <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<!-- Todo: postion -->
+<!-- <section>
+    https://getbootstrap.com/docs/4.0/components/navbar/#placement
+</section> -->
+                <section>
+    <h1>Bootstrap Carousel</h1>
+    <p>
+        Bootstrap provides an easy to use Carousel that can be implemented without needing to write any JavaScript.
+    </p>
+</section>
+<section>
+    <h1>Carousel Components</h1>
+    <ul>
+        <li class="fragment">Slides</li>
+        <li class="fragment">Indicators</li>
+        <li class="fragment">Controls</li>
+    </ul>
+</section>
+<section>
+    <h1>Slides</h1>
+    <p>
+        Bootstrap's carousel is based off of images and allow optional captions.
+    </p>
+    <pre><code class="xml">
+ <div class="carousel-inner" role="listbox">
+   <div class="item active">
+      <img src="..." alt="...">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>        
+   <div class="item active">
+   </div>
+ </div>
+        </code></pre>
+</section>
+<section>
+    <h1>Indicators</h1>
+    <p>
+        Indicators displays what slide is currently active.  They are made up from list items.
+    </p>
+    <pre><code class="xml">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+        </code></pre>
+</section>
+<section>
+    <h1>Controls</h1>
+    <p>
+        The basic controls allow a user to navigate to the previous and next items in the carousel.
+    </p>
+    <code>
+        <pre class="xml">
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+        </pre>
+    </code>
+</section>
+                <section>
+    <h1>Bootstrap's Modal</h1>
+    <p>Like many other Bootstrap JavaScript components, can be implemented without needing to code out any JavaScript. You will
+        need to use JavaScript if you need to utilize its more advanced functionality.</p>
+</section>
+<section>
+    <h1>Basic Structure</h1>
+    <p>
+        There are three main components needed for the structure of a Bootstrap Modal.
+    </p>
+    <pre><code class="xml">
+<div class="modal-content">
+    <!-- Header -->
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+    </div>
+    <!-- Body -->
+    <div class="modal-body">
+        ...
+    </div>
+    <!-- Footer -->
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+</div>
+      </code></pre>
+</section>
+<section>
+    <h1>Wrapping content and trigger</h1>
+    <pre><code class="xml">
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+    Show Modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">    
+        <!-- header, body, footer -->
+    </div>
+  </div>
+</div>
+    </code></pre>
+</section>
+<section>
+    <h1>Complete</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="MEMgMv" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-BS-Modal-4" class="codepen">See the Pen
+        <a href="https://codepen.io/WorthyD/pen/MEMgMv/">UA-BS-Modal-4</a> by Daniel Worthy (
+        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
+        <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <!-- include('../resources/exercises/exercise25.html' ) -->
             </div>
 
         </div>
