@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Exercise 25 - Bootstrap Components
 
 ## Part 1 - Build a Nav
@@ -45,7 +44,3 @@ Use the images in the images that start with 'slide' for your carousel.
 
 ### Mobile - Modal Open
 ![mobile-modal.png](mobile-modal.png)
-=======
-# Exercise 25 - Directions Coming soon
-   
->>>>>>> d675eac56820587af734a1362682564278e7360f
