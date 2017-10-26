@@ -68,7 +68,10 @@
 
                             <h2>New</h2>
                             <ul>
-
+                                <li><a href="#bs-collapse"></a></li>
+                                <li><a href="#bs-nav"></a></li>
+                                <li><a href="#bs-carousel"></a></li>
+                                <li><a href="#bs-modal"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -508,13 +511,32 @@
         <li class="fragment">
             <code>m-5</code> - large margin on all sides</li>
         <li class="fragment">
-            <code>m-x-auto</code> - left & right auto margin</li>
+            <code>mx-auto</code> - left & right auto margin</li>
         <li class="fragment">
-            <code>p-1</code> - small padding on all sides</li>
+            <code>p1</code> - small padding on all sides</li>
         <li class="fragment">
-            <code>p-b-1</code> - small padding on bottom</li>
+            <code>pb-1</code> - small padding on bottom</li>
     </ul>
 
+</section>
+<section>
+    <h1>Display Utility Classes</h1>
+    <ul>
+        <li class="fragment"><code>.d-none</code></li>
+        <li class="fragment"><code>.d-inline</code></li>
+        <li class="fragment"><code>.d-inline-block</code></li>
+        <li class="fragment"><code>.d-block</code></li>
+        <li class="fragment"><code>.d-flex</code></li>
+    </ul>
+</section>
+<section>
+    <h1>Dictating Sizes</h1>
+    <ul>
+        <li class="fragment"><code>.w-25</code></li>
+        <li class="fragment"><code>.w-50</code></li>
+        <li class="fragment"><code>.w-75</code></li>
+        <li class="fragment"><code>.w-100</code></li>
+    </ul> 
 </section>
 
                 <section>
@@ -573,34 +595,40 @@
     <h1>Structure</h1>
     <pre><code class="xml">
 
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <!-- Menu-->
 </nav>
         </code></pre>
+        <ul>
+            <li class="fragment"><code>navbar</code> - base class</li>
+            <li class="fragment"><code>navbar-expand-lg</code> - expands at lg breakpoint. Can be sm|md|lg|xl</li>
+            <li class="fragment"><code>navbar-light</code> - applies a black foreground. -dark</li>
+            <li class="fragment"><code>bg-light</code> - applies a light background. -dark, -primary </li>
+        </ul>
 </section>
 <section>
     <h1>Main Section</h1>
     <pre><code class="xml">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-               <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+    </div>
+</nav>
         </code></pre>
 </section>
 <section>
@@ -638,7 +666,7 @@
 <!-- <section>
     https://getbootstrap.com/docs/4.0/components/navbar/#placement
 </section> -->
-                <section>
+                <section id="bs-carousel">
     <h1>Bootstrap Carousel</h1>
     <p>
         Bootstrap provides an easy to use Carousel that can be implemented without needing to write any JavaScript.
@@ -653,53 +681,108 @@
     </ul>
 </section>
 <section>
-    <h1>Slides</h1>
+    <h1>Slides Only</h1>
     <p>
         Bootstrap's carousel is based off of images and allow optional captions.
     </p>
     <pre><code class="xml">
- <div class="carousel-inner" role="listbox">
-   <div class="item active">
-      <img src="..." alt="...">
-      <div class="carousel-caption">
-        ...
-      </div>
-    </div>        
-   <div class="item active">
-   </div>
- </div>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="..." alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="..." alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="..." alt="Third slide">
+        </div>
+    </div>
+</div>
         </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="aLeWeE" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="BS - Images" class="codepen">See the Pen
+        <a href="https://codepen.io/WorthyD/pen/aLeWeE/">BS - Images</a> by Daniel Worthy (
+        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
+        <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>With Controls</h1>
+    <pre><code class="xml">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="..." alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="..." alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="..." alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" ></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" ></span>
+        </a>
+    </div>
+    </code></pre>
+</section>
+<section>
+    <h1>Example with controls</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="OxKgVL" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="BS - Carousel-Indicators" class="codepen">See the Pen
+        <a href="https://codepen.io/WorthyD/pen/OxKgVL/">BS - Carousel-Indicators</a> by Daniel Worthy (
+        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
+        <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1>Indicators</h1>
     <p>
-        Indicators displays what slide is currently active.  They are made up from list items.
+        Indicators displays what slide is currently active. They are made up from list items.
     </p>
     <pre><code class="xml">
     <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-id" data-slide-to="1"></li>
+        <li data-target="#carousel-id" data-slide-to="2"></li>
     </ol>
         </code></pre>
 </section>
 <section>
-    <h1>Controls</h1>
-    <p>
-        The basic controls allow a user to navigate to the previous and next items in the carousel.
-    </p>
-    <code>
-        <pre class="xml">
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-        </pre>
-    </code>
+    <p data-height="265" data-theme-id="0" data-slug-hash="yzmXYg" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="BS - Carousel-Indicators" class="codepen">See the Pen
+        <a href="https://codepen.io/WorthyD/pen/yzmXYg/">BS - Carousel-Indicators</a> by Daniel Worthy (
+        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
+        <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 </section>
-                <section>
+<section>
+    <h1>Captions</h1>
+    <pre><code class="xml">
+    <div class="carousel-item">
+        <img src="..." alt="...">
+        <div class="carousel-caption">
+            <h3>...</h3>
+            <p>...</p>
+        </div>
+    </div>
+</code></pre>
+
+</section>
+<section>
+        <p data-height="265" data-theme-id="0" data-slug-hash="boXrwY" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="BS - Carousel-Captions" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/boXrwY/">BS - Carousel-Captions</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section id="bs-modal">
     <h1>Bootstrap's Modal</h1>
     <p>Like many other Bootstrap JavaScript components, can be implemented without needing to code out any JavaScript. You will
         need to use JavaScript if you need to utilize its more advanced functionality.</p>
