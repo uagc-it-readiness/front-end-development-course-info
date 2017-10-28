@@ -1,0 +1,685 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>10/26/2017</h1>
+                    <!--Arrays and Methods-->
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                <li>
+                                    <a href="#bs-collapse">Collapse</a>
+                                </li>
+                                <li>
+                                    <a href="#bs-nav">Nav</a>
+                                </li>
+                                <li>
+                                    <a href="#bs-carousel">Carousel</a>
+                                </li>
+                                <li>
+                                    <a href="#bs-modal">Modal</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <div>
+
+                            <h2>New</h2>
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+               </section>
+
+                <section id="bs-collapse">
+    <h1>Bootstrap Collapse</h1>
+    <p>
+        Bootstrap's auto configured slide toggle feature.
+    </p>
+    <h5 class="fragment">#1 Benefit?</h5>
+    <p class="fragment">
+        You can configure it with just HTML
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <div class="fragment">
+        <h2>Requirements</h2>
+        <ul>
+            <li class="fragment"><code>data-toggle="collapse"</code></li>
+            <li class="fragment">A target.
+                <ul>
+                    <li class="fragment">Hyperlink - <code>href="[selector]"</code></li>
+                    <li class="fragment">Button - <code>data-target="[selector]"</code></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <pre class="fragment"><code class="xml">
+<a class="btn btn-primary"  data-toggle="collapse" href="#collapseExample">
+  Link with href
+</a>        
+<!-- or -->
+<button class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample"> 
+  Button with data-target
+</button>
+        </code></pre>
+</section>
+
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="QqXLEW" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="BS-Collapse" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/QqXLEW/">BS-Collapse</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section id="bs-nav">
+    <h1>Bootstrap Navigation</h1>
+    <p>
+        Bootstrap's Navigation component takes care of most of the typical scenarios for navigation.
+    </p>
+    <h2>
+        <a href="https://getbootstrap.com/docs/4.0/components/navbar/" target="_blank">Docs</a>
+    </h2>
+</section>
+<section>
+    <h1>Structure</h1>
+    <pre><code class="xml">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Menu-->
+</nav>
+        </code></pre>
+        <ul>
+            <li class="fragment"><code>navbar</code> - base class</li>
+            <li class="fragment"><code>navbar-expand-lg</code> - expands at lg breakpoint. Can be sm|md|lg|xl</li>
+            <li class="fragment"><code>navbar-light</code> - applies a black foreground. -dark</li>
+            <li class="fragment"><code>bg-light</code> - applies a light background. -dark, -primary </li>
+        </ul>
+</section>
+<section>
+    <h1>Main Section</h1>
+    <pre><code class="xml">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+        </code></pre>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="KXjPmV" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="BS-Basic Nav" class="codepen">See the Pen
+        <a href="https://codepen.io/WorthyD/pen/KXjPmV/">BS-Basic Nav</a> by Daniel Worthy (
+        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
+        <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Adding a drop down link</h1>
+    <pre><code class="xml">
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" >
+        Dropdown link
+    </a>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+</li>
+</code></pre>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="LzKPOr" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="BS-Basic Nav - drop down" class="codepen">See the Pen
+        <a href="https://codepen.io/WorthyD/pen/LzKPOr/">BS-Basic Nav - drop down</a> by Daniel Worthy (
+        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
+        <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<!-- Todo: postion -->
+<!-- <section>
+    https://getbootstrap.com/docs/4.0/components/navbar/#placement
+</section> -->
+                <section id="bs-carousel">
+    <h1>Bootstrap Carousel</h1>
+    <p>
+        Bootstrap provides an easy to use Carousel that can be implemented without needing to write any JavaScript.
+    </p>
+</section>
+<section>
+    <h1>Carousel Components</h1>
+    <ul>
+        <li class="fragment">Slides</li>
+        <li class="fragment">Indicators</li>
+        <li class="fragment">Controls</li>
+    </ul>
+</section>
+<section>
+    <h1>Slides Only</h1>
+    <p>
+        Bootstrap's carousel is based off of images and allow optional captions.
+    </p>
+    <pre><code class="xml">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="..." alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="..." alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="..." alt="Third slide">
+        </div>
+    </div>
+</div>
+        </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="aLeWeE" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="BS - Images" class="codepen">See the Pen
+        <a href="https://codepen.io/WorthyD/pen/aLeWeE/">BS - Images</a> by Daniel Worthy (
+        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
+        <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>With Controls</h1>
+    <pre><code class="xml">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="..." alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="..." alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="..." alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" ></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" ></span>
+        </a>
+    </div>
+    </code></pre>
+</section>
+<section>
+    <h1>Example with controls</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="OxKgVL" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="BS - Carousel-Indicators" class="codepen">See the Pen
+        <a href="https://codepen.io/WorthyD/pen/OxKgVL/">BS - Carousel-Indicators</a> by Daniel Worthy (
+        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
+        <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Indicators</h1>
+    <p>
+        Indicators displays what slide is currently active. They are made up from list items.
+    </p>
+    <pre><code class="xml">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-id" data-slide-to="1"></li>
+        <li data-target="#carousel-id" data-slide-to="2"></li>
+    </ol>
+        </code></pre>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="yzmXYg" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="BS - Carousel-Indicators" class="codepen">See the Pen
+        <a href="https://codepen.io/WorthyD/pen/yzmXYg/">BS - Carousel-Indicators</a> by Daniel Worthy (
+        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
+        <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+</section>
+<section>
+    <h1>Captions</h1>
+    <pre><code class="xml">
+    <div class="carousel-item">
+        <img src="..." alt="...">
+        <div class="carousel-caption">
+            <h3>...</h3>
+            <p>...</p>
+        </div>
+    </div>
+</code></pre>
+
+</section>
+<section>
+        <p data-height="265" data-theme-id="0" data-slug-hash="boXrwY" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="BS - Carousel-Captions" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/boXrwY/">BS - Carousel-Captions</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section id="bs-modal">
+    <h1>Bootstrap's Modal</h1>
+    <p>Like many other Bootstrap JavaScript components, can be implemented without needing to code out any JavaScript. You will
+        need to use JavaScript if you need to utilize its more advanced functionality.</p>
+</section>
+<section>
+    <h1>Basic Structure</h1>
+    <p>
+        There are three main components needed for the structure of a Bootstrap Modal.
+    </p>
+    <pre><code class="xml">
+<div class="modal-content">
+    <!-- Header -->
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+    </div>
+    <!-- Body -->
+    <div class="modal-body">
+        ...
+    </div>
+    <!-- Footer -->
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+</div>
+      </code></pre>
+</section>
+<section>
+    <h1>Wrapping content and trigger</h1>
+    <pre><code class="xml">
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+    Show Modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">    
+        <!-- header, body, footer -->
+    </div>
+  </div>
+</div>
+    </code></pre>
+</section>
+<section>
+    <h1>Complete</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="MEMgMv" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-BS-Modal-4" class="codepen">See the Pen
+        <a href="https://codepen.io/WorthyD/pen/MEMgMv/">UA-BS-Modal-4</a> by Daniel Worthy (
+        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
+        <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+ 
+
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+
+                <section>
+    <h1>SASS</h1>
+    <h2>How CSS should behave.</h2>
+</section>
+<section>
+    <h1>Sass... SCSS... whatever</h1>
+    <p>
+        I'll say Sass, but I'm talking about SCSS.  `.sass` is an older style CSS preprocessor. `.scss` is the current file extension. I'll call it Sass, documentation will call it Sass, and all the file extensions are .scss
+    </p>
+</section>
+<section>
+    <h1>SASS Benefits</h1>
+    <ul>
+        <li class="fragment">Variables</li>
+        <li class="fragment">Nesting</li>
+        <li class="fragment">Partials</li>
+        <li class="fragment">Imports</li>
+        <li class="fragment">Mixins</li>
+    </ul>
+</section>
+<section>
+    <h1>SASS Variables</h1>
+    <p>
+        Allow you to set a value in one spot and use it throughout all of your files. Variables are auto detected and must start
+        with $.
+    </p>
+    <h3 class="fragment">Source:</h3>
+    <pre class="fragment"><code class="scss">
+        $theme: #f00;
+
+        a{
+            color:$theme;
+            border:1px solid $theme;
+        }
+        
+        </code></pre>
+    <h3 class="fragment">Output:</h3>
+    <pre class="fragment"><code class="scss">
+        a{
+            color:#f00;
+            border:1px solid #f00;
+        }
+        </code></pre>
+</section>
+<section>
+    <h2>Nesting</h2>
+    <p>
+        Nest allows you to group your CSS and create a more specific CSS selector.
+    </p>
+    <div class="two-col">
+        <div>
+            <h3 class="fragment">Source:</h3>
+            <pre class="fragment"><code class="scss">
+$theme: #f00;
+.container {
+    a{
+        color:$theme;
+        border:1px solid $theme;
+    }
+    p{
+        color:black;
+    }
+}
+        </code></pre>
+        </div>
+        <div>
+            <h3 class="fragment">Output:</h3>
+            <pre class="fragment"><code class="scss">
+    .container a{
+        color:#f00;
+        border:1px solid #f00;
+    }
+    .container p{
+        color:black;
+    }
+        </code></pre>
+        </div>
+    </div>
+    <aside class="notes">
+        This is probably my favorite feature.
+    </aside>
+</section>
+<section>
+    <h1>Use nesting with caution</h1>
+    <div class="two-col">
+        <div>
+            <h3 class="fragment">Source:</h3>
+            <pre class="fragment"><code class="scss">
+.container {
+    .element{
+        a {
+            .icon{
+                color:blue;
+            }
+            .text{
+                color: black;
+            }
+        }
+    }
+}
+        </code></pre>
+        </div>
+        <div>
+            <h3 class="fragment">Output:</h3>
+            <pre class="fragment"><code class="scss">
+.container .element a .icon { 
+    color:blue;
+}
+.container .element a .text { 
+    color:black;
+}
+        </code></pre>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Partials </h1>
+    <p>
+        Partials contain small blocks of SCSS that can be used to manage specific components of your website. Partials typically
+        start with an underscore.
+    </p>
+    <h2 class="fragment">Examples</h2>
+    <h2 class="fragment">_reset.scss</h2>
+    <pre class="fragment"><code class="scss">
+* {
+    box-sizing: border-box;
+}
+h1,h2,h3, p{
+    margin:0;
+    padding:0;
+}
+   
+        </code></pre>
+</section>
+<section>
+    <h2>Examples</h2>
+    <h2 class="fragment">_theme.scss</h2>
+    <pre class="fragment"><code class="scss">
+    $brandcolor: #f00;
+    $brandsecondary: #a00;
+    $spacing: 15px;
+    </code></pre>
+</section>
+<section>
+    <h2>Examples</h2>
+    <h2 class="fragment">_navigation.scss</h2>
+    <pre class="fragment"><code class="scss">
+   .navigation {
+       display:flex;
+
+        nav a{
+            color:$brandcolor;
+            margin:$spacing;
+        }
+   }
+   </code></pre>
+</section>
+<section>
+    <h1>Import</h1>
+    <p>
+        SASS's import functionality allows you to combine multiple SCSS files into one.
+    </p>
+    <pre class="fragment"><code class="scss">
+    @import 'reset';
+    @import 'theme';
+    @import 'navigation';
+    @import 'footer';
+    @import 'page1';
+        </code></pre>
+    <aside class="notes">
+        CSS has a native import for using multiple CSS files, but
+    </aside>
+</section>
+<section>
+    <h1>Installation</h1>
+    <h2>Windows Users: Get Ruby</h2>
+    <h3><a href="https://rubyinstaller.org/">rubyinstaller.org</a></h3>
+    <h2>Mac Users: You already have Ruby</h2>
+    <h2>Open a command prompt after installing and type the following.</h2>
+    <pre><code>
+    gem -v
+        </code></pre>
+</section>
+<section>
+    <h1>Installation Continued</h1>
+    <h2>SASS/SCSS installation</h2>
+    <h3><a href="http://sass-lang.com/install">http://sass-lang.com/install</a></h3>
+    <pre><code>
+    gem install sass
+        </code></pre> or
+    <pre><code>
+    sudo gem install sass
+        </code></pre> Then run to verify
+    <pre><code>
+    sass -v
+        </code></pre>
+</section>
+<section>
+    <h1>Gulp SCSS Usage</h1>
+    <pre><code>
+        npm install gulp-sass --save-dev
+    </code></pre>
+</section>
+<section>
+    <h1>Gulp SASS Code</h1>
+    <pre><code class="js">
+    gulp.task('sass', function () {
+        return gulp.src('./sass/**/*.scss')
+            .pipe(sass())
+            .pipe(gulp.dest('./css'));
+    });
+</code></pre>
+</section>
+                <section>
+    <h1>Mixins</h1>
+    <p>
+        Mixins allow you to write functions inside you SCSS and minimize your code footprint.
+    </p>
+</section>
+<section>
+    <h1>Example: </h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="jyRNxz" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-SCSS--MIXIN1" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/jyRNxz/">UA-SCSS--MIXIN1</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Example 2:</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="dNLpJq" data-default-tab="css" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-SCSS--MIXIN2" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/dNLpJq/">UA-SCSS--MIXIN2</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Extend</h1>
+    <p>Extend allows you to share common CSS accross multiple classes.</p>
+</section>
+<section>
+    <h1>Extend Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="WRWGLx" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-SCSS--MIXIN3" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/WRWGLx/">UA-SCSS--MIXIN3</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Operators</h1>
+    <p>
+        We can do math calculations inside of SASS. You can use the +, -, *, /, and % operators like you would in JavaScript. SASS will automatically work with px and % values.
+    </p>
+</section>
+<section>
+    <h1>Operators Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="jyRVbw" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-SCSS--Operators" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/jyRVbw/">UA-SCSS--Operators</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>
