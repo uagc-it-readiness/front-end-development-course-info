@@ -36,341 +36,36 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>10/26/2017</h1>
+                    <h1>11/2/2017</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
                         <div>
                             <h2>Review</h2>
                             <ul>
-                                <li>
-                                    <a href="#bs-collapse">Collapse</a>
-                                </li>
-                                <li>
-                                    <a href="#bs-nav">Nav</a>
-                                </li>
-                                <li>
-                                    <a href="#bs-carousel">Carousel</a>
-                                </li>
-                                <li>
-                                    <a href="#bs-modal">Modal</a>
-                                </li>
-
-                            </ul>
+                                <li><a href="#scss">SCSS Intro</a></li>
+                                <li><a href="#scss-var">Variables</a></li>
+                                <li><a href="#scss-nesting">Nesting</a></li>
+                                <li><a href="#partials">Partials</a></li>
+                                <li><a href="#installation">Installation</a></li>
+                                <li><a href="#mixins">Mixins</a></li>
+                             </ul>
 
                         </div>
                         <div>
 
                             <h2>New</h2>
                             <ul>
+                                <li><a href="#scss-parent">Parent Selectors</a></li>
+                                <li><a href="#scss-if">If Statement</a></li>
+                                <li><a href="#scss-for">Loops</a></li>
+                                <li><a href="#fb-sharing">FB Sharing</a></li>
+                                <li><a href="#fb-like">FB Like Button</a></li>
                             </ul>
                         </div>
                     </div>
                </section>
-
-                <section id="bs-collapse">
-    <h1>Bootstrap Collapse</h1>
-    <p>
-        Bootstrap's auto configured slide toggle feature.
-    </p>
-    <h5 class="fragment">#1 Benefit?</h5>
-    <p class="fragment">
-        You can configure it with just HTML
-    </p>
-</section>
-<section>
-    <h1>Syntax</h1>
-    <div class="fragment">
-        <h2>Requirements</h2>
-        <ul>
-            <li class="fragment"><code>data-toggle="collapse"</code></li>
-            <li class="fragment">A target.
-                <ul>
-                    <li class="fragment">Hyperlink - <code>href="[selector]"</code></li>
-                    <li class="fragment">Button - <code>data-target="[selector]"</code></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <pre class="fragment"><code class="xml">
-<a class="btn btn-primary"  data-toggle="collapse" href="#collapseExample">
-  Link with href
-</a>        
-<!-- or -->
-<button class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample"> 
-  Button with data-target
-</button>
-        </code></pre>
-</section>
-
-<section>
-    <h1>Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="QqXLEW" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2" data-pen-title="BS-Collapse" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/QqXLEW/">BS-Collapse</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-                <section id="bs-nav">
-    <h1>Bootstrap Navigation</h1>
-    <p>
-        Bootstrap's Navigation component takes care of most of the typical scenarios for navigation.
-    </p>
-    <h2>
-        <a href="https://getbootstrap.com/docs/4.0/components/navbar/" target="_blank">Docs</a>
-    </h2>
-</section>
-<section>
-    <h1>Structure</h1>
-    <pre><code class="xml">
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Menu-->
-</nav>
-        </code></pre>
-        <ul>
-            <li class="fragment"><code>navbar</code> - base class</li>
-            <li class="fragment"><code>navbar-expand-lg</code> - expands at lg breakpoint. Can be sm|md|lg|xl</li>
-            <li class="fragment"><code>navbar-light</code> - applies a black foreground. -dark</li>
-            <li class="fragment"><code>bg-light</code> - applies a light background. -dark, -primary </li>
-        </ul>
-</section>
-<section>
-    <h1>Main Section</h1>
-    <pre><code class="xml">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-        </code></pre>
-</section>
-<section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="KXjPmV" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
-        data-pen-title="BS-Basic Nav" class="codepen">See the Pen
-        <a href="https://codepen.io/WorthyD/pen/KXjPmV/">BS-Basic Nav</a> by Daniel Worthy (
-        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
-        <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Adding a drop down link</h1>
-    <pre><code class="xml">
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" >
-        Dropdown link
-    </a>
-    <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-    </div>
-</li>
-</code></pre>
-</section>
-<section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="LzKPOr" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
-        data-pen-title="BS-Basic Nav - drop down" class="codepen">See the Pen
-        <a href="https://codepen.io/WorthyD/pen/LzKPOr/">BS-Basic Nav - drop down</a> by Daniel Worthy (
-        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
-        <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<!-- Todo: postion -->
-<!-- <section>
-    https://getbootstrap.com/docs/4.0/components/navbar/#placement
-</section> -->
-                <section id="bs-carousel">
-    <h1>Bootstrap Carousel</h1>
-    <p>
-        Bootstrap provides an easy to use Carousel that can be implemented without needing to write any JavaScript.
-    </p>
-</section>
-<section>
-    <h1>Carousel Components</h1>
-    <ul>
-        <li class="fragment">Slides</li>
-        <li class="fragment">Indicators</li>
-        <li class="fragment">Controls</li>
-    </ul>
-</section>
-<section>
-    <h1>Slides Only</h1>
-    <p>
-        Bootstrap's carousel is based off of images and allow optional captions.
-    </p>
-    <pre><code class="xml">
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-100" src="..." alt="First slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Second slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Third slide">
-        </div>
-    </div>
-</div>
-        </code></pre>
-</section>
-<section>
-    <h1>Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="aLeWeE" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
-        data-pen-title="BS - Images" class="codepen">See the Pen
-        <a href="https://codepen.io/WorthyD/pen/aLeWeE/">BS - Images</a> by Daniel Worthy (
-        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
-        <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>With Controls</h1>
-    <pre><code class="xml">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="..." alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="..." alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="..." alt="Third slide">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" ></span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" ></span>
-        </a>
-    </div>
-    </code></pre>
-</section>
-<section>
-    <h1>Example with controls</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="OxKgVL" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
-        data-pen-title="BS - Carousel-Indicators" class="codepen">See the Pen
-        <a href="https://codepen.io/WorthyD/pen/OxKgVL/">BS - Carousel-Indicators</a> by Daniel Worthy (
-        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
-        <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Indicators</h1>
-    <p>
-        Indicators displays what slide is currently active. They are made up from list items.
-    </p>
-    <pre><code class="xml">
-    <ol class="carousel-indicators">
-        <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-id" data-slide-to="1"></li>
-        <li data-target="#carousel-id" data-slide-to="2"></li>
-    </ol>
-        </code></pre>
-</section>
-<section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="yzmXYg" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
-        data-pen-title="BS - Carousel-Indicators" class="codepen">See the Pen
-        <a href="https://codepen.io/WorthyD/pen/yzmXYg/">BS - Carousel-Indicators</a> by Daniel Worthy (
-        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
-        <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
-</section>
-<section>
-    <h1>Captions</h1>
-    <pre><code class="xml">
-    <div class="carousel-item">
-        <img src="..." alt="...">
-        <div class="carousel-caption">
-            <h3>...</h3>
-            <p>...</p>
-        </div>
-    </div>
-</code></pre>
-
-</section>
-<section>
-        <p data-height="265" data-theme-id="0" data-slug-hash="boXrwY" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="BS - Carousel-Captions" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/boXrwY/">BS - Carousel-Captions</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-                <section id="bs-modal">
-    <h1>Bootstrap's Modal</h1>
-    <p>Like many other Bootstrap JavaScript components, can be implemented without needing to code out any JavaScript. You will
-        need to use JavaScript if you need to utilize its more advanced functionality.</p>
-</section>
-<section>
-    <h1>Basic Structure</h1>
-    <p>
-        There are three main components needed for the structure of a Bootstrap Modal.
-    </p>
-    <pre><code class="xml">
-<div class="modal-content">
-    <!-- Header -->
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-    </div>
-    <!-- Body -->
-    <div class="modal-body">
-        ...
-    </div>
-    <!-- Footer -->
-    <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-    </div>
-</div>
-      </code></pre>
-</section>
-<section>
-    <h1>Wrapping content and trigger</h1>
-    <pre><code class="xml">
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
-    Show Modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">    
-        <!-- header, body, footer -->
-    </div>
-  </div>
-</div>
-    </code></pre>
-</section>
-<section>
-    <h1>Complete</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="MEMgMv" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
-        data-pen-title="UA-BS-Modal-4" class="codepen">See the Pen
-        <a href="https://codepen.io/WorthyD/pen/MEMgMv/">UA-BS-Modal-4</a> by Daniel Worthy (
-        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
-        <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
- 
-
-                <section>
-                    <h2>Questions?</h2>
-                </section>
-
-                <section>
+                <section id="scss">
     <h1>SASS</h1>
     <h2>How CSS should behave.</h2>
 </section>
@@ -390,7 +85,7 @@
         <li class="fragment">Mixins</li>
     </ul>
 </section>
-<section>
+<section id="scss-var">
     <h1>SASS Variables</h1>
     <p>
         Allow you to set a value in one spot and use it throughout all of your files. Variables are auto detected and must start
@@ -414,7 +109,7 @@
         }
         </code></pre>
 </section>
-<section>
+<section id="scss-nesting">
     <h2>Nesting</h2>
     <p>
         Nest allows you to group your CSS and create a more specific CSS selector.
@@ -485,7 +180,7 @@ $theme: #f00;
         </div>
     </div>
 </section>
-<section>
+<section id="partials">
     <h1>Partials </h1>
     <p>
         Partials contain small blocks of SCSS that can be used to manage specific components of your website. Partials typically
@@ -543,7 +238,7 @@ h1,h2,h3, p{
         CSS has a native import for using multiple CSS files, but
     </aside>
 </section>
-<section>
+<section id="installation">
     <h1>Installation</h1>
     <h2>Windows Users: Get Ruby</h2>
     <h3><a href="https://rubyinstaller.org/">rubyinstaller.org</a></h3>
@@ -583,7 +278,7 @@ h1,h2,h3, p{
     });
 </code></pre>
 </section>
-                <section>
+                <section id="mixins">
     <h1>Mixins</h1>
     <p>
         Mixins allow you to write functions inside you SCSS and minimize your code footprint.
@@ -624,6 +319,218 @@ h1,h2,h3, p{
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+                <section>
+    <h1>Sass continued</h1>
+</section>
+<section id="scss-parent">
+    <h1>Referencing a parent selector</h1>
+    <p>
+        You can reference a nested selectors parent by using the <code>&</code> symbol.
+    </p>
+</section>
+<section>
+    <h1>Simple Parent Reference</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="JWPxLy" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/JWPxLy/">UAIT-SCSS-Nesting</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Variable Expansion in Selectors</h1>
+<p>You can use Sass variables for more than just values. You can use them in conjunction with selectors.</p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="vxYNRq" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="UAIT-SCSS-Expanding Class" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/vxYNRq/">UAIT-SCSS-Expanding Class</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Using Parent for repetitive names.</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="qrWgJp" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-Deep" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/qrWgJp/">UAIT-SCSS-Nesting-Deep</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Using Parent to Reference the Root</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="evOXNR" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-Parent" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/evOXNR/">UAIT-SCSS-Nesting-Parent</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+</section>
+<section>
+    <h1> <code>@at-root</code></h1>
+    <p><code>@at-root</code> you to nest inside css for structure, but places the rules inside it in the root of the css. </p>
+    <p>
+        You can use it as an inline rule or as a wrapping rule.
+    </p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="ryBbNq" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-Root" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/ryBbNq/">UAIT-SCSS-Nesting-Root</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+</section>
+<section id="scss-if">
+    <h1><code>@if</code></h1>
+    <p>
+        SCSS has the ability to use if, else if, and else statements. These can be used to theme a your styles or setup conditional
+        formatting.
+    </p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="RpwWrd" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-Root" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/RpwWrd/">UAIT-SCSS-Nesting-Root</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section id="scss-for">
+    <h1><code>@for</code></h1>
+    <p>
+        You can use SCSS to execute a for loop based on indexes. This is useful for generating grids and removing duplicate code.
+    </p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="qrBONK" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-For" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/qrBONK/">UAIT-SCSS-Nesting-For</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+<section>
+    <h1><code>
+        @each
+        </code></h1>
+    <p>
+        @each is used for looping through a defined collection of items.
+    </p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="mWdeWZ" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-Each" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/mWdeWZ/">UAIT-SCSS-Nesting-Each</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Additional Methods</h1>
+    <ul>
+        <li class="fragment">darken/lighten</li>
+        <li class="fragment">quote/unquote</li>
+        <li class="fragment">percentage</li>
+        <li class="fragment">to-upper-case/to-lower-case</li>
+    </ul>
+</section>
+<!-- http://thesassway.com/-->
+<!-- %extend -->
+                <section>
+    <h1>Facebook Integration</h1>
+    <h3>
+        <a href="https://developers.facebook.com/" target="_blank">Documentation</a>
+    </h3>
+</section>
+<section id="fb-sharing">
+    <h1>Link Sharing</h1>
+    <p>
+        You can customize the previews of you links being shared on Facebook by leveraging OG meta tags.
+    </p>
+    <h3>
+        <a href="https://developers.facebook.com/docs/sharing/webmasters">Documentation</a>
+    </h3>
+</section>
+<section>
+    <h1>OG Tags</h1>
+    <p>
+        OG tags are meta tags that tell Facebook what to display when sharing.
+    </p>
+    <h3 class="fragment">The Basic Tags</h3>
+    <ul>
+        <li class="fragment">
+            <code>og:url</code> - The URL to the page.</li>
+        <li class="fragment">
+            <code>og:title</code> - The title of the page.</li>
+        <li class="fragment">
+            <code>og:description</code>
+        </li>
+        <li class="fragment">
+            <code>og:image</code> - Preview image</li>
+    </ul>
+</section>
+<section>
+    <h1>In Markup</h1>
+    <pre><code class="xml">
+<head>    
+    <meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="When Great Minds Don’t Think Alike" />
+    <meta property="og:description" content="How much does culture influence creative thinking?" />
+    <meta property="og:image" content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />        
+</head>
+    </code></pre>
+</section>
+<section>
+    <h1>Testing</h1>
+    <h3>
+        <a href="https://developers.facebook.com/tools/debug/">Facebook Debug Tool</a>
+    </h3>
+</section>
+
+
+<section id="fb-like">
+    <h1>Adding a Like Button</h1>
+    <h3><a href="https://developers.facebook.com/docs/plugins/like-button">Like Button Generator</a></h3>
+</section>
+<section>
+    <h1>Step 1: Including the Facebook SDK</h1>
+    <p>
+        This needs to be included right next to the opening <code>body</code> tag.
+    </p>
+<pre><code class="xml">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=440441316067845';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    </code></pre>
+</section>
+<section>
+    <h1>Step 2: Adding the Markup </h1>
+    <pre><code class="xml">
+  <!-- Your like button code -->
+<div class="fb-like" 
+  data-href="http://www.your-domain.com/your-page.html" 
+  data-layout="standard" 
+  data-action="like" 
+  data-show-faces="true">
+</div>
+        </code></pre>
+</section>
+<section>
+    <h1>Facebook Share Button</h1>
+    <h3><a href="https://developers.facebook.com/docs/plugins/share-button/">Share Button Generator</a></h3>
+</section>
+<section>
+    <h1>Step 1: Add the Facebook SDK.</h1>
+    <p>
+        But only if you haven't added it yet.
+    </p>
+</section>
+<section>
+    <h1>Step 2: Add the Markup</h1>
+    <pre><code class="xml">
+  <!-- Your share button code -->
+<div class="fb-share-button" 
+    data-href="http://www.your-domain.com/your-page.html" 
+    data-layout="button_count">
+</div>    
+</code></pre>
+</section>
 
             </div>
 
