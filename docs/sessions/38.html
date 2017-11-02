@@ -43,286 +43,24 @@
                         <div>
                             <h2>Review</h2>
                             <ul>
-                                <li><a href="#scss">SCSS Intro</a></li>
-                                <li><a href="#scss-var">Variables</a></li>
-                                <li><a href="#scss-nesting">Nesting</a></li>
-                                <li><a href="#partials">Partials</a></li>
-                                <li><a href="#installation">Installation</a></li>
-                                <li><a href="#mixins">Mixins</a></li>
-                             </ul>
+                                 <li><a href="#scss-parent">Parent Selectors</a></li>
+                                <li><a href="#scss-if">If Statement</a></li>
+                                <li><a href="#scss-for">Loops</a></li>
+                                <li><a href="#fb-sharing">FB Sharing</a></li>
+                                <li><a href="#fb-like">FB Like Button</a></li>
+                                
+                            </ul>
 
                         </div>
                         <div>
 
                             <h2>New</h2>
                             <ul>
-                                <li><a href="#scss-parent">Parent Selectors</a></li>
-                                <li><a href="#scss-if">If Statement</a></li>
-                                <li><a href="#scss-for">Loops</a></li>
-                                <li><a href="#fb-sharing">FB Sharing</a></li>
-                                <li><a href="#fb-like">FB Like Button</a></li>
-                            </ul>
+                           </ul>
                         </div>
                     </div>
                </section>
-                <section id="scss">
-    <h1>SASS</h1>
-    <h2>How CSS should behave.</h2>
-</section>
-<section>
-    <h1>Sass... SCSS... whatever</h1>
-    <p>
-        I'll say Sass, but I'm talking about SCSS.  `.sass` is an older style CSS preprocessor. `.scss` is the current file extension. I'll call it Sass, documentation will call it Sass, and all the file extensions are .scss
-    </p>
-</section>
-<section>
-    <h1>SASS Benefits</h1>
-    <ul>
-        <li class="fragment">Variables</li>
-        <li class="fragment">Nesting</li>
-        <li class="fragment">Partials</li>
-        <li class="fragment">Imports</li>
-        <li class="fragment">Mixins</li>
-    </ul>
-</section>
-<section id="scss-var">
-    <h1>SASS Variables</h1>
-    <p>
-        Allow you to set a value in one spot and use it throughout all of your files. Variables are auto detected and must start
-        with $.
-    </p>
-    <h3 class="fragment">Source:</h3>
-    <pre class="fragment"><code class="scss">
-        $theme: #f00;
-
-        a{
-            color:$theme;
-            border:1px solid $theme;
-        }
-        
-        </code></pre>
-    <h3 class="fragment">Output:</h3>
-    <pre class="fragment"><code class="scss">
-        a{
-            color:#f00;
-            border:1px solid #f00;
-        }
-        </code></pre>
-</section>
-<section id="scss-nesting">
-    <h2>Nesting</h2>
-    <p>
-        Nest allows you to group your CSS and create a more specific CSS selector.
-    </p>
-    <div class="two-col">
-        <div>
-            <h3 class="fragment">Source:</h3>
-            <pre class="fragment"><code class="scss">
-$theme: #f00;
-.container {
-    a{
-        color:$theme;
-        border:1px solid $theme;
-    }
-    p{
-        color:black;
-    }
-}
-        </code></pre>
-        </div>
-        <div>
-            <h3 class="fragment">Output:</h3>
-            <pre class="fragment"><code class="scss">
-    .container a{
-        color:#f00;
-        border:1px solid #f00;
-    }
-    .container p{
-        color:black;
-    }
-        </code></pre>
-        </div>
-    </div>
-    <aside class="notes">
-        This is probably my favorite feature.
-    </aside>
-</section>
-<section>
-    <h1>Use nesting with caution</h1>
-    <div class="two-col">
-        <div>
-            <h3 class="fragment">Source:</h3>
-            <pre class="fragment"><code class="scss">
-.container {
-    .element{
-        a {
-            .icon{
-                color:blue;
-            }
-            .text{
-                color: black;
-            }
-        }
-    }
-}
-        </code></pre>
-        </div>
-        <div>
-            <h3 class="fragment">Output:</h3>
-            <pre class="fragment"><code class="scss">
-.container .element a .icon { 
-    color:blue;
-}
-.container .element a .text { 
-    color:black;
-}
-        </code></pre>
-        </div>
-    </div>
-</section>
-<section id="partials">
-    <h1>Partials </h1>
-    <p>
-        Partials contain small blocks of SCSS that can be used to manage specific components of your website. Partials typically
-        start with an underscore.
-    </p>
-    <h2 class="fragment">Examples</h2>
-    <h2 class="fragment">_reset.scss</h2>
-    <pre class="fragment"><code class="scss">
-* {
-    box-sizing: border-box;
-}
-h1,h2,h3, p{
-    margin:0;
-    padding:0;
-}
-   
-        </code></pre>
-</section>
-<section>
-    <h2>Examples</h2>
-    <h2 class="fragment">_theme.scss</h2>
-    <pre class="fragment"><code class="scss">
-    $brandcolor: #f00;
-    $brandsecondary: #a00;
-    $spacing: 15px;
-    </code></pre>
-</section>
-<section>
-    <h2>Examples</h2>
-    <h2 class="fragment">_navigation.scss</h2>
-    <pre class="fragment"><code class="scss">
-   .navigation {
-       display:flex;
-
-        nav a{
-            color:$brandcolor;
-            margin:$spacing;
-        }
-   }
-   </code></pre>
-</section>
-<section>
-    <h1>Import</h1>
-    <p>
-        SASS's import functionality allows you to combine multiple SCSS files into one.
-    </p>
-    <pre class="fragment"><code class="scss">
-    @import 'reset';
-    @import 'theme';
-    @import 'navigation';
-    @import 'footer';
-    @import 'page1';
-        </code></pre>
-    <aside class="notes">
-        CSS has a native import for using multiple CSS files, but
-    </aside>
-</section>
-<section id="installation">
-    <h1>Installation</h1>
-    <h2>Windows Users: Get Ruby</h2>
-    <h3><a href="https://rubyinstaller.org/">rubyinstaller.org</a></h3>
-    <h2>Mac Users: You already have Ruby</h2>
-    <h2>Open a command prompt after installing and type the following.</h2>
-    <pre><code>
-    gem -v
-        </code></pre>
-</section>
-<section>
-    <h1>Installation Continued</h1>
-    <h2>SASS/SCSS installation</h2>
-    <h3><a href="http://sass-lang.com/install">http://sass-lang.com/install</a></h3>
-    <pre><code>
-    gem install sass
-        </code></pre> or
-    <pre><code>
-    sudo gem install sass
-        </code></pre> Then run to verify
-    <pre><code>
-    sass -v
-        </code></pre>
-</section>
-<section>
-    <h1>Gulp SCSS Usage</h1>
-    <pre><code>
-        npm install gulp-sass --save-dev
-    </code></pre>
-</section>
-<section>
-    <h1>Gulp SASS Code</h1>
-    <pre><code class="js">
-    gulp.task('sass', function () {
-        return gulp.src('./sass/**/*.scss')
-            .pipe(sass())
-            .pipe(gulp.dest('./css'));
-    });
-</code></pre>
-</section>
-                <section id="mixins">
-    <h1>Mixins</h1>
-    <p>
-        Mixins allow you to write functions inside you SCSS and minimize your code footprint.
-    </p>
-</section>
-<section>
-    <h1>Example: </h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="jyRNxz" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
-        data-pen-title="UA-SCSS--MIXIN1" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/jyRNxz/">UA-SCSS--MIXIN1</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
-        on <a href="http://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Example 2:</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="dNLpJq" data-default-tab="css" data-user="WorthyD" data-embed-version="2"
-        data-pen-title="UA-SCSS--MIXIN2" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/dNLpJq/">UA-SCSS--MIXIN2</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
-        on <a href="http://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Extend</h1>
-    <p>Extend allows you to share common CSS accross multiple classes.</p>
-</section>
-<section>
-    <h1>Extend Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="WRWGLx" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-SCSS--MIXIN3" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/WRWGLx/">UA-SCSS--MIXIN3</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Operators</h1>
-    <p>
-        We can do math calculations inside of SASS. You can use the +, -, *, /, and % operators like you would in JavaScript. SASS will automatically work with px and % values.
-    </p>
-</section>
-<section>
-    <h1>Operators Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="jyRVbw" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-SCSS--Operators" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/jyRVbw/">UA-SCSS--Operators</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-
-                <section>
-                    <h2>Questions?</h2>
-                </section>
-                <section>
+               <section>
     <h1>Sass continued</h1>
 </section>
 <section id="scss-parent">
@@ -531,7 +269,134 @@ h1,h2,h3, p{
 </div>    
 </code></pre>
 </section>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+                <section>
+    <h1>Handlebars JS</h1>
+    <p>Handlebars allows you to write readable and reusable JavaScript templates.</p>
+</section>
+<section>
+    <h1>A Handlebars templates</h1>
+    <pre><code class="xml">
+<div class="entry">
+  <h1>{{title}}</h1>
+  <div class="body">
+    {{body}}
+  </div>
+</div>
+        </code></pre>
+</section>
+<section>
+    <h1>Things to note</h1>
+    <p>
+        Everything between a {{ and }} signify a Handlebars expression. Handlebars has a set of keywords to use inside expressions.
+        Any non-keywords get mapped from a JavaScript objec.t
+    </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <pre><code class="js">
+    var template = '<div>{{title}}</div>'; 
+    var input = { title: 'testing'};
+        </code></pre>
+    <pre class="fragment">
+<code class="xml">
+    <div>testing</div>
+</code>
+</pre>
 
+</section>
+<section>
+    <h1>Template in script tag</h1>
+    <pre><code class="xml">
+<script id="entry-template" type="text/x-handlebars-template">
+  <div class="entry">
+    <h1>{{title}}</h1>
+    <div class="body">
+      {{body}}
+    </div>
+  </div>
+</script>
+</code></pre>
+    <h2>The
+        <code>type</code> tells the browser not to execute the script.</h2>
+</section>
+<section>
+    <h1>Retrieving your template string.</h1>
+    <pre><code class="js">
+     var source   = $("#entry-template").html();
+    var template = Handlebars.compile(source);
+    </code></pre>
+    <div class="fragment">
+        <h2>Using your compiled template</h2>
+        <pre><code class="js">    
+    var input = { title: 'testing'};
+    var output = template(input);
+</code></pre>
+    </div>
+</section>
+<section>
+    <h1>Basic Helpers</h1>
+    <ul>
+        <li class="fragment">
+            if
+        </li>
+        <li class="fragment">each</li>
+    </ul>
+</section>
+<section>
+    <h1>
+        <code>if</code>
+    </h1>
+    <pre class="fragment"><code class="xml">
+<div class="entry">
+  {{#if username}}
+    <h1>{{username}}</h1>
+  {{else}}
+    <h1>Unknown User</h1>
+  {{/if}}
+</div>
+        </code></pre>
+
+</section>
+<section>
+    <h1>
+        <code>each</code>
+    </h1>
+    <pre><code class="xml">
+<ul class="blog-list">
+  <!-- blog = [{title: 'test'}, {title: 'test2'}]'-->
+  {{#each blog}}
+    <li>{{title}}</li>
+  {{/each}}
+</ul>
+    </code></pre>
+</section>
+<section>
+    <h1><code>log</code> helper</h1>
+    <p>You can use a logging technique in your templates if you start running into issues.</p>
+    <pre><code class="xml">
+  {{#each blog}}
+    <li>{{title}}</li>
+    {{log "blog" blog}}
+    {{log "Title" title}}
+  {{/each}}
+    </code></pre>
+    <h4 class="fragment">
+        This logs the blog object and title to the console so that you can see their values.
+    </h4>
+</section>
+
+
+<section>
+    <h1>Installation</h1>
+    <pre><code class="xml">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+
+
+        </code></pre>
+</section>
             </div>
 
         </div>
