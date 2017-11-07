@@ -1,0 +1,549 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>11/16/2017</h1>
+                    <!--Arrays and Methods-->
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                           </ul>
+
+                        </div>
+                        <div>
+
+                            <h2>New</h2>
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section>
+    <h1>Styling a Component</h1>
+    <p>
+        What are a few things we need to pay attention to when making a custom component?
+    </p>
+    <ul>
+        <li class="fragment">Isolate your CSS to prevent conflicts external conflicts?</li>
+        <li class="fragment">Enforce specificity to prevent external conflicts?</li>
+        <li class="fragment">What can we do to make it more user friendly?</li>
+        <li class="fragment"></li>
+    </ul>
+</section>
+<section>
+    <h1>Component Definition</h1>
+    <p>
+        We are going to build a component that resembles a facebook post or tweet.
+    </p>
+    <ul>
+        <li class="fragment">A post container.</li>
+        <li class="fragment">A post title, body</li>
+        <li class="fragment">A post author and picture</li>
+        <li class="fragment">Social Actions - Share, Like</li>
+    </ul>
+</section>
+<section>
+    <h1>Create a SCSS Partial</h1>
+    <p>
+        We're going to create a
+        <code>_post.scss</code> file and work exclusively in it.
+    </p>
+</section>
+<section>
+    <h1>Base Class</h1>
+    <p>
+        Think of a base class that will act as the main anchor for all styles.
+    </p>
+    <h2 class="fragment">We are going to use
+        <code>.post</code>
+    </h2>
+    <h2 class="fragment">Things to consider</h2>
+    <ul>
+        <li class="fragment">Will this be used in another website?</li>
+        <li class="fragment">How unique is this component type in the website?</li>
+    </ul>
+    <aside class="notes">
+        <pre>Consider .djw-post instead of .post 
+            Will another developer try to use this somewhere else
+        </pre>
+    </aside>
+</section>
+<section>
+    <h1>HTML & SCSS</h1>
+    <pre><code class="xml">
+<div class="post">
+</div>    
+      </code></pre>
+
+    <pre><code class="scss">
+.post{
+}
+</code></pre>
+</section>
+<section>
+    <h1>Internal Classes</h1>
+    <p>
+        We need to carefully think about our internal classes.
+    </p>
+    <p class="fragment">
+        We want to leverage classes to prevent accidental conflicts.
+    </p>
+    <pre><code class="scss">
+.post{
+    /*This may inherit other properties if there
+    is another .title class somewhere */
+    .title{
+    }
+}
+</code></pre>
+</section>
+<section>
+    <h1>Solution</h1>
+    <pre><code class="scss">
+.post{
+    /*This rule will not inherit any rules from other SCSS */
+    .post-title{
+    }
+    .post-body{
+    }
+    .post-author{
+    }
+}
+</code></pre>
+</section>
+<section>
+    <h1>Optimized</h1>
+    <p>
+        That's a lot of
+        <code>.post</code>s
+    </p>
+    <div class="two-col">
+        <div>
+            <pre><code class="scss">
+.post{
+    .post-{
+        &title{
+        }
+        &body{
+        }
+        &author{
+        }
+    }
+}
+</code></pre>
+        </div>
+        <div class="fragment">
+            <pre><code class="css">
+.post .post-title{
+}
+.post .post-body{
+}
+.post .post-author{
+}
+</code></pre>
+        </div>
+
+    </div>
+</section>
+<section>
+    <h1>Additional Things To Consider</h1>
+    <ul>
+        <li class="fragment">Nesting</li>
+        <li class="fragment">Enforcing Expectations</li>
+    </ul>
+</section>
+<section>
+    <h1>Nesting</h1>
+    <p>
+        You wont need to be as specific with our rules when you are nesting.
+    </p>
+    <div class="two-col">
+        <div>
+            <h3>You may want to do</h3>
+            <pre><code class="scss">.post{
+    .post-{
+        &title{
+        }
+        &body{
+        }
+        &author{
+            .post-author-image{
+            }
+        }
+    }
+}
+</code></pre>
+        </div>
+        <div class="fragment">
+            <h3>You can just do</h3>
+            <pre><code class="scss">.post{
+    .post-{
+        &title{
+        }
+        &body{
+        }
+        &author{
+        }
+        &author-image{
+        }
+     
+    }
+}
+</code></pre>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Enforcement</h1>
+    <p>
+        You may not always know what's going on with your global variables.
+    </p>
+    <p class="fragment">
+        During development, your h3 bottom margin may go from 1.1 to 1.3.
+    </p>
+    <p class="fragment">
+        You initially want 1.1 and don't declare it because the global style sheet declares it.
+    </p>
+    <p class="fragment">
+        The change from 1.1 to 1.3 breaks your layout.
+    </p>
+</section>
+<section>
+    <h1>Solution</h1>
+    <p>Be as specific as you can event when you don't think you need to.
+        
+    </p>
+</section>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+                <section>
+    <h1>Positioning</h1>
+    <p>
+        CSS Positioning allows you to apply specific positioning to HTML elements.
+    </p>
+</section>
+<section>
+    <h1>CSS Position Values</h1>
+    <ul>
+        <li class="fragment"><code>static</code></li>
+        <li class="fragment"><code>relative</code></li>
+        <li class="fragment"><code>absolute</code></li>
+        <li class="fragment"><code>fixed</code></li>
+    </ul>
+</section>
+<section>
+    <h1><code>Static</code> Position</h1>
+    <p>
+        Static CSS positioning is the default value of the <code>position</code> property.
+    </p>
+    <pre><code class="css">
+
+    .class{
+        position:static;
+        top: 100px; /*ignored*/
+        right:100px; /*ignored*/
+    }
+        </code></pre>
+</section>
+<section>
+    <h1><code>Relative</code> Position</h1>
+    <p>
+        Positions element relative to the content around it. It respects top, left, right and bottom. Content will not shift to take
+        up the space.
+    </p>
+    <pre><code class="css">
+
+    .class{
+        position:relative;
+        top: 100px; 
+        right:100px; 
+    }
+        </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/vro59xu0/embed/html,css,result/"></script>
+    <a href="https://jsfiddle.net/WorthyD/vro59xu0/" target="_blank">Link</a>
+</section>
+<section>
+    <h1><code>Fixed</code> Position</h1>
+    <p>
+        Fixed position elements are positioned based on the screen. Content will shift to take up the space the element would take
+        up.
+    </p>
+    <pre><code class="css">
+
+    .class{
+        position:fixed;
+        top: 100px; 
+        right:100px; 
+    }
+        </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/x8cty48u/embed/html,css,result/"></script>
+    <a href="https://jsfiddle.net/WorthyD/x8cty48u/">Example</a>
+</section>
+<section>
+    <h1><code>Absolute</code> Position</h1>
+    <p>
+        Absolute positioned elements are positioned based of the closest parent element that has a position that is not static. If
+        no parent is found, it is positioned off the the document.
+    </p>
+    <pre><code class="css">
+
+    .class{
+        position:absolute;
+        top: 100px; 
+        right:100px; 
+    }
+        </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/uxx7w99q/embed/html,css,result/"></script>
+    <a href="http://jsfiddle.net/WorthyD/uxx7w99q/">Link</a>
+</section>
+<section>
+    <h1> Positioning tricks</h1>
+    <div class="fragment">
+        <h2>Horizontally Align Absolute positioned element</h2>
+        <pre><code class="css">
+.horizantal{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+            </code></pre>
+    </div>
+    <div class="fragment">
+        <h2>Vertially Align Absolute positioned element</h2>
+        <pre><code class="css">
+.vertical{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+            </code></pre>
+    </div>
+</section>
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/5977run7/embed/html,css,result/"></script>
+    <a href="http://jsfiddle.net/WorthyD/5977run7/">Link</a>
+</section>
+                <section>
+    <h1>Website Rotators</h1>
+    <p>
+        Rotators provide interactive slide shows to users. They are frequently used to highlight important callouts or for featuring specific items.
+    </p>
+</section>
+<section>
+    <h1>Examples of Rotators</h1>
+    <!-- Examples -->
+</section>
+<section>
+    <h1>Common things to feature</h1>
+    <ul>
+        <li class="fragment">Important parts of your site</li>
+        <li class="fragment">Recent Events</li>
+        <li class="fragment">Featured products</li>
+        <li class="fragment">Work overview</li>
+        <li class="fragment">Product List</li>
+    </ul>
+</section>
+<section>
+    <h1>Things to consider</h1>
+    <ul>
+        <li class="fragment">Mobile Friendly</li>
+        <li class="fragment">Slide Count</li>
+        <li class="fragment">Image Sizes</li>
+    </ul>
+</section>
+                <section>
+    <h1>Modals/Dialogs</h1>
+    <p>
+        Modals allow you to present a small amount of content to the user without navigating away from the screen.
+    </p>
+</section>
+<section>
+    <h1>Common Common Uses</h1>
+    <ul>
+        <li class="fragment">Terms of Service</li>
+        <li class="fragment">Contact Forms</li>
+        <li class="fragment">Help Screens</li>
+        <li class="fragment">Small Signups/Forms</li>
+    </ul>
+</section>
+<section>
+    <h1>Best Practices</h1>
+    <ul>
+        <li class="fragment">
+            Visible Title
+        </li>
+        <li class="fragment">Easy to close
+            <ul>
+                <li class="fragment">Visible close button</li>
+                <li class="fragment">Pressing ESC</li>
+                <li class="fragment">Clicking outside of the dialog</li>
+            </ul> </li>
+        <li class="fragment">No auto open
+            <ul>
+                <li class="fragment">Make the user perform an action</li>
+            </ul>
+        </li>
+        <li class="fragment">Don't put too much information in it.</li>
+    </ul>
+</section>
+
+<section>
+    <h1>Plugins / Demos</h1>
+    <ul>
+        <li class="fragment"><a href="http://jqueryui.com/dialog/" target="_blank">jQuery UI</a></li>
+        <li class="fragment"><a href="https://github.com/VodkaBears/Remodal#remodal" target="_blank">Remodal</a></li>
+        <li class="fragment"><a href="https://github.com/kylefox/jquery-modal" target="_blank">A Simple jQuery Modal</a></li>
+        <li class="fragment"><a href="http://getbootstrap.com/javascript/#modalsl" target="_blank">Bootstrap's Modal</a></li>
+   </ul>
+</section>
+                <section>
+    <h1>Slick.js</h1>
+    <h2>"The last rotator you will ever need"</h2>
+    <h3> <a href="http://kenwheeler.github.io/slick/" target="_blank">http://kenwheeler.github.io/slick/</a>
+    </h3>
+</section>
+<section>
+    <!-- HTML Structure -->
+    <h1>Html</h1>
+    <pre><code class="xml">
+    <div class="your-class">
+        <div>your content</div>
+        <div>your content</div>
+        <div>your content</div>
+    </div>
+</code></pre>
+</section>
+<section>
+    <!-- CSS -->
+    <h1>CSS</h1>
+    <pre><code class="xml">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+</code></pre>
+</section>
+<section>
+    <!-- JS -->
+    <h1>JS</h1>
+    <pre><code class="xml">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+</code></pre>
+</section>
+<section>
+    <h1>JS - initialization</h1>
+    <pre><code class="js">
+    $(document).ready(function(){
+        $('.your-class').slick({
+            setting-name: setting-value
+        });
+    });
+        </code></pre>
+</section>
+<!-- Dummy Site Demos -->
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>

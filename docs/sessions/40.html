@@ -1,0 +1,517 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>11/14/2017</h1>
+                    <!--Arrays and Methods-->
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                <li>
+                                    <a href="#handlebars">Handlebars</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div>
+
+                            <h2>New</h2>
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id="handlebars">
+    <h1>Handlebars JS</h1>
+    <p>Handlebars allows you to write readable and reusable JavaScript templates.</p>
+</section>
+<section>
+    <h1>A Handlebars templates</h1>
+    <pre><code class="xml">
+<div class="entry">
+  <h1>{{title}}</h1>
+  <div class="body">
+    {{body}}
+  </div>
+</div>
+        </code></pre>
+</section>
+<section>
+    <h1>Things to note</h1>
+    <p>
+        Everything between a {{ and }} signify a Handlebars expression. Handlebars has a set of keywords to use inside expressions.
+        Any non-keywords get mapped from a JavaScript objec.t
+    </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <pre><code class="js">
+    var template = '<div>{{title}}</div>'; 
+    var input = { title: 'testing'};
+        </code></pre>
+    <pre class="fragment">
+<code class="xml">
+    <div>testing</div>
+</code>
+</pre>
+
+</section>
+<section>
+    <h1>Template in script tag</h1>
+    <pre><code class="xml">
+<script id="entry-template" type="text/x-handlebars-template">
+  <div class="entry">
+    <h1>{{title}}</h1>
+    <div class="body">
+      {{body}}
+    </div>
+  </div>
+</script>
+</code></pre>
+    <h2>The
+        <code>type</code> tells the browser not to execute the script.</h2>
+</section>
+<section>
+    <h1>Retrieving your template string.</h1>
+    <pre><code class="js">
+     var source   = $("#entry-template").html();
+    var template = Handlebars.compile(source);
+    </code></pre>
+    <div class="fragment">
+        <h2>Using your compiled template</h2>
+        <pre><code class="js">    
+    var input = { title: 'testing'};
+    var output = template(input);
+</code></pre>
+    </div>
+</section>
+<section>
+    <h1>Basic Helpers</h1>
+    <ul>
+        <li class="fragment">
+            if
+        </li>
+        <li class="fragment">each</li>
+    </ul>
+</section>
+<section>
+    <h1>
+        <code>if</code>
+    </h1>
+    <pre class="fragment"><code class="xml">
+<div class="entry">
+  {{#if username}}
+    <h1>{{username}}</h1>
+  {{else}}
+    <h1>Unknown User</h1>
+  {{/if}}
+</div>
+        </code></pre>
+
+</section>
+<section>
+    <h1>
+        <code>each</code>
+    </h1>
+    <pre><code class="xml">
+<ul class="blog-list">
+  <!-- blog = [{title: 'test'}, {title: 'test2'}]'-->
+  {{#each blog}}
+    <li>{{title}}</li>
+  {{/each}}
+</ul>
+    </code></pre>
+</section>
+<section>
+    <h1><code>log</code> helper</h1>
+    <p>You can use a logging technique in your templates if you start running into issues.</p>
+    <pre><code class="xml">
+  {{#each blog}}
+    <li>{{title}}</li>
+    {{log "blog" blog}}
+    {{log "Title" title}}
+  {{/each}}
+    </code></pre>
+    <h4 class="fragment">
+        This logs the blog object and title to the console so that you can see their values.
+    </h4>
+</section>
+
+
+<section>
+    <h1>Installation</h1>
+    <pre><code class="xml">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+        </code></pre>
+</section>
+                <section>
+    <h1>Regular Expressions/RegExp</h1>
+    <p>
+        RegExp are patterns that are used to match specific characters.
+    </p>
+    <p class="fragment"> 
+        We'll use them for text searching and text replacement.
+    </p>
+
+    <p class="fragment"> 
+        RegExps are not unique to JavaScript.
+    </p>
+</section>
+<section>
+    <h1>Basic Patterns</h1>
+    <p>
+        Syntax: <code>/pattern/modifiers</code>
+    </p>
+    <pre class="fragment"><code class="js">
+var pattern = /lorem/i    
+      </code></pre>
+      <ul>
+          <li class="fragment">lorem - looks for 'lorem'</li>
+          <li class="fragment">i - indicates it is case-insensitive</li>
+      </ul>
+</section>
+<section>
+    <h1>Text Replace with RegExp</h1>
+
+    <pre><code class="js">
+    var str = "hello world. Hello class. hello things";
+    var pattern = /hello/i;
+    var newStr = str.replace(pattern, 'Goodbye'); 
+</code></pre>
+<p class="fragment">
+    Result: 'Goodbye world. Hello class. hello things'
+</p>
+</section>
+<section>
+    <h1>Global Flag</h1>
+    <p>
+        We can add <code>g</code> to our pattern to globally replace.
+    </p>
+    <pre class="fragment"><code class="js">
+    var str = "hello world. Hello class. hello things";
+    var pattern = /hello/ig;
+    var newStr = str.replace(pattern, 'Goodbye'); 
+</code></pre>
+<p class="fragment">
+    Result: 'Goodbye world. Hello class. hello things'
+</p>
+</section>
+
+<section>
+    <h1>Regex Test</h1>
+    <p>Regex Test is a method that allows us to see if a block of text <em>contains</em> a pattern.  This leverages the RegExp object.</p>
+    <pre class="fragment"><code class="js">
+    var str = "Lorem ipsum dolor";
+    var patt = new RegExp(/lorem/i);
+    var res = patt.test(str);        
+    </code></pre>
+    <p class="fragment">
+        The <code>i</code> flag allows 'Lorem' to match.
+    </p>
+</section>
+<section>
+    <h1>Useful Patterns</h1>
+    <p>
+        Constructing RegExp patterns can be really hard.  I always keep a few handy.
+    </p>
+    <ul>
+        <li class="fragment"><code>/^[a-z]+$/i</code> - Letters only</li>
+        <li class="fragment"><code>/^[0-9]+$/i</code> - Numbers only</li>
+        <li class="fragment"><code>/^[a-z0-9_-]{3,16}$/</code> - User Name min 3 max 16</li>
+        <li class="fragment"><code>/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/</code> - Email</li>
+        <li class="fragment"><code>/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/</code> - URL </li>
+    </ul>
+</section>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+                <section>
+    <h1>Styling a Component</h1>
+    <p>
+        What are a few things we need to pay attention to when making a custom component?
+    </p>
+    <ul>
+        <li class="fragment">Isolate your CSS to prevent conflicts external conflicts?</li>
+        <li class="fragment">Enforce specificity to prevent external conflicts?</li>
+        <li class="fragment">What can we do to make it more user friendly?</li>
+        <li class="fragment"></li>
+    </ul>
+</section>
+<section>
+    <h1>Component Definition</h1>
+    <p>
+        We are going to build a component that resembles a facebook post or tweet.
+    </p>
+    <ul>
+        <li class="fragment">A post container.</li>
+        <li class="fragment">A post title, body</li>
+        <li class="fragment">A post author and picture</li>
+        <li class="fragment">Social Actions - Share, Like</li>
+    </ul>
+</section>
+<section>
+    <h1>Create a SCSS Partial</h1>
+    <p>
+        We're going to create a
+        <code>_post.scss</code> file and work exclusively in it.
+    </p>
+</section>
+<section>
+    <h1>Base Class</h1>
+    <p>
+        Think of a base class that will act as the main anchor for all styles.
+    </p>
+    <h2 class="fragment">We are going to use
+        <code>.post</code>
+    </h2>
+    <h2 class="fragment">Things to consider</h2>
+    <ul>
+        <li class="fragment">Will this be used in another website?</li>
+        <li class="fragment">How unique is this component type in the website?</li>
+    </ul>
+    <aside class="notes">
+        <pre>Consider .djw-post instead of .post 
+            Will another developer try to use this somewhere else
+        </pre>
+    </aside>
+</section>
+<section>
+    <h1>HTML & SCSS</h1>
+    <pre><code class="xml">
+<div class="post">
+</div>    
+      </code></pre>
+
+    <pre><code class="scss">
+.post{
+}
+</code></pre>
+</section>
+<section>
+    <h1>Internal Classes</h1>
+    <p>
+        We need to carefully think about our internal classes.
+    </p>
+    <p class="fragment">
+        We want to leverage classes to prevent accidental conflicts.
+    </p>
+    <pre><code class="scss">
+.post{
+    /*This may inherit other properties if there
+    is another .title class somewhere */
+    .title{
+    }
+}
+</code></pre>
+</section>
+<section>
+    <h1>Solution</h1>
+    <pre><code class="scss">
+.post{
+    /*This rule will not inherit any rules from other SCSS */
+    .post-title{
+    }
+    .post-body{
+    }
+    .post-author{
+    }
+}
+</code></pre>
+</section>
+<section>
+    <h1>Optimized</h1>
+    <p>
+        That's a lot of
+        <code>.post</code>s
+    </p>
+    <div class="two-col">
+        <div>
+            <pre><code class="scss">
+.post{
+    .post-{
+        &title{
+        }
+        &body{
+        }
+        &author{
+        }
+    }
+}
+</code></pre>
+        </div>
+        <div class="fragment">
+            <pre><code class="css">
+.post .post-title{
+}
+.post .post-body{
+}
+.post .post-author{
+}
+</code></pre>
+        </div>
+
+    </div>
+</section>
+<section>
+    <h1>Additional Things To Consider</h1>
+    <ul>
+        <li class="fragment">Nesting</li>
+        <li class="fragment">Enforcing Expectations</li>
+    </ul>
+</section>
+<section>
+    <h1>Nesting</h1>
+    <p>
+        You wont need to be as specific with our rules when you are nesting.
+    </p>
+    <div class="two-col">
+        <div>
+            <h3>You may want to do</h3>
+            <pre><code class="scss">.post{
+    .post-{
+        &title{
+        }
+        &body{
+        }
+        &author{
+            .post-author-image{
+            }
+        }
+    }
+}
+</code></pre>
+        </div>
+        <div class="fragment">
+            <h3>You can just do</h3>
+            <pre><code class="scss">.post{
+    .post-{
+        &title{
+        }
+        &body{
+        }
+        &author{
+        }
+        &author-image{
+        }
+     
+    }
+}
+</code></pre>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Enforcement</h1>
+    <p>
+        You may not always know what's going on with your global variables.
+    </p>
+    <p class="fragment">
+        During development, your h3 bottom margin may go from 1.1 to 1.3.
+    </p>
+    <p class="fragment">
+        You initially want 1.1 and don't declare it because the global style sheet declares it.
+    </p>
+    <p class="fragment">
+        The change from 1.1 to 1.3 breaks your layout.
+    </p>
+</section>
+<section>
+    <h1>Solution</h1>
+    <p>Be as specific as you can event when you don't think you need to.
+        
+    </p>
+</section>
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>
