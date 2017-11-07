@@ -56,6 +56,7 @@
 
                             <h2>New</h2>
                             <ul>
+                                <li><a href="#handlebars">Handlebars</a></li>
                            </ul>
                         </div>
                     </div>
@@ -76,9 +77,11 @@
         on <a href="http://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
+
 <section>
     <h1>Variable Expansion in Selectors</h1>
 <p>You can use Sass variables for more than just values. You can use them in conjunction with selectors.</p>
+<p>They must be used inside of a <code>#{}</code></p>
 </section>
 <section>
     <p data-height="265" data-theme-id="0" data-slug-hash="vxYNRq" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="UAIT-SCSS-Expanding Class" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/vxYNRq/">UAIT-SCSS-Expanding Class</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>) on <a href="http://codepen.io">CodePen</a>.</p>
@@ -93,6 +96,9 @@
 </section>
 <section>
     <h1>Using Parent to Reference the Root</h1>
+    <p>
+        Using <code>.class &{</code> will put <code>.class</code> before all other selectors
+    </p>
     <p data-height="265" data-theme-id="0" data-slug-hash="evOXNR" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
         data-pen-title="UAIT-SCSS-Nesting-Parent" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/evOXNR/">UAIT-SCSS-Nesting-Parent</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
         on <a href="http://codepen.io">CodePen</a>.</p>
@@ -107,7 +113,7 @@
     </p>
 </section>
 <section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="ryBbNq" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+    <p data-height="265" data-theme-id="0" data-slug-hash="ryBbNq" data-default-tab="css" data-user="WorthyD" data-embed-version="2"
         data-pen-title="UAIT-SCSS-Nesting-Root" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/ryBbNq/">UAIT-SCSS-Nesting-Root</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
         on <a href="http://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -121,7 +127,7 @@
     </p>
 </section>
 <section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="RpwWrd" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+    <p data-height="265" data-theme-id="0" data-slug-hash="RpwWrd" data-default-tab="css" data-user="WorthyD" data-embed-version="2"
         data-pen-title="UAIT-SCSS-Nesting-Root" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/RpwWrd/">UAIT-SCSS-Nesting-Root</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
         on <a href="http://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -133,7 +139,7 @@
     </p>
 </section>
 <section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="qrBONK" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+    <p data-height="265" data-theme-id="0" data-slug-hash="qrBONK" data-default-tab="css" data-user="WorthyD" data-embed-version="2"
         data-pen-title="UAIT-SCSS-Nesting-For" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/qrBONK/">UAIT-SCSS-Nesting-For</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
         on <a href="http://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -161,6 +167,15 @@
         <li class="fragment">percentage</li>
         <li class="fragment">to-upper-case/to-lower-case</li>
     </ul>
+</section>
+
+<section>
+    <h1>Darken/Lighten</h1>
+    <p>
+        These are some of my favorite methods.
+    </p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="jaMXgd" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UAIT-SCSS-Darken" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/jaMXgd/">UAIT-SCSS-Darken</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <!-- http://thesassway.com/-->
 <!-- %extend -->
@@ -272,7 +287,7 @@
                 <section>
                     <h2>Questions?</h2>
                 </section>
-                <section>
+                <section id="handlebars">
     <h1>Handlebars JS</h1>
     <p>Handlebars allows you to write readable and reusable JavaScript templates.</p>
 </section>
@@ -392,10 +407,168 @@
 <section>
     <h1>Installation</h1>
     <pre><code class="xml">
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
         </code></pre>
+</section>
+                <section>
+    <h1>Regular Expressions/RegExp</h1>
+    <p>
+        RegExp are patterns that are used to match specific characters.
+    </p>
+    <p class="fragment"> 
+        We'll use them for text searching and text replacement.
+    </p>
+
+    <p class="fragment"> 
+        RegExps are not unique to JavaScript.
+    </p>
+</section>
+<section>
+    <h1>Basic Patterns</h1>
+    <p>
+        Syntax: <code>/pattern/modifiers</code>
+    </p>
+    <pre class="fragment"><code class="js">
+var pattern = /lorem/i    
+      </code></pre>
+      <ul>
+          <li class="fragment">lorem - looks for 'lorem'</li>
+          <li class="fragment">i - indicates it is case-insensitive</li>
+      </ul>
+</section>
+<section>
+    <h1>Text Replace with RegExp</h1>
+
+    <pre><code class="js">
+    var str = "hello world. Hello class. hello things";
+    var pattern = /hello/i;
+    var newStr = str.replace(pattern, 'Goodbye'); 
+</code></pre>
+<p class="fragment">
+    Result: 'Goodbye world. Hello class. hello things'
+</p>
+</section>
+<section>
+    <h1>Global Flag</h1>
+    <p>
+        We can add <code>g</code> to our pattern to globally replace.
+    </p>
+    <pre class="fragment"><code class="js">
+    var str = "hello world. Hello class. hello things";
+    var pattern = /hello/ig;
+    var newStr = str.replace(pattern, 'Goodbye'); 
+</code></pre>
+<p class="fragment">
+    Result: 'Goodbye world. Hello class. hello things'
+</p>
+</section>
+
+<section>
+    <h1>Regex Test</h1>
+    <p>Regex Test is a method that allows us to see if a block of text <em>contains</em> a pattern.  This leverages the RegExp object.</p>
+    <pre class="fragment"><code class="js">
+    var str = "Lorem ipsum dolor";
+    var patt = new RegExp(/lorem/i);
+    var res = patt.test(str);        
+    </code></pre>
+    <p class="fragment">
+        The <code>i</code> flag allows 'Lorem' to match.
+    </p>
+</section>
+<section>
+    <h1>Useful Patterns</h1>
+    <p>
+        Constructing RegExp patterns can be really hard.  I always keep a few handy.
+    </p>
+    <ul>
+        <li class="fragment"><code>/^[a-z]+$/i</code> - Letters only</li>
+        <li class="fragment"><code>/^[0-9]+$/i</code> - Numbers only</li>
+        <li class="fragment"><code>/^[a-z0-9_-]{3,16}$/</code> - User Name min 3 max 16</li>
+        <li class="fragment"><code>/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/</code> - Email</li>
+        <li class="fragment"><code>/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/</code> - URL </li>
+    </ul>
+</section>
+
+                <section>
+    <h1>Regular Expressions/RegExp</h1>
+    <p>
+        RegExp are patterns that are used to match specific characters.
+    </p>
+    <p class="fragment"> 
+        We'll use them for text searching and text replacement.
+    </p>
+
+    <p class="fragment"> 
+        RegExps are not unique to JavaScript.
+    </p>
+</section>
+<section>
+    <h1>Basic Patterns</h1>
+    <p>
+        Syntax: <code>/pattern/modifiers</code>
+    </p>
+    <pre class="fragment"><code class="js">
+var pattern = /lorem/i    
+      </code></pre>
+      <ul>
+          <li class="fragment">lorem - looks for 'lorem'</li>
+          <li class="fragment">i - indicates it is case-insensitive</li>
+      </ul>
+</section>
+<section>
+    <h1>Text Replace with RegExp</h1>
+
+    <pre><code class="js">
+    var str = "hello world. Hello class. hello things";
+    var pattern = /hello/i;
+    var newStr = str.replace(pattern, 'Goodbye'); 
+</code></pre>
+<p class="fragment">
+    Result: 'Goodbye world. Hello class. hello things'
+</p>
+</section>
+<section>
+    <h1>Global Flag</h1>
+    <p>
+        We can add <code>g</code> to our pattern to globally replace.
+    </p>
+    <pre class="fragment"><code class="js">
+    var str = "hello world. Hello class. hello things";
+    var pattern = /hello/ig;
+    var newStr = str.replace(pattern, 'Goodbye'); 
+</code></pre>
+<p class="fragment">
+    Result: 'Goodbye world. Hello class. hello things'
+</p>
+</section>
+
+<section>
+    <h1>Regex Test</h1>
+    <p>Regex Test is a method that allows us to see if a block of text <em>contains</em> a pattern.  This leverages the RegExp object.</p>
+    <pre class="fragment"><code class="js">
+    var str = "Lorem ipsum dolor";
+    var patt = new RegExp(/lorem/i);
+    var res = patt.test(str);        
+    </code></pre>
+    <p class="fragment">
+        The <code>i</code> flag allows 'Lorem' to match.
+    </p>
+</section>
+<section>
+    <h1>Useful Patterns</h1>
+    <p>
+        Constructing RegExp patterns can be really hard.  I always keep a few handy.
+    </p>
+    <ul>
+        <li class="fragment"><code>/^[a-z]+$/i</code> - Letters only</li>
+        <li class="fragment"><code>/^[0-9]+$/i</code> - Numbers only</li>
+        <li class="fragment"><code>/^[a-z0-9_-]{3,16}$/</code> - User Name min 3 max 16</li>
+        <li class="fragment"><code>/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/</code> - Email</li>
+        <li class="fragment"><code>/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/</code> - URL </li>
+    </ul>
+</section>
+                <section id="exercise27">
+    <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise27" target="_blank">Exercise 27</a></h1>
 </section>
             </div>
 

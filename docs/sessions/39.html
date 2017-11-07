@@ -1,0 +1,169 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>11/11/2017</h1>
+                    <!--Arrays and Methods-->
+                    <h2>jQuery Plugins</h2>
+               </section>
+               <section>
+    <h1>jQuery Plugins</h1>
+    <p>
+        jQuery plugins provide developers an easy way to create reusable code. There are hundreds of existing plugins, but you can
+        improve you JavaScript skills by writing your own.
+    </p>
+
+</section>
+<section>
+    <h1>Basic Structure</h1>
+    <pre><code class="js">
+    $.fn.PluginName = function () {
+        elms = this;
+    }
+    $('span').PluginName();
+        </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="peRdyE" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="peRdyE" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/peRdyE/">peRdyE</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Customization</h1>
+    <p>
+        Plugins become more helpful when you are able to leverage their customization. We can customize options by using the jQuery
+        extend function.
+    </p>
+</section>
+<section>
+    <h1>How to add customization</h1>
+    <pre><code class="js">
+    $.fn.PluginName = function (options) {
+        elms = this;
+        //Outputs black
+        console.log(options.color);
+    }
+    $('span').PluginName({color: '#000'});
+        </code></pre>
+</section>
+<section>
+    <h1>What about optional options?</h1>
+    <p>
+        We can leverage jQuery's $.extend method to merge your options.
+    </p>
+</section>
+<section>
+    <h1>Extend</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="bqgmwm" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="bqgmwm" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/bqgmwm/">bqgmwm</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>In a Plugin</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="bqgmrO" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="Basic jQuery Plugin" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/bqgmrO/">Basic jQuery Plugin</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Unique events</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="xqgypg" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="Basic jQuery Plugin Basic Events Each" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/xqgypg/">Basic jQuery Plugin Basic Events Each</a> by Daniel Worthy
+        (<a href="http://codepen.io/WorthyD">@WorthyD</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>
