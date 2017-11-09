@@ -57,130 +57,187 @@
                         </div>
                     </div>
                 </section>
-                <section id="handlebars">
-    <h1>Handlebars JS</h1>
-    <p>Handlebars allows you to write readable and reusable JavaScript templates.</p>
-</section>
-<section>
-    <h1>A Handlebars templates</h1>
-    <pre><code class="xml">
-<div class="entry">
-  <h1>{{title}}</h1>
-  <div class="body">
-    {{body}}
-  </div>
-</div>
-        </code></pre>
-</section>
-<section>
-    <h1>Things to note</h1>
-    <p>
-        Everything between a {{ and }} signify a Handlebars expression. Handlebars has a set of keywords to use inside expressions.
-        Any non-keywords get mapped from a JavaScript objec.t
-    </p>
-</section>
-<section>
-    <h1>Example</h1>
-    <pre><code class="js">
-    var template = '<div>{{title}}</div>'; 
-    var input = { title: 'testing'};
-        </code></pre>
-    <pre class="fragment">
-<code class="xml">
-    <div>testing</div>
-</code>
-</pre>
-
-</section>
-<section>
-    <h1>Template in script tag</h1>
-    <pre><code class="xml">
-<script id="entry-template" type="text/x-handlebars-template">
-  <div class="entry">
-    <h1>{{title}}</h1>
-    <div class="body">
-      {{body}}
-    </div>
-  </div>
-</script>
-</code></pre>
-    <h2>The
-        <code>type</code> tells the browser not to execute the script.</h2>
-</section>
-<section>
-    <h1>Retrieving your template string.</h1>
-    <pre><code class="js">
-     var source   = $("#entry-template").html();
-    var template = Handlebars.compile(source);
-    </code></pre>
-    <div class="fragment">
-        <h2>Using your compiled template</h2>
-        <pre><code class="js">    
-    var input = { title: 'testing'};
-    var output = template(input);
-</code></pre>
-    </div>
-</section>
-<section>
-    <h1>Basic Helpers</h1>
+                <section id="array-methods">
+    <h1>New Array Methods</h1>
     <ul>
-        <li class="fragment">
-            if
-        </li>
-        <li class="fragment">each</li>
+        <li class="fragment">forEach()</li>
+        <li class="fragment">fitler</li>
+        <li class="fragment">map</li>
     </ul>
 </section>
 <section>
-    <h1>
-        <code>if</code>
-    </h1>
-    <pre class="fragment"><code class="xml">
-<div class="entry">
-  {{#if username}}
-    <h1>{{username}}</h1>
-  {{else}}
-    <h1>Unknown User</h1>
-  {{/if}}
-</div>
-        </code></pre>
-
+    <h1><code>.forEach()</code></h1>
+    <p>
+        <code>forEach</code> loops through each item in an array and executes a function for each item.
+    </p>
 </section>
 <section>
-    <h1>
-        <code>each</code>
-    </h1>
-    <pre><code class="xml">
-<ul class="blog-list">
-  <!-- blog = [{title: 'test'}, {title: 'test2'}]'-->
-  {{#each blog}}
-    <li>{{title}}</li>
-  {{/each}}
-</ul>
-    </code></pre>
+    <h1>Syntax</h1>
+    <h2>
+        <pre><code class="js">
+    [1,2,3].forEach(function(element, index, array){
+        //Code
+    });</code></pre>
+    </h2>
+    <ul>
+        <li class="fragment"><code>element</code> - the current iterated element.</li>
+        <li class="fragment"><code>index</code> - the current zero based index</li>
+        <li class="fragment"><code>array</code> - the full array of items</li>
+        <li class="fragment">Does not return anything</li>
+    </ul>
 </section>
 <section>
-    <h1><code>log</code> helper</h1>
-    <p>You can use a logging technique in your templates if you start running into issues.</p>
-    <pre><code class="xml">
-  {{#each blog}}
-    <li>{{title}}</li>
-    {{log "blog" blog}}
-    {{log "Title" title}}
-  {{/each}}
-    </code></pre>
-    <h4 class="fragment">
-        This logs the blog object and title to the console so that you can see their values.
-    </h4>
+    <h1>Example - Simple</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="bqQqBO" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="Array - forEach()" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/bqQqBO/">Array - forEach()</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-
+<section>
+    <h1>Example - More Complex</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="GWwWXw" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="Array - forEach()" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/GWwWXw/">Array - forEach()</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
 
 <section>
-    <h1>Installation</h1>
-    <pre><code class="xml">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-        </code></pre>
+    <h1><code>.map()</code></h1>
+    <p>
+        <code>map</code> acts similar to <code>forEach</code> but it returns a whole new array.
+    </p>
 </section>
-                <section>
+<section>
+    <h1>Syntax</h1>
+    <h2>
+        <pre><code class="js">
+[1,2,3].map(function(element, index, array){ 
+    return '';
+});
+</code></pre>
+    </h2>
+    <ul>
+        <li class="fragment"><code>element</code> - the current iterated element.</li>
+        <li class="fragment"><code>index</code> - the current zero based index</li>
+        <li class="fragment"><code>array</code> - the full array of items</li>
+
+        <li class="fragment">Returned item gets added to new array. </li>
+        <li class="fragment">Returns new array </li>
+    </ul>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="wJQJNL" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="Array - map()" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/wJQJNL/">Array - map()</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+<section>
+    <h1><code>.filter()</code></h1>
+    <p>
+        Filter iterates through an array and adds the element to the new array if it returns true.
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <h2>
+        <pre><code class="js">
+[1,2,3].filter(function(element, index, array){
+    return true | false;
+});</code></pre>
+    </h2>
+    <ul>
+        <li class="fragment"><code>element</code> - the current iterated element.</li>
+        <li class="fragment"><code>index</code> - the current zero based index</li>
+        <li class="fragment"><code>array</code> - the full array of items</li>
+        <li class="fragment">Returns new array </li>
+    </ul>
+</section>
+<section>
+    <h1>Example Simple</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="VpVpOB" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="Array - filter" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/VpVpOB/">Array - filter</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Example Advanced</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="qrQreo" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="Array - Filter Advanced" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/qrQreo/">Array - Filter Advanced</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1><code>.find()</code></h1>
+    <p>
+        Acts like filter, but only returns the first one found that matches the parameters
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <h2>
+        <pre><code class="js">
+[1,2,3].map(function(element, index, array){
+    return true | false;
+});</code></pre>
+    </h2>
+    <ul>
+        <li class="fragment"><code>element</code> - the current iterated element.</li>
+        <li class="fragment"><code>index</code> - the current zero based index</li>
+        <li class="fragment"><code>array</code> - the full array of items</li>
+        <li class="fragment">Returns first item matching parameters </li>
+    </ul>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="LWMpNo" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="Array - Filter Advanced" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/LWMpNo/">Array - Filter Advanced</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+<section>
+    <h1>Sort</h1>
+    <p>
+        Sorting an array happens in place, it doesn't return a new array.
+    </p>
+</section>
+<section>
+    <h1>Code</h1>
+<pre class="fragment"><code class="js">
+    var food = ['taco', 'burger', 'hotdog'];
+    food.sort();
+    console.log(food); //['burger', 'hotdog', 'taco'];
+</code></pre>
+<pre class="fragment"><code class="js">
+    var nums = [20, 3, 10, 1, 2]
+    nums.sort();
+    console.log(nums); //[1, 10, 2, 20, 3];
+</code></pre>
+</section>
+<section>
+    <h1>Uhhh?</h1>
+    <p>
+        <code>.sort</code> sorts by unicode character.  Everything gets converted to a string before sorting.
+    </p>
+    <h3 class="fragment">So how do we sort numbers?</h3>
+</section>
+<section>
+    <h1>It gets a little complicated</h1>
+    <p>
+        This is what we are going to use for now
+    </p>
+<pre class="fragment"><code class="js">
+    var nums = [20, 3, 10, 1, 2]
+    nums.sort(function(a,b){
+        return a - b;
+    });
+    console.log(nums); //[1, 2, 3, 10, 20];
+</code></pre>
+</section>
+
+                <section id="regex">
     <h1>Regular Expressions/RegExp</h1>
     <p>
         RegExp are patterns that are used to match specific characters.

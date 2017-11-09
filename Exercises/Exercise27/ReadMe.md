@@ -13,3 +13,12 @@ Add the class `.is-invalid` if it is not valid.
 ## RegExp Replace
 
 Use a string replace to remove any non-numeric characters from the input `#numeric`
+
+# Array Functions
+Do the following in main.js
+
+- Make an array of numbers
+- Use the `.map` method to create a new array that contains the same numbers, but squared
+- Original Array: [1,2,3,4]
+- New Array: [1,4,9,16]
+ 
