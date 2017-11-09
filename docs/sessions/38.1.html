@@ -1,0 +1,458 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>11/7/2017</h1>
+                    <!--Arrays and Methods-->
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                 <li><a href="#scss-parent">Parent Selectors</a></li>
+                                <li><a href="#scss-if">If Statement</a></li>
+                                <li><a href="#scss-for">Loops</a></li>
+                                <li><a href="#fb-sharing">FB Sharing</a></li>
+                                <li><a href="#fb-like">FB Like Button</a></li>
+                                
+                            </ul>
+
+                        </div>
+                        <div>
+
+                            <h2>New</h2>
+                            <ul>
+                                <li><a href="#handlebars">Handlebars</a></li>
+                           </ul>
+                        </div>
+                    </div>
+               </section>
+               <section>
+    <h1>Sass continued</h1>
+</section>
+<section id="scss-parent">
+    <h1>Referencing a parent selector</h1>
+    <p>
+        You can reference a nested selectors parent by using the <code>&</code> symbol.
+    </p>
+</section>
+<section>
+    <h1>Simple Parent Reference</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="JWPxLy" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/JWPxLy/">UAIT-SCSS-Nesting</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Variable Expansion in Selectors</h1>
+<p>You can use Sass variables for more than just values. You can use them in conjunction with selectors.</p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="vxYNRq" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="UAIT-SCSS-Expanding Class" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/vxYNRq/">UAIT-SCSS-Expanding Class</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Using Parent for repetitive names.</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="qrWgJp" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-Deep" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/qrWgJp/">UAIT-SCSS-Nesting-Deep</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Using Parent to Reference the Root</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="evOXNR" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-Parent" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/evOXNR/">UAIT-SCSS-Nesting-Parent</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+</section>
+<section>
+    <h1> <code>@at-root</code></h1>
+    <p><code>@at-root</code> you to nest inside css for structure, but places the rules inside it in the root of the css. </p>
+    <p>
+        You can use it as an inline rule or as a wrapping rule.
+    </p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="ryBbNq" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-Root" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/ryBbNq/">UAIT-SCSS-Nesting-Root</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+</section>
+<section id="scss-if">
+    <h1><code>@if</code></h1>
+    <p>
+        SCSS has the ability to use if, else if, and else statements. These can be used to theme a your styles or setup conditional
+        formatting.
+    </p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="RpwWrd" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-Root" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/RpwWrd/">UAIT-SCSS-Nesting-Root</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section id="scss-for">
+    <h1><code>@for</code></h1>
+    <p>
+        You can use SCSS to execute a for loop based on indexes. This is useful for generating grids and removing duplicate code.
+    </p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="qrBONK" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-For" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/qrBONK/">UAIT-SCSS-Nesting-For</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+<section>
+    <h1><code>
+        @each
+        </code></h1>
+    <p>
+        @each is used for looping through a defined collection of items.
+    </p>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="mWdeWZ" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UAIT-SCSS-Nesting-Each" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/mWdeWZ/">UAIT-SCSS-Nesting-Each</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Additional Methods</h1>
+    <ul>
+        <li class="fragment">darken/lighten</li>
+        <li class="fragment">quote/unquote</li>
+        <li class="fragment">percentage</li>
+        <li class="fragment">to-upper-case/to-lower-case</li>
+    </ul>
+</section>
+<!-- http://thesassway.com/-->
+<!-- %extend -->
+                <section>
+    <h1>Facebook Integration</h1>
+    <h3>
+        <a href="https://developers.facebook.com/" target="_blank">Documentation</a>
+    </h3>
+</section>
+<section id="fb-sharing">
+    <h1>Link Sharing</h1>
+    <p>
+        You can customize the previews of you links being shared on Facebook by leveraging OG meta tags.
+    </p>
+    <h3>
+        <a href="https://developers.facebook.com/docs/sharing/webmasters">Documentation</a>
+    </h3>
+</section>
+<section>
+    <h1>OG Tags</h1>
+    <p>
+        OG tags are meta tags that tell Facebook what to display when sharing.
+    </p>
+    <h3 class="fragment">The Basic Tags</h3>
+    <ul>
+        <li class="fragment">
+            <code>og:url</code> - The URL to the page.</li>
+        <li class="fragment">
+            <code>og:title</code> - The title of the page.</li>
+        <li class="fragment">
+            <code>og:description</code>
+        </li>
+        <li class="fragment">
+            <code>og:image</code> - Preview image</li>
+    </ul>
+</section>
+<section>
+    <h1>In Markup</h1>
+    <pre><code class="xml">
+<head>    
+    <meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="When Great Minds Don’t Think Alike" />
+    <meta property="og:description" content="How much does culture influence creative thinking?" />
+    <meta property="og:image" content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />        
+</head>
+    </code></pre>
+</section>
+<section>
+    <h1>Testing</h1>
+    <h3>
+        <a href="https://developers.facebook.com/tools/debug/">Facebook Debug Tool</a>
+    </h3>
+</section>
+
+
+<section id="fb-like">
+    <h1>Adding a Like Button</h1>
+    <h3><a href="https://developers.facebook.com/docs/plugins/like-button">Like Button Generator</a></h3>
+</section>
+<section>
+    <h1>Step 1: Including the Facebook SDK</h1>
+    <p>
+        This needs to be included right next to the opening <code>body</code> tag.
+    </p>
+<pre><code class="xml">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=440441316067845';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    </code></pre>
+</section>
+<section>
+    <h1>Step 2: Adding the Markup </h1>
+    <pre><code class="xml">
+  <!-- Your like button code -->
+<div class="fb-like" 
+  data-href="http://www.your-domain.com/your-page.html" 
+  data-layout="standard" 
+  data-action="like" 
+  data-show-faces="true">
+</div>
+        </code></pre>
+</section>
+<section>
+    <h1>Facebook Share Button</h1>
+    <h3><a href="https://developers.facebook.com/docs/plugins/share-button/">Share Button Generator</a></h3>
+</section>
+<section>
+    <h1>Step 1: Add the Facebook SDK.</h1>
+    <p>
+        But only if you haven't added it yet.
+    </p>
+</section>
+<section>
+    <h1>Step 2: Add the Markup</h1>
+    <pre><code class="xml">
+  <!-- Your share button code -->
+<div class="fb-share-button" 
+    data-href="http://www.your-domain.com/your-page.html" 
+    data-layout="button_count">
+</div>    
+</code></pre>
+</section>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+                <section>
+    <h1>Handlebars JS</h1>
+    <p>Handlebars allows you to write readable and reusable JavaScript templates.</p>
+</section>
+<section>
+    <h1>A Handlebars templates</h1>
+    <pre><code class="xml">
+<div class="entry">
+  <h1>{{title}}</h1>
+  <div class="body">
+    {{body}}
+  </div>
+</div>
+        </code></pre>
+</section>
+<section>
+    <h1>Things to note</h1>
+    <p>
+        Everything between a {{ and }} signify a Handlebars expression. Handlebars has a set of keywords to use inside expressions.
+        Any non-keywords get mapped from a JavaScript objec.t
+    </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <pre><code class="js">
+    var template = '<div>{{title}}</div>'; 
+    var input = { title: 'testing'};
+        </code></pre>
+    <pre class="fragment">
+<code class="xml">
+    <div>testing</div>
+</code>
+</pre>
+
+</section>
+<section>
+    <h1>Template in script tag</h1>
+    <pre><code class="xml">
+<script id="entry-template" type="text/x-handlebars-template">
+  <div class="entry">
+    <h1>{{title}}</h1>
+    <div class="body">
+      {{body}}
+    </div>
+  </div>
+</script>
+</code></pre>
+    <h2>The
+        <code>type</code> tells the browser not to execute the script.</h2>
+</section>
+<section>
+    <h1>Retrieving your template string.</h1>
+    <pre><code class="js">
+     var source   = $("#entry-template").html();
+    var template = Handlebars.compile(source);
+    </code></pre>
+    <div class="fragment">
+        <h2>Using your compiled template</h2>
+        <pre><code class="js">    
+    var input = { title: 'testing'};
+    var output = template(input);
+</code></pre>
+    </div>
+</section>
+<section>
+    <h1>Basic Helpers</h1>
+    <ul>
+        <li class="fragment">
+            if
+        </li>
+        <li class="fragment">each</li>
+    </ul>
+</section>
+<section>
+    <h1>
+        <code>if</code>
+    </h1>
+    <pre class="fragment"><code class="xml">
+<div class="entry">
+  {{#if username}}
+    <h1>{{username}}</h1>
+  {{else}}
+    <h1>Unknown User</h1>
+  {{/if}}
+</div>
+        </code></pre>
+
+</section>
+<section>
+    <h1>
+        <code>each</code>
+    </h1>
+    <pre><code class="xml">
+<ul class="blog-list">
+  <!-- blog = [{title: 'test'}, {title: 'test2'}]'-->
+  {{#each blog}}
+    <li>{{title}}</li>
+  {{/each}}
+</ul>
+    </code></pre>
+</section>
+<section>
+    <h1><code>log</code> helper</h1>
+    <p>You can use a logging technique in your templates if you start running into issues.</p>
+    <pre><code class="xml">
+  {{#each blog}}
+    <li>{{title}}</li>
+    {{log "blog" blog}}
+    {{log "Title" title}}
+  {{/each}}
+    </code></pre>
+    <h4 class="fragment">
+        This logs the blog object and title to the console so that you can see their values.
+    </h4>
+</section>
+
+
+<section>
+    <h1>Installation</h1>
+    <pre><code class="xml">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+
+
+        </code></pre>
+</section>
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>
