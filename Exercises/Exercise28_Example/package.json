@@ -1,0 +1,29 @@
+{
+  "name": "uofa",
+  "version": "1.0.0",
+  "description": "personalwebsite",
+  "main": "GruntFile.js",
+  "dependencies": {
+    "reveal-code-focus": "^1.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "font-awesome": "^4.7.0",
+    "glob": "^7.0.5",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.2",
+    "gulp-file-include": "^1.1.0",
+    "gulp-header": "^1.8.8",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "highlight.js": "^9.10.0",
+    "load-grunt-tasks": "^3.5.0",
+    "reveal.js": "^3.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "worthyd",
+  "license": "ISC"
+}
