@@ -44,7 +44,10 @@
                             <h2>Review</h2>
                             <ul>
                                 <li>
-                                    <a href="#handlebars">Handlebars</a>
+                                    <a href="#array-methods">New Array Methods</a>
+                                </li>
+                                <li>
+                                    <a href="#regex">Regular Expressions</a>
                                 </li>
                             </ul>
 
@@ -53,6 +56,12 @@
 
                             <h2>New</h2>
                             <ul>
+                                <li>
+                                    <a href="#scss-component">Styling Component</a>
+                                </li>
+                                <li>
+                                    <a href="#ga">Google Analytics</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -308,8 +317,8 @@ var pattern = /lorem/i
         Constructing RegExp patterns can be really hard.  I always keep a few handy.
     </p>
     <ul>
-        <li class="fragment"><code>/^[a-z]+$/i</code> - Letters only</li>
-        <li class="fragment"><code>/^[0-9]+$/i</code> - Numbers only</li>
+        <li class="fragment"><code>/[a-z]/gi</code> - Letters only</li>
+        <li class="fragment"><code>/[0-9]/gi</code> - Numbers only</li>
         <li class="fragment"><code>/^[a-z0-9_-]{3,16}$/</code> - User Name min 3 max 16</li>
         <li class="fragment"><code>/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/</code> - Email</li>
         <li class="fragment"><code>/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/</code> - URL </li>
@@ -318,7 +327,7 @@ var pattern = /lorem/i
                 <section>
                     <h2>Questions?</h2>
                 </section>
-                <section>
+                <section id="scss-component">
     <h1>Styling a Component</h1>
     <p>
         What are a few things we need to pay attention to when making a custom component?
@@ -514,6 +523,62 @@ var pattern = /lorem/i
         
     </p>
 </section>
+<section>
+    <h1>Finally</h1>
+    <p>
+        Document everything.
+    </p>
+</section>
+                <section id="ga">
+    <h1>Google Analytics</h1>
+    <h3><a href="http://www.google.com/analytics/" target="_blank">http://www.google.com/analytics/</a></h3>
+</section>
+<section>
+    <h1>Getting Setup</h1>
+    <h3><a href="https://support.google.com/analytics/answer/1008015?hl=en" target="_blank">Setup</a></h3>
+</section>
+<section>
+    <h1>Tracking Code</h1>
+    <pre><code class="xml">
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=UA-3685134-9"&gt;&lt;/script&gt;
+&lt;script&gt;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-XXXXXXX-X');
+&lt;/script&gt;
+    </code></pre>
+</section>
+<section>
+    <h1>Event Tracking</h1>
+    <h3><a href="https://developers.google.com/analytics/devguides/collection/gtagjs/events" target="_blank">Event Tracking</a></a></h3>
+</section>
+<section>
+    <h1>Event Tracking Code</h1>
+    <pre class="fragment"><code class="js">
+gtag('event', 'login');</code></pre>
+    <pre class="fragment"><code class="js">
+gtag('event', 'event_name', {
+    'event_category': categoryName,
+    'event_label': labelName
+});
+////
+gtag('event', 'login', {
+    'event_category': 'access',
+    'event_label': 'Google'
+  });
+        </code></pre>
+</section>
+                <section>
+                    <h1>Exercise for the night</h1>
+                    <ul>
+                        <li class="fragment"><a href="https://www.youtube.com/watch?v=dNEp3hoHSDI" target="blank">Watch this video</a> - Minimum from 5:30 to about 8:00.</li>
+                        <li class="fragment">Try to get Exercise 28 running.</li>
+                        
+                    </ul>
+                </section>
             </div>
 
         </div>

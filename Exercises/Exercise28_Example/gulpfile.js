@@ -1,13 +1,12 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 
-var header = require('gulp-header');
+
 var sourcemaps = require('gulp-sourcemaps');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 
 
-var banner = '/* This file was generated on ' + new Date() + '  */\n';
 
 var sassPath = 'src/sass/**/*.scss';
 
@@ -15,7 +14,6 @@ gulp.task('sass', function () {
     return gulp.src(sassPath)
         .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(header(banner))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('src/styles'))
         .pipe(browserSync.reload({
