@@ -43,13 +43,23 @@
                         <div>
                             <h2>Review</h2>
                             <ul>
-                           </ul>
+                                <li>
+                                    <a href="#scss-component">Styling Component</a>
+                                </li>
+                                <li>
+                                    <a href="#ga">Google Analytics</a>
+                                </li>
+                            </ul>
 
                         </div>
                         <div>
 
                             <h2>New</h2>
                             <ul>
+                                <li><a href="#positioning">Positioning</a></li>
+                                <li><a href="#dialogs">Dialogs</a></li>
+                                <li><a href="#rotators">Rotators</a></li>
+                                <li><a href="#slickjs">Slick Overview</a></li>
                             </ul>
                         </div>
                     </div>
@@ -256,10 +266,52 @@
         Document everything.
     </p>
 </section>
+                <section id="ga">
+    <h1>Google Analytics</h1>
+    <h3><a href="http://www.google.com/analytics/" target="_blank">http://www.google.com/analytics/</a></h3>
+</section>
+<section>
+    <h1>Getting Setup</h1>
+    <h3><a href="https://support.google.com/analytics/answer/1008015?hl=en" target="_blank">Setup</a></h3>
+</section>
+<section>
+    <h1>Tracking Code</h1>
+    <pre><code class="xml">
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=UA-3685134-9"&gt;&lt;/script&gt;
+&lt;script&gt;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-XXXXXXX-X');
+&lt;/script&gt;
+    </code></pre>
+</section>
+<section>
+    <h1>Event Tracking</h1>
+    <h3><a href="https://developers.google.com/analytics/devguides/collection/gtagjs/events" target="_blank">Event Tracking</a></a></h3>
+</section>
+<section>
+    <h1>Event Tracking Code</h1>
+    <pre class="fragment"><code class="js">
+gtag('event', 'login');</code></pre>
+    <pre class="fragment"><code class="js">
+gtag('event', 'event_name', {
+    'event_category': categoryName,
+    'event_label': labelName
+});
+////
+gtag('event', 'login', {
+    'event_category': 'access',
+    'event_label': 'Google'
+  });
+        </code></pre>
+</section>
                 <section>
                     <h2>Questions?</h2>
                 </section>
-                <section>
+                <section id="positioning">
     <h1>Positioning</h1>
     <p>
         CSS Positioning allows you to apply specific positioning to HTML elements.
@@ -305,8 +357,8 @@
 </section>
 <section>
     <h1>Example</h1>
-    <script async src="//jsfiddle.net/WorthyD/vro59xu0/embed/html,css,result/"></script>
-    <a href="https://jsfiddle.net/WorthyD/vro59xu0/" target="_blank">Link</a>
+    <p data-height="265" data-theme-id="0" data-slug-hash="jaGKgw" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UAITR-Relative Positioning" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/jaGKgw/">UAITR-Relative Positioning</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1><code>Fixed</code> Position</h1>
@@ -325,8 +377,8 @@
 </section>
 <section>
     <h1>Example</h1>
-    <script async src="//jsfiddle.net/WorthyD/x8cty48u/embed/html,css,result/"></script>
-    <a href="https://jsfiddle.net/WorthyD/x8cty48u/">Example</a>
+    <p data-height="265" data-theme-id="0" data-slug-hash="GOMBKJ" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UAITR-FixedPositioning" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/GOMBKJ/">UAITR-FixedPositioning</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1><code>Absolute</code> Position</h1>
@@ -345,8 +397,8 @@
 </section>
 <section>
     <h1>Example</h1>
-    <script async src="//jsfiddle.net/WorthyD/uxx7w99q/embed/html,css,result/"></script>
-    <a href="http://jsfiddle.net/WorthyD/uxx7w99q/">Link</a>
+    <p data-height="265" data-theme-id="0" data-slug-hash="bYojGB" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UAITR-FixedPositioning" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/bYojGB/">UAITR-FixedPositioning</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1> Positioning tricks</h1>
@@ -361,7 +413,8 @@
 }
             </code></pre>
     </div>
-    <div class="fragment">
+    </section>
+    <section>
         <h2>Vertially Align Absolute positioned element</h2>
         <pre><code class="css">
 .vertical{
@@ -371,42 +424,13 @@
     transform: translateY(-50%)
 }
             </code></pre>
-    </div>
 </section>
 <section>
     <h1>Example</h1>
-    <script async src="//jsfiddle.net/WorthyD/5977run7/embed/html,css,result/"></script>
-    <a href="http://jsfiddle.net/WorthyD/5977run7/">Link</a>
+    <p data-height="265" data-theme-id="0" data-slug-hash="JOrBox" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UAITR-FixedPositioning" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/JOrBox/">UAITR-FixedPositioning</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-                <section>
-    <h1>Website Rotators</h1>
-    <p>
-        Rotators provide interactive slide shows to users. They are frequently used to highlight important callouts or for featuring specific items.
-    </p>
-</section>
-<section>
-    <h1>Examples of Rotators</h1>
-    <!-- Examples -->
-</section>
-<section>
-    <h1>Common things to feature</h1>
-    <ul>
-        <li class="fragment">Important parts of your site</li>
-        <li class="fragment">Recent Events</li>
-        <li class="fragment">Featured products</li>
-        <li class="fragment">Work overview</li>
-        <li class="fragment">Product List</li>
-    </ul>
-</section>
-<section>
-    <h1>Things to consider</h1>
-    <ul>
-        <li class="fragment">Mobile Friendly</li>
-        <li class="fragment">Slide Count</li>
-        <li class="fragment">Image Sizes</li>
-    </ul>
-</section>
-                <section>
+                <section id="dialogs">
     <h1>Modals/Dialogs</h1>
     <p>
         Modals allow you to present a small amount of content to the user without navigating away from the screen.
@@ -451,7 +475,37 @@
         <li class="fragment"><a href="http://getbootstrap.com/javascript/#modalsl" target="_blank">Bootstrap's Modal</a></li>
    </ul>
 </section>
-                <section>
+                <section id="rotators">
+    <h1>Website Rotators</h1>
+    <p>
+        Rotators provide interactive slide shows to users. They are frequently used to highlight important callouts or for featuring specific items.
+    </p>
+</section>
+<section>
+    <h1>Common things to feature</h1>
+    <ul>
+        <li class="fragment">Important parts of your site</li>
+        <li class="fragment">Recent Events</li>
+        <li class="fragment">Featured products</li>
+        <li class="fragment">Work overview</li>
+        <li class="fragment">Product List</li>
+    </ul>
+</section>
+<section>
+    <h1>Things to consider</h1>
+    <ul>
+        <li class="fragment">Mobile Friendly</li>
+        <li class="fragment">Slide Count</li>
+        <li class="fragment">Image Sizes</li>
+        <li class="fragment">Customization</li>
+    </ul>
+</section>
+<section>
+    <h1>Coding a basic rotator from scratch is not that hard.</h1>
+    <h2>It is a good exercise to learn new JavaScript features.</h2>
+    <a href="https://www.youtube.com/watch?v=aYzUOzaDjQE" target="_blank">Video on how to write one</a>
+</section>
+                <section id="slickjs">
     <h1>Slick.js</h1>
     <h2>"The last rotator you will ever need"</h2>
     <h3> <a href="http://kenwheeler.github.io/slick/" target="_blank">http://kenwheeler.github.io/slick/</a>
@@ -494,7 +548,22 @@
     });
         </code></pre>
 </section>
+<section>
+    <h1>Start with their examples and customize them.</h1>
+</section>
 <!-- Dummy Site Demos -->
+                <section>
+                    <h1>Assessment Topics</h1>
+                    <ul>
+                        <li class="fragment">Responsive</li>
+                        <li class="fragment">Flexbox - optional</li>
+                        <li class="fragment">Bootstrap - optional</li>
+                        <li class="fragment">SCSS</li>
+                        <li class="fragment">Array Methods</li>
+                        <li class="fragment">RegEx</li>
+
+                    </ul>
+                </section>
             </div>
 
         </div>
