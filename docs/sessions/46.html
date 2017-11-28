@@ -1,0 +1,172 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>12/9/2017</h1>
+                    <h2>Angular Intro</h2>
+                   
+                </section>
+
+                <section>
+    <h1>Angular</h1>
+    <p>
+        Angular is a front end application framework that is designed to write testable single page applications.
+    </p>
+    <a href="https://angular.io/" target="_blank">Angular Website</a>
+</section>
+<section>
+    <h1>History</h1>
+    <ul>
+        <li class="fragment"><strong>AngularJS</strong>
+            <ul>
+                <li class="fragment">Debuted in 2010</li>
+                <li class="fragment">Built and Maintained by Google</li>
+                <li class="fragment">MVC Architecture</li>
+            </ul>
+        </li>
+        <li class="fragment">V2 released Sep 2016 </li>
+        <li class="fragment">V4 released March 2017</li>
+        <li class="fragment">V5 released October 2017</li>
+        <li class="fragment">AngularJS == 1.X</li>
+        <li class="fragment">Angular == 2 and above</li>
+        <li class="fragment">Leverages TypeScript</li>
+    </ul>
+</section>
+<section>
+    <h1>MVC Concept</h1>
+    <h2 class="fragment">Goals</h2>
+    <ul>
+        <li class="fragment">Separation of Concerns</li>
+        <li class="fragment">Reusable Code</li>
+        <li class="fragment">Testability</li>
+    </ul>
+</section>
+<section>
+    <h1>Model</h1>
+    <p>
+        The Model plays the role of managing application data. A model could represent a user, product information, list of movies,
+        etc.
+    </p>
+</section>
+<section>
+    <h1>View</h1>
+    <p>
+        The View is the visual representation of the model. The view should not contain any logic. It accepts user input and passes
+        it to the controller.
+    </p>
+</section>
+<section>
+    <h1>Controller</h1>
+    <p>
+        The controller responds to the user's interaction with the View. It performs validation and other business logic. It is considered
+        'best practice' to keep controllers slim.
+    </p>
+</section>
+<section>
+    <h1>Problems with MVC</h1>
+    <ul>
+        <li class="fragment">Dependant on developer discipline</li>
+        <li class="fragment">Concepts are open to interpretation</li>
+        <li class="fragment">Requires additional items for full functionality.</li>
+    </ul>
+</section>
+<section>
+    <h1>Angular's architecture has changed from MVController to something like MVComponent</h1>
+</section>
+<section>
+    <h1>App Overview</h1>
+    <h2><a href="https://angular.io/generated/live-examples/toh-pt6/eplnkr.html" target="_blank">Tour of Heroes</a></h2>
+    <h2><a href="https://github.com/johnpapa/angular-tour-of-heroes" target="_blank">ToH Source Code</a></h2>
+</section>
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>
