@@ -1,0 +1,702 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>12/7/2017</h1>
+                    <!--Arrays and Methods-->
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                               <li>
+                                    <a href="#module">Module</a>
+                                </li>
+                                <li>
+                                    <a href="#class">Class</a>
+                                </li>
+                                <li>
+                                    <a href="#adv-class">Advanced Classes</a>
+                                </li>
+ 
+                            </ul>
+
+                        </div>
+                        <div>
+
+                            <h2>New</h2>
+                            <ul>
+                                <li><a href="#ts-intro">Typescript Intro</a></li>
+                                <li><a href="#types">TS Types</a></li>
+                                <li><a href="#interfaces">TS Interfaces</a></li>
+                                <li><a href="#ts-classes">TS Classes</a></li>
+                                <li><a href="#tips">TS Tips</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id="module">
+    <h1>Modules</h1>
+    <p>
+        Modules have been built into JavaScript libraries for some time, but they are now available native in the language.
+    </p>
+    <p>
+        Module are single instances of code designed to be reused throughout an application.
+    </p>
+    <p>
+        Modules are heavily used in NodeJS and Angular JS Applications.
+    </p>
+
+</section>
+<section>
+    <h1>Module Exporting</h1>
+    <pre class="fragment"><code class="js">
+        // /lib/math.js
+        export function multiply(x,u){
+            return x * u;
+        }
+        export const pi = 3.14
+        </code></pre>
+
+    <pre class="fragment"><code class="js">
+    import {multiply, pi} from 'lib/math';
+    console.log(multiply(pi, 4));
+    </code></pre>
+</section>
+<section>
+    <h1>Module Importing</h1>
+    <code class="">    
+        import {multiply, pi} from 'lib/math';
+    </code>
+    <ul>
+        <li class="fragment"><code>import</code> - All imports occur before any other code</li>
+        <li class="fragment"><code>{multiply, pi}</code> - Imported objects must be properly exported.</li>
+        <li class="fragment"><code>from</code></li>
+        <li class="fragment"><code>'lib/math'</code> - Relative path to the file. .js is not required. </li>
+    </ul>
+</section>
+<section>
+    <h1>Module Execution</h1>
+    <ul>
+        <li class="fragment">Modules are Singleton</li>
+        <li class="fragment">They do not execute until they are imported.</li>
+        <li class="fragment">Only one instance exists when it's imported.</li>
+    </ul>
+</section>
+<section>
+    <h1>Making Modules Compatible for the Web</h1>
+    <p>
+        Unfortunately, modules don't natively work in browser, but we can use a tool called Babel to compile our modules into browser
+        compatible JavaScript.
+    </p>
+    <pre><code class="bash">
+       npm install --save-dev gulp-babel babel-preset-es2015 
+        </code></pre>
+
+    <pre><code class="js">
+    const gulp = require('gulp');
+    const babel = require('gulp-babel');
+ 
+    gulp.task('default', () => {
+        return gulp.src('src/app.js')
+            .pipe(babel({
+                presets: ['es2015']
+            }))
+            .pipe(gulp.dest('dist'));
+    });
+        </code></pre>
+</section>
+                <section id="class">
+    <h1>JavaScript Classes</h1>
+    <p>
+        Classes provide JavaScript a better opportunity to behave like an Object Oriented Programming Language.
+    </p>
+    <p>
+        You could make it behave like OOP by enforcing strict patterns.
+    </p>
+</section>
+<section>
+    <h1>Class Declaration</h1>
+    <p>
+        You must declare a class before you use it.
+    </p>
+    <pre><code class="js">
+class Square{
+}
+    </code></pre>
+    <h2 class="fragment">Usage</h2>
+
+    <pre class="fragment"><code class="js">
+var sq = new Square();
+    </code></pre>
+    <aside class="notes">
+        New up a Square.
+    </aside>
+</section>
+<section>
+    <h1>Class Structure</h1>
+    <ul>
+        <li class="fragment">Constructor</li>
+        <li class="fragment"> Methods</li>
+    </ul>
+</section>
+<section>
+    <h1>Constructors</h1>
+    <p>
+        A constructor is a specific method used in the initialization of a class.
+    </p>
+    <p class="fragment">There can only be one constructor per class.</p>
+    <pre class="fragment"><code class="js">
+ class Rectangle{
+    constructor(height, width){
+        this.height = height;
+        this.width = width;
+    }
+ }
+   </code></pre>
+       <pre class="fragment"><code class="js">
+var rc = new Rectangle(10, 15);
+  </code></pre>
+
+</section>
+<section>
+    <h1> Methods</h1>
+    <p>No code is allowed outside of method.</p>
+    <pre class="fragment"><code class="js">
+ class Rectangle{
+    constructor(height, width){
+        this.height = height;
+        this.width = width;
+    }
+
+    calcArea(){
+        return this.height * this.width;
+    }
+ }
+</code></pre>
+    <pre class="fragment"><code class="js">
+        var rc = new Rectangle(10, 10);
+        console.log(rc.calcArea());
+        </code></pre>
+</section>
+<section>
+    <h1>Get Methods</h1>
+    <p>
+       Get methods allow you to create dynamic properties without requiring the user to call a method.  
+    </p>
+    <pre class="fragment"><code class="js">
+ class Rectangle{
+    constructor(height, width){
+        this.height = height;
+        this.width = width;
+    }
+
+    get area(){
+        return this.calcArea();
+    }
+    calcArea(){ 
+        return this.height * this.width;
+    }
+ }
+ </code></pre>
+    <pre class="fragment"><code class="js">
+    var rc = new Rectangle(10, 10);
+    console.log(rc.area);
+        </code></pre>
+</section>
+<section>
+    <h1>Set Methods </h1>
+    <p>
+       Get methods allow you to create dynamic properties without requiring the user to call a method.  
+    </p>
+    <pre class="fragment"><code class="js">
+ class Log{
+    constructor(){
+    this.log = [];
+    }
+    get logHistory(){
+        return this.log; 
+    }
+    set currentLog(value){
+        this.log.push(value);
+    }
+ }
+ </code></pre>
+    <pre class="fragment"><code class="js">
+    var lg = new Log();
+    lg.currentLog = 'new message';
+    console.log(lg.logHistory);
+        </code></pre>
+</section>
+<!--
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/class
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class https://googlechrome.github.io/samples/classes-es6/index.html-->
+                <section id="adv-class">
+    <h1>Static Methods</h1>
+    <p>
+        Static Methods are methods associated with a class, but are not apart of the instance of the class.
+    </p>
+</section>
+<section>
+    <h1>Static Method Example</h1>
+    <pre><code class="js">
+class Number{
+    constructor(n){
+        this.num = n;
+    }
+    increment(){
+        this.num++;
+    }
+    static square(num){
+        return num * num;
+    }
+}
+   </code></pre>
+    <pre class="fragment"><code class="js">
+var x = new Number(1);
+x.increment();
+x.square() //error
+Number.square(2); //return 4
+        </code>
+    </pre>
+</section>
+<section>
+    <h1>Sub Classes</h1>
+    <p>
+        Subclasses extend an existing class. It shares the same methods and properties of it's parent class.
+    </p>
+</section>
+<section>
+    <h1>Sub Class Example</h1>
+    <div class="two-col">
+        <div>
+    <pre><code class="js">
+class Rectangle {
+    constructor(height, width){
+        this.name = 'Rectangle';
+        this.height = height;
+        this.width = width;
+    }
+  get area(){
+    return this.height * this.width;
+  }
+}
+
+</code></pre>
+    <pre class="fragment"><code class="js">
+class Square extends Rectangle{
+    constructor(length){
+        super(length, length);
+        this.name = 'Square';
+    }
+}
+</code></pre>
+
+
+</div>
+<div>    <pre class="fragment"><code class="js">
+var rect = new Rectangle(10, 5);
+console.log(rect.name); //Rectangle
+console.log(rect.area); //50
+
+var sq = new Square(5);
+console.log(sq.name); //Square
+console.log(sq.height); //5
+console.log(sq.area); //25
+        </code></pre>
+</div>
+
+</div>
+</section>
+<!--
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/class
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class https://googlechrome.github.io/samples/classes-es6/index.html-->
+
+
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+                <section id="ts-intro">
+    <h1>TypeScript</h1>
+    <p>TypeScript is a superset of JavaScript that compiles down to vanilla JavaScript that can be consumed by any browser or NodeJS application.</p>
+</section>
+<section>
+    <h1>TypeScript</h1>
+    <ul>
+        <li class="fragment">
+            First appeared in Oct 2012
+        </li>
+        <li class="fragment">
+            The lead architect of  C# and creator of Delphi worked on the development of TS
+        </li>
+
+        <li class="fragment">
+            It finds and outputs errors when it compiles. It lets you know you've messed up before you run your code in browser.
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>Compilation</h1>
+    <div class="two-col">
+        <div>
+            <h2 class="fragment">main.scss</h2>
+            <h2 class="fragment"><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
+            <h2 class="fragment">main.css</h2>
+        </div>
+        <div>
+            <h2 class="fragment">main.ts</h2>
+            <h2 class="fragment"><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
+            <h2 class="fragment">main.js</h2>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>TypeScript Syntax</h1>
+    <div class="two-col">
+        <div>
+            <pre><code class="js">
+function logger(message){
+    console.log(`Log: ${message}`)
+} 
+
+logger('Hello World');
+                </code></pre>
+        </div>
+        <div>
+            <pre><code class="ts">
+function logger(message:string){
+    console.log(`Log: ${message}`)
+} 
+
+logger('Hello World');
+logger(1); //Outputs an error in the compiler.
+                </code></pre>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h1>Getting TypeScript</h1>
+    <h3><a href="https://www.typescriptlang.org/index.html#download-links" target="_blank">Editor Plugins</a></h3>
+    <h4 class="fragment">Node.js</h4>
+    <h4 class="fragment"><code>npm install -g typescript</code></h4>
+    <h4 class="fragment"><code>tsc helloworld.ts</code></h4>
+</section>
+                <section id="types">
+    <h1>TypeScript - Types</h1>
+    <p>
+        You use types to declare what type of variable you are declaring.  The TypeScript compiler will notify you if you missuse a type.
+    </p>
+</section>
+<section>
+    <h1>Boolean Type</h1>
+    <pre><code class="ts">
+let isValid: boolean = false;
+    
+function test(apply: boolean){
+    if (apply === true){
+    }
+}
+
+test(isValid);
+test('true'); // Error.
+        </code></pre>
+</section>
+<section>
+    <h1>Number</h1>
+    <pre><code class="ts">
+const pi: number = 3.14;
+
+function area(radius: number) : number{
+    return pi * (Math.pow(radius, 2));
+}
+
+let a: number = area(2); 
+let b: string = area(2); //Error
+        </code></pre>
+</section>
+<section>
+    <h1>String</h1>
+
+    <pre><code class="ts">
+const firstName: string = 'Daniel';
+const lastName: string = 'Worthy';
+
+function fullName(fName, lName) : string{
+    return `${fName} ${lName}`;
+}
+        </code></pre>
+</section>
+<section>
+    <h1>Array</h1>
+    <pre><code class="ts">
+    let list: number[] = [1, 2, 3];
+    let list: Array&lt;number&gt; = [1, 2, 3];
+        </code></pre>
+</section>
+
+<section>
+    <h1>Any</h1>
+    <p>
+        Best used when interacting with other libraries and frameworks.
+    </p>
+    <pre><code class="ts">
+let e: any = 30;
+e = true;
+e = "Hello World";
+        </code></pre>
+</section>
+
+
+                <section id="interfaces">
+    <h1>Interfaces</h1>
+    <p>
+        An interface provides a blueprint for JavaScript objects and classes.
+    </p>
+</section>
+<section>
+    <h1>Interface Example</h1>
+    <pre><code class="ts">
+
+interface Person {
+    firstName: string;
+    lastName: string;
+}        
+
+function getName(person: Person){
+}
+        </code></pre>
+</section>
+<section>
+    <h1>Interface Example</h1>
+    <pre><code class="ts">
+
+interface Shape {
+    Name: string;
+    Sides: number;
+    Height: number;
+    Width: number;
+}        
+
+let rectangle: Shape =  {
+   Name: 'Rectangle',
+   Sides: 4,
+   Height: 20,
+   Width: 20 
+}
+        </code></pre>
+</section>
+
+                <section id="ts-classes">
+    <h1>Classes</h1>
+    <p>
+        TypeScript allows you to enforce rules upon a class as well.
+    </p>
+</section>
+<section>
+    <h1>Classes and Interfaces</h1>
+    <p>
+        Classes and Interfaces play well with each other.
+    </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <pre><code class="ts">
+class Student  implements Person{
+    fullName: string;
+    firstName: string;
+    lastName: string;
+    constructor( firstName: string,  middleInitial: string,  lastName: string) {
+        this.fullName = `${firstName} ${middleInitial}  ${lastName}`;
+        this.firstName = firstName;
+        this.lastName = lastName
+    }
+}
+
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+//Accepts either a person or student
+function greeter(person : Person) {
+    return "Hello, " + person.firstName + " " + pergson.lastName;
+}
+       </code></pre>
+</section>
+<section>
+    <h1>Class constructor changes</h1>
+    <pre><code class="ts">
+class Student  implements Person{
+    fullName: string;
+    constructor(public firstName: string, public middleInitial: string, public lastName:string) {
+        this.fullName = `${firstName} ${middleInitial}  ${lastName}`;
+    }
+}
+       </code></pre>
+</section>
+<section>
+    <h1>Interface Example</h1>
+    <pre><code class="ts">
+
+class Rectangle implements Shape{
+  constructor(public Name: string, public Sides: number, public Height: number, public Width: number){
+  }
+}
+        </code></pre>
+</section>
+                <section id="tips">
+    <h1>Casing matters on your types</h1>
+    <div class="two-col">
+        <div>
+            <h2>Wrong</h2>
+            <pre><code class="ts">
+               function logic(foo: String): String; 
+                </code></pre>
+        </div>
+        <div>
+            <h2>Right</h2>
+            <pre><code class="ts">
+               function logic(foo: String): String; 
+                </code></pre>
+        </div>
+    </div>
+    <h3 class="fragment"><code>Number</code>, <code>String</code>, <code>Boolean</code>, and <code>Object</code> refer to reserved words in JavaScript.</h3>
+</section>
+                <section>
+                    <h2>Before you leave - http://codepen.io/</h2>
+                    <ul>
+                        <li>Convert these declarations into TypeScript Declarations
+                            <ul>
+                                <li>
+                                    <code>let foo = 'bar';</code>
+                                </li>
+                                <li>
+                                    <code>const pi = 3.14;</code>
+                                </li>
+                                <li>
+                                    <code>const today = new Date();</code>
+                                </li>
+                                <li>
+                                    <code>let items = [1, 2, 3, 5]</code>
+                                </li>
+                                <li>
+                                    <code>let items = ["Test", 2, today, 5]</code>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>
+                            Create an interface called
+                            <code>Shape</code> and has the following properties.
+                            <ul>
+                                <li>Name -> string</li>
+                                <li>Sides -> number</li>
+                                <li>Height -> number</li>
+                                <li>Width -> number</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Create a class called
+                            <code>Rectangle</code> and have it implement
+                            <code>Shape</code>
+                        </li>
+                    </ul>
+                </section>
+
+
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>

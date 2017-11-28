@@ -1,0 +1,460 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>11/30/2017</h1>
+                    <!--Arrays and Methods-->
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                <li>Interviewing</li>
+                                <li>Wordpress</li>
+                            </ul>
+
+                        </div>
+                        <div>
+
+                            <h2>New</h2>
+                            <ul>
+                                <li>
+                                    <a href="#intro">ES6 Intro</a>
+                                </li>
+                                <li>
+                                    <a href="#const">let and const</a>
+                                </li>
+                                <li>
+                                    <a href="#es6-string">ES6 Strings</a>
+                                </li>
+                                <li>
+                                    <a href="#arrows">ES6 Arrows</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+    <h1>Interviewing and Job Hunting</h1>
+</section>
+<section>
+    <h1>Looking for a company</h1>
+    <ul>
+        <li class="fragment">Know what you want in a company</li>
+        <li class="fragment">Research the company - Former employees, GlassDoor, Etc.</li>
+        <li class="fragment">Don't wait to be head hunted</li>
+    </ul>
+    <aside class="notes">
+        Grain of salt on the reveiws <br>
+        <a href="https://metova.com/jobs/" target="_blank">Metova</a>
+    </aside>
+</section>
+<section>
+    <h1>During an interview</h1>
+    <h2 class="fragment">Observe</h2>
+    <ul>
+        <li class="fragment">Office layout</li>
+        <li class="fragment">Employees</li>
+        <li class="fragment">Who are in the offices?</li>
+    </ul>
+    <aside class="notes">
+        ask about the promotion process. Do they have a set number of dev 2s or is it annual?<br> what is the average number
+        of hours a week are you expected to work <br> what do you do during slow times<br>
+    </aside>
+</section>
+<section>
+    <h1>During an interview</h1>
+    <h2 class="fragment">Questions to ask</h2>
+    <ul>
+        <li class="fragment">Promotion Process</li>
+        <li class="fragment">Hours Per Week Avg</li>
+        <li class="fragment">Slow Times</li>
+        <li class="fragment">Average Day Look like</li>
+        <li class="fragment">Meeting Frequency</li>
+        <li class="fragment">Team Building</li>
+    </ul>
+    <aside class="notes">
+        ask about the promotion process. Do they have a set number of dev 2s or is it annual?<br> what is the average number
+        of hours a week are you expected to work <br> what do you do during slow times<br>
+    </aside>
+</section>
+<section>
+    <h1>Technical questions during an interview</h1>
+    <ul>
+        <li class="fragment">What type of version control do they use?</li>
+        <li class="fragment">What provider do they use? (GitHub, BitBucket, etc)</li>
+        <li class="fragment">Do they code review?</li>
+        <li class="fragment">How do they integrate new technology?</li>
+        <li class="fragment">How do they handle deployments?</li>
+        <li class="fragment">How do they handle testing code?</li>
+    </ul>
+    <aside class="notes"> what source control do they use <br> do they code review <br> ask about deployment process <br> ask about integrating
+        new tech <br> what is the process for integrating new tech<br> testing process <br>
+    </aside>
+</section>
+                <section>
+    <h1>Wordpress</h1>
+    <p>
+        Wordpress is a php web framework designed to be highly customizable and easy to develop. It is one of the of the most highly
+        used web frameworks.
+    </p>
+</section>
+<section>
+    <h1>Structure</h1>
+    <p>WP is a blogging framework at it's core, but can be retrofitted for just about anything. Standard features include:</p>
+    <ul>
+        <li class="fragment">Pages</li>
+        <li class="fragment">Posts</li>
+        <li class="fragment">Media Manager</li>
+        <li class="fragment">Comments</li>
+        <li class="fragment">Plugins</li>
+        <li class="fragment">Themes</li>
+    </ul>
+</section>
+<section>
+    <h1>Dev Setup</h1>
+    <p>
+        We're going to use pantheon for a development platform.
+    </p>
+    <h3><a href="https://pantheon.io/" target="_blank">Patheon.io</a></h3>
+</section>
+<section>
+    <h1>Pages</h1>
+    <p>WP pages are stand alone web pages with customized content.</p>
+</section>
+<section>
+    <h1>Posts</h1>
+    <p>
+        WP posts are entries that act as blog posts, but can be extended to behave in different ways.
+    </p>
+</section>
+<section>
+    <h1>Media Manager</h1>
+    <p>
+        WP's media manager handles  all major media types.  
+    </p>
+</section>
+<section>
+   <h1>Comments</h1> 
+   <p>
+       All pages and posts are able to have comments associated with them.  The default method is open to a lot of spam. 
+   </p>
+</section>
+<section>
+    <h1>Plugins</h1>
+    <p>
+        Plugins are what make WP so customizable.  You can do just about anything with your site if you find the right plugin.
+    </p>
+</section>
+<section>
+    <h1>Themes</h1>
+    <p>
+        Themes are the cornerstone for the visualization of your site.
+    </p>
+</section>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+                <section id="intro">
+    <h1>ECMAScript 6 Intro</h1>
+</section>
+<section>
+    <h1>Primary Goals of ES6</h1>
+    <h2>Make JavaScript better for writing</h2>
+    <ul>
+        <li class="fragment">complex applications</li>
+        <li class="fragment">libraries</li>
+        <li class="fragment">code generators</li>
+        <li class="fragment">large scale applications</li>
+    </ul>
+</section>
+<section>
+    <h1>Can I use ES6 now?</h1>
+    <h2 class="fragment">Kinda sorta</h2>
+    <h2 class="fragment"><a href="https://babeljs.io/">Babel</a> allows for maximum compatibility.  </h2>
+    <h2 class="fragment">We can use Gulp to compile with Babel</h2>
+</section>
+
+<!--https://github.com/lukehoban/es6features/blob/master/README.md -->
+
+<!-- http://exploringjs.com/es6/ch_faq.html#sec_from-es5-to-es6-->
+                <section id="const">
+    <h1>New Variable Declarations</h1>
+    <h1 class="fragment"><code>let</code> and <code>const</code></h1>
+</section>
+<section>
+    <h1><code>let</code></h1>
+    <p>
+        <code>let</code> defines a block level variable. It can help prevent confusion in going through source code.
+    </p>
+</section>
+<section>
+    <h1>Prevents errors</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="LWJXRN" data-default-tab="js" data-user="WorthyD" data-embed-version="2" data-pen-title="ES6 - Let" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/LWJXRN/">ES6 - Let</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Scoping</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="QpVJKV" data-default-tab="js" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-Let-Scoping" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/QpVJKV/">UA-Let-Scoping</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1><code>const</code></h1>
+    <p>
+        <code>const</code> is used to generate variables that do not change.
+    </p>
+</section>
+<section>
+    <h1>Using <code>const</code></h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="peOQeG" data-default-tab="js" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-const" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/peOQeG/">UA-const</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section id="es6-strings">
+    <h1>New String Features</h1>
+    <p>
+        We have several new feature inside of strings that are very helpful.
+    </p>
+</section>
+<section>
+    <h1>String interpolation</h1>
+    <p>
+        String concatenation is much easier with the new ES6 features. Variables can be injected into strings by using the <code>`</code>        (grave accent) instead of single/double quotes and using the <code>${x}</code> symbols.
+    </p>
+</section>
+<section>
+    <h1>Template Strings</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="yMxQKd" data-default-tab="js" data-user="WorthyD" data-embed-version="2" data-pen-title="ES6 - Interpolation" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/yMxQKd/">ES6 - Interpolation</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Multiline Strings</h1>
+    <p>
+        You can also use the <code>`</code> symbol for multi line strings.
+    </p>
+</section>
+<section>
+    <h1>Usage</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="XMPyBm" data-default-tab="js" data-user="WorthyD" data-embed-version="2" data-pen-title="ES6 - strings" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/XMPyBm/">ES6 - strings</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section id="arrows">
+    <h1>Arrow Functions</h1>
+    <p>
+        Arrow functions are yet another feature introduced into ES6 that other languages leverage. Arrow functions help remove some
+        confusion of the `this` keyword. It is very helpful, but it isn't always the best fit.
+    </p>
+</section>
+<section>
+    <h1>Arrow Function Syntax</h1>
+    <h2>Function Expression</h2>
+    <pre><code class="js">
+    .on('click', function(){
+    });
+    </code></pre>
+    <h2>Arrow Function</h2>
+    <pre><code class="js">
+    .on('click', () => {
+    });
+    </code></pre>
+</section>
+<section>
+    <h1>Variations</h1>
+    <div class="fragment two-col">
+        <h2>Shorthand Functions</h2>
+        <div class="fragment">
+            <pre><code class="js">
+    function(y){
+        var x = 3;
+        return x * y; 
+    }
+   </code></pre>
+        </div>
+
+        <div class="fragment">
+            <pre><code class="js">
+    (y) => {
+        var x = 3;
+        return x * y; 
+    }
+   </code></pre>
+        </div>
+    </div>
+    <div class="fragment two-col">
+        <h2>Single Line</h2>
+        <div class="fragment">
+            <pre><code class="js">
+var rn = function(y){
+    return Math.random() * y; 
+}
+rn();
+   </code></pre>
+        </div>
+
+        <div class="fragment">
+            <pre><code class="js">
+//No curly braces signifies 
+//it is returning the calculation.
+var rn =  (y) => Math.random() * y; 
+n(4); 
+
+   </code></pre>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Even More Examples.</h1>
+    <p>
+        Arrow functions are awesome when used with Arrays.
+    </p>
+    <div class="fragment">
+        <pre><code class="js">[].filter((element) => element.isSomething == true); </code></pre>
+    </div>
+    <div class="fragment">
+        <pre><code class="js">[].filter((element) => {
+    return element.isActive && element.isInDate
+}); </code></pre>
+    </div>
+</section>
+                <section>
+                    <h2>http://codepen.io/ </h2>
+                    <h3>Due Preferred: Before you leave</h3>
+                    <ul>
+                        <li>
+                            2 HTML elements
+                            <ul>
+                                <li>button</li>
+                                <li>div</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Add a click event to the button to perform the following:
+                            <ul>
+                                <li>Generate a random whole number</li>
+                                <li>Build a multiline string interpolated template with the random number.</li>
+                                <li>Output the template into the div.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Use
+                            <code>let</code> and
+                            <code>const</code> instead of
+                            <code>var</code>
+                        </li>
+                    </ul>
+                    <aside class="notes">
+                        initial one was 10. Second was 4
+                    </aside>
+                </section>
+                <section>
+                    <ul>
+                        <li>
+                            <strong>Challenge:</strong> Don't use jQuery
+                        </li>
+                        <li>
+                            <strong>Challenge:</strong> Make it less than 15 lines of JavaScript.
+                        </li>
+                        <li>
+                            <strong>Hint:</strong>Look at Chrome's console for errors.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Optional Practice</h1>
+                    <p>
+                        Fork this CodePen and convert the array method callbacks into arrow functions.
+                    </p>
+                    <h2><a href="https://codepen.io/WorthyD/pen/aVVarm">Pen</a></h2>
+                </section>
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>

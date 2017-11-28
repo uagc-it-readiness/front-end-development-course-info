@@ -1,0 +1,566 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>11/9/2017</h1>
+                    <!--Arrays and Methods-->
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                 <li><a href="#">Parent Selectors</a></li>
+                            </ul>
+
+                        </div>
+                        <div>
+
+                            <h2>New</h2>
+                            <ul>
+                                <li><a href="#array-methods">New Array Methods</a></li>
+                           </ul>
+                        </div>
+                    </div>
+               </section>
+
+                <section>
+    <h1>ECMAScript 6 Intro</h1>
+</section>
+<section>
+    <h1>Primary Goals of ES6</h1>
+    <h2>Make JavaScript better for writing</h2>
+    <ul>
+        <li class="fragment">complex applications</li>
+        <li class="fragment">libraries</li>
+        <li class="fragment">code generators</li>
+        <li class="fragment">large scale applications</li>
+    </ul>
+</section>
+<section>
+    <h1>Can I use ES6 now?</h1>
+    <h2 class="fragment">Kinda sorta</h2>
+    <h2 class="fragment">Babel allows for maximum compatibility.</h2>
+</section>
+
+<!--https://github.com/lukehoban/es6features/blob/master/README.md -->
+
+<!-- http://exploringjs.com/es6/ch_faq.html#sec_from-es5-to-es6-->
+                <section>
+    <h1>New Variable Declarations</h1>
+    <h1 class="fragment"><code>let</code> and <code>const</code></h1>
+</section>
+<section>
+    <h1><code>let</code></h1>
+    <p>
+        <code>let</code> defines a block level variable. It can help prevent confusion in going through source code.
+    </p>
+</section>
+<section>
+    <h1>Prevents errors</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="LWJXRN" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="LWJXRN" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/LWJXRN/">LWJXRN</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Scoping</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="QpVJKV" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="QpVJKV" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/QpVJKV/">QpVJKV</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1><code>const</code></h1>
+    <p>
+        <code>const</code> is used to generate variables that do not change.
+    </p>
+</section>
+<section>
+    <h1>Using <code>const</code></h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="peOQeG" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-const" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/peOQeG/">UA-const</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section>
+    <h1>New String Features</h1>
+    <p>
+        We have several new feature inside of strings that are very helpful.
+    </p>
+</section>
+<section>
+    <h1>String interpolation</h1>
+    <p>
+        String concatenation is much easier with the new ES6 features. Variables can be injected into strings by using the <code>`</code>        (grave accent) instead of single/double quotes and using the <code>${x}</code> symbols.
+    </p>
+</section>
+<section>
+    <h1>Template Strings</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="yMxQKd" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="yMxQKd" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/yMxQKd/">yMxQKd</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Multiline Strings</h1>
+    <p>
+        You can also use the <code>`</code> symbol for multi line strings.
+    </p>
+</section>
+<section>
+    <h1>Usage</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="XMPyBm" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="XMPyBm" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/XMPyBm/">XMPyBm</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section>
+    <h1>Arrow Functions</h1>
+    <p>
+        Arrow functions are yet another feature introduced into ES6 that other languages leverage. Arrow functions help remove some
+        confusion of the `this` keyword. It is very helpful, but it isn't always the best fit.
+    </p>
+</section>
+<section>
+    <h1>Arrow Function Syntax</h1>
+    <h2>Function Expression</h2>
+    <pre><code class="js">
+    .on('click', function(){
+    });
+    </code></pre>
+    <h2>Arrow Function</h2>
+    <pre><code class="js">
+    .on('click', () => {
+    });
+    </code></pre>
+</section>
+<section>
+    <h1>Variations</h1>
+    <div class="fragment two-col">
+        <h2>Shorthand Functions</h2>
+        <div class="fragment">
+            <pre><code class="js">
+    function(y){
+        var x = 3;
+        return x * y; 
+    }
+   </code></pre>
+        </div>
+
+        <div class="fragment">
+            <pre><code class="js">
+    (y) => {
+        var x = 3;
+        return x * y; 
+    }
+   </code></pre>
+        </div>
+    </div>
+    <div class="fragment two-col">
+        <h2>Single Line</h2>
+        <div class="fragment">
+            <pre><code class="js">
+var rn = function(y){
+    return Math.random() * y; 
+}
+rn();
+   </code></pre>
+        </div>
+
+        <div class="fragment">
+            <pre><code class="js">
+//No curly braces signifies it is returning the calculation.
+var rn =  (y) => Math.random() * y; 
+n(4); 
+
+   </code></pre>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Even More Examples.</h1>
+    <p>
+        Arrow functions are awesome when used with Arrays.
+    </p>
+    <div class="two-col">
+        <div class="fragment">
+            <pre><code class="js">[].filter((element) => element.isSomething == true); </code></pre>
+        </div>
+        <div class="fragment">
+            <pre><code class="js">[].filter((element) => {
+                return element.isActive && element.isInDate
+            }); </code></pre>
+        </div>
+    </div>
+</section>
+ 
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+
+                <section>
+    <h1>Modules</h1>
+    <p>
+        Modules have been built into JavaScript libraries for some time, but they are now available native in the language.
+    </p>
+    <p>
+        Module are single instances of code designed to be reused throughout an application.
+    </p>
+    <p>
+        Modules are heavily used in NodeJS and Angular JS Applications.
+    </p>
+
+</section>
+<section>
+    <h1>Module Exporting</h1>
+    <pre class="fragment"><code class="js">
+        // /lib/math.js
+        export function multiply(x,u){
+            return x * u;
+        }
+        export const pi = 3.14
+        </code></pre>
+
+    <pre class="fragment"><code class="js">
+    import {multiply, pi} from 'lib/math';
+    console.log(multiply(pi, 4));
+    </code></pre>
+</section>
+<section>
+    <h1>Module Importing</h1>
+    <code class="">    
+        import {multiply, pi} from 'lib/math';
+    </code>
+    <ul>
+        <li class="fragment"><code>import</code> - All imports occur before any other code</li>
+        <li class="fragment"><code>{multiply, pi}</code> - Imported objects must be properly exported.</li>
+        <li class="fragment"><code>from</code></li>
+        <li class="fragment"><code>'lib/math'</code> - Relative path to the file. .js is not required. </li>
+    </ul>
+</section>
+<section>
+    <h1>Module Execution</h1>
+    <ul>
+        <li class="fragment">Modules are Singleton</li>
+        <li class="fragment">They do not execute until they are imported.</li>
+        <li class="fragment">Only one instance exists when it's imported.</li>
+    </ul>
+</section>
+<section>
+    <h1>Making Modules Compatible for the Web</h1>
+    <p>
+        Unfortunately, modules don't natively work in browser, but we can use a tool called Babel to compile our modules into browser
+        compatible JavaScript.
+    </p>
+    <pre><code class="bash">
+       npm install --save-dev gulp-babel babel-preset-es2015 
+        </code></pre>
+
+    <pre><code class="js">
+    const gulp = require('gulp');
+    const babel = require('gulp-babel');
+ 
+    gulp.task('default', () => {
+        return gulp.src('src/app.js')
+            .pipe(babel({
+                presets: ['es2015']
+            }))
+            .pipe(gulp.dest('dist'));
+    });
+        </code></pre>
+</section>
+                <section>
+    <h1>JavaScript Classes</h1>
+    <p>
+        Classes provide JavaScript a better opportunity to behave like an Object Oriented Programming Language.
+    </p>
+    <p>
+        You could make it behave like OOP by enforcing strict patterns.
+    </p>
+</section>
+<section>
+    <h1>Class Declaration</h1>
+    <p>
+        You must declare a class before you use it.
+    </p>
+    <pre><code class="js">
+class Square{
+}
+    </code></pre>
+    <h2 class="fragment">Usage</h2>
+
+    <pre class="fragment"><code class="js">
+var sq = new Square();
+    </code></pre>
+    <aside class="notes">
+        New up a Square.
+    </aside>
+</section>
+<section>
+    <h1>Class Structure</h1>
+    <ul>
+        <li class="fragment">Constructor</li>
+        <li class="fragment"> Methods</li>
+    </ul>
+</section>
+<section>
+    <h1>Constructors</h1>
+    <p>
+        A constructor is a specific method used in the initialization of a class.
+    </p>
+    <p class="fragment">There can only be one constructor per class.</p>
+    <pre class="fragment"><code class="js">
+ class Rectangle{
+    constructor(height, width){
+        this.height = height;
+        this.width = width;
+    }
+ }
+   </code></pre>
+       <pre class="fragment"><code class="js">
+var rc = new Rectangle(10, 15);
+  </code></pre>
+
+</section>
+<section>
+    <h1> Methods</h1>
+    <p>No code is allowed outside of method.</p>
+    <pre class="fragment"><code class="js">
+ class Rectangle{
+    constructor(height, width){
+        this.height = height;
+        this.width = width;
+    }
+
+    calcArea(){
+        return this.height * this.width;
+    }
+ }
+</code></pre>
+    <pre class="fragment"><code class="js">
+        var rc = new Rectangle(10, 10);
+        console.log(rc.calcArea());
+        </code></pre>
+</section>
+<section>
+    <h1>Get Methods</h1>
+    <p>
+       Get methods allow you to create dynamic properties without requiring the user to call a method.  
+    </p>
+    <pre class="fragment"><code class="js">
+ class Rectangle{
+    constructor(height, width){
+        this.height = height;
+        this.width = width;
+    }
+
+    get area(){
+        return this.calcArea();
+    }
+    calcArea(){ 
+        return this.height * this.width;
+    }
+ }
+ </code></pre>
+    <pre class="fragment"><code class="js">
+    var rc = new Rectangle(10, 10);
+    console.log(rc.area);
+        </code></pre>
+</section>
+<section>
+    <h1>Set Methods </h1>
+    <p>
+       Get methods allow you to create dynamic properties without requiring the user to call a method.  
+    </p>
+    <pre class="fragment"><code class="js">
+ class Log{
+    constructor(){
+    this.log = [];
+    }
+    get logHistory(){
+        return this.log; 
+    }
+    set currentLog(value){
+        this.log.push(value);
+    }
+ }
+ </code></pre>
+    <pre class="fragment"><code class="js">
+    var lg = new Log();
+    lg.currentLog = 'new message';
+    console.log(lg.logHistory);
+        </code></pre>
+</section>
+<!--
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/class
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class https://googlechrome.github.io/samples/classes-es6/index.html-->
+                <section>
+    <h1>Static Methods</h1>
+    <p>
+        Static Methods are methods associated with a class, but are not apart of the instance of the class.
+    </p>
+</section>
+<section>
+    <h1>Static Method Example</h1>
+    <pre><code class="js">
+class Number{
+    constructor(n){
+        this.num = n;
+    }
+    increment(){
+        this.num++;
+    }
+    static square(num){
+        return num * num;
+    }
+}
+   </code></pre>
+    <pre class="fragment"><code class="js">
+var x = new Number(1);
+x.increment();
+x.square() //error
+Number.square(2); //return 4
+        </code>
+    </pre>
+</section>
+<section>
+    <h1>Sub Classes</h1>
+    <p>
+        Subclasses extend an existing class. It shares the same methods and properties of it's parent class.
+    </p>
+</section>
+<section>
+    <h1>Sub Class Example</h1>
+    <div class="two-col">
+        <div>
+    <pre><code class="js">
+class Rectangle {
+    constructor(height, width){
+        this.name = 'Rectangle';
+        this.height = height;
+        this.width = width;
+    }
+  get area(){
+    return this.height * this.width;
+  }
+}
+
+</code></pre>
+    <pre class="fragment"><code class="js">
+class Square extends Rectangle{
+    constructor(length){
+        super(length, length);
+        this.name = 'Square';
+    }
+}
+</code></pre>
+
+
+</div>
+<div>    <pre class="fragment"><code class="js">
+var rect = new Rectangle(10, 5);
+console.log(rect.name); //Rectangle
+console.log(rect.area); //50
+
+var sq = new Square(5);
+console.log(sq.name); //Square
+console.log(sq.height); //5
+console.log(sq.area); //25
+        </code></pre>
+</div>
+
+</div>
+</section>
+<!--
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/class
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class https://googlechrome.github.io/samples/classes-es6/index.html-->
+          </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>
