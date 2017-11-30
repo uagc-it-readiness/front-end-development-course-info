@@ -43,12 +43,8 @@
                         <div>
                             <h2>Review</h2>
                             <ul>
-                                <li><a href="#ts-intro">Typescript Intro</a></li>
-                                <li><a href="#types">TS Types</a></li>
-                                <li><a href="#interfaces">TS Interfaces</a></li>
-                                <li><a href="#ts-classes">TS Classes</a></li>
-                                <li><a href="#tips">TS Tips</a></li>
- 
+                                <li><a href="#component">Component</a></li>
+                                <li><a href="#interpolation">Interpolation</a></li>
                             </ul>
 
                         </div>
@@ -56,261 +52,13 @@
 
                             <h2>New</h2>
                             <ul>
-                                <li><a href="#cli">CLI</a></li>
-                                <li><a href="#component">Component</a></li>
-                                <li><a href="#interpolation">Interpolation</a></li>
+                                <li><a href="#ngif">NG If</a></li>
+                                <li><a href="#ngfor">NG For</a></li>
+                                <li><a href="#ngstyles">NG Styles</a></li>
+
                            </ul>
                         </div>
                     </div>
-                </section>
-                <section id="ts-intro">
-    <h1>TypeScript</h1>
-    <p>TypeScript is a superset of JavaScript that compiles down to vanilla JavaScript that can be consumed by any browser or NodeJS application.</p>
-</section>
-<section>
-    <h1>TypeScript</h1>
-    <ul>
-        <li class="fragment">
-            First appeared in Oct 2012
-        </li>
-        <li class="fragment">
-            The lead architect of  C# and creator of Delphi worked on the development of TS
-        </li>
-
-        <li class="fragment">
-            It finds and outputs errors when it compiles. It lets you know you've messed up before you run your code in browser.
-        </li>
-    </ul>
-</section>
-<section>
-    <h1>Compilation</h1>
-    <div class="two-col">
-        <div>
-            <h2 class="fragment">main.scss</h2>
-            <h2 class="fragment"><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
-            <h2 class="fragment">main.css</h2>
-        </div>
-        <div>
-            <h2 class="fragment">main.ts</h2>
-            <h2 class="fragment"><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
-            <h2 class="fragment">main.js</h2>
-        </div>
-    </div>
-</section>
-<section>
-    <h1>TypeScript Syntax</h1>
-    <div class="two-col">
-        <div>
-            <pre><code class="js">
-function logger(message){
-    console.log(`Log: ${message}`)
-} 
-
-logger('Hello World');
-                </code></pre>
-        </div>
-        <div>
-            <pre><code class="ts">
-function logger(message:string){
-    console.log(`Log: ${message}`)
-} 
-
-logger('Hello World');
-logger(1); //Outputs an error in the compiler.
-                </code></pre>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h1>Getting TypeScript</h1>
-    <h3><a href="https://www.typescriptlang.org/index.html#download-links" target="_blank">Editor Plugins</a></h3>
-    <h4 class="fragment">Node.js</h4>
-    <h4 class="fragment"><code>npm install -g typescript</code></h4>
-    <h4 class="fragment"><code>tsc helloworld.ts</code></h4>
-</section>
-                <section id="types">
-    <h1>TypeScript - Types</h1>
-    <p>
-        You use types to declare what type of variable you are declaring.  The TypeScript compiler will notify you if you missuse a type.
-    </p>
-</section>
-<section>
-    <h1>Boolean Type</h1>
-    <pre><code class="ts">
-let isValid: boolean = false;
-    
-function test(apply: boolean){
-    if (apply === true){
-    }
-}
-
-test(isValid);
-test('true'); // Error.
-        </code></pre>
-</section>
-<section>
-    <h1>Number</h1>
-    <pre><code class="ts">
-const pi: number = 3.14;
-
-function area(radius: number) : number{
-    return pi * (Math.pow(radius, 2));
-}
-
-let a: number = area(2); 
-let b: string = area(2); //Error
-        </code></pre>
-</section>
-<section>
-    <h1>String</h1>
-
-    <pre><code class="ts">
-const firstName: string = 'Daniel';
-const lastName: string = 'Worthy';
-
-function fullName(fName, lName) : string{
-    return `${fName} ${lName}`;
-}
-        </code></pre>
-</section>
-<section>
-    <h1>Array</h1>
-    <pre><code class="ts">
-    let list: number[] = [1, 2, 3];
-    let list: Array&lt;number&gt; = [1, 2, 3];
-        </code></pre>
-</section>
-
-<section>
-    <h1>Any</h1>
-    <p>
-        Best used when interacting with other libraries and frameworks.
-    </p>
-    <pre><code class="ts">
-let e: any = 30;
-e = true;
-e = "Hello World";
-        </code></pre>
-</section>
-
-
-                <section id="interfaces">
-    <h1>Interfaces</h1>
-    <p>
-        An interface provides a blueprint for JavaScript objects and classes.
-    </p>
-</section>
-<section>
-    <h1>Interface Example</h1>
-    <pre><code class="ts">
-
-interface Person {
-    firstName: string;
-    lastName: string;
-}        
-
-function getName(person: Person){
-}
-        </code></pre>
-</section>
-<section>
-    <h1>Interface Example</h1>
-    <pre><code class="ts">
-
-interface Shape {
-    Name: string;
-    Sides: number;
-    Height: number;
-    Width: number;
-}        
-
-let rectangle: Shape =  {
-   Name: 'Rectangle',
-   Sides: 4,
-   Height: 20,
-   Width: 20 
-}
-        </code></pre>
-</section>
-
-                <section id="ts-classes">
-    <h1>Classes</h1>
-    <p>
-        TypeScript allows you to enforce rules upon a class as well.
-    </p>
-</section>
-<section>
-    <h1>Classes and Interfaces</h1>
-    <p>
-        Classes and Interfaces play well with each other.
-    </p>
-</section>
-<section>
-    <h1>Example</h1>
-    <pre><code class="ts">
-class Student  implements Person{
-    fullName: string;
-    firstName: string;
-    lastName: string;
-    constructor( firstName: string,  middleInitial: string,  lastName: string) {
-        this.fullName = `${firstName} ${middleInitial}  ${lastName}`;
-        this.firstName = firstName;
-        this.lastName = lastName
-    }
-}
-
-interface Person {
-    firstName: string;
-    lastName: string;
-}
-//Accepts either a person or student
-function greeter(person : Person) {
-    return "Hello, " + person.firstName + " " + pergson.lastName;
-}
-       </code></pre>
-</section>
-<section>
-    <h1>Class constructor changes</h1>
-    <pre><code class="ts">
-class Student  implements Person{
-    fullName: string;
-    constructor(public firstName: string, public middleInitial: string, public lastName:string) {
-        this.fullName = `${firstName} ${middleInitial}  ${lastName}`;
-    }
-}
-       </code></pre>
-</section>
-<section>
-    <h1>Interface Example</h1>
-    <pre><code class="ts">
-
-class Rectangle implements Shape{
-  constructor(public Name: string, public Sides: number, public Height: number, public Width: number){
-  }
-}
-        </code></pre>
-</section>
-                <section id="tips">
-    <h1>Casing matters on your types</h1>
-    <div class="two-col">
-        <div>
-            <h2>Wrong</h2>
-            <pre><code class="ts">
-               function logic(foo: String): String; 
-                </code></pre>
-        </div>
-        <div>
-            <h2>Right</h2>
-            <pre><code class="ts">
-               function logic(foo: String): String; 
-                </code></pre>
-        </div>
-    </div>
-    <h3 class="fragment"><code>Number</code>, <code>String</code>, <code>Boolean</code>, and <code>Object</code> refer to reserved words in JavaScript.</h3>
-</section>
-                <section>
-                    <h2>Questions?</h2>
                 </section>
                 <section>
     <h1>Angular CLI</h1>
@@ -513,7 +261,171 @@ export class AppComponent {
 }
         </code></pre>
 </section>
-            </div>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+                <section id="ngif">
+    <h1>ngIf</h1>
+    <p>
+        There are times where you may need to hide or show content based off a condition in JavaScript. In the past, we've use CSS
+        and classes to hide elements. We can use ngIf to show or hide content.
+    </p>
+    <p class="fragment">
+        NgIf actually adds and removes content from the DOM when its condition is triggered.
+
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+       <pre><code class="ts" data-noescape>
+@Component({
+  selector: 'my-app',
+  template: `
+       &lt;input id="textField" value="" /&gt;
+       &lt;span <mark>*ngIf="isInvalid"</mark>&gt;First name is Invalid&lt;/span&gt;
+    `
+})
+export class AppComponent {
+    if (txtField == ''){
+        <mark>isInvalid = true</mark>
+    }
+}
+        </code></pre> 
+</section>
+<section>
+    <h1>Else</h1>
+    <pre><code class="xml">
+<ng-template #hidden>
+    <p>Hidden else content</p>
+</ng-template>
+<p *ngIf="shown; else hidden">
+    Visible shown content
+</p>
+        </code></pre>
+</section>
+                <section id="ngfor">
+    <h1>ngFor</h1>
+    <p>
+        <code>ngFor</code> allows you to loop through and display an array of objects in the view.
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <div class="two-col">
+        <div>
+            <pre><code class="ts">
+export class AppComponent {
+  names = ['Ted', 
+    'Fred', 
+    'Marco', 
+    'Polo'];
+}</code></pre>
+            <pre><code class="xml">
+<ul>
+    <li *ngFor="let name of names">
+        {{name}}
+    </li>
+</ul>
+</code></pre>
+        </div>
+        <div class="fragment">
+            <h2>Output</h2>
+
+            <pre><code class="html">
+<ul>
+    <li> 
+        Ted
+    </li>
+    <li> 
+        Fred
+    </li>
+    <li> 
+       Marco 
+    </li>
+    <li> 
+        Polo
+    </li>
+</ul>
+</code></pre>
+
+        </div>
+
+    </div>
+
+</section>
+                <section id="ngstyles">
+    <h1>Component Styles</h1>
+    <p>
+        Styling components in Angular is different than traditional styling.
+    </p>
+</section>
+<section>
+    <h1>Inline Syntax</h1>
+    <pre><code class="ts">
+@Component({
+  selector: 'app-comp',
+  template: `
+    <h1>Hello Angular</h1>
+  `,
+  styles: [`
+    h1 { font-weight: normal; }
+    h2 { font-weight: bold; }
+   `]
+})
+export class HeroAppComponent {
+/* . . . */
+}</code></pre>
+</section>
+<section>
+    <h1>External Syntax</h1>
+    <pre><code class="ts">
+@Component({
+  selector: 'app-comp',
+  template: `
+    <h1>Hello Angular</h1>
+  `,
+    styleUrls: ['app.component.css']
+})
+export class HeroAppComponent {
+/* . . . */
+}</code></pre>
+
+</section>
+<section>
+    <h1>CSS Encapsulation</h1>
+    <div>
+        <pre><code class="ts">
+@Component({
+  selector: 'app-comp',
+  template: `
+    <h1>Hello Angular</h1>
+  `,
+  styles: [`
+    h1 { font-weight: normal; }
+    h2 { font-weight: bold; }
+   `]
+})
+export class HeroAppComponent {
+/* . . . */
+}</code></pre>
+    </div>
+    <div class="fragment">
+
+        <pre><code class=" xml">
+&lt;h1 _ngcontent-pmm-1>Hello Angular&lt;/h1>
+</code></pre>
+    </div>
+    <div class="fragment">
+
+        <pre><code class=" css">
+h1[_ngcontent-pmm-1] { font-weight: normal; }
+</code></pre>
+
+
+    </div>
+</section>
+ 
+           </div>
 
         </div>
 
