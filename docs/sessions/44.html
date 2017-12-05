@@ -83,10 +83,9 @@
     <h1>Primary Goals of ES6</h1>
     <h2>Make JavaScript better for writing</h2>
     <ul>
-        <li class="fragment">complex applications</li>
+        <li class="fragment">complex and large applications</li>
         <li class="fragment">libraries</li>
         <li class="fragment">code generators</li>
-        <li class="fragment">large scale applications</li>
     </ul>
 </section>
 <section>
@@ -242,13 +241,13 @@ n(4);
                 <section id="module">
     <h1>Modules</h1>
     <p>
-        Modules have been built into JavaScript libraries for some time, but they are now available native in the language.
+        Module patterns have been built into JavaScript libraries for some time, but they are now available native in the language.
     </p>
     <p>
         Module are single instances of code designed to be reused throughout an application.
     </p>
     <p>
-        Modules are heavily used in NodeJS and Angular JS Applications.
+        Modules are heavily used in NodeJS and Angular Applications.
     </p>
 
 </section>
@@ -276,7 +275,7 @@ n(4);
         <li class="fragment"><code>import</code> - All imports occur before any other code</li>
         <li class="fragment"><code>{multiply, pi}</code> - Imported objects must be properly exported.</li>
         <li class="fragment"><code>from</code></li>
-        <li class="fragment"><code>'lib/math'</code> - Relative path to the file. .js is not required. </li>
+        <li class="fragment"><code>'lib/math'</code> - Relative path to the file. .js file extension is not required. </li>
     </ul>
 </section>
 <section>
@@ -296,6 +295,8 @@ n(4);
     <pre><code class="bash">
        npm install --save-dev gulp-babel babel-preset-es2015 
         </code></pre>
+        </section>
+        <section>
 
     <pre><code class="js">
     const gulp = require('gulp');
@@ -318,6 +319,11 @@ n(4);
     <p>
         You could make it behave like OOP by enforcing strict patterns.
     </p>
+</section>
+<section>
+    <h1>Caution</h1>
+    <h2>This is where <code>this</code> starts getting complicated.</h2>
+    <h2 class="fragment">Puns</h2>
 </section>
 <section>
     <h1>Class Declaration</h1>
@@ -358,14 +364,15 @@ var sq = new Square();
     }
  }
    </code></pre>
-       <pre class="fragment"><code class="js">
+    <pre class="fragment"><code class="js">
 var rc = new Rectangle(10, 15);
   </code></pre>
 
 </section>
 <section>
     <h1> Methods</h1>
-    <p>No code is allowed outside of method.</p>
+    <p>No code is allowed outside of method. The
+        <code>function</code> keyword is not required.</p>
     <pre class="fragment"><code class="js">
  class Rectangle{
     constructor(height, width){
@@ -386,7 +393,8 @@ var rc = new Rectangle(10, 15);
 <section>
     <h1>Get Methods</h1>
     <p>
-       Get methods allow you to create dynamic properties without requiring the user to call a method.  
+        Get methods allow you to create dynamic
+        <strong>read only properties</strong> without requiring the user to call a method.
     </p>
     <pre class="fragment"><code class="js">
  class Rectangle{
@@ -411,7 +419,6 @@ var rc = new Rectangle(10, 15);
 <section>
     <h1>Set Methods </h1>
     <p>
-       Get methods allow you to create dynamic properties without requiring the user to call a method.  
     </p>
     <pre class="fragment"><code class="js">
  class Log{
@@ -431,6 +438,26 @@ var rc = new Rectangle(10, 15);
     lg.currentLog = 'new message';
     console.log(lg.logHistory);
         </code></pre>
+</section>
+<section>
+    <pre><code class="js">
+    class Person {
+
+        constructor(){}
+
+        get fullName() {
+            return this.firstName + ' ' + this.lastName;
+        }
+
+        set fullName (name) {
+            var words = name.toString().split(' ');
+            this.firstName = words[0] || '';
+            this.lastName = words[1] || '';
+        }
+
+    }
+
+            </code></pre>
 </section>
 <!--
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/class
