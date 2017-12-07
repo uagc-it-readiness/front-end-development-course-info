@@ -424,7 +424,7 @@ function logger(message){
 logger('Hello World');
                 </code></pre>
         </div>
-        <div>
+        <div class="fragment">
             <pre><code class="ts">
 function logger(message:string){
     console.log(`Log: ${message}`)
@@ -474,7 +474,7 @@ function area(radius: number) : number{
 }
 
 let a: number = area(2); 
-let b: string = area(2); //Error
+let b: string = area(2); //Error due to b being a string
         </code></pre>
 </section>
 <section>
@@ -491,9 +491,12 @@ function fullName(fName, lName) : string{
 </section>
 <section>
     <h1>Array</h1>
+    <p>
+        Two ways to declare.  Both are correct.
+    </p>
     <pre><code class="ts">
-    let list: number[] = [1, 2, 3];
-    let list: Array&lt;number&gt; = [1, 2, 3];
+    let list: number[] = [1, 2, 3];  //similar to Java
+    let list: Array&lt;number&gt; = [1, 2, 3];  // similar to C#
         </code></pre>
 </section>
 
@@ -501,6 +504,9 @@ function fullName(fName, lName) : string{
     <h1>Any</h1>
     <p>
         Best used when interacting with other libraries and frameworks.
+    </p>
+    <p>
+        Some quality scanners discourage this.
     </p>
     <pre><code class="ts">
 let e: any = 30;
@@ -595,6 +601,9 @@ class Student  implements Person{
     }
 }
        </code></pre>
+       <p>
+           Adding <code>public</code> to the variable automatically generates the assignment.
+       </p>
 </section>
 <section>
     <h1>Interface Example</h1>
@@ -612,13 +621,13 @@ class Rectangle implements Shape{
         <div>
             <h2>Wrong</h2>
             <pre><code class="ts">
-               function logic(foo: String): String; 
+function logic(foo: string): string; 
                 </code></pre>
         </div>
         <div>
             <h2>Right</h2>
             <pre><code class="ts">
-               function logic(foo: String): String; 
+function logic(foo: String): String; 
                 </code></pre>
         </div>
     </div>
