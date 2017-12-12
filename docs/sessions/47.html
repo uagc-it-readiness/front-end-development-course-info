@@ -56,7 +56,7 @@
 
                             <h2>New</h2>
                             <ul>
-                                <li><a href="#cli">CLI</a></li>
+                                <li><a href="#ng-intro">NG Intro</a></li>
                                 <li><a href="#component">Component</a></li>
                                 <li><a href="#interpolation">Interpolation</a></li>
                            </ul>
@@ -306,13 +306,13 @@ class Rectangle implements Shape{
         <div>
             <h2>Wrong</h2>
             <pre><code class="ts">
-function logic(foo: string): string; 
+function logic(foo: String): String; 
                 </code></pre>
         </div>
         <div>
             <h2>Right</h2>
             <pre><code class="ts">
-function logic(foo: String): String; 
+function logic(foo: string): string; 
                 </code></pre>
         </div>
     </div>
@@ -321,125 +321,87 @@ function logic(foo: String): String;
                 <section>
                     <h2>Questions?</h2>
                 </section>
-                <section>
-    <h1>Angular CLI</h1>
+                <section id="ng-intro">
+    <h1>Angular</h1>
     <p>
-        The Angular CLI makes it very easy to create a new application, create new components, and test locally.
+        Angular is a front end application framework that is designed to write testable single page applications.
     </p>
+    <a href="https://angular.io/" target="_blank">Angular Website</a>
 </section>
 <section>
-    <h1>Angular CLI Benefits</h1>
+    <h1>History</h1>
     <ul>
-        <li class="fragment">Generates Project Structure</li>
-        <li class="fragment">Creates Most Files</li>
-        <li class="fragment">Runs your development server</li>
-        <li class="fragment">Follows best practices</li>
+        <li class="fragment">
+            <strong>AngularJS</strong>
+            <ul>
+                <li class="fragment">Debuted in 2010</li>
+                <li class="fragment">Built and Maintained by Google</li>
+                <li class="fragment">MVC Architecture</li>
+            </ul>
+        </li>
+        <li class="fragment">V2 released Sep 2016 </li>
+        <li class="fragment">V4 released March 2017</li>
+        <li class="fragment">V5 released October 2017</li>
+        <li class="fragment">AngularJS == 1.X</li>
+        <li class="fragment">Angular == 2 and above</li>
+        <li class="fragment">Leverages TypeScript</li>
     </ul>
 </section>
 <section>
-    <h1>Installing Angular CLI</h1>
-    <pre><code class="bash">
-    npm install -g @angular/cli
-    </code></pre>
-    <p>
-        This installs all the dependencies needed to run the Angular CLI from the command line.
-    </p>
-</section>
-<section>
-    <h1>Creating a New Project</h1>
-    <pre><code class="bash">
-    ng new MY-PROJECT-NAME 
-    cd MY-PROJECT-NAME
-    ng serve
-        </code></pre>
-</section>
-<section>
-    <h1>Flags</h1>
-    <p>The <code>new</code> command has several useful flags available in it.</p>
-    <div class="two-col">
-        <ul>
-            <li class="fragment"><code>--dry-run</code></li>
-            <li class="fragment"><code>--prefix</code></li>
-            <li class="fragment"><code>--routing</code></li>
-            <li class="fragment"><code>--style</code></li>
-        </ul>
-    </div>
-</section>
-<section>
-    <h1>Files Created</h1>
+    <h1>MVC Concept</h1>
+    <h2 class="fragment">Goals</h2>
     <ul>
-        <li class="fragment"><code>e2e</code> - End to End tests</li>
-        <li class="fragment"><code>.angular-cli.json</code> - CLI settings</li>
-        <li class="fragment">.gitignore</li>
-        <li class="fragment">package.json</li>
-        <li class="fragment">ReadME.MD</li>
-
+        <li class="fragment">Separation of Concerns</li>
+        <li class="fragment">Reusable Code</li>
+        <li class="fragment">Testability</li>
     </ul>
 </section>
 <section>
-    <h1>SRC Files and Folders</h1>
-    <div class="two-col">
-        <div>
-            <ul>
-                <li class="fragment"><code>index.html</code></li>
-                <li class="fragment"><code>main.ts</code> - Main bootstraper</li>
-                <li class="fragment"><code>styles.css</code> - Global Styles</li>
-                <li class="fragment">assets folder</li>
-                <li class="fragment">environments</li>
-            </ul>
-
-        </div>
-        <div>
-            <h2 class="fragment">app folder</h2>
-            <ul>
-                <li class="fragment"><code>app.module.ts</code></li>
-                <li class="fragment"><code>app.component.ts</code></li>
-                <li class="fragment"><code>app.component.spec.ts</code></li>
-                <li class="fragment"><code>app.component.html</code></li>
-                <li class="fragment"><code>app.component.css</code></li>
-            </ul>
-
-        </div>
+    <h1>Model</h1>
+    <p>
+        The Model plays the role of managing application data. A model could represent a user, product information, list of movies,
+        etc.
+    </p>
+</section>
+<section>
+    <h1>View</h1>
+    <p>
+        The View is the visual representation of the model. The view should not contain any logic. It accepts user input and passes
+        it to the controller.
+    </p>
+</section>
+<section>
+    <h1>Controller</h1>
+    <p>
+        The controller responds to the user's interaction with the View. It performs validation and other business logic. It is considered
+        'best practice' to keep controllers slim.
+    </p>
+</section>
+<section>
+    <div class="center" style="text-align: center" >
+        <img src="../images/mvc.PNG"  style="max-height:500px"/>
     </div>
 </section>
-
 <section>
-    <h1>Creating a New Component</h1>
-    <pre><code class="bash">
-ng generate component  my-new-component-name
-#which is equal to
-ng g component  my-new-component-name
-
-#You can also assign folder paths
-ng g component shared/components/my-small-component
-        </code></pre>
+    <h1>Problems with MVC</h1>
+    <ul>
+        <li class="fragment">Dependant on developer discipline</li>
+        <li class="fragment">Concepts are open to interpretation</li>
+        <li class="fragment">Requires additional items for full functionality.</li>
+    </ul>
 </section>
-
 <section>
-    <h1>Items you can Generate</h1>
-    <div class="two-col">
-        <div>
-            <ul>
-                <li class="fragment">component</li>
-                <li class="fragment">directive</li>
-                <li class="fragment">pipe</li>
-                <li class="fragment">service</li>
-                <li class="fragment">class</li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li class="fragment">guard</li>
-                <li class="fragment">interface</li>
-                <li class="fragment">enum</li>
-                <li class="fragment">module</li>
-            </ul>
-        </div>
-    </div>
+    <h1>Angular's architecture has changed from MVController to something like MVComponent</h1>
 </section>
-<!--<section>
-    <h1>Testing</h1>
-</section>-->
+<section>
+    <h1>App Overview</h1>
+    <h2>
+        <a href="https://angular.io/generated/live-examples/toh-pt6/eplnkr.html" target="_blank">Tour of Heroes</a>
+    </h2>
+    <h2>
+        <a href="https://github.com/johnpapa/angular-tour-of-heroes" target="_blank">ToH Source Code</a>
+    </h2>
+</section>
                 <section id="component">
     <h1>The Angular Component</h1>
     <p>Angular applications are made up of multiple <code>components</code>. An Angular component is composed of HTML (the View)
