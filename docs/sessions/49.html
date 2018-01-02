@@ -60,6 +60,125 @@
                         </div>
                     </div>
                 </section>
+                <section>
+    <h1>Angular CLI</h1>
+    <p>
+        The Angular CLI makes it very easy to create a new application, create new components, and test locally.
+    </p>
+</section>
+<section>
+    <h1>Angular CLI Benefits</h1>
+    <ul>
+        <li class="fragment">Generates Project Structure</li>
+        <li class="fragment">Creates Most Files</li>
+        <li class="fragment">Runs your development server</li>
+        <li class="fragment">Follows best practices</li>
+    </ul>
+</section>
+<section>
+    <h1>Installing Angular CLI</h1>
+    <pre><code class="bash">
+    npm install -g @angular/cli
+    </code></pre>
+    <p>
+        This installs all the dependencies needed to run the Angular CLI from the command line.
+    </p>
+</section>
+<section>
+    <h1>Creating a New Project</h1>
+    <pre><code class="bash">
+    ng new MY-PROJECT-NAME 
+    cd MY-PROJECT-NAME
+    ng serve
+        </code></pre>
+</section>
+<section>
+    <h1>Flags</h1>
+    <p>The <code>new</code> command has several useful flags available in it.</p>
+    <div class="two-col">
+        <ul>
+            <li class="fragment"><code>--dry-run</code></li>
+            <li class="fragment"><code>--prefix</code></li>
+            <li class="fragment"><code>--routing</code></li>
+            <li class="fragment"><code>--style</code></li>
+        </ul>
+    </div>
+</section>
+<section>
+    <h1>Files Created</h1>
+    <ul>
+        <li class="fragment"><code>e2e</code> - End to End tests</li>
+        <li class="fragment"><code>.angular-cli.json</code> - CLI settings</li>
+        <li class="fragment">.gitignore</li>
+        <li class="fragment">package.json</li>
+        <li class="fragment">ReadME.MD</li>
+
+    </ul>
+</section>
+<section>
+    <h1>SRC Files and Folders</h1>
+    <div class="two-col">
+        <div>
+            <ul>
+                <li class="fragment"><code>index.html</code></li>
+                <li class="fragment"><code>main.ts</code> - Main bootstraper</li>
+                <li class="fragment"><code>styles.css</code> - Global Styles</li>
+                <li class="fragment">assets folder</li>
+                <li class="fragment">environments</li>
+            </ul>
+
+        </div>
+        <div>
+            <h2 class="fragment">app folder</h2>
+            <ul>
+                <li class="fragment"><code>app.module.ts</code></li>
+                <li class="fragment"><code>app.component.ts</code></li>
+                <li class="fragment"><code>app.component.spec.ts</code></li>
+                <li class="fragment"><code>app.component.html</code></li>
+                <li class="fragment"><code>app.component.css</code></li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <h1>Creating a New Component</h1>
+    <pre><code class="bash">
+ng generate component  my-new-component-name
+#which is equal to
+ng g component  my-new-component-name
+
+#You can also assign folder paths
+ng g component shared/components/my-small-component
+        </code></pre>
+</section>
+
+<section>
+    <h1>Items you can Generate</h1>
+    <div class="two-col">
+        <div>
+            <ul>
+                <li class="fragment">component</li>
+                <li class="fragment">directive</li>
+                <li class="fragment">pipe</li>
+                <li class="fragment">service</li>
+                <li class="fragment">class</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li class="fragment">guard</li>
+                <li class="fragment">interface</li>
+                <li class="fragment">enum</li>
+                <li class="fragment">module</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--<section>
+    <h1>Testing</h1>
+</section>-->
                 <section id="ngif">
     <h1>ngIf</h1>
     <p>
@@ -224,249 +343,91 @@ h1[_ngcontent-pmm-1] { font-weight: normal; }
                     <h2>Questions?</h2>
                 </section>
                 <section>
-    <h1>Angular CLI</h1>
-    <p>
-        The Angular CLI makes it very easy to create a new application, create new components, and test locally.
-    </p>
+    <h1>Let's start building that app.</h1>
+    <h2>Open your terminal</h2>
 </section>
 <section>
-    <h1>Angular CLI Benefits</h1>
+    <h2>CD into a non-git directory to start your work.</h2>
+</section>
+<section>
+    <h1>Create your app</h1>
+    <h5>
+        <code>ng new [name] --routing --style=scss --dry-run</code>
+    </h5>
+    <h3>Replace [name] with what you want to name your app.</h3>
     <ul>
-        <li class="fragment">Generates Project Structure</li>
-        <li class="fragment">Creates Most Files</li>
-        <li class="fragment">Runs your development server</li>
-        <li class="fragment">Follows best practices</li>
+        <li class="fragment">Examples:</li>
+        <li class="fragment">
+            <code>ng new taco-truck --routing --style=scss --dry-run</code>
+        </li>
+        <li class="fragment">
+            <code>ng new blockbuster-reopening --routing --style=scss --dry-run</code>
+        </li>
     </ul>
 </section>
 <section>
-    <h1>Installing Angular CLI</h1>
-    <pre><code class="bash">
-    npm install -g @angular/cli
-    </code></pre>
-    <p>
-        This installs all the dependencies needed to run the Angular CLI from the command line.
-    </p>
-</section>
-<section>
-    <h1>Creating a New Project</h1>
-    <pre><code class="bash">
-    ng new MY-PROJECT-NAME 
-    cd MY-PROJECT-NAME
-    ng serve
-        </code></pre>
-</section>
-<section>
-    <h1>Flags</h1>
-    <p>The <code>new</code> command has several useful flags available in it.</p>
-    <div class="two-col">
-        <ul>
-            <li class="fragment"><code>--dry-run</code></li>
-            <li class="fragment"><code>--prefix</code></li>
-            <li class="fragment"><code>--routing</code></li>
-            <li class="fragment"><code>--style</code></li>
-        </ul>
-    </div>
-</section>
-<section>
-    <h1>Files Created</h1>
+    <h1>Verify your app is properly scaffolded in the dry run.</h1>
     <ul>
-        <li class="fragment"><code>e2e</code> - End to End tests</li>
-        <li class="fragment"><code>.angular-cli.json</code> - CLI settings</li>
-        <li class="fragment">.gitignore</li>
-        <li class="fragment">package.json</li>
-        <li class="fragment">ReadME.MD</li>
-
+        <li>Do you see</li>
+        <li>
+            <code>/src/app.component.scss</code>
+        </li>
+        <li>
+            <code>/src/app-routing-module.ts</code>
+        </li>
     </ul>
 </section>
 <section>
-    <h1>SRC Files and Folders</h1>
-    <div class="two-col">
-        <div>
-            <ul>
-                <li class="fragment"><code>index.html</code></li>
-                <li class="fragment"><code>main.ts</code> - Main bootstraper</li>
-                <li class="fragment"><code>styles.css</code> - Global Styles</li>
-                <li class="fragment">assets folder</li>
-                <li class="fragment">environments</li>
-            </ul>
-
-        </div>
-        <div>
-            <h2 class="fragment">app folder</h2>
-            <ul>
-                <li class="fragment"><code>app.module.ts</code></li>
-                <li class="fragment"><code>app.component.ts</code></li>
-                <li class="fragment"><code>app.component.spec.ts</code></li>
-                <li class="fragment"><code>app.component.html</code></li>
-                <li class="fragment"><code>app.component.css</code></li>
-            </ul>
-
-        </div>
-    </div>
-</section>
-
-<section>
-    <h1>Creating a New Component</h1>
-    <pre><code class="bash">
-ng generate component  my-new-component-name
-#which is equal to
-ng g component  my-new-component-name
-
-#You can also assign folder paths
-ng g component shared/components/my-small-component
-        </code></pre>
-</section>
-
-<section>
-    <h1>Items you can Generate</h1>
-    <div class="two-col">
-        <div>
-            <ul>
-                <li class="fragment">component</li>
-                <li class="fragment">directive</li>
-                <li class="fragment">pipe</li>
-                <li class="fragment">service</li>
-                <li class="fragment">class</li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li class="fragment">guard</li>
-                <li class="fragment">interface</li>
-                <li class="fragment">enum</li>
-                <li class="fragment">module</li>
-            </ul>
-        </div>
-    </div>
-</section>
-<!--<section>
-    <h1>Testing</h1>
-</section>-->
-                <section>
-    <h1>Interfaces In the CLI</h1>
-    <p>
-        Interfaces provide the easiest way to provide consistency across your application.
-    </p>
+    <h2>Run the code without the
+        <code>--dry-run</code>
+    </h2>
+    <h3>You can press up on your arrow pad and just delete it.</h3>
 </section>
 <section>
-    <h1>Interface Generation</h1>
-    <pre><code class="bash">
-ng generate interface my-interface-name
-
-#or
-
-ng g i my-interface-name
-        </code></pre>
-    <h3 class="fragment">Only generates .ts file.</h3>
-</section>
-<section>
-    <h1>Interface Structure</h1>
-
-    <pre><code class="ts">
-export interface MyInterfaceName {
-    id:string;
-    name: string;
-    description:string;
-}    </code></pre>
-</section>
-<section>
-    <h1>Interface Usage</h1>
-    <pre><code class="ts">
-import { Component } from '@angular/core';
-
-import { MyInterfaceName } from './my-interface-name';
-
-@Component({
-  selector: 'my-app',
-  template: `<div></div>`
-})
-export class AppComponent { 
-    MyItem: MyInterfaceName;
-}
-</code></pre>
-
+    <h2>Lets talk about something else while that runs</h2>
 </section>
                 <section>
-    <h1>Component in depth</h1>
+    <h1>Wireframing</h1>
+    <p>
+        Wireframing is the process of visually laying out a website in preparation for design or development.
+    </p>
 </section>
 <section>
-    <h1>Creating a New Component</h1>
-    <pre><code class="bash">
-ng g component  my-new-component-name
-       </code></pre>
-       <h2 class="fragment">Creates</h2>
-<ul>
-    <li class="fragment"><code>my-new-component-name.component.ts</code></li>
-    <li class="fragment"><code>my-new-component-name.component.spec.ts</code></li>
-    <li class="fragment"><code>my-new-component-name.component.html</code></li>
-    <li class="fragment"><code>my-new-component-name.component.css</code></li>
-</ul>
-</section>
-<section>
-    <h1>Flags</h1>
+    <h1>Benefits</h1>
     <ul>
-        <li class="fragment"><code>--flat</code></li>
-        <li class="fragment"><code>--inline-style</code></li>
-        <li class="fragment"><code>--inline-template</code></li>
+        <li class="fragment">Plan your layout before you build</li>
+        <li class="fragment">Can build a clickable experience</li>
     </ul>
 </section>
 <section>
-    <h1>Using your component</h1>
-    <h2>app.component.html</h2>
-    <pre><code class="xml">
-<h1>
-  {{title}}
-</h1>
-<app-my-new-comp></app-my-new-comp>
-        </code></pre>
+    <h1>Basic Examples</h1>
+    <img src="../images/wire/1.png" alt="">
 </section>
 <section>
-    <h1>Leverage components to shrink large blocks of code.</h1>
-    <pre><code class="xml">
-<div class="container">
-    <div *ngFor="let p of people">
-        <app-my-new-comp></app-my-new-comp>
-    </div>
-</div>
-</code></pre>
+    <h1>Clickable Example</h1>
+    <h2><a href="https://wireframepro.mockflow.com/view/whatsapp" target="_blank">WhatsApp</a></h2>
 </section>
 <section>
-    <h1>Passing info into a component.</h1>
-<p>We use the <code>[]</code> on our attributes to tell Angular these are bindable properties.</p>
-<pre><code class="ts">
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'my-app',
-  template: `<my-new-component [title]="name" [body]="desc"></my-new-component>`
-})
-export class AppComponent { 
-    name = 'Angular'; 
-    desc = "Lorem ipsum dolor sit amet.";
-}
-</code></pre>
+    <h1>Tools</h1>
+    <ul>
+        <li><a href="https://balsamiq.com/" target="_blank">Balsamiq</a></li>
+        <li><a href="https://wireframe.cc/" target="_blank">WireFrame.cc</a></li>
+        <li><a href="https://mockflow.com/" target="_blank">MockFlow</a></li>
+    </ul>
+</section>
+    
+                <section>
+    <h1>Run your app</h1>
+    <h2><code>
+        ng serve --open
+    </code></h2>
+    <h3>This will start your server and open the web browser.</h3>
 </section>
 <section>
-    <h1>Accepting info into a component.</h1>
-<pre><code class="ts">
-import { Component, Input } from '@angular/core';
+    <h2>Change some HTML in app.component.html and save.</h2>
+    <h3 class="fragment">Verify the page updates</h3>
 
-@Component({
-  selector: 'app-my-new-comp',
-  templateUrl: './my-new-comp.component.html',
-  styleUrls: ['./my-new-comp.component.css']
-})
-export class MyNewCompComponent implements OnInit {
-  @Input() title: string;
-  @Input() body: string;
-  constructor() { }
-
-}
-</code></pre>
 </section>
-
-
-
            </div>
 
         </div>
