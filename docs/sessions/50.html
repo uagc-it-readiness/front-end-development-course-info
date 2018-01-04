@@ -35,252 +35,277 @@
     <body>
         <div class="reveal">
             <div class="slides">
-               ﻿<style>
-    .reveal .equip img {
-        max-height: 200px;
-        max-width: 200px;
-        display: block;
-        margin: 15px auto;
-    }
+                <section class="review">
+                    <h1>1/4/2018</h1>
+                    <div class="two-col">
 
-    .equip a {
-        display: block;
-        text-align: center;
-    }
-</style>
-<section class="equip">
-    <h2>Monitors</h2>
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                <li>Creating a project</li>
+                                <li>Wireframes</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>New</h2>
+                            <ul>
+                                <li>Creating a component</li>
+                                <li>Creating an Interface</li>
+                                <li>Live Coding</li>
+                           </ul>
+                       </div>
+                    </div>
+                    <div><a href="https://github.com/WorthyD/taco-truck">Source</a></div>
+                </section>
+                <section>
+    <h1>Let's start building that app.</h1>
+    <h2>Open your terminal</h2>
+</section>
+<section>
+    <h2>CD into a non-git directory to start your work.</h2>
+</section>
+<section>
+    <h1>Create your app</h1>
+    <h5>
+        <code>ng new [name] --routing --style=scss --dry-run</code>
+    </h5>
+    <h3>Replace [name] with what you want to name your app.</h3>
+    <ul>
+        <li class="fragment">Examples:</li>
+        <li class="fragment">
+            <code>ng new taco-truck --routing --style=scss --dry-run</code>
+        </li>
+        <li class="fragment">
+            <code>ng new blockbuster-reopening --routing --style=scss --dry-run</code>
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>Verify your app is properly scaffolded in the dry run.</h1>
+    <ul>
+        <li>Do you see</li>
+        <li>
+            <code>/src/app.component.scss</code>
+        </li>
+        <li>
+            <code>/src/app-routing-module.ts</code>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>Run the code without the
+        <code>--dry-run</code>
+    </h2>
+    <h3>You can press up on your arrow pad and just delete it.</h3>
+</section>
+<section>
+    <h2>Lets talk about something else while that runs</h2>
+</section>
+                <section>
+    <h1>Wireframing</h1>
+    <p>
+        Wireframing is the process of visually laying out a website in preparation for design or development.
+    </p>
+</section>
+<section>
+    <h1>Benefits</h1>
+    <ul>
+        <li class="fragment">Plan your layout before you build</li>
+        <li class="fragment">Can build a clickable experience</li>
+    </ul>
+</section>
+<section>
+    <h1>Basic Examples</h1>
+    <img src="../images/wire/1.png" alt="">
+</section>
+<section>
+    <h1>Clickable Example</h1>
+    <h2><a href="https://wireframepro.mockflow.com/view/whatsapp" target="_blank">WhatsApp</a></h2>
+</section>
+<section>
+    <h1>Tools</h1>
+    <ul>
+        <li><a href="https://balsamiq.com/" target="_blank">Balsamiq</a></li>
+        <li><a href="https://wireframe.cc/" target="_blank">WireFrame.cc</a></li>
+        <li><a href="https://mockflow.com/" target="_blank">MockFlow</a></li>
+    </ul>
+</section>
+    
+                <section>
+    <h1>Run your app</h1>
+    <h2><code>
+        ng serve --open
+    </code></h2>
+    <h3>This will start your server and open the web browser.</h3>
+</section>
+<section>
+    <h2>Change some HTML in app.component.html and save.</h2>
+    <h3 class="fragment">Verify the page updates</h3>
+
+</section>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+                <section>
+    <h1>Generating Your First Component</h1>
+    <!--
+        Generate Component
+        Create a code behind
+        Create an interface
+        Loop through some items
+    -->
+</section>
+<section>
+    <h1>Steps</h1>
+    <ul>
+        <li class="fragment">Open a terminal window</li>
+        <li class="fragment">CD into your project directory</li>
+        <li class="fragment">
+            <code>ng generate component taco-menu</code>
+        </li>
+        <li class="fragment">or</li>
+        <li class="fragment">
+            <code>ng g c taco-menu</code>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>All new components will have "something works" as it's default html</h2>
+    <h3>Insert the new component into the app.component.html file.</h3>
+    <pre><code class="xml">
+    <app-taco-menu></app-taco-menu>
+    </code></pre>
+</section>
+<section>
+    <h1>Interface generation</h1>
+    <h2>Think about the properties you want in your main object.</h2>
+</section>
+<section>
+    <h1>Example</h1>
     <div class="two-col">
-        <div class="fragment">
-            <h3>High End</h3>
-            <img src="../images/equip/1.PNG" />
-            <h4>BenQ 32" 4K</h4>
-            <h5>$800</h5>
-            <a href="https://www.amazon.com/BenQ-PD3200U-Designer-3840x2160-DualView/dp/B01MY142C0/" target="_blank">Amazon</a>
+        <div>
+            <h3>Menu Item - Simple</h3>
+            <ul>
+                <li>Name : string</li>
+                <li>Description : string</li>
+                <li>Category : string</li>
+                <li>Price : number</li>
+                <li>IsFeatured: boolean</li>
+
+            </ul>
         </div>
         <div class="fragment">
-            <h3>Budget</h3>
-            <img src="../images/equip/2.PNG" />
-            <h4>Asus 21.5 1080</h4>
-            <h5>$100 x 3 = $300</h5>
-            <a href="https://www.amazon.com/dp/B005BZNDOO/" target="_blank">Amazon</a>
+            <h3>Menu Item - Complex</h3>
+            <ul>
+                <li>Name : string</li>
+                <li>Description : string</li>
+                <li>Category : string</li>
+                <li>Price: number</li>
+                <li>IsFeatured: boolean</li>
+                <li>Allergens : Array of strings</li>
+                <li>Calories: number</li>
+                <li>
+                    Tags: Array of Tag
+                    <ul>
+                        <li>Tag Id</li>
+                        <li>Tag Name</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
+
     </div>
 </section>
-<section class="equip">
-    <h2>USB Doc</h2>
-    <div class="two-col">
-        <div class="fragment">
-            <h3>High End</h3>
-            <img src="../images/equip/20.PNG" />
-            <h4>USB 3.0 Universal Dock</h4>
-            <h5>$100</h5>
-            <a href="https://www.amazon.com/Plugable-Universal-Docking-Station-Ethernet/dp/B00ECDM78E" target="_blank">Amazon</a>
-        </div>
-        <div class="fragment">
-            <h3>Budget</h3>
-            <img src="../images/equip/19.PNG" />
-            <h4>Plugable USB 2.0 to VGA / DVI / HDMI Video Graphics Adapter</h4>
-            <h5>$35</h5>
-            <a href="https://www.amazon.com/Plugable-Graphics-Multiple-1920x1080-Chromebook/dp/B004AIJE9G" target="_blank">Amazon</a>
-        </div>
-    </div>
+<section>
+    <!-- generate interface -->
+    <h1>Generate that interface!</h1>
+    <h3>
+        <code>ng g i shared/interfaces/menu-item</code>
+    </h3>
 </section>
-<section class="equip">
-    <h2>Desks</h2>
-    <div class="two-col">
-        <div class="fragment">
-            <h3></h3>
-            <h4></h4>
-            <h5></h5>
-            <a href="" target="_blank">Amazon</a>
-        </div>
-        <div class="fragment">
-            <h3></h3>
-            <h4></h4>
-            <h5></h5>
-            <a href="" target="_blank">Amazon</a>
-        </div>
-    </div>
+<section>
+    <h1>Build Interface</h1>
+    <pre><code class="ts">
+export interface MenuItem {
+    name: string;
+    description: string;
+    category: string;
+    price: number;
+    isFeatured: boolean;
+}
+    </code></pre>
 </section>
-<section class="equip">
-    <h2>Chairs</h2>
-    <div class="two-col">
-        <div class="fragment">
-            <h3>High End</h3>
-            <img src="../images/equip/3.PNG" />
-            <h4>HermanMiller Aeron</h4>
-            <h5>$800</h5>
-            <a href="http://store.hermanmiller.com/office/office-chairs/aeron-chair/2195348.html" target="_blank">Herman Miller</a>
-        </div>
-        <div class="fragment">
-
-            <h3>Budget</h3>
-            <img src="../images/equip/4.PNG" />
-            <h4>WorkPro 9000 plus caster upgrades</h4>
-            <h5>$300</h5>
-            <a href="https://www.amazon.com/dp/B007OZX9DO/" target="_blank">Amazon</a>
-            <a href="https://www.amazon.com/SunnieDog-Office-3-Inch-Rollerblade-Replacement/dp/B01CGZPOK2/" target="_blank">Amazon</a>
-        </div>
-    </div>
-
+<section>
+    <h2>Go to your component, import the module and create a variable for it. </h2>
+    <pre><code class="js">
+    import { MenuItem } from '../shared/interfaces/menu-item';
+    </code></pre>
 </section>
-<section class="equip">
-    <h2>Chairs pt 2 </h2>
-    <div class="fragment">
-        <h3>Super High End</h3>
-        <img src="../images/equip/5.PNG" />
-        <h4>Humanscale Freedom Headrest</h4>
-        <h5>$1400</h5>
-        <a href="https://www.humanscale.com/products/product.cfm?group=FreedomTaskChairWithHeadrest" target="_blank">Humanscale</a>
-    </div>
+<section>
+    <h2>Menu Item</h2>
+    <pre><code class="ts">
+export class TacoMenuComponent implements OnInit {
 
+    menuItem: MenuItem = {
+        name: 'Taco',
+        description: 'Just a taco',
+        category: 'Tacos',
+        price: 1.5,
+        isFeatured: false
+    };
+    
+    constructor() { }
+    ngOnInit() { }
+    
+}
+</code></pre>
 </section>
-<section class="equip">
-    <h2>Standing desk </h2>
-    <h5>You may want to look into a standing mat</h5>
-    <div class="two-col">
-        <div class="fragment">
-            <h3>High End</h3>
-            <img src="../images/equip/6.PNG" />
-            <h4>Varidesk</h4>
-            <h5>$400</h5>
-            <a href="https://www.amazon.com/VARIDESK-Height-Adjustable-Standing-Desk-Black/dp/B00JI6NCCK" target="_blank">Amazon</a>
-        </div>
-        <div class="fragment">
-            <h3>Budget</h3>
-            <img src="../images/equip/7.PNG" />
-            <h4>Vivo</h4>
-            <h5>$180</h5>
-            <a href="https://www.amazon.com/VIVO-Adjustable-Converter-Workstation-DESK-V000B/dp/B01MDKROXW/" target="_blank">Amazon</a>
-        </div>
-    </div>
+<section>
+    <h1>Display the menu item</h1>
+    <pre><code class="xml">
+<h3>Menu Item</h3>
+<div class="menu-item">
+    <h3>{{menuItem.name}}</h3>
+    <p>{{menuItem.description}}</p>
+</div>
+    </code></pre>
 </section>
-<section class="equip">
-    <div class="fragment">
-        <h3>Very High End</h3>
-        <img src="../images/equip/8.PNG" />
-        <h4>Humanscale QuickStand</h4>
-        <h5>$850</h5>
-        <a href="https://www.humanscale.com/products/product.cfm?group=quickstand" target="_blank">Amazon</a>
-    </div>
-
+<section>
+    <h1>Create a list of Items</h1>
+    <h2>We will loop through them</h2>
+    <pre><code class="ts">
+    menuItems: Array<MenuItem> = [];
+    </code></pre>
+    <!-- build list of items -->
 </section>
-<section class="equip">
-    <h2>Keyboard</h2>
-    <div class="two-col">
-        <div class="fragment">
-            <h3>High End</h3>
-            <img src="../images/equip/9.PNG" />
-            <h4>Das Keyboard</h4>
-            <h5>$170</h5>
-            <a href="https://www.amazon.com/Das-Keyboard-Professional-Mechanical-DASK4MKPROSIL/dp/B00JG01QTY/" target="_blank">Amazon</a>
-        </div>
-        <div class="fragment">
-            <h3>Budget</h3>
-            <img src="../images/equip/10.PNG" />
-            <h4>Reddragon Keyboard</h4>
-            <h5>$40</h5>
-            <a href="https://www.amazon.com/dp/B01LXD7STC/" target="_blank">Amazon</a>
-        </div>
-    </div>
+<section>
+    <h1>Add Items to the array</h1>
+    <p>
+        I'm going to just add our menuItem multiple times.
+    </p>
+    <pre><code class="ts">
+ngOnInit() {
+    this.menuItems.push(this.menuItem);
+    this.menuItems.push(this.menuItem);
+    this.menuItems.push(this.menuItem);
+}
 
+       </code></pre>
 </section>
-<section class="equip">
-    <h2>Mice</h2>
-    <div class="two-col">
-        <div class="fragment">
-            <h3>High End</h3>
-            <img src="../images/equip/11.PNG" />
-            <h4>Logitech Wireless Mouse</h4>
-            <h5>$100</h5>
-            <a href="https://www.amazon.com/dp/B0714D71SB/" target="_blank">Amazon</a>
-        </div>
-        <div class="fragment">
-            <h3>Budget</h3>
-            <img src="../images/equip/12.PNG" />
-            <h4>Sharkk Ergonomic Mouse</h4>
-            <h5>$20</h5>
-            <a href="https://www.amazon.com/dp/B016MXPQMA/" target="_blank">Amazon</a>
-        </div>
-    </div>
+<section>
+    <h1>Loop and display them with an *ngFor</h1>
+    <!-- Display Items via loop -->
+    <pre><code class="xml">
+<div *ngFor="let item of menuItems">
+    <h3>{{item.name}}</h3>
+    <p>{{item.description}}</p>
+</div>
+    </code></pre>
 </section>
-<section class="equip">
-    <h2>Head Set</h2>
-
-    <div class="two-col">
-        <div class="fragment">
-            <h3>High End</h3>
-            <img src="../images/equip/13.PNG" />
-            <h4>SteelSeries Arctis</h4>
-            <h5>$150</h5>
-            <a href="https://www.amazon.com/SteelSeries-Lag-Free-Wireless-Headset-Headphone/dp/B01LYNEIEI/" target="_blank">Amazon</a>
-        </div>
-        <div class="fragment">
-            <h3>Budget</h3>
-            <img src="../images/equip/14.PNG" />
-            <h4>Logitech Headset</h4>
-            <h5>$40</h5>
-            <a href="https://www.amazon.com/Logitech-981-000541-Stereo-Gaming-Headset/dp/B00BFOEY4I/" target="_blank">Amazon</a>
-        </div>
-    </div>
-</section>
-<section class="equip">
-    <h2>Earbuds</h2>
-    <div class="fragment">
-        <h3>Any Will Do</h3>
-        <h4>But look into these replacement tips</h4>
-        <a href="https://www.amazon.com/dp/B004HKIAB0/" target="_blank">Amazon</a>
-    </div>
-</section>
-
-
-<section class="equip">
-    <h2>Webcam</h2>
-
-
-    <div class="two-col">
-        <div class="fragment">
-            <h3>High End</h3>
-            <img src="../images/equip/15.PNG" />
-            <h4>Logitech 1080p Pro Stream Webcam</h4>
-            <h5>$100</h5>
-            <a href="https://www.amazon.com/Logitech-Widescreen-Calling-Recording-Desktop/dp/B07661NX9M/" target="_blank">Amazon</a>
-        </div>
-        <div class="fragment">
-            <h3>Budget</h3>
-            <img src="../images/equip/16.PNG" />
-            <h4>Logitech HD Laptop Webcam</h4>
-            <h5>$35</h5>
-            <a href="https://www.amazon.com/Logitech-Laptop-Webcam-Design-360-Degree/dp/B004YW7WCY/" target="_blank">Amazon</a>
-        </div>
-    </div>
-
-</section>
-<section class="equip">
-    <h2>Microphone</h2>
-    <div class="two-col">
-        <div class="fragment">
-            <h3>High End</h3>
-            <img src="../images/equip/17.PNG" />
-            <h4>Blue Yeti</h4>
-            <h5>$120</h5>
-            <a href="https://www.amazon.com/Blue-Yeti-USB-Microphone-Blackout/dp/B00N1YPXW2/" target="_blank">Amazon</a>
-        </div>
-        <div class="fragment">
-            <h3>Budget</h3>
-            <img src="../images/equip/18.PNG" />
-            <h4>Blue Snowball</h4>
-            <h5>$50</h5>
-            <a href="https://www.amazon.com/Blue-Snowball-iCE-Condenser-Microphone/dp/B014PYGTUQ/" target="_blank">Amazon</a>
-        </div>
-    </div>
-
-
-</section>
-<section class="equip">
-<h2>Totals</h2>
-            <img src="../images/equip/overview.PNG" style="max-height:inherit; max-width:inherit;" />
+<section>
+    <h1>Time Pending</h1>
+    <h2>Add Bootstrap</h2>
+    <h2>Add Images to menu</h2>
 </section>
           </div>
 
