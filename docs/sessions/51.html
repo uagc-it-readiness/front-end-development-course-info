@@ -1,0 +1,368 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>1/4/2018</h1>
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                <li>Creating a component</li>
+                                <li>Creating an Interface</li>
+                                <li>Live Coding</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>New</h2>
+                            <ul>
+                                <li>Services</li>
+                                <li>Routing</li>
+                          </ul>
+                       </div>
+                    </div>
+                    <div><a href="https://github.com/WorthyD/taco-truck">Source</a></div>
+                </section>
+               <section>
+    <h1>Generating Your First Component</h1>
+    <!--
+        Generate Component
+        Create a code behind
+        Create an interface
+        Loop through some items
+    -->
+</section>
+<section>
+    <h1>Steps</h1>
+    <ul>
+        <li class="fragment">Open a terminal window</li>
+        <li class="fragment">CD into your project directory</li>
+        <li class="fragment">
+            <code>ng generate component taco-menu</code>
+        </li>
+        <li class="fragment">or</li>
+        <li class="fragment">
+            <code>ng g c taco-menu</code>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>All new components will have "something works" as it's default html</h2>
+    <h3>Insert the new component into the app.component.html file.</h3>
+    <pre><code class="xml">
+    <app-taco-menu></app-taco-menu>
+    </code></pre>
+</section>
+<section>
+    <h1>Interface generation</h1>
+    <h2>Think about the properties you want in your main object.</h2>
+</section>
+<section>
+    <h1>Example</h1>
+    <div class="two-col">
+        <div>
+            <h3>Menu Item - Simple</h3>
+            <ul>
+                <li>Name : string</li>
+                <li>Description : string</li>
+                <li>Category : string</li>
+                <li>Price : number</li>
+                <li>IsFeatured: boolean</li>
+
+            </ul>
+        </div>
+        <div class="fragment">
+            <h3>Menu Item - Complex</h3>
+            <ul>
+                <li>Name : string</li>
+                <li>Description : string</li>
+                <li>Category : string</li>
+                <li>Price: number</li>
+                <li>IsFeatured: boolean</li>
+                <li>Allergens : Array of strings</li>
+                <li>Calories: number</li>
+                <li>
+                    Tags: Array of Tag
+                    <ul>
+                        <li>Tag Id</li>
+                        <li>Tag Name</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<section>
+    <!-- generate interface -->
+    <h1>Generate that interface!</h1>
+    <h3>
+        <code>ng g i shared/interfaces/menu-item</code>
+    </h3>
+</section>
+<section>
+    <h1>Build Interface</h1>
+    <pre><code class="ts">
+export interface MenuItem {
+    name: string;
+    description: string;
+    category: string;
+    price: number;
+    isFeatured: boolean;
+}
+    </code></pre>
+</section>
+<section>
+    <h2>Go to your component, import the module and create a variable for it. </h2>
+    <pre><code class="js">
+    import { MenuItem } from '../shared/interfaces/menu-item';
+    </code></pre>
+</section>
+<section>
+    <h2>Menu Item</h2>
+    <pre><code class="ts">
+export class TacoMenuComponent implements OnInit {
+
+    menuItem: MenuItem = {
+        name: 'Taco',
+        description: 'Just a taco',
+        category: 'Tacos',
+        price: 1.5,
+        isFeatured: false
+    };
+    
+    constructor() { }
+    ngOnInit() { }
+    
+}
+</code></pre>
+</section>
+<section>
+    <h1>Display the menu item</h1>
+    <pre><code class="xml">
+<h3>Menu Item</h3>
+<div class="menu-item">
+    <h3>{{menuItem.name}}</h3>
+    <p>{{menuItem.description}}</p>
+</div>
+    </code></pre>
+</section>
+<section>
+    <h1>Create a list of Items</h1>
+    <h2>We will loop through them</h2>
+    <pre><code class="ts">
+    menuItems: Array<MenuItem> = [];
+    </code></pre>
+    <!-- build list of items -->
+</section>
+<section>
+    <h1>Add Items to the array</h1>
+    <p>
+        I'm going to just add our menuItem multiple times.
+    </p>
+    <pre><code class="ts">
+ngOnInit() {
+    this.menuItems.push(this.menuItem);
+    this.menuItems.push(this.menuItem);
+    this.menuItems.push(this.menuItem);
+}
+
+       </code></pre>
+</section>
+<section>
+    <h1>Loop and display them with an *ngFor</h1>
+    <!-- Display Items via loop -->
+    <pre><code class="xml">
+<div *ngFor="let item of menuItems">
+    <h3>{{item.name}}</h3>
+    <p>{{item.description}}</p>
+</div>
+    </code></pre>
+</section>
+<section>
+    <h1>Time Pending</h1>
+    <h2>Add Bootstrap</h2>
+    <h2>Add Images to menu</h2>
+</section>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+               <section>
+    <h2>We can move some logic into a new file.  In Angular, these are called services.</h2>
+    <h3>Services encourage reusable code.</h3>
+</section>
+<section>
+    <h2>Let's make a service to retrieve our menu items</h2>
+    <p>
+        <code>ng g s shared/services/menu-items</code>
+    </p>
+</section>
+<section>
+    <h2>Code out your service.</h2>
+    <p>
+        We're going to need to include some extra imports to get this working properly.
+    </p>
+</section>
+<section>
+    <h2>Including Angular HTTP</h2>
+    <ul>
+        <li class="fragment">Include HTTP inside the main module</li>
+        <li class="fragment">Import Http, Response, and toPromise</li>
+        <li class="fragment">Inject it to the constructor</li>
+    </ul>
+</section>
+<section>
+    <h2>Building out an async request.</h2>
+    <p>We've done this before in jQuery before, but Angular will handle it differently.</p>
+</section>
+<section>
+    <h2>Routing</h2>
+    <p>
+        Routing allows us to navigate between pages easily.  
+    </p>
+</section>
+<section>
+    <h2>Writing out your routes.</h2>
+    <p>
+        These are done inside the app-routing.module.ts
+    </p>
+    <pre><code class="ts">
+const routes: Routes = [
+    { path: '', redirectTo: '/menu', pathMatch: 'full' },
+    { path: 'menu', component: TacoMenuComponent },
+    { path: 'detail/:id', component: MenuDetailComponent }
+];
+    </code></pre>
+</section>
+<section>
+    <h2>Linking in html</h2>
+    <pre><code class="xml">
+    <a routerLink="/">Home</a>
+    </code></pre>
+</section>
+<section>
+    <h2>Linking in JS</h2>
+    <pre><code class="ts">
+constructor(private menuService: MenuItemsService, private router: Router) { }
+   </code></pre>
+    <pre><code class="ts">
+    const link = ['/detail', menuItem.id];
+    this.router.navigate(link);
+    </code></pre>
+</section>
+<section>
+    <h1>Leveraging Route Parameters</h1>
+    <p>
+        We can use route parameters to create unique looking pages.  Remember seeing the route for 
+    </p>
+    <pre><code class="ts">
+        { path: 'detail/:id', component: MenuDetailComponent }
+    </code></pre>
+    <p>
+        The <code>:id</code> represents a dynamic routing parameter.
+    </p>
+</section>
+<section>
+    <h1>Retrieving a routing parameter</h1>
+    <pre><code class="xml">
+ngOnInit() {
+    this.route.params.forEach((params: Params) => {
+        if (params['id'] !== undefined) {
+            const id = +params['id'];
+        }
+    });
+}
+    </code></pre>
+</section>
+          </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>
