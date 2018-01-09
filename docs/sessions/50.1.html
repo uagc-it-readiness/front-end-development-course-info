@@ -42,24 +42,110 @@
                         <div>
                             <h2>Review</h2>
                             <ul>
-                                <li>Creating a component</li>
-                                <li>Creating an Interface</li>
-                                <li>Live Coding</li>
+                                <li>Creating a project</li>
+                                <li>Wireframes</li>
                             </ul>
                         </div>
                         <div>
                             <h2>New</h2>
                             <ul>
-                                <li>Services</li>
-                                <li>Routing</li>
-                            </ul>
-                        </div>
+                                <li>Creating a component</li>
+                                <li>Creating an Interface</li>
+                                <li>Live Coding</li>
+                           </ul>
+                       </div>
                     </div>
-                    <div>
-                        <a href="https://github.com/WorthyD/taco-truck">Source</a>
-                    </div>
+                    <div><a href="https://github.com/WorthyD/taco-truck">Source</a></div>
                 </section>
+                <section>
+    <h1>Let's start building that app.</h1>
+    <h2>Open your terminal</h2>
+</section>
+<section>
+    <h2>CD into a non-git directory to start your work.</h2>
+</section>
+<section>
+    <h1>Create your app</h1>
+    <h5>
+        <code>ng new [name] --routing --style=scss --dry-run</code>
+    </h5>
+    <h3>Replace [name] with what you want to name your app.</h3>
+    <ul>
+        <li class="fragment">Examples:</li>
+        <li class="fragment">
+            <code>ng new taco-truck --routing --style=scss --dry-run</code>
+        </li>
+        <li class="fragment">
+            <code>ng new blockbuster-reopening --routing --style=scss --dry-run</code>
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>Verify your app is properly scaffolded in the dry run.</h1>
+    <ul>
+        <li>Do you see</li>
+        <li>
+            <code>/src/app.component.scss</code>
+        </li>
+        <li>
+            <code>/src/app-routing-module.ts</code>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>Run the code without the
+        <code>--dry-run</code>
+    </h2>
+    <h3>You can press up on your arrow pad and just delete it.</h3>
+</section>
+<section>
+    <h2>Lets talk about something else while that runs</h2>
+</section>
+                <section>
+    <h1>Wireframing</h1>
+    <p>
+        Wireframing is the process of visually laying out a website in preparation for design or development.
+    </p>
+</section>
+<section>
+    <h1>Benefits</h1>
+    <ul>
+        <li class="fragment">Plan your layout before you build</li>
+        <li class="fragment">Can build a clickable experience</li>
+    </ul>
+</section>
+<section>
+    <h1>Basic Examples</h1>
+    <img src="../images/wire/1.png" alt="">
+</section>
+<section>
+    <h1>Clickable Example</h1>
+    <h2><a href="https://wireframepro.mockflow.com/view/whatsapp" target="_blank">WhatsApp</a></h2>
+</section>
+<section>
+    <h1>Tools</h1>
+    <ul>
+        <li><a href="https://balsamiq.com/" target="_blank">Balsamiq</a></li>
+        <li><a href="https://wireframe.cc/" target="_blank">WireFrame.cc</a></li>
+        <li><a href="https://mockflow.com/" target="_blank">MockFlow</a></li>
+    </ul>
+</section>
+    
+                <section>
+    <h1>Run your app</h1>
+    <h2><code>
+        ng serve --open
+    </code></h2>
+    <h3>This will start your server and open the web browser.</h3>
+</section>
+<section>
+    <h2>Change some HTML in app.component.html and save.</h2>
+    <h3 class="fragment">Verify the page updates</h3>
 
+</section>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
                 <section>
     <h1>Generating Your First Component</h1>
     <!--
@@ -221,98 +307,7 @@ ngOnInit() {
     <h2>Add Bootstrap</h2>
     <h2>Add Images to menu</h2>
 </section>
-                <section>
-                    <h2>Questions?</h2>
-                </section>
-
-                <section>
-    <h2>We can move some logic into a new file.  In Angular, these are called services.</h2>
-    <h3>Services encourage reusable code.</h3>
-</section>
-<section>
-    <h2>Let's make a service to retrieve our menu items</h2>
-    <p>
-        <code>ng g s shared/services/menu-items</code>
-    </p>
-</section>
-<section>
-    <h2>Code out your service.</h2>
-    <p>
-        We're going to need to include some extra imports to get this working properly.
-    </p>
-</section>
-<section>
-    <h2>Including Angular HTTP</h2>
-    <ul>
-        <li class="fragment">Include HTTP inside the main module</li>
-        <li class="fragment">Import Http, Response, and toPromise</li>
-        <li class="fragment">Inject it to the constructor</li>
-    </ul>
-</section>
-<section>
-    <h2>Building out an async request.</h2>
-    <p>We've done this before in jQuery before, but Angular will handle it differently.</p>
-</section>
-<section>
-    <h2>Routing</h2>
-    <p>
-        Routing allows us to navigate between pages easily.  
-    </p>
-</section>
-<section>
-    <h2>Writing out your routes.</h2>
-    <p>
-        These are done inside the app-routing.module.ts
-    </p>
-    <pre><code class="ts">
-const routes: Routes = [
-    { path: '', redirectTo: '/menu', pathMatch: 'full' },
-    { path: 'menu', component: TacoMenuComponent },
-    { path: 'detail/:id', component: MenuDetailComponent }
-];
-    </code></pre>
-</section>
-<section>
-    <h2>Linking in html</h2>
-    <pre><code class="xml">
-    <a routerLink="/">Home</a>
-    </code></pre>
-</section>
-<section>
-    <h2>Linking in JS</h2>
-    <pre><code class="ts">
-constructor(private menuService: MenuItemsService, private router: Router) { }
-   </code></pre>
-    <pre><code class="ts">
-    const link = ['/detail', menuItem.id];
-    this.router.navigate(link);
-    </code></pre>
-</section>
-<section>
-    <h1>Leveraging Route Parameters</h1>
-    <p>
-        We can use route parameters to create unique looking pages.  Remember seeing the route for 
-    </p>
-    <pre><code class="ts">
-        { path: 'detail/:id', component: MenuDetailComponent }
-    </code></pre>
-    <p>
-        The <code>:id</code> represents a dynamic routing parameter.
-    </p>
-</section>
-<section>
-    <h1>Retrieving a routing parameter</h1>
-    <pre><code class="xml">
-ngOnInit() {
-    this.route.params.forEach((params: Params) => {
-        if (params['id'] !== undefined) {
-            const id = +params['id'];
-        }
-    });
-}
-    </code></pre>
-</section>
-            </div>
+          </div>
 
         </div>
 

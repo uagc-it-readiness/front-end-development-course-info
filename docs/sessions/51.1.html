@@ -1,0 +1,491 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>1/4/2018</h1>
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                <li>Creating a component</li>
+                                <li>Creating an Interface</li>
+                                <li>Live Coding</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>New</h2>
+                            <ul>
+                                <li>Services</li>
+                                <li>Routing</li>
+                          </ul>
+                       </div>
+                    </div>
+                    <div><a href="https://github.com/WorthyD/taco-truck">Source</a></div>
+                </section>
+               <section>
+    <h2>We can move some logic into a new file.  In Angular, these are called services.</h2>
+    <h3>Services encourage reusable code.</h3>
+</section>
+<section>
+    <h2>Let's make a service to retrieve our menu items</h2>
+    <p>
+        <code>ng g s shared/services/menu-items</code>
+    </p>
+</section>
+<section>
+    <h2>Code out your service.</h2>
+    <p>
+        We're going to need to include some extra imports to get this working properly.
+    </p>
+</section>
+<section>
+    <h2>Including Angular HTTP</h2>
+    <ul>
+        <li class="fragment">Include HTTP inside the main module</li>
+        <li class="fragment">Import Http, Response, and toPromise</li>
+        <li class="fragment">Inject it to the constructor</li>
+    </ul>
+</section>
+<section>
+    <h2>Building out an async request.</h2>
+    <p>We've done this before in jQuery before, but Angular will handle it differently.</p>
+</section>
+<section>
+    <h2>Routing</h2>
+    <p>
+        Routing allows us to navigate between pages easily.  
+    </p>
+</section>
+<section>
+    <h2>Writing out your routes.</h2>
+    <p>
+        These are done inside the app-routing.module.ts
+    </p>
+    <pre><code class="ts">
+const routes: Routes = [
+    { path: '', redirectTo: '/menu', pathMatch: 'full' },
+    { path: 'menu', component: TacoMenuComponent },
+    { path: 'detail/:id', component: MenuDetailComponent }
+];
+    </code></pre>
+</section>
+<section>
+    <h2>Linking in html</h2>
+    <pre><code class="xml">
+    <a routerLink="/">Home</a>
+    </code></pre>
+</section>
+<section>
+    <h2>Linking in JS</h2>
+    <pre><code class="ts">
+constructor(private menuService: MenuItemsService, private router: Router) { }
+   </code></pre>
+    <pre><code class="ts">
+    const link = ['/detail', menuItem.id];
+    this.router.navigate(link);
+    </code></pre>
+</section>
+<section>
+    <h1>Leveraging Route Parameters</h1>
+    <p>
+        We can use route parameters to create unique looking pages.  Remember seeing the route for 
+    </p>
+    <pre><code class="ts">
+        { path: 'detail/:id', component: MenuDetailComponent }
+    </code></pre>
+    <p>
+        The <code>:id</code> represents a dynamic routing parameter.
+    </p>
+</section>
+<section>
+    <h1>Retrieving a routing parameter</h1>
+    <pre><code class="xml">
+ngOnInit() {
+    this.route.params.forEach((params: Params) => {
+        if (params['id'] !== undefined) {
+            const id = +params['id'];
+        }
+    });
+}
+    </code></pre>
+</section>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+
+               ﻿<style>
+    .reveal .equip img {
+        max-height: 200px;
+        max-width: 200px;
+        display: block;
+        margin: 15px auto;
+    }
+
+    .equip a {
+        display: block;
+        text-align: center;
+    }
+</style>
+<section class="equip">
+    <h2>Monitors</h2>
+    <div class="two-col">
+        <div class="fragment">
+            <h3>High End</h3>
+            <img src="../images/equip/1.PNG" />
+            <h4>BenQ 32" 4K</h4>
+            <h5>$800</h5>
+            <a href="https://www.amazon.com/BenQ-PD3200U-Designer-3840x2160-DualView/dp/B01MY142C0/" target="_blank">Amazon</a>
+        </div>
+        <div class="fragment">
+            <h3>Budget</h3>
+            <img src="../images/equip/2.PNG" />
+            <h4>Asus 21.5 1080</h4>
+            <h5>$100 x 3 = $300</h5>
+            <a href="https://www.amazon.com/dp/B005BZNDOO/" target="_blank">Amazon</a>
+        </div>
+    </div>
+</section>
+<section class="equip">
+    <h2>USB Doc</h2>
+    <div class="two-col">
+        <div class="fragment">
+            <h3>High End</h3>
+            <img src="../images/equip/20.PNG" />
+            <h4>USB 3.0 Universal Dock</h4>
+            <h5>$100</h5>
+            <a href="https://www.amazon.com/Plugable-Universal-Docking-Station-Ethernet/dp/B00ECDM78E" target="_blank">Amazon</a>
+        </div>
+        <div class="fragment">
+            <h3>Budget</h3>
+            <img src="../images/equip/19.PNG" />
+            <h4>Plugable USB 2.0 to VGA / DVI / HDMI Video Graphics Adapter</h4>
+            <h5>$35</h5>
+            <a href="https://www.amazon.com/Plugable-Graphics-Multiple-1920x1080-Chromebook/dp/B004AIJE9G" target="_blank">Amazon</a>
+        </div>
+    </div>
+</section>
+<section class="equip">
+    <h2>Desks</h2>
+    <div class="two-col">
+        <div class="fragment">
+            <h3>Budget</h3>
+            <h4>Buy a flat door and two filing cabinets off Craigslist</h4>
+           <a href="https://www.homedepot.com/p/30-in-x-80-in-Unfinished-Flush-Hardwood-Interior-Door-Slab-5127/202036186" target="_blank">Amazon</a>
+        </div>
+        <div class="fragment">
+            <h3>High End</h3>
+            <h4>Uplift Desk</h4>
+            <h5>450+</h5>
+            <a href="https://www.upliftdesk.com/adjustable-height-desks/" target="_blank">Amazon</a>
+        </div>
+    </div>
+</section>
+<section class="equip">
+    <h2>Chairs</h2>
+    <div class="two-col">
+        <div class="fragment">
+            <h3>High End</h3>
+            <img src="../images/equip/3.PNG" />
+            <h4>HermanMiller Aeron</h4>
+            <h5>$800</h5>
+            <a href="http://store.hermanmiller.com/office/office-chairs/aeron-chair/2195348.html" target="_blank">Herman Miller</a>
+        </div>
+        <div class="fragment">
+
+            <h3>Budget</h3>
+            <img src="../images/equip/4.PNG" />
+            <h4>WorkPro 9000 plus caster upgrades</h4>
+            <h5>$300</h5>
+            <a href="https://www.amazon.com/dp/B007OZX9DO/" target="_blank">Amazon</a>
+            <a href="https://www.amazon.com/SunnieDog-Office-3-Inch-Rollerblade-Replacement/dp/B01CGZPOK2/" target="_blank">Amazon</a>
+        </div>
+    </div>
+
+</section>
+<section class="equip">
+    <h2>Chairs pt 2 </h2>
+    <div class="fragment">
+        <h3>Super High End</h3>
+        <img src="../images/equip/5.PNG" />
+        <h4>Humanscale Freedom Headrest</h4>
+        <h5>$1400</h5>
+        <a href="https://www.humanscale.com/products/product.cfm?group=FreedomTaskChairWithHeadrest" target="_blank">Humanscale</a>
+    </div>
+
+</section>
+<section class="equip">
+    <h2>Standing desk </h2>
+    <h5>You may want to look into a standing mat</h5>
+    <div class="two-col">
+        <div class="fragment">
+            <h3>High End</h3>
+            <img src="../images/equip/6.PNG" />
+            <h4>Varidesk</h4>
+            <h5>$400</h5>
+            <a href="https://www.amazon.com/VARIDESK-Height-Adjustable-Standing-Desk-Black/dp/B00JI6NCCK" target="_blank">Amazon</a>
+        </div>
+        <div class="fragment">
+            <h3>Budget</h3>
+            <img src="../images/equip/7.PNG" />
+            <h4>Vivo</h4>
+            <h5>$180</h5>
+            <a href="https://www.amazon.com/VIVO-Adjustable-Converter-Workstation-DESK-V000B/dp/B01MDKROXW/" target="_blank">Amazon</a>
+        </div>
+    </div>
+</section>
+<section class="equip">
+    <div class="fragment">
+        <h3>Very High End</h3>
+        <img src="../images/equip/8.PNG" />
+        <h4>Humanscale QuickStand</h4>
+        <h5>$850</h5>
+        <a href="https://www.humanscale.com/products/product.cfm?group=quickstand" target="_blank">Amazon</a>
+    </div>
+
+</section>
+<section class="equip">
+    <h2>Keyboard</h2>
+    <div class="two-col">
+        <div class="fragment">
+            <h3>High End</h3>
+            <img src="../images/equip/9.PNG" />
+            <h4>Das Keyboard</h4>
+            <h5>$170</h5>
+            <a href="https://www.amazon.com/Das-Keyboard-Professional-Mechanical-DASK4MKPROSIL/dp/B00JG01QTY/" target="_blank">Amazon</a>
+        </div>
+        <div class="fragment">
+            <h3>Budget</h3>
+            <img src="../images/equip/10.PNG" />
+            <h4>Reddragon Keyboard</h4>
+            <h5>$40</h5>
+            <a href="https://www.amazon.com/dp/B01LXD7STC/" target="_blank">Amazon</a>
+        </div>
+    </div>
+
+</section>
+<section class="equip">
+    <h2>Mice</h2>
+    <div class="two-col">
+        <div class="fragment">
+            <h3>High End</h3>
+            <img src="../images/equip/11.PNG" />
+            <h4>Logitech Wireless Mouse</h4>
+            <h5>$100</h5>
+            <a href="https://www.amazon.com/dp/B0714D71SB/" target="_blank">Amazon</a>
+        </div>
+        <div class="fragment">
+            <h3>Budget</h3>
+            <img src="../images/equip/12.PNG" />
+            <h4>Sharkk Ergonomic Mouse</h4>
+            <h5>$20</h5>
+            <a href="https://www.amazon.com/dp/B016MXPQMA/" target="_blank">Amazon</a>
+        </div>
+    </div>
+</section>
+<section class="equip">
+    <h2>Head Set</h2>
+
+    <div class="two-col">
+        <div class="fragment">
+            <h3>High End</h3>
+            <img src="../images/equip/13.PNG" />
+            <h4>SteelSeries Arctis</h4>
+            <h5>$150</h5>
+            <a href="https://www.amazon.com/SteelSeries-Lag-Free-Wireless-Headset-Headphone/dp/B01LYNEIEI/" target="_blank">Amazon</a>
+        </div>
+        <div class="fragment">
+            <h3>Budget</h3>
+            <img src="../images/equip/14.PNG" />
+            <h4>Logitech Headset</h4>
+            <h5>$40</h5>
+            <a href="https://www.amazon.com/Logitech-981-000541-Stereo-Gaming-Headset/dp/B00BFOEY4I/" target="_blank">Amazon</a>
+        </div>
+    </div>
+</section>
+<section class="equip">
+    <h2>Earbuds</h2>
+    <div class="fragment">
+        <h3>Any Will Do</h3>
+        <h4>But look into these replacement tips</h4>
+        <a href="https://www.amazon.com/dp/B004HKIAB0/" target="_blank">Amazon</a>
+    </div>
+</section>
+
+
+<section class="equip">
+    <h2>Webcam</h2>
+
+
+    <div class="two-col">
+        <div class="fragment">
+            <h3>High End</h3>
+            <img src="../images/equip/15.PNG" />
+            <h4>Logitech 1080p Pro Stream Webcam</h4>
+            <h5>$100</h5>
+            <a href="https://www.amazon.com/Logitech-Widescreen-Calling-Recording-Desktop/dp/B07661NX9M/" target="_blank">Amazon</a>
+        </div>
+        <div class="fragment">
+            <h3>Budget</h3>
+            <img src="../images/equip/16.PNG" />
+            <h4>Logitech HD Laptop Webcam</h4>
+            <h5>$35</h5>
+            <a href="https://www.amazon.com/Logitech-Laptop-Webcam-Design-360-Degree/dp/B004YW7WCY/" target="_blank">Amazon</a>
+        </div>
+    </div>
+
+</section>
+<section class="equip">
+    <h2>Microphone</h2>
+    <div class="two-col">
+        <div class="fragment">
+            <h3>High End</h3>
+            <img src="../images/equip/17.PNG" />
+            <h4>Blue Yeti</h4>
+            <h5>$120</h5>
+            <a href="https://www.amazon.com/Blue-Yeti-USB-Microphone-Blackout/dp/B00N1YPXW2/" target="_blank">Amazon</a>
+        </div>
+        <div class="fragment">
+            <h3>Budget</h3>
+            <img src="../images/equip/18.PNG" />
+            <h4>Blue Snowball</h4>
+            <h5>$50</h5>
+            <a href="https://www.amazon.com/Blue-Snowball-iCE-Condenser-Microphone/dp/B014PYGTUQ/" target="_blank">Amazon</a>
+        </div>
+    </div>
+
+
+</section>
+<section class="equip">
+<h2>Totals</h2>
+            <img src="../images/equip/overview.PNG" style="max-height:inherit; max-width:inherit;" />
+</section>
+               <section>
+    <h1>Form Inputs in Angular</h1>
+    <p>
+       Angular provides a robust set of features for forms. 
+    </p>
+</section>
+<section>
+    <h1>Add the Angular Form Module</h1>
+    <p>
+        Much like the Http module, we need to inject the Angular form module into the application.
+    </p>
+</section>
+<section>
+    <h1>Sort By Inputs</h1>
+    <p>
+        We are going to add a list of radio buttons to select what property we are going to sort by.
+    </p>
+<pre><code class="xml">
+<label>
+    <input type="radio" name="term" [(ngModel)]="term" [value]="'name'"> Name
+</label>
+<label>
+    <input type="radio" name="term" [(ngModel)]="term" [value]="'price'">Price
+</label>
+</code></pre>
+
+   <!-- Write Sort -->
+</section>
+<section>
+    <!-- Adding form module -->
+</section>
+<section>
+    <!-- Adding search filed -->
+</section>
+<section>
+    <!--  write search logic -->
+</section>
+          </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>
