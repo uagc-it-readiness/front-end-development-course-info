@@ -3,8 +3,8 @@
 ## [Session Decks](http://uagc-it-readiness.github.io/front-end-development-course-info/)
 
 # Instructor Contact Information
-- Daniel Worthy 
-  - Slack - [@WorthyD](https://ua-itreadiness.slack.com/team/worthyd)  
+- Jon Middaugh 
+  - Slack - [@Middaugh]  
 
 I'll do my best to get back with you within 24 hours.  I'd recommend posting questions to the Slack Front End room.
 
