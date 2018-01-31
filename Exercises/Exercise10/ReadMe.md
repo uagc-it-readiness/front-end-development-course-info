@@ -1,7 +1,7 @@
 # Exercise10 Javascript
 All parts of this assignment have corresponding sections inside of the html and javascript in this project.  All tasks in this assignment need to be done inside of the JavaScript panel.
 
-[Fork this Pen](https://codepen.io/WorthyD/pen/KvZEdy)
+[Fork this Pen](https://codepen.io/Middaugh/pen/gvpQPM)
 
 ## Part 1 - Variable Declaration
 Perform the following tasks
