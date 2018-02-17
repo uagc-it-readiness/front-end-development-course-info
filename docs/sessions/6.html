@@ -46,17 +46,7 @@
                         <li><a href="#/float">Floats</a></li>
                     </ul>
                 </section>
-                ﻿<section>
-    <h1>What is CSS?</h1>
-    <p>
-        CSS stands for <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heet. CSS allows you to modify
-        how your HTML is displayed without changing any HTML.
-    </p>
-    <p class="fragment">
-        These two sites have the exact same HTML, but very different CSS. <a href="http://www.csszengarden.com/217/" target="_blank">Site 1</a>        and <a href="http://www.csszengarden.com/221/" target="_blank">Site 2</a>
-    </p>
-
-</section>
+                
 <section>
     <h1>How do we add CSS to HTML?</h1>
     <p>
@@ -85,25 +75,8 @@
         
     </code></pre>
 </section>
-<section>
-    <h1>Syntax</h1>
-    <h2><span class="fragment">property</span><span class="fragment">:</span><span class="fragment">value</span><span class="fragment">;</span></h2>
-    <h2><span class="fragment">color</span><span class="fragment">:</span><span class="fragment">#000000</span><span class="fragment">;</span></h2>
-    <h2><span class="fragment">text-align</span><span class="fragment">:</span><span class="fragment">left</span></h2>
-    <h3 class="fragment">The last rule in a group of rules does not have end with a semi-colon.</h3>
-</section>
-<section>
-    <h1>What does it look like in use?</h1>
-    <pre class="fragment half-width"><code class="css">
-        a {
-            color: #aa0000;
-            font-size: 20px;
-            height: 25px;
-            margin: 20px;
-            padding: 20px;
-        }
-                        </code></pre>
-</section>
+
+
 <section>
     <h1>How doe we target elements with css?</h1>
 </section>
@@ -229,32 +202,11 @@
 
 </code></pre>
     <pre><code class="css">
-    h1 {color: blue;}
-    .site-header {color: red;}
+    h1.site-header {color: red;}
     #my-header {color: green;}
 
 </code></pre>
     <h3>What color will the h1 be?</h3>
-    <h3 class="fragment" style="color:green;">Green</h3>
-</section>
-<section>
-    <h1>Example of specificity.</h1>
-    <pre><code class="xml">
-<h1 class="site-header" id="my-header">Text goes here</h1>
-
-</code></pre>
-    <pre><code class="css">
-    h1 {color: blue;}
-    h1 {color: red !important}
-    .site-header {color: red;}
-    #my-header {color: green;}
-
-</code></pre>
-    <h3>What color will the h1 be?</h3>
-</section>
-
-<section>
-    <h1>We'll cover CSS specificity in greater detail later.</h1>
 </section>
 
 <section>
@@ -267,14 +219,6 @@
     </p>
     <ul>
         <li class="fragment">
-            <strong>Colors</strong> can be applied in several different ways
-            <ul>
-                <li class="fragment">a valid color name <strong>"black"</strong></li>
-                <li class="fragment">an RGB value <strong>"rgb(0,0,0)"</strong></li>
-                <li class="fragment">a HEX value <strong>"#000000"</strong></li>
-            </ul>
-        </li>
-        <li class="fragment">
             Number values frequently need a <strong>unit</strong> with it.
             <ul>
                 <li class="fragment"><strong>px</strong> - Pixel. The most common</li>
@@ -282,6 +226,8 @@
                 <li class="fragment"><strong>em</strong> - EM is a value relative to the font-size of the element</li>
             </ul>
         </li>
+	</ul>	
+	<a class="fragment" href="https://www.w3schools.com/cSS/tryresponsive_grid.htm">Responsive Web Design</a>
 </section>
 <section>
     <pre class="half-width">
@@ -293,8 +239,7 @@
     }
 </code>
 </pre>
-    </li>
-    </ul>
+    
     <aside class="notes">
         There are 140 standard color names available.
     </aside>
@@ -325,11 +270,6 @@
             </p>
         </li>
     </ul>
-</section>
-<section>
-    <h1></h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="OzeVbZ" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="ITR - CSS - Text" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/OzeVbZ/">ITR - CSS - Text</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1>Basic CSS specific to text characters</h1>
@@ -394,17 +334,7 @@
 
 
 </section>
-<section>
-    <h1>CSS Comments</h1>
-    <pre><code class="css">
-/*
-Everything in here is a comment
-*/
-    
-    
-    </code></pre>
-</section>
-                <section id="background-borders">
+<section id="background-borders">
     <h1>Backgrounds</h1>
     <p>
         Changes the background appearance of the element.
@@ -434,7 +364,7 @@ Everything in here is a comment
             these values.
             <ul>
                 <li class="fragment">left|right|center&nbsp;&nbsp;top|center|bottom</li>
-                <li class="fragment">1px 1px; - This would be 1px off the top and 1px off the left</li>
+                <li class="fragment">10px 20px; - This would be 10px off the left and 1px off the top</li>
                 <li class="fragment">x% y%</li>
             </ul>
         </li>
@@ -894,7 +824,11 @@ Everything in here is a comment
         <li class="fragment"><strong>inline</strong> - span, em, strong</li>
         <li class="fragment"><strong>block</strong> - div, p, h1-h6</li>
         <li class="fragment"><strong>none</strong> - hides the element</li>
-        <li class="fragment"><strong>inline-block</strong> - Renders block, but stays in a single line.</li>
+        <li class="fragment"><strong>inline-block</strong> - Renders block, but stays in a single line.
+			<ul>
+				<li class="fragment">Acts like inline but can have a set width and height.</li>
+			</ul>
+		</li>
     </ul>
     <p class="fragment">
         You can change any element to display any type.
