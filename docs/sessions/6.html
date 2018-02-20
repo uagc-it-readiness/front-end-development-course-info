@@ -62,153 +62,16 @@
     </p>
 
 </section>
-<section>
-    <h1>Adding CSS</h1>
-    <pre><code class="xml">
-    <div style="color:red"></div>
 
-    <style>
-        /* CSS rules*/
-    </style>
-
-    <link href="../styles/main.min.css" rel="stylesheet" />
-        
-    </code></pre>
-</section>
-
-
-<section>
-    <h1>How doe we target elements with css?</h1>
-</section>
-<section>
-    <h1>Inline Styles</h1>
-    <p>
-        This is done with the <strong>style</strong> attribute.
-    </p>
-    <pre class="fragment;"><code class="xml">
-    <h1 style="color:red;">Header</h1>
-
-</code></pre>
-    <h4 class="fragment">Don't do this.</h4>
-    <pre class="fragment"><code class="xml">
-    <h1 style="color:red;text-align:center;margin-bottom:20px;padding:10px;">Header</h1>
-
-</code></pre>
-
-    <h4 class="fragment">Your work only applies to one element and can't be reused.</h4>
-    <aside class="notes">
-        Re-usability is the sole reason for CSS
-        <br /> dry principle
-    </aside>
-</section>
-<section>
-    <h2>How do we target an HTML element without using the <strong>style</strong> attribute?</h2>
-    <h3 class="fragment">Use a <strong>selector</strong></h3>
-    <p class="fragment">
-        A <strong>selector</strong> is a pattern used to target specific HTML elements
-    </p>
-    <div class="fragment">
-        <span>Example</span>
-        <pre class="half-width"><code class="css">
-    h1 {
-        color:red;
-        text-align: center;
-    }
-
-</code></pre>
-        <aside class="notes">
-            CSS rules can be on one line.
-        </aside>
-    </div>
-</section>
 <section>
     <h1>CSS Selectors</h1>
     <p>
         CSS selectors vary in size length and complexity, but they are primarily based off of 3 core selector methods.
     </p>
+	<h2>Tag Selector</h2>
+	<h2>Class Selector</h2>
+	<h2>ID Selector</h2>
 </section>
-<section>
-    <h1>Tag selector</h1>
-    <p>
-        The tag selector simply uses the tag name to target an element. This is the most global way to set default styles
-    </p>
-    <pre>
-<code class="css">
-    h1 {
-        color: red; /*All h1s will be red*/
-    }
-    span {text-decoration: underline;} /*All spans will be underlines*/
-</code>
-</pre>
-</section>
-<section>
-    <h1>Class Selector</h1>
-    <p>
-        This is the most common method of targeting elements.
-    </p>
-    <div class="half-width">
-        <span class="fragment">.</span>
-        <span class="fragment">class-name</span>
-        <span class="fragment">
-{ <br />
-   /* Rules */ <br />
-}
-                        </span>
-    </div>
-    <div class="fragment half-width">
-        <pre>
-<code class="xml">
-<h1 class="class-name"></h1>
-
-</code></pre>
-    </div>
-</section>
-<section>
-    <h1>ID Selector</h1>
-    <p>
-        This is one of the most specific selectors.
-    </p>
-    <div class="half-width">
-        <span class="fragment">#</span>
-        <span class="fragment">elm-id</span>
-        <span class="fragment">
-                            { <br />
-                            /* Rules */ <br />
-                            }
-                        </span>
-    </div>
-    <div class="fragment half-width">
-        <pre>
-<code class="xml">
-<h1 id="elm-id"></h1>
-    </code></pre>
-    </div>
-</section>
-<section>
-    <h1>
-        Specificity
-    </h1>
-    <ul>
-        <li class="fragment"><strong>tag</strong> rules overwrite the default browser styles. </li>
-        <li class="fragment"><strong>class</strong> rules overwrite the tag browser styles </li>
-        <li class="fragment"><strong>id</strong> rule overwrite everything except....</li>
-        <li class="fragment"><strong>rules</strong> rules marked with !important. More on that later</li>
-    </ul>
-</section>
-<section>
-    <h1>Example of specificity.</h1>
-    <pre><code class="xml">
-<h1 class="site-header" id="my-header">Text goes here</h1>
-
-</code></pre>
-    <pre><code class="css">
-    h1.site-header {color: red;}
-    #my-header {color: green;}
-
-</code></pre>
-    <h3>What color will the h1 be?</h3>
-</section>
-
 <section>
     <h1>Basic CSS Properties</h1>
 </section>
@@ -296,9 +159,6 @@
 </pre>
 
 
-    <aside class="notes">
-        Mention short hand, but don't demo it today.
-    </aside>
 </section>
 <section>
     <h1>Text CSS continued</h1>
@@ -393,9 +253,6 @@
     </span>
 }
         </code></pre>
-</section>
-<section>
-    <h1>Todo: Code pen</h1>
 </section>
 <section>
     <h1>Borders</h1>
@@ -839,6 +696,40 @@
     </aside>
 </section>
 <section>
+<pre class="half-width">
+<code>
+    <div style="width:1000px">
+	<span>how now</span>
+	<span>brown cow</span>
+    </div>
+</code>
+</pre>
+	<p>Will the text all be on one line?</p>
+</section>
+<section>
+<pre class="half-width">
+<code>
+    <div style="width:1000px">
+	<p style="width:200px">how now</p>
+	<p style="width:200px">brown cow</p>
+    </div>
+</code>
+</pre>
+	<p>Will the text all be on one line?</p>
+</section>
+<section>
+<pre class="half-width">
+<code>
+    <div style="width:1000px">
+	<p style="display:inline-block;width:200px;">how now</p>
+	<p style="display:inline-block;width:200px;">brown cow</p>
+    </div>
+</code>
+</pre>
+	<p>Will the text all be on one line?</p>
+	<p class="fragment">Yes, but the spacing has to be tweaked.  Inline block acts like an inline element but can have a set width.</p>
+</section>
+<section>
     <h1>Example</h1>
     <p data-height="265" data-theme-id="0" data-slug-hash="aEgOmd" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-CSS-Dispaly" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/aEgOmd/">UA-ITR-CSS-Dispaly</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -874,6 +765,8 @@
     <h1>Example</h1>
     <p data-height="265" data-theme-id="0" data-slug-hash="BJgNzV" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-CSS-Floats" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/BJgNzV/">UA-ITR-CSS-Floats</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br/>
+<p>Why is the footer floating when it doesn't have float styling?</p>
 </section>
 <section>
     <h1><a href="https://css-tricks.com/all-about-floats/" target="_blank">All About Floats</a></h1>
