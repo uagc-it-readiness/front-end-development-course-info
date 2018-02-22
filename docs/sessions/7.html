@@ -38,7 +38,6 @@
                 <section class="review">
                     <h1>2/22/2018</h1>
                     <ul>
-                        <li><a href="#/background-borders">Background & Borders</a></li>
                         <li><a href="#/margin-padding">Margins & Padding</a></li>
                         <li><a href="#/height-width">Height & Width</a></li>
                         <li><a href="#/display">Display</a></li>
@@ -48,222 +47,9 @@
                         <li><a href="#/dev-tools">Dev Tools</a></li>
                     </ul>
                 </section>
-                <section id="background-borders">
-    <h1>Backgrounds</h1>
-    <p>
-        Changes the background appearance of the element.
-    </p>
-    <ul>
-        <li class="fragment"><strong>background-color</strong></li>
-        <li class="fragment"><strong>background-image</strong></li>
-        <li class="fragment">
-            <strong>background-repeat</strong> repeats the background image.
-            <ul>
-                <li class="fragment"><code>repeat-x</code> repeats the image across the x axis</li>
-                <li class="fragment"><code>repeat-y</code> repeats the image across the y axis</li>
-                <li class="fragment"><code>no-repeat</code> makes the image only appear once</li>
-            </ul>
-        </li>
-</section>
-<section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="opRXNZ" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="opRXNZ" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/opRXNZ/">opRXNZ</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
 
 <section>
-    <h1>Backgrounds Continued</h1>
-    <ul>
-        <li class="fragment">
-            <strong>background-position</strong> Accepts two values. First the x and then the y. You specify these by using
-            these values.
-            <ul>
-                <li class="fragment">left|right|center&nbsp;&nbsp;top|center|bottom</li>
-                <li class="fragment">1px 1px; - This would be 1px off the top and 1px off the left</li>
-                <li class="fragment">x% y%</li>
-            </ul>
-        </li>
-    </ul>
-    <div class="fragment"><a href="https://css-tricks.com/almanac/properties/b/background/" target="_blank">Background Guide</a></div>
-</section>
-<section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="WdBveL" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="WdBveL" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/WdBveL/">WdBveL</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Examples</h1>
-    <pre><code class="css" data-noescape>
-.item{
-    background-color: #ff0000;
-    background-color: blue;
-    <span class="fragment">
-    background-image: url(http://via.placeholder.com/350x150);
-    background-image: url(../images/me.jpg);</span>
-    <span class="fragment">
-    background-repeat: repeat-x;
-    background-repeat: no-repeat;    </span>
-    <span class="fragment">
-    background-position: center center;
-    background-position: 10px 10px;
-    </span>
-}
-        </code></pre>
-</section>
-<section>
-    <h1>Todo: Code pen</h1>
-</section>
-<section>
-    <h1>Borders</h1>
-    <p>
-        This CSS property defines the borders around an element.
-    </p>
-    <ul>
-        <li class="fragment"><strong>border-width</strong> accepts pixel value </li>
-        <li class="fragment">
-            <strong>border-style</strong>
-            <ul>
-                <li class="fragment"><code>solid</code> the most common</li>
-                <li class="fragment"><code>dashed</code></li>
-                <li class="fragment"><code>dotted</code></li>
-                <li class="fragment"><a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_blank">Many others</a></li>
-            </ul>
-        </li>
-        <li class="fragment">
-            <strong>color</strong> accepts any valid color
-        </li>
-    </ul>
-    <aside class="notes">
-        border width also accepts thin medium and thick, but px is the most desired
-    </aside>
-</section>
-<section>
-    <h2>Examples</h2>
-    <div class="two-col">
-        <div>
-            <pre>
-<code class="css">
-    .fig1{
-        border-color: red;
-        border-style: solid;
-        border-width:5px;
-    }
-    .fig2{
-        border-color: navy;
-        border-style: dotted;
-        border-width:10px;
-    }
-</code>
-</pre>
-        </div>
-        <style>
-            .reveal .fig1 {
-                border-color: red;
-                border-style: solid;
-                border-width: 5px;
-                margin: 20px 0;
-            }
-
-            .reveal .fig2 {
-                border-color: navy;
-                border-style: dotted;
-                border-width: 10px;
-                margin: 20px 0;
-            }
-        </style>
-        <div>
-
-            <div class="fig1">
-                Red border that is 5px thick.
-            </div>
-            <div class="fig2">
-                Fig2. Dotted border
-            </div>
-
-        </div>
-    </div>
-</section>
-<section>
-    <h2>That's a lot of code. Can we shorten it?</h2>
-    <div class="two-col">
-        <div>
-            <pre>
-<code class="css">
-    .fig3 {
-        border: 5px solid red;
-    }
-    .fig4 {
-        border:10px dotted navy;
-    }
-</code>
-</pre>
-        </div>
-        <style>
-            .reveal .fig3 {
-                border: 5px solid red;
-                margin: 20px 0;
-            }
-
-            .reveal .fig4 {
-                border: 10px dotted navy;
-                margin: 20px 0;
-            }
-        </style>
-        <div>
-
-            <div class="fig3">
-                Red border that is 5px thick.
-            </div>
-            <div class="fig4">
-                Fig4. Dotted border
-            </div>
-
-        </div>
-    </div>
-</section>
-<section>
-    <h1>Modify a specific border</h1>
-    <div class="two-col">
-        <div>
-            <pre>
-<code class="css">
-    .fig6 {
-        border-left: 5px solid red;
-    }
-    .fig7 {
-        border: 10px dotted navy;
-        border-right-style:solid;
-        border-right-width:5px;
-    }
-</code>
-</pre>
-        </div>
-        <style>
-            .reveal .fig6 {
-                border-left: 5px solid red;
-                margin: 20px 0;
-            }
-
-            .reveal .fig7 {
-                border: 10px dotted navy;
-                border-right-style: solid;
-                border-right-width: 5px;
-                margin: 20px 0;
-            }
-        </style>
-        <div>
-
-            <div class="fig6">
-                Fig 6 - I only have a left border.
-            </div>
-            <div class="fig7">
-                Fig 7 - My right is different
-            </div>
-
-        </div>
-    </div>
-
-</section>
-<section>
-    <h1>More specificity</h1>
+    <h1>What will this look like?</h1>
     <div class="two-col">
         <div>
             <pre>
@@ -292,7 +78,7 @@
                 margin: 20px 0;
             }
         </style>
-        <div>
+        <div class="fragment">
 
             <div class="fig8">
                 Fig 8 - I have no bottom border
@@ -310,6 +96,11 @@
     <div>
         <a href="https://css-tricks.com/almanac/properties/b/border/" target="_blank">Border Guide</a>
     </div>
+</section>
+<section>
+<h1>Box Model</h1>
+<p>All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.</p>
+<div><a href="https://www.w3schools.com/css/css_boxmodel.asp">w3schools box model</a>
 </section>
                     <section id="margin-padding">
         <h1>Margins</h1>
@@ -350,112 +141,13 @@
        
     </section>
      <section>
-        <h1>Margin Shorthand</h1>
-        <div class="two-col">
-            <div>
-                <pre>
-<code class="css">
-.fig10 {
-    /* Applies 5px to all 4 sides */
-    margin: 5px;
-}
-.fig11 {
-    /* Applies 5px to all 4 sides */
-    margin: 5px 5px 5px 5px;
-}
-.fig12{
-    /*Applies 10px to top and bottom
-      and 30px left and right*/
-    margin:10px 30px;
-}
-</code>
-</pre>
-            </div>
-            <div>
-                <div style="background-color:lightcoral; overflow:hidden">
-
-                    <style>
-                        .reveal .fig11 {
-                            border: 1px solid black;
-                            margin: 5px;
-                            background-color: #fff;
-                        }
-                    </style>
-                    <div class="fig11">
-                        Figure 10 / Figure 11
-                    </div>
-                </div>
-                <div style="background-color:lightcoral; overflow:hidden; margin-top:30px;">
-
-                    <style>
-                        .reveal .fig12 {
-                            border: 1px solid black;
-                            margin: 10px 30px;
-                            background-color: #fff;
-                        }
-                    </style>
-                    <div class="fig12">
-                        Figure 12
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
- 
-    <section>
-        <h1>Padding Shorthand</h1>
-        <div class="two-col">
-            <div>
-                <pre>
-<code class="css">
-.fig13 {
-    margin: 5px;
-    padding:15px;
-}
-.fig14 {
-   margin:10px 30px;
-   padding:30px 10px;
-}
-</code>
-</pre>
-            </div>
-            <div>
-                <div style="background-color:brown; overflow:hidden">
-
-                    <style>
-                        .reveal .fig13 {
-                            border: 1px solid black;
-                            margin: 5px;
-                            padding: 15px;
-                            background-color: #fff;
-                        }
-                    </style>
-                    <div class="fig13">
-                        Figure 13
-                    </div>
-                </div>
-                <div style="background-color:brown; overflow:hidden; margin-top:30px;">
-
-                    <style>
-                        .reveal .fig14 {
-                            border: 1px solid black;
-                            margin: 10px 30px;
-                            padding: 30px 10px;
-                            background-color: #fff;
-                        }
-                    </style>
-                    <div class="fig14">
-                        Figure 14
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
+	 <h1>A better example of margin vs. padding</h1>
+	 <div><a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_boxmodel4">w3schools box model exercise</a></div>
+	 </section>
    <section>
         <h1>Center Align Block Content</h1>
-        <p data-height="265" data-theme-id="0" data-slug-hash="GyaJKQ" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-Margin Auto" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/GyaJKQ/">UA-ITR-Margin Auto</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+        <p>How do we horizontally center align block content?</p>
+		<p class="fragment">margin-right:auto; margin-left:auto;</p>
     </section>
                 <section id="height-width">
     <h1>Height & Width</h1>
@@ -477,59 +169,7 @@
         </li>
     </ul>
 </section>
-<section>
-    <h1>Examples</h1>
-    <div class="two-col">
-        <div>
-            <pre>
-<code class="css">
-.fig15{
-    height:100px;
-    width:250px;
-}
-/*Applying this to a span tag*/
-.fig16{
-    height:100px;
-    width:100px;
-}
-.fig17{
-    max-width:100px;
-}
-</code>
-</pre>
-        </div>
-        <div style="background-color:grey">
-            <style>
-                .reveal .fig15 {
-                    background-color: blue;
-                    color: #fff;
-                    height: 100px;
-                    width: 250px;
-                }
-
-                .reveal .fig16 {
-                    background-color: red;
-                    color: #fff;
-                    height: 100px;
-                    width: 100px;
-                }
-
-                .reveal .fig17 {
-                    background-color: green;
-                    color: #fff;
-                    max-width: 100px;
-                }
-            </style>
-
-            <div class="fig15">Figure 15</div>
-            <span class="fig16">Figure 16</span>
-
-            <div class="fig17">Figure 17 with a maximum width value</div>
-        </div>
-    </div>
-
-</section>
-                <section id="display">
+<section id="display">
     <h1>Display</h1>
     <p>
         The CSS display property is used to change the default rendering style of an element.
@@ -538,6 +178,9 @@
         <li class="fragment"><strong>inline</strong> - span, em, strong</li>
         <li class="fragment"><strong>block</strong> - div, p, h1-h6</li>
         <li class="fragment"><strong>none</strong> - hides the element</li>
+			<ul>
+			<li class="fragment"><a href="https://stackoverflow.com/questions/133051/what-is-the-difference-between-visibilityhidden-and-displaynone">display:none vs visibility:hidden<a>
+			</ul>
         <li class="fragment"><strong>inline-block</strong> - Renders block, but stays in a single line.</li>
     </ul>
     <p class="fragment">
@@ -625,6 +268,13 @@
     <h1>Grouping Example</h1>
     <p data-height="265" data-theme-id="0" data-slug-hash="qpGEGa" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-Group Selectors" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/qpGEGa/">UA-ITR-Group Selectors</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+<h1>This is not on the first test<h1>
+<h2 class="fragment">...but it's really good to know</h2>
+<a class="fragment" href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp">Media queries in ARIA compliance</a>
+<br/>
+<a class="fragment" href="https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/">Media queries in mobile responsive</a>
 </section>
                 <section id="dev-tools">
     <h1>Dev Tools Review</h1>
