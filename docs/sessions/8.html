@@ -38,79 +38,24 @@
                 <section class="review">
                     <h1>2/24/2018</h1>
                     <ul>
-                        <li><a href="#/margin-padding">Margins & Padding</a></li>
-                        <li><a href="#/display">Display</a></li>
                         <li><a href="#/list-style">List Style</a></li>
                         <li><a href="#/selectors-grouping">New Selectors</a></li>
                         <li><a href="#/dev-tools">Dev Tools</a></li>
+						<li><a href="#/psuedo-classes">Pseudo-classes</a></li>
                         <li><a href="#/cmd">Command Line </a></li>
 						<li><a href="#/blockchain">Blockchain</a></li>
                     </ul>
                 </section>
-                    <section id="margin-padding">
-        <h1>Margins</h1>
-        <p>
-            CSS Margins add spacing <em>around</em> an element.
-        </p>
-        <ul>
-            <li class="fragment"><strong>margin-top</strong></li>
-            <li class="fragment"><strong>margin-right</strong></li>
-            <li class="fragment"><strong>margin-bottom</strong></li>
-            <li class="fragment"><strong>margin-left</strong></li>
-        </ul>
-    </section>
-   <section>
-        <h1>Padding</h1>
-        <p>
-            CSS Padding add spacing <em>inside</em> an element.
-        </p>
-        <ul>
-            <li class="fragment"><strong>padding-top</strong></li>
-            <li class="fragment"><strong>padding-right</strong></li>
-            <li class="fragment"><strong>padding-bottom</strong></li>
-            <li class="fragment"><strong>padding-left</strong></li>
-        </ul>
-    </section>
-        <section>
-        <h1>Center Align Block Content</h1>
-        <p data-height="265" data-theme-id="0" data-slug-hash="LeoEaR" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-Margin Auto" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/LeoEaR/">UA-ITR-Margin Auto</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-    </section>
-                
-                <section id="display">
-    <h1>Display</h1>
-    <p>
-        The CSS display property is used to change the default rendering style of an element.
-    </p>
-    <ul>
-        <li class="fragment"><strong>inline</strong> - span, em, strong</li>
-        <li class="fragment"><strong>block</strong> - div, p, h1-h6</li>
-        <li class="fragment"><strong>none</strong> - hides the element</li>
-        <li class="fragment"><strong>inline-block</strong> - Renders block, but stays in a single line.</li>
-    </ul>
-    <p class="fragment">
-        You can change any element to display any type.
-    </p>
-    <aside class="notes">
-        Set inline to block, but not block to inline.
-    </aside>
-</section>
-<section>
-    <h1>Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="KZLwJJ" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-CSS-Dispaly" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/KZLwJJ/">UA-ITR-CSS-Dispaly</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-                
                 <section id="list-style">
     <h1>List Style</h1>
     <p>
         Changes the default styling of <code>UL</code> and <code>OL</code> lists
     </p>
     <ul>
-        <li class="fragment"><code>list-style-type</code> - changes the icon/value used in the list</li>
-        <li class="fragment"><code>list-style-position</code> - changes the position of the list. Accepts <strong>inside</strong> and <strong>outside</strong></li>
-        <li class="fragment"><code>list-style-img</code> - changes bullets to image. Accepts <strong>none</strong> or a valid URL</li>
-        <li class="fragment"> Short hand<code>list-style: type position img</code></li>
+        <li class=""><code>list-style-type</code> - changes the icon/value used in the list</li>
+        <li class=""><code>list-style-position</code> - changes the position of the list. Accepts <strong>inside</strong> and <strong>outside</strong></li>
+        <li class=""><code>list-style-img</code> - changes bullets to image. Accepts <strong>none</strong> or a valid URL</li>
+        <li class=""> Short hand<code>list-style: type position img</code></li>
     </ul>
 </section>
 <section>
@@ -146,22 +91,71 @@
 <section>
     <h1>Opening the Dev Tools</h1>
     <ul>
-        <li class="fragment">Chrome Menu > More Tools > Developer Tools</li>
-        <li class="fragment">Right click on a page element and select `inspect` element</li>
-        <li class="fragment"><code>Ctrl+Shift+I</code> (Windows) or <code>Cmd+Opt+I</code> (Mac)</li>
+        <li class="">Chrome Menu > More Tools > Developer Tools</li>
+        <li class="">Right click on a page element and select `inspect` element</li>
+        <li class=""><code>Ctrl+Shift+I</code> (Windows) or <code>Cmd+Opt+I</code> (Mac)</li>
     </ul>
 </section>
 <section id="psuedo-classes">
 <h1>What are psuedo-classes?</h1>
 <p>A pseudo-class is used to define a special state of an element</p>
-<a class="fragment" href="https://www.w3schools.com/css/css_pseudo_classes.asp">w3schools info</a>
+<a class="" href="https://www.w3schools.com/css/css_pseudo_classes.asp">w3schools info</a>
 </section>
 <section>
 <h1>Link psuedo-classes</h1>
-<a class="fragment" href="https://www.w3schools.com/cssref/sel_active.asp">link, visited, hover, active</a>
+<div class="two-col">
+<div>
+            <pre>
+<code class="css">
+	/* unvisited link */
+	a:link {
+		color: green;
+	}
+
+	/* visited link */
+	a:visited {
+		color: red;
+	}
+</code>
+</pre>
+        </div>
+        <style>
+            #unvisitedLink {
+                color:green;
+            }
+
+            #visitedLink {
+                color:red;
+            }
+        </style>
+        <div class="">
+
+            <p>Unvisited link: <a id="unvisitedLink" href="https://www.w3schools.com">w3schools.com</a></p>
+			<p>Visited link: <a id="visitedLink" href="https://www.w3schools.com">w3schools.com</a></p>
+			
+
+        </div>
+    </div>
 </section>
 <section>
-<h1>Button psuedo-classes</h1>
+<h2>More Resources</h2>
+<div><a class="" href="https://www.w3schools.com/cssref/sel_active.asp">w3schools</a></div>
+<br/>
+<div><a class="" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_link_more1">link, visited, hover, active examples</a></div>
+</section>
+<section>
+<h1>More psuedo-classes</h1>
+<p>Common button pseudo-classes:</p>
+<ul>
+            <li class=""><strong>focus</strong></li>
+            <li class=""><strong>active</strong></li>
+</ul>
+<br/>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">But there's more here</a>
+<br/>
+<br/>
+<a href="https://css-tricks.com/pseudo-class-selectors/">...and here</a>
+		
 </section>
                 <section id="cmd">
     <h1>Command Line</h1>
@@ -208,10 +202,10 @@ project1/ project2/
 <section>
     <h1>Directory Shortcuts</h1>
     <ul>
-        <li class="fragment"><code>.</code> - Current Directory</li>
-        <li class="fragment"><code>..</code> - Parent Directory</li>
-        <li class="fragment"><code>~</code> - User Home - C:\Users\jisajmb</li>
-        <li class="fragment"><code>/</code>  - Root</li>
+        <li class=""><code>.</code> - Current Directory</li>
+        <li class=""><code>..</code> - Parent Directory</li>
+        <li class=""><code>~</code> - User Home - C:\Users\jisajmb</li>
+        <li class=""><code>/</code>  - Root</li>
     </ul>
 </section>
 <section>
@@ -279,10 +273,10 @@ index.html
 </section>
 <section id="blockchain">
 <h1>What is Blockchain?</h1>
-<p class="fragment">...not something you need to know for assessment 1</p>
-<p class="fragment">...but it is something you need to know as a member of the IT community</p>
+<p class="">...not something you need to know for assessment 1</p>
+<p class="">...but it is something you need to know as a member of the IT community</p>
 <br/>
-<a class="fragment" href="https://www.youtube.com/watch?v=r43LhSUUGTQ">Blockchain Video</a>
+<a class="" href="https://www.youtube.com/watch?v=r43LhSUUGTQ">Blockchain Video</a>
 </section>
 
                 <section>
