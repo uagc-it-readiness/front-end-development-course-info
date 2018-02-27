@@ -58,18 +58,16 @@
                 <section>
                     <h1>Floating Vs Inline-Block</h1>
                     <ul>
-                        <li class="fragment">More control inside of floating.</li>
-                        <li class="fragment">Less control with spacing with inline-block</li>
-                            <li class="fragment">100 space</li>
-                            <li class="fragment">4 items at 100px</li>
-                            <li class="fragment">Inline Block - Wraps</li>
-                            <li class="fragment">Float - doesn't</li>
-                            <li class="fragment"><a href="https://codepen.io/Middaugh/pen/NXVPOB?editors=0100" target="_blank">Result</a></li>
+                        <li class="">There are some gotchas with spacing inside inline-block: <a href="https://stackoverflow.com/questions/19038799/why-is-there-an-unexplainable-gap-between-these-inline-block-div-elements">Why is there whitespace?</a></li>
+                            <li class="">4 items at 100px</li>
+                            <li class="">Inline Block - Wraps</li>
+                            <li class="">Float - doesn't</li>
+                            <li class=""><a href="https://codepen.io/Middaugh/pen/NXVPOB?editors=0100" target="_blank">Result</a></li>
                     </ul>
                 </section>
                 <section>
                     <h1>Beautifying Code</h1>
-
+					<a href="https://www.cleancss.com/html-beautify/">Online beautify</a>
                 </section>
                 <section id="cmd">
     <h1>Command Line</h1>
@@ -78,116 +76,46 @@
     </p>
 </section>
 <section>
-    <h1>Per Platform</h1>
-    <h2>Mac: Terminal</h2>
-    <h2>Win: GitBash</h2>
+    <h1>Here's what you need to know for windows</h1>
+                    <ul>
+                        <li class="">List contents of a directory - dir</li>
+                        <li class="">Change directory - cd (..,/,~)</li>
+                            <li class="">Print working directory - cd</li>
+                            <li class="">Create new directory - mkdir somename</li>
+                            <li class="">Create new file - echo > somename.txt</li>
+                    </ul>
 </section>
 <section>
-    <h1>Pro Tip</h1>
-    <p>
-        Use tab to auto complete commands and paths. It will save you a lot of time.
-    </p>
+    <h1>Tutorials</h1>
+    <h1><a href="https://www.cs.princeton.edu/courses/archive/spr05/cos126/cmd-prompt.html">Windows CMD Tutorial</a></h1>
+	<h1><a href="http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line">Mac Terminal Tutorial</a></h1>
 </section>
 <section>
-    <h1>Listing a directory</h1>
-    <h2><code>ls</code></h2>
-    <pre><code class="bash">
-$ ls
-
-MyForks/   presentations/  'year 1 slides'/
-</code></pre>
+	<h1>CSS Flexbox Layout</h1>
+		<ul>
+            <li class="">Block</li>
+            <li class="">Inline</li>
+            <li class="">Table</li>
+            <li class="">Absolute Positioned</li>
+            <li class="fragment" style="color:#a51d38">Flex</li>
+        </ul>
+		<p>The Flexible Box Layout Module makes it easier to design flexible responsive layout structure without having to use floats or positioning.</p>
 </section>
 <section>
-    <h1>Changing a Directory</h1>
-    <h2><code>cd</code></h2>
-    <pre><code class="bash">
-#list directory
-$ ls
-
-MyForks/   presentations/  'year 1 slides'/
-#change directory into MyForks
-$ cd MyForks/
-$ ls
-
-project1/ project2/
-
-</code></pre>
-</section>
-<section>
-    <h1>Directory Shortcuts</h1>
-    <ul>
-        <li class="fragment"><code>.</code> - Current Directory</li>
-        <li class="fragment"><code>..</code> - Parent Directory</li>
-        <li class="fragment"><code>~</code> - User Home - C:\users\jisajmb</li>
-        <li class="fragment"><code>/</code>  - Root</li>
-    </ul>
-</section>
-<section>
-    <h1>Displaying your current path.</h1>
-    <p>Got lost in your console? Use the print working directory command to get a full path of your current location</p>
-    <h2><code>pwd</code></h2>
-
-    <pre><code class="bash">
-$ cd ~
-$ pwd
-c/users/jisajmb
-        </code></pre>
-</section>
-<section>
-    <h1>Creating a directory/folder</h1>
-    <p>
-        You can create a new folder by using the make directory command.
-    </p>
-    <h2>mkdir</h2>
-     <pre><code class="bash">
-#list directory
-$ ls
-
-MyForks/   presentations/  'year 1 slides'/
-
-$ mkdir my-work 
-$ ls
-
-my-work/  MyForks/   presentations/  'year 1 slides'/
-
-</code></pre>
-
-</section>
-<section>
-    <h1>Make a file via command line</h1>
-    <h2><code>touch</code></h2>
-     <pre><code class="bash">
-#list directory
-$ ls
-
-my-work/ MyForks/   presentations/  'year 1 slides'/
-
-$ cd my-work 
-$ ls
-
-
-$ touch index.html
-$ ls
-
-index.html
-</code></pre>
-
-
-</section>
-<section>
-    <h1>The Clear Command</h1>
-    <p>
-        You can clear the console by simply typing <code>clear</code> and hitting enter.
-    </p>
+<p>A flexbox layout consists of a parent element, with one or more child elements.</P>
+</br/>
+<a href="https://www.w3schools.com/cSS/css3_flexbox.asp">W3Schools</a>
+<br/><br/>
+<a href="https://www.w3schools.com/cSS/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowrap8">Try resizing the window</a>
 </section>
                 <section id="css3">
     <h1>CSS 3</h1>
     <p>CSS3 is the largest batch of changes to CSS. </p>
     <ul>
-        <li class="fragment">Rounded Corners</li>
-        <li class="fragment">Gradients</li>
-        <li class="fragment">Animations</li>
-        <li class="fragment">Advanced Selectors</li>
+        <li class="">Rounded Corners</li>
+        <li class="">Gradients</li>
+        <li class="">Animations</li>
+        <li class="">Advanced Selectors</li>
     </ul>
 </section>
 <section>
@@ -314,14 +242,14 @@ index.html
                 <section id="descendant">
     <h1>Descendant Selectors</h1>
     <p>Descendant selectors create a more specific groups of styled content. </p>
-    <pre class="fragment">
+    <pre class="">
 <code class="css">
     div p{
         color:#ff0000;
     }
 </code>
 </pre>
-    <p class="fragment">Any paragraph inside of a div will have red text.</p>
+    <p class="">Any paragraph inside of a div will have red text.</p>
 </section>
 <section>
     <h1>Example 1</h1>
@@ -333,9 +261,29 @@ index.html
     <p data-height="265" data-theme-id="0" data-slug-hash="aErzjz" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-Descendant" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/aErzjz/">UA-ITR-Descendant</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
+<section>
+<h1>Links from today's slides:</h1>
+<br/>
+<a href="https://www.cleancss.com/html-beautify/">Online beautify</a>
+<br/>
+<a href="https://www.cs.princeton.edu/courses/archive/spr05/cos126/cmd-prompt.html">Windows CMD Tutorial</a>
+<br/>
+<a href="http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line">Mac Terminal Tutorial</a>
+<br/>
+<a href="https://www.sessions.edu/color-calculator/">Color scheme calculator<a/>
+<br/>
+<a href="https://stackoverflow.com/questions/19038799/why-is-there-an-unexplainable-gap-between-these-inline-block-div-elements">inline-block whitespace<a/>
+<br/>
+<a href="https://codepen.io/Middaugh/pen/NXVPOB?editors=0100">Inline block vs float example<a/>
+<br/>
+<a href="http://www.colorzilla.com/gradient-editor/">Gradient<a/>
+<br/>
+<a href="https://www.w3schools.com/cSS/css3_flexbox.asp">CSS Flexbox<a/>
+<br/>
+<a href="https://www.w3schools.com/cSS/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowrap8">Responsive Flexbox<a/>
+</section>
                 <section>
                     <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise%206">Exercise</a></h1>
-                    <h2>Due by Thursday</h2>
                     
 
                 </section>
