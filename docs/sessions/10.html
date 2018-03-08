@@ -55,10 +55,10 @@
     <h1>CSS 3</h1>
     <p>CSS3 is the largest batch of changes to CSS. </p>
     <ul>
-        <li class="fragment">Rounded Corners</li>
-        <li class="fragment">Gradients</li>
-        <li class="fragment">Animations</li>
-        <li class="fragment">Advanced Selectors</li>
+        <li class="">Rounded Corners</li>
+        <li class="">Gradients</li>
+        <li class="">Animations</li>
+        <li class="">Advanced Selectors</li>
     </ul>
 </section>
 <section>
@@ -185,14 +185,14 @@
                <section id="descendant">
     <h1>Descendant Selectors</h1>
     <p>Descendant selectors create a more specific groups of styled content. </p>
-    <pre class="fragment">
+    <pre class="">
 <code class="css">
     div p{
         color:#ff0000;
     }
 </code>
 </pre>
-    <p class="fragment">Any paragraph inside of a div will have red text.</p>
+    <p class="">Any paragraph inside of a div will have red text.</p>
 </section>
 <section>
     <h1>Example 1</h1>
@@ -209,8 +209,8 @@
     <p>
         You can make your selectors more specific by using multiple selectors joined together
     </p>
-    <h2 class="fragment"><code>div.class {}</code></h2>
-    <h2 class="fragment"><code>.class1.class2 {}</code></h2>
+    <h2 class=""><code>div.class {}</code></h2>
+    <h2 class=""><code>.class1.class2 {}</code></h2>
 </section>
 <section>
     <h1>Example</h1>
@@ -227,8 +227,8 @@
     <p>
         The <code>:hover</code> class allows you to apply add custom class when an element is being hovered over.
     </p>
-    <h2 class="fragment"><code>a:hover{ }</code></h2>
-    <h2 class="fragment"><code>.class:hover{ }</code></h2>
+    <h2 class=""><code>a:hover{ }</code></h2>
+    <h2 class=""><code>.class:hover{ }</code></h2>
 </section>
 <section>
     <h1>Example</h1>
@@ -252,12 +252,12 @@
 <section>
     <h2>Values</h2>
     <ul>
-        <li class="fragment"><code>visible</code> - <strong>default value</strong> content continues outside of its box</li>
-        <li class="fragment"><code>hidden</code> - hides content that overflows</li>
-        <li class="fragment">
+        <li class=""><code>visible</code> - <strong>default value</strong> content continues outside of its box</li>
+        <li class=""><code>hidden</code> - hides content that overflows</li>
+        <li class="">
             <code>scroll</code> - Adds scroll bars to content even if it doesn't overflow.
         </li>
-        <li class="fragment"><code>auto</code> - Adds scroll bars, but only if the content overflows the box.</li>
+        <li class=""><code>auto</code> - Adds scroll bars, but only if the content overflows the box.</li>
     </ul>
     <a href="https://css-tricks.com/almanac/properties/o/overflow/" target="_blank">Overflow's overflowing overview</a>
 </section>
@@ -274,8 +274,8 @@
 
 <section>
     <h1>Two variations</h1>
-    <h1 class="fragment"><code>overflow-x</code></h1>
-    <h1 class="fragment"><code>overflow-y</code></h1>
+    <h1 class=""><code>overflow-x</code></h1>
+    <h1 class=""><code>overflow-y</code></h1>
 </section>
                <section>
     <h1><code>white-space</code></h1>
@@ -284,8 +284,8 @@
     </p>
     <h2>Values</h2>
     <ul>
-        <li class="fragment"><code>normal</code> - Default value</li>
-        <li class="fragment"><code>nowrap</code> - prevents text from wrapping</li>
+        <li class=""><code>normal</code> - Default value</li>
+        <li class=""><code>nowrap</code> - prevents text from wrapping</li>
     </ul>
 
     <div> <a href="https://css-tricks.com/almanac/properties/w/whitespace/" target="_blank">White Space Overview</a>
@@ -308,8 +308,8 @@
     </p>
     <h2>Values</h2>
     <ul>
-        <li class="fragment">clip</li>
-        <li class="fragment">ellipsis</li>
+        <li class="">clip</li>
+        <li class="">ellipsis</li>
 
     </ul>
     <div> <a href="https://css-tricks.com/almanac/properties/t/text-overflow/" target="_blank">Text Overflow Overview</a>
@@ -325,22 +325,22 @@
     <h1><code>text-shadow</code></h1>
     <p>The <code>text-shadow</code> is made up of 4 values </p>
     <ul>
-        <li class="fragment">
+        <li class="">
             x-coordinate - pixel value
         </li>
-        <li class="fragment">
+        <li class="">
             y-coordinate - pixel value
         </li>
-        <li class="fragment">
+        <li class="">
             blur radius - pixel value
         </li>
-        <li class="fragment">
+        <li class="">
             color of the shadow - color
         </li>
     </ul>
-    <p class="fragment">You can add multiple shadows by separating them with a comma. </p>
+    <p class="">You can add multiple shadows by separating them with a comma. </p>
     <div>
-        <a href="http://codepen.io/chriscoyier/pen/urkCd" target="_blank" class="fragment">Awesome Examples</a>
+        <a href="http://codepen.io/chriscoyier/pen/urkCd" target="_blank" class="">Awesome Examples</a>
     </div>
     <a href="https://css-tricks.com/almanac/properties/t/text-shadow/" target="_blank">Overview</a>
 </section>
@@ -349,8 +349,54 @@
     <p data-height="265" data-theme-id="0" data-slug-hash="Lewgqb" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-CSS-TextShadow" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/Lewgqb/">UA-ITR-CSS-TextShadow</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
+<section>
+<h1>Absolute Positioning</h1>
+<p>There are five kinds of positioning</p>
+<ul>
+        <li class="">
+            static - this is the default
+        </li>
+        <li class="">
+            relative
+        </li>
+        <li class="">
+            fixed
+        </li>
+        <li class="">
+            absolute
+        </li>
+		<li class="">
+            sticky
+        </li>
+    </ul>
+</section>
+<section>
+<h1>Absolute Positioning Cont.</h1>
+<p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+<br/>
+However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.</p>
+<a href="https://www.w3schools.com/css/css_positioning.asp">W3Schools Info<a/>
+<br/><br/>
+<a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_position_absolute">W3 Schools Example</a>
+</section>
+<section>
+<h1>Links Page</h1>
+<a href="https://css-tricks.com/almanac/properties/o/overflow/">Overflow</a>
+<br/><br/>
+<a href="https://css-tricks.com/almanac/properties/w/whitespace/">Whitespace</a>
+<br/><br/>
+<a href="https://www.w3schools.com/css/css_positioning.asp">W3Schools Positioning<a/>
+<br/><br/>
+<a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_position_absolute">W3Schools Positioning Example<a/>
+<br/><br/>
+<a href="https://css-tricks.com/almanac/properties/t/text-shadow/">Text Shadowing<a/>
+<br/><br/>
+<a href="https://css-tricks.com/almanac/properties/t/text-overflow/">Text Overflow<a/>
+<br/><br/>
+<a href="https://css-tricks.com/almanac/properties/o/overflow/">Overflow Overview<a/>
+</section>
                <section id="exercise7">
-    <h3><a href="https://codepen.io/Middaugh/pen/XVvxOJ" target="_blank">Fork This Pen</a></h3>
+    <h3><!--<a href="https://codepen.io/Middaugh/pen/XVvxOJ" target="_blank">Fork This Pen</a>--><a href="https://codepen.io/Middaugh/pen/xYodMy" target="_blank">Fork This Pen</a></h3>
     <p>
         Exercise 7 is going to open up the opportunity to develop your own CSS style.  
         Do your best to create the image on the next page.  Add classes to the HTML as you see fit.
