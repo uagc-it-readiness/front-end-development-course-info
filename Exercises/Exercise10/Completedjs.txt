@@ -1,0 +1,98 @@
+//Part 1
+var name = "Daniel WOrthy";
+document.getElementById("partOne").innerHTML = name;
+
+
+//Part 2
+var foo = "this is an integer";
+var foo = "this is not an integer";
+getElm('partTwo').innerHTML = foo;
+
+
+
+//Part 3
+var partThree = 5;
+//partThree = partThree + 10;
+partThree += 10;
+partThree *= 14;
+partThree -= 25;
+getElm('partThree').innerHTML = partThree;
+
+
+
+
+//Part 4
+var fName = "";
+var lName = "";
+fName = "daniel";
+lName = "worthy";
+getElm('partFour').innerHTML =  fName + " " + lName;
+
+
+
+
+//Part 5
+var myHtml= "";
+
+myHtml += "<h2>Title</h2>";
+myHtml += "<p>Lorem ipsum dolor</p>";
+myHtml += "<h3>Pellentesque habitant morbi</h3>";
+myHtml += "<p>Morbi in sem quis dui placerat ornare. </p>";
+
+getElm('partFive').innerHTML = myHtml; 
+
+
+//Part 6
+var part6Number = getRandomNumber(); 
+var part6Result = 'is less than 50';
+
+
+if (part6Number > 50){
+    part6Result = "is greater than 50";
+}
+
+getElm('part6Number').innerHTML = part6Number ; 
+getElm('part6Result').innerHTML = part6Result; 
+
+
+
+
+//Part 7
+var part7Number = getRandomNumber();
+var part7Result = '';
+
+
+if (part7Number < 25){
+    part7Result = "less than 25";
+}else if(part7Number >= 25 && part7Number < 50){
+    part7Result = "25 - 49";
+}else if(part7Number >= 50 && part7Number < 75){
+    
+    part7Result = "50 - 74";
+}else{
+    part7Result = "75+";
+}
+getElm('part7Number').innerHTML = part7Number ; 
+getElm('part7Result').innerHTML = part7Result; 
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+//////Ignore everything below this line////////////////////////
+
+function getRandomNumber() {
+  return Math.floor(Math.random() * (100 - 1)) + 1;
+}
+
+function getElm(id){
+    return document.getElementById(id);
+}
+
+updateHtml('partOne', foo);
+
+function updateHtml(id, html){
+    document.getElementById(id).innerHTML = html;
+}
