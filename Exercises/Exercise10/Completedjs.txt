@@ -12,7 +12,6 @@ getElm('partTwo').innerHTML = foo;
 
 //Part 3
 var partThree = 5;
-//partThree = partThree + 10;
 partThree += 10;
 partThree *= 14;
 partThree -= 25;
