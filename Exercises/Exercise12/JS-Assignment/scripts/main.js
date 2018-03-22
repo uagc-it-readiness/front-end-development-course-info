@@ -3,18 +3,6 @@ function update() {
         Your code starts here
     =====================*/
 	
-	var myArray = [];
-	var firstName = getValue("firstName");
-	debugger;
-	if(!firstName){
-		myArray.push("Jon");
-	}
-	var html = "";
-	for(var i = 0; i < myArray.length; i++)
-		{
-			html += myArray[i];
-		}
-	document.getElementById("error-list").innerHTML = html;
     //Create new array.
 
     //If first name is empty. Add it to the array
