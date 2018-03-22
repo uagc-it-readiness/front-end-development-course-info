@@ -2,7 +2,7 @@ function update() {
     /* ===================
         Your code starts here
     =====================*/
-
+	
     //Create new array.
 
     //If first name is empty. Add it to the array

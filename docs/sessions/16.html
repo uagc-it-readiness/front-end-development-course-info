@@ -36,7 +36,7 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>8/29/2017</h1>
+                    <h1>3/22/2018</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
@@ -65,13 +65,22 @@
                     </div>
                     <h4 style="clear:both;"><a href="#exercise12">Exercise 12</a></h4>
                 </section>
+				<section>
+				<h1>Record Class</h1>
+				<h3>When the exercise gets difficult or frustrating:</h3>
+				<ul>
+                                <li>DON'T stress, just relax</li>
+                                <li>DO read the instructions carefully, check for typos, check for bad syntax</li>
+								<li class="fragment">I am going to give less guidance on syntax.  Figuring it out on your own will cement it in your memory.</li>
+				</ul>
+				</section>
                 
 <section id="terms">
     <h1>Methods</h1>
     <p>
         Methods are actions that can be taken on objects.
     </p>
-    <div class="fragment">
+    <div class="">
         <h1>Properties</h1>
         <p>
             Properties are values associated with an object.
@@ -81,8 +90,8 @@
 <section id="string-props">
     <h1>String Properties and Methods</h1>
     <ul>
-        <li class="fragment"><code>length</code> property - returns the number of characters in the string.</li>
-        <li class="fragment"><code>indexOf</code> method - returns the position (index) of the first occurrence of text in a string.</li>
+        <li class=""><code>length</code> property - returns the number of characters in the string.</li>
+        <li class=""><code>indexOf</code> method - returns the position (index) of the first occurrence of text in a string.</li>
     </ul>
 </section>
 <section>
@@ -95,11 +104,11 @@
     console.log(y.length);  //
 </code>
 </pre>
-    <pre class="fragment">
+    <pre class="">
 <code class="js">
-    var username = "danielworthy";
-    var userNameLength = username.length; //12
-    var isValid = (userNameLength > 20 || userNameLength < 10);  //Returns true
+    var username = "jonmiddaugh";
+    var userNameLength = username.length; //11
+    var isValid = (userNameLength > 20 || userNameLength < 10);  //Returns false
 </code>
 </pre>
 </section>
@@ -114,9 +123,9 @@
     var z = "name".indexOf("ame"); // z = 1;
 </code>
 </pre>
-    <pre class="fragment">
+    <pre class="">
 <code class="js">
-    var email = "dan@outlook.com";
+    var email = "jonathan.middaugh@gmail.com";
     var isValidEmail = (email.indexOf('@') > -1);
     console.log(isValidEmail); //true
 </code>
@@ -128,8 +137,8 @@
         These methods are considered global methods.
     </p>
     <ul>
-        <li class="fragment"><code>parseInt</code> - Attempts to convert a string to an integer</li>
-        <li class="fragment"><code>parseFloat</code> - Attempts to convert a string to a float</li>
+        <li class=""><code>parseInt</code> - Attempts to convert a string to an integer</li>
+        <li class=""><code>parseFloat</code> - Attempts to convert a string to a float</li>
     </ul>
 </section>
 <section>
@@ -141,7 +150,7 @@
     parseInt("ten");        // returns NaN
 </code>
 </pre>
-    <pre class="fragment">
+    <pre class="">
 <code class="js">
     parseInt("10 11 12");   // returns 10
     parseInt("10 tacos");   // returns 10
@@ -158,7 +167,7 @@
     parseFloat("ten");        // returns NaN
 </code>
 </pre>
-    <pre class="fragment">
+    <pre class="">
 <code class="js">
    parseFloat("10 11 12");   // returns 10
    parseFloat("10 tacos");   // returns 10
@@ -171,7 +180,7 @@
     <p>
         There is a build in method for determining if a variable is a number.
     </p>
-     <pre class="fragment">
+     <pre class="">
 <code class="js">
     var x = "t"
     //This doesn't work
@@ -180,7 +189,7 @@
 </pre>
 
    
-    <pre class="fragment">
+    <pre class="">
 <code class="js">
     var x = "t"
     if (isNaN(x)){
@@ -198,8 +207,8 @@
     <!--Complex Variables -->
     <h1>Complex Variables</h1>
     <ul>
-        <li class="fragment">Arrays</li>
-        <li class="fragment">Objects</li>
+        <li class="">Arrays</li>
+        <li class="">Objects</li>
     </ul>
 </section>
 <section id="arrays">
@@ -207,7 +216,7 @@
     <p>
         Arrays are used to store a collection of variables.
     </p>
-    <pre class="fragment">
+    <pre class="">
 <code class="js">
     var list = ["A", "B", "C", "D"];
     var list2 = [1, 10, 0, 3];
@@ -221,11 +230,11 @@
         You can access individual items in an array by referencing its index or position. Accessing an invalid index will return
         <code>undefined</code>.
     </p>
-    <p class="fragment">
+    <p class="">
         Arrays operate off of a "zero" based index. The first position has an index of 0.
     </p>
 
-    <pre class="fragment">
+    <pre class="">
 <code class="js">
     var list = ["A", "B", "C", "D"];
     console.log(list[1]); // Outputs "B"
@@ -243,11 +252,11 @@
         There are several different methods to modify an array. We're going to focus primarily on one.
     </p>
     <ul>
-        <li class="fragment"><code>push</code> - Adds item to the end of an array</li>
+        <li class=""><code>push</code> - Adds item to the end of an array</li>
     </ul>
     <h1>Array Properties</h1>
     <ul>
-        <li class="fragment"><code>length</code> - gives the count of items in the array</li>
+        <li class=""><code>length</code> - gives the count of items in the array</li>
     </ul>
 
 
@@ -271,24 +280,26 @@
     <p>
         Just about everything in JavaScript is an object. Primitive variables are the only things that are not actual objects.
     </p>
-    <p class="fragment">
+    <p class="">
         Objects are variables that contain many variables.
     </p>
     <pre>
 <code class="js">
-    var me = {
-        firstName: "Daniel",
-        lastName: "Worthy",
-        age: 60,
-        city: 'Cave Springs',
+    var person = {
+        firstName: "Jon",
+        lastName: "Middaugh",
+        age: 28,
+        city: 'Johnson',
         fullName: function(){
-            return this.firstName + " " + this.lastName;
+            // return this.firstName + " " + this.lastName;
+		var me = this;
+		return me.firstName + " " + me.lastName;
         }
     };
-    console.log(me.age) //Outputs 60;
-    console.log(me.height); //Outputs undefined
-    me.height = '5\' 9"';
-    console.log(me.height); //Outputs 5' 9"
+    console.log(person.age) //Outputs 28;
+    console.log(person.height); //Outputs undefined
+    person.height = '5\' 6"';
+    console.log(person.height); //Outputs 5' 6"
 </code>
 </pre>
 
@@ -298,10 +309,10 @@
     <h2>The most confusing thing in JavaScript</h2>
    <pre>
 <code class="js" data-noescape>
-    var <mark>me</mark> = {
-        <mark class="orange">firstName</mark>: "Daniel",
-        <mark class="blue">lastName</mark> "Worthy",
-        age: 60,
+    var <mark>person</mark> = {
+        <mark class="orange">firstName</mark>: "Jon",
+        <mark class="blue">lastName</mark> "Middaugh",
+        age: 28,
         city: 'Cave Springs',
         fullName: function(){
             return <mark>this</mark>.<mark class="orange">firstName</mark> + " " + <mark>this</mark>.<mark class="blue">lastName</mark>;
@@ -315,7 +326,7 @@
     <p>
         There is a very easy way to increment or decrementing a variable. You can use the <code>++</code> or <code>--</code>        to increment or decrement your variable by 1.
     </p>
-    <pre class="fragment">
+    <pre class="">
 <code class="js">
     var x = 0;
     x++  // equivalent to x = x + 1;
@@ -326,24 +337,23 @@
     console.log(x); //outputs 1
 </code>
 </pre>
-<h2><a href="//i.imgur.com/UqRewKA.jpg">Example</a></h2>
+<!--<h2><a href="//i.imgur.com/UqRewKA.jpg">Example</a></h2>-->
 </section>
 <section>
     <h1>JavaScript Loops</h1>
     <p>
         Loops in JavaScript are used to execute the same statement multiple times.
     </p>
-    <h2 class="fragment">There are two types of Loops</h2>
+    <h2 class="">There are two types of Loops</h2>
     <ul>
-        <li class="fragment">For Loops</li>
-        <li class="fragment">While Loops</li>
+        <li class="">For Loops</li>
+        <li class="">While Loops</li>
     </ul>
 </section>
 <section id="for-loop">
     <h1>The For Loop</h1>
     <p>
-        The for loop is most often used when dealing with collections. It is possible to not even execute if the condition evaluates
-        to true.
+        The for loop is most often used when dealing with collections.
     </p>
     <h2>Syntax</h2>
     <style>
@@ -352,28 +362,28 @@
         }
     </style>
     <h4 class="align-left">
-        <code class="fragment">for (</code>
-        <code class="fragment">statement 1;</code>
-        <code class="fragment">statement 2;</code>
-        <code class="fragment">statement 3;</code>
-        <code class="fragment">){</code>
+        <code class="">for (</code>
+        <code class="">statement 1;</code>
+        <code class="">statement 2;</code>
+        <code class="">statement 3;</code>
+        <code class="">){</code>
     </h4>
     <h4>
-        <code class="fragment">//Code Block</code>
+        <code class="">//Code Block</code>
     </h4>
     <h4 class="align-left">
-        <code class="fragment">}</code>
+        <code class="">}</code>
     </h4>
 </section>
 <section>
     <h1>Code Samples</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     var x = [1, 2, 3, 4];
     for(var i = 0; i < x.length; i++){
         console.log(x[i]);
     }
                     </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     var x = [1, 2, 3, 4];
     var i = 0;
     for(; i < x.length; i++){
@@ -384,14 +394,15 @@
 <section>
     <h1>More Examples</h1>
     <pre><code class="js">
-    var names = ['Daniel', 'Josh', 'Amanda'];
-    var html = "&lt;ul>"
+    var names = ['Jon', 'Benjamin', 'Kristin'];
+    var htmlString = "&lt;ul>"
     for( var i = 0; i < names.length; i++){
-        html = html + '&lt;li>' + names[i] + '&lt;/li>'
+        htmlString = htmlString + '&lt;li>' + names[i] + '&lt;/li>'
     }
-    html = html + '&lt;/ul>';
+    htmlString = htmlString + '&lt;/ul>';
 
                         </code></pre>
+		<a href="https://jsfiddle.net/JonMiddaugh/q9fddjxy/" target="_blank">Example of injecting html</a>
 </section>
 <section>
     <h1>More Examples</h1>
@@ -411,8 +422,8 @@ html = html + '&lt;/ul>';
 <h1>Reverse Loops</h1>
 <pre><code class="js">
     var array = [1,2,3,4,5]
-    for(var i = array.length; i--;){
-
+    for(var i = array.length; i>0; i--){
+	
     }
     </code></pre>
 </section>
@@ -427,7 +438,7 @@ html = html + '&lt;/ul>';
     <p>
         May not execute depending on the condition.
     </p>
-    <pre class="fragment">
+    <pre class="">
 <code class="js">
     var i = 0;
     while(i < 25){
@@ -437,10 +448,10 @@ html = html + '&lt;/ul>';
 </code>
 </pre>
     <h2 class="fargment">Do Loop</h2>
-    <p class="fragment">
+    <p class="">
         Will always execute at least once.
     </p>
-    <pre class="fragment">
+    <pre class="">
 <code class="js">
     var i = 0;
     do{
@@ -453,7 +464,7 @@ html = html + '&lt;/ul>';
 </section>
 <section>
     <h1>More Examples</h1>
-    <pre class="fragment">
+    <pre class="">
 <code class="js">
     var condition = false;
     var i = 0;
@@ -469,7 +480,7 @@ html = html + '&lt;/ul>';
 </section>
 <section>
     <h1>Dangers of Do and While Loops</h1>
-    <h1 class="fragment">Infinite Loops</h1>
+    <h1 class="">Infinite Loops</h1>
 </section>
 
 <section>
@@ -544,10 +555,10 @@ html = html + '&lt;/ul>';
         Dates are stored as the number of milliseconds since January 1, 1970.
 
     </p>
-    <p class="fragment">
+    <p class="">
         Example: 4/5/2017 is roughly - 1491415025702
     </p>
-    <p class="fragment">
+    <p class="">
         Example : 1/1/1777 is roughly - -6090400800000
     </p>
     <aside class="notes">
@@ -556,43 +567,31 @@ html = html + '&lt;/ul>';
 </section>
 <section>
     <h1>Date Declaration</h1>
-    <pre class="fragment"><code class="js">//Creates a date variable that is set to now;
+    <pre class=""><code class="js">//Creates a date variable that is set to now;
 var now = new Date();         </code></pre>
-    <pre class="fragment"><code class="js">// Wed Apr 05 2017 12:57:05 GMT-0500 (Central Daylight Time);
+    <pre class=""><code class="js">// Wed Apr 05 2017 12:57:05 GMT-0500 (Central Daylight Time);
 var newDate = new Date(1491415025702); </code></pre>
-    <pre class="fragment"><code class="js">//Tue Aug 17 2010 12:09:36 GMT-0500 (Central Daylight Time)
+    <pre class=""><code class="js">//Tue Aug 17 2010 12:09:36 GMT-0500 (Central Daylight Time)
 var newDate = new Date("2010/08/17 12:09:36"); 
 //Fri Jan 01 2010 00:00:00 GMT-0600 (Central Standard Time)
 var newDate2 = new Date("1/1/2010");</code></pre>
 </section>
 <section>
     <h1>More Specific Examples</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 new Date(year, month[, date[, hours[, minutes[, seconds[, milliseconds]]]]]);
     </code></pre>
-    <p class="fragment">
+    <p class="">
         Note: Month is zero based.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 //Tue Feb 01 2010 00:00:00 GMT-0600 (Central Standard Time)
 var d = new Date(2010, 1) 
     </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 //Thu Apr 15 2010 12:04:14 GMT-0500 (Central Daylight Time)
 var d = new Date(2010, 3, 15, 12, 4, 14) 
     </code></pre>
-</section>
-<section>
-    <h1>How do we set a specific date that we already know?</h1>
-    <h2>Like September 9th, 2017</h2>
-    <pre class="fragment"><code class="js">
-var d = new Date('9/9/2017')
-    </code></pre>
-    <h2 class="fragment">or</h2>
-    <pre class="fragment"><code class="js">
-var d = new Date(2017, 8, 9) 
-    </code></pre>
-
 </section>
 <!--
 <section>
@@ -613,17 +612,17 @@ var birthday = new Date(1995, 11, 17, 3, 24, 0);
         Dates have very long outputs by default, but there are methods to retrieve parts of a date.
     </p>
 
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var d = new Date(2010, 0, 1);
 console.log(d.getFullYear()); //2010;
 
 console.log(d.getDate()); // 1
 </code></pre>
     <ul>
-        <li class="fragment">.getMonth()</li>
-        <li class="fragment">.getHours()</li>
-        <li class="fragment">.getMinutes()</li>
-        <li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype" target="_blank">etc.</a></li>
+        <li class="">.getMonth()</li>
+        <li class="">.getHours()</li>
+        <li class="">.getMinutes()</li>
+        <li class=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype" target="_blank">etc.</a></li>
     </ul>
 </section>
 <section>
@@ -634,10 +633,6 @@ console.log(d.toString());     // logs Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toDateString()); // logs Wed Jul 28 1993
 console.log(d.toTimeString()); // logs 14:39:07 GMT-0600 (PDT)
 </code></pre>
-</section>
-<section>
-    <h1>It is pretty limited</h1>
-    <h2>We'll resolve that by writing a library.</h2>
 </section>
 <section>
     <h1>Changing Date Values</h1>
@@ -670,7 +665,7 @@ var isNewer = d2 > d1;  //True
 <section>
     <h1>Adding values</h1>
     <p>Let's get the current date and add a week to it.</p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var d1 = new Date();
 var curDate = d1.getDate(); //Get the number for the current Date
 var newDate = curDate + 7; //Add value to it
@@ -678,14 +673,14 @@ d1.setDate(newDate);    // Set the new date
 console.log(d1); 
 </code></pre>
 
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 //Shorter
 var d1 = new Date();
 var newDate = d1.getDate() + 7; 
 d1.setDate(newDate);    
 console.log(d1); 
 </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 //Even Shorter
 var d1 = new Date();
 d1.setDate(d1.getDate() + 7);    
@@ -698,13 +693,13 @@ console.log(d1);
     <p>
         You don't have to stick to the traditional restrictions when adding values.
     </p>
-    <p class="fragment">
+    <p class="">
         You have 90 days from today for a warranty.
     </p>
-    <p class="fragment">
+    <p class="">
         You don't have to calculate the number of months.  JS will automatically handle the overflow.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var d1 = new Date();
 
 d1.setDate(d1.getDate() + 90);    
