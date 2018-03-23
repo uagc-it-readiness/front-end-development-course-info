@@ -69,7 +69,7 @@
     <p>
         There is a very easy way to increment or decrementing a variable. You can use the <code>++</code> or <code>--</code>        to increment or decrement your variable by 1.
     </p>
-    <pre class="fragment">
+    <pre class="">
 <code class="js">
     var x = 0;
     x++  // equivalent to x = x + 1;
@@ -87,10 +87,10 @@
     <p>
         Loops in JavaScript are used to execute the same statement multiple times.
     </p>
-    <h2 class="fragment">There are two types of Loops</h2>
+    <h2 class="">There are two types of Loops</h2>
     <ul>
-        <li class="fragment">For Loops</li>
-        <li class="fragment">While Loops</li>
+        <li class="">For Loops</li>
+        <li class="">While Loops</li>
     </ul>
 </section>
 <section id="for-loop">
@@ -106,28 +106,28 @@
         }
     </style>
     <h4 class="align-left">
-        <code class="fragment">for (</code>
-        <code class="fragment">statement 1;</code>
-        <code class="fragment">statement 2;</code>
-        <code class="fragment">statement 3;</code>
-        <code class="fragment">){</code>
+        <code class="">for (</code>
+        <code class="">statement 1;</code>
+        <code class="">statement 2;</code>
+        <code class="">statement 3;</code>
+        <code class="">){</code>
     </h4>
     <h4>
-        <code class="fragment">//Code Block</code>
+        <code class="">//Code Block</code>
     </h4>
     <h4 class="align-left">
-        <code class="fragment">}</code>
+        <code class="">}</code>
     </h4>
 </section>
 <section>
     <h1>Code Samples</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     var x = [1, 2, 3, 4];
     for(var i = 0; i < x.length; i++){
         console.log(x[i]);
     }
                     </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     var x = [1, 2, 3, 4];
     var i = 0;
     for(; i < x.length; i++){
@@ -181,7 +181,7 @@ html = html + '&lt;/ul>';
     <p>
         May not execute depending on the condition.
     </p>
-    <pre class="fragment">
+    <pre class="">
 <code class="js">
     var i = 0;
     while(i < 25){
@@ -191,10 +191,10 @@ html = html + '&lt;/ul>';
 </code>
 </pre>
     <h2 class="fargment">Do Loop</h2>
-    <p class="fragment">
+    <p class="">
         Will always execute at least once.
     </p>
-    <pre class="fragment">
+    <pre class="">
 <code class="js">
     var i = 0;
     do{
@@ -207,7 +207,7 @@ html = html + '&lt;/ul>';
 </section>
 <section>
     <h1>More Examples</h1>
-    <pre class="fragment">
+    <pre class="">
 <code class="js">
     var condition = false;
     var i = 0;
@@ -223,7 +223,7 @@ html = html + '&lt;/ul>';
 </section>
 <section>
     <h1>Dangers of Do and While Loops</h1>
-    <h1 class="fragment">Infinite Loops</h1>
+    <h1 class="">Infinite Loops</h1>
 </section>
 
 <section>
@@ -298,10 +298,10 @@ html = html + '&lt;/ul>';
         Dates are stored as the number of milliseconds since January 1, 1970.
 
     </p>
-    <p class="fragment">
+    <p class="">
         Example: 4/5/2017 is roughly - 1491415025702
     </p>
-    <p class="fragment">
+    <p class="">
         Example : 1/1/1777 is roughly - -6090400800000
     </p>
     <aside class="notes">
@@ -310,28 +310,28 @@ html = html + '&lt;/ul>';
 </section>
 <section>
     <h1>Date Declaration</h1>
-    <pre class="fragment"><code class="js">//Creates a date variable that is set to now;
+    <pre class=""><code class="js">//Creates a date variable that is set to now;
 var now = new Date();         </code></pre>
-    <pre class="fragment"><code class="js">// Wed Apr 05 2017 12:57:05 GMT-0500 (Central Daylight Time);
+    <pre class=""><code class="js">// Wed Apr 05 2017 12:57:05 GMT-0500 (Central Daylight Time);
 var newDate = new Date(1491415025702); </code></pre>
-    <pre class="fragment"><code class="js">//Tue Aug 17 2010 12:09:36 GMT-0500 (Central Daylight Time)
+    <pre class=""><code class="js">//Tue Aug 17 2010 12:09:36 GMT-0500 (Central Daylight Time)
 var newDate = new Date("2010/08/17 12:09:36"); 
 //Fri Jan 01 2010 00:00:00 GMT-0600 (Central Standard Time)
 var newDate2 = new Date("1/1/2010");</code></pre>
 </section>
 <section>
     <h1>More Specific Examples</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 new Date(year, month[, date[, hours[, minutes[, seconds[, milliseconds]]]]]);
     </code></pre>
-    <p class="fragment">
+    <p class="">
         Note: Month is zero based.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 //Tue Feb 01 2010 00:00:00 GMT-0600 (Central Standard Time)
 var d = new Date(2010, 1) 
     </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 //Thu Apr 15 2010 12:04:14 GMT-0500 (Central Daylight Time)
 var d = new Date(2010, 3, 15, 12, 4, 14) 
     </code></pre>
@@ -339,11 +339,11 @@ var d = new Date(2010, 3, 15, 12, 4, 14)
 <section>
     <h1>How do we set a specific date that we already know?</h1>
     <h2>Like September 9th, 2017</h2>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var d = new Date('9/9/2017')
     </code></pre>
-    <h2 class="fragment">or</h2>
-    <pre class="fragment"><code class="js">
+    <h2 class="">or</h2>
+    <pre class=""><code class="js">
 var d = new Date(2017, 8, 9) 
     </code></pre>
 
@@ -367,17 +367,17 @@ var birthday = new Date(1995, 11, 17, 3, 24, 0);
         Dates have very long outputs by default, but there are methods to retrieve parts of a date.
     </p>
 
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var d = new Date(2010, 0, 1);
 console.log(d.getFullYear()); //2010;
 
 console.log(d.getDate()); // 1
 </code></pre>
     <ul>
-        <li class="fragment">.getMonth()</li>
-        <li class="fragment">.getHours()</li>
-        <li class="fragment">.getMinutes()</li>
-        <li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype" target="_blank">etc.</a></li>
+        <li class="">.getMonth()</li>
+        <li class="">.getHours()</li>
+        <li class="">.getMinutes()</li>
+        <li class=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype" target="_blank">etc.</a></li>
     </ul>
 </section>
 <section>
@@ -424,7 +424,7 @@ var isNewer = d2 > d1;  //True
 <section>
     <h1>Adding values</h1>
     <p>Let's get the current date and add a week to it.</p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var d1 = new Date();
 var curDate = d1.getDate(); //Get the number for the current Date
 var newDate = curDate + 7; //Add value to it
@@ -432,14 +432,14 @@ d1.setDate(newDate);    // Set the new date
 console.log(d1); 
 </code></pre>
 
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 //Shorter
 var d1 = new Date();
 var newDate = d1.getDate() + 7; 
 d1.setDate(newDate);    
 console.log(d1); 
 </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 //Even Shorter
 var d1 = new Date();
 d1.setDate(d1.getDate() + 7);    
@@ -452,13 +452,13 @@ console.log(d1);
     <p>
         You don't have to stick to the traditional restrictions when adding values.
     </p>
-    <p class="fragment">
+    <p class="">
         You have 90 days from today for a warranty.
     </p>
-    <p class="fragment">
+    <p class="">
         You don't have to calculate the number of months.  JS will automatically handle the overflow.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var d1 = new Date();
 
 d1.setDate(d1.getDate() + 90);    
@@ -476,11 +476,11 @@ console.log(d1);
 
 
     <h4>
-        <code class="fragment">condition</code>
-        <code class="fragment">?</code>
-        <code class="fragment">expression1</code>
-        <code class="fragment">:</code>
-        <code class="fragment">expression2</code>
+        <code class="">condition</code>
+        <code class="">?</code>
+        <code class="">expression1</code>
+        <code class="">:</code>
+        <code class="">expression2</code>
     </h4>
 </section>
 <section>
@@ -501,7 +501,7 @@ if (name.length > 0){
             </code></pre>
 
     </div>
-    <div class="fragment">
+    <div class="">
         <h2>This</h2>
 
         <pre><code class="js">
@@ -513,19 +513,19 @@ var isValid = (name.length > 0) ? true: false;
 </section>
 <section>
     <h1>Where can you use this?</h1>
-    <div class="fragment">
+    <div class="">
         <p>Simple Validation</p>
         <pre><code class="js">
     var isValid = (name.length > 0) ? true: false;
             </code></pre>
     </div>
-    <div class="fragment">
+    <div class="">
         <p>Age Gate</p>
         <pre><code class="js">
     var oldEnough = (age > 17) ? true: false;
             </code></pre>
     </div>
-    <div class="fragment">
+    <div class="">
         <pre><code class="js">
     var prefix = (isMarried) ? "Mrs.": "Ms.";
             </code></pre>
@@ -536,9 +536,9 @@ var isValid = (name.length > 0) ? true: false;
     <p>
         You can access styles and change an element's styles inside of css.
     </p>
-    <h4><span class="fragment">object</span>
-        <span class="fragment">.style</span>
-        <span class="fragment">.[CSS Property]</span>
+    <h4><span class="">object</span>
+        <span class="">.style</span>
+        <span class="">.[CSS Property]</span>
     </h4>
 </section>
 <section>
@@ -553,13 +553,13 @@ var isValid = (name.length > 0) ? true: false;
 </section>
 <section>
     <h1>Remember Hyphens Aren't Valid in JavaScript</h1>
-    <pre class="fragment"><code class="css">
+    <pre class=""><code class="css">
     #div{
         background-color:#fff;
         margin-bottom: 20px;
     }
                             </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     var elm = document.getElementById('div');
     elm.style.backgroundColor = '#fff';
     elm.style.marginBottom = '#fff';
@@ -577,17 +577,17 @@ var isValid = (name.length > 0) ? true: false;
     </p>
     <h2><code>classList</code> Methods</h2>
     <ul>
-        <li class="fragment"><code>.add('class1', 'class2', ..)</code> - Adds one or more classes to the class list</li>
-        <li class="fragment"><code>.contains('class')</code> - returns <code>true</code> or <code>false</code> if the element contains the class.
+        <li class=""><code>.add('class1', 'class2', ..)</code> - Adds one or more classes to the class list</li>
+        <li class=""><code>.contains('class')</code> - returns <code>true</code> or <code>false</code> if the element contains the class.
         </li>
     </ul>
 </section>
 <section>
     <h2><code>classList</code> Methods Continued</h2>
     <ul>
-        <li class="fragment"><code>.item(index)</code> - Returns the index of the class if it is inside the element list</li>
-        <li class="fragment"><code>.remove('c1', 'c2', ....)</code> - removes one or more classes from an element</li>
-        <li class="fragment"><code>.toggle('c1')</code> - Adds or removes class based on if it exists or not</li>
+        <li class=""><code>.item(index)</code> - Returns the index of the class if it is inside the element list</li>
+        <li class=""><code>.remove('c1', 'c2', ....)</code> - removes one or more classes from an element</li>
+        <li class=""><code>.toggle('c1')</code> - Adds or removes class based on if it exists or not</li>
 
     </ul>
 </section>
@@ -616,18 +616,18 @@ var isValid = (name.length > 0) ? true: false;
         Event listeners allow us execute JavaScript when the user interacts with the document.
     </p>
     <ul>
-        <li class="fragment">addEventListener</li>
-        <li class="fragment">removeEventListener</li>
+        <li class="">addEventListener</li>
+        <li class="">removeEventListener</li>
     </ul>
 </section>
 <section id="eventListeners">
     <h1>addEventListener</h1>
     <h2>Syntax</h2>
     <h3>
-        <span class="fragment">element</span>
-        <span class="fragment">.addEventListener</span>
-        <span class="fragment">('click', </span>
-        <span class="fragment">function)</span>
+        <span class="">element</span>
+        <span class="">.addEventListener</span>
+        <span class="">('click', </span>
+        <span class="">function)</span>
     </h3>
 </section>
 <section>
@@ -645,7 +645,7 @@ var isValid = (name.length > 0) ? true: false;
     <pre><code class="xml">
        &lt;body onload="load()">
     </code></pre>
-    <p class="fragment">
+    <p class="">
         We may not always have access to the HTML though.
     </p>
 </section>
@@ -658,7 +658,7 @@ if (document.attachEvent ? document.readyState === "complete" : document.readySt
     document.addEventListener('DOMContentLoaded', fn);
 }
 </code></pre>
-<p class="fragment">
+<p class="">
     This ensures your code is consistency executed wherever it is placed.
 </p>
 </section>
