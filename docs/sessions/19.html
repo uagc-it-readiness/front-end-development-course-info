@@ -75,11 +75,11 @@
 
 
     <h4>
-        <code class="fragment">condition</code>
-        <code class="fragment">?</code>
-        <code class="fragment">expression1</code>
-        <code class="fragment">:</code>
-        <code class="fragment">expression2</code>
+        <code class="">condition</code>
+        <code class="">?</code>
+        <code class="">expression1</code>
+        <code class="">:</code>
+        <code class="">expression2</code>
     </h4>
 </section>
 <section>
@@ -100,7 +100,7 @@ if (name.length > 0){
             </code></pre>
 
     </div>
-    <div class="fragment">
+    <div class="">
         <h2>This</h2>
 
         <pre><code class="js">
@@ -112,19 +112,19 @@ var isValid = (name.length > 0) ? true: false;
 </section>
 <section>
     <h1>Where can you use this?</h1>
-    <div class="fragment">
+    <div class="">
         <p>Simple Validation</p>
         <pre><code class="js">
     var isValid = (name.length > 0) ? true: false;
             </code></pre>
     </div>
-    <div class="fragment">
+    <div class="">
         <p>Age Gate</p>
         <pre><code class="js">
     var oldEnough = (age > 17) ? true: false;
             </code></pre>
     </div>
-    <div class="fragment">
+    <div class="">
         <pre><code class="js">
     var prefix = (isMarried) ? "Mrs.": "Ms.";
             </code></pre>
@@ -135,9 +135,9 @@ var isValid = (name.length > 0) ? true: false;
     <p>
         You can access styles and change an element's styles inside of css.
     </p>
-    <h4><span class="fragment">object</span>
-        <span class="fragment">.style</span>
-        <span class="fragment">.[CSS Property]</span>
+    <h4><span class="">object</span>
+        <span class="">.style</span>
+        <span class="">.[CSS Property]</span>
     </h4>
 </section>
 <section>
@@ -152,13 +152,13 @@ var isValid = (name.length > 0) ? true: false;
 </section>
 <section>
     <h1>Remember Hyphens Aren't Valid in JavaScript</h1>
-    <pre class="fragment"><code class="css">
+    <pre class=""><code class="css">
     #div{
         background-color:#fff;
         margin-bottom: 20px;
     }
                             </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     var elm = document.getElementById('div');
     elm.style.backgroundColor = '#fff';
     elm.style.marginBottom = '#fff';
@@ -176,17 +176,17 @@ var isValid = (name.length > 0) ? true: false;
     </p>
     <h2><code>classList</code> Methods</h2>
     <ul>
-        <li class="fragment"><code>.add('class1', 'class2', ..)</code> - Adds one or more classes to the class list</li>
-        <li class="fragment"><code>.contains('class')</code> - returns <code>true</code> or <code>false</code> if the element contains the class.
+        <li class=""><code>.add('class1', 'class2', ..)</code> - Adds one or more classes to the class list</li>
+        <li class=""><code>.contains('class')</code> - returns <code>true</code> or <code>false</code> if the element contains the class.
         </li>
     </ul>
 </section>
 <section>
     <h2><code>classList</code> Methods Continued</h2>
     <ul>
-        <li class="fragment"><code>.item(index)</code> - Returns the index of the class if it is inside the element list</li>
-        <li class="fragment"><code>.remove('c1', 'c2', ....)</code> - removes one or more classes from an element</li>
-        <li class="fragment"><code>.toggle('c1')</code> - Adds or removes class based on if it exists or not</li>
+        <li class=""><code>.item(index)</code> - Returns the index of the class if it is inside the element list</li>
+        <li class=""><code>.remove('c1', 'c2', ....)</code> - removes one or more classes from an element</li>
+        <li class=""><code>.toggle('c1')</code> - Adds or removes class based on if it exists or not</li>
 
     </ul>
 </section>
@@ -215,18 +215,18 @@ var isValid = (name.length > 0) ? true: false;
         Event listeners allow us execute JavaScript when the user interacts with the document.
     </p>
     <ul>
-        <li class="fragment">addEventListener</li>
-        <li class="fragment">removeEventListener</li>
+        <li class="">addEventListener</li>
+        <li class="">removeEventListener</li>
     </ul>
 </section>
 <section id="eventListeners">
     <h1>addEventListener</h1>
     <h2>Syntax</h2>
     <h3>
-        <span class="fragment">element</span>
-        <span class="fragment">.addEventListener</span>
-        <span class="fragment">('click', </span>
-        <span class="fragment">function)</span>
+        <span class="">element</span>
+        <span class="">.addEventListener</span>
+        <span class="">('click', </span>
+        <span class="">function)</span>
     </h3>
 </section>
 <section>
@@ -244,7 +244,7 @@ var isValid = (name.length > 0) ? true: false;
     <pre><code class="xml">
        &lt;body onload="load()">
     </code></pre>
-    <p class="fragment">
+    <p class="">
         We may not always have access to the HTML though.
     </p>
 </section>
@@ -257,7 +257,7 @@ if (document.attachEvent ? document.readyState === "complete" : document.readySt
     document.addEventListener('DOMContentLoaded', fn);
 }
 </code></pre>
-<p class="fragment">
+<p class="">
     This ensures your code is consistency executed wherever it is placed.
 </p>
 </section>
@@ -267,10 +267,10 @@ if (document.attachEvent ? document.readyState === "complete" : document.readySt
                 ﻿<section id="labels">
     <h1>Labels</h1>
     <p>Labels are used to make inputs more accessible. </p>
-    <h3 class="fragment">&lt;label>Content&lt;/label></h3>
+    <h3 class="">&lt;label>Content&lt;/label></h3>
     <h3>Attributes</h3>
     <ul>
-        <li class="fragment"><code>for</code> - the ID of the corresponding input
+        <li class=""><code>for</code> - the ID of the corresponding input
         </li>
     </ul>
 </section>
@@ -293,15 +293,15 @@ if (document.attachEvent ? document.readyState === "complete" : document.readySt
     </p>
     <h3>Attributes</h3>
     <ul>
-        <li class="fragment"><code>type</code> - defines default behavior of the button.
+        <li class=""><code>type</code> - defines default behavior of the button.
             <ul>
-                <li class="fragment"><code>button</code></li>
-                <li class="fragment"><code>reset</code> - Clears inputs when in a form</li>
-                <li class="fragment"><code>submit</code> - Triggers a form submission</li>
+                <li class=""><code>button</code></li>
+                <li class=""><code>reset</code> - Clears inputs when in a form</li>
+                <li class=""><code>submit</code> - Triggers a form submission</li>
             </ul>
         </li>
-        <li class="fragment"><code>Name</code></li>
-        <li class="fragment"><code>Value</code></li>
+        <li class=""><code>Name</code></li>
+        <li class=""><code>Value</code></li>
     </ul>
     <aside class="notes">
         Mention the button input. Type is required.
@@ -320,13 +320,13 @@ if (document.attachEvent ? document.readyState === "complete" : document.readySt
     <p>
         Input elements are the primary way we retrieve information from the user.
     </p>
-    <h3 class="fragment">&lt;input type="text" value="" /&gt;</h3>
-    <h2 class="fragment">Input Types</h2>
+    <h3 class="">&lt;input type="text" value="" /&gt;</h3>
+    <h2 class="">Input Types</h2>
     <ul>
-        <li class="fragment">text</li>
-        <li class="fragment">password</li>
-        <li class="fragment">radio</li>
-        <li class="fragment">checkbox</li>
+        <li class="">text</li>
+        <li class="">password</li>
+        <li class="">radio</li>
+        <li class="">checkbox</li>
     </ul>
 </section>
 <section>
@@ -335,11 +335,11 @@ if (document.attachEvent ? document.readyState === "complete" : document.readySt
         There are many different attributes available to us, but we are only going to focus on the basics
     </p>
     <ul>
-        <li class="fragment"><code>id</code> and <code>class</code></li>
-        <li class="fragment"><code>type</code> - sets the behavior of the input </li>
-        <li class="fragment"><code>name</code> - represents the input's name inside a form.</li>
-        <li class="fragment"><code>value</code> - represents the current text or value for the input</li>
-        <li class="fragment"><code>placeholder</code> - text displayed before the element is filled out.</li>
+        <li class=""><code>id</code> and <code>class</code></li>
+        <li class=""><code>type</code> - sets the behavior of the input </li>
+        <li class=""><code>name</code> - represents the input's name inside a form.</li>
+        <li class=""><code>value</code> - represents the current text or value for the input</li>
+        <li class=""><code>placeholder</code> - text displayed before the element is filled out.</li>
     </ul>
 </section>
 <section id="textinput">
@@ -377,13 +377,13 @@ if (document.attachEvent ? document.readyState === "complete" : document.readySt
     <pre><code class="xml"><input type="radio" name="myradio" value="yes" /></code></pre>
     <h3>Important Attributes</h3>
     <ul>
-        <li class="fragment">
+        <li class="">
             <code>name</code>
         </li>
-        <li class="fragment">
+        <li class="">
             <code>value</code>
         </li>
-        <li class="fragment">
+        <li class="">
             <code>checked</code>
         </li>
     </ul>
@@ -407,13 +407,13 @@ if (document.attachEvent ? document.readyState === "complete" : document.readySt
     <pre>    <code class="xml"><input type="radio" name="myradio" value="yes" /></code>    </pre>
     <h3>Important Attributes</h3>
     <ul>
-        <li class="fragment">
+        <li class="">
             <code>name</code>
         </li>
-        <li class="fragment">
+        <li class="">
             <code>value</code>
         </li>
-        <li class="fragment">
+        <li class="">
             <code>checked</code>
         </li>
     </ul>
@@ -433,14 +433,14 @@ if (document.attachEvent ? document.readyState === "complete" : document.readySt
     <p>
         Selects, or dropdowns, are used to provide the user the ability to select one of many options. <code>Selects</code>        are composed posed of <code>option</code> tags.
     </p>
-    <h1 class="fragment">The <code>option</code> element</h1>
-    <p class="fragment">
+    <h1 class="">The <code>option</code> element</h1>
+    <p class="">
         <code>Option</code> are only used inside <code>select</code> elements.
     </p>
-    <h3 class="fragment">Attributes</h3>
+    <h3 class="">Attributes</h3>
     <ul>
-        <li class="fragment"><code>selected</code></li>
-        <li class="fragment"><code>value</code></li>
+        <li class=""><code>selected</code></li>
+        <li class=""><code>value</code></li>
     </ul>
 </section>
 
@@ -476,35 +476,35 @@ if (document.attachEvent ? document.readyState === "complete" : document.readySt
 </section>
                 ﻿<section id="form">
     <h1>The Form Tag</h1>
-    <h2 class="fragment">
+    <h2 class="">
         <pre><code class="xml">&lt;form&gt; Content &lt;/form&gt;</code></pre>
     </h2>
 
-    <h3 class="fragment">Accepted Attributes</h3>
+    <h3 class="">Accepted Attributes</h3>
     <ul>
-        <li class="fragment"><code>action</code> - Represents the url where we are sending the data.</li>
-        <li class="fragment">
+        <li class=""><code>action</code> - Represents the url where we are sending the data.</li>
+        <li class="">
             <code>method</code> - specifies the HTTP method used
             <ul>
-                <li class="fragment"><code>get</code></li>
-                <li class="fragment"><code>post</code></li>
+                <li class=""><code>get</code></li>
+                <li class=""><code>post</code></li>
             </ul>
         </li>
-        <li class="fragment"><code>name</code></li>
+        <li class=""><code>name</code></li>
    </ul>
 </section>
 
 <section>
     <h1>The Form Tag</h1>
 <ul>
-        <li class="fragment">
+        <li class="">
             <code>autocomplete</code>
             <ul>
-                <li class="fragment">on</li>
-                <li class="fragment">off</li>
+                <li class="">on</li>
+                <li class="">off</li>
             </ul>
         </li>
-        <li class="fragment">
+        <li class="">
             <code>novalidate</code>
         </li>
  
