@@ -7,6 +7,8 @@ Recreate the website in the picture [assignment2.png](assignment2.png).  You'll 
 A web version of the project will be posted in one week. Get as much done as you can using just the image.
 
 ## JS Component
+The JS Component is unrelated to the CSS/HTML Component.
+
 Write a lightweight JavaScript library for converting dates into readable strings.
 
 - Create a file and name it DateFormatting.js
