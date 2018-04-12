@@ -226,113 +226,8 @@ $('element2').slideUp(500)</code></pre>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 
-                <section id="npm">
-    <h1>NPM</h1>
-    <h2>Node Package Manager</h2>
-    <p>
-        You can search for packages at <a href="http://npmjs.com">npmjs.com</a>
-    </p>
-</section>
-<section>
-    <h1>What can you do with NPM?</h1>
-    <ul>
-        <li class="">
-            Manage project your dependencies
-        </li>
-        <li class="">Download utilities</li>
-        <li class="">Share your libraries with others</li>
-    </ul>
-</section>
-<section>
-    <h1>Getting started with NPM</h1>
-    <ol>
-        <li class="">Download and install node.js from <a href="http://nodejs.org">nodejs.org</a></li>
-        <li class="">Open your command line and type <code>npm -v</code> to verify everything installed properly</li>
-        <li class="">Initialize your project by typing <code>npm init</code> while in your project directory</li>
-        <li class="">Press enter a couple hundred times</li>
-        <li class="">Verify that a <code>package.json</code> was created.</li>
-    </ol>
-</section>
-<section>
-    <h1>We can now get started downloading packages.</h1>
-    <h2>Let's look at a couple of commands.</h2>
-    <ul>
-        <li class=""><code>npm install [package_name]</code> to install a package</li>
-        <li class=""><code>npm install [package_name] --save-dev</code> to install a package <strong>and</strong> save it to your package.json</li>
-        <li class=""><code>npm install [package_name] -g</code> to install a package globally.
-            <ul>
-                <li><code>npm install gulp-cli -g</code> installs gulp-cli globally and I can use <code>gulp</code> in the command
-                    line</li>
-            </ul>
-        </li>
-    </ul>
-</section>
-<section>
-    <h1>node_modules folder</h1>
-    <p>
-        NPM creates a node_modules folder whenever you run <code>npm install.</code> Do not include and commit this folder
-        to github.
-    </p>
-    <aside class="notes">
-        There are several ways to handle the ignore.
-    </aside>
-</section>
-<section>
-    <h1>Don't become too dependant on NPM</h1>
-    <ul>
-        <li class=""><a href="http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/">NPM & left-pad: Have We Forgotten How To Program?</a></li>
-        <li class=""><a href="https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c#.ux1bdsnt8">I’ve Just Liberated My Modules</a></li>
-    </ul>
-</section>
-                <section id="gulp">
-    <h1>Gulp Task Runner</h1>
-    <h2>Let's automate all the hard stuff!</h2>
-    <h2><a href="http://gulpjs.com">Gulpjs.com</a></h2>
-</section>
-<section>
-    <h1>What kind of stuff can we automate?</h1>
-    <ul>
-        <li class="">Asset Compression/Optimization</li>
-        <li class="">Code Validation</li>
-        <li class="">Unit Test</li>
-        <li class="">Deployments</li>
-        <li class="">Much more</li>
-    </ul>
-</section>
-<section>
-    <h1>Getting setup</h1>
-<h2>    <pre><code class="bash">
-    npm install gulp-cli -g
-    npm install gulp --save-dev
-        </code></pre>
-</h2>
-
-<h2 class="">
-    Install your required packages
-</h2>
-
-</section>
-<section>
-    <h1>Create your gulpfile.js</h1>
-
-    <pre><code class="js">
-        var gulp = require('gulp');
-
-        //Tasks executes when you type `gulp` in the console
-        gulp.task('default', function(){
-            console.log('task');
-        });
-
-         //Tasks executes when you type `gulp css` in the console
-        gulp.task('css', function(){
-            console.log('task');
-        });
-        
-        </code></pre>
-</section>
-
                 <section>
-                    Questions?
+                    Questions on review or NPM/Gulp?
                 </section>
                 <section id="child">
     <h1>The Child Selector</h1>
@@ -490,8 +385,7 @@ $('element').css({
                 <section id="traversing">
     <h1>Traversing with jQuery</h1>
     <p>
-        Traversing your DOM allows you to write code that wont interfere with other parts of your application. You can write a specific
-        selector for a container and then write less specific selectors for behaviors.
+        Traversing your DOM allows you to write code that wont interfere with other parts of your application.
     </p>
 </section>
 <section>
