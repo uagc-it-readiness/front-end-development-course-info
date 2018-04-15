@@ -36,7 +36,7 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>9/26/2017</h1>
+                    <h1>4/19/2018</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
@@ -74,7 +74,7 @@
 </section>
 <section>
     <h1>Don't assume there is something wrong with the browser.</h1>
-    <h2 class="fragment">Only beginners blame the computer first. Developers with egos don't last long.</h2>
+    <h2 class="">Only beginners blame the computer first. Developers with egos don't last long.</h2>
     <aside class="notes">
         If you use a calculator and plug in 4+4 and it ends up saying 0, don't assume the calculator is broken.
     </aside>
@@ -84,10 +84,10 @@
     <p>
         Don't write 20 or 30 lines of code without testing what you have written.
     </p>
-    <p class="fragment">
+    <p class="">
         Batch your work into smaller units to understand what is going on.
     </p>
-    <p class="fragment">
+    <p class="">
         Bugs are easier to find when they are small.
     </p>
 </section>
@@ -96,15 +96,15 @@
     <p>
         I want to validate a form field when I click a button.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
             $('btn').on('click', function(){
                 console.log('click worked');
             });
             </code></pre>
-    <p class="fragment">
+    <p class="">
         I test that my click is working before continuing with my work.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
             $('btn').on('click', function(){
                 console.log($('input').val());
             });
@@ -122,7 +122,7 @@
     <p>
         Most error messages by your editor or browser point you to the exact line that is broken.
     </p>
-    <p class="fragment">
+    <p class="">
         If you can't tell what's going on, copy and paste that into Google.
     </p>
 </section>
@@ -131,12 +131,12 @@
     <p>
         You loose understanding when copy and pasting someone elses code.
     </p>
-    <h2 class="fragment">Manually type out code instead of copying it.</h2>
+    <h2 class="">Manually type out code instead of copying it.</h2>
 </section>
 <section>
     <h1>Take advantage of your tools</h1>
-    <h2 class="fragment">Use Google Chrome's Debugger</h2>
-    <h2 class="fragment">Find "linter"s for your editor</h2>
+    <h2 class="">Use Google Chrome's Debugger</h2>
+    <h2 class="">Find "linter"s for your editor</h2>
     <aside class="notes">Demo this.</aside>
 </section>
 <section>
@@ -171,12 +171,12 @@
 </section>
 <section>
     <h1>We've been doing callbacks already.</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     document.getElementById('id').addEventListener('click', function(){
         //Callback
     });
             </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     $('button').on('click', function(){
         //This is a callback
     });            
@@ -184,7 +184,7 @@
 </section>
 <section>
     <h1>Using callbacks for the UI</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     $('button').on('click', function(){
          //Click Event
          $('.container').slideDown('fast', function(){
@@ -206,7 +206,7 @@
     <p>
         The Blur event is triggered when an element has lost focus.
     </p>
-    <h2 class="fragment">Primarily used on inputs.</h2>
+    <h2 class="">Primarily used on inputs.</h2>
 </section>
 <section>
     <h1>Example</h1>
@@ -227,17 +227,17 @@
     <p>
         The hover events allow you to add JavaScript to elements as the user uses their mouse to move around them.
     </p>
-    <!--<h2 class="fragment">The hover event can be useful for</h2>
+    <!--<h2 class="">The hover event can be useful for</h2>
     <ul>
-        <li class="fragment">Interactive Menus</li>
-        <li class="fragment"></li>
-        <li class="fragment"></li>
+        <li class="">Interactive Menus</li>
+        <li class=""></li>
+        <li class=""></li>
     </ul>-->
-    <p class="fragment">A full hover event uses two event listeners.</p>
+    <p class="">A full hover event uses two event listeners.</p>
 </section>
 <section>
     <h1>Syntax</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
         var elm = $('.my-element');     
 
         elm.on('mouseenter', function(){
@@ -267,13 +267,13 @@
 <section>
     <h1>Basic Data Attribute Usage</h1>
     <h2>Setting an attribute in HTML </h2>
-    <h2 class="fragment">
-        <pre class="fragment"><code class="xml">&lt;div data-[name]></code></pre>
+    <h2 class="">
+        <pre class=""><code class="xml">&lt;div data-[name]></code></pre>
     </h2>
-    <pre class="fragment"><code class="xml">
+    <pre class=""><code class="xml">
     <div data-type="My Data Type"></div>        
         </code></pre>
-    <pre class="fragment"><code class="xml">
+    <pre class=""><code class="xml">
     <div data-color="#000"></div>        
         </code></pre>
 </section>
@@ -302,7 +302,7 @@
     <p>
         We can dynamically add and update a data attribute as we need to.
     </p>
-    <div class="fragment">
+    <div class="">
         <h3>
             <pre><code class="js">
                 
@@ -320,8 +320,8 @@
 <section>
     <h1>You can use more than just Strings and Numbers with data attributes</h1>
     <ul>
-        <li class="fragment">Objects</li>
-        <li class="fragment">Functions</li>
+        <li class="">Objects</li>
+        <li class="">Functions</li>
     </ul>
 </section>
 <section>
@@ -341,11 +341,11 @@
         Stands for <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation. It is
         object syntax that is standardized by the same organization that standardizes JavaScript.
     </p>
-    <p class="fragment">
+    <p class="">
         JSON is frequently used to communicate data between programming languages. XML (extensible markup language) was primarily
         used before JSON.
     </p>
-    <p class="fragment">
+    <p class="">
         A JSON file has the extension of .json. It is frequently used for configuration or smaller data sets.
     </p>
 </section>
@@ -374,19 +374,19 @@
 </section>
 <section>
     <h1>JSON in JavaScript</h1>
-    <div class="fragment">
+    <div class="">
         <h2>Convert a string to JSON</h2>
     </div>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
             var jsonString = "{\"name\": \"Daniel\"}";
             var jsonObj = JSON.parse(jsonString);
 
             console.log(jsonObj.name);
             </code></pre>
-    <div class="fragment">
+    <div class="">
         <h2>Convert Object to a JSON string</h2>
     </div>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
              var obj = {name: "Daniel"};
             var jsonString = JSON.stringify(obj);
 
@@ -396,15 +396,15 @@
                 <section id="ajax1">
     <h1>AJAX</h1>
     <ul>
-        <li class="fragment"><strong>A</strong>syncronous</li>
-        <li class="fragment"><strong>J</strong>avascript</li>
-        <li class="fragment"><strong>A</strong>nd</li>
-        <li class="fragment"><strong>X</strong>ml</li>
+        <li class=""><strong>A</strong>syncronous</li>
+        <li class=""><strong>J</strong>avascript</li>
+        <li class=""><strong>A</strong>nd</li>
+        <li class=""><strong>X</strong>ml</li>
     </ul>
-    <p class="fragment">
+    <p class="">
         JavaScript calls a url and the URL returns XML.
     </p>
-    <p class="fragment">
+    <p class="">
         Most web services return JSON now a days.
     </p>
 </section>
@@ -420,7 +420,7 @@
     <p>
         jQuery provides us a very easy and quick way to perform ajax calls.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
         $.ajax({
             url:'',
             method:'GET|POST|PATCH|DELETE',
@@ -432,15 +432,15 @@
 <section>
 <h1>Method Types</h1>
 <ul>
-    <li class="fragment"><code>GET</code> - Retrieve </li>
-    <li class="fragment"><code>POST</code> - Create</li>
-    <li class="fragment"><code>PATCH</code> - Modify</li>
-    <li class="fragment"><code>DELETE</code> - Delete</li>
+    <li class=""><code>GET</code> - Retrieve </li>
+    <li class=""><code>POST</code> - Create</li>
+    <li class=""><code>PATCH</code> - Modify</li>
+    <li class=""><code>DELETE</code> - Delete</li>
 </ul>
 </section>
 <section>
     <h1>$.ajax simplified</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     $.get('blah.json', function(response){
     });
 
@@ -456,7 +456,7 @@
     <p>
         So far, this has been the primary method for adding content to an html element.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     var errors = $('.error');
     var currentHtml = errors.html();
 
@@ -470,7 +470,7 @@
 </section>
 <section>
     <h1>The jQuery Way</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     var errors = $('.error');
 
     //Add to the end
@@ -488,13 +488,13 @@
         Do your best to not use these methods inside of a loop. Use them after a loop has completed.
     </p>
     <h2>Don't</h2>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
         for(var i = 0; i < errors.length;){
             $('error').append('This is an error');
         }
         </code></pre>
     <h2>Do</h2>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
         var errorList = ''
         for(var i = 0; i < errors.length;){
             errorList += 'This is my error';
@@ -512,10 +512,10 @@
     <p>
         One of the primary methods for sending data from a website to a web server to be processed.
     </p>
-    <p class="fragment">
+    <p class="">
         You have primarily seen POST requests on HTML forms and they provide a pretty awful experience.
     </p>
-    <h2 class="fragment">We can create a better experience by using AJAX</h2>
+    <h2 class="">We can create a better experience by using AJAX</h2>
 </section>
 <section>
     <h1><a href="http://localhost/WebApplication1/">Demo: HTML form post vs Ajax Post</a></h1>
@@ -526,12 +526,12 @@
 </section>
 <section>
     <h1>jQuery $.post() method</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     $.post('[url]', 'object to send' , function(response){
         //
     });
         </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     $.post('api/user', {userName: 'Daniel'} , function(response){
         //
     });

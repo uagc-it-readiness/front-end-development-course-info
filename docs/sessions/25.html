@@ -36,7 +36,7 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>9/21/2017</h1>
+                    <h1>4/17/2018</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
@@ -73,16 +73,16 @@
     <p>
         The child selector targets elements immediately inside of the parent element.
     </p>
-    <p class="fragment">
+    <p class="">
         Think of it as if you control your children, but your grand children totally ignore the rules.
     </p>
-    <h2 class="fragment">
+    <h2 class="">
         <pre><code class="css">div > a {/* css rules */}</code></pre>
     </h2>
 </section>
 <section>
     <h1>Child vs Descendant</h1>
-    <div class="fragment">
+    <div class="">
         <pre><code class="xml"><div>
     <a href="">Hyper Link</a>
     <p>
@@ -90,18 +90,14 @@
     </p>
     </div></code></pre>
     </div>
-    <h3 class="fragment">
+    <h3 class="">
         <pre><code class="css">div a {/* css rules */}</code></pre>
     </h3>
-    <h3 class="fragment">Applies to every a</h2>
-        <h3 class="fragment">
+    <h3 class="">Applies to every a</h2>
+        <h3 class="">
             <pre><code class="css">div > a {/* css rules */}</code></pre>
         </h3>
-        <h3 class="fragment">Applies only to the a immediately after the div</h3>
-</section>
-<section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="WdVMNd" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-ChildSelectors" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/WdVMNd/">UA-ITR-ChildSelectors</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+        <h3 class="">Applies only to the a immediately after the div</h3>
 </section>
                 <section id="jq-css">
     <h1>jQuery .css()</h1>
@@ -112,17 +108,17 @@
 <section>
     <h1>Retrieving values</h1>
     <p>You can get the current value of a CSS property in jQuery by passing a string into the .css() method.</p>
-    <div class="fragment">
+    <div class="">
         <pre><code class="js">
     var x = $('element').css('height'); // Retrieves the css height of the element
                 </code></pre>
     </div>
-    <div class="fragment">
+    <div class="">
         <pre><code class="js">
     var x = $('element').css('backgroundColor'); // Retrieves the color value of the element
                 </code></pre>
     </div>
-    <div class="fragment">
+    <div class="">
         <pre><code class="js">
     var x = $('element').css('background-color'); // Retrieves the color value of the element
                 </code></pre>
@@ -133,13 +129,13 @@
     <p>
         There are two ways to set CSS using jQuery. The first method is to pass in two strings.
     </p>
-    <div class="fragment">
+    <div class="">
         <pre><code class="js">
 $('element').css('background-color', '#aa0000');    
 $('element').css('padding', '20px');    
     </code></pre>
     </div>
-    <div class="fragment">
+    <div class="">
         <pre><code class="js">
 $('element').css('background-color', '');    //Resets property
 $('element').css('padding', '');    //Resets property
@@ -152,7 +148,7 @@ $('element').css('padding', '');    //Resets property
     <p>
         You can set multiple CSS values by passing in a javascript object
     </p>
-    <div class="fragment">
+    <div class="">
         <pre><code class="js">
 $('element').css({
     backgroundColor: '#aa0000',
@@ -167,12 +163,6 @@ $('element').css({
     </code></pre>
     </div>
 
-</section>
-<section>
-    <!-- Example -->
-    <h1>Example Code</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="RxXQwR" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-jQUery-CSS" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/RxXQwR/">UA-ITR-jQUery-CSS</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
                 <section id="jq-class">
     <h1>jQuery Class Manipulation</h1>
@@ -217,10 +207,6 @@ $('element').css({
         console.log(x);  //outputs true or false;
 </code></pre>
 </section>
-<section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="qpexBW" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-jQUery-ClassList" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/qpexBW/">UA-ITR-jQUery-ClassList</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
                 <section id="traversing">
     <h1>Traversing with jQuery</h1>
     <p>
@@ -236,17 +222,7 @@ $('element').css({
     <aside class="notes">This helps with performance</aside>
 </section>
 <section>
-    <h1>Example</h1>
-    <pre><code class="js">
-    $('.myForm').find('input[type="text"]').on('blur', validate);            
-    $('.myForm').find('button').on('click', submit);            
-</code></pre>
-    <aside class="notes">
-        Explain the performance issues with this.
-    </aside>
-</section>
-<section>
-    <h1>A little more realistic example</h1>
+    <h1>A highly performant example</h1>
     <pre><code class="js">
     var frm = $('.myForm');
 
@@ -266,13 +242,14 @@ $('element').css({
     <p>
         The .closest() method searches up the DOM until it finds the <strong>first</strong> element that matches.
     </p>
+	<p><a href="https://api.jquery.com/closest/" target="_blank">.closest() API</a></p>
 </section>
 <section>
     <h1>Example</h1>
     <pre><code class="js">
         $('.btn').closest('div').hide();    
         </code></pre>
-    <pre class="fragment"><code class="xml">
+    <pre class=""><code class="xml">
     <div> <!--This div does not get targeted-->
         <div> <!--This div gets targeted-->
               <button class="btn">Click Me</button>
@@ -291,15 +268,15 @@ $('element').css({
         The jQuery .filter() method takes the current jQuery object and reduces the set based on the following.
     </p>
     <ul>
-        <li class="fragment">A selector</li>
-        <li class="fragment">A function</li>
-        <li class="fragment">A DOM element</li>
-        <li class="fragment">A jQuery Selection</li>
+        <li class="">A selector</li>
+        <li class="">A function</li>
+        <li class="">A DOM element</li>
+        <li class="">A jQuery Selection</li>
     </ul>
 </section>
 <section>
     <h1>Filtering with a selector.</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     var inputs = $('input');
     var textInputs = inputs.filter('[type="text"]');
     var checkBoxes = inputs.filter('[type="checkbox"]');
@@ -307,7 +284,7 @@ $('element').css({
 </section>
 <section>
     <h1>Filtering with a function</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     var inputs = $('input');
     var fifthInput = inputs.filter(function(index){
         if (index === 4){
@@ -323,7 +300,7 @@ $('element').css({
     <p>
         These are jQuery specific selectors. They do not take advantage of the browser's built in selector system.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 
     var evens  = $('li:even'); 
 
@@ -339,7 +316,7 @@ $('element').css({
         This selector doesn't take advantage of the faster native selector engine inside of JavaScript. The documentation recommends
         you select your elements and then use <strong>.filter()</strong> to get your desired result set.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 
     var listItems = $('li');            
     var evenItems = listItems.filter(':even');
@@ -365,20 +342,17 @@ $('element').css({
 </section>
 <section>
     <h1>Don't assume there is something wrong with the browser.</h1>
-    <h2 class="fragment">Only beginners blame the computer first. Developers with egos don't last long.</h2>
-    <aside class="notes">
-        If you use a calculator and plug in 4+4 and it ends up saying 0, don't assume the calculator is broken.
-    </aside>
+    <h2 class="">Your computer doesn't hate you.</h2>
 </section>
 <section>
     <h1>Batch your work.</h1>
     <p>
         Don't write 20 or 30 lines of code without testing what you have written.
     </p>
-    <p class="fragment">
+    <p class="">
         Batch your work into smaller units to understand what is going on.
     </p>
-    <p class="fragment">
+    <p class="">
         Bugs are easier to find when they are small.
     </p>
 </section>
@@ -387,15 +361,15 @@ $('element').css({
     <p>
         I want to validate a form field when I click a button.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
             $('btn').on('click', function(){
                 console.log('click worked');
             });
             </code></pre>
-    <p class="fragment">
+    <p class="">
         I test that my click is working before continuing with my work.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
             $('btn').on('click', function(){
                 console.log($('input').val());
             });
@@ -413,21 +387,21 @@ $('element').css({
     <p>
         Most error messages by your editor or browser point you to the exact line that is broken.
     </p>
-    <p class="fragment">
+    <p class="">
         If you can't tell what's going on, copy and paste that into Google.
     </p>
 </section>
 <section>
     <h1>Use caution when copy and pasting examples.</h1>
     <p>
-        You loose understanding when copy and pasting someone elses code.
+        You lose understanding when copy and pasting someone else's code.
     </p>
-    <h2 class="fragment">Manually type out code instead of copying it.</h2>
+    <h2 class="">Manually type out code instead of copying it.</h2>
 </section>
 <section>
     <h1>Take advantage of your tools</h1>
-    <h2 class="fragment">Use Google Chrome's Debugger</h2>
-    <h2 class="fragment">Find "linter"s for your editor</h2>
+    <h2 class="">Use Google Chrome's Debugger</h2>
+    <h2 class="">Find "linters" for your editor</h2>
     <aside class="notes">Demo this.</aside>
 </section>
 <section>
@@ -445,6 +419,7 @@ $('element').css({
 </section>
 <section>
     <h1>Examples</h1>
+	<p>Can someone tell me what this will do?</p>
     <pre><code class="js">
     function myCallback()
         console.log('Operation Complete');
@@ -462,12 +437,12 @@ $('element').css({
 </section>
 <section>
     <h1>We've been doing callbacks already.</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     document.getElementById('id').addEventListener('click', function(){
         //Callback
     });
             </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     $('button').on('click', function(){
         //This is a callback
     });            
@@ -475,7 +450,7 @@ $('element').css({
 </section>
 <section>
     <h1>Using callbacks for the UI</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     $('button').on('click', function(){
          //Click Event
          $('.container').slideDown('fast', function(){
@@ -490,14 +465,14 @@ $('element').css({
 <section>
     <!-- jsFiddle Example -->
     <script async src="//jsfiddle.net/JonMiddaugh/64ywm3cz/embed/"></script>
-    <a href="https://jsfiddle.net/JonMiddaugh/64ywm3cz/" target="_blank"></a>
+    <a href="https://jsfiddle.net/JonMiddaugh/64ywm3cz/" target="_blank">Previous JSFiddle example</a>
 </section>
                 <section id="blur">
     <h1>The Blur Event</h1>
     <p>
         The Blur event is triggered when an element has lost focus.
     </p>
-    <h2 class="fragment">Primarily used on inputs.</h2>
+    <h2 class="">Primarily used on inputs.</h2>
 </section>
 <section>
     <h1>Example</h1>
@@ -518,17 +493,17 @@ $('element').css({
     <p>
         The hover events allow you to add JavaScript to elements as the user uses their mouse to move around them.
     </p>
-    <!--<h2 class="fragment">The hover event can be useful for</h2>
+    <!--<h2 class="">The hover event can be useful for</h2>
     <ul>
-        <li class="fragment">Interactive Menus</li>
-        <li class="fragment"></li>
-        <li class="fragment"></li>
+        <li class="">Interactive Menus</li>
+        <li class=""></li>
+        <li class=""></li>
     </ul>-->
-    <p class="fragment">A full hover event uses two event listeners.</p>
+    <p class="">A full hover event uses two event listeners.</p>
 </section>
 <section>
     <h1>Syntax</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
         var elm = $('.my-element');     
 
         elm.on('mouseenter', function(){
@@ -544,6 +519,7 @@ $('element').css({
         });
         
     </code></pre>
+	<p>A lot of js frameworks will add the hover class for you.</p>
 </section>
 <section>
     <p data-height="265" data-theme-id="0" data-slug-hash="wpVpVq" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-jQUery-Hover" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/wpVpVq/">UA-ITR-jQUery-Hover</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
@@ -558,13 +534,13 @@ $('element').css({
 <section>
     <h1>Basic Data Attribute Usage</h1>
     <h2>Setting an attribute in HTML </h2>
-    <h2 class="fragment">
-        <pre class="fragment"><code class="xml">&lt;div data-[name]></code></pre>
+    <h2 class="">
+        <pre class=""><code class="xml">&lt;div data-[name]></code></pre>
     </h2>
-    <pre class="fragment"><code class="xml">
+    <pre class=""><code class="xml">
     <div data-type="My Data Type"></div>        
         </code></pre>
-    <pre class="fragment"><code class="xml">
+    <pre class=""><code class="xml">
     <div data-color="#000"></div>        
         </code></pre>
 </section>
@@ -593,7 +569,7 @@ $('element').css({
     <p>
         We can dynamically add and update a data attribute as we need to.
     </p>
-    <div class="fragment">
+    <div class="">
         <h3>
             <pre><code class="js">
                 
@@ -611,8 +587,8 @@ $('element').css({
 <section>
     <h1>You can use more than just Strings and Numbers with data attributes</h1>
     <ul>
-        <li class="fragment">Objects</li>
-        <li class="fragment">Functions</li>
+        <li class="">Objects</li>
+        <li class="">Functions</li>
     </ul>
 </section>
 <section>
