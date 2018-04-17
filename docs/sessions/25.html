@@ -210,8 +210,7 @@ $('element').css({
                 <section id="traversing">
     <h1>Traversing with jQuery</h1>
     <p>
-        Traversing your DOM allows you to write code that wont interfere with other parts of your application. You can write a specific
-        selector for a container and then write less specific selectors for behaviors.
+        Traversing your DOM allows you to write code that wont interfere with other parts of your application.
     </p>
 </section>
 <section>
@@ -240,9 +239,10 @@ $('element').css({
 <section>
     <h1>.closest()</h1>
     <p>
-        The .closest() method searches up the DOM until it finds the <strong>first</strong> element that matches.
+        The .closest() method checks the current element first and then searches up the DOM until it finds the <strong>first</strong> element that matches.
     </p>
 	<p><a href="https://api.jquery.com/closest/" target="_blank">.closest() API</a></p>
+	<p><a href="https://jsfiddle.net/JonMiddaugh/xpvt214o/146598/" target="_blank" >Example of how the search works</a></p>
 </section>
 <section>
     <h1>Example</h1>
@@ -257,6 +257,12 @@ $('element').css({
     </div>
         </code></pre>
 
+</section>
+<section>
+	<h1>.parent() and .children()</h1>
+	<p>These are useful for <italic>only</italic> searching above the object or below the object.</p>
+    <p><a href="https://api.jquery.com/parent/">.parent()</a></p>
+	<p><a href="https://api.jquery.com/children/">.children()</a></p>
 </section>
 <section>
     <p data-height="265" data-theme-id="0" data-slug-hash="PEMQYp" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-jQUery-Clossets" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/PEMQYp/">UA-ITR-jQUery-Clossets</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
