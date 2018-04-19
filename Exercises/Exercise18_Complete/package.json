@@ -1,0 +1,16 @@
+{
+  "name": "gulp-starter",
+  "version": "1.0.0",
+  "description": "In the folder labeled 'basic' you will find an HTML document with content that should display in a modal.  Write code to fulfill the following requirements.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.7",
+    "gulp": "^3.9.1"
+  }
+}
