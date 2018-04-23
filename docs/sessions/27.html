@@ -36,7 +36,7 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>9/28/2017</h1>
+                    <h1>4/24/2018</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
@@ -60,11 +60,11 @@
         Stands for <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation. It is
         object syntax that is standardized by the same organization that standardizes JavaScript.
     </p>
-    <p class="fragment">
+    <p class="">
         JSON is frequently used to communicate data between programming languages. XML (extensible markup language) was primarily
         used before JSON.
     </p>
-    <p class="fragment">
+    <p class="">
         A JSON file has the extension of .json. It is frequently used for configuration or smaller data sets.
     </p>
 </section>
@@ -93,19 +93,19 @@
 </section>
 <section>
     <h1>JSON in JavaScript</h1>
-    <div class="fragment">
+    <div class="">
         <h2>Convert a string to JSON</h2>
     </div>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
             var jsonString = "{\"name\": \"Daniel\"}";
             var jsonObj = JSON.parse(jsonString);
 
             console.log(jsonObj.name);
             </code></pre>
-    <div class="fragment">
+    <div class="">
         <h2>Convert Object to a JSON string</h2>
     </div>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
              var obj = {name: "Daniel"};
             var jsonString = JSON.stringify(obj);
 
@@ -115,15 +115,15 @@
                 <section id="ajax1">
     <h1>AJAX</h1>
     <ul>
-        <li class="fragment"><strong>A</strong>syncronous</li>
-        <li class="fragment"><strong>J</strong>avascript</li>
-        <li class="fragment"><strong>A</strong>nd</li>
-        <li class="fragment"><strong>X</strong>ml</li>
+        <li class=""><strong>A</strong>syncronous</li>
+        <li class=""><strong>J</strong>avascript</li>
+        <li class=""><strong>A</strong>nd</li>
+        <li class=""><strong>X</strong>ml</li>
     </ul>
-    <p class="fragment">
+    <p class="">
         JavaScript calls a url and the URL returns XML.
     </p>
-    <p class="fragment">
+    <p class="">
         Most web services return JSON now a days.
     </p>
 </section>
@@ -139,7 +139,7 @@
     <p>
         jQuery provides us a very easy and quick way to perform ajax calls.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
         $.ajax({
             url:'',
             method:'GET|POST|PATCH|DELETE',
@@ -151,15 +151,15 @@
 <section>
 <h1>Method Types</h1>
 <ul>
-    <li class="fragment"><code>GET</code> - Retrieve </li>
-    <li class="fragment"><code>POST</code> - Create</li>
-    <li class="fragment"><code>PATCH</code> - Modify</li>
-    <li class="fragment"><code>DELETE</code> - Delete</li>
+    <li class=""><code>GET</code> - Retrieve </li>
+    <li class=""><code>POST</code> - Create</li>
+    <li class=""><code>PATCH</code> - Modify</li>
+    <li class=""><code>DELETE</code> - Delete</li>
 </ul>
 </section>
 <section>
     <h1>$.ajax simplified</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     $.get('blah.json', function(response){
     });
 
@@ -175,10 +175,10 @@
     <p>
         One of the primary methods for sending data from a website to a web server to be processed.
     </p>
-    <p class="fragment">
+    <p class="">
         You have primarily seen POST requests on HTML forms and they provide a pretty awful experience.
     </p>
-    <h2 class="fragment">We can create a better experience by using AJAX</h2>
+    <h2 class="">We can create a better experience by using AJAX</h2>
 </section>
 <section>
     <h1><a href="http://localhost/WebApplication1/">Demo: HTML form post vs Ajax Post</a></h1>
@@ -189,12 +189,12 @@
 </section>
 <section>
     <h1>jQuery $.post() method</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     $.post('[url]', 'object to send' , function(response){
         //
     });
         </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     $.post('api/user', {userName: 'Daniel'} , function(response){
         //
     });
