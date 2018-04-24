@@ -9,6 +9,7 @@ $(document).ready(function () {
             success: function(response){
 				let appendEl = $('#append');
 				for(var i = 0; i < response.length; i++){
+					debugger;
 					appendEl.append('<li>Index: '+i+' Title: '+response[i].title+'</li>');
 				}
 			},
