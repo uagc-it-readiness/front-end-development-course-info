@@ -72,16 +72,16 @@
     <h1>Syntax</h1>
     <pre><code class="js">
 {
-    "name": "Daniel",
+    "name": "Jon",
     "isAwake": true,
     "count": 3,
-    "languages": ["JavaScript", "C#"],
+    "languages": ["JavaScript", "Java"],
     "job":{
         "field": "Development",
         "responsibilities": ["training", "coding"],
         "boss": {
-            "name": "Jarrod",
-            "title": "VP of Tech"
+            "name": "Zac",
+            "title": "Sr. Manager"
         }
     }
 
@@ -97,7 +97,7 @@
         <h2>Convert a string to JSON</h2>
     </div>
     <pre class=""><code class="js">
-            var jsonString = "{\"name\": \"Daniel\"}";
+            var jsonString = "{\"name\": \"Jon\"}";
             var jsonObj = JSON.parse(jsonString);
 
             console.log(jsonObj.name);
@@ -106,10 +106,10 @@
         <h2>Convert Object to a JSON string</h2>
     </div>
     <pre class=""><code class="js">
-             var obj = {name: "Daniel"};
+             var obj = {name: "Jon"};
             var jsonString = JSON.stringify(obj);
 
-            console.log(jsonString); //"{\"name\": \"Daniel\"}";
+            console.log(jsonString); //"{\"name\": \"Jon\"}";
             </code></pre>
 </section>
                 <section id="ajax1">
@@ -142,7 +142,7 @@
     <pre class=""><code class="js">
         $.ajax({
             url:'',
-            method:'GET|POST|PATCH|DELETE',
+            method:'GET|POST|PATCH|PUT|DELETE',
             success: function(response){},
             failure:function(response){}
         })
@@ -154,8 +154,11 @@
     <li class=""><code>GET</code> - Retrieve </li>
     <li class=""><code>POST</code> - Create</li>
     <li class=""><code>PATCH</code> - Modify</li>
+	<li class=""><code>PUT</code> - Update</li>
     <li class=""><code>DELETE</code> - Delete</li>
 </ul>
+<p>PATCH updates existing, PUT replaces altogether.  Remember it as CRUD operations.</p>
+<p><a href="https://stackoverflow.com/questions/24241893/rest-api-patch-or-put" target="_blank">Difference between PATCH and PUT</a>
 </section>
 <section>
     <h1>$.ajax simplified</h1>
@@ -167,8 +170,10 @@
 </section>
 <section>
     <!-- JS Fiddle -->
-    <script async src="//jsfiddle.net/JonMiddaugh/29530fe8/embed/"></script>
-    <a href="https://jsfiddle.net/JonMiddaugh/29530fe8/" target="_blank"></a>
+    <script async src="//jsfiddle.net/JonMiddaugh/xqo1s9re/2/embed/"></script>
+    <p><a href="https://jsfiddle.net/JonMiddaugh/xqo1s9re/2/" target="_blank">fiddle example</a></p>
+	<br>
+	<p>If you use jsfiddle and want to simulate ajax calls, use /echo</p>
 </section>
                 <section id="post">
     <h1>Http POST Method</h1>
@@ -176,16 +181,9 @@
         One of the primary methods for sending data from a website to a web server to be processed.
     </p>
     <p class="">
-        You have primarily seen POST requests on HTML forms and they provide a pretty awful experience.
+        You have primarily seen POST requests on HTML forms.
     </p>
     <h2 class="">We can create a better experience by using AJAX</h2>
-</section>
-<section>
-    <h1><a href="http://localhost/WebApplication1/">Demo: HTML form post vs Ajax Post</a></h1>
-    <p>
-        This will only work on my machine.
-    </p>
-    <!-- Demo -->
 </section>
 <section>
     <h1>jQuery $.post() method</h1>
@@ -195,7 +193,7 @@
     });
         </code></pre>
     <pre class=""><code class="js">
-    $.post('api/user', {userName: 'Daniel'} , function(response){
+    $.post('api/user', {userName: 'Jon'} , function(response){
         //
     });
         </code></pre>
