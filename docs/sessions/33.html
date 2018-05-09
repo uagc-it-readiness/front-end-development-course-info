@@ -36,16 +36,13 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>10/24/2017</h1>
+                    <h1>5/10/2018</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
                         <div>
                             <h2>Review</h2>
                             <ul>
-                                <li>
-                                    <a href="#bs-intro">Bootstrap Intro</a>
-                                </li>
                                 <li>
                                     <a href="#bs-containers">Layout</a>
                                 </li>
@@ -93,30 +90,14 @@
                     <h1>Reminder:</h1>
                     <ul>
                         <li>Resumes</li>
-                        <li>Business Cards - vistaprint.com - 500 cards for $15</li>
+                        <li>Business Cards - vistaprint.com - 100 cards for $16</li>
                         <li>Lynda.com</li>
                     </ul>
                 </section>
-                <section>
-                    <h1>Nov 14th</h1>
-                </section>
-                <section id="bs-intro">
-    <h1>Bootstrap</h1>
-    <ul>
-        <li class="fragment">Initial Release - Aug 19, 2011</li>
-        <li class="fragment">Designed to provide consistency for internal projects at Twitter</li>
-        <li class="fragment">Currently on version 4</li>
-    </ul>
-</section>
-<section>
-    <h1>Getting Started</h1>
-    <ul>
-        <li class="fragment">HTML5 Doctype</li>
-        <li class="fragment">Responsive Meta Tag</li>
-        <li class="fragment">Bootstrap's CSS</li>
-        <li class="fragment">Optional: Bootstraps JS</li>
-    </ul>
-</section>
+				<section>
+					<p data-height="265" data-theme-id="0" data-slug-hash="MGQXNB" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="MGQXNB" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/MGQXNB/">MGQXNB</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				</section>
 <section>
     <h2>Starter Template</h2>
     <pre><code class="xml">
@@ -142,17 +123,18 @@
     &lt;/body&gt;
 &lt;/html&gt;
         </code></pre>
+		<p><a href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)" target="_blank">Read about Bootstrap here</a></p>
 </section>
                 <section id="bs-containers">
     <h1>Containers</h1>
     <p>
         Containers are your primary component for Bootstrap's Grid system. The responsive grid will not work without containers.
     </p>
-    <h2 class="fragment">There are two types of containers </h2>
-    <h3 class="fragment">
+    <h2 class="">There are two types of containers </h2>
+    <h3 class="">
         <code>container</code>
     </h3>
-    <h3 class="fragment">
+    <h3 class="">
         <code>container-fluid</code>
     </h3>
 </section>
@@ -165,7 +147,7 @@
         <em>fixed width</em> container where its
         <code>max-width</code> changes with each breakpoint.
     </p>
-    <pre class="fragment"><code class="xml">
+    <pre class=""><code class="xml">
     <div class="container">
         <!-- Content here -->
     </div>  
@@ -179,7 +161,7 @@
         Fluid containers span the entire width of the viewport. Their width will always be 100%.
 
     </p>
-    <pre class="fragment"><code class="xml">
+    <pre class=""><code class="xml">
     <div class="container-fluid">
         <!-- Content here -->
     </div>  
@@ -187,16 +169,11 @@
 
 </section>
 <section>
-    <h1>Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="LeweZM" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="LeweZM" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/LeweZM/">LeweZM</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
     <h1>Bootstrap's Breakpoints</h1>
     <p>
         Bootstrap is a mobile first framework and it's breakpoints are setup like this.
     </p>
-    <pre class="fragment"><code class="css">
+    <pre class=""><code class="css">
     // Extra small devices (portrait phones, less than 576px)
     // No media query since this is the default in Bootstrap
     
@@ -212,6 +189,7 @@
     // Extra large devices (large desktops, 1200px and up)
     @media (min-width: 1200px) { ... }        
 </code></pre>
+<p>The breakpoints are different on Bootstrap 4 compared to Bootstrap 3.</p>
 
 
 </section>
@@ -219,7 +197,7 @@
     <h1>Grid System</h1>
     <p>
         Bootstrap's Grid system is based of a 12 column grid with 5 breakpoints. Bootstrap 4 provides a much more robust grid than
-        Bootstrap 3. We are going to focus on Bootstrap 4's
+        Bootstrap 3. We are going to focus on Bootstrap 4's grid.
     </p>
 </section>
 <section>
@@ -261,32 +239,34 @@
             <th>Break Point</th>
             <th>Prefix</th>
         </tr>
-        <tr class="fragment">
+        <tr class="">
             <td>Extra Small</td>
             <td>0 to 575px</td>
             <td>.col-</td>
         </tr>
-        <tr class="fragment">
+        <tr class="">
             <td>Small</td>
             <td>576px</td>
             <td>.col-sm-#</td>
         </tr>
-        <tr class="fragment">
+        <tr class="">
             <td>Medium</td>
             <td>768</td>
             <td>.col-md-#</td>
         </tr>
-        <tr class="fragment">
+        <tr class="">
             <td>Large</td>
             <td>992px</td>
             <td>.col-lg-#</td>
         </tr>
-        <tr class="fragment">
+        <tr class="">
             <td>Extra Large</td>
             <td>1200px</td>
             <td>.col-xl-#</td>
         </tr>
     </table>
+	<br/>
+	<p>The breakpoints are different on Bootstrap 4 compared to Bootstrap 3.</p>
 </section>
 <section>
     <h1>Grid Behavior</h1>
@@ -305,8 +285,12 @@
 </code></pre>
 </section>
 <section>
+<p data-height="265" data-theme-id="0" data-slug-hash="PeQBzm" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="PeQBzm" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/PeQBzm/">PeQBzm</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
     <h1>Grid Behavior</h1>
-    <h2>This code will be two columns until you reach the MD breakpoint. It will then become 4 colums</h2>
+    <h2>This code will be two columns until you reach the MD breakpoint. It will then become 4 colums.  col-6 is the minimum.</h2>
     <pre><code class="xml">
     <div class="container">
         <div class="row">
@@ -322,7 +306,7 @@
 </section>
 <section>
     <h1>Grid Behavior</h1>
-    <h2>Not specifying a column with make it 100%. This will be 1 column until the MD break point</h2>
+    <h2>Not specifying a column with make it 100%. This will be 1 column until the MD break point because col class was not used.</h2>
     <pre><code class="xml">
     <div class="container">
         <div class="row">
@@ -351,10 +335,10 @@
 </section>
 <section>
     <h1>Markup</h1>
-    <h3 class="fragment"><code>card</code> - Class that dictates the element is a card</h3>
-    <h3 class="fragment"><code>card-body</code> - Adds padding to main content of the card.</h3>
+    <h3 class=""><code>card</code> - Class that dictates the element is a card</h3>
+    <h3 class=""><code>card-body</code> - Adds padding to main content of the card.</h3>
 
-    <pre class="fragment"><code class="xml">
+    <pre class=""><code class="xml">
 <div class="card">
     <div class="card-body">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -371,7 +355,7 @@
     <p>
         You can add an image at the top of a card. Card images will automatically scale with the card.
     </p>
-    <pre class="fragment"><code class="xml">
+    <pre class=""><code class="xml">
 <div class="card" >
     <img class="card-img-top" src="https://placeimg.com/100/48/tech" alt="Card image cap">
     <div class="card-body">
@@ -390,10 +374,10 @@
         Cards have a large number of custom classes that provide a way to have consistent looking content.
     </p>
     <ul>
-        <li class="fragment"><code>card-title</code></li>
-        <li class="fragment"><code>card-subtitle</code></li>
-        <li class="fragment"><code>card-text</code></li>
-        <li class="fragment"><code>card-link</code></li>
+        <li class=""><code>card-title</code></li>
+        <li class=""><code>card-subtitle</code></li>
+        <li class=""><code>card-text</code></li>
+        <li class=""><code>card-link</code></li>
     </ul>
 </section>
 <section>
@@ -435,12 +419,12 @@
         <code>input</code>, and
         <code>a</code>
     </p>
-    <div class="fragment">
+    <div class="">
         <h3>Buttons require 2 classes</h3>
         <ul>
-            <li class="fragment">
+            <li class="">
                 <code>btn</code> - this applies the look and behavior of the button</li>
-            <li class="fragment">
+            <li class="">
                 <code>btn-[type]</code> - this applies the theme/color</li>
         </ul>
     </div>
@@ -470,21 +454,21 @@
     <p>
         Bootstrap provides a great way to style forms and customize their layout.
     </p>
-    <p class="fragment">
+    <p class="">
         Bootstrap applies a width of 100% to almost all of their form elements, but can easily be changed with additional classes.
     </p>
-    <p class="fragment">
+    <p class="">
         There is a good chance I'm going to misspell form somewhere in here.
     </p>
 </section>
 <section>
     <h1>Basic Form Components</h1>
     <ul>
-        <li class="fragment">
+        <li class="">
             <code>form-group</code> - A container for a specific input. Primary purpose is to add spacing between inputs</li>
-        <li class="fragment">
+        <li class="">
             <code>col-form-label</code> - Class for dictating a label</li>
-        <li class="fragment">
+        <li class="">
             <code>form-control</code> - applies Bootstrap's look and feel to an input.</li>
     </ul>
 </section>
@@ -542,20 +526,20 @@
         There are built in styles to help provide a visual indicator that there are missing fields.
     </p>
     <ul>
-        <li class="fragment">
+        <li class="">
             <code>is-valid</code>
         </li>
-        <li class="fragment">
+        <li class="">
             <code>is-invalid</code>
         </li>
-        <li class="fragment">
+        <li class="">
             <code>invalid-feedback</code> - Validation message. Automatically displays when input has
             <code>is-invalid</code>. There is a block of JavaScript that executes this. We'll look at it later.
         </li>
     </ul>
 </section>
 <section>
-    <pre class="fragment"><code class="xml">
+    <pre class=""><code class="xml">
 <form>
     <div class="form-group">
         <label class="col-form-label" for="formGroupExampleInput">Example label</label>
@@ -618,9 +602,9 @@
         You can apply several global styles by using these classes on the parent table 
     </p>
     <ul>
-        <li class="fragment"><code>table-striped</code> - Adds a different background to every other row</li>
-        <li class="fragment"><code>table-bordered</code> - Adds borders to all table cells</li>
-        <li class="fragment"><code>table-hover</code> - Adds a different background when hovering over a row</li>
+        <li class=""><code>table-striped</code> - Adds a different background to every other row</li>
+        <li class=""><code>table-bordered</code> - Adds borders to all table cells</li>
+        <li class=""><code>table-hover</code> - Adds a different background when hovering over a row</li>
     </ul>
 </section>
 <section>
@@ -724,12 +708,12 @@
     <h1>Quick Margins and Padding.</h1>
     <h2>Formula</h2>
     <h3>
-        <code class="fragment">[property]</code>
-        <code class="fragment">[sides]</code>
-        <code class="fragment">-</code>
-        <code class="fragment">[size]</code>
+        <code class="">[property]</code>
+        <code class="">[sides]</code>
+        <code class="">-</code>
+        <code class="">[size]</code>
     </h3>
-    <h2 class="fragment">
+    <h2 class="">
         <a href="http://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">Read More</a>
     </h2>
 </section>
@@ -737,36 +721,36 @@
     <h1>Available Values</h1>
     <h3>Properties</h3>
     <ul>
-        <li class="fragment">
+        <li class="">
             <code>p</code> - padding</li>
-        <li class="fragment">
+        <li class="">
             <code>m</code> - margin</li>
     </ul>
-    <h3 class="fragment">Sides (optional)</h3>
+    <h3 class="">Sides (optional)</h3>
     <ul>
-        <li class="fragment">
+        <li class="">
             <code>t|b|l|r</code> - top, bottom, left or right</li>
-        <li class="fragment">
+        <li class="">
             <code>x|y</code> - both sides or top and bottom</li>
-        <li class="fragment">
+        <li class="">
             <code>blank</code> - applies to all sides</li>
     </ul>
-    <h3 class="fragment">Size</h3>
+    <h3 class="">Size</h3>
     <ul>
-        <li class="fragment">0 - 5</li>
-        <li class="fragment">auto</li>
+        <li class="">0 - 5</li>
+        <li class="">auto</li>
     </ul>
 </section>
 <section>
     <h1>Examples</h1>
     <ul>
-        <li class="fragment">
+        <li class="">
             <code>m-5</code> - large margin on all sides</li>
-        <li class="fragment">
+        <li class="">
             <code>mx-auto</code> - left & right auto margin</li>
-        <li class="fragment">
+        <li class="">
             <code>p1</code> - small padding on all sides</li>
-        <li class="fragment">
+        <li class="">
             <code>pb-1</code> - small padding on bottom</li>
     </ul>
 
@@ -774,21 +758,33 @@
 <section>
     <h1>Display Utility Classes</h1>
     <ul>
-        <li class="fragment"><code>.d-none</code></li>
-        <li class="fragment"><code>.d-inline</code></li>
-        <li class="fragment"><code>.d-inline-block</code></li>
-        <li class="fragment"><code>.d-block</code></li>
-        <li class="fragment"><code>.d-flex</code></li>
+        <li class=""><code>.d-none</code></li>
+        <li class=""><code>.d-inline</code></li>
+        <li class=""><code>.d-inline-block</code></li>
+        <li class=""><code>.d-block</code></li>
+        <li class=""><code>.d-flex</code></li>
     </ul>
 </section>
 <section>
     <h1>Dictating Sizes</h1>
     <ul>
-        <li class="fragment"><code>.w-25</code></li>
-        <li class="fragment"><code>.w-50</code></li>
-        <li class="fragment"><code>.w-75</code></li>
-        <li class="fragment"><code>.w-100</code></li>
+        <li class=""><code>.w-25</code></li>
+        <li class=""><code>.w-50</code></li>
+        <li class=""><code>.w-75</code></li>
+        <li class=""><code>.w-100</code></li>
     </ul> 
+</section>
+<section>
+	<ul>
+		<li><a href="https://getbootstrap.com/docs/4.0/utilities/flex/" target="_blank">Bootstrap + Flexbox</a></li>
+		<li><a href="https://getbootstrap.com/" target="_blank">Download Bootstrap with npm or use a cdn link</a></li>
+		<li><a href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)" target="_blank">Read about Bootstrap here</a></li>
+		<li style="margin-top:3px;"><a href="https://getbootstrap.com/docs/3.3/javascript/" target="_blank">jquery plugins for Bootstrap</a></li>
+		<li><a href="https://ng-bootstrap.github.io/#/home" target="_blank">Angular components for Bootstrap</a></li>
+		<li><a href="https://www.w3schools.com/bootstrap/bootstrap_grid_examples.asp" target="_blank">Play around with your screen size using the first example here.</a></li>
+		<li><a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/" target="_blank">Here's a good intro</a></li>
+		
+	</ul>
 </section>
 
                 <section id="exercise24">
