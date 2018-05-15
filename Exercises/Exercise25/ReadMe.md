@@ -29,6 +29,12 @@ Use the images in the images that start with 'slide' for your carousel.
 - Create a modal
     - The modal opens when the "View Full Image" is clicked.
     - The modal only contains the "full.jpeg" image in the `.modal-content` container.
+	
+## Challenge!!
+
+- Style the carousel page according to the following requirements.
+	- The indicator has green circles instead of rectangles.
+	- The controls are a custom image instead of the default arrows.
 
 
 ## Screen Shots
