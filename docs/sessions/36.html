@@ -36,7 +36,7 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>11/2/2017</h1>
+                    <h1>5/19/2018</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
@@ -67,8 +67,8 @@
                                 <li><a href="#scss-var">Variables</a></li>
                                 <li><a href="#scss-nesting">Nesting</a></li>
                                 <li><a href="#partials">Partials</a></li>
-                                <li><a href="#installation">Installation</a></li>
                                 <li><a href="#mixins">Mixins</a></li>
+								<li><a href="#installation">Installation</a></li>
                             </ul>
                         </div>
                     </div>
@@ -79,26 +79,28 @@
     <p>
         Bootstrap's auto configured slide toggle feature.
     </p>
-    <h5 class="fragment">#1 Benefit?</h5>
-    <p class="fragment">
+    <h5 class="">#1 Benefit?</h5>
+    <p class="">
         You can configure it with just HTML
     </p>
+	<p>(slide toggle is a technical term)</p>
+	<p><a href="https://getbootstrap.com/docs/4.0/components/collapse/" target="_blank">Collapse API</a></p>
 </section>
 <section>
     <h1>Syntax</h1>
-    <div class="fragment">
+    <div class="">
         <h2>Requirements</h2>
         <ul>
-            <li class="fragment"><code>data-toggle="collapse"</code></li>
-            <li class="fragment">A target.
+            <li class=""><code>data-toggle="collapse"</code></li>
+            <li class="">A target.
                 <ul>
-                    <li class="fragment">Hyperlink - <code>href="[selector]"</code></li>
-                    <li class="fragment">Button - <code>data-target="[selector]"</code></li>
+                    <li class="">Hyperlink - <code>href="[selector]"</code></li>
+                    <li class="">Button - <code>data-target="[selector]"</code></li>
                 </ul>
             </li>
         </ul>
     </div>
-    <pre class="fragment"><code class="xml">
+    <pre class=""><code class="xml">
 <a class="btn btn-primary"  data-toggle="collapse" href="#collapseExample">
   Link with href
 </a>        
@@ -111,7 +113,7 @@
 
 <section>
     <h1>Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="mpNqGv" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="BS-Collapse" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/mpNqGv/">BS-Collapse</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="GyVyWg" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="BS-Collapse" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/GyVyWg/">BS-Collapse</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
                 <section id="bs-nav">
@@ -132,10 +134,10 @@
 </nav>
         </code></pre>
         <ul>
-            <li class="fragment"><code>navbar</code> - base class</li>
-            <li class="fragment"><code>navbar-expand-lg</code> - expands at lg breakpoint. Can be sm|md|lg|xl</li>
-            <li class="fragment"><code>navbar-light</code> - applies a black foreground. -dark</li>
-            <li class="fragment"><code>bg-light</code> - applies a light background. -dark, -primary </li>
+            <li class=""><code>navbar</code> - base class</li>
+            <li class=""><code>navbar-expand-lg</code> - expands at lg breakpoint. Can be sm|md|lg|xl</li>
+            <li class=""><code>navbar-light</code> - applies a black foreground. -dark</li>
+            <li class=""><code>bg-light</code> - applies a light background. -dark, -primary </li>
         </ul>
 </section>
 <section>
@@ -143,9 +145,6 @@
     <pre><code class="xml">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-    </button>
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
@@ -164,7 +163,7 @@
         </code></pre>
 </section>
 <section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="EoqbZW" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="BS-Basic Nav" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/EoqbZW/">BS-Basic Nav</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="opKpBV" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="BS-Basic Nav" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/opKpBV/">BS-Basic Nav</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
@@ -183,7 +182,7 @@
 </code></pre>
 </section>
 <section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="wpVPoO" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="BS-Basic Nav - drop down" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/wpVPoO/">BS-Basic Nav - drop down</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="ypmpgo" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="BS-Basic Nav - drop down" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/ypmpgo/">BS-Basic Nav - drop down</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <!-- Todo: postion -->
@@ -195,13 +194,14 @@
     <p>
         Bootstrap provides an easy to use Carousel that can be implemented without needing to write any JavaScript.
     </p>
+	<p><a href="https://getbootstrap.com/docs/4.0/components/carousel/" target="_blank">Carousel API</a></p>
 </section>
 <section>
     <h1>Carousel Components</h1>
     <ul>
-        <li class="fragment">Slides</li>
-        <li class="fragment">Indicators</li>
-        <li class="fragment">Controls</li>
+        <li class="">Slides</li>
+        <li class="">Indicators</li>
+        <li class="">Controls</li>
     </ul>
 </section>
 <section>
@@ -227,7 +227,7 @@
 </section>
 <section>
     <h1>Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="rpXYWL" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="BS - Carousel" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/rpXYWL/">BS - Carousel</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="GyVyrR" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="BS - Carousel" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/GyVyrR/">BS - Carousel</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
@@ -256,7 +256,7 @@
 </section>
 <section>
     <h1>Example with controls</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="WdVXGq" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="BS - Carousel-Indicators" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/WdVXGq/">BS - Carousel-Indicators</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="zpgpoj" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="BS - Carousel-Indicators" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/zpgpoj/">BS - Carousel-Indicators</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
@@ -273,9 +273,10 @@
         </code></pre>
 </section>
 <section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="xpvPEd" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="BS - Carousel-Indicators" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/xpvPEd/">BS - Carousel-Indicators</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="mpNpOb" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="BS - Carousel-Indicators" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/mpNpOb/">BS - Carousel-Indicators</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
+<p><a href="https://stackoverflow.com/questions/39937072/styling-bootstrap-carousel-indicators" target="_blank">How might we take this a step further?  How about custom css on the indicators.</a></p>
 </section>
 <section>
     <h1>Captions</h1>
@@ -291,7 +292,7 @@
 
 </section>
 <section>
-        <p data-height="265" data-theme-id="0" data-slug-hash="WdVXxq" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="BS - Carousel-Captions" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/WdVXxq/">BS - Carousel-Captions</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <p data-height="265" data-theme-id="0" data-slug-hash="EoqogR" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="BS - Carousel-Captions" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/EoqogR/">BS - Carousel-Captions</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
                 <section id="bs-modal">
@@ -365,12 +366,13 @@
 <section>
     <h1>SASS Benefits</h1>
     <ul>
-        <li class="fragment">Variables</li>
-        <li class="fragment">Nesting</li>
-        <li class="fragment">Partials</li>
-        <li class="fragment">Imports</li>
-        <li class="fragment">Mixins</li>
+        <li class="">Variables</li>
+        <li class="">Nesting</li>
+        <li class="">Partials</li>
+        <li class="">Imports</li>
+        <li class="">Mixins</li>
     </ul>
+	<p><a href="https://sass-lang.com/guide" target="_blank">SASS API</a></p>
 </section>
 <section id="scss-var">
     <h1>SASS Variables</h1>
@@ -378,8 +380,8 @@
         Allow you to set a value in one spot and use it throughout all of your files. Variables are auto detected and must start
         with $.
     </p>
-    <h3 class="fragment">Source:</h3>
-    <pre class="fragment"><code class="scss">
+    <h3 class="">Source:</h3>
+    <pre class=""><code class="scss">
         $theme: #f00;
 
         a{
@@ -388,8 +390,8 @@
         }
         
         </code></pre>
-    <h3 class="fragment">Output:</h3>
-    <pre class="fragment"><code class="scss">
+    <h3 class="">Output:</h3>
+    <pre class=""><code class="scss">
         a{
             color:#f00;
             border:1px solid #f00;
@@ -403,8 +405,8 @@
     </p>
     <div class="two-col">
         <div>
-            <h3 class="fragment">Source:</h3>
-            <pre class="fragment"><code class="scss">
+            <h3 class="">Source:</h3>
+            <pre class=""><code class="scss">
 $theme: #f00;
 .container {
     a{
@@ -418,8 +420,8 @@ $theme: #f00;
         </code></pre>
         </div>
         <div>
-            <h3 class="fragment">Output:</h3>
-            <pre class="fragment"><code class="scss">
+            <h3 class="">Output:</h3>
+            <pre class=""><code class="scss">
     .container a{
         color:#f00;
         border:1px solid #f00;
@@ -438,8 +440,8 @@ $theme: #f00;
     <h1>Use nesting with caution</h1>
     <div class="two-col">
         <div>
-            <h3 class="fragment">Source:</h3>
-            <pre class="fragment"><code class="scss">
+            <h3 class="">Source:</h3>
+            <pre class=""><code class="scss">
 .container {
     .element{
         a {
@@ -455,8 +457,8 @@ $theme: #f00;
         </code></pre>
         </div>
         <div>
-            <h3 class="fragment">Output:</h3>
-            <pre class="fragment"><code class="scss">
+            <h3 class="">Output:</h3>
+            <pre class=""><code class="scss">
 .container .element a .icon { 
     color:blue;
 }
@@ -473,9 +475,9 @@ $theme: #f00;
         Partials contain small blocks of SCSS that can be used to manage specific components of your website. Partials typically
         start with an underscore.
     </p>
-    <h2 class="fragment">Examples</h2>
-    <h2 class="fragment">_reset.scss</h2>
-    <pre class="fragment"><code class="scss">
+    <h2 class="">Examples</h2>
+    <h2 class="">_reset.scss</h2>
+    <pre class=""><code class="scss">
 * {
     box-sizing: border-box;
 }
@@ -485,11 +487,12 @@ h1,h2,h3, p{
 }
    
         </code></pre>
+		<p>When would we use this?  How about when we import a .css file based on screen size.</p>
 </section>
 <section>
     <h2>Examples</h2>
-    <h2 class="fragment">_theme.scss</h2>
-    <pre class="fragment"><code class="scss">
+    <h2 class="">_theme.scss</h2>
+    <pre class=""><code class="scss">
     $brandcolor: #f00;
     $brandsecondary: #a00;
     $spacing: 15px;
@@ -497,8 +500,8 @@ h1,h2,h3, p{
 </section>
 <section>
     <h2>Examples</h2>
-    <h2 class="fragment">_navigation.scss</h2>
-    <pre class="fragment"><code class="scss">
+    <h2 class="">_navigation.scss</h2>
+    <pre class=""><code class="scss">
    .navigation {
        display:flex;
 
@@ -514,7 +517,7 @@ h1,h2,h3, p{
     <p>
         SASS's import functionality allows you to combine multiple SCSS files into one.
     </p>
-    <pre class="fragment"><code class="scss">
+    <pre class=""><code class="scss">
     @import 'reset';
     @import 'theme';
     @import 'navigation';
@@ -524,6 +527,42 @@ h1,h2,h3, p{
     <aside class="notes">
         CSS has a native import for using multiple CSS files, but
     </aside>
+</section>
+                <section id="mixins">
+    <h1>Mixins</h1>
+    <p>
+        Mixins allow you to write functions inside you SCSS and minimize your code footprint.
+    </p>
+</section>
+<section>
+    <h1>Example: </h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="vpoWGR" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--MIXIN1" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/vpoWGR/">UA-SCSS--MIXIN1</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Example 2:</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="xpvPVq" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--MIXIN2" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/xpvPVq/">UA-SCSS--MIXIN2</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Extend</h1>
+    <p>Extend allows you to share common CSS accross multiple classes.</p>
+</section>
+<section>
+    <h1>Extend Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="ppMdyo" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--MIXIN3" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/ppMdyo/">UA-SCSS--MIXIN3</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Operators</h1>
+    <p>
+        We can do math calculations inside of SASS. You can use the +, -, *, /, and % operators like you would in JavaScript. SASS will automatically work with px and % values.
+    </p>
+</section>
+<section>
+    <h1>Operators Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="Vyorey" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--Operators" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/Vyorey/">UA-SCSS--Operators</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section id="installation">
     <h1>Installation</h1>
@@ -564,42 +603,6 @@ h1,h2,h3, p{
             .pipe(gulp.dest('./css'));
     });
 </code></pre>
-</section>
-                <section id="mixins">
-    <h1>Mixins</h1>
-    <p>
-        Mixins allow you to write functions inside you SCSS and minimize your code footprint.
-    </p>
-</section>
-<section>
-    <h1>Example: </h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="vpoWGR" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--MIXIN1" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/vpoWGR/">UA-SCSS--MIXIN1</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Example 2:</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="xpvPVq" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--MIXIN2" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/xpvPVq/">UA-SCSS--MIXIN2</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Extend</h1>
-    <p>Extend allows you to share common CSS accross multiple classes.</p>
-</section>
-<section>
-    <h1>Extend Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="ppMdyo" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--MIXIN3" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/ppMdyo/">UA-SCSS--MIXIN3</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Operators</h1>
-    <p>
-        We can do math calculations inside of SASS. You can use the +, -, *, /, and % operators like you would in JavaScript. SASS will automatically work with px and % values.
-    </p>
-</section>
-<section>
-    <h1>Operators Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="Vyorey" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--Operators" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/Vyorey/">UA-SCSS--Operators</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 
                 <section id="exercise26">
