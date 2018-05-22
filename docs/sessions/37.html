@@ -36,7 +36,7 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>11/7/2017</h1>
+                    <h1>5/22/2018</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
@@ -78,12 +78,13 @@
 <section>
     <h1>SASS Benefits</h1>
     <ul>
-        <li class="fragment">Variables</li>
-        <li class="fragment">Nesting</li>
-        <li class="fragment">Partials</li>
-        <li class="fragment">Imports</li>
-        <li class="fragment">Mixins</li>
+        <li class="">Variables</li>
+        <li class="">Nesting</li>
+        <li class="">Partials</li>
+        <li class="">Imports</li>
+        <li class="">Mixins</li>
     </ul>
+	<p><a href="https://sass-lang.com/guide" target="_blank">SASS API</a></p>
 </section>
 <section id="scss-var">
     <h1>SASS Variables</h1>
@@ -91,8 +92,8 @@
         Allow you to set a value in one spot and use it throughout all of your files. Variables are auto detected and must start
         with $.
     </p>
-    <h3 class="fragment">Source:</h3>
-    <pre class="fragment"><code class="scss">
+    <h3 class="">Source:</h3>
+    <pre class=""><code class="scss">
         $theme: #f00;
 
         a{
@@ -101,8 +102,8 @@
         }
         
         </code></pre>
-    <h3 class="fragment">Output:</h3>
-    <pre class="fragment"><code class="scss">
+    <h3 class="">Output:</h3>
+    <pre class=""><code class="scss">
         a{
             color:#f00;
             border:1px solid #f00;
@@ -116,8 +117,8 @@
     </p>
     <div class="two-col">
         <div>
-            <h3 class="fragment">Source:</h3>
-            <pre class="fragment"><code class="scss">
+            <h3 class="">Source:</h3>
+            <pre class=""><code class="scss">
 $theme: #f00;
 .container {
     a{
@@ -131,8 +132,8 @@ $theme: #f00;
         </code></pre>
         </div>
         <div>
-            <h3 class="fragment">Output:</h3>
-            <pre class="fragment"><code class="scss">
+            <h3 class="">Output:</h3>
+            <pre class=""><code class="scss">
     .container a{
         color:#f00;
         border:1px solid #f00;
@@ -151,8 +152,8 @@ $theme: #f00;
     <h1>Use nesting with caution</h1>
     <div class="two-col">
         <div>
-            <h3 class="fragment">Source:</h3>
-            <pre class="fragment"><code class="scss">
+            <h3 class="">Source:</h3>
+            <pre class=""><code class="scss">
 .container {
     .element{
         a {
@@ -168,8 +169,8 @@ $theme: #f00;
         </code></pre>
         </div>
         <div>
-            <h3 class="fragment">Output:</h3>
-            <pre class="fragment"><code class="scss">
+            <h3 class="">Output:</h3>
+            <pre class=""><code class="scss">
 .container .element a .icon { 
     color:blue;
 }
@@ -186,9 +187,9 @@ $theme: #f00;
         Partials contain small blocks of SCSS that can be used to manage specific components of your website. Partials typically
         start with an underscore.
     </p>
-    <h2 class="fragment">Examples</h2>
-    <h2 class="fragment">_reset.scss</h2>
-    <pre class="fragment"><code class="scss">
+    <h2 class="">Examples</h2>
+    <h2 class="">_reset.scss</h2>
+    <pre class=""><code class="scss">
 * {
     box-sizing: border-box;
 }
@@ -198,11 +199,12 @@ h1,h2,h3, p{
 }
    
         </code></pre>
+		<p>When would we use this?  How about when we import a .css file based on screen size.</p>
 </section>
 <section>
     <h2>Examples</h2>
-    <h2 class="fragment">_theme.scss</h2>
-    <pre class="fragment"><code class="scss">
+    <h2 class="">_theme.scss</h2>
+    <pre class=""><code class="scss">
     $brandcolor: #f00;
     $brandsecondary: #a00;
     $spacing: 15px;
@@ -210,8 +212,8 @@ h1,h2,h3, p{
 </section>
 <section>
     <h2>Examples</h2>
-    <h2 class="fragment">_navigation.scss</h2>
-    <pre class="fragment"><code class="scss">
+    <h2 class="">_navigation.scss</h2>
+    <pre class=""><code class="scss">
    .navigation {
        display:flex;
 
@@ -227,7 +229,7 @@ h1,h2,h3, p{
     <p>
         SASS's import functionality allows you to combine multiple SCSS files into one.
     </p>
-    <pre class="fragment"><code class="scss">
+    <pre class=""><code class="scss">
     @import 'reset';
     @import 'theme';
     @import 'navigation';
@@ -237,6 +239,42 @@ h1,h2,h3, p{
     <aside class="notes">
         CSS has a native import for using multiple CSS files, but
     </aside>
+</section>
+                <section id="mixins">
+    <h1>Mixins</h1>
+    <p>
+        Mixins allow you to write functions inside you SCSS and minimize your code footprint.
+    </p>
+</section>
+<section>
+    <h1>Example: </h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="vpoWGR" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--MIXIN1" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/vpoWGR/">UA-SCSS--MIXIN1</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Example 2:</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="xpvPVq" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--MIXIN2" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/xpvPVq/">UA-SCSS--MIXIN2</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Extend</h1>
+    <p>Extend allows you to share common CSS accross multiple classes.</p>
+</section>
+<section>
+    <h1>Extend Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="ppMdyo" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--MIXIN3" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/ppMdyo/">UA-SCSS--MIXIN3</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Operators</h1>
+    <p>
+        We can do math calculations inside of SASS. You can use the +, -, *, /, and % operators like you would in JavaScript. SASS will automatically work with px and % values.
+    </p>
+</section>
+<section>
+    <h1>Operators Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="Vyorey" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--Operators" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/Vyorey/">UA-SCSS--Operators</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section id="installation">
     <h1>Installation</h1>
@@ -278,42 +316,6 @@ h1,h2,h3, p{
     });
 </code></pre>
 </section>
-                <section id="mixins">
-    <h1>Mixins</h1>
-    <p>
-        Mixins allow you to write functions inside you SCSS and minimize your code footprint.
-    </p>
-</section>
-<section>
-    <h1>Example: </h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="ppMdvz" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--MIXIN1" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/ppMdvz/">UA-SCSS--MIXIN1</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Example 2:</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="PEMOod" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--MIXIN2" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/PEMOod/">UA-SCSS--MIXIN2</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Extend</h1>
-    <p>Extend allows you to share common CSS accross multiple classes.</p>
-</section>
-<section>
-    <h1>Extend Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="zpgPYB" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--MIXIN3" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/zpgPYB/">UA-SCSS--MIXIN3</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Operators</h1>
-    <p>
-        We can do math calculations inside of SASS. You can use the +, -, *, /, and % operators like you would in JavaScript. SASS will automatically work with px and % values.
-    </p>
-</section>
-<section>
-    <h1>Operators Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="GyVOKd" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-SCSS--Operators" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/GyVOKd/">UA-SCSS--Operators</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
 
                 <section>
                     <h2>Questions?</h2>
@@ -331,6 +333,8 @@ h1,h2,h3, p{
     <h1>Simple Parent Reference</h1>
     <p data-height="265" data-theme-id="0" data-slug-hash="eyqeON" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UAIT-SCSS-Nesting" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/eyqeON/">UAIT-SCSS-Nesting</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<p>Examine this in Chrome Dev Tools to see what's up.</p>
+<p><a href="https://css-tricks.com/the-sass-ampersand/" target="_blank">And maybe read this too!</a></p>
 </section>
 
 <section>
@@ -358,7 +362,7 @@ h1,h2,h3, p{
 </section>
 <section>
     <h1> <code>@at-root</code></h1>
-    <p><code>@at-root</code> you to nest inside css for structure, but places the rules inside it in the root of the css. </p>
+    <p><code>@at-root</code> allows you to nest inside css for structure, but places the rules in the root of the css. </p>
     <p>
         You can use it as an inline rule or as a wrapping rule.
     </p>
@@ -371,7 +375,7 @@ h1,h2,h3, p{
 <section id="scss-if">
     <h1><code>@if</code></h1>
     <p>
-        SCSS has the ability to use if, else if, and else statements. These can be used to theme a your styles or setup conditional
+        SCSS has the ability to use if, else if, and else statements. These can be used to theme your styles or setup conditional
         formatting.
     </p>
 </section>
@@ -399,24 +403,23 @@ h1,h2,h3, p{
     </p>
 </section>
 <section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="xpvXNE" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UAIT-SCSS-Nesting-Each" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/xpvXNE/">UAIT-SCSS-Nesting-Each</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    <!--<p data-height="265" data-theme-id="0" data-slug-hash="xpvXNE" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UAIT-SCSS-Nesting-Each" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/xpvXNE/">UAIT-SCSS-Nesting-Each</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>-->
+<p data-height="265" data-theme-id="0" data-slug-hash="jxJmxB" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UAIT-SCSS-Nesting-Each" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/jxJmxB/">UAIT-SCSS-Nesting-Each</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1>Additional Methods</h1>
     <ul>
-        <li class="fragment">darken/lighten</li>
-        <li class="fragment">quote/unquote</li>
-        <li class="fragment">percentage</li>
-        <li class="fragment">to-upper-case/to-lower-case</li>
+        <li class="">darken/lighten</li>
+        <li class="">quote/unquote</li>
+        <li class="">percentage</li>
+        <li class="">to-upper-case/to-lower-case</li>
     </ul>
 </section>
 
 <section>
     <h1>Darken/Lighten</h1>
-    <p>
-        These are some of my favorite methods.
-    </p>
     <p data-height="265" data-theme-id="0" data-slug-hash="mpNBgX" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UAIT-SCSS-Darken" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/mpNBgX/">UAIT-SCSS-Darken</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
@@ -431,10 +434,10 @@ h1,h2,h3, p{
 <section id="fb-sharing">
     <h1>Link Sharing</h1>
     <p>
-        You can customize the previews of you links being shared on Facebook by leveraging OG meta tags.
+        You can customize the previews of your links being shared on Facebook by leveraging OG meta tags.
     </p>
     <h3>
-        <a href="https://developers.facebook.com/docs/sharing/webmasters">Documentation</a>
+        <a href="https://developers.facebook.com/docs/sharing/webmasters" target="_blank">Documentation</a>
     </h3>
 </section>
 <section>
@@ -442,16 +445,16 @@ h1,h2,h3, p{
     <p>
         OG tags are meta tags that tell Facebook what to display when sharing.
     </p>
-    <h3 class="fragment">The Basic Tags</h3>
+    <h3 class="">The Basic Tags</h3>
     <ul>
-        <li class="fragment">
+        <li class="">
             <code>og:url</code> - The URL to the page.</li>
-        <li class="fragment">
+        <li class="">
             <code>og:title</code> - The title of the page.</li>
-        <li class="fragment">
+        <li class="">
             <code>og:description</code>
         </li>
-        <li class="fragment">
+        <li class="">
             <code>og:image</code> - Preview image</li>
     </ul>
 </section>
@@ -470,14 +473,14 @@ h1,h2,h3, p{
 <section>
     <h1>Testing</h1>
     <h3>
-        <a href="https://developers.facebook.com/tools/debug/">Facebook Debug Tool</a>
+        <a href="https://developers.facebook.com/tools/debug/" target="_blank">Facebook Debug Tool</a>
     </h3>
 </section>
 
 
 <section id="fb-like">
     <h1>Adding a Like Button</h1>
-    <h3><a href="https://developers.facebook.com/docs/plugins/like-button">Like Button Generator</a></h3>
+    <h3><a href="https://developers.facebook.com/docs/plugins/like-button" target="_blank">Like Button Generator</a></h3>
 </section>
 <section>
     <h1>Step 1: Including the Facebook SDK</h1>
@@ -509,7 +512,7 @@ h1,h2,h3, p{
 </section>
 <section>
     <h1>Facebook Share Button</h1>
-    <h3><a href="https://developers.facebook.com/docs/plugins/share-button/">Share Button Generator</a></h3>
+    <h3><a href="https://developers.facebook.com/docs/plugins/share-button/" target="_blank">Share Button Generator</a></h3>
 </section>
 <section>
     <h1>Step 1: Add the Facebook SDK.</h1>
