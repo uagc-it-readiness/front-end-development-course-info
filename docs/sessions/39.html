@@ -36,7 +36,7 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>11/11/2017</h1>
+                    <h1>5/29/2018</h1>
                     <!--Arrays and Methods-->
                     <h2>jQuery Plugins</h2>
                </section>
@@ -44,7 +44,7 @@
     <h1>jQuery Plugins</h1>
     <p>
         jQuery plugins provide developers an easy way to create reusable code. There are hundreds of existing plugins, but you can
-        improve you JavaScript skills by writing your own.
+        improve your JavaScript skills by writing your own.
     </p>
 
 </section>
@@ -56,6 +56,7 @@
     }
     $('span').PluginName();
         </code></pre>
+		<p>'$' is the jQuery base object.  fn is like prototype in JavaScript.</p>
 </section>
 <section>
     <h1>Example</h1>
@@ -90,6 +91,8 @@
     <h1>Extend</h1>
     <p data-height="265" data-theme-id="0" data-slug-hash="xpowOp" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="jQuery Extend" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/xpowOp/">jQuery Extend</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<p>Passing an empty object as the target preserves the original objects.</p>
+<p><a href="https://api.jquery.com/jquery.extend/" target="_blank">Extend API Docs</a></p>
 </section>
 <section>
     <h1>In a Plugin</h1>
@@ -100,6 +103,33 @@
     <h1>Unique events</h1>
     <p data-height="265" data-theme-id="0" data-slug-hash="mpZePa" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="Basic jQuery Plugin Basic Events Each" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/mpZePa/">Basic jQuery Plugin Basic Events Each</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+<h1>Web Storage</h1>
+</section>
+<section>
+<h1>Session Storage</h1>
+<p>Stores data for one session (data is lost when browser is closed).</p>
+</section>
+<section>
+<h1>Local Storage</h1>
+<p>Stores data with no expiration date.</p>
+<p><a href="https://www.w3schools.com/Html/html5_webstorage.asp" target="_blank">W3Schools Example</a></p>
+<pre><code class="js">
+    if(typeof(Storage) !== "undefined") {
+		localStorage.setItem("lastname", "Smith");
+	}else{
+		//Some graceful fallback plan
+	}
+	
+        </code></pre>
+</section>
+<section>
+<p>You can use this to mock a back end on demo day, but....</p>
+<p class="fragment">Never store sensitive data in web storage.  If a malicious script were to run in your browser, it can access web storage and send the data anywhere.</p>
+</section>
+<section>
+<h1>Make a jQuery plugin for your site.</h1>
 </section>
             </div>
 
