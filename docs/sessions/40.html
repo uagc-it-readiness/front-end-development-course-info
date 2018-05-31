@@ -387,6 +387,17 @@ var pattern = /lorem/i
     </p>
     <pre><code class="scss">
 .post{
+    /*This may inherit other properties if there
+    is another .title class somewhere */
+    .title{
+    }
+}
+</code></pre>
+</section>
+<section>
+    <h1>Solution</h1>
+    <pre><code class="scss">
+.post{
     /*This rule will not inherit any rules from other SCSS */
     .post-title{
     }
