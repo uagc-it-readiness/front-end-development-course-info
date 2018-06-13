@@ -36,7 +36,7 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>12/5/2017</h1>
+                    <h1>6/14/2018</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
@@ -78,21 +78,22 @@
                 </section>
                 <section id="intro">
     <h1>ECMAScript 6 Intro</h1>
+	<p><a href="http://es6-features.org/#Constants" target="_blank">Documentation</a></p>
 </section>
 <section>
     <h1>Primary Goals of ES6</h1>
     <h2>Make JavaScript better for writing</h2>
     <ul>
-        <li class="fragment">complex and large applications</li>
-        <li class="fragment">libraries</li>
-        <li class="fragment">code generators</li>
+        <li class="">complex and large applications</li>
+        <li class="">libraries</li>
+        <li class="">code generators</li>
     </ul>
 </section>
 <section>
     <h1>Can I use ES6 now?</h1>
-    <h2 class="fragment">Kinda sorta</h2>
-    <h2 class="fragment"><a href="https://babeljs.io/">Babel</a> allows for maximum compatibility.  </h2>
-    <h2 class="fragment">We can use Gulp to compile with Babel</h2>
+    <h2 class="">Yes, if you don't have to support IE11 (b2b apps likely need to support IE11)</h2>
+    <h2 class="">If you do need to support IE11, <a href="https://babeljs.io/" target="_blank">Babel</a> allows for maximum compatibility.  </h2>
+    <h2 class="">We can use Gulp to compile with Babel</h2>
 </section>
 
 <!--https://github.com/lukehoban/es6features/blob/master/README.md -->
@@ -100,7 +101,7 @@
 <!-- http://exploringjs.com/es6/ch_faq.html#sec_from-es5-to-es6-->
                 <section id="const">
     <h1>New Variable Declarations</h1>
-    <h1 class="fragment"><code>let</code> and <code>const</code></h1>
+    <h1 class=""><code>let</code> and <code>const</code></h1>
 </section>
 <section>
     <h1><code>let</code></h1>
@@ -110,12 +111,12 @@
 </section>
 <section>
     <h1>Prevents errors</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="PErqja" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="ES6 - Let" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/PErqja/">ES6 - Let</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="xpoGWg" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="ES6 - Let" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/xpoGWg/">ES6 - Let</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1>Scoping</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="dJBoRR" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-Let-Scoping" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/dJBoRR/">UA-Let-Scoping</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="ppXJaM" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-Let-Scoping" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/ppXJaM/">UA-Let-Scoping</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
@@ -126,7 +127,7 @@
 </section>
 <section>
     <h1>Using <code>const</code></h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="zpVGzr" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-const" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/zpVGzr/">UA-const</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="BJgNYq" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-const" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/BJgNYq/">UA-const</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
                 <section id="es6-strings">
@@ -140,10 +141,11 @@
     <p>
         String concatenation is much easier with the new ES6 features. Variables can be injected into strings by using the <code>`</code>        (grave accent) instead of single/double quotes and using the <code>${x}</code> symbols.
     </p>
+	<p>^ interpolation only works within the `` ticks.</p>
 </section>
 <section>
     <h1>Template Strings</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="wpLadE" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="ES6 - Interpolation" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/wpLadE/">ES6 - Interpolation</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="JMQdpE" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="ES6 - Interpolation" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/JMQdpE/">ES6 - Interpolation</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
@@ -154,7 +156,7 @@
 </section>
 <section>
     <h1>Usage</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="goNpWe" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="ES6 - strings" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/goNpWe/">ES6 - strings</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="wpLapQ" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="ES6 - strings" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/wpLapQ/">ES6 - strings</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
                 <section id="arrows">
@@ -179,9 +181,9 @@
 </section>
 <section>
     <h1>Variations</h1>
-    <div class="fragment two-col">
+    <div class=" two-col">
         <h2>Shorthand Functions</h2>
-        <div class="fragment">
+        <div class="">
             <pre><code class="js">
     function(y){
         var x = 3;
@@ -190,7 +192,7 @@
    </code></pre>
         </div>
 
-        <div class="fragment">
+        <div class="">
             <pre><code class="js">
     (y) => {
         var x = 3;
@@ -199,9 +201,9 @@
    </code></pre>
         </div>
     </div>
-    <div class="fragment two-col">
+    <div class=" two-col">
         <h2>Single Line</h2>
-        <div class="fragment">
+        <div class="">
             <pre><code class="js">
 var rn = function(y){
     return Math.random() * y; 
@@ -210,7 +212,7 @@ rn();
    </code></pre>
         </div>
 
-        <div class="fragment">
+        <div class="">
             <pre><code class="js">
 //No curly braces signifies 
 //it is returning the calculation.
@@ -226,10 +228,10 @@ n(4);
     <p>
         Arrow functions are awesome when used with Arrays.
     </p>
-    <div class="fragment">
+    <div class="">
         <pre><code class="js">[].filter((element) => element.isSomething == true); </code></pre>
     </div>
-    <div class="fragment">
+    <div class="">
         <pre><code class="js">[].filter((element) => {
     return element.isActive && element.isInDate
 }); </code></pre>
@@ -253,7 +255,7 @@ n(4);
 </section>
 <section>
     <h1>Module Exporting</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
         // /lib/math.js
         export function multiply(x,u){
             return x * u;
@@ -261,7 +263,7 @@ n(4);
         export const pi = 3.14
         </code></pre>
 
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     import {multiply, pi} from 'lib/math';
     console.log(multiply(pi, 4));
     </code></pre>
@@ -272,18 +274,18 @@ n(4);
         import {multiply, pi} from 'lib/math';
     </code>
     <ul>
-        <li class="fragment"><code>import</code> - All imports occur before any other code</li>
-        <li class="fragment"><code>{multiply, pi}</code> - Imported objects must be properly exported.</li>
-        <li class="fragment"><code>from</code></li>
-        <li class="fragment"><code>'lib/math'</code> - Relative path to the file. .js file extension is not required. </li>
+        <li class=""><code>import</code> - All imports occur before any other code</li>
+        <li class=""><code>{multiply, pi}</code> - Imported objects must be properly exported.</li>
+        <li class=""><code>from</code></li>
+        <li class=""><code>'lib/math'</code> - Relative path to the file. .js file extension is not required. </li>
     </ul>
 </section>
 <section>
     <h1>Module Execution</h1>
     <ul>
-        <li class="fragment">Modules are Singleton</li>
-        <li class="fragment">They do not execute until they are imported.</li>
-        <li class="fragment">Only one instance exists when it's imported.</li>
+        <li class="">Modules are Singleton</li>
+        <li class="">They do not execute until they are imported.</li>
+        <li class="">Only one instance exists when it's imported.</li>
     </ul>
 </section>
 <section>
@@ -334,9 +336,9 @@ n(4);
 class Square{
 }
     </code></pre>
-    <h2 class="fragment">Usage</h2>
+    <h2 class="">Usage</h2>
 
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var sq = new Square();
     </code></pre>
     <aside class="notes">
@@ -346,8 +348,8 @@ var sq = new Square();
 <section>
     <h1>Class Structure</h1>
     <ul>
-        <li class="fragment">Constructor</li>
-        <li class="fragment"> Methods</li>
+        <li class="">Constructor</li>
+        <li class=""> Methods</li>
     </ul>
 </section>
 <section>
@@ -355,8 +357,8 @@ var sq = new Square();
     <p>
         A constructor is a specific method used in the initialization of a class.
     </p>
-    <p class="fragment">There can only be one constructor per class.</p>
-    <pre class="fragment"><code class="js">
+    <p class="">There can only be one constructor per class.</p>
+    <pre class=""><code class="js">
  class Rectangle{
     constructor(height, width){
         this.height = height;
@@ -364,16 +366,20 @@ var sq = new Square();
     }
  }
    </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var rc = new Rectangle(10, 15);
   </code></pre>
 
 </section>
 <section>
+<h3>What is an instance of a class?</h3>
+<p>The class is like a blueprint, an object is an actual <code>instance</code> of the class.</p>
+</section>
+<section>
     <h1> Methods</h1>
     <p>No code is allowed outside of method. The
         <code>function</code> keyword is not required.</p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
  class Rectangle{
     constructor(height, width){
         this.height = height;
@@ -385,7 +391,7 @@ var rc = new Rectangle(10, 15);
     }
  }
 </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
         var rc = new Rectangle(10, 10);
         console.log(rc.calcArea());
         </code></pre>
@@ -396,7 +402,7 @@ var rc = new Rectangle(10, 15);
         Get methods allow you to create dynamic
         <strong>read only properties</strong> without requiring the user to call a method.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
  class Rectangle{
     constructor(height, width){
         this.height = height;
@@ -411,16 +417,17 @@ var rc = new Rectangle(10, 15);
     }
  }
  </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     var rc = new Rectangle(10, 10);
     console.log(rc.area);
         </code></pre>
+		<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get" target="_blank">MDN Documentation</a></p>
 </section>
 <section>
     <h1>Set Methods </h1>
     <p>
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
  class Log{
     constructor(){
     this.log = [];
@@ -433,7 +440,7 @@ var rc = new Rectangle(10, 15);
     }
  }
  </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     var lg = new Log();
     lg.currentLog = 'new message';
     console.log(lg.logHistory);
@@ -465,7 +472,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/cla
                 <section id="adv-class">
     <h1>Static Methods</h1>
     <p>
-        Static Methods are methods associated with a class, but are not apart of the instance of the class.
+        Static Methods are methods associated with a class, but are not a part of the instance of the class.
     </p>
 </section>
 <section>
@@ -483,7 +490,7 @@ class Number{
     }
 }
    </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var x = new Number(1);
 x.increment();
 x.square() //error
@@ -514,7 +521,7 @@ class Rectangle {
 }
 
 </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 class Square extends Rectangle{
     constructor(length){
         super(length, length);
@@ -525,7 +532,7 @@ class Square extends Rectangle{
 
 
 </div>
-<div>    <pre class="fragment"><code class="js">
+<div>    <pre class=""><code class="js">
 var rect = new Rectangle(10, 5);
 console.log(rect.name); //Rectangle
 console.log(rect.area); //50
