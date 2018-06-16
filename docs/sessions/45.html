@@ -36,7 +36,7 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>12/7/2017</h1>
+                    <h1>6/16/2018</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
@@ -75,7 +75,7 @@
         Module patterns have been built into JavaScript libraries for some time, but they are now available native in the language.
     </p>
     <p>
-        Module are single instances of code designed to be reused throughout an application.
+        Modules are single instances of code designed to be reused throughout an application.
     </p>
     <p>
         Modules are heavily used in NodeJS and Angular Applications.
@@ -84,7 +84,7 @@
 </section>
 <section>
     <h1>Module Exporting</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
         // /lib/math.js
         export function multiply(x,u){
             return x * u;
@@ -92,7 +92,7 @@
         export const pi = 3.14
         </code></pre>
 
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     import {multiply, pi} from 'lib/math';
     console.log(multiply(pi, 4));
     </code></pre>
@@ -103,18 +103,18 @@
         import {multiply, pi} from 'lib/math';
     </code>
     <ul>
-        <li class="fragment"><code>import</code> - All imports occur before any other code</li>
-        <li class="fragment"><code>{multiply, pi}</code> - Imported objects must be properly exported.</li>
-        <li class="fragment"><code>from</code></li>
-        <li class="fragment"><code>'lib/math'</code> - Relative path to the file. .js file extension is not required. </li>
+        <li class=""><code>import</code> - All imports occur before any other code</li>
+        <li class=""><code>{multiply, pi}</code> - Imported objects must be properly exported.</li>
+        <li class=""><code>from</code></li>
+        <li class=""><code>'lib/math'</code> - Relative path to the file. .js file extension is not required. </li>
     </ul>
 </section>
 <section>
     <h1>Module Execution</h1>
     <ul>
-        <li class="fragment">Modules are Singleton</li>
-        <li class="fragment">They do not execute until they are imported.</li>
-        <li class="fragment">Only one instance exists when it's imported.</li>
+        <li class="">Modules are Singleton</li>
+        <li class="">They do not execute until they are imported.</li>
+        <li class="">Only one instance exists when it's imported.</li>
     </ul>
 </section>
 <section>
@@ -165,9 +165,9 @@
 class Square{
 }
     </code></pre>
-    <h2 class="fragment">Usage</h2>
+    <h2 class="">Usage</h2>
 
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var sq = new Square();
     </code></pre>
     <aside class="notes">
@@ -177,8 +177,8 @@ var sq = new Square();
 <section>
     <h1>Class Structure</h1>
     <ul>
-        <li class="fragment">Constructor</li>
-        <li class="fragment"> Methods</li>
+        <li class="">Constructor</li>
+        <li class=""> Methods</li>
     </ul>
 </section>
 <section>
@@ -186,8 +186,8 @@ var sq = new Square();
     <p>
         A constructor is a specific method used in the initialization of a class.
     </p>
-    <p class="fragment">There can only be one constructor per class.</p>
-    <pre class="fragment"><code class="js">
+    <p class="">There can only be one constructor per class.</p>
+    <pre class=""><code class="js">
  class Rectangle{
     constructor(height, width){
         this.height = height;
@@ -195,16 +195,20 @@ var sq = new Square();
     }
  }
    </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var rc = new Rectangle(10, 15);
   </code></pre>
 
 </section>
 <section>
+<h3>What is an instance of a class?</h3>
+<p>The class is like a blueprint, an object is an actual <code>instance</code> of the class.</p>
+</section>
+<section>
     <h1> Methods</h1>
     <p>No code is allowed outside of method. The
         <code>function</code> keyword is not required.</p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
  class Rectangle{
     constructor(height, width){
         this.height = height;
@@ -216,7 +220,7 @@ var rc = new Rectangle(10, 15);
     }
  }
 </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
         var rc = new Rectangle(10, 10);
         console.log(rc.calcArea());
         </code></pre>
@@ -227,7 +231,7 @@ var rc = new Rectangle(10, 15);
         Get methods allow you to create dynamic
         <strong>read only properties</strong> without requiring the user to call a method.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
  class Rectangle{
     constructor(height, width){
         this.height = height;
@@ -242,16 +246,17 @@ var rc = new Rectangle(10, 15);
     }
  }
  </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     var rc = new Rectangle(10, 10);
     console.log(rc.area);
         </code></pre>
+		<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get" target="_blank">MDN Documentation</a></p>
 </section>
 <section>
     <h1>Set Methods </h1>
     <p>
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
  class Log{
     constructor(){
     this.log = [];
@@ -264,7 +269,7 @@ var rc = new Rectangle(10, 15);
     }
  }
  </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
     var lg = new Log();
     lg.currentLog = 'new message';
     console.log(lg.logHistory);
@@ -296,7 +301,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/cla
                 <section id="adv-class">
     <h1>Static Methods</h1>
     <p>
-        Static Methods are methods associated with a class, but are not apart of the instance of the class.
+        Static Methods are methods associated with a class, but are not a part of the instance of the class.
     </p>
 </section>
 <section>
@@ -314,7 +319,7 @@ class Number{
     }
 }
    </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var x = new Number(1);
 x.increment();
 x.square() //error
@@ -345,7 +350,7 @@ class Rectangle {
 }
 
 </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 class Square extends Rectangle{
     constructor(length){
         super(length, length);
@@ -356,7 +361,7 @@ class Square extends Rectangle{
 
 
 </div>
-<div>    <pre class="fragment"><code class="js">
+<div>    <pre class=""><code class="js">
 var rect = new Rectangle(10, 5);
 console.log(rect.name); //Rectangle
 console.log(rect.area); //50
@@ -385,14 +390,14 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/cla
 <section>
     <h1>TypeScript</h1>
     <ul>
-        <li class="fragment">
+        <li class="">
             First appeared in Oct 2012
         </li>
-        <li class="fragment">
+        <li class="">
             The lead architect of  C# and creator of Delphi worked on the development of TS
         </li>
 
-        <li class="fragment">
+        <li class="">
             It finds and outputs errors when it compiles. It lets you know you've messed up before you run your code in browser.
         </li>
     </ul>
@@ -401,14 +406,14 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/cla
     <h1>Compilation</h1>
     <div class="two-col">
         <div>
-            <h2 class="fragment">main.scss</h2>
-            <h2 class="fragment"><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
-            <h2 class="fragment">main.css</h2>
+            <h2 class="">main.scss</h2>
+            <h2 class=""><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
+            <h2 class="">main.css</h2>
         </div>
         <div>
-            <h2 class="fragment">main.ts</h2>
-            <h2 class="fragment"><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
-            <h2 class="fragment">main.js</h2>
+            <h2 class="">main.ts</h2>
+            <h2 class=""><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
+            <h2 class="">main.js</h2>
         </div>
     </div>
 </section>
@@ -424,7 +429,7 @@ function logger(message){
 logger('Hello World');
                 </code></pre>
         </div>
-        <div class="fragment">
+        <div class="">
             <pre><code class="ts">
 function logger(message:string){
     console.log(`Log: ${message}`)
@@ -440,9 +445,9 @@ logger(1); //Outputs an error in the compiler.
 <section>
     <h1>Getting TypeScript</h1>
     <h3><a href="https://www.typescriptlang.org/index.html#download-links" target="_blank">Editor Plugins</a></h3>
-    <h4 class="fragment">Node.js</h4>
-    <h4 class="fragment"><code>npm install -g typescript</code></h4>
-    <h4 class="fragment"><code>tsc helloworld.ts</code></h4>
+    <h4 class="">Node.js</h4>
+    <h4 class=""><code>npm install -g typescript</code></h4>
+    <h4 class=""><code>tsc helloworld.ts</code></h4>
 </section>
                 <section id="types">
     <h1>TypeScript - Types</h1>
@@ -481,8 +486,8 @@ let b: string = area(2); //Error due to b being a string
     <h1>String</h1>
 
     <pre><code class="ts">
-const firstName: string = 'Daniel';
-const lastName: string = 'Worthy';
+const firstName: string = 'Jon';
+const lastName: string = 'Middaugh';
 
 function fullName(fName, lName) : string{
     return `${fName} ${lName}`;
@@ -521,6 +526,7 @@ e = "Hello World";
     <p>
         An interface provides a blueprint for JavaScript objects and classes.
     </p>
+	<p><a href="https://www.typescriptlang.org/docs/handbook/interfaces.html" target="_blank">Typescript Interface API</a></p>
 </section>
 <section>
     <h1>Interface Example</h1>
@@ -560,6 +566,7 @@ let rectangle: Shape =  {
     <p>
         TypeScript allows you to enforce rules upon a class as well.
     </p>
+	<p><a href="https://www.typescriptlang.org/docs/handbook/classes.html" target="_blank">Typescript Class Docs</a></p>
 </section>
 <section>
     <h1>Classes and Interfaces</h1>
@@ -631,7 +638,7 @@ function logic(foo: string): string;
                 </code></pre>
         </div>
     </div>
-    <h3 class="fragment"><code>Number</code>, <code>String</code>, <code>Boolean</code>, and <code>Object</code> refer to reserved words in JavaScript.</h3>
+    <h3 class=""><code>Number</code>, <code>String</code>, <code>Boolean</code>, and <code>Object</code> refer to reserved words in JavaScript.</h3>
 </section>
                 <section>
                     <h2>Before you leave - http://codepen.io/</h2>
