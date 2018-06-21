@@ -36,380 +36,28 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>12/12/2017</h1>
+                    <h1>6/21/2018</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
                         <div>
-                            <h2>Review</h2>
-                            <ul>
-                                <li><a href="#ts-intro">Typescript Intro</a></li>
-                                <li><a href="#types">TS Types</a></li>
-                                <li><a href="#interfaces">TS Interfaces</a></li>
-                                <li><a href="#ts-classes">TS Classes</a></li>
-                                <li><a href="#tips">TS Tips</a></li>
- 
-                            </ul>
-
-                        </div>
-                        <div>
 
                             <h2>New</h2>
                             <ul>
-                                <li><a href="#ng-intro">NG Intro</a></li>
                                 <li><a href="#component">Component</a></li>
                                 <li><a href="#interpolation">Interpolation</a></li>
                            </ul>
                         </div>
                     </div>
                 </section>
-                <section id="ts-intro">
-    <h1>TypeScript</h1>
-    <p>TypeScript is a superset of JavaScript that compiles down to vanilla JavaScript that can be consumed by any browser or NodeJS application.</p>
-</section>
-<section>
-    <h1>TypeScript</h1>
-    <ul>
-        <li class="fragment">
-            First appeared in Oct 2012
-        </li>
-        <li class="fragment">
-            The lead architect of  C# and creator of Delphi worked on the development of TS
-        </li>
-
-        <li class="fragment">
-            It finds and outputs errors when it compiles. It lets you know you've messed up before you run your code in browser.
-        </li>
-    </ul>
-</section>
-<section>
-    <h1>Compilation</h1>
-    <div class="two-col">
-        <div>
-            <h2 class="fragment">main.scss</h2>
-            <h2 class="fragment"><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
-            <h2 class="fragment">main.css</h2>
-        </div>
-        <div>
-            <h2 class="fragment">main.ts</h2>
-            <h2 class="fragment"><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
-            <h2 class="fragment">main.js</h2>
-        </div>
-    </div>
-</section>
-<section>
-    <h1>TypeScript Syntax</h1>
-    <div class="two-col">
-        <div>
-            <pre><code class="js">
-function logger(message){
-    console.log(`Log: ${message}`)
-} 
-
-logger('Hello World');
-                </code></pre>
-        </div>
-        <div class="fragment">
-            <pre><code class="ts">
-function logger(message:string){
-    console.log(`Log: ${message}`)
-} 
-
-logger('Hello World');
-logger(1); //Outputs an error in the compiler.
-                </code></pre>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h1>Getting TypeScript</h1>
-    <h3><a href="https://www.typescriptlang.org/index.html#download-links" target="_blank">Editor Plugins</a></h3>
-    <h4 class="fragment">Node.js</h4>
-    <h4 class="fragment"><code>npm install -g typescript</code></h4>
-    <h4 class="fragment"><code>tsc helloworld.ts</code></h4>
-</section>
-                <section id="types">
-    <h1>TypeScript - Types</h1>
-    <p>
-        You use types to declare what type of variable you are declaring.  The TypeScript compiler will notify you if you missuse a type.
-    </p>
-</section>
-<section>
-    <h1>Boolean Type</h1>
-    <pre><code class="ts">
-let isValid: boolean = false;
-    
-function test(apply: boolean){
-    if (apply === true){
-    }
-}
-
-test(isValid);
-test('true'); // Error.
-        </code></pre>
-</section>
-<section>
-    <h1>Number</h1>
-    <pre><code class="ts">
-const pi: number = 3.14;
-
-function area(radius: number) : number{
-    return pi * (Math.pow(radius, 2));
-}
-
-let a: number = area(2); 
-let b: string = area(2); //Error due to b being a string
-        </code></pre>
-</section>
-<section>
-    <h1>String</h1>
-
-    <pre><code class="ts">
-const firstName: string = 'Daniel';
-const lastName: string = 'Worthy';
-
-function fullName(fName, lName) : string{
-    return `${fName} ${lName}`;
-}
-        </code></pre>
-</section>
-<section>
-    <h1>Array</h1>
-    <p>
-        Two ways to declare.  Both are correct.
-    </p>
-    <pre><code class="ts">
-    let list: number[] = [1, 2, 3];  //similar to Java
-    let list: Array&lt;number&gt; = [1, 2, 3];  // similar to C#
-        </code></pre>
-</section>
-
-<section>
-    <h1>Any</h1>
-    <p>
-        Best used when interacting with other libraries and frameworks.
-    </p>
-    <p>
-        Some quality scanners discourage this.
-    </p>
-    <pre><code class="ts">
-let e: any = 30;
-e = true;
-e = "Hello World";
-        </code></pre>
-</section>
-
-
-                <section id="interfaces">
-    <h1>Interfaces</h1>
-    <p>
-        An interface provides a blueprint for JavaScript objects and classes.
-    </p>
-</section>
-<section>
-    <h1>Interface Example</h1>
-    <pre><code class="ts">
-
-interface Person {
-    firstName: string;
-    lastName: string;
-}        
-
-function getName(person: Person){
-}
-        </code></pre>
-</section>
-<section>
-    <h1>Interface Example</h1>
-    <pre><code class="ts">
-
-interface Shape {
-    Name: string;
-    Sides: number;
-    Height: number;
-    Width: number;
-}        
-
-let rectangle: Shape =  {
-   Name: 'Rectangle',
-   Sides: 4,
-   Height: 20,
-   Width: 20 
-}
-        </code></pre>
-</section>
-
-                <section id="ts-classes">
-    <h1>Classes</h1>
-    <p>
-        TypeScript allows you to enforce rules upon a class as well.
-    </p>
-</section>
-<section>
-    <h1>Classes and Interfaces</h1>
-    <p>
-        Classes and Interfaces play well with each other.
-    </p>
-</section>
-<section>
-    <h1>Example</h1>
-    <pre><code class="ts">
-class Student  implements Person{
-    fullName: string;
-    firstName: string;
-    lastName: string;
-    constructor( firstName: string,  middleInitial: string,  lastName: string) {
-        this.fullName = `${firstName} ${middleInitial}  ${lastName}`;
-        this.firstName = firstName;
-        this.lastName = lastName
-    }
-}
-
-interface Person {
-    firstName: string;
-    lastName: string;
-}
-//Accepts either a person or student
-function greeter(person : Person) {
-    return "Hello, " + person.firstName + " " + pergson.lastName;
-}
-       </code></pre>
-</section>
-<section>
-    <h1>Class constructor changes</h1>
-    <pre><code class="ts">
-class Student  implements Person{
-    fullName: string;
-    constructor(public firstName: string, public middleInitial: string, public lastName:string) {
-        this.fullName = `${firstName} ${middleInitial}  ${lastName}`;
-    }
-}
-       </code></pre>
-       <p>
-           Adding <code>public</code> to the variable automatically generates the assignment.
-       </p>
-</section>
-<section>
-    <h1>Interface Example</h1>
-    <pre><code class="ts">
-
-class Rectangle implements Shape{
-  constructor(public Name: string, public Sides: number, public Height: number, public Width: number){
-  }
-}
-        </code></pre>
-</section>
-                <section id="tips">
-    <h1>Casing matters on your types</h1>
-    <div class="two-col">
-        <div>
-            <h2>Wrong</h2>
-            <pre><code class="ts">
-function logic(foo: String): String; 
-                </code></pre>
-        </div>
-        <div>
-            <h2>Right</h2>
-            <pre><code class="ts">
-function logic(foo: string): string; 
-                </code></pre>
-        </div>
-    </div>
-    <h3 class="fragment"><code>Number</code>, <code>String</code>, <code>Boolean</code>, and <code>Object</code> refer to reserved words in JavaScript.</h3>
-</section>
-                <section>
-                    <h2>Questions?</h2>
-                </section>
-                <section id="ng-intro">
-    <h1>Angular</h1>
-    <p>
-        Angular is a front end application framework that is designed to write testable single page applications.
-    </p>
-    <a href="https://angular.io/" target="_blank">Angular Website</a>
-</section>
-<section>
-    <h1>History</h1>
-    <ul>
-        <li class="fragment">
-            <strong>AngularJS</strong>
-            <ul>
-                <li class="fragment">Debuted in 2010</li>
-                <li class="fragment">Built and Maintained by Google</li>
-                <li class="fragment">MVC Architecture</li>
-            </ul>
-        </li>
-        <li class="fragment">V2 released Sep 2016 </li>
-        <li class="fragment">V4 released March 2017</li>
-        <li class="fragment">V5 released October 2017</li>
-        <li class="fragment">AngularJS == 1.X</li>
-        <li class="fragment">Angular == 2 and above</li>
-        <li class="fragment">Leverages TypeScript</li>
-    </ul>
-</section>
-<section>
-    <h1>MVC Concept</h1>
-    <h2 class="fragment">Goals</h2>
-    <ul>
-        <li class="fragment">Separation of Concerns</li>
-        <li class="fragment">Reusable Code</li>
-        <li class="fragment">Testability</li>
-    </ul>
-</section>
-<section>
-    <h1>Model</h1>
-    <p>
-        The Model plays the role of managing application data. A model could represent a user, product information, list of movies,
-        etc.
-    </p>
-</section>
-<section>
-    <h1>View</h1>
-    <p>
-        The View is the visual representation of the model. The view should not contain any logic. It accepts user input and passes
-        it to the controller.
-    </p>
-</section>
-<section>
-    <h1>Controller</h1>
-    <p>
-        The controller responds to the user's interaction with the View. It performs validation and other business logic. It is considered
-        'best practice' to keep controllers slim.
-    </p>
-</section>
-<section>
-    <div class="center" style="text-align: center" >
-        <img src="../images/mvc.PNG"  style="max-height:500px"/>
-    </div>
-</section>
-<section>
-    <h1>Problems with MVC</h1>
-    <ul>
-        <li class="fragment">Dependant on developer discipline</li>
-        <li class="fragment">Concepts are open to interpretation</li>
-        <li class="fragment">Requires additional items for full functionality.</li>
-    </ul>
-</section>
-<section>
-    <h1>Angular's architecture has changed from MVController to something like MVComponent</h1>
-</section>
-<section>
-    <h1>App Overview</h1>
-    <h2>
-        <a href="https://angular.io/generated/live-examples/toh-pt6/eplnkr.html" target="_blank">Tour of Heroes</a>
-    </h2>
-    <h2>
-        <a href="https://github.com/johnpapa/angular-tour-of-heroes" target="_blank">ToH Source Code</a>
-    </h2>
-</section>
                 <section id="component">
     <h1>The Angular Component</h1>
     <p>Angular applications are made up of multiple <code>components</code>. An Angular component is composed of HTML (the View)
         and a Component class that manipulates parts of the screen. </p>
+		<p><a href="https://angular.io/guide/architecture-components" target="_blank">Angular documentation on Components</a></p>
 </section>
 <section>
     <h1>Example</h1>
-    <div class="two-col">
         <div>
             <pre><code class="ts">
 import { Component } from '@angular/core';
@@ -423,13 +71,15 @@ export class AppComponent {
 }
 </code></pre>
         </div>
-        <div>
-            <p class="fragment">imports</p>
-            <p class="fragment">@Component</p>
-            <p class="fragment">selector</p>
-            <p class="fragment">template</p>
-            <p class="fragment">class</p>
-        </div>
+        
+</section>
+<section>
+	<div>
+            <p class=""><code>import...</code> -This line is telling the compiler to import 'Component' from angular-tour-of-heroes/node_modules/@angular/core</p>
+            <p class=""><code>@Component</code> -This is the 'Component Decorator' identifying the class immediately below as a 'Component' class</p>
+            <p class=""><code>selector</code> -Components are kind of like custom html elements.  The selector is the custom elements name</p>
+            <p class=""><code>template</code> -The actual html to display</p>
+            <p class=""><code>class</code> -javascript class</p>
     </div>
 </section>
 <section>
@@ -453,7 +103,7 @@ export class AppComponent {
             <pre><code class="xml">
 &lt;my-app>&lt;/my-app>
     </code></pre>
-            <div class="fragment">
+            <div class="">
                 <h2>Output</h2>
                 <pre><code class="xml">
 &lt;h1>Hello Angular&lt;/h1>
