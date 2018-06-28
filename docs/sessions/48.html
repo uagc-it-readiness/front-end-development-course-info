@@ -36,19 +36,10 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>12/12/2017</h1>
+                    <h1>6/28/2018</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
-                        <div>
-                            <h2>Review</h2>
-                            <ul>
-                                <li><a href="#ng-intro">NG Intro</a></li>
-                                <li><a href="#component">Component</a></li>
-                                <li><a href="#interpolation">Interpolation</a></li>
-                            </ul>
-
-                        </div>
                         <div>
 
                             <h2>New</h2>
@@ -61,217 +52,14 @@
                         </div>
                     </div>
                 </section>
-                <section>
-    <h1>Angular CLI</h1>
-    <p>
-        The Angular CLI makes it very easy to create a new application, create new components, and test locally.
-    </p>
-</section>
-<section>
-    <h1>Angular CLI Benefits</h1>
-    <ul>
-        <li class="fragment">Generates Project Structure</li>
-        <li class="fragment">Creates Most Files</li>
-        <li class="fragment">Runs your development server</li>
-        <li class="fragment">Follows best practices</li>
-    </ul>
-</section>
-<section>
-    <h1>Installing Angular CLI</h1>
-    <pre><code class="bash">
-    npm install -g @angular/cli
-    </code></pre>
-    <p>
-        This installs all the dependencies needed to run the Angular CLI from the command line.
-    </p>
-</section>
-<section>
-    <h1>Creating a New Project</h1>
-    <pre><code class="bash">
-    ng new MY-PROJECT-NAME 
-    cd MY-PROJECT-NAME
-    ng serve
-        </code></pre>
-</section>
-<section>
-    <h1>Flags</h1>
-    <p>The <code>new</code> command has several useful flags available in it.</p>
-    <div class="two-col">
-        <ul>
-            <li class="fragment"><code>--dry-run</code></li>
-            <li class="fragment"><code>--prefix</code></li>
-            <li class="fragment"><code>--routing</code></li>
-            <li class="fragment"><code>--style</code></li>
-        </ul>
-    </div>
-</section>
-<section>
-    <h1>Files Created</h1>
-    <ul>
-        <li class="fragment"><code>e2e</code> - End to End tests</li>
-        <li class="fragment"><code>.angular-cli.json</code> - CLI settings</li>
-        <li class="fragment">.gitignore</li>
-        <li class="fragment">package.json</li>
-        <li class="fragment">ReadME.MD</li>
-
-    </ul>
-</section>
-<section>
-    <h1>SRC Files and Folders</h1>
-    <div class="two-col">
-        <div>
-            <ul>
-                <li class="fragment"><code>index.html</code></li>
-                <li class="fragment"><code>main.ts</code> - Main bootstraper</li>
-                <li class="fragment"><code>styles.css</code> - Global Styles</li>
-                <li class="fragment">assets folder</li>
-                <li class="fragment">environments</li>
-            </ul>
-
-        </div>
-        <div>
-            <h2 class="fragment">app folder</h2>
-            <ul>
-                <li class="fragment"><code>app.module.ts</code></li>
-                <li class="fragment"><code>app.component.ts</code></li>
-                <li class="fragment"><code>app.component.spec.ts</code></li>
-                <li class="fragment"><code>app.component.html</code></li>
-                <li class="fragment"><code>app.component.css</code></li>
-            </ul>
-
-        </div>
-    </div>
-</section>
-
-<section>
-    <h1>Creating a New Component</h1>
-    <pre><code class="bash">
-ng generate component  my-new-component-name
-#which is equal to
-ng g component  my-new-component-name
-
-#You can also assign folder paths
-ng g component shared/components/my-small-component
-        </code></pre>
-</section>
-
-<section>
-    <h1>Items you can Generate</h1>
-    <div class="two-col">
-        <div>
-            <ul>
-                <li class="fragment">component</li>
-                <li class="fragment">directive</li>
-                <li class="fragment">pipe</li>
-                <li class="fragment">service</li>
-                <li class="fragment">class</li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li class="fragment">guard</li>
-                <li class="fragment">interface</li>
-                <li class="fragment">enum</li>
-                <li class="fragment">module</li>
-            </ul>
-        </div>
-    </div>
-</section>
-<!--<section>
-    <h1>Testing</h1>
-</section>-->
-                <section id="component">
-    <h1>The Angular Component</h1>
-    <p>Angular applications are made up of multiple <code>components</code>. An Angular component is composed of HTML (the View)
-        and a Component class that manipulates parts of the screen. </p>
-</section>
-<section>
-    <h1>Example</h1>
-    <div class="two-col">
-        <div>
-            <pre><code class="ts">
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'my-app',
-  template: `&lt;h1&gt;Hello {{name}}&lt;/h1&gt;`
-})
-export class AppComponent { 
-    name = 'Angular'; 
-}
-</code></pre>
-        </div>
-        <div>
-            <p class="fragment">imports</p>
-            <p class="fragment">@Component</p>
-            <p class="fragment">selector</p>
-            <p class="fragment">template</p>
-            <p class="fragment">class</p>
-        </div>
-    </div>
-</section>
-<section>
-    <h1>Example</h1>
-    <div class="two-col">
-        <div>
-            <pre><code class="ts">
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'my-app',
-  template: `&lt;h1&gt;Hello {{name}}&lt;/h1&gt;`
-})
-export class AppComponent { 
-    name = 'Angular'; 
-}
-</code></pre>
-        </div>
-        <div>
-            <h2>Input</h2>
-            <pre><code class="xml">
-&lt;my-app>&lt;/my-app>
-    </code></pre>
-            <div class="fragment">
-                <h2>Output</h2>
-                <pre><code class="xml">
-&lt;h1>Hello Angular&lt;/h1>
-               </code></pre>
-            </div>
-        </div>
-    </div>
-</section>
-                <section>
-    <h1>Interpolation</h1>
-    <p>
-        Interpolation is the method to display a component property in a template.
-    </p>
-</section>
-<section>
-    <h1>Syntax</h1>
-    <pre><code class="ts" data-noescape>
-@Component({
-  selector: 'my-app',
-  template: `
-    &lt;h1><mark>{{title}}</mark>&lt;/h1>
-    &lt;h2>My favorite hero is: <mark>{{myHero}}</mark>&lt;/h2>
-    `
-})
-export class AppComponent {
-  <mark>title</mark> = 'Tour of Heroes';
-  <mark>myHero</mark> = 'Windstorm';
-}
-        </code></pre>
-</section>
-                <section>
-                    <h2>Questions?</h2>
-                </section>
+                
                 <section id="ngif">
     <h1>ngIf</h1>
     <p>
         There are times where you may need to hide or show content based off a condition in JavaScript. In the past, we've use CSS
         and classes to hide elements. We can use ngIf to show or hide content.
     </p>
-    <p class="fragment">
+    <p class="">
         NgIf actually adds and removes content from the DOM when its condition is triggered.
 
     </p>
@@ -329,7 +117,7 @@ export class AppComponent {
 </ul>
 </code></pre>
         </div>
-        <div class="fragment">
+        <div class="">
             <h2>Output</h2>
 
             <pre><code class="html">
@@ -410,13 +198,13 @@ export class HeroAppComponent {
 /* . . . */
 }</code></pre>
     </div>
-    <div class="fragment">
+    <div class="">
 
         <pre><code class=" xml">
 &lt;h1 _ngcontent-pmm-1>Hello Angular&lt;/h1>
 </code></pre>
     </div>
-    <div class="fragment">
+    <div class="">
 
         <pre><code class=" css">
 h1[_ngcontent-pmm-1] { font-weight: normal; }
@@ -424,6 +212,20 @@ h1[_ngcontent-pmm-1] { font-weight: normal; }
 
 
     </div>
+</section>
+<section>
+<h1>Encapsulation Continued</h1>
+	<ul>
+        <li>The styles specified in @Component metadata apply only within the template of that component.</li>
+		<li>They are not inherited by any components nested within the template nor by any content projected into the component.</li>
+		<li>Angular generates custom attributes to help scope our CSS class names to our given component.</li>
+    </ul>
+<p><a href="https://angular.io/guide/component-styles" target="_blank">Docs</a></p>
+</section>
+<section>
+<h1>PrimeNG</h1>
+<p>For "common" components, don't build your own.  Use a library like PrimeNG and override the styling for your project.</p>
+<p><a href="https://primefaces.org/primeng/#/messages" target="_blank">Docs</a></p>
 </section>
  
            </div>
