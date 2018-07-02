@@ -36,7 +36,7 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>1/2/2018</h1>
+                    <h1>7/3/2018</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
@@ -58,125 +58,7 @@
                        </div>
                     </div>
                 </section>
-                <section>
-    <h1>Angular CLI</h1>
-    <p>
-        The Angular CLI makes it very easy to create a new application, create new components, and test locally.
-    </p>
-</section>
-<section>
-    <h1>Angular CLI Benefits</h1>
-    <ul>
-        <li class="">Generates Project Structure</li>
-        <li class="">Creates Most Files</li>
-        <li class="">Runs your development server</li>
-        <li class="">Follows best practices</li>
-    </ul>
-</section>
-<section>
-    <h1>Installing Angular CLI</h1>
-    <pre><code class="bash">
-    npm install -g @angular/cli
-    </code></pre>
-    <p>
-        This installs all the dependencies needed to run the Angular CLI from the command line.
-    </p>
-</section>
-<section>
-    <h1>Creating a New Project</h1>
-    <pre><code class="bash">
-    ng new MY-PROJECT-NAME 
-    cd MY-PROJECT-NAME
-    ng serve
-        </code></pre>
-</section>
-<section>
-    <h1>Flags</h1>
-    <p>The <code>new</code> command has several useful flags available in it.</p>
-    <div class="two-col">
-        <ul>
-            <li class=""><code>--dry-run</code></li>
-            <li class=""><code>--prefix</code></li>
-            <li class=""><code>--routing</code></li>
-            <li class=""><code>--style</code></li>
-        </ul>
-    </div>
-</section>
-<section>
-    <h1>Files Created</h1>
-    <ul>
-        <li class=""><code>e2e</code> - End to End tests</li>
-        <li class=""><code>.angular-cli.json</code> - CLI settings</li>
-        <li class="">.gitignore</li>
-        <li class="">package.json</li>
-        <li class="">ReadME.MD</li>
-
-    </ul>
-</section>
-<section>
-    <h1>SRC Files and Folders</h1>
-    <div class="two-col">
-        <div>
-            <ul>
-                <li class=""><code>index.html</code></li>
-                <li class=""><code>main.ts</code> - Main bootstraper</li>
-                <li class=""><code>styles.css</code> - Global Styles</li>
-                <li class="">assets folder</li>
-                <li class="">environments</li>
-            </ul>
-
-        </div>
-        <div>
-            <h2 class="">app folder</h2>
-            <ul>
-                <li class=""><code>app.module.ts</code></li>
-                <li class=""><code>app.component.ts</code></li>
-                <li class=""><code>app.component.spec.ts</code></li>
-                <li class=""><code>app.component.html</code></li>
-                <li class=""><code>app.component.css</code></li>
-            </ul>
-
-        </div>
-    </div>
-</section>
-
-<section>
-    <h1>Creating a New Component</h1>
-    <pre><code class="bash">
-ng generate component  my-new-component-name
-#which is equal to
-ng g component  my-new-component-name
-
-#You can also assign folder paths
-ng g component shared/components/my-small-component
-        </code></pre>
-</section>
-
-<section>
-    <h1>Items you can Generate</h1>
-    <div class="two-col">
-        <div>
-            <ul>
-                <li class="">component</li>
-                <li class="">directive</li>
-                <li class="">pipe</li>
-                <li class="">service</li>
-                <li class="">class</li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li class="">guard</li>
-                <li class="">interface</li>
-                <li class="">enum</li>
-                <li class="">module</li>
-            </ul>
-        </div>
-    </div>
-</section>
-<!--<section>
-    <h1>Testing</h1>
-</section>-->
+                
                 <section id="ngif">
     <h1>ngIf</h1>
     <p>
@@ -208,12 +90,12 @@ export class AppComponent {
 <section>
     <h1>Else</h1>
     <pre><code class="xml">
-<ng-template #hidden>
-    <p>Hidden else content</p>
-</ng-template>
 <p *ngIf="shown; else hidden">
     Visible shown content
 </p>
+<ng-template #hidden>
+    <p>Hidden else content</p>
+</ng-template>
         </code></pre>
 </section>
                 <section id="ngfor">
@@ -337,11 +219,26 @@ h1[_ngcontent-pmm-1] { font-weight: normal; }
 
     </div>
 </section>
+<section>
+<h1>Encapsulation Continued</h1>
+	<ul>
+        <li>The styles specified in @Component metadata apply only within the template of that component.</li>
+		<li>They are not inherited by any components nested within the template nor by any content projected into the component.</li>
+		<li>Angular generates custom attributes to help scope our CSS class names to our given component.</li>
+    </ul>
+<p><a href="https://angular.io/guide/component-styles" target="_blank">Docs</a></p>
+</section>
+<section>
+<h1>PrimeNG</h1>
+<p>For "common" components, don't build your own.  Use a library like PrimeNG and override the styling for your project.</p>
+<p><a href="https://primefaces.org/primeng/#/messages" target="_blank">Docs</a></p>
+</section>
+
                 <section>
                     <h2>Questions?</h2>
                 </section>
                 <section>
-    <h1>Let's start building that app.</h1>
+    <h1>Let's start building an app.</h1>
     <h2>Open your terminal</h2>
 </section>
 <section>
@@ -425,6 +322,167 @@ h1[_ngcontent-pmm-1] { font-weight: normal; }
     <h2>Change some HTML in app.component.html and save.</h2>
     <h3 class="">Verify the page updates</h3>
 
+</section>
+ <section>
+    <h1>Generating Your First Component</h1>
+    <!--
+        Generate Component
+        Create a code behind
+        Create an interface
+        Loop through some items
+    -->
+</section>
+<section>
+    <h1>Steps</h1>
+    <ul>
+        <li class="">Open a terminal window</li>
+        <li class="">CD into your project directory</li>
+        <li class="">
+            <code>ng generate component taco-menu</code>
+        </li>
+        <li class="">or</li>
+        <li class="">
+            <code>ng g c taco-menu</code>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>All new components will have "something works" as it's default html</h2>
+    <h3>Insert the new component into the app.component.html file.</h3>
+    <pre><code class="xml">
+    <app-taco-menu></app-taco-menu>
+    </code></pre>
+</section>
+<section>
+    <h1>Interface generation</h1>
+    <h2>Think about the properties you want in your main object.</h2>
+</section>
+<section>
+    <h1>Example</h1>
+    <div class="two-col">
+        <div>
+            <h3>Menu Item - Simple</h3>
+            <ul>
+                <li>Name : string</li>
+                <li>Description : string</li>
+                <li>Category : string</li>
+                <li>Price : number</li>
+                <li>IsFeatured: boolean</li>
+
+            </ul>
+        </div>
+        <div class="">
+            <h3>Menu Item - Complex</h3>
+            <ul>
+                <li>Name : string</li>
+                <li>Description : string</li>
+                <li>Category : string</li>
+                <li>Price: number</li>
+                <li>IsFeatured: boolean</li>
+                <li>Allergens : Array of strings</li>
+                <li>Calories: number</li>
+                <li>
+                    Tags: Array of Tag
+                    <ul>
+                        <li>Tag Id</li>
+                        <li>Tag Name</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<section>
+    <!-- generate interface -->
+    <h1>Generate that interface!</h1>
+    <h3>
+        <code>ng g i shared/interfaces/menu-item</code>
+    </h3>
+</section>
+<section>
+    <h1>Build Interface</h1>
+    <pre><code class="ts">
+export interface MenuItem {
+    name: string;
+    description: string;
+    category: string;
+    price: number;
+    isFeatured: boolean;
+}
+    </code></pre>
+</section>
+<section>
+    <h2>Go to your component, import the module and create a variable for it. </h2>
+    <pre><code class="js">
+    import { MenuItem } from '../shared/interfaces/menu-item';
+    </code></pre>
+</section>
+<section>
+    <h2>Menu Item</h2>
+    <pre><code class="ts">
+export class TacoMenuComponent implements OnInit {
+
+    menuItem: MenuItem = {
+        name: 'Taco',
+        description: 'Just a taco',
+        category: 'Tacos',
+        price: 1.5,
+        isFeatured: false
+    };
+    
+    constructor() { }
+    ngOnInit() { }
+    
+}
+</code></pre>
+</section>
+<section>
+    <h1>Display the menu item</h1>
+    <pre><code class="xml">
+<h3>Menu Item</h3>
+<div class="menu-item">
+    <h3>{{menuItem.name}}</h3>
+    <p>{{menuItem.description}}</p>
+</div>
+    </code></pre>
+</section>
+<section>
+    <h1>Create a list of Items</h1>
+    <h2>We will loop through them</h2>
+    <pre><code class="ts">
+    menuItems: Array<MenuItem> = [];
+    </code></pre>
+    <!-- build list of items -->
+</section>
+<section>
+    <h1>Add Items to the array</h1>
+    <p>
+        I'm going to just add our menuItem multiple times.
+    </p>
+    <pre><code class="ts">
+ngOnInit() {
+    this.menuItems.push(this.menuItem);
+    this.menuItems.push(this.menuItem);
+    this.menuItems.push(this.menuItem);
+}
+
+       </code></pre>
+</section>
+<section>
+    <h1>Loop and display them with an *ngFor</h1>
+    <!-- Display Items via loop -->
+    <pre><code class="xml">
+<div *ngFor="let item of menuItems">
+    <h3>{{item.name}}</h3>
+    <p>{{item.description}}</p>
+</div>
+    </code></pre>
+</section>
+<section>
+    <h1>Time Pending</h1>
+    <h2>Add Bootstrap</h2>
+    <h2>Add Images to menu</h2>
 </section>
            </div>
 
