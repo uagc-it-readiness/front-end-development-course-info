@@ -36,17 +36,9 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>1/4/2018</h1>
+                    <h1>7/5/2018</h1>
                     <div class="two-col">
 
-                        <div>
-                            <h2>Review</h2>
-                            <ul>
-                                <li>Creating a component</li>
-                                <li>Creating an Interface</li>
-                                <li>Live Coding</li>
-                            </ul>
-                        </div>
                         <div>
                             <h2>New</h2>
                             <ul>
@@ -55,174 +47,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div>
+                    <!--<div>
                         <a href="https://github.com/WorthyD/taco-truck">Source</a>
-                    </div>
-                </section>
-
-                <section>
-    <h1>Generating Your First Component</h1>
-    <!--
-        Generate Component
-        Create a code behind
-        Create an interface
-        Loop through some items
-    -->
-</section>
-<section>
-    <h1>Steps</h1>
-    <ul>
-        <li class="fragment">Open a terminal window</li>
-        <li class="fragment">CD into your project directory</li>
-        <li class="fragment">
-            <code>ng generate component taco-menu</code>
-        </li>
-        <li class="fragment">or</li>
-        <li class="fragment">
-            <code>ng g c taco-menu</code>
-        </li>
-    </ul>
-</section>
-<section>
-    <h2>All new components will have "something works" as it's default html</h2>
-    <h3>Insert the new component into the app.component.html file.</h3>
-    <pre><code class="xml">
-    <app-taco-menu></app-taco-menu>
-    </code></pre>
-</section>
-<section>
-    <h1>Interface generation</h1>
-    <h2>Think about the properties you want in your main object.</h2>
-</section>
-<section>
-    <h1>Example</h1>
-    <div class="two-col">
-        <div>
-            <h3>Menu Item - Simple</h3>
-            <ul>
-                <li>Name : string</li>
-                <li>Description : string</li>
-                <li>Category : string</li>
-                <li>Price : number</li>
-                <li>IsFeatured: boolean</li>
-
-            </ul>
-        </div>
-        <div class="fragment">
-            <h3>Menu Item - Complex</h3>
-            <ul>
-                <li>Name : string</li>
-                <li>Description : string</li>
-                <li>Category : string</li>
-                <li>Price: number</li>
-                <li>IsFeatured: boolean</li>
-                <li>Allergens : Array of strings</li>
-                <li>Calories: number</li>
-                <li>
-                    Tags: Array of Tag
-                    <ul>
-                        <li>Tag Id</li>
-                        <li>Tag Name</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-</section>
-<section>
-    <!-- generate interface -->
-    <h1>Generate that interface!</h1>
-    <h3>
-        <code>ng g i shared/interfaces/menu-item</code>
-    </h3>
-</section>
-<section>
-    <h1>Build Interface</h1>
-    <pre><code class="ts">
-export interface MenuItem {
-    name: string;
-    description: string;
-    category: string;
-    price: number;
-    isFeatured: boolean;
-}
-    </code></pre>
-</section>
-<section>
-    <h2>Go to your component, import the module and create a variable for it. </h2>
-    <pre><code class="js">
-    import { MenuItem } from '../shared/interfaces/menu-item';
-    </code></pre>
-</section>
-<section>
-    <h2>Menu Item</h2>
-    <pre><code class="ts">
-export class TacoMenuComponent implements OnInit {
-
-    menuItem: MenuItem = {
-        name: 'Taco',
-        description: 'Just a taco',
-        category: 'Tacos',
-        price: 1.5,
-        isFeatured: false
-    };
-    
-    constructor() { }
-    ngOnInit() { }
-    
-}
-</code></pre>
-</section>
-<section>
-    <h1>Display the menu item</h1>
-    <pre><code class="xml">
-<h3>Menu Item</h3>
-<div class="menu-item">
-    <h3>{{menuItem.name}}</h3>
-    <p>{{menuItem.description}}</p>
-</div>
-    </code></pre>
-</section>
-<section>
-    <h1>Create a list of Items</h1>
-    <h2>We will loop through them</h2>
-    <pre><code class="ts">
-    menuItems: Array<MenuItem> = [];
-    </code></pre>
-    <!-- build list of items -->
-</section>
-<section>
-    <h1>Add Items to the array</h1>
-    <p>
-        I'm going to just add our menuItem multiple times.
-    </p>
-    <pre><code class="ts">
-ngOnInit() {
-    this.menuItems.push(this.menuItem);
-    this.menuItems.push(this.menuItem);
-    this.menuItems.push(this.menuItem);
-}
-
-       </code></pre>
-</section>
-<section>
-    <h1>Loop and display them with an *ngFor</h1>
-    <!-- Display Items via loop -->
-    <pre><code class="xml">
-<div *ngFor="let item of menuItems">
-    <h3>{{item.name}}</h3>
-    <p>{{item.description}}</p>
-</div>
-    </code></pre>
-</section>
-<section>
-    <h1>Time Pending</h1>
-    <h2>Add Bootstrap</h2>
-    <h2>Add Images to menu</h2>
-</section>
-                <section>
-                    <h2>Questions?</h2>
+                    </div>-->
                 </section>
 
                 <section>
@@ -230,11 +57,62 @@ ngOnInit() {
     <h3>Services encourage reusable code.</h3>
 </section>
 <section>
-    <h2>Let's make a service to retrieve our menu items</h2>
+    <h2>Let's make a service to retrieve menu items.</h2>
     <p>
-        <code>ng g s shared/services/menu-items</code>
+        <ul>
+			<li><code>ng g s shared/services/menu-items</code></li>
+			<li><code>ng g i shared/interfaces/menu-item</code></li>
+		</ul>
     </p>
 </section>
+<section>
+	<ul>
+			<li>Add fields to your interface.</li>
+			<li>Create 'getMenuItems' in the service</li>
+	</ul>
+</section>
+<section>
+<pre><code class="xml">
+    public getMenuItems(): Array<MenuItem>{
+    return [
+      {
+        id: 1,
+        name: "Taco",
+        description: "Just a Taco",
+        category: "Tacos",
+        price: 1.5,
+        isFeatured: false
+    },
+    {
+        id: 2,
+        name: "TacocaT",
+        description: "A Palindrome",
+        category: "Tacos",
+        price: 2.2,
+        isFeatured: false
+    }
+    ]
+  }
+    </code></pre>
+	<p>Ignore that /MenuItem tag</p>
+</section>
+<section>
+<h3>Call the service in our taco-menu component</h3>
+<p>Add it to the constructor</p>
+<pre><code class="xml">
+	constructor(private menuService: MenuItemsService)
+</code></pre>
+<p>Call it in ngOnInit</p>
+<pre><code class="xml">
+    let x: Array<MenuItem> = this.menuService.getMenuItems();
+    console.log(x);
+    </code></pre>
+</section>
+<section>
+<h2>That was a very simple service!</h2>
+<p>A true service will make a call out to the web (some url) to retrieve data.  Another common use for a service is to return data from a local .json file.</p>
+</section>
+<!--
 <section>
     <h2>Code out your service.</h2>
     <p>
@@ -244,25 +122,38 @@ ngOnInit() {
 <section>
     <h2>Including Angular HTTP</h2>
     <ul>
-        <li class="fragment">Include HTTP inside the main module</li>
-        <li class="fragment">Import Http, Response, and toPromise</li>
-        <li class="fragment">Inject it to the constructor</li>
+        <li class="">Include HTTP inside app.module.ts: </li>
+		<li><code>import { HttpModule  } from '@angular/http';</code></li>
+        <li class="">Import Http, Response, and toPromise in the Service</li>
+		<li><code>import { Injectable } from '@angular/core';</code></li>
+		<li><code>import {Http, Response} from '@angular/http';</code></li>
+		<li><code>import 'rxjs/add/operator/toPromise';</code></li>		
+        <li class="">Inject it to the constructor</li>
     </ul>
 </section>
 <section>
     <h2>Building out an async request.</h2>
     <p>We've done this before in jQuery before, but Angular will handle it differently.</p>
 </section>
+-->
 <section>
     <h2>Routing</h2>
     <p>
         Routing allows us to navigate between pages easily.  
     </p>
+	
+	<p>A bit of cleanup: comment out app-taco-menu and make sure router-outlet was included in app-component.html</p>
+	
+	<pre><code class="ts">
+	<!--  <app-taco-menu></app-taco-menu>  -->
+
+	<router-outlet></router-outlet>
+ </code></pre>
 </section>
 <section>
     <h2>Writing out your routes.</h2>
     <p>
-        These are done inside the app-routing.module.ts
+        These are done inside the app-routing.module.ts.  Make sure to import TacoMenuComponent and to create a placeholder MenuDetailComponent.
     </p>
     <pre><code class="ts">
 const routes: Routes = [
@@ -270,22 +161,6 @@ const routes: Routes = [
     { path: 'menu', component: TacoMenuComponent },
     { path: 'detail/:id', component: MenuDetailComponent }
 ];
-    </code></pre>
-</section>
-<section>
-    <h2>Linking in html</h2>
-    <pre><code class="xml">
-    <a routerLink="/">Home</a>
-    </code></pre>
-</section>
-<section>
-    <h2>Linking in JS</h2>
-    <pre><code class="ts">
-constructor(private menuService: MenuItemsService, private router: Router) { }
-   </code></pre>
-    <pre><code class="ts">
-    const link = ['/detail', menuItem.id];
-    this.router.navigate(link);
     </code></pre>
 </section>
 <section>
@@ -302,16 +177,55 @@ constructor(private menuService: MenuItemsService, private router: Router) { }
 </section>
 <section>
     <h1>Retrieving a routing parameter</h1>
-    <pre><code class="xml">
-ngOnInit() {
+	<ul>
+	<li><code>import { ActivatedRoute, Params } from '@angular/router';</code></li>
+	<li><code>import { MenuItemsService } from '../shared/services/menu-items.service';</code></li>
+	<li><code>import { MenuItem } from '../shared/interfaces/menu-item';</code></li>
+	</ul>
+	
+</section>
+<section>
+<p>menu-detail.component.ts</p>
+<pre><code class="xml">
+export class MenuDetailComponent implements OnInit {
+
+  constructor(private route: ActivatedRoute, private menuService: MenuItemsService) { }
+  currentMenuItem: MenuItem;
+  ngOnInit() {
     this.route.params.forEach((params: Params) => {
-        if (params['id'] !== undefined) {
-            const id = +params['id'];
-        }
+      if(params['id'] !== undefined){
+        const id:number = +params['id'];
+        this.currentMenuItem = this.getDetail(id);
+      }
     });
+  }
+  getDetail(id: number){
+    return this.menuService.getMenuItemsById(id);
+  }
+
 }
     </code></pre>
 </section>
+<section>
+<p>menu-items.service.ts</p>
+<pre><code class="xml">
+ public getMenuItemsById(id: number): MenuItem{
+    
+    return this.getMenuItems().find(element => {
+      return element.id === id;
+    })
+  }
+    </code></pre>
+</section>
+<section>
+<p>menu-detail.component.html</p>
+<pre><code class="xml">
+  <h1>
+  {{currentMenuItem.name}}
+</h1>
+    </code></pre>
+</section>
+
             </div>
 
         </div>
