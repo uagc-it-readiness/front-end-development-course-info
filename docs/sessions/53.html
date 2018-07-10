@@ -77,6 +77,21 @@
     </p>
 </section>
 <section>
+	<h1>Set the stage</h1>
+	<pre><code class="xml">
+		menuItems: Array<MenuItem> = [];
+		allMenuItems: Array<MenuItem> = [];
+
+		filterProperty: String = 'name';
+		filterDirection: String = 'asc';
+	
+		ngOnInit() {
+			this.allMenuItems = this.menuService.getMenuItems();
+			this.sort();
+		}
+	</pre></code>
+</section>
+<section>
     <h1>Sort By Inputs</h1>
     <p>
         We are going to add a list of radio buttons to select what property we are going to sort by.
@@ -89,7 +104,7 @@
     <input type="radio" name="term" [(ngModel)]="term" [value]="'price'" (change)="sort()">Price
 </label>
 </code></pre>
-
+<p>Update the ngModel and value attributes.</p>
 
 </section>
 <section>
@@ -121,19 +136,7 @@
   </select>
 </code></pre>
 </section>
-<section>
-    <h1>Sort Code</h1>
-    <pre><code class="js">
-    var nums = [20, 3, 10, 1, 2]
-    nums.sort(function(a,b){
-        //Ascending
-        return a - b;
-        //Descending
-        return b-a;
-    });
-    console.log(nums); //[1, 2, 3, 10, 20];
-</code></pre>
-</section>
+
 <section>
     <h1>Sort Code</h1>
     <pre><code class="ts">
