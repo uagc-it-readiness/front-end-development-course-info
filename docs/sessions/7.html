@@ -36,12 +36,12 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>2/22/2018</h1>
+                    <h1>9/4/2018</h1>
                     <ul>
+						<li><a href="#/box-model">Box Model</a></li>
                         <li><a href="#/margin-padding">Margins & Padding</a></li>
                         <li><a href="#/height-width">Height & Width</a></li>
                         <li><a href="#/display">Display</a></li>
-                        <li><a href="#/float">Floats</a></li>
                         <li><a href="#/list-style">List Style</a></li>
                         <li><a href="#/selectors-grouping">New Selectors</a></li>
                         <li><a href="#/dev-tools">Dev Tools</a></li>
@@ -78,7 +78,7 @@
                 margin: 20px 0;
             }
         </style>
-        <div class="fragment">
+        <div class="">
 
             <div class="fig8">
                 Fig 8 - I have no bottom border
@@ -97,10 +97,16 @@
         <a href="https://css-tricks.com/almanac/properties/b/border/" target="_blank">Border Guide</a>
     </div>
 </section>
-<section>
+<section id="box-model">
 <h1>Box Model</h1>
 <p>All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.</p>
-<div><a href="https://www.w3schools.com/css/css_boxmodel.asp">w3schools box model</a>
+<p>box-sizing:content-box is the "default".  <br/>box-sizing:border-box is considered by most to be the 'better way'.  border-box shrinks the width of the content area to account for padding/border/margin when width is set.
+<p>You can set a width to 100% and not worry about funny math.</p>
+</section>
+<section>
+<div><a href="https://www.w3schools.com/css/css3_box-sizing.asp">w3schools box model</a></div>
+<div><a href="https://www.w3schools.com/css/css_boxmodel.asp">w3schools box sizing property</a></div>
+<div><a href="https://css-tricks.com/box-sizing/">css-tricks</a></div>
 </section>
                     <section id="margin-padding">
         <h1>Margins</h1>
@@ -108,10 +114,10 @@
             CSS Margins add spacing <em>around</em> an element.
         </p>
         <ul>
-            <li class="fragment"><strong>margin-top</strong></li>
-            <li class="fragment"><strong>margin-right</strong></li>
-            <li class="fragment"><strong>margin-bottom</strong></li>
-            <li class="fragment"><strong>margin-left</strong></li>
+            <li class=""><strong>margin-top</strong></li>
+            <li class=""><strong>margin-right</strong></li>
+            <li class=""><strong>margin-bottom</strong></li>
+            <li class=""><strong>margin-left</strong></li>
         </ul>
     </section>
    <section>
@@ -120,22 +126,22 @@
             CSS Padding add spacing <em>inside</em> an element.
         </p>
         <ul>
-            <li class="fragment"><strong>padding-top</strong></li>
-            <li class="fragment"><strong>padding-right</strong></li>
-            <li class="fragment"><strong>padding-bottom</strong></li>
-            <li class="fragment"><strong>padding-left</strong></li>
+            <li class=""><strong>padding-top</strong></li>
+            <li class=""><strong>padding-right</strong></li>
+            <li class=""><strong>padding-bottom</strong></li>
+            <li class=""><strong>padding-left</strong></li>
         </ul>
     </section>
     <section>
         <h1>Shorthand</h1>
         <ul>
-            <li class="fragment"><code>5px</code> applies 5 pixels to all 4 sides.</li>
-            <li class="fragment"><code>5px 10px</code> applies 5px to top and bottom and applies 10px to left and right.</li>
-            <li class="fragment"><code>5px 10px 15px 20px</code> <ul>
-                <li class="fragment">5px to top</li>
-                <li class="fragment">10px to right</li>
-                <li class="fragment">15px to bottom</li>
-                <li class="fragment">20px to left</li>
+            <li class=""><code>5px</code> applies 5 pixels to all 4 sides.</li>
+            <li class=""><code>5px 10px</code> applies 5px to top and bottom and applies 10px to left and right.</li>
+            <li class=""><code>5px 10px 15px 20px</code> <ul>
+                <li class="">5px to top</li>
+                <li class="">10px to right</li>
+                <li class="">15px to bottom</li>
+                <li class="">20px to left</li>
             </ul></li>
         </ul>
        
@@ -147,24 +153,24 @@
    <section>
         <h1>Center Align Block Content</h1>
         <p>How do we horizontally center align block content?</p>
-		<p class="fragment">margin-right:auto; margin-left:auto;</p>
+		<p class="">margin-right:auto; margin-left:auto;</p>
     </section>
                 <section id="height-width">
     <h1>Height & Width</h1>
     <p>Sets the specific height and width of a <em>block</em> element</p>
     <ul>
-        <li class="fragment">
+        <li class="">
             <strong>height</strong>
             <ul>
-                <li class="fragment"><strong>min-height</strong></li>
-                <li class="fragment"><strong>max-height</strong></li>
+                <li class=""><strong>min-height</strong></li>
+                <li class=""><strong>max-height</strong></li>
             </ul>
         </li>
-        <li class="fragment">
+        <li class="">
             <strong>width</strong>
             <ul>
-                <li class="fragment"><strong>min-width</strong></li>
-                <li class="fragment"><strong>max-width</strong></li>
+                <li class=""><strong>min-width</strong></li>
+                <li class=""><strong>max-width</strong></li>
             </ul>
         </li>
     </ul>
@@ -175,15 +181,15 @@
         The CSS display property is used to change the default rendering style of an element.
     </p>
     <ul>
-        <li class="fragment"><strong>inline</strong> - span, em, strong</li>
-        <li class="fragment"><strong>block</strong> - div, p, h1-h6</li>
-        <li class="fragment"><strong>none</strong> - hides the element</li>
+        <li class=""><strong>inline</strong> - span, em, strong</li>
+        <li class=""><strong>block</strong> - div, p, h1-h6</li>
+        <li class=""><strong>none</strong> - hides the element</li>
 			<ul>
-			<li class="fragment"><a href="https://stackoverflow.com/questions/133051/what-is-the-difference-between-visibilityhidden-and-displaynone">display:none vs visibility:hidden<a>
+			<li class=""><a href="https://stackoverflow.com/questions/133051/what-is-the-difference-between-visibilityhidden-and-displaynone">display:none vs visibility:hidden<a>
 			</ul>
-        <li class="fragment"><strong>inline-block</strong> - Renders block, but stays in a single line.</li>
+        <li class=""><strong>inline-block</strong> - Renders block, but stays in a single line.</li>
     </ul>
-    <p class="fragment">
+    <p class="">
         You can change any element to display any type.
     </p>
     <aside class="notes">
@@ -195,52 +201,16 @@
     <p data-height="265" data-theme-id="0" data-slug-hash="rpgVBa" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-CSS-Dispaly" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/rpgVBa/">UA-ITR-CSS-Dispaly</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-                <section id="float">
-    <h1>Float</h1>
-    <p>
-        Float changes the position of an element and provides advanced layout to websites.
-    </p>
-    <ul>
-        <li class="fragment"><strong>left</strong></li>
-        <li class="fragment"><strong>right</strong></li>
-        <li class="fragment"><strong>none</strong></li>
-    </ul>
-</section>
-<section>
-    <h1>Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="mpYyNp" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-CSS-Floats Example" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/mpYyNp/">UA-ITR-CSS-Floats Example</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Clear</h1>
-    <p>
-        Clear resets floats and allows content to continue down the page.
-    </p>
-    <ul>
-        <li class="fragment"><strong>left</strong></li>
-        <li class="fragment"><strong>right</strong></li>
-        <li class="fragment"><strong>both</strong></li>
-    </ul>
-</section>
-<section>
-    <h1>Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="ypWydW" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-CSS-Floats" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/ypWydW/">UA-ITR-CSS-Floats</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1><a href="https://css-tricks.com/all-about-floats/" target="_blank">All About Floats</a></h1>
-
-</section>
                 <section id="list-style">
     <h1>List Style</h1>
     <p>
         Changes the default styling of <code>UL</code> and <code>OL</code> lists
     </p>
     <ul>
-        <li class="fragment"><code>list-style-type</code> - changes the icon/value used in the list</li>
-        <li class="fragment"><code>list-style-position</code> - changes the position of the list. Accepts <strong>inside</strong> and <strong>outside</strong></li>
-        <li class="fragment"><code>list-style-img</code> - changes bullets to image. Accepts <strong>none</strong> or a valid URL</li>
-        <li class="fragment"> Short hand<code>list-style: type position img</code></li>
+        <li class=""><code>list-style-type</code> - changes the icon/value used in the list</li>
+        <li class=""><code>list-style-position</code> - changes the position of the list. Accepts <strong>inside</strong> and <strong>outside</strong></li>
+        <li class=""><code>list-style-img</code> - changes bullets to image. Accepts <strong>none</strong> or a valid URL</li>
+        <li class=""> Short hand<code>list-style: type position img</code></li>
     </ul>
 </section>
 <section>
@@ -271,10 +241,10 @@
 </section>
 <section>
 <h1>This is not on the first test<h1>
-<h2 class="fragment">...but it's really good to know</h2>
-<a class="fragment" href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp">Media queries in ARIA compliance</a>
+<h2 class="">...but it's really good to know</h2>
+<a class="" href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp">Media queries in ARIA compliance</a>
 <br/>
-<a class="fragment" href="https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/">Media queries in mobile responsive</a>
+<a class="" href="https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/">Media queries in mobile responsive</a>
 </section>
                 <section id="dev-tools">
     <h1>Dev Tools Review</h1>
@@ -282,10 +252,11 @@
 <section>
     <h1>Opening the Dev Tools</h1>
     <ul>
-        <li class="fragment">Chrome Menu > More Tools > Developer Tools</li>
-        <li class="fragment">Right click on a page element and select `inspect` element</li>
-        <li class="fragment"><code>Ctrl+Shift+I</code> (Windows) or <code>Cmd+Opt+I</code> (Mac)</li>
+        <li class="">Chrome Menu > More Tools > Developer Tools</li>
+        <li class="">Right click on a page element and select `inspect` element</li>
+        <li class=""><code>Ctrl+Shift+I</code> (Windows) or <code>Cmd+Opt+I</code> (Mac)</li>
     </ul>
+	<a href="https://developers.google.com/web/tools/chrome-devtools/" target="_blank">Dev tools info</a>
 </section>
                 
                 <section>
@@ -318,6 +289,16 @@
 
                     </ul>
                 </section>
+				<section>
+				<h1>Exercise Two</h1>
+				<ul>
+					<li>Go to this link: <a href="https://developers.google.com/web/tools/chrome-devtools/" target="_blank">Chrome Dev Tools Tutorial</a></li>
+					<li>Under the Get Started section, complete "View and Change a Page's Styles" section</li>
+					<li>If you are ambitious, under the Get Started section, complete "Debug Javascript" section</li>
+					<li>If you are <strong>extremely</strong> ambitious, under the Get Started section, complete the last two sections</li>
+					<li>Go back to the main page and read as much as possible!</li>
+				</ul>
+				</section>
            </div>
             
 
