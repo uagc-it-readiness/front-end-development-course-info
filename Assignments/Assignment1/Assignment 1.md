@@ -40,7 +40,7 @@ Change the default styling of the list and create a simplistic image gallery.  A
 - Write CSS for the new class name.
   - Change the list style to not display any bullets or icons.
   - Remove the default padding and margin.
-- Add a class to each `li` so that we can target specifically target them with CSS
+- Add a class to each `li` so that we can specifically target them with CSS
 - Write CSS for the new class
   - Make the images display in a line similar to the links in Part 2 of the excercise.
   - Add 10 pixels of padding and 10 pixels of margin around each image.
@@ -49,7 +49,7 @@ Change the default styling of the list and create a simplistic image gallery.  A
 Style the content to make it more readable.
 
 - Find the HTML comment for Main Content
-- Add a class to that dive to describe its contents
+- Add a class to that div to describe its contents
 - Write CSS for the new class name
   - Float the content to the left
   - Set the width of the content to 70% of the available space
