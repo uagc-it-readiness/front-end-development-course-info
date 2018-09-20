@@ -5,7 +5,7 @@ document.getElementById("partOne").innerHTML = name;
 
 //Part 2
 var foo = "this is an integer";
-var foo = "this is not an integer";
+foo = "this is not an integer";
 getElm('partTwo').innerHTML = foo;
 
 
