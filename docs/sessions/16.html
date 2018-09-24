@@ -36,16 +36,13 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>3/22/2018</h1>
+                    <h1>9/25/2018</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
                         <div>
                             <h2>Review</h2>
                             <ul>
-                                <li><a href="#terms">Terms</a></li>
-                                <li><a href="#string-props">String Properties</a></li>
-                                <li><a href="#num-meth">Number Methods</a></li>
                                 <li><a href="#arrays">Arrays</a></li>
                                 <li><a href="#js-obj">Objects</a></li>
                                 <li><a href="#undefined">Undefined & null</a></li>
@@ -64,6 +61,7 @@
                         </div>
                     </div>
                     <h4 style="clear:both;"><a href="#exercise12">Exercise 12</a></h4>
+					<h4 style="clear:both;"><a href="#assignment2">Assignment 2</a></h4>
                 </section>
 				<section>
 				<h1>Record Class</h1>
@@ -75,132 +73,6 @@
 				</ul>
 				</section>
                 
-<section id="terms">
-    <h1>Methods</h1>
-    <p>
-        Methods are actions that can be taken on objects.
-    </p>
-    <div class="">
-        <h1>Properties</h1>
-        <p>
-            Properties are values associated with an object.
-        </p>
-    </div>
-</section>
-<section id="string-props">
-    <h1>String Properties and Methods</h1>
-    <ul>
-        <li class=""><code>length</code> property - returns the number of characters in the string.</li>
-        <li class=""><code>indexOf</code> method - returns the position (index) of the first occurrence of text in a string.</li>
-    </ul>
-</section>
-<section>
-    <h1><code>length</code></h1>
-    <pre>
-<code class="js">
-    var x = "name".length;
-    console.log(x);  // x equals 4
-    var y = "name"
-    console.log(y.length);  //
-</code>
-</pre>
-    <pre class="">
-<code class="js">
-    var username = "jonmiddaugh";
-    var userNameLength = username.length; //11
-    var isValid = (userNameLength > 20 || userNameLength < 10);  //Returns false
-</code>
-</pre>
-</section>
-
-<section>
-    <h1><code>indexOf</code></h1>
-    <pre>
-<code class="js">
-    var x = "name".indexOf("n");  ///// x = 0;
-    var y = "name name name".indexOf("a");  //y = 1;
-    var z = "name".indexOf("z"); // z = -1;
-    var z = "name".indexOf("ame"); // z = 1;
-</code>
-</pre>
-    <pre class="">
-<code class="js">
-    var email = "jonathan.middaugh@gmail.com";
-    var isValidEmail = (email.indexOf('@') > -1);
-    console.log(isValidEmail); //true
-</code>
-</pre>
-</section>
-<section id="num-meth">
-    <h1>Number Methods</h1>
-    <p>
-        These methods are considered global methods.
-    </p>
-    <ul>
-        <li class=""><code>parseInt</code> - Attempts to convert a string to an integer</li>
-        <li class=""><code>parseFloat</code> - Attempts to convert a string to a float</li>
-    </ul>
-</section>
-<section>
-    <h1><code>parseInt</code></h1>
-    <pre>
-<code class="js">
-    parseInt("10");         // returns 10
-    parseInt("10.33");      // returns 10
-    parseInt("ten");        // returns NaN
-</code>
-</pre>
-    <pre class="">
-<code class="js">
-    parseInt("10 11 12");   // returns 10
-    parseInt("10 tacos");   // returns 10
-    parseInt("tacos 10");   // returns NaN
-</code>
-</pre>
-</section>
-<section>
-    <h1><code>parseFloat</code></h1>
-    <pre>
-<code class="js">
-    parseFloat("10");         // returns 10
-    parseFloat("10.33");      // returns 10.33
-    parseFloat("ten");        // returns NaN
-</code>
-</pre>
-    <pre class="">
-<code class="js">
-   parseFloat("10 11 12");   // returns 10
-   parseFloat("10 tacos");   // returns 10
-   parseFloat("tacos 10");   // returns NaN
-</code>
-</pre>
-</section>
-<section>
-    <h1>Is it a number?</h1>
-    <p>
-        There is a build in method for determining if a variable is a number.
-    </p>
-     <pre class="">
-<code class="js">
-    var x = "t"
-    //This doesn't work
-    var isNumber = (parseInt(x) === NaN);
-</code>
-</pre>
-
-   
-    <pre class="">
-<code class="js">
-    var x = "t"
-    if (isNaN(x)){
-        //it is NOT a number
-    }else{
-        //It is a number
-    }
-</code>
-</pre>
-
-</section>
 
 
 <section>
@@ -479,7 +351,7 @@ html = html + '&lt;/ul>';
 </pre>
 </section>
 <section>
-    <h1>Dangers of Do and While Loops</h1>
+    <h3>Dangers of Do and While Loops:</h3>
     <h1 class="">Infinite Loops</h1>
 </section>
 
@@ -593,19 +465,18 @@ var d = new Date(2010, 1)
 var d = new Date(2010, 3, 15, 12, 4, 14) 
     </code></pre>
 </section>
-<!--
 <section>
-    <aside class="notes">
-        <pre>
-    examples
-    var today = new Date();
-var birthday = new Date('December 17, 1995 03:24:00');
-var birthday = new Date('1995-12-17T03:24:00');
-var birthday = new Date(1995, 11, 17);
-var birthday = new Date(1995, 11, 17, 3, 24, 0);
-</pre>
-    </aside>
-</section>-->
+    <h1>How do we set a specific date that we already know?</h1>
+    <h2>Like September 9th, 2017</h2>
+    <pre class=""><code class="js">
+var d = new Date('9/9/2017')
+    </code></pre>
+    <h2 class="">or</h2>
+    <pre class=""><code class="js">
+var d = new Date(2017, 8, 9) 
+    </code></pre>
+
+</section>
 <section>
     <h1>Getting Values</h1>
     <p>
@@ -712,6 +583,9 @@ console.log(d1);
     <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise12" target="_blank">Exercise 12</a></h1>
    
 </section>
+<section id="assignment2">
+                    <h1><a target="_blank" href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Assignments/Assignment2">Assignment 2</a></h1>
+                </section>
             </div>
 
         </div>

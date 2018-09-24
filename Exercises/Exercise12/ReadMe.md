@@ -27,4 +27,4 @@ You are being provided a document that automatically retrieves the values of all
 In the scripts folder you will find a file named questions.js.  
 
 - Answer the set of questions in that file with the spaces provided.  
-- Add a reference to the file in index.html.  The slides from 8/17 can help you if you don't remember.
+- Add a reference to the file in index.html.

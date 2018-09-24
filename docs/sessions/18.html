@@ -63,10 +63,10 @@
         Dates are stored as the number of milliseconds since January 1, 1970.
 
     </p>
-    <p class="fragment">
+    <p class="">
         Example: 4/5/2017 is roughly - 1491415025702
     </p>
-    <p class="fragment">
+    <p class="">
         Example : 1/1/1777 is roughly - -6090400800000
     </p>
     <aside class="notes">
@@ -75,28 +75,28 @@
 </section>
 <section>
     <h1>Date Declaration</h1>
-    <pre class="fragment"><code class="js">//Creates a date variable that is set to now;
+    <pre class=""><code class="js">//Creates a date variable that is set to now;
 var now = new Date();         </code></pre>
-    <pre class="fragment"><code class="js">// Wed Apr 05 2017 12:57:05 GMT-0500 (Central Daylight Time);
+    <pre class=""><code class="js">// Wed Apr 05 2017 12:57:05 GMT-0500 (Central Daylight Time);
 var newDate = new Date(1491415025702); </code></pre>
-    <pre class="fragment"><code class="js">//Tue Aug 17 2010 12:09:36 GMT-0500 (Central Daylight Time)
+    <pre class=""><code class="js">//Tue Aug 17 2010 12:09:36 GMT-0500 (Central Daylight Time)
 var newDate = new Date("2010/08/17 12:09:36"); 
 //Fri Jan 01 2010 00:00:00 GMT-0600 (Central Standard Time)
 var newDate2 = new Date("1/1/2010");</code></pre>
 </section>
 <section>
     <h1>More Specific Examples</h1>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 new Date(year, month[, date[, hours[, minutes[, seconds[, milliseconds]]]]]);
     </code></pre>
-    <p class="fragment">
+    <p class="">
         Note: Month is zero based.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 //Tue Feb 01 2010 00:00:00 GMT-0600 (Central Standard Time)
 var d = new Date(2010, 1) 
     </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 //Thu Apr 15 2010 12:04:14 GMT-0500 (Central Daylight Time)
 var d = new Date(2010, 3, 15, 12, 4, 14) 
     </code></pre>
@@ -104,11 +104,11 @@ var d = new Date(2010, 3, 15, 12, 4, 14)
 <section>
     <h1>How do we set a specific date that we already know?</h1>
     <h2>Like September 9th, 2017</h2>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var d = new Date('9/9/2017')
     </code></pre>
-    <h2 class="fragment">or</h2>
-    <pre class="fragment"><code class="js">
+    <h2 class="">or</h2>
+    <pre class=""><code class="js">
 var d = new Date(2017, 8, 9) 
     </code></pre>
 
@@ -132,17 +132,17 @@ var birthday = new Date(1995, 11, 17, 3, 24, 0);
         Dates have very long outputs by default, but there are methods to retrieve parts of a date.
     </p>
 
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var d = new Date(2010, 0, 1);
 console.log(d.getFullYear()); //2010;
 
 console.log(d.getDate()); // 1
 </code></pre>
     <ul>
-        <li class="fragment">.getMonth()</li>
-        <li class="fragment">.getHours()</li>
-        <li class="fragment">.getMinutes()</li>
-        <li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype" target="_blank">etc.</a></li>
+        <li class="">.getMonth()</li>
+        <li class="">.getHours()</li>
+        <li class="">.getMinutes()</li>
+        <li class=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype" target="_blank">etc.</a></li>
     </ul>
 </section>
 <section>
@@ -189,7 +189,7 @@ var isNewer = d2 > d1;  //True
 <section>
     <h1>Adding values</h1>
     <p>Let's get the current date and add a week to it.</p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var d1 = new Date();
 var curDate = d1.getDate(); //Get the number for the current Date
 var newDate = curDate + 7; //Add value to it
@@ -197,14 +197,14 @@ d1.setDate(newDate);    // Set the new date
 console.log(d1); 
 </code></pre>
 
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 //Shorter
 var d1 = new Date();
 var newDate = d1.getDate() + 7; 
 d1.setDate(newDate);    
 console.log(d1); 
 </code></pre>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 //Even Shorter
 var d1 = new Date();
 d1.setDate(d1.getDate() + 7);    
@@ -217,13 +217,13 @@ console.log(d1);
     <p>
         You don't have to stick to the traditional restrictions when adding values.
     </p>
-    <p class="fragment">
+    <p class="">
         You have 90 days from today for a warranty.
     </p>
-    <p class="fragment">
+    <p class="">
         You don't have to calculate the number of months.  JS will automatically handle the overflow.
     </p>
-    <pre class="fragment"><code class="js">
+    <pre class=""><code class="js">
 var d1 = new Date();
 
 d1.setDate(d1.getDate() + 90);    
