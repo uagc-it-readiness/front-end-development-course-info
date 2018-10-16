@@ -45,11 +45,6 @@
                             <h2>Review</h2>
                             <ul>
                                 <li><a href="#debugging">Debugging Tips</a></li>
-                                <li><a href="#callbacks">Callbacks</a></li>
-                                <li><a href="#blur">Blur Event</a></li>
-                                <li><a href="#hover">Hover Event</a></li>
-                                <li><a href="#data">Data Attributes</a></li>
-
                             </ul>
 
                         </div>
@@ -73,10 +68,6 @@
     </p>
 </section>
 <section>
-    <h1>Don't assume there is something wrong with the browser.</h1>
-    <h2 class="">Your browser doesn't hate you.</h2>
-</section>
-<section>
     <h1>Batch your work.</h1>
     <p>
         Don't write 20 or 30 lines of code without testing what you have written.
@@ -89,32 +80,6 @@
     </p>
 </section>
 <section>
-    <h1>Example</h1>
-    <p>
-        I want to validate a form field when I click a button.
-    </p>
-    <pre class=""><code class="js">
-            $('btn').on('click', function(){
-                console.log('click worked');
-            });
-            </code></pre>
-    <p class="">
-        I test that my click is working before continuing with my work.
-    </p>
-    <pre class=""><code class="js">
-            $('btn').on('click', function(){
-                console.log($('input').val());
-            });
-            </code></pre>
-</section>
-<section>
-    <h1>Read the documentation.</h1>
-    <p>
-        Using a third party library can be hard at times. Good libraries provide good documentation, examples and demos. Study them
-        to understand how they should be used.
-    </p>
-</section>
-<section>
     <h1>Read your error messages</h1>
     <p>
         Most error messages by your editor or browser point you to the exact line that is broken.
@@ -124,13 +89,6 @@
     </p>
 </section>
 <section>
-    <h1>Use caution when copy and pasting examples.</h1>
-    <p>
-        You loose understanding when copy and pasting someone elses code.
-    </p>
-    <h2 class="">Manually type out code instead of copying it.</h2>
-</section>
-<section>
     <h1>Take advantage of your tools</h1>
     <h2 class="">Use Google Chrome's Debugger</h2>
     <h2 class="">Find "linter"s for your editor</h2>
@@ -138,176 +96,8 @@
 </section>
 <section>
     <h1>Remember Errors are opportunities to learn.</h1>
-    <p>
-        You wont learn anything if everything worked the first time you try it.
-    </p>
-	<p>Example from Exercise 17...deconstruct your code in dev tools console</p>
+    <p>Example from Exercise 17...deconstruct your code in dev tools console</p>
 </section>
-                <section id="callbacks">
-    <h1>JavaScript Callbacks</h1>
-    <p>
-        Callbacks are functions passed into other functions as parameters. These functions are intended to be used inside of the
-        functions they are passed into.
-    </p>
-</section>
-<section>
-    <h1>Examples</h1>
-    <pre><code class="js">
-    function myCallback()
-        console.log('Operation Complete');
-    }            
-
-    function addSomething(x, y, onComplete){
-       var z = x + y;
-       console.log(z);
-       onComplete();
-    }
-
-    addSomething(1, 3, myCallback);
-
-            </code></pre>
-</section>
-<section>
-    <h1>We've been doing callbacks already.</h1>
-    <pre class=""><code class="js">
-    document.getElementById('id').addEventListener('click', function(){
-        //Callback
-    });
-            </code></pre>
-    <pre class=""><code class="js">
-    $('button').on('click', function(){
-        //This is a callback
-    });            
-            </code></pre>
-</section>
-                <section id="blur">
-    <h1>The Blur Event</h1>
-    <p>
-        The Blur event is triggered when an element has lost focus.
-    </p>
-    <h2 class="">Primarily used on inputs.</h2>
-</section>
-<section>
-    <h1>Example</h1>
-    <pre><code class="js">
-    
-    $('input').on('blur', function(){
-        //event triggered.
-    });
-            </code></pre>
-</section>
-                <section id="hover">
-    <h1>Hover</h1>
-    <p>
-        The hover events allow you to add JavaScript to elements as the user uses their mouse to move around them.
-    </p>
-    <!--<h2 class="">The hover event can be useful for</h2>
-    <ul>
-        <li class="">Interactive Menus</li>
-        <li class=""></li>
-        <li class=""></li>
-    </ul>-->
-    <p class="">A full hover event uses two event listeners.</p>
-</section>
-<section>
-    <h1>Syntax</h1>
-    <pre class=""><code class="js">
-        var elm = $('.my-element');     
-
-        elm.on('mouseenter', function(){
-            //Code executed when the mouse goes over an element
-            $(this).addClass('hover');
-        });
-
-        elm.on('mouseleave', function(){
-
-            //Code executed when the mouse exits the element. 
-            $(this).removeClass('hover');
- 
-        });
-        
-    </code></pre>
-</section>
-<section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="rpXpbQ" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-jQUery-Hover" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/rpXpbQ/">UA-ITR-jQUery-Hover</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-                <section id="data">
-    <h1>jQuery Data Attributes</h1>
-    <p>
-        Data attributes allow you to store arbitrary information in your HTML elements for later use.
-    </p>
-</section>
-<section>
-    <h1>Basic Data Attribute Usage</h1>
-    <h2>Setting an attribute in HTML </h2>
-    <h2 class="">
-        <pre class=""><code class="xml">&lt;div data-[name]></code></pre>
-    </h2>
-    <pre class=""><code class="xml">
-    <div data-type="My Data Type"></div>        
-        </code></pre>
-    <pre class=""><code class="xml">
-    <div data-color="#000"></div>        
-        </code></pre>
-</section>
-<section>
-    <h1>Getting a data attribute in JavaScript</h1>
-    <pre><code class="js">
-        var div = $('div')
-
-        var color = div.data('color'); //Finds and converts data-color
-
-        console.log(color); // logs '#000';
-
-        var type= div.data('type');
-        
-        console.log(type); //logs 'My Data Type'
-        
-    </code></pre>
-</section>
-<section>
-    <h1>Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="WdVdWX" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-jQUery-Data" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/WdVdWX/">UA-ITR-jQUery-Data</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Setting a data attribute</h1>
-    <p>
-        We can dynamically add and update a data attribute as we need to.
-    </p>
-    <div class="">
-        <h3>
-            <pre><code class="js">
-                
-    $('.element').data('color', 'red');
-
-                </code></pre>
-        </h3>
-    </div>
-</section>
-<section>
-    <h1>Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="LewevP" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-jQUery-Data2" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/LewevP/">UA-ITR-jQUery-Data2</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>You can use more than just Strings and Numbers with data attributes</h1>
-    <ul>
-        <li class="">Objects</li>
-        <li class="">Functions</li>
-    </ul>
-</section>
-<section>
-    <h1>Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="EoqoMM" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UA-ITR-jQUery-Data2" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/EoqoMM/">UA-ITR-jQUery-Data2</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-
-
-                <section>
-                    <h1>Questions?</h1>
-                </section>
 
                 <section id="json">
     <h1>JSON</h1>
