@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
 
-    $('#btnAdNumbers').on('click', function () {
+    $('#btnAdNumbers').on(click, function () {
         /*
             Retrieve the numbers from the input fields
         */
-        var firstNumber = $('txtFirstNumber').val();
+        var firstNumber = $('txtFirstNumber').val(5);
         var secondNumber = $('txtSecondNumber').val();
         
         /*
@@ -17,7 +17,7 @@ $(document).ready(function () {
             If our sum is greater than 10. Add a blue class to the input.
             If our sum is less than 10, add a red class
         */
-        if(sum > 10){
+        if(sum => 10){
             $('txtThirdNumber').addClass('.blue');
             $('txtThirdNumber').RemoveClass('red');
         }else{
@@ -29,6 +29,11 @@ $(document).ready(function () {
             Update the third input field with our value.
         */
         $('#txtThirNumber').val() = sum;
+		
+		/*
+			Alert the user 
+		*/
+		console.alert("sum");
     });
 
 
