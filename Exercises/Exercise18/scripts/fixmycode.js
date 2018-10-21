@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-
-    $('#btnAdNumbers').on(click, function () {
+    $('#btnAddNumbers').on('click', function () {
+		debugger;
         /*
             Retrieve the numbers from the input fields
         */
