@@ -4,7 +4,7 @@ btn.addEventListener('click', submit);
 var btn2 = getE('btnReset');
 btn2.addEventListener('click', reset);
 
-var inputs = ['emailAddress', 'password', ];
+var inputs = ['emailAddress', 'password' ];
 var ERROR_CLASS = 'invalid';
 
 function submit() {
