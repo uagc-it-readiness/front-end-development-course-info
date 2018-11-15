@@ -36,247 +36,26 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>5/24/2018</h1>
+                    <h1>11/15/2018</h1>
                     <!--Arrays and Methods-->
-                    <div class="two-col">
+                    <div class="">
 
                         <div>
-                            <h2>Review</h2>
-                            <ul>
-                                 <li><a href="#scss-parent">Parent Selectors</a></li>
-                                <li><a href="#scss-if">If Statement</a></li>
-                                <li><a href="#scss-for">Loops</a></li>
-                                <li><a href="#fb-sharing">FB Sharing</a></li>
-                                <li><a href="#fb-like">FB Like Button</a></li>
-                                
-                            </ul>
 
-                        </div>
-                        <div>
-
-                            <h2>New</h2>
+                            <h2>Review for Assessment 3</h2>
                             <ul>
-                                <li><a href="#array-methods">New Array Methods</a></li>
+                                <li><a href="#array-methods">Advanced Array Methods</a></li>
                                 <li><a href="#regex">Regular Expressions</a></li>
                            </ul>
                         </div>
                     </div>
                </section>
-               <section>
-    <h1>Sass continued</h1>
-</section>
-<section id="scss-parent">
-    <h1>Referencing a parent selector</h1>
-    <p>
-        You can reference a nested selectors parent by using the <code>&</code> symbol.
-    </p>
-</section>
-<section>
-    <h1>Simple Parent Reference</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="eyqeON" data-default-tab="html,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UAIT-SCSS-Nesting" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/eyqeON/">UAIT-SCSS-Nesting</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-<p>Examine this in Chrome Dev Tools to see what's up.</p>
-<p><a href="https://css-tricks.com/the-sass-ampersand/" target="_blank">And maybe read this too!</a></p>
-</section>
-
-<section>
-    <h1>Variable Expansion in Selectors</h1>
-<p>You can use Sass variables for more than just values. You can use them in conjunction with selectors.</p>
-<p>They must be used inside of a <code>#{}</code></p>
-</section>
-<section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="VyoMoM" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UAIT-SCSS-Expanding Class" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/VyoMoM/">UAIT-SCSS-Expanding Class</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Using Parent for repetitive names.</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="eyqGqN" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UAIT-SCSS-Nesting-Deep" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/eyqGqN/">UAIT-SCSS-Nesting-Deep</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Using Parent to Reference the Root</h1>
-    <p>
-        Using <code>.class &{</code> will put <code>.class</code> before all other selectors
-    </p>
-    <p data-height="265" data-theme-id="0" data-slug-hash="PEMJrB" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UAIT-SCSS-Nesting-Parent" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/PEMJrB/">UAIT-SCSS-Nesting-Parent</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
-</section>
-<section>
-    <h1> <code>@at-root</code></h1>
-    <p><code>@at-root</code> allows you to nest inside css for structure, but places the rules in the root of the css. </p>
-    <p>
-        You can use it as an inline rule or as a wrapping rule.
-    </p>
-</section>
-<section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="VyoMJM" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UAIT-SCSS-Nesting-Root" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/VyoMJM/">UAIT-SCSS-Nesting-Root</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
-</section>
-<section id="scss-if">
-    <h1><code>@if</code></h1>
-    <p>
-        SCSS has the ability to use if, else if, and else statements. These can be used to theme your styles or setup conditional
-        formatting.
-    </p>
-</section>
-<section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="ZvgXdY" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UAIT-SCSS-Nesting-Root" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/ZvgXdY/">UAIT-SCSS-Nesting-Root</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section id="scss-for">
-    <h1><code>@for</code></h1>
-    <p>
-        You can use SCSS to execute a for loop based on indexes. This is useful for generating grids and removing duplicate code.
-    </p>
-</section>
-<section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="NXQaVe" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UAIT-SCSS-Nesting-For" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/NXQaVe/">UAIT-SCSS-Nesting-For</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-
-<section>
-    <h1><code>
-        @each
-        </code></h1>
-    <p>
-        @each is used for looping through a defined collection of items.
-    </p>
-</section>
-<section>
-    <!--<p data-height="265" data-theme-id="0" data-slug-hash="xpvXNE" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UAIT-SCSS-Nesting-Each" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/xpvXNE/">UAIT-SCSS-Nesting-Each</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>-->
-<p data-height="265" data-theme-id="0" data-slug-hash="jxJmxB" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UAIT-SCSS-Nesting-Each" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/jxJmxB/">UAIT-SCSS-Nesting-Each</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Additional Methods</h1>
-    <ul>
-        <li class="">darken/lighten</li>
-        <li class="">quote/unquote</li>
-        <li class="">percentage</li>
-        <li class="">to-upper-case/to-lower-case</li>
-    </ul>
-</section>
-
-<section>
-    <h1>Darken/Lighten</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="mpNBgX" data-default-tab="css,result" data-user="Middaugh" data-embed-version="2" data-pen-title="UAIT-SCSS-Darken" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/mpNBgX/">UAIT-SCSS-Darken</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<!-- http://thesassway.com/-->
-<!-- %extend -->
-                <section>
-    <h1>Facebook Integration</h1>
-    <h3>
-        <a href="https://developers.facebook.com/" target="_blank">Documentation</a>
-    </h3>
-</section>
-<section id="fb-sharing">
-    <h1>Link Sharing</h1>
-    <p>
-        You can customize the previews of your links being shared on Facebook by leveraging OG meta tags.
-    </p>
-    <h3>
-        <a href="https://developers.facebook.com/docs/sharing/webmasters" target="_blank">Documentation</a>
-    </h3>
-</section>
-<section>
-    <h1>OG Tags</h1>
-    <p>
-        OG tags are meta tags that tell Facebook what to display when sharing.
-    </p>
-    <h3 class="">The Basic Tags</h3>
-    <ul>
-        <li class="">
-            <code>og:url</code> - The URL to the page.</li>
-        <li class="">
-            <code>og:title</code> - The title of the page.</li>
-        <li class="">
-            <code>og:description</code>
-        </li>
-        <li class="">
-            <code>og:image</code> - Preview image</li>
-    </ul>
-</section>
-<section>
-    <h1>In Markup</h1>
-    <pre><code class="xml">
-<head>    
-    <meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="When Great Minds Don’t Think Alike" />
-    <meta property="og:description" content="How much does culture influence creative thinking?" />
-    <meta property="og:image" content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />        
-</head>
-    </code></pre>
-</section>
-<section>
-    <h1>Testing</h1>
-    <h3>
-        <a href="https://developers.facebook.com/tools/debug/" target="_blank">Facebook Debug Tool</a>
-    </h3>
-</section>
-
-
-<section id="fb-like">
-    <h1>Adding a Like Button</h1>
-    <h3><a href="https://developers.facebook.com/docs/plugins/like-button" target="_blank">Like Button Generator</a></h3>
-</section>
-<section>
-    <h1>Step 1: Including the Facebook SDK</h1>
-    <p>
-        This needs to be included right next to the opening <code>body</code> tag.
-    </p>
-<pre><code class="xml">
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=440441316067845';
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-    </code></pre>
-</section>
-<section>
-    <h1>Step 2: Adding the Markup </h1>
-    <pre><code class="xml">
-  <!-- Your like button code -->
-<div class="fb-like" 
-  data-href="http://www.your-domain.com/your-page.html" 
-  data-layout="standard" 
-  data-action="like" 
-  data-show-faces="true">
-</div>
-        </code></pre>
-</section>
-<section>
-    <h1>Facebook Share Button</h1>
-    <h3><a href="https://developers.facebook.com/docs/plugins/share-button/" target="_blank">Share Button Generator</a></h3>
-</section>
-<section>
-    <h1>Step 1: Add the Facebook SDK.</h1>
-    <p>
-        But only if you haven't added it yet.
-    </p>
-</section>
-<section>
-    <h1>Step 2: Add the Markup</h1>
-    <pre><code class="xml">
-  <!-- Your share button code -->
-<div class="fb-share-button" 
-    data-href="http://www.your-domain.com/your-page.html" 
-    data-layout="button_count">
-</div>    
-</code></pre>
-</section>
-                <section>
-                    <h2>Questions?</h2>
-                </section>
+			   <section>
+			   <h1>Assessment 3 Overview</h1>
+			   </section>
+			   
                 <section id="array-methods">
-    <h1>New Array Methods</h1>
+    <h1>Advanced Array Methods</h1>
     <ul>
         <li class="">forEach()</li>
         <li class="">map</li>
