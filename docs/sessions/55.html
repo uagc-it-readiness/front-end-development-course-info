@@ -36,7 +36,7 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>11/15/2018</h1>
+                    <h1>11/20/2018</h1>
                     <div class="two-col">
                         <div>
                             <h2>Part 1</h2>
@@ -56,10 +56,6 @@
                             </ul>
                         </div>
                     </div>
-                </section>
-                <section>
-                    <h1>Last Day of Class</h1>
-                    <h2>Job Shadowing / Advising Sessions / Final Make up</h2>
                 </section>
                 <section>
     <h1>SquareSpace</h1>
@@ -182,78 +178,7 @@
 	<br>
 	<p><code>SquareSpace</code> was intended as a content management tool but now has similar e-commerce functionality.</p>
 </section>
-                <section>
-    <h1>Ionic Framework</h1>
-    <p>
-        The Ionic Framework is a web/mobile framework designed to build cross platform applications.
-    </p>
-    <p>
-        Ionic is built with Angular. Most angular principles can get passed through.
-    </p>
-</section>
-<section>
-    <h1>Ionic CLI</h1>
-    <p>
-        Similar to the Angular CLI.  You can use it to generate your project, your files, publishing, and everything else.
-    </p>
-
-</section>
-<section>
-    <h1>UI Components</h1>
-    <p>
-        Ionic supports all the standard mobile components we've seen in the past. Ionic uses it's own component tags for these.
-    </p>
-    <pre><code class="xml">
-<ion-item>
-    <ion-label>Username</ion-label>
-    <ion-input type="text"></ion-input>
-</ion-item>
-    </code></pre>
-	<p>ion-item tag supports mobile events such as swipe and tap.</p>
-</section>
-<section>
-	<h1>Ionic Pro</h1>
-	<p>Ionic Pro offers additional features such as:</p>
-	<ul>
-		<li>Send testers an email with a link, they can leave feedback in dashboard</li>
-		<li>Push out code fixes to users without going through app store</li>
-		<li>Activity Log</li>
-	</ul>
-</section>
-<section>
-    <h1>Theming</h1>
-<p>
-    Theming is similar to Bootstrap's theming. You can modify source variables to create your own feel.
-</p>
-<p class="">
-    Ionic has a built in IOS, Android, Windows, and Core theming system.  It can be as simple as adding an import statement in your code.
-</p>
-<a href="https://www.youtube.com/watch?v=CW7kvEJlNys" target="_blank">Watch this into on ionic and theming</a>
-
-</section>
-<section>
-    <h1>Icons Library - Ionicons</h1>
-    <p>
-        Ionicons includes 3 versions of most icons. iOS, iOS-Outline, and Material Design
-    </p>
-</section>
-<section>
-    <h1>Ionic Native</h1>
-    <p>
-        Ionic leverages plugins to interact with Native Phone components. Apple Paid, Google Maps, BlueTooth, Etc.
-    </p>
-</section>
-<section>
-    <h1>
-        Deploying an App
-    </h1>
-    <p>
-        Ionic leverages Cordova to produce builds for phones.  You'll need to download the Android SDK and iOS kit to put your app on a mobile device.
-    </p>
-    <p>
-        Note: You must use a mac to compile an iOS app.
-    </p>
-</section>
+                
                 <section>
     <h1>Unit Testing</h1>
 </section>
@@ -301,31 +226,6 @@ describe("A suite is just a function", function() {
         expect(a).toBe(true);
     });
 });
-    </code></pre>
-</section>
-<section>
-    <h1>Write the Failing Test</h1>
-    <pre><code class="ts">
-it('it should start at 0 and end at 3', inject([PagingService], (service: PagingService) => {
-    const pager = service.getPager(10, 1, 4);
-    expect(pager.startingIndex).toBe(0);
-    expect(pager.endingIndex).toBe(3);
-}));
-    </code></pre>
-</section>
-<section>
-    <h1>Another Test </h1>
-    <pre><code class="ts">
-it('it should have 4 pages', inject([PagingService], (service: PagingService) => {
-    const pager = service.getPager(10, 1, 3);
-    expect(pager.totalPages).toBe(3);
-}));
-    </code></pre>
-    <pre class=""><code class="ts">
-it('it should not have go past the total number', inject([PagingService], (service: PagingService) => {
-    const pager = service.getPager(10, 10, 3);
-    expect(pager.totalPages).toBe(3);
-}));
     </code></pre>
 </section>
 <section>
