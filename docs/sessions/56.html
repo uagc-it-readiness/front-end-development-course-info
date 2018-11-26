@@ -1,0 +1,174 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>12/11/2018</h1>
+                    <h2>React Intro</h2>
+					<a href="#react-intro">React Intro</a><br><br>
+					<a href="#app">Finance App</a>
+					
+                </section>
+
+				<section id="react-intro">
+                    <h1>React Intro</h1>
+					<ul>
+						<li>React is a js library for building User Interfaces</li>
+						<li>It can be used within other frameworks</li>
+						<li>With JSX, you write custom HTML elements that have massive functionality</li>
+						<li>React is intended to be easy to learn.  It's more of a way of thinking about javascript than a new language to learn.</li>
+						<li><a href="https://reactjs.org/" target="_blank">ReactJS.org</a></li>
+					</ul>
+                </section>
+				<section>
+                    <h1>Composition in React</h1>
+					<p>Create components (custom HTML elements) that can be added together to enhance functionality.  A reusable parent component can have different children injected into it at run time.</p>
+					<p><a href="https://reactjs.org/docs/composition-vs-inheritance.html" target="_blank">Learn more here</a></p>
+                </section>
+				<section>
+                    <h1>JSX in React</h1>
+					<p>JSX looks like a template language (HTML), but it comes with the full power of javascript.  It is used with React to describe what the UI should look like.</p>
+					<div class="">
+					<pre><code class="js">
+const name = 'Jon Middaugh';
+const element = <h1>Hello, {name}</h1>;
+
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);  
+					</code></pre>
+					</div>
+					<p><a href="https://reactjs.org/docs/introducing-jsx.html" target="_blank">Read more here</a></p>
+					
+                </section>
+				<section id="app">
+					<h1>Finance App</h1>
+				</section>
+				<section>
+					<h2>Create a new single-page application in React</h2>
+					<ul>
+						<li>Make sure npm 5.2 or later is installed</li>
+						<li>npx create-react-app finance-app</li>
+						<li>cd finance-app</li>
+						<li>npm start</li>
+					</ul>
+					<div>You should now see a running React app at localhost:3000.</div>
+					<div><a href="https://reactjs.org/docs/create-a-new-react-app.html#create-react-app" target="blank">See this page if you get stuck</a></div>
+				</section>
+				<section>
+					<h2>What is public/index.html, src/index.js, and src/App.js</h2>
+					<ul>
+						<li>public/index.html is the 'SPA' that is run by the browser and has all html built by react injected into it.</li>
+						<li>src/index.js tells react where to inject the code  --> ReactDOM.render(<App />, document.getElementById('root'));</li>
+						<li>src/App.js is where developers actually start writing React code.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>What's in App.js?</h2>
+					<ul>
+						<li>import statements</li>
+						<li>class/extends</li>
+						<li>render function</li>
+						<li>export default</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Creating our first class</h2>
+					<ul>
+						<li>Think about folder/file management</li>
+						<li>export default class</li>
+						<li>render function</li>
+					</ul>
+				</section>
+            </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>
