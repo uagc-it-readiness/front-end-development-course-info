@@ -36,7 +36,7 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>12/13/2018</h1>
+                    <h1>12/18/2018</h1>
                     <h2>React Intro Continued</h2>
 					<a href="#app">Finance App</a>
 					
@@ -44,42 +44,6 @@
 
 				<section id="app">
 					<h1>Finance App</h1>
-				</section>
-				<section>
-					<h2>Create a new single-page application in React</h2>
-					<ul>
-						<li>Make sure npm 5.2 or later is installed</li>
-						<li>npx create-react-app finance-app</li>
-						<li>cd finance-app</li>
-						<li>npm start</li>
-					</ul>
-					<div>You should now see a running React app at localhost:3000.</div>
-					<div><a href="https://reactjs.org/docs/create-a-new-react-app.html#create-react-app" target="blank">See this page if you get stuck</a></div>
-				</section>
-				<section>
-					<h2>What is public/index.html, src/index.js, and src/App.js</h2>
-					<ul>
-						<li>public/index.html is the 'SPA' that is run by the browser and has all html built by react injected into it.</li>
-						<li>src/index.js tells react where to inject the code  --> ReactDOM.render(<App />, document.getElementById('root'));</li>
-						<li>src/App.js is where developers actually start writing React code.</li>
-					</ul>
-				</section>
-				<section>
-					<h2>What's in App.js?</h2>
-					<ul>
-						<li>import statements</li>
-						<li>class/extends</li>
-						<li>render function</li>
-						<li>export default</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Creating our first class</h2>
-					<ul>
-						<li>Think about folder/file management</li>
-						<li>export default class</li>
-						<li>render function</li>
-					</ul>
 				</section>
 				
 				<section>
@@ -111,6 +75,42 @@
 						</ul>
 						<li>export default loadDividends</li>
 					</ul>
+				</section>
+				
+				<section>
+					<h1>Create the grid</h1>
+				</section>
+				
+				<section>
+					<h2>Step 1: Research</h2>
+					<p>Identify what you want, think about known libraries that meet your needs.</p>
+					<p>I get different results if I search React Bootstrap Grid vs. React Bootstrap Table.</p>
+					<p>Find an interesting solution, try it out.</p>
+				</section>
+				
+				<section>
+					<h2>Installing bootstrap react-bootstrap-table-next</h2>
+					<p><a href="https://react-bootstrap-table.github.io/react-bootstrap-table2/docs/getting-started.html" target="_blank">Documentation</a></p>
+				
+					<ul>
+						<li>npm install react-bootstrap-table-next --save</li>
+						<li>import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';</li>
+						<li>Include bootstrap 4 in index.html?</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Create the table</h2>
+					<ul>
+						<li>Set products and Columns</li>
+						<li>Create the render function</li>
+						<li>export default</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Use the table</h2>
+					<p>In TickerInput, import DividendData and add it to DisplayData class.</p>
 				</section>
             </div>
 
