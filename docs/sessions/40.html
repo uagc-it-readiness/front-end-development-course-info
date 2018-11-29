@@ -41,18 +41,6 @@
                     <div class="two-col">
 
                         <div>
-                            <h2>Review</h2>
-                            <ul>
-                                <li>
-                                    <a href="#array-methods">New Array Methods</a>
-                                </li>
-                                <li>
-                                    <a href="#regex">Regular Expressions</a>
-                                </li>
-                            </ul>
-
-                        </div>
-                        <div>
 
                             <h2>New</h2>
                             <ul>
@@ -65,256 +53,6 @@
                             </ul>
                         </div>
                     </div>
-                </section>
-                <section id="array-methods">
-    <h1>New Array Methods</h1>
-    <ul>
-        <li class="">forEach()</li>
-        <li class="">map</li>
-		<li class="">filter</li>
-    </ul>
-</section>
-<section>
-    <h1><code>.forEach()</code></h1>
-    <p>
-        <code>forEach</code> loops through each item in an array and executes a function for each item.
-    </p>
-</section>
-<section>
-    <h1>Syntax</h1>
-    <h2>
-        <pre><code class="js">
-    [1,2,3].forEach(function(element, index, array){
-        //Code
-    });</code></pre>
-    </h2>
-    <ul>
-        <li class=""><code>element</code> - the current iterated element.</li>
-        <li class=""><code>index</code> - the current zero based index</li>
-        <li class=""><code>array</code> - the full array of items</li>
-        <li class="">Does not return anything</li>
-    </ul>
-</section>
-<section>
-    <h1>Example - Simple</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="aEeLKv" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="Array - forEach()" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/aEeLKv/">Array - forEach()</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Example - More Complex</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="WdVZJa" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="Array - forEach()" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/WdVZJa/">Array - forEach()</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-
-<section>
-    <h1><code>.map()</code></h1>
-    <p>
-        <code>map</code> acts similar to <code>forEach</code> but it returns a whole new array.
-    </p>
-</section>
-<section>
-    <h1>Syntax</h1>
-    <h2>
-        <pre><code class="js">
-[1,2,3].map(function(element, index, array){ 
-    return '';
-});
-</code></pre>
-    </h2>
-    <ul>
-        <li class=""><code>element</code> - the current iterated element.</li>
-        <li class=""><code>index</code> - the current zero based index</li>
-        <li class=""><code>array</code> - the full array of items</li>
-
-        <li class="">Returned item gets added to new array. </li>
-        <li class="">Returns new array </li>
-    </ul>
-</section>
-<section>
-    <h1>Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="GyVMdO" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="Array - map()" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/GyVMdO/">Array - map()</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-
-<section>
-    <h1><code>.filter()</code></h1>
-    <p>
-        Filter iterates through an array and adds the element to the new array if it returns true.
-    </p>
-</section>
-<section>
-    <h1>Syntax</h1>
-    <h2>
-        <pre><code class="js">
-[1,2,3].filter(function(element, index, array){
-    return true | false;
-});</code></pre>
-    </h2>
-    <ul>
-        <li class=""><code>element</code> - the current iterated element.</li>
-        <li class=""><code>index</code> - the current zero based index</li>
-        <li class=""><code>array</code> - the full array of items</li>
-        <li class="">Returns new array </li>
-    </ul>
-</section>
-<section>
-    <h1>Example Simple</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="qpePYN" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="Array - filter" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/qpePYN/">Array - filter</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Example Advanced</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="PEMJRQ" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="Array - Filter Advanced" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/PEMJRQ/">Array - Filter Advanced</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1><code>.find()</code></h1>
-    <p>
-        Acts like filter, but only returns the first one found that matches the parameters
-    </p>
-</section>
-<section>
-    <h1>Syntax</h1>
-    <h2>
-        <pre><code class="js">
-[1,2,3].find(function(element, index, array){
-    return true | false;
-});</code></pre>
-    </h2>
-    <ul>
-        <li class=""><code>element</code> - the current iterated element.</li>
-        <li class=""><code>index</code> - the current zero based index</li>
-        <li class=""><code>array</code> - the full array of items</li>
-        <li class="">Returns first item matching parameters </li>
-    </ul>
-</section>
-<section>
-    <h1>Example</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="KZOXyb" data-default-tab="js,result" data-user="Middaugh" data-embed-version="2" data-pen-title="Array - Filter Advanced" class="codepen">See the Pen <a href="https://codepen.io/Middaugh/pen/KZOXyb/">Array - Filter Advanced</a> by Jon (<a href="https://codepen.io/Middaugh">@Middaugh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-
-<section>
-    <h1>Sort</h1>
-    <p>
-        Sorting an array happens in place, it doesn't return a new array.
-    </p>
-</section>
-<section>
-    <h1>Code</h1>
-<pre class=""><code class="js">
-    var food = ['taco', 'burger', 'hotdog'];
-    food.sort();
-    console.log(food); //['burger', 'hotdog', 'taco'];
-</code></pre>
-<pre class=""><code class="js">
-    var nums = [20, 3, 10, 1, 2]
-    nums.sort();
-    console.log(nums); //[1, 10, 2, 20, 3];
-</code></pre>
-</section>
-<section>
-    <h1>Uhhh?</h1>
-    <p>
-        <code>.sort</code> sorts by unicode character.  Everything gets converted to a string before sorting.
-    </p>
-    <h3 class="">So how do we sort numbers?</h3>
-</section>
-<section>
-    <h1>It gets a little complicated</h1>
-    <p>
-        This is what we are going to use for now
-    </p>
-<pre class=""><code class="js">
-    var nums = [20, 3, 10, 1, 2]
-    nums.sort(function(a,b){
-        return a - b;
-    });
-    console.log(nums); //[1, 2, 3, 10, 20];
-</code></pre>
-</section>
-
-                <section id="regex">
-    <h1>Regular Expressions/RegExp</h1>
-    <p>
-        RegExp are patterns that are used to match specific characters.
-    </p>
-    <p class=""> 
-        We'll use them for text searching and text replacement.
-    </p>
-
-    <p class=""> 
-        RegExps are not unique to JavaScript.
-    </p>
-</section>
-<section>
-    <h1>Basic Patterns</h1>
-    <p>
-        Syntax: <code>/pattern/modifiers</code>
-    </p>
-    <pre class=""><code class="js">
-var pattern = /lorem/i    
-      </code></pre>
-      <ul>
-          <li class="">lorem - looks for 'lorem'</li>
-          <li class="">i - indicates it is case-insensitive</li>
-      </ul>
-</section>
-<section>
-    <h1>Text Replace with RegExp</h1>
-
-    <pre><code class="js">
-    var str = "hello world. Hello class. hello things";
-    var pattern = /hello/i;
-    var newStr = str.replace(pattern, 'Goodbye'); 
-</code></pre>
-<p class="">
-    Result: 'Goodbye world. Hello class. hello things'
-</p>
-</section>
-<section>
-    <h1>Global Flag</h1>
-    <p>
-        We can add <code>g</code> to our pattern to globally replace.
-    </p>
-    <pre class=""><code class="js">
-    var str = "hello world. Hello class. hello things";
-    var pattern = /hello/ig;
-    var newStr = str.replace(pattern, 'Goodbye'); 
-</code></pre>
-<p class="">
-    Result: 'Goodbye world. Goodbye class. Goodbye things'
-</p>
-</section>
-
-<section>
-    <h1>Regex Test</h1>
-    <p>Regex Test is a method that allows us to see if a block of text <em>contains</em> a pattern.  This leverages the RegExp object.</p>
-    <pre class=""><code class="js">
-    var str = "Lorem ipsum dolor";
-    var patt = new RegExp(/lorem/i);
-    var res = patt.test(str);        
-    </code></pre>
-    <p class="">
-        The <code>i</code> flag allows 'Lorem' to match.
-    </p>
-</section>
-<section>
-    <h1>Useful Patterns</h1>
-    <p>
-        Constructing RegExp patterns can be really hard.  I always keep a few handy.
-    </p>
-    <ul>
-        <li class=""><code>/[a-z]/gi</code> - Letters only</li>
-        <li class=""><code>/[0-9]/gi</code> - Numbers only</li>
-        <li class=""><code>/^[a-z0-9_-]{3,16}$/</code> - User Name min 3 max 16</li>
-        <li class=""><code>/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/</code> - Email</li>
-        <li class=""><code>/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/</code> - URL </li>
-    </ul>
-	<p><a href="https://regexr.com/" target="_blank">Create more here</a></p>
-</section>
-                <section>
-                    <h2>Questions?</h2>
                 </section>
                 <section id="scss-component">
     <h1>Styling a Component</h1>
@@ -330,7 +68,7 @@ var pattern = /lorem/i
 <section>
     <h1>Component Definition</h1>
     <p>
-        We are going to build a component that resembles a facebook post or tweet.
+        How to build a component that resembles a facebook post or tweet.
     </p>
     <ul>
         <li class="">A post container.</li>
@@ -342,7 +80,7 @@ var pattern = /lorem/i
 <section>
     <h1>Create a SCSS Partial</h1>
     <p>
-        We're going to create a
+        Create a
         <code>_post.scss</code> file and work exclusively in it.
     </p>
 </section>
