@@ -40,15 +40,7 @@
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
-                        <div>
-                            <h2>Review</h2>
-                            <ul>
-                                <li>
-                                    <a href="#scss-component">Styling Component</a>
-                                </li>
-                            </ul>
-
-                        </div>
+                        
                         <div>
 
                             <h2>New</h2>
@@ -61,212 +53,7 @@
                         </div>
                     </div>
                 </section>
-                <section id="scss-component">
-    <h1>Styling a Component</h1>
-    <p>
-        What are a few things we need to pay attention to when making a custom component?
-    </p>
-    <ul>
-        <li class="">Isolate your CSS to prevent external conflicts?</li>
-        <li class="">Enforce specificity to prevent external conflicts?</li>
-        <li class="">What can we do to make it more user friendly?</li>
-    </ul>
-</section>
-<section>
-    <h1>Component Definition</h1>
-    <p>
-        We are going to build a component that resembles a facebook post or tweet.
-    </p>
-    <ul>
-        <li class="">A post container.</li>
-        <li class="">A post title, body</li>
-        <li class="">A post author and picture</li>
-        <li class="">Social Actions - Share, Like</li>
-    </ul>
-</section>
-<section>
-    <h1>Create a SCSS Partial</h1>
-    <p>
-        We're going to create a
-        <code>_post.scss</code> file and work exclusively in it.
-    </p>
-</section>
-<section>
-    <h1>Base Class</h1>
-    <p>
-        Think of a base class that will act as the main anchor for all styles.
-    </p>
-    <h2 class="">We are going to use
-        <code>.post</code>
-    </h2>
-    <h2 class="">Things to consider</h2>
-    <ul>
-        <li class="">Will this be used in another website?</li>
-        <li class="">How unique is this component type in the website?</li>
-    </ul>
-    <aside class="notes">
-        <pre>Consider .djw-post instead of .post 
-            Will another developer try to use this somewhere else
-        </pre>
-    </aside>
-</section>
-<section>
-    <h1>HTML & SCSS</h1>
-    <pre><code class="xml">
-<div class="post">
-</div>    
-      </code></pre>
-
-    <pre><code class="scss">
-.post{
-}
-</code></pre>
-</section>
-<section>
-    <h1>Internal Classes</h1>
-    <p>
-        We need to carefully think about our internal classes.
-    </p>
-    <p class="">
-        We want to leverage classes to prevent accidental conflicts.
-    </p>
-    <pre><code class="scss">
-.post{
-    /*This may inherit other properties if there
-    is another .title class somewhere */
-    .title{
-    }
-}
-</code></pre>
-</section>
-<section>
-    <h1>Solution</h1>
-    <pre><code class="scss">
-.post{
-    /*This rule will not inherit any rules from other SCSS */
-    .post-title{
-    }
-    .post-body{
-    }
-    .post-author{
-    }
-}
-</code></pre>
-</section>
-<section>
-    <h1>Optimized</h1>
-    <p>
-        That's a lot of
-        <code>.post</code>s
-    </p>
-    <div class="two-col">
-        <div>
-            <pre><code class="scss">
-.post{
-    .post-{
-        &title{
-        }
-        &body{
-        }
-        &author{
-        }
-    }
-}
-</code></pre>
-        </div>
-        <div class="">
-            <pre><code class="css">
-.post .post-title{
-}
-.post .post-body{
-}
-.post .post-author{
-}
-</code></pre>
-        </div>
-
-    </div>
-</section>
-<section>
-    <h1>Additional Things To Consider</h1>
-    <ul>
-        <li class="">Nesting</li>
-        <li class="">Enforcing Expectations</li>
-    </ul>
-</section>
-<section>
-    <h1>Nesting</h1>
-    <p>
-        You wont need to be as specific with our rules when you are nesting.
-    </p>
-    <div class="two-col">
-        <div>
-            <h3>You may want to do</h3>
-            <pre><code class="scss">.post{
-    .post-{
-        &title{
-        }
-        &body{
-        }
-        &author{
-            .post-author-image{
-            }
-        }
-    }
-}
-</code></pre>
-        </div>
-        <div class="">
-            <h3>You can just do</h3>
-            <pre><code class="scss">.post{
-    .post-{
-        &title{
-        }
-        &body{
-        }
-        &author{
-        }
-        &author-image{
-        }
-     
-    }
-}
-</code></pre>
-        </div>
-    </div>
-</section>
-<section>
-    <h1>Enforcement</h1>
-    <p>
-        You may not always know what's going on with your global variables.
-    </p>
-    <p class="">
-        During development, your h3 bottom margin may go from 1.1 to 1.3.
-    </p>
-    <p class="">
-        You initially want 1.1 and don't declare it because the global style sheet declares it.
-    </p>
-    <p class="">
-        The change from 1.1 to 1.3 breaks your layout.
-    </p>
-</section>
-<section>
-    <h1>Solution</h1>
-    <p>Be as specific as you can event when you don't think you need to.
-        
-    </p>
-</section>
-<section>
-    <h1>Finally</h1>
-    <p>
-        Document everything.
-    </p>
-</section>
-</section>
-                <section>
-                    <h2>Questions?</h2>
-                </section>
-                <section id="positioning">
+     <section id="positioning">
     <h1>Positioning</h1>
     <p>
         CSS Positioning allows you to apply specific positioning to HTML elements.
@@ -395,7 +182,7 @@
     </p>
 </section>
 <section>
-    <h1>Common Common Uses</h1>
+    <h1>Common Uses</h1>
     <ul>
         <li class="">Terms of Service</li>
         <li class="">Contact Forms</li>
