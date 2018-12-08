@@ -582,6 +582,64 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/cla
                     </ul>
 
                 </section>
+				<section>
+    <h1>Promises</h1>
+    <p>
+        A promise is the eventual result of an async operation.
+    </p>
+ 
+    <pre class=""><code class="js">
+let getAccountInfo = new Promise(function(resolve, reject){
+let gotData = true;
+
+	if(gotData){
+		resolve('User is Jon');
+	} else {
+		reject('No user info');
+	}
+});
+    </code></pre>
+</section>
+<section>
+    <h2>How do we call it?</h2>
+ 
+    <pre class=""><code class="js">
+getAccountInfo.then(function(result){
+	console.log(result);
+}).catch(function(result){
+	console.log(result);
+});
+    </code></pre>
+</section>
+<section>
+    <h2>promise Chaining</h2>
+	<p>Pretend we have three promises we've created.  How do we call them sequentially?</p>
+ 
+    <pre class=""><code class="js">
+getAccountInfo.then(function(result){
+	return getUserSecurity(result);
+}).then(function(result){
+	return getAccessLevels(result);
+}).then(function(result){
+	console.log(result + " is the result of three calls");
+});
+    </code></pre>
+</section>
+<section>
+    <h2>Promise.all and Promise.raise</h2>
+	<p>Promise.all is used when three calls can be made concurrently instead of sequentially</p>
+	<pre class=""><code class="js">
+Promise.all([getAccountInfo(), getUserSecurity(), getAccessLevels()]).then(function(){
+	console.log('All done');
+});
+    </code></pre>
+	<p>Promise.raise fires as soon as one child finishes</p>
+ <pre class=""><code class="js">
+Promise.raise([getAccountInfo(), getUserSecurity(), getAccessLevels()]).then(function(){
+	console.log('One is done');
+});
+    </code></pre>
+</section>
             </div>
 
         </div>
