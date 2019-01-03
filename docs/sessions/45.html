@@ -109,39 +109,6 @@
         <li class=""><code>'lib/math'</code> - Relative path to the file. .js file extension is not required. </li>
     </ul>
 </section>
-<section>
-    <h1>Module Execution</h1>
-    <ul>
-        <li class="">Modules are Singleton</li>
-        <li class="">They do not execute until they are imported.</li>
-        <li class="">Only one instance exists when it's imported.</li>
-    </ul>
-</section>
-<section>
-    <h1>Making Modules Compatible for the Web</h1>
-    <p>
-        Unfortunately, modules don't natively work in browser, but we can use a tool called Babel to compile our modules into browser
-        compatible JavaScript.
-    </p>
-    <pre><code class="bash">
-       npm install --save-dev gulp-babel babel-preset-es2015 
-        </code></pre>
-        </section>
-        <section>
-
-    <pre><code class="js">
-    const gulp = require('gulp');
-    const babel = require('gulp-babel');
- 
-    gulp.task('default', () => {
-        return gulp.src('src/app.js')
-            .pipe(babel({
-                presets: ['es2015']
-            }))
-            .pipe(gulp.dest('dist'));
-    });
-        </code></pre>
-</section>
                 <section id="class">
     <h1>JavaScript Classes</h1>
     <p>
